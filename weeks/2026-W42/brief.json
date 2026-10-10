@@ -1,0 +1,131 @@
+[
+ {
+  "id": "S0",
+  "audience": "suppliers",
+  "format": "brand-film",
+  "hooks": [
+   "A"
+  ],
+  "title": "Your best ad"
+ },
+ {
+  "id": "C1",
+  "audience": "collectors",
+  "format": "mini-story",
+  "hooks": [
+   "B",
+   "A",
+   "C"
+  ],
+  "title": "The shoebox"
+ },
+ {
+  "id": "C2",
+  "audience": "collectors",
+  "format": "pov-skit",
+  "hooks": [
+   "A",
+   "B",
+   "C"
+  ],
+  "title": "Any service records?"
+ },
+ {
+  "id": "C3",
+  "audience": "collectors",
+  "format": "mystery",
+  "hooks": [
+   "A",
+   "B",
+   "C"
+  ],
+  "title": "Owner number four"
+ },
+ {
+  "id": "G1",
+  "audience": "garages",
+  "format": "mini-story",
+  "hooks": [
+   "B",
+   "A",
+   "C"
+  ],
+  "title": "The notes left with him"
+ },
+ {
+  "id": "G2",
+  "audience": "garages",
+  "format": "before-after",
+  "hooks": [
+   "B",
+   "A",
+   "C"
+  ],
+  "title": "Anyone can post a clean car"
+ },
+ {
+  "id": "G3",
+  "audience": "garages",
+  "format": "pov-skit",
+  "hooks": [
+   "C",
+   "A",
+   "B"
+  ],
+  "title": "Any update on my car?"
+ },
+ {
+  "id": "P1",
+  "audience": "suppliers",
+  "format": "challenge",
+  "hooks": [
+   "A",
+   "B",
+   "C"
+  ],
+  "title": "After checkout"
+ },
+ {
+  "id": "P2",
+  "audience": "suppliers",
+  "format": "data-reveal",
+  "hooks": [
+   "A",
+   "B",
+   "C"
+  ],
+  "title": "One post, 24 hours"
+ },
+ {
+  "id": "P3",
+  "audience": "suppliers",
+  "format": "myth-vs-fact",
+  "hooks": [
+   "A",
+   "B",
+   "C"
+  ],
+  "title": "Reviews end at install"
+ },
+ {
+  "id": "X1",
+  "audience": "everyone",
+  "format": "mini-story",
+  "hooks": [
+   "A",
+   "B",
+   "C"
+  ],
+  "title": "One car, three people"
+ },
+ {
+  "id": "X2",
+  "audience": "everyone",
+  "format": "trailer",
+  "hooks": [
+   "A",
+   "B"
+  ],
+  "title": "The record outlives the build"
+ }
+]

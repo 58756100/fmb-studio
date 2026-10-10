@@ -1,0 +1,7 @@
+secrets/
+node_modules/
+**/out/
+**/stills/
+*.mp4
+*.wav
+!kit/audio/vo_final.wav

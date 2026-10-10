@@ -1,0 +1,704 @@
+[
+ {
+  "concept": "S0",
+  "hook": "A",
+  "date": "2026-10-12",
+  "time_et": "12:00",
+  "platform": "instagram",
+  "placement": "feed",
+  "status": "draft"
+ },
+ {
+  "concept": "S0",
+  "hook": "A",
+  "date": "2026-10-12",
+  "time_et": "12:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "S0",
+  "hook": "A",
+  "date": "2026-10-12",
+  "time_et": "12:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "C1",
+  "hook": "B",
+  "date": "2026-10-12",
+  "time_et": "19:00",
+  "platform": "instagram",
+  "placement": "feed",
+  "status": "draft"
+ },
+ {
+  "concept": "C1",
+  "hook": "B",
+  "date": "2026-10-12",
+  "time_et": "19:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "C1",
+  "hook": "B",
+  "date": "2026-10-12",
+  "time_et": "19:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "G2",
+  "hook": "B",
+  "date": "2026-10-13",
+  "time_et": "12:00",
+  "platform": "instagram",
+  "placement": "feed",
+  "status": "draft"
+ },
+ {
+  "concept": "G2",
+  "hook": "B",
+  "date": "2026-10-13",
+  "time_et": "12:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "G2",
+  "hook": "B",
+  "date": "2026-10-13",
+  "time_et": "12:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "P1",
+  "hook": "A",
+  "date": "2026-10-13",
+  "time_et": "19:00",
+  "platform": "instagram",
+  "placement": "feed",
+  "status": "draft"
+ },
+ {
+  "concept": "P1",
+  "hook": "A",
+  "date": "2026-10-13",
+  "time_et": "19:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "P1",
+  "hook": "A",
+  "date": "2026-10-13",
+  "time_et": "19:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "C2",
+  "hook": "A",
+  "date": "2026-10-14",
+  "time_et": "12:00",
+  "platform": "instagram",
+  "placement": "feed",
+  "status": "draft"
+ },
+ {
+  "concept": "C2",
+  "hook": "A",
+  "date": "2026-10-14",
+  "time_et": "12:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "C2",
+  "hook": "A",
+  "date": "2026-10-14",
+  "time_et": "12:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "C1",
+  "hook": "A",
+  "date": "2026-10-14",
+  "time_et": "15:00",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "C1",
+  "hook": "A",
+  "date": "2026-10-14",
+  "time_et": "15:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "G1",
+  "hook": "B",
+  "date": "2026-10-14",
+  "time_et": "19:00",
+  "platform": "instagram",
+  "placement": "feed",
+  "status": "draft"
+ },
+ {
+  "concept": "G1",
+  "hook": "B",
+  "date": "2026-10-14",
+  "time_et": "19:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "G1",
+  "hook": "B",
+  "date": "2026-10-14",
+  "time_et": "19:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "X2",
+  "hook": "A",
+  "date": "2026-10-15",
+  "time_et": "12:00",
+  "platform": "instagram",
+  "placement": "feed",
+  "status": "draft"
+ },
+ {
+  "concept": "X2",
+  "hook": "A",
+  "date": "2026-10-15",
+  "time_et": "12:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "X2",
+  "hook": "A",
+  "date": "2026-10-15",
+  "time_et": "12:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "G2",
+  "hook": "A",
+  "date": "2026-10-15",
+  "time_et": "15:00",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "G2",
+  "hook": "A",
+  "date": "2026-10-15",
+  "time_et": "15:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "C3",
+  "hook": "A",
+  "date": "2026-10-15",
+  "time_et": "19:00",
+  "platform": "instagram",
+  "placement": "feed",
+  "status": "draft"
+ },
+ {
+  "concept": "C3",
+  "hook": "A",
+  "date": "2026-10-15",
+  "time_et": "19:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "C3",
+  "hook": "A",
+  "date": "2026-10-15",
+  "time_et": "19:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "P1",
+  "hook": "B",
+  "date": "2026-10-15",
+  "time_et": "21:30",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "P1",
+  "hook": "B",
+  "date": "2026-10-15",
+  "time_et": "21:30",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "G3",
+  "hook": "C",
+  "date": "2026-10-16",
+  "time_et": "12:00",
+  "platform": "instagram",
+  "placement": "feed",
+  "status": "draft"
+ },
+ {
+  "concept": "G3",
+  "hook": "C",
+  "date": "2026-10-16",
+  "time_et": "12:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "G3",
+  "hook": "C",
+  "date": "2026-10-16",
+  "time_et": "12:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "C1",
+  "hook": "C",
+  "date": "2026-10-16",
+  "time_et": "15:00",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "C1",
+  "hook": "C",
+  "date": "2026-10-16",
+  "time_et": "15:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "P2",
+  "hook": "A",
+  "date": "2026-10-16",
+  "time_et": "19:00",
+  "platform": "instagram",
+  "placement": "feed",
+  "status": "draft"
+ },
+ {
+  "concept": "P2",
+  "hook": "A",
+  "date": "2026-10-16",
+  "time_et": "19:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "P2",
+  "hook": "A",
+  "date": "2026-10-16",
+  "time_et": "19:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "C2",
+  "hook": "B",
+  "date": "2026-10-16",
+  "time_et": "21:30",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "C2",
+  "hook": "B",
+  "date": "2026-10-16",
+  "time_et": "21:30",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "X1",
+  "hook": "A",
+  "date": "2026-10-17",
+  "time_et": "12:00",
+  "platform": "instagram",
+  "placement": "feed",
+  "status": "draft"
+ },
+ {
+  "concept": "X1",
+  "hook": "A",
+  "date": "2026-10-17",
+  "time_et": "12:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "X1",
+  "hook": "A",
+  "date": "2026-10-17",
+  "time_et": "12:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "G2",
+  "hook": "C",
+  "date": "2026-10-17",
+  "time_et": "15:00",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "G2",
+  "hook": "C",
+  "date": "2026-10-17",
+  "time_et": "15:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "P3",
+  "hook": "A",
+  "date": "2026-10-17",
+  "time_et": "19:00",
+  "platform": "instagram",
+  "placement": "feed",
+  "status": "draft"
+ },
+ {
+  "concept": "P3",
+  "hook": "A",
+  "date": "2026-10-17",
+  "time_et": "19:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "P3",
+  "hook": "A",
+  "date": "2026-10-17",
+  "time_et": "19:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "P1",
+  "hook": "C",
+  "date": "2026-10-17",
+  "time_et": "21:30",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "P1",
+  "hook": "C",
+  "date": "2026-10-17",
+  "time_et": "21:30",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "C2",
+  "hook": "C",
+  "date": "2026-10-18",
+  "time_et": "15:00",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "C2",
+  "hook": "C",
+  "date": "2026-10-18",
+  "time_et": "15:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "G1",
+  "hook": "A",
+  "date": "2026-10-18",
+  "time_et": "21:30",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "G1",
+  "hook": "A",
+  "date": "2026-10-18",
+  "time_et": "21:30",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "X2",
+  "hook": "B",
+  "date": "2026-10-19",
+  "time_et": "15:00",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "X2",
+  "hook": "B",
+  "date": "2026-10-19",
+  "time_et": "15:00",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "C3",
+  "hook": "B",
+  "date": "2026-10-19",
+  "time_et": "21:30",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "C3",
+  "hook": "B",
+  "date": "2026-10-19",
+  "time_et": "21:30",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "G1",
+  "hook": "C",
+  "date": "2026-10-20",
+  "time_et": "15:00",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "G1",
+  "hook": "C",
+  "date": "2026-10-20",
+  "time_et": "15:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "G3",
+  "hook": "A",
+  "date": "2026-10-20",
+  "time_et": "21:30",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "G3",
+  "hook": "A",
+  "date": "2026-10-20",
+  "time_et": "21:30",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "C3",
+  "hook": "C",
+  "date": "2026-10-21",
+  "time_et": "15:00",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "C3",
+  "hook": "C",
+  "date": "2026-10-21",
+  "time_et": "15:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "P2",
+  "hook": "B",
+  "date": "2026-10-21",
+  "time_et": "21:30",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "P2",
+  "hook": "B",
+  "date": "2026-10-21",
+  "time_et": "21:30",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "G3",
+  "hook": "B",
+  "date": "2026-10-22",
+  "time_et": "15:00",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "G3",
+  "hook": "B",
+  "date": "2026-10-22",
+  "time_et": "15:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "X1",
+  "hook": "B",
+  "date": "2026-10-22",
+  "time_et": "21:30",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "X1",
+  "hook": "B",
+  "date": "2026-10-22",
+  "time_et": "21:30",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "P2",
+  "hook": "C",
+  "date": "2026-10-23",
+  "time_et": "15:00",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "P2",
+  "hook": "C",
+  "date": "2026-10-23",
+  "time_et": "15:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "P3",
+  "hook": "B",
+  "date": "2026-10-23",
+  "time_et": "21:30",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "P3",
+  "hook": "B",
+  "date": "2026-10-23",
+  "time_et": "21:30",
+  "platform": "youtube",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "X1",
+  "hook": "C",
+  "date": "2026-10-24",
+  "time_et": "15:00",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "X1",
+  "hook": "C",
+  "date": "2026-10-24",
+  "time_et": "15:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ },
+ {
+  "concept": "P3",
+  "hook": "C",
+  "date": "2026-10-25",
+  "time_et": "15:00",
+  "platform": "instagram",
+  "placement": "trial_reel",
+  "status": "draft"
+ },
+ {
+  "concept": "P3",
+  "hook": "C",
+  "date": "2026-10-25",
+  "time_et": "15:00",
+  "platform": "tiktok",
+  "placement": "post",
+  "status": "draft"
+ }
+]
