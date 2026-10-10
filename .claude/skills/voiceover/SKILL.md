@@ -17,6 +17,15 @@ Use `scripts/tts.py`. It rotates through every ElevenLabs key it's given and mov
 - When Wayne sends new voices, audition each on the same hook line plus one body line, send the clips, and record his pick.
 - Dialogue formats (POV skit, buyer/seller) use two voices: `tts.py --dialogue script.json` renders each line separately and merges them with natural 120–250 ms gaps and one combined word-timing file.
 
+## Pacing (voices differ)
+Every voice has its own natural speed, pause length and energy, so never assume the house pace.
+1. Before a voice's first full job, audition it on one hook line and one body line at speed 1.0 and measure words/second from the alignment. Record it as `wps` in `references/voice-roster.md`.
+2. Set that voice's ElevenLabs `speed` (0.9–1.1) so it lands near 2.7 words/s; a slow, premium voice (Jerry B) may stay slower on trailers, where the pauses are the point.
+3. In dialogue, fit each line to its own speaker: tighten or tempo each segment separately, never the merged file, so a fast and a slow voice still sound natural together.
+4. After generation, compare each beat's real duration with the beat sheet. Over by more than 10 %: cut words in the script (retention-editor), don't speed up past atempo 1.06.
+5. Motion always times cuts and word reveals to the real word timestamps (`words.json`), never to the beat-sheet estimates.
+6. Casting per week lives in `weeks/<week>/vo/casting.json` (speaker → actor). `extract_vo.py` pulls the lines; apply casting before generating.
+
 ## Process
 1. Use the eleven_multilingual_v2 model with the with-timestamps endpoint, and break tags from the script's direction.
 2. Tighten pauses from the alignment (`tts.py --tighten`): sentence gaps of 0.22–0.3 s, the reveal silence as scripted.
