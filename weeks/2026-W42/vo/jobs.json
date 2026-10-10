@@ -1,0 +1,925 @@
+{
+ "C1": {
+  "narrator": "Eric",
+  "hooks": {
+   "A": [
+    {
+     "speaker": "Eric",
+     "text": "The buyer was still standing in the garage when the shoebox came out.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ],
+   "B": [
+    {
+     "speaker": "Eric",
+     "text": "Sixty-eight thousand dollars, and it came down to a shoebox.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ],
+   "C": [
+    {
+     "speaker": "Eric",
+     "text": "Your build isn't worth what you spent on it. It's worth what you can prove.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ]
+  },
+  "body": [
+   {
+    "speaker": "Eric",
+    "text": "Marcus's first receipt for the Supra? <break time=\"0.3s\" /> Blank.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Chris",
+    "text": "That for the turbo?",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Eric",
+    "text": "It was. <break time=\"0.3s\" /> Probably.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Coilovers: fourteen hundred bucks. <break time=\"0.2s\" /> No date. Coffee ring.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "But the worst part? <break time=\"0.6s\" /> He stopped asking.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Lid on. <break time=\"0.2s\" /> He handed over his phone.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Every part, dated. <break time=\"0.2s\" /> Turbo: March 12, 2019, with photos.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "He took it. Scrolled. <break time=\"0.4s\" /> Kept scrolling.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Sixty-eight. Asking. <break time=\"0.5s\" /> The box stayed shut.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   }
+  ],
+  "cta": [
+   {
+    "speaker": "Eric",
+    "text": "Start your build's record at fuelmybuild.com.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   }
+  ]
+ },
+ "C2": {
+  "narrator": "Chris",
+  "hooks": {
+   "A": [
+    {
+     "speaker": "Chris",
+     "text": "Before I book the flight — any service records on the Z?",
+     "voice": "iP95p4xoKVk53GoZ742B"
+    }
+   ],
+   "B": [
+    {
+     "speaker": "Chris",
+     "text": "How long would you stare at these three dots?",
+     "voice": "iP95p4xoKVk53GoZ742B"
+    }
+   ],
+   "C": [
+    {
+     "speaker": "Chris",
+     "text": "POV: you just asked a 240Z seller for the service records.",
+     "voice": "iP95p4xoKVk53GoZ742B"
+    }
+   ]
+  },
+  "body": [
+   {
+    "speaker": "Chris",
+    "text": "Typing… <break time=\"0.35s\" /> stopped. <break time=\"0.35s\" /> Typing again.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Motor was rebuilt. <break time=\"0.3s\" /> Around… 2015?",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Chris",
+    "text": "Around?",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Chris",
+    "text": "By who?",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Guy in Reno. <break time=\"0.4s\" /> He retired.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Chris",
+    "text": "Got another Z to look at Sunday.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Hang on. <break time=\"0.3s\" /> Here.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Chris",
+    "text": "Rebuilt L24… May 9th, 2015… twelve photos…",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Chris",
+    "text": "The Reno shop logged this?",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Every visit.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Chris",
+    "text": "…Deal.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Saturday?",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   }
+  ],
+  "cta": [
+   {
+    "speaker": "Chris",
+    "text": "Records your buyer can open: fuelmybuild.com.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   }
+  ]
+ },
+ "C3": {
+  "narrator": "Brian",
+  "hooks": {
+   "A": [
+    {
+     "speaker": "Brian",
+     "text": "Nadia found three things on her new 240Z that didn't add up.",
+     "voice": "nPczCjzI2devNBz1zQrb"
+    }
+   ],
+   "B": [
+    {
+     "speaker": "Brian",
+     "text": "Fifty-four years. Four owners. And Nadia knew nothing about the first three.",
+     "voice": "nPczCjzI2devNBz1zQrb"
+    }
+   ],
+   "C": [
+    {
+     "speaker": "Brian",
+     "text": "Nadia bought the car. Nobody sold her its story.",
+     "voice": "nPczCjzI2devNBz1zQrb"
+    }
+   ]
+  },
+  "body": [
+   {
+    "speaker": "Brian",
+    "text": "Clue one: forty-one thousand miles. <break time=\"0.2s\" /> On a 1972.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Clue two: a weld, too new. <break time=\"0.2s\" /> Crashed?",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Clue three was worse. <break time=\"0.3s\" /> Tape: 'Ask Ray.'",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "No paperwork. <break time=\"0.4s\" /> So who was Ray?",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Then: the glovebox.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Hal logged everything. <break time=\"0.2s\" /> Odometer: rolled over, 1991.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Weld: rust repair, 2017, shop-signed. <break time=\"0.3s\" /> And Ray?",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Ray rebuilt the motor. Logged it himself.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Hal's last entry: 'Keep writing.'",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   }
+  ],
+  "cta": [
+   {
+    "speaker": "Brian",
+    "text": "Owner number five won't have to guess. fuelmybuild.com.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   }
+  ]
+ },
+ "G1": {
+  "narrator": "Chris",
+  "hooks": {
+   "A": [
+    {
+     "speaker": "Chris",
+     "text": "Your lead tech quits on a Friday.",
+     "voice": "iP95p4xoKVk53GoZ742B"
+    }
+   ],
+   "B": [
+    {
+     "speaker": "Chris",
+     "text": "Dave left his keys on the counter at 5:42 Friday and didn't look back.",
+     "voice": "iP95p4xoKVk53GoZ742B"
+    }
+   ],
+   "C": [
+    {
+     "speaker": "Chris",
+     "text": "If you run a shop, this is the Monday you're scared of.",
+     "voice": "iP95p4xoKVk53GoZ742B"
+    }
+   ]
+  },
+  "body": [
+   {
+    "speaker": "Chris",
+    "text": "Monday: Dave's Supra is back on lift two.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Chris",
+    "text": "Boost leak. <break time=\"0.2s\" /> Dave's turbo. Leo never touched it.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Chris",
+    "text": "So he called Dave. <break time=\"0.6s\" /> Voicemail.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Chris",
+    "text": "Then the owner texted. <break time=\"0.2s\" /> 'Still Wednesday?'",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Chris",
+    "text": "But Dave logged everything.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Chris",
+    "text": "Turbo install, March 14. <break time=\"0.2s\" /> One photo: check here first.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Chris",
+    "text": "It was. <break time=\"0.4s\" /> Four minutes.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Chris",
+    "text": "Dave's gone. <break time=\"0.4s\" /> His notes stayed.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   }
+  ],
+  "cta": [
+   {
+    "speaker": "Chris",
+    "text": "Log every job. fuelmybuild.com.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   }
+  ]
+ },
+ "G2": {
+  "narrator": "Eric",
+  "hooks": {
+   "A": [
+    {
+     "speaker": "Eric",
+     "text": "A clean feed proves nothing.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ],
+   "B": [
+    {
+     "speaker": "Eric",
+     "text": "Spot the difference.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ],
+   "C": [
+    {
+     "speaker": "Eric",
+     "text": "Which of these shops gets your E30?",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ]
+  },
+  "body": [
+   {
+    "speaker": "Eric",
+    "text": "Jen couldn't tell these two shops apart.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Same reply: <break time=\"0.2s\" /> 'We do these all the time.'",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Nine grand. <break time=\"0.2s\" /> So she asked both one thing.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Shop one: three gorgeous photos. <break time=\"0.3s\" /> Not an E30.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Shop two: a link.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "An E30 swap, done in June. <break time=\"0.2s\" /> Every part, dated.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Their name on every entry. <break time=\"0.2s\" /> Their lift.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Jen booked two. <break time=\"0.3s\" /> One's on 'Seen.'",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   }
+  ],
+  "cta": [
+   {
+    "speaker": "Eric",
+    "text": "Show your work. fuelmybuild.com.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   }
+  ]
+ },
+ "G3": {
+  "narrator": "Rita",
+  "hooks": {
+   "A": [
+    {
+     "speaker": "Chris",
+     "text": "Hey! Any update on my car?",
+     "voice": "iP95p4xoKVk53GoZ742B"
+    },
+    {
+     "speaker": "Rita",
+     "text": "…Same as twenty minutes ago.",
+     "voice": "EXAVITQu4vr4xnSDxMaL"
+    }
+   ],
+   "B": [
+    {
+     "speaker": "Rita",
+     "text": "Nine texts. One hour. Same question.",
+     "voice": "EXAVITQu4vr4xnSDxMaL"
+    }
+   ],
+   "C": [
+    {
+     "speaker": "Rita",
+     "text": "I'm under a Tacoma, brake fluid to my elbows, and—",
+     "voice": "EXAVITQu4vr4xnSDxMaL"
+    }
+   ]
+  },
+  "body": [
+   {
+    "speaker": "Chris",
+    "text": "Quick one — any update?",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Rita",
+    "text": "Still on the lift.",
+    "voice": "EXAVITQu4vr4xnSDxMaL"
+   },
+   {
+    "speaker": "Chris",
+    "text": "The Civic — any update?",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Rita",
+    "text": "Waiting on a part.",
+    "voice": "EXAVITQu4vr4xnSDxMaL"
+   },
+   {
+    "speaker": "Chris",
+    "text": "Did the part come?",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Rita",
+    "text": "It's been eleven minutes.",
+    "voice": "EXAVITQu4vr4xnSDxMaL"
+   },
+   {
+    "speaker": "Rita",
+    "text": "That Tacoma hasn't moved in an hour.",
+    "voice": "EXAVITQu4vr4xnSDxMaL"
+   },
+   {
+    "speaker": "Chris",
+    "text": "Last one—",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Rita",
+    "text": "No. <break time=\"0.2s\" /> Watch this.",
+    "voice": "EXAVITQu4vr4xnSDxMaL"
+   },
+   {
+    "speaker": "Rita",
+    "text": "Every car gets a page. <break time=\"0.2s\" /> I post as I work.",
+    "voice": "EXAVITQu4vr4xnSDxMaL"
+   },
+   {
+    "speaker": "Rita",
+    "text": "Link. <break time=\"0.2s\" /> Link. <break time=\"0.2s\" /> Link.",
+    "voice": "EXAVITQu4vr4xnSDxMaL"
+   },
+   {
+    "speaker": "Chris",
+    "text": "Oh nice, pads are on. <break time=\"0.2s\" /> No rush.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Rita",
+    "voice": "EXAVITQu4vr4xnSDxMaL",
+    "text": "Done. <break time=\"0.2s\" /> Two fifty-one."
+   },
+   {
+    "speaker": "Chris",
+    "voice": "iP95p4xoKVk53GoZ742B",
+    "text": "My brakes next?"
+   }
+  ],
+  "cta": [
+   {
+    "speaker": "Rita",
+    "text": "Give every car a page. fuelmybuild.com.",
+    "voice": "EXAVITQu4vr4xnSDxMaL"
+   }
+  ]
+ },
+ "P1": {
+  "narrator": "Eric",
+  "hooks": {
+   "A": [
+    {
+     "speaker": "Eric",
+     "text": "We tried to follow one turbo after it shipped.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ],
+   "B": [
+    {
+     "speaker": "Eric",
+     "text": "Challenge: find this turbo. All you get is the order number.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ],
+   "C": [
+    {
+     "speaker": "Eric",
+     "text": "This turbo's maker knew where it was for exactly four days.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ]
+  },
+  "body": [
+   {
+    "speaker": "Eric",
+    "text": "Order A-2207: <break time=\"0.15s\" /> a Korvane turbo, shipped March 2nd.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Delivered March 6th. <break time=\"0.4s\" /> Then: nothing.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Clue one: tagged posts. <break time=\"0.2s\" /> None say whose turbo.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Clue two: the review. <break time=\"0.4s\" /> 'Arrived fast.'",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "So we searched the part, <break time=\"0.2s\" /> not the buyer.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Found it. <break time=\"0.5s\" /> A white '99 Supra. Kessler Motorsport.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "The owner logs everything. <break time=\"0.2s\" /> Leak fixed. Dyno day.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "And the build links back to Korvane.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Receipt says delivered. <break time=\"0.4s\" /> Now they know where.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   }
+  ],
+  "cta": [
+   {
+    "speaker": "Eric",
+    "text": "First 100 brands get a free page. fuelmybuild.com",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   }
+  ]
+ },
+ "P2": {
+  "narrator": "Eric",
+  "hooks": {
+   "A": [
+    {
+     "speaker": "Eric",
+     "text": "What does $2,400 of attention look like on a graph?",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ],
+   "B": [
+    {
+     "speaker": "Eric",
+     "text": "This spike cost $2,400.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ],
+   "C": [
+    {
+     "speaker": "Eric",
+     "text": "Sponsored posts don't fail. <break time=\"0.2s\" /> They expire. Watch this one.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ]
+  },
+  "body": [
+   {
+    "speaker": "Eric",
+    "text": "Jonah, Vesk Wheels. <break time=\"0.15s\" /> One creator, one GR86.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "The line climbs. <break time=\"0.2s\" /> Hour twelve: thirty-eight thousand views.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Hour twenty-four. <break time=\"0.5s\" /> Flat. Forever.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "But a Tucson Miata posted Vesks too. <break time=\"0.2s\" /> Free.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Nineteen builds. <break time=\"0.3s\" /> None linked to Jonah.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Until their build pages did. <break time=\"0.3s\" /> Every Vesk, one page.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Each build adds a car. <break time=\"0.3s\" /> It stacks.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Day thirty: post, zero. <break time=\"0.3s\" /> Page, still counting.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Before your next $2,400, <break time=\"0.2s\" /> watch this line.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   }
+  ],
+  "cta": [
+   {
+    "speaker": "Eric",
+    "text": "First 100 brands get a free page. fuelmybuild.com",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   }
+  ]
+ },
+ "P3": {
+  "narrator": "Eric",
+  "hooks": {
+   "A": [
+    {
+     "speaker": "Eric",
+     "text": "Five-star reviews get written on the one day nobody knows anything.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ],
+   "B": [
+    {
+     "speaker": "Eric",
+     "text": "Zero miles. <break time=\"0.2s\" /> That's when these coilovers got their five stars.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ],
+   "C": [
+    {
+     "speaker": "Eric",
+     "text": "Three myths about part reviews. <break time=\"0.2s\" /> The first one's on your product page right now.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ]
+  },
+  "body": [
+   {
+    "speaker": "Eric",
+    "text": "Dani's Civic hadn't left the driveway. <break time=\"0.15s\" /> Five stars.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Review of the box. <break time=\"0.3s\" /> Myth two: they come back.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Dani did, at 18,000. <break time=\"0.2s\" /> In a group chat.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Buried by morning. <break time=\"0.3s\" /> Stellan never saw it.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Myth three: nobody tracks it after install.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Dani's build log did. <break time=\"0.4s\" /> Stellan coilovers, March 12.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Eighteen thousand: no rattles. <break time=\"0.2s\" /> Thirty thousand: same set.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "And that parts row <break time=\"0.15s\" /> links straight to Stellan.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Day one got stars. <break time=\"0.4s\" /> Thirty thousand got proof.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   }
+  ],
+  "cta": [
+   {
+    "speaker": "Eric",
+    "text": "First 100 brands get a free page. fuelmybuild.com",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   }
+  ]
+ },
+ "X1": {
+  "narrator": "Eric",
+  "hooks": {
+   "A": [
+    {
+     "speaker": "Eric",
+     "text": "Three people built this Supra. <break time=\"0.2s\" /> Ask any of them what's in it.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ],
+   "B": [
+    {
+     "speaker": "Eric",
+     "text": "If this Supra breaks tomorrow, <break time=\"0.15s\" /> the fix is split between three people.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ],
+   "C": [
+    {
+     "speaker": "Eric",
+     "text": "This Supra has three histories. <break time=\"0.2s\" /> Every one is missing a page.",
+     "voice": "cjVigY5qzO86Huf0OWal"
+    }
+   ]
+  },
+  "body": [
+   {
+    "speaker": "Chris",
+    "text": "I own it. No clue what Kessler changed.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Brian",
+    "text": "I changed it. <break time=\"0.15s\" /> Specs: clipboard, drawer.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Our turbo. <break time=\"0.2s\" /> Our record ends: shipped.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Chris",
+    "text": "Then the wastegate cracked. <break time=\"0.2s\" /> Which part, exactly?",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Clipboard's gone.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Kit came in four versions.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Chris",
+    "text": "So I sent one link: <break time=\"0.2s\" /> my build page.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Brian",
+    "text": "My install's on it. <break time=\"0.15s\" /> Specs and all.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Eric",
+    "text": "The row said which kit. <break time=\"0.2s\" /> Shipped next day.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   },
+   {
+    "speaker": "Chris",
+    "text": "One car.",
+    "voice": "iP95p4xoKVk53GoZ742B"
+   },
+   {
+    "speaker": "Brian",
+    "text": "One record.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Eric",
+    "text": "Three people, one page.",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   }
+  ],
+  "cta": [
+   {
+    "speaker": "Eric",
+    "text": "Start your car's record. <break time=\"0.15s\" /> fuelmybuild.com",
+    "voice": "cjVigY5qzO86Huf0OWal"
+   }
+  ]
+ },
+ "X2": {
+  "narrator": "Brian",
+  "hooks": {
+   "A": [
+    {
+     "speaker": "Brian",
+     "text": "Your car won't remember who built it.",
+     "voice": "nPczCjzI2devNBz1zQrb"
+    }
+   ],
+   "B": [
+    {
+     "speaker": "Brian",
+     "text": "In 2049, someone will buy this Supra <break time=\"0.3s\" /> and ask who built it.",
+     "voice": "nPczCjzI2devNBz1zQrb"
+    }
+   ]
+  },
+  "body": [
+   {
+    "speaker": "Brian",
+    "text": "Twenty twenty-six. <break time=\"0.3s\" /> One shop knows every bolt.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Twenty thirty-one. <break time=\"0.5s\" /> The shop closes.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Twenty thirty-eight. <break time=\"0.5s\" /> The turbo is discontinued.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Twenty forty-four. <break time=\"0.3s\" /> Sold. Receipts lost.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Everything that made this car <break time=\"0.6s\" /> is gone.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Except the record.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Every job, still signed. <break time=\"0.3s\" /> Every part, still branded.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "Twenty forty-nine. <break time=\"0.3s\" /> A kid opens the link.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   },
+   {
+    "speaker": "Brian",
+    "text": "FuelMyBuild. <break time=\"0.5s\" /> The record outlives the build.",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   }
+  ],
+  "cta": [
+   {
+    "speaker": "Brian",
+    "text": "Start yours. <break time=\"0.2s\" /> fuelmybuild.com",
+    "voice": "nPczCjzI2devNBz1zQrb"
+   }
+  ]
+ }
+}
