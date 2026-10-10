@@ -1,0 +1,8 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../ui.css"></head>
+<body><div id="root"></div>
+<script src="../logo.js"></script><script src="../kit.js"></script><script src="../screens.js"></script><script src="../screens2.js"></script>
+<script>const F=[];const add=(id,t,html,bg="studio",note="")=>F.push({id,t,note,html:`<div class="frame" id="${id}"><div class="bg ${bg}"></div>${html}<div class="tc">${id} · ${t.toFixed(1)}s</div></div>`});</script>
+<script>document.write('<script src="'+new URLSearchParams(location.search).get('reel')+'.js"><\/script>')</script>
+<script>const EM=h=>h.replace(/\p{Extended_Pictographic}(?:️)?(?:‍\p{Extended_Pictographic}(?:️)?)*/gu,m=>`<img src="../node_modules/emoji-datasource-google/img/google/64/${[...m].map(c=>c.codePointAt(0).toString(16)).filter(c=>c!=="fe0f").join("-")}.png" style="height:1.2em;width:1.2em;vertical-align:-.25em;display:inline-block">`);
+document.getElementById("root").innerHTML=EM(F.map(f=>f.html).join(""));window.FRAMES=F.map(f=>({id:f.id,t:f.t,note:f.note}));</script>
+</body></html>

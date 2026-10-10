@@ -1,4 +1,4 @@
-@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;src:url(../node_modules/@fontsource-variable/inter/files/inter-latin-opsz-normal.woff2) format("woff2-variations");}
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;src:url(../remotion/public/fonts/inter-latin-opsz-normal.woff2) format("woff2-variations");}
 
 :root{
   --ink:#1D1D1F; --ink2:#424245; --mute:#6E6E73; --mute2:#86868B; --mute3:#AEAEB2;
@@ -33,7 +33,7 @@ body{background:#d8d8dc;font-family:Inter,var(--emoji),sans-serif;color:var(--in
 
 /* ---------- device ---------- */
 .device{position:absolute;transform-origin:50% 50%}
-.device .body{position:absolute;inset:0;border-radius:var(--R);background:linear-gradient(145deg,#E9E7E3,#BEBBB6 40%,#E4E2DE 60%,#A9A6A1);
+.device .dbody{position:absolute;inset:0;border-radius:var(--R);background:linear-gradient(145deg,#E9E7E3,#BEBBB6 40%,#E4E2DE 60%,#A9A6A1);
   box-shadow:0 2px 0 rgba(255,255,255,.6) inset,0 70px 120px -30px rgba(0,0,0,.28),0 30px 60px -20px rgba(0,0,0,.18)}
 .device .bezel{position:absolute;inset:var(--band);border-radius:calc(var(--R) - var(--band));background:#0B0B0C}
 .device .screen{position:absolute;overflow:hidden;background:#fff;transform-origin:0 0}

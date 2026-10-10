@@ -1,3 +1,4 @@
+const IMG = (typeof IMGROOT !== "undefined" ? IMGROOT : "../../remotion/public/img/");
 // ---------- SF-style glyphs (24 grid, stroke-based, round joins) ----------
 const P = {
   search: '<circle cx="10.5" cy="10.5" r="6.6"/><path d="M15.4 15.4 20.5 20.5"/>',
@@ -62,6 +63,10 @@ const remap = id => { const m = id.match(/^img (\d+)/); return m ? (MAP[+m[1]] |
 const GLYPH = id => id.startsWith("car") ? "car" : id.startsWith("part") ? "wrench" : id.startsWith("face") ? "person" : "photo";
 const ph = (id0, desc, w, h, o = {}) => {
   const id = o.as || remap(id0);
+  if (/^(car|part)-\d\d$|^mech$/.test(id) && !o.placeholder) {  // real studio cutout on a soft tile
+    const t0 = TONES[(parseInt(id.replace(/\D/g, "")) || 0) % TONES.length];
+    return `<div style="position:relative;flex:none;overflow:hidden;width:${w}px;height:${h}px;border-radius:${o.r ?? 18}px;background:${o.bg || "linear-gradient(160deg,#F7F7F9,#E9E9EE)"};${o.style || ""}"><img src="${IMG}${id}.png" style="position:absolute;inset:${o.inset ?? 8}%;width:${100 - 2 * (o.inset ?? 8)}%;height:${100 - 2 * (o.inset ?? 8)}%;object-fit:${o.fit || "contain"}">${o.inner || ""}</div>`;
+  }
   if (id === "logo") return `<div style="width:${w}px;height:${h}px;border-radius:${o.r ?? 18}px;background:#1D1D1F;color:#fff;display:grid;place-items:center;font-weight:800;letter-spacing:-.06em;font-size:${Math.round(w * .36)}px;flex:none;${o.style || ""}">YB</div>`;
   if (desc || !SHOTS[id]) SHOTS[id] = desc || SHOTS[id] || "";
   const t = TONES[(parseInt(id.replace(/\D/g, "")) || 0) % TONES.length];
@@ -88,7 +93,7 @@ const device = (screen, { x, y, w, rot = "", z = "", cls = "", dark = false }) =
     <div class="btn" style="left:${-3 * s}px;top:${200 * s}px;width:${4 * s}px;height:${36 * s}px"></div>
     <div class="btn" style="left:${-3 * s}px;top:${260 * s}px;width:${4 * s}px;height:${64 * s}px"></div>
     <div class="btn" style="right:${-3 * s}px;top:${250 * s}px;width:${4 * s}px;height:${96 * s}px"></div>
-    <div class="body"></div><div class="bezel"></div>
+    <div class="dbody"></div><div class="bezel"></div>
     <div class="screen ${dark ? "dark" : ""}" style="left:${bez}px;top:${bez}px;width:402px;height:874px;border-radius:${56}px;transform:scale(${s})">${screen}<div class="homeind"></div></div>
   </div>`;
 };
@@ -114,3 +119,17 @@ const notif = ({ who, text, time = "now", w = 900, s = 2.2, op = 1, style = "" }
 
 const cursor = (x, y, s = 1) => `<svg style="position:absolute;left:${x}px;top:${y}px;width:${36 * s}px;height:${36 * s}px;filter:drop-shadow(0 3px 6px rgba(0,0,0,.28));z-index:50" viewBox="0 0 24 24"><path d="M5 2.8v16.4l4.4-4.2 3 6.6 2.8-1.3-3-6.4h6z" fill="#000" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>`;
 const touch = (x, y, s = 1) => `<div style="position:absolute;left:${x - 34 * s}px;top:${y - 34 * s}px;width:${68 * s}px;height:${68 * s}px;border-radius:50%;background:rgba(0,0,0,.12);box-shadow:0 0 0 ${10 * s}px rgba(0,0,0,.05);z-index:50"></div>`;
+
+// ---------- real studio cutouts (kit/remotion/public/img) ----------
+// cut("car-01", {x, y, w, flip, shadow, rot, op, z, filter}) — transparent PNG with a soft contact shadow
+const cut = (name, o = {}) => {
+  const { x = 0, y = 0, w = 600, flip = false, shadow = true, rot = 0, op = 1, z = 2, filter = "" } = o;
+  const sh = shadow ? `<div style="position:absolute;left:8%;right:8%;bottom:-2%;height:9%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.28),rgba(0,0,0,0));filter:blur(6px)"></div>` : "";
+  return `<div class="abs" style="left:${x}px;top:${y}px;width:${w}px;z-index:${z};opacity:${op};transform:rotate(${rot}deg)${flip ? " scaleX(-1)" : ""};${filter ? `filter:${filter};` : ""}">${sh}<img src="${IMG}${name}.png" style="position:relative;width:100%;display:block"></div>`;
+};
+// soft tile behind a cutout (studio look)
+const tile = (x, y, w, h, r = 44, bg = "#F5F5F7") => `<div class="abs" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px;border-radius:${r}px;background:${bg};z-index:1"></div>`;
+// glass pill / chip
+const chip = (html, x, y, o = {}) => `<div class="glass abs" style="left:${x}px;top:${y}px;z-index:${o.z || 6};display:flex;align-items:center;gap:12px;height:${o.h || 72}px;padding:0 28px;border-radius:${(o.h || 72) / 2}px;font-size:${o.fs || 32}px;font-weight:600;letter-spacing:-.015em;white-space:nowrap;background:${o.bg || "#fff"};color:${o.color || "#1D1D1F"};${o.style || ""}">${html}</div>`;
+// generic iOS card (white rounded, shadow) with custom inner html
+const card = (html, x, y, w, o = {}) => `<div class="abs" style="left:${x}px;top:${y}px;width:${w}px;z-index:${o.z || 4};border-radius:${o.r || 36}px;background:#fff;padding:${o.pad ?? 28}px;box-shadow:0 40px 90px -30px rgba(0,0,0,.28),0 0 0 1px rgba(0,0,0,.04);${o.style || ""}">${html}</div>`;
