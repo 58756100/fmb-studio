@@ -36,7 +36,8 @@
   "time_et": "19:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C1-B.mp4"
  },
  {
   "concept": "C1",
@@ -45,7 +46,8 @@
   "time_et": "19:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C1-B.mp4"
  },
  {
   "concept": "C1",
@@ -54,7 +56,8 @@
   "time_et": "19:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C1-B.mp4"
  },
  {
   "concept": "G2",
@@ -63,7 +66,8 @@
   "time_et": "12:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G2-B.mp4"
  },
  {
   "concept": "G2",
@@ -72,7 +76,8 @@
   "time_et": "12:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G2-B.mp4"
  },
  {
   "concept": "G2",
@@ -81,7 +86,8 @@
   "time_et": "12:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G2-B.mp4"
  },
  {
   "concept": "P1",
@@ -90,7 +96,8 @@
   "time_et": "19:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P1-A.mp4"
  },
  {
   "concept": "P1",
@@ -99,7 +106,8 @@
   "time_et": "19:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P1-A.mp4"
  },
  {
   "concept": "P1",
@@ -108,7 +116,8 @@
   "time_et": "19:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P1-A.mp4"
  },
  {
   "concept": "C2",
@@ -117,7 +126,8 @@
   "time_et": "12:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C2-A.mp4"
  },
  {
   "concept": "C2",
@@ -126,7 +136,8 @@
   "time_et": "12:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C2-A.mp4"
  },
  {
   "concept": "C2",
@@ -135,7 +146,8 @@
   "time_et": "12:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C2-A.mp4"
  },
  {
   "concept": "C1",
@@ -144,7 +156,8 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C1-A.mp4"
  },
  {
   "concept": "C1",
@@ -153,7 +166,8 @@
   "time_et": "15:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C1-A.mp4"
  },
  {
   "concept": "G1",
@@ -162,7 +176,8 @@
   "time_et": "19:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G1-B.mp4"
  },
  {
   "concept": "G1",
@@ -171,7 +186,8 @@
   "time_et": "19:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G1-B.mp4"
  },
  {
   "concept": "G1",
@@ -180,7 +196,8 @@
   "time_et": "19:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G1-B.mp4"
  },
  {
   "concept": "X2",
@@ -189,7 +206,8 @@
   "time_et": "12:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/X2-A.mp4"
  },
  {
   "concept": "X2",
@@ -198,7 +216,8 @@
   "time_et": "12:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/X2-A.mp4"
  },
  {
   "concept": "X2",
@@ -207,7 +226,8 @@
   "time_et": "12:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/X2-A.mp4"
  },
  {
   "concept": "G2",
@@ -216,7 +236,8 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G2-A.mp4"
  },
  {
   "concept": "G2",
@@ -225,7 +246,8 @@
   "time_et": "15:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G2-A.mp4"
  },
  {
   "concept": "C3",
@@ -234,7 +256,8 @@
   "time_et": "19:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C3-A.mp4"
  },
  {
   "concept": "C3",
@@ -243,7 +266,8 @@
   "time_et": "19:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C3-A.mp4"
  },
  {
   "concept": "C3",
@@ -252,7 +276,8 @@
   "time_et": "19:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C3-A.mp4"
  },
  {
   "concept": "P1",
@@ -261,7 +286,8 @@
   "time_et": "21:30",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P1-B.mp4"
  },
  {
   "concept": "P1",
@@ -270,7 +296,8 @@
   "time_et": "21:30",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P1-B.mp4"
  },
  {
   "concept": "G3",
@@ -279,7 +306,8 @@
   "time_et": "12:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G3-C.mp4"
  },
  {
   "concept": "G3",
@@ -288,7 +316,8 @@
   "time_et": "12:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G3-C.mp4"
  },
  {
   "concept": "G3",
@@ -297,7 +326,8 @@
   "time_et": "12:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G3-C.mp4"
  },
  {
   "concept": "C1",
@@ -306,7 +336,8 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C1-C.mp4"
  },
  {
   "concept": "C1",
@@ -315,7 +346,8 @@
   "time_et": "15:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C1-C.mp4"
  },
  {
   "concept": "P2",
@@ -324,7 +356,8 @@
   "time_et": "19:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P2-A.mp4"
  },
  {
   "concept": "P2",
@@ -333,7 +366,8 @@
   "time_et": "19:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P2-A.mp4"
  },
  {
   "concept": "P2",
@@ -342,7 +376,8 @@
   "time_et": "19:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P2-A.mp4"
  },
  {
   "concept": "C2",
@@ -351,7 +386,8 @@
   "time_et": "21:30",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C2-B.mp4"
  },
  {
   "concept": "C2",
@@ -360,7 +396,8 @@
   "time_et": "21:30",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C2-B.mp4"
  },
  {
   "concept": "X1",
@@ -369,7 +406,8 @@
   "time_et": "12:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/X1-A.mp4"
  },
  {
   "concept": "X1",
@@ -378,7 +416,8 @@
   "time_et": "12:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/X1-A.mp4"
  },
  {
   "concept": "X1",
@@ -387,7 +426,8 @@
   "time_et": "12:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/X1-A.mp4"
  },
  {
   "concept": "G2",
@@ -396,7 +436,8 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G2-C.mp4"
  },
  {
   "concept": "G2",
@@ -405,7 +446,8 @@
   "time_et": "15:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G2-C.mp4"
  },
  {
   "concept": "P3",
@@ -414,7 +456,8 @@
   "time_et": "19:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P3-A.mp4"
  },
  {
   "concept": "P3",
@@ -423,7 +466,8 @@
   "time_et": "19:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P3-A.mp4"
  },
  {
   "concept": "P3",
@@ -432,7 +476,8 @@
   "time_et": "19:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P3-A.mp4"
  },
  {
   "concept": "P1",
@@ -441,7 +486,8 @@
   "time_et": "21:30",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P1-C.mp4"
  },
  {
   "concept": "P1",
@@ -450,7 +496,8 @@
   "time_et": "21:30",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P1-C.mp4"
  },
  {
   "concept": "C2",
@@ -459,7 +506,8 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C2-C.mp4"
  },
  {
   "concept": "C2",
@@ -468,7 +516,8 @@
   "time_et": "15:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C2-C.mp4"
  },
  {
   "concept": "G1",
@@ -477,7 +526,8 @@
   "time_et": "21:30",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G1-A.mp4"
  },
  {
   "concept": "G1",
@@ -486,7 +536,8 @@
   "time_et": "21:30",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G1-A.mp4"
  },
  {
   "concept": "X2",
@@ -495,7 +546,8 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/X2-B.mp4"
  },
  {
   "concept": "X2",
@@ -504,7 +556,8 @@
   "time_et": "15:00",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/X2-B.mp4"
  },
  {
   "concept": "C3",
@@ -513,7 +566,8 @@
   "time_et": "21:30",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C3-B.mp4"
  },
  {
   "concept": "C3",
@@ -522,7 +576,8 @@
   "time_et": "21:30",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C3-B.mp4"
  },
  {
   "concept": "G1",
@@ -531,7 +586,8 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G1-C.mp4"
  },
  {
   "concept": "G1",
@@ -540,7 +596,8 @@
   "time_et": "15:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G1-C.mp4"
  },
  {
   "concept": "G3",
@@ -549,7 +606,8 @@
   "time_et": "21:30",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G3-A.mp4"
  },
  {
   "concept": "G3",
@@ -558,7 +616,8 @@
   "time_et": "21:30",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G3-A.mp4"
  },
  {
   "concept": "C3",
@@ -567,7 +626,8 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C3-C.mp4"
  },
  {
   "concept": "C3",
@@ -576,7 +636,8 @@
   "time_et": "15:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/C3-C.mp4"
  },
  {
   "concept": "P2",
@@ -585,7 +646,8 @@
   "time_et": "21:30",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P2-B.mp4"
  },
  {
   "concept": "P2",
@@ -594,7 +656,8 @@
   "time_et": "21:30",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P2-B.mp4"
  },
  {
   "concept": "G3",
@@ -603,7 +666,8 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G3-B.mp4"
  },
  {
   "concept": "G3",
@@ -612,7 +676,8 @@
   "time_et": "15:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/G3-B.mp4"
  },
  {
   "concept": "X1",
@@ -621,7 +686,8 @@
   "time_et": "21:30",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/X1-B.mp4"
  },
  {
   "concept": "X1",
@@ -630,7 +696,8 @@
   "time_et": "21:30",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/X1-B.mp4"
  },
  {
   "concept": "P2",
@@ -639,7 +706,8 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P2-C.mp4"
  },
  {
   "concept": "P2",
@@ -648,7 +716,8 @@
   "time_et": "15:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P2-C.mp4"
  },
  {
   "concept": "P3",
@@ -657,7 +726,8 @@
   "time_et": "21:30",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P3-B.mp4"
  },
  {
   "concept": "P3",
@@ -666,7 +736,8 @@
   "time_et": "21:30",
   "platform": "youtube",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P3-B.mp4"
  },
  {
   "concept": "X1",
@@ -675,7 +746,8 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/X1-C.mp4"
  },
  {
   "concept": "X1",
@@ -684,7 +756,8 @@
   "time_et": "15:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/X1-C.mp4"
  },
  {
   "concept": "P3",
@@ -693,7 +766,8 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "trial_reel",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P3-C.mp4"
  },
  {
   "concept": "P3",
@@ -702,6 +776,7 @@
   "time_et": "15:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "needs_vo_storyboard"
+  "status": "ready",
+  "render": "renders:2026-W42/P3-C.mp4"
  }
 ]

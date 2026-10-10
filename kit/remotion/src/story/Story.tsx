@@ -66,7 +66,7 @@ const Beat = ({ html, lt, dur, words, prevNums, kind, heroText }) => {
     });
     frame.appendChild(stage);
     // measure centers for transform origins
-    items.forEach(it => { const r = it.k.getBoundingClientRect(), fr = frame.getBoundingClientRect(); it.cx = r.left - fr.left + r.width / 2; it.cy = r.top - fr.top + r.height / 2; it.w.style.transformOrigin = `${it.cx}px ${it.cy}px`; it.area = r.width * r.height; });
+    items.forEach(it => { const r = it.k.getBoundingClientRect(), fr = frame.getBoundingClientRect(); it.cx = r.left - fr.left + r.width / 2; it.cy = r.top - fr.top + r.height / 2; it.w.style.transformOrigin = `${it.cx}px ${it.cy}px`; it.area = r.width * r.height; it.img = !!it.k.querySelector('img') && !it.k.querySelector('.device') && !it.k.classList.contains('device'); });
     // headline words
     let wi = 0;
     items.filter(i => i.isH).forEach(it => {
@@ -103,7 +103,10 @@ const Beat = ({ html, lt, dur, words, prevNums, kind, heroText }) => {
       const blur = (1 - clamp(p)) * 14;
       const big = it.area > 500000;
       it.w.style.opacity = String(clamp(p * 1.4));
-      it.w.style.transform = big ? `translateY(${(1 - p) * 70}px) scale(${0.94 + 0.06 * p})` : `translateY(${(1 - p) * 46}px) scale(${0.9 + 0.1 * p})`;
+      // after arriving, each element keeps a gentle, depth-staggered drift so nothing sits dead still
+      const fl = Math.sin(lt * 1.15 + k * 1.7) * (big ? 4 : 7), rot = it.img ? Math.sin(lt * 0.9 + k) * 0.6 : 0;
+      const par = 1 + (k % 3) * 0.006 * clamp(lt / Math.max(dur, 0.5));
+      it.w.style.transform = (big ? `translateY(${(1 - p) * 70 + fl}px) scale(${(0.94 + 0.06 * p) * par})` : `translateY(${(1 - p) * 46 + fl}px) scale(${(0.9 + 0.1 * p) * par})`) + (rot ? ` rotate(${rot}deg)` : "");
       it.w.style.filter = blur > 0.3 ? `blur(${blur}px)` : "";
     });
     // headline words: soft blur-in, paced like speech (or on given word times)

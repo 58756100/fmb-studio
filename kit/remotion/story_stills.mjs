@@ -11,7 +11,7 @@ const comp = await selectComposition({ serveUrl, id: "Story", inputProps, puppet
 fs.mkdirSync("stills", { recursive: true });
 const outs = [];
 for (const t of ts.split(",").map(Number)) {
-  const f = Math.min(comp.durationInFrames - 1, Math.round(t * 60)); const o = `stills/${reel}-${part}-${t}.png`;
+  const f = Math.min(comp.durationInFrames - 1, Math.round(t * 30)); const o = `stills/${reel}-${part}-${t}.png`;
   await renderStill({ composition: comp, serveUrl, frame: f, output: o, inputProps, puppeteerInstance: browser, scale: 0.5 }); outs.push(o);
 }
 await browser.close({ silent: true });
