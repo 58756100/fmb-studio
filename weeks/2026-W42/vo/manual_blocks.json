@@ -1,0 +1,88 @@
+[
+ {
+  "file": "C1_Justin.mp3",
+  "lines": [
+   "C1.hookA.0",
+   "C1.hookB.0",
+   "C1.hookC.0",
+   "C1.body.00",
+   "C1.body.02",
+   "C1.body.03",
+   "C1.body.04",
+   "C1.body.05",
+   "C1.body.06",
+   "C1.body.07",
+   "C1.body.08",
+   "C1.cta.0"
+  ]
+ },
+ {
+  "file": "G2_Justin.mp3",
+  "lines": [
+   "G2.hookA.0",
+   "G2.hookB.0",
+   "G2.hookC.0",
+   "G2.body.00",
+   "G2.body.01",
+   "G2.body.02",
+   "G2.body.03",
+   "G2.body.04",
+   "G2.body.05",
+   "G2.body.06",
+   "G2.body.07",
+   "G2.cta.0"
+  ]
+ },
+ {
+  "file": "G3_Emma.mp3",
+  "lines": [
+   "G3.hookA.1",
+   "G3.hookB.0",
+   "G3.hookC.0",
+   "G3.body.01",
+   "G3.body.03",
+   "G3.body.05",
+   "G3.body.06",
+   "G3.body.08",
+   "G3.body.09",
+   "G3.body.10",
+   "G3.body.12",
+   "G3.cta.0"
+  ]
+ },
+ {
+  "file": "P3_Emma.mp3",
+  "lines": [
+   "P3.hookA.0",
+   "P3.hookB.0",
+   "P3.hookC.0",
+   "P3.body.00",
+   "P3.body.01",
+   "P3.body.02",
+   "P3.body.03",
+   "P3.body.04",
+   "P3.body.05",
+   "P3.body.06",
+   "P3.body.07",
+   "P3.body.08",
+   "P3.cta.0"
+  ]
+ },
+ {
+  "file": "X2_JerryB.mp3",
+  "lines": [
+   "X2.hookA.0",
+   "X2.hookB.0",
+   "X2.body.00",
+   "X2.body.01",
+   "X2.body.02",
+   "X2.body.03",
+   "X2.body.04",
+   "X2.body.05",
+   "X2.body.06",
+   "X2.body.07",
+   "X2.body.08",
+   "X2.cta.0"
+  ]
+ }
+]

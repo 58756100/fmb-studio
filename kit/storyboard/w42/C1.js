@@ -2,35 +2,31 @@
 // Spine: one offer chip in the headline band rolls $68,000 → $61,000 → back to $68,000.
 const offer = (v, state = "red") => chip(`<span style="color:var(--label2);font-weight:500">Offer</span><span style="font-variant-numeric:tabular-nums;color:${state === "red" ? "#F43034" : state === "grey" ? "#AEAEB2" : "#1D1D1F"}">${v}</span>`, 0, 210, { h: 92, fs: 44, style: "left:50%;transform:translateX(-50%)" });
 // shoebox drawn in CSS (new cutout requested: see prompts)
-const box = (x, y, w, open = true, lidY = -150, lidRot = -8) => `
-  <div class="abs" style="left:${x}px;top:${y}px;width:${w}px;height:${w * .46}px;z-index:3">
-    <div style="position:absolute;left:6%;right:6%;bottom:-6%;height:12%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.3),transparent);filter:blur(8px)"></div>
-    <div style="position:absolute;inset:0;border-radius:14px;background:linear-gradient(180deg,#C9A57A,#B48C5E);box-shadow:inset 0 -18px 30px rgba(0,0,0,.12)"></div>
-    <div style="position:absolute;left:4%;right:4%;top:6%;height:30%;border-radius:8px;background:linear-gradient(180deg,#8E6C46,#A88259)"></div>
-    ${open ? `<div style="position:absolute;left:10%;right:12%;top:-6%;height:24%;display:flex;gap:6px">${[0, 1, 2, 3, 4].map(i => `<div style="flex:1;background:#FBF8F1;transform:rotate(${[-6, 3, -2, 5, -4][i]}deg);border-radius:3px;box-shadow:0 2px 6px rgba(0,0,0,.12)"></div>`).join("")}</div>` : ""}
-  </div>
-  <div class="abs" style="left:${x - w * .03}px;top:${y + lidY}px;width:${w * 1.06}px;height:${w * .13}px;border-radius:12px;background:linear-gradient(180deg,#D3B184,#BC966A);transform:rotate(${open ? lidRot : 0}deg);z-index:4;box-shadow:0 20px 40px -18px rgba(0,0,0,.35)"></div>`;
+const box = (x, y, w, open = true) => cut("obj/shoebox", { x, y: y - w * .12, w, z: 3 });
 
 // hook B (0–2.5 s): the number first, then the box springs up under it
-add("c1-01", 0.4, `${big("$68,000", 0, 760, { size: 200, color: "#F43034", style: "left:0;right:0;text-align:center" })}
-  ${H(`<span class="g">and it came down to</span>`, 1000, { size: 72 })}`, "studio", "Hook B. rolling-number slams in, red. VO: “Sixty-eight thousand dollars…”");
+add("c1-01", 0.4, `${big("$68,000", 0, 520, { size: 210, color: "#F43034", style: "left:0;right:0;text-align:center" })}
+  ${H(`<span class="g">and it came down to</span>`, 770, { size: 76 })}
+  ${cut("obj/shoebox", { x: 230, y: 1010, w: 620, op: .9, filter: "blur(2px)" })}`, "studio", "Hook B. rolling-number slams in, red. VO: “Sixty-eight thousand dollars…”");
 add("c1-02", 1.6, `${big("$68,000", 0, 360, { size: 160, color: "#F43034", style: "left:0;right:0;text-align:center" })}
   ${H(`<span class="g">a shoebox.</span>`, 560, { size: 96 })}
   ${cut("car-02", { x: 120, y: 820, w: 840, op: .35, filter: "blur(10px)" })}${box(250, 1150, 580, true, -170, -10)}`, "studio", "Box springs up under the number (lid sfx). Supra blurred behind.");
 
 // body
 add("c1-03", 3.4, `${offer("$68,000", "ink")}${H(`Eleven years.<br><span class="g">One shoebox.</span>`, 360, { size: 96 })}
-  ${box(250, 1350, 580, true, -170, -10)}
-  <div class="abs" style="left:260px;top:700px;z-index:5">${receipt({ shop: "Westside Performance", date: "", lines: [["Turbo kit", ""], ["", ""], ["Total", "$"]], faded: .45, rot: -3, w: 560 })}</div>`, "studio", "push-through into the box; a receipt rises, thermal print fading. VO: “Marcus’s first receipt for the Supra? Blank.”");
+  ${cut("obj/receipt-01", { x: 300, y: 640, w: 500, rot: -4, z: 5 })}
+  ${box(210, 1240, 660)}`, "studio", "push-through into the box; a faded receipt rises out of it. VO: “Marcus’s first receipt for the Supra? Blank.”");
 add("c1-04", 6.6, `${offer("$64,500")}${H(`That for<br><span class="g">the turbo?</span>`, 360, { size: 96 })}
-  <div class="abs" style="left:70px;top:800px;z-index:5">${receipt({ lines: [["", ""], ["", ""], ["Total", ""]], faded: .5, rot: -4, w: 460 })}</div>
-  ${cut("part-01", { x: 560, y: 860, w: 420 })}`, "studio", "Buyer voice (Chris). Offer chip rolls $68,000 → $64,500, red on the drop. Tick sfx.");
+  ${cut("obj/receipt-01", { x: 40, y: 700, w: 470, rot: -6, z: 4 })}
+  ${cut("part-01", { x: 470, y: 820, w: 580 })}
+  ${chip("Turbo kit · <span style='color:#AEAEB2'>date unreadable</span>", 0, 1420, { style: "left:50%;transform:translateX(-50%)" })}`, "studio", "Buyer voice (Chris). Offer chip rolls $68,000 → $64,500, red on the drop. Tick sfx.");
 add("c1-05", 9.6, `${offer("$61,000")}${H(`$1,400.<br><span class="g">No date.</span>`, 360, { size: 96 })}
-  ${cut("part-02", { x: 140, y: 820, w: 300 })}
-  <div class="abs" style="left:470px;top:820px;z-index:5">${receipt({ lines: [["Coilovers", "$1,400.00"], ["", ""], ["", ""]], faded: .25, stain: true, rot: 4, w: 500 })}</div>`, "studio", "whip-pan to the coilovers. Coffee-ring receipt. Second drop.");
+  ${cut("part-02", { x: 90, y: 700, w: 360 })}
+  ${cut("obj/receipt-01", { x: 450, y: 720, w: 520, rot: 5, z: 4 })}
+  ${chip("Coilovers · $1,400 · <span style='color:#F43034'>no date</span>", 0, 1440, { style: "left:50%;transform:translateX(-50%)" })}`, "studio", "whip-pan to the coilovers. Coffee-ring receipt. Second drop.");
 add("c1-06", 12.6, `${offer("$61,000", "grey")}${H(`He stopped<br><span class="g">asking.</span>`, 360, { size: 96 })}
-  ${[[-8, 90, 760], [5, 520, 820], [-3, 220, 1040], [7, 560, 1140]].map(([r, x, y]) => `<div class="abs" style="left:${x}px;top:${y}px;z-index:4;opacity:.9">${receipt({ lines: [["", ""], ["", ""]], faded: .45, rot: r, w: 440 })}</div>`).join("")}
-  <div class="abs" style="right:-60px;top:700px;width:420px;height:1100px;background:radial-gradient(closest-side,rgba(0,0,0,.10),transparent);z-index:2"></div>`, "studio", "Music cuts to silence. Receipts pile, offer chip dims grey, the buyer’s shadow steps out of frame.");
+  ${cut("obj/receipts-scatter", { x: 60, y: 640, w: 960, op: .95 })}
+  ${box(330, 1330, 420)}`, "studio", "Music cuts to silence. Receipts spill and float, offer chip dims grey, the buyer’s shadow leaves.");
 add("c1-07", 15.6, `${H(`Lid on.`, 300, { size: 96 })}${box(250, 1420, 580, false, -6, 0)}
   ${device(buildPage({ hero: "car-01", title: "White ’99 Supra", owner: "marcus.supra", meta: "212 entries · Public", url: "fuelmybuild.com/marcus-supra", section: "Installed · 24 parts", rows: [{ img: "part-01", name: "Turbo kit", brand: "{brand}", date: "Mar 12, 2019" }, { img: "part-02", name: "Coilovers", brand: "{brand}", date: "Aug 3, 2021" }] }), { x: 300, y: 560, w: 480, z: "z-index:3" })}`, "studio", "Lid drops (thud) and drives the phone up on the same spring. VO: “He handed over his phone.”");
 add("c1-08", 18.4, `${offer("$61,000", "grey")}${H(`Every part.<br><span class="g">Dated.</span>`, 360, { size: 96 })}
