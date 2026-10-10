@@ -12,7 +12,7 @@ Run FuelMyBuild's weekly short-form video cycle. Delegate each stage to its agen
 - `state/learnings.md`: what has worked and failed, with evidence. Read it first, every cycle.
 - `state/queue.json`: every rendered version and its slot, platform, status (draft, approved, scheduled, posted) and post ids.
 - `state/metrics/<week>.json`: raw analytics per post.
-- `weeks/<YYYY-Www>/`: brief.md, scripts/, storyboard/, renders (uploaded as release assets, never committed).
+- `weeks/<YYYY-Www>/`: brief.md, scripts/, storyboard/, renders (pushed to the orphan `renders` branch at `<week>/<id>-<hook>.mp4`, never to main).
 - Never commit secrets. Keys come from environment API credentials (see publishing and voiceover).
 
 ## Weekly cycle
