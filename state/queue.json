@@ -39,9 +39,12 @@
   "time_et": "19:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "ready",
+  "status": "posted",
   "render": "renders:2026-W42/C1-B.mp4",
-  "week": "2026-W42"
+  "week": "2026-W42",
+  "media_id": "18634905646053620",
+  "permalink": "https://www.instagram.com/reel/DeZdzk-DsBi/",
+  "posted_at": "2026-10-12T14:40:35Z"
  },
  {
   "concept": "C1",
