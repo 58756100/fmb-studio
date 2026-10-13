@@ -89,14 +89,17 @@
   "time_et": "12:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "approved",
+  "status": "posted",
   "render": "renders:2026-W42/G2-B.mp4",
   "week": "2026-W42",
   "caption": "Two shops. Identical feeds. Same DM reply. Jen asked one question and only one shop could answer it.\n\n#autoshop #e30 #bmwe30 #engineswap #shopowner",
   "pinned_comment": "Shops: if a customer asked you 'show me one you've done' right now, what would you send?",
   "approved_at": "2026-10-13T09:46:53Z",
   "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
-  "error": "2026-10-13 11:47 ET ig-prepare: 400 OAuthException code 200 \"API access blocked.\" (fbtrace A3w-dHbaWcdIsT9hSuy-e8W)"
+  "media_id": "18121917796937674",
+  "posted_at": "2026-10-13T16:59:00Z",
+  "note": "posted late on live retry from Wayne (12:58 ET); earlier attempts blocked by API access error",
+  "permalink": "https://www.instagram.com/reel/DecSuT4gfTX/"
  },
  {
   "concept": "G2",
