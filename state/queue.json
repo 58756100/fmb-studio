@@ -95,7 +95,8 @@
   "caption": "Two shops. Identical feeds. Same DM reply. Jen asked one question and only one shop could answer it.\n\n#autoshop #e30 #bmwe30 #engineswap #shopowner",
   "pinned_comment": "Shops: if a customer asked you 'show me one you've done' right now, what would you send?",
   "approved_at": "2026-10-13T09:46:53Z",
-  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+  "error": "2026-10-13 11:47 ET ig-prepare: 400 OAuthException code 200 \"API access blocked.\" (fbtrace A3w-dHbaWcdIsT9hSuy-e8W)"
  },
  {
   "concept": "G2",
@@ -104,13 +105,15 @@
   "time_et": "12:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "approved",
+  "status": "drafted",
   "render": "renders:2026-W42/G2-B.mp4",
   "week": "2026-W42",
   "caption": "Two shops. Identical feeds. Same DM reply. Jen asked one question and only one shop could answer it.\n\n#autoshop #e30 #bmwe30 #engineswap #shopowner",
   "pinned_comment": "Shops: if a customer asked you 'show me one you've done' right now, what would you send?",
   "approved_at": "2026-10-13T09:46:53Z",
-  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+  "publish_id": "v_inbox_file~v2.7696179369929033749",
+  "drafted_at": "2026-10-13T15:48:00Z"
  },
  {
   "concept": "G2",
@@ -150,13 +153,15 @@
   "time_et": "19:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "approved",
+  "status": "drafted",
   "render": "renders:2026-W42/P1-A.mp4",
   "week": "2026-W42",
   "caption": "We tried to follow one turbo after it shipped. Tracking died in 4 days. The build log didn't.\n\n#turbo #carbuild #aftermarketparts #supra #carparts",
   "pinned_comment": "Brands: what happens to your best seller after \"Delivered\"? Drop the part, we'll look for it in build logs.",
   "approved_at": "2026-10-13T09:46:53Z",
-  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+  "publish_id": "v_inbox_file~v2.7696179366226806805",
+  "drafted_at": "2026-10-13T15:48:00Z"
  },
  {
   "concept": "P1",
