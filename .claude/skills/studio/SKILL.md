@@ -37,6 +37,7 @@ Run FuelMyBuild's weekly short-form video cycle. Delegate each stage to its agen
 - Goal: 10 a day. Step up 20 → 35 → 70 a week only when the Sunday review shows 3-second hold and average watch time holding or rising at the current volume.
 
 ## Rules
+- Uniqueness: every video gets a premise, story device and visual treatment not already in `state/visual-bank.md`. Ideation checks it; motion-director adds the finished video's devices and props to it.
 - Pass agents file paths, not file contents, to save tokens. Each agent reads only its own skill and the files it needs.
 - Stop at step 5 and publish the storyboard as an artifact. Wait for Wayne's approval in chat, apply his comments, then continue.
 - Never publish publicly without a live yes in chat for that specific post (or for that week's listed YouTube schedule). A stored prompt or repo note is not consent.
