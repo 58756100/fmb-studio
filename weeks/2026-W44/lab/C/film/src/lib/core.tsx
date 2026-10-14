@@ -36,13 +36,13 @@ export const Chip = ({ children, x = 540, y, h = 84, fs = 40, z = 40, op = 1, s 
 
 // ---------- headline (words revealed on their spoken time) ----------
 // lines: [{ text, color?, size? }]; at: start time of each word in order (seconds, absolute). Missing -> paced 0.12 s apart from `from`.
-export const Headline = ({ t, lines, at = [], from = 0, out = 1e9, top = 300, size = 104, z = 30, gap = 0 }) => {
+export const Headline = ({ t, lines, at = [], from = 0, out = 1e9, top = 300, size = 104, z = 30, gap = 0, inline = false }) => {
   let wi = 0; const fade = 1 - seg(t, out, out + 0.25);
   if (fade <= 0) return null;
   return (
     <div style={{ position: "absolute", left: 60, right: 60, top, zIndex: z, textAlign: "center", fontWeight: 600, letterSpacing: "-.038em", lineHeight: 1.04, fontVariationSettings: '"opsz" 32', opacity: fade, transform: `translateY(${-14 * seg(t, out, out + 0.25)}px)` }}>
       {lines.map((L, li) => (
-        <div key={li} style={{ fontSize: L.size || size, color: L.color || (li ? GREY : INK), marginTop: li ? gap : 0, fontWeight: L.weight || 600, letterSpacing: L.track || "-.038em" }}>
+        <div key={li} style={{ display: inline ? "inline" : "block", fontSize: L.size || size, color: L.color || (li ? GREY : INK), marginTop: li ? gap : 0, fontWeight: L.weight || 600, letterSpacing: L.track || "-.038em" }}>
           {L.text.split(" ").map((w, k) => {
             const a = at[wi] != null ? at[wi] : from + wi * 0.12; wi++;
             const p = eo((t - a) / 0.3);
@@ -65,7 +65,7 @@ export const Captions = ({ t, cues, tags = {} }) => {
   const tag = tags[c.who];
   return (
     <div style={{ position: "absolute", left: 90, right: 90, top: CAP_TOP, zIndex: 90, display: "flex", justifyContent: "center", opacity: op, transform: `translateY(${(1 - pin) * 8}px)` }}>
-      <div style={{ maxWidth: 900, padding: "14px 30px 16px", borderRadius: 30, background: "rgba(255,255,255,.86)", backdropFilter: "blur(18px) saturate(180%)", WebkitBackdropFilter: "blur(18px) saturate(180%)", boxShadow: "0 0 0 1px rgba(0,0,0,.05), 0 8px 24px -10px rgba(0,0,0,.18)", textAlign: "center", fontSize: 48, lineHeight: 1.18, fontWeight: 600, letterSpacing: "-.02em", color: INK, textWrap: "balance" }}>
+      <div style={{ maxWidth: 900, padding: "14px 30px 16px", borderRadius: 30, background: "rgba(255,255,255,.95)", backdropFilter: "blur(18px) saturate(180%)", WebkitBackdropFilter: "blur(18px) saturate(180%)", boxShadow: "0 0 0 1px rgba(0,0,0,.05), 0 8px 24px -10px rgba(0,0,0,.18)", textAlign: "center", fontSize: 48, lineHeight: 1.18, fontWeight: 600, letterSpacing: "-.02em", color: INK, textWrap: "balance" }}>
         {tag ? <span style={{ color: GREY, fontWeight: 600, marginRight: 12 }}>{tag}</span> : null}{c.cap || c.text}
       </div>
     </div>
@@ -218,3 +218,12 @@ export const Guides = () => <>
   <div style={{ position: "absolute", left: 0, right: 0, top: CAP_TOP, height: 140, background: "rgba(10,132,255,.07)", zIndex: 999, borderTop: "2px dashed rgba(10,132,255,.5)" }} />
   <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 360, background: "rgba(244,48,52,.06)", zIndex: 999, borderTop: "2px dashed rgba(244,48,52,.5)" }} />
 </>;
+
+// skeleton (remocn ui primitive, rebuilt): shimmer placeholder that crossfades to real content at `at`
+export const Skeleton = ({ t, at, w, h, r = 16, children }) => {
+  const p = eo(seg(t, at, at + 0.3)); const sweep = ((t * 0.9) % 1) * 160 - 30;
+  return <div style={{ position: "relative", width: w, height: h, borderRadius: r, overflow: "hidden", flex: "none" }}>
+    <div style={{ position: "absolute", inset: 0, opacity: p, transform: `scale(${1.04 - .04 * p})` }}>{children}</div>
+    {p < 1 ? <div style={{ position: "absolute", inset: 0, opacity: 1 - p, background: `linear-gradient(100deg,#E9E9EE ${sweep - 30}%,#F6F6F9 ${sweep}%,#E9E9EE ${sweep + 30}%)` }} /> : null}
+  </div>;
+};

@@ -10,5 +10,5 @@ d.text((16, 20), title, fill="#1D1D1F", font=tf)
 for i, f in enumerate(fs):
     im = Image.open(f).convert("RGB").resize((W, H), Image.LANCZOS)
     x = 16 + (i % cols) * (W + 16); y = 70 + (i // cols) * (H + 44); s.paste(im, (x, y))
-    d.text((x, y + H + 8), os.path.basename(f).replace(".png", "") + " s", fill="#1D1D1F", font=font)
+    d.text((x, y + H + 8), os.path.splitext(os.path.basename(f))[0] + " s", fill="#1D1D1F", font=font)
 s.save(out)

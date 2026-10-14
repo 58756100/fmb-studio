@@ -1,0 +1,26 @@
+{
+  "id": "C-G2",
+  "title": "Show me one you've done (v2)",
+  "dur": 22.5,
+  "lead_hook": "A",
+  "ev": {
+    "hop": 0.12, "hopLand": 0.42, "chipLand": 0.5, "w_nine": 0.2, "w_grand": 0.45, "w_which": 1.0, "w_shop": 1.25, "arrows": 1.12,
+    "flip1": 1.85, "typeStart": 2.45, "typeEnd": 4.25, "split": 4.55, "send": 4.8,
+    "crack": 5.3, "ping1": 5.3, "ping2": 5.75, "ping3": 6.2,
+    "dotsOn1": 8.15, "dotsOff1": 8.8, "dotsOn2": 9.2, "dotsOff2": 9.85, "dotsOn3": 10.1, "ping4": 8.6, "ping5": 9.6,
+    "whip": 10.5, "linkLand": 10.95,
+    "push": 13.0, "photoLand": 14.35, "attrLand": 15.35, "rows": 15.7,
+    "splitBack": 16.5, "bookMe": 16.95, "bookThem": 17.55, "seen": 18.85,
+    "flip2": 19.65, "e30Land": 20.05, "ctaHead": 19.75, "ctaUrl": 20.6, "textOut": 22.1
+  },
+  "vo": [
+    { "a": 0.12, "b": 1.65, "who": "Eric", "text": "Nine grand. Which shop?" },
+    { "a": 1.9, "b": 4.85, "who": "Eric", "text": "Jen asked: 'Show me an E30 you've done.'", "cap": "Jen asked: “Show me an E30 you’ve done.”" },
+    { "a": 5.05, "b": 7.8, "who": "Eric", "text": "Shop one: beauty shots. No E30." },
+    { "a": 8.05, "b": 10.3, "who": "Eric", "text": "Shop two? Still typing." },
+    { "a": 10.6, "b": 12.85, "who": "Eric", "text": "Then: one link. Their E30 swap." },
+    { "a": 13.1, "b": 16.3, "who": "Eric", "text": "June. Their lift. Their name on it." },
+    { "a": 16.6, "b": 19.3, "who": "Eric", "text": "She chose shop two. Shop one? Seen." },
+    { "a": 19.6, "b": 21.85, "who": "Eric", "text": "Show your work. fuelmybuild.com." }
+  ]
+}
