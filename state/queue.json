@@ -191,13 +191,15 @@
     "time_et": "12:00",
     "platform": "instagram",
     "placement": "feed",
-    "status": "approved",
+    "status": "posted",
     "render": "renders:2026-W42/C2-A.mp4",
     "week": "2026-W42",
     "caption": "He asked for service records. The seller's typing dots stalled for 2 seconds. Then one link.\n\n#datsun240z #fairlady #classiccars #carcollector #jdmclassic",
     "pinned_comment": "Be honest: at 'a guy in Reno, he retired,' were you already looking at the other Z?",
     "approved_at": "2026-10-13T09:46:53Z",
-    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+    "media_id": "18132203236689896",
+    "posted_at": "2026-10-14T15:49:00Z"
   },
   {
     "concept": "C2",
@@ -206,13 +208,15 @@
     "time_et": "12:00",
     "platform": "tiktok",
     "placement": "post",
-    "status": "approved",
+    "status": "drafted",
     "render": "renders:2026-W42/C2-A.mp4",
     "week": "2026-W42",
     "caption": "He asked for service records. The seller's typing dots stalled for 2 seconds. Then one link.\n\n#datsun240z #fairlady #classiccars #carcollector #jdmclassic",
     "pinned_comment": "Be honest: at 'a guy in Reno, he retired,' were you already looking at the other Z?",
     "approved_at": "2026-10-13T09:46:53Z",
-    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+    "publish_id": "v_inbox_file~v2.7696550309497309191",
+    "drafted_at": "2026-10-14T15:48:00Z"
   },
   {
     "concept": "C2",
@@ -283,13 +287,15 @@
     "time_et": "19:00",
     "platform": "tiktok",
     "placement": "post",
-    "status": "approved",
+    "status": "drafted",
     "render": "renders:2026-W42/G1-B.mp4",
     "week": "2026-W42",
     "caption": "Your lead tech quits Friday. Monday, his turbo install is back on the lift with a boost leak.\n\n#mechaniclife #autoshop #supra #tuner #shopowner",
     "pinned_comment": "Shop owners: when your best tech leaves, how much of the shop leaves with him?",
     "approved_at": "2026-10-13T09:46:53Z",
-    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+    "publish_id": "v_inbox_file~v2.7696550600640628788",
+    "drafted_at": "2026-10-14T15:48:00Z"
   },
   {
     "concept": "G1",
