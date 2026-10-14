@@ -22,10 +22,19 @@ Run FuelMyBuild's weekly short-form video cycle. Delegate each stage to its agen
 | 2 Ideate | ideator (sonnet) | 11 concepts, mix per `ideation` skill | no |
 | 3 Script | script-producer (opus), then retention-editor (sonnet) | beat-sheet scripts, 2–3 hooks each, captions | no |
 | 4 Voice | voice-director (haiku) | VO wav + word timing per script and hook | no |
-| 5 Storyboard | motion-director (sonnet) | key frames + animatic page | **Wayne approves** |
-| 6 Build + sound + render | motion-director (sonnet) | masters, hook versions, no-music stems | no |
+| 5 Storyboard | motion-director (opus) | key frames + animatic page | **Wayne approves** |
+| 6 Build + sound + render | motion-director (opus) | masters, hook versions, no-music stems | no |
 | 7 QA | qa-reviewer (sonnet) | frame checks, sync, loudness, claims | no |
 | 8 Schedule + post | publisher (haiku) | slots, YouTube scheduled, IG/TikTok queued | **Wayne says yes per post** |
+
+## Model policy
+- Visuals (storyboard, build, render) always run on the highest model (opus). Only Claude makes visuals; outside models (ChatGPT in `lab/`) may describe visual intent but never supply frames.
+- Writing that sets quality (scripts) runs on opus; judgment work (ideation, retention, QA, analytics) on sonnet; mechanical work (VO generation, scheduling) on haiku. Move a task down a tier when its output stops changing between tiers, and up when QA keeps catching it.
+
+## Volume and the lab
+- Target: 20 videos a week. That's 11 lane-0 concepts (this pipeline), plus 3 of those topics remade in each of lab lanes A, B and C (9 more). See `lab/README.md`.
+- Every queue entry carries `lane` (`0`, `A`, `B`, `C`); missing means `0`.
+- Goal: 10 a day. Step up 20 → 35 → 70 a week only when the Sunday review shows 3-second hold and average watch time holding or rising at the current volume.
 
 ## Rules
 - Pass agents file paths, not file contents, to save tokens. Each agent reads only its own skill and the files it needs.
