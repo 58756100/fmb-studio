@@ -16,16 +16,18 @@ platform-specific captions and hashtags.
 
 3. AUDIENCE PRIORITY AND ACTION
 Equal priority in this test (one each). After the comment, the action is a
-follow. A profile visit and the link in bio (fuelmybuild.com) come second.
-Don't promise sign-ups, pricing or availability.
+follow. Second: sign up at fuelmybuild.com (link in bio); sign-ups are open.
+Don't mention pricing.
 
 4. OFF-LIMITS AND VERIFIED FACTS
 Live features you may show: build pages with a public URL; a parts registry
 with the brand per part; log entries with dates and photos; garage and
 contributor attribution on a build.
+Hint only, at most once per video and never the core of it: the record can
+stay with the car when it's sold. Don't show a transfer screen or flow.
 Off-limits:
-- Any other feature: ownership transfer, client progress pages, supplier
-  analytics or maps, payments, AI features.
+- Any other feature: client progress pages, supplier analytics or maps,
+  payments, AI features.
 - Invented statistics presented as real data.
 - Fake testimonials, or real people, shops or parts brands named or shown
   without permission (fictional ones are fine).
