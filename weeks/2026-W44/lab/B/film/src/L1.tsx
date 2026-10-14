@@ -1,5 +1,5 @@
 // @ts-nocheck
-// B-L1 · Collectors · The work the photo misses (Maya, orange '72 240Z = car-05, brake kit = part-06)
+// B-L1 · Collectors · The work the photo misses (Maya, orange '72 240Z = car-05, brake kit = part-06 in the UI; real photos from img/lab for the wheel, wheel-off assembly and log)
 import React from "react";
 import { AbsoluteFill } from "remotion";
 import { ProductWindow, Cam, Abs, Photo, Tile, Avatar, Bubble, Phone, PHONE_H, Ring, Tap, Chip, Empty, Label, Icon, pop, spring, clamp, lin, eo, eio, mix, IMG, GREY, INK, RED } from "./lib";
@@ -15,6 +15,10 @@ const CAR = "car-05";
 // front-wheel focus inside a 900x640 exterior photo of car-05 (checked on stills)
 const WHEEL = { fx: 0.55, fy: 0.72 };
 const PH = { x: 90, y: 470, w: 900, h: 640 };
+// real photos (kit/remotion/public/img/lab). Wheel close-up 1536x1152 covers the 900x640 frame at 0.586 (17 px cropped top and bottom);
+// the caliper shows only in slivers between the right-hand spokes at ~(950, 520) image px -> frame (557, 288)
+const WHEEL_PIC = "lab/b-240z-wheel-closeup.jpg", BRAKE = "lab/b-brake-assembly-cutout.png";
+const CAL_IN_PH = { x: PH.x + 557, y: PH.y + 288 };
 
 // ---------------------------------------------------------------- A · inquiry + 240Z (0-2, and 29-30 loop)
 const Attach = ({ o = 1 }) => (
@@ -75,8 +79,8 @@ const Loupe = ({ t, t0, t1, x, y, R = 175 }) => {
   if (o <= 0) return null;
   return (
     <div style={{ position: "absolute", left: x - R, top: y - R, width: 2 * R, height: 2 * R, borderRadius: "50%", overflow: "hidden", opacity: o, transform: `scale(${0.6 + 0.4 * p})`,
-      boxShadow: `0 0 0 8px #fff, 0 0 0 13px ${RED}, 0 18px 24px -12px rgba(0,0,0,.3)`, background: "#2a2a2c" }}>
-      <img src={IMG("part-06")} style={{ position: "absolute", width: 2 * R * 2.3, left: R - 2 * R * 2.3 * 0.84, top: R - 2 * R * 2.3 * (831 / 768) * 0.45 }} />
+      boxShadow: `0 0 0 8px #fff, 0 0 0 13px ${RED}, 0 18px 24px -12px rgba(0,0,0,.3)`, background: "#EDEDF0" }}>
+      <img src={IMG(BRAKE)} style={{ position: "absolute", width: 2 * R * 2.3, left: R - 2 * R * 2.3 * (1040 / 1536), top: R - 2 * R * 2.3 * (690 / 1536) }} />
     </div>
   );
 };
@@ -99,6 +103,10 @@ export const B2 = ({ t }) => {
           <Abs x={g0.x} y={g0.y} style={sw && fz === 0 ? { translate: `${swipeX(t, 6.0).out}px` } : {}}>
             <Photo id={CAR} w={g0.w} h={g0.h} r={mix(34, 22, fz)} fit={0.9} zoom={fz > 0 ? 1 : z} fx={WHEEL.fx} fy={WHEEL.fy} />
           </Abs>
+          {/* 3-5: the real wheel close-up (slow push toward the caliper); a 4-frame dissolve at 5.0 hands over to the pull-back */}
+          {t < 5.14 ? <Abs x={PH.x} y={PH.y} style={{ opacity: 1 - lin(t, 5.0, 5.134) }}>
+            <Photo id={WHEEL_PIC} w={PH.w} h={PH.h} r={34} zoom={1 + 0.05 * lin(t, 3, 5)} fx={557 / 900} fy={288 / 640} />
+          </Abs> : null}
           {/* photo 2: the other side */}
           {sw ? <Abs x={g1.x} y={g1.y} style={fz > 0 ? {} : { translate: `${swipeX(t, 6.0).in}px` }}><Photo id={CAR} w={g1.w} h={g1.h} r={mix(34, 22, fz)} fit={0.9} flip /></Abs> : null}
           {fz > 0 ? <Abs x={90 + 2 * 310} y={520} style={pop(t, 7.08, { rise: 20 })}><Photo id={CAR} w={280} h={200} r={22} fit={1.25} zoom={1} fx={0.2} fy={0.7} /></Abs> : null}
@@ -111,41 +119,36 @@ export const B2 = ({ t }) => {
         </div>
         {fz === 0 ? <Abs x={0} y={PH.y + PH.h + 44} w={1080}><Dots i={sw ? 1 : 0} /></Abs> : null}
       </Cam>
-      {t < 5.4 ? <Loupe t={t} t0={4.0} t1={5.0} x={wx + 150} y={wy - 250} /> : null}
-      <TrimBurst t={t} t0={4.0} x={wx + 150} y={wy - 250} inner={190} reach={50} count={10} weight={5} />
+      {t < 5.4 ? <Loupe t={t} t0={4.0} t1={5.0} x={CAL_IN_PH.x + 60} y={CAL_IN_PH.y - 20} /> : null}
+      <TrimBurst t={t} t0={4.0} x={CAL_IN_PH.x + 60} y={CAL_IN_PH.y - 20} inner={190} reach={50} count={10} weight={5} />
     </AbsoluteFill>
   );
 };
 
 // ---------------------------------------------------------------- C · wheel-off illustration (8-13)
-// regions inside the 900x900 illustration tile (part-06 at fit .8), checked on stills
+// regions inside the 900x900 illustration tile (b-brake-assembly-cutout at fit .8: tile px = 90 + 0.469 * cutout px), checked on stills
 const IL = { x: 90, y: 460, w: 900, h: 900 };
-const CAL = { x: 590, y: 200, w: 250, h: 470 }, BRK = { x: 600, y: 600, w: 220, h: 140 }, LINE0 = [745, 215];
+const CAL = { x: 500, y: 222, w: 190, h: 440 }, BRK = { x: 422, y: 545, w: 112, h: 112 }, LINE = { x: 618, y: 160, w: 128, h: 410 };
 export const C = ({ t }) => {
   const cam = [[8, 540, 910, 1.1], [8.5, 540, 910, 1], [9.0, 540, 910, 1], [9.7, 690, 860, 1.22], [13, 700, 850, 1.26]];
-  const focus = t >= 10 ? (t < 11 ? CAL : t < 12 ? BRK : { x: LINE0[0] - 70, y: 60, w: 260, h: 230 }) : null;
+  const focus = t >= 10 ? (t < 11 ? CAL : t < 12 ? BRK : LINE) : null;
   const dim = lin(t, 10.0, 10.25);
-  const lp = eo(lin(t, 12.0, 12.6));
-  const path = `M ${LINE0[0]} ${LINE0[1]} C 790 150, 860 125, 910 105 S 990 75, 1060 62`;
   return (
     <AbsoluteFill>
       <Cam t={t} keys={cam}>
         <Abs x={IL.x} y={IL.y}>
-          <Tile id="part-06" w={IL.w} h={IL.h} r={44} fit={0.8}>
+          <Tile id={BRAKE} w={IL.w} h={IL.h} r={44} fit={0.8}>
             <div style={{ position: "absolute", left: 300, top: 30 }}><Label>Illustration · wheel off</Label></div>
           </Tile>
           {/* everything but the focused part dims */}
           {focus ? <div style={{ position: "absolute", inset: 0, borderRadius: 44, background: `rgba(245,245,247,${0.62 * dim})`,
             WebkitMaskImage: `radial-gradient(ellipse ${focus.w * 0.75}px ${focus.h * 0.75}px at ${focus.x + focus.w / 2}px ${focus.y + focus.h / 2}px, transparent 60%, #000 100%)` }} /> : null}
-          <svg width={IL.w} height={IL.h} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-            {lp > 0.001 ? <path d={path} fill="none" stroke="#2C2C2E" strokeWidth={14} strokeLinecap="round" pathLength={1} strokeDasharray={`${lp} 2`} /> : null}
-          </svg>
           <Ring t={t} t0={10.0} t1={11.0} {...CAL} r={60} />
           <Ring t={t} t0={11.0} t1={12.0} {...BRK} r={40} />
-          <Ring t={t} t0={12.0} x={LINE0[0] - 40} y={LINE0[1] - 40} w={80} h={80} r={40} />
-          <Abs x={CAL.x - 300} y={CAL.y + 40} style={{ ...pop(t, 10.04, { rise: 16 }), opacity: (t < 11 ? 1 : 0) * pop(t, 10.04).opacity }}><Chip>Caliper</Chip></Abs>
-          <Abs x={BRK.x - 310} y={BRK.y + 30} style={{ ...pop(t, 11.04, { rise: 16 }), opacity: (t >= 11 && t < 12 ? 1 : 0) }}><Chip>Bracket</Chip></Abs>
-          <Abs x={LINE0[0] - 360} y={LINE0[1] - 120} style={{ ...pop(t, 12.1, { rise: 16 }), opacity: t >= 12 ? 1 : 0 }}><Chip>Brake line</Chip></Abs>
+          <Ring t={t} t0={12.0} {...LINE} r={64} />
+          <Abs x={CAL.x - 230} y={CAL.y + 40} style={{ ...pop(t, 10.04, { rise: 16 }), opacity: (t < 11 ? 1 : 0) * pop(t, 10.04).opacity }}><Chip>Caliper</Chip></Abs>
+          <Abs x={BRK.x - 150} y={BRK.y + 130} style={{ ...pop(t, 11.04, { rise: 16 }), opacity: (t >= 11 && t < 12 ? 1 : 0) }}><Chip>Bracket</Chip></Abs>
+          <Abs x={LINE.x - 300} y={LINE.y - 50} style={{ ...pop(t, 12.1, { rise: 16 }), opacity: t >= 12 ? 1 : 0 }}><Chip>Brake line</Chip></Abs>
         </Abs>
       </Cam>
     </AbsoluteFill>
@@ -190,14 +193,15 @@ export const E = ({ t }) => {
 // ---------------------------------------------------------------- F · the record (17-29)
 // row 0 of the parts list sits at ~ y 540 pt inside the 402x874 screen
 const S = PW / 430, ROW_Y = PY + 14 * S + 556 * S, ROW_X = PX + 14 * S + 16 * S;
+// pos = cover-crop focus for the square log thumbs and the 900x720 viewer; tpos = the 280x640 portrait strip (21-22); zoom frames the brake in the thumbs
 const PHOTOS = [
-  { id: "part-06", label: "Before", imgStyle: { filter: "grayscale(.85) sepia(.35) brightness(.78) contrast(.92)" } },
-  { id: "part-06", label: "During", fit: 0.62, extra: <img src={IMG("obj/work-glove")} style={{ position: "absolute", right: "-8%", bottom: "-6%", width: "62%", transform: "rotate(-18deg)" }} /> },
-  { id: "part-06", label: "After" },
+  { id: "lab/b-240z-log-before.jpg", label: "Before", pos: [0.46, 0.5], tpos: [0.48, 0.5], zoom: 1.3, fx: 0.49, fy: 0.62 },
+  { id: "lab/b-240z-log-during.jpg", label: "During", pos: [0.9, 0.5], tpos: [0.68, 0.5], zoom: 1.3, fx: 0.6, fy: 0.6 },
+  { id: "lab/b-240z-log-after.jpg", label: "After", pos: [0.82, 0.5], tpos: [0.62, 0.5], zoom: 1.3, fx: 0.58, fy: 0.58 },
 ];
 const BigPhoto = ({ p, w = 900, h = 720 }) => (
   <div>
-    <Photo id={p.id} w={w} h={h} r={40} fit={p.fit ? p.fit * 0.95 : 0.78} imgStyle={p.imgStyle}>{p.extra}</Photo>
+    <Photo id={p.id} w={w} h={h} r={40} pos={p.pos} imgStyle={p.imgStyle}>{p.extra}</Photo>
     <div style={{ display: "flex", justifyContent: "space-between", marginTop: 18, fontSize: 32, color: GREY, fontWeight: 500 }}><span>March 12 · Brake install</span><span>{p.label}</span></div>
   </div>
 );
@@ -236,7 +240,7 @@ export const F = ({ t }) => {
         <AbsoluteFill style={{ background: `rgba(245,245,247,${0.9 * eo(lin(t, 21, 21.3)) * (1 - lin(t, 22.0, 22.3))})` }}>
           {PHOTOS.map((p, k) => { const e = spring(t, 21.0 + k * 0.08, 200, 19); const x0 = 140 + k * 273, y0 = 790, x1 = 90 + k * 310, y1 = 520;
             return <Abs key={k} x={mix(x0, x1, e)} y={mix(y0, y1, e)} style={{ opacity: 1 - lin(t, 22.0, 22.3) }}>
-              <Photo id={p.id} w={mix(255, 280, e)} h={mix(255, 640, e)} r={26} fit={p.fit ? p.fit * 1.25 : 1.0} imgStyle={p.imgStyle}>{p.extra}</Photo>
+              <Photo id={p.id} w={mix(255, 280, e)} h={mix(255, 640, e)} r={26} pos={p.tpos} zoom={mix(p.zoom || 1, 1, e)} fx={p.fx} fy={p.fy} imgStyle={p.imgStyle}>{p.extra}</Photo>
               <div style={{ fontSize: 32, color: GREY, fontWeight: 500, marginTop: 12, textAlign: "center", width: mix(255, 280, e) }}>{p.label}</div></Abs>; })}
         </AbsoluteFill>) : null}
       {viewer || (t >= 25 && vOut < 1) ? (

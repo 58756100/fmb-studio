@@ -1,5 +1,5 @@
 // @ts-nocheck
-// B-L3 · Suppliers · A guess gets the credit (white '99 Supra = car-01, turbo = part-01 crop, Jules = red RX-7 car-13)
+// B-L3 · Suppliers · A guess gets the credit (white '99 Supra = car-01, turbo = part-01 crop, Jules = red RX-7 car-13; install photos = img/lab Supra turbo)
 import React from "react";
 import { AbsoluteFill } from "remotion";
 import { ProductWindow, Triptych, Cam, Abs, Photo, Tile, Avatar, Bubble, Comment, Phone, Ring, Tap, Chip, Label, Icon, Caret, typed, pop, spring, clamp, lin, eo, eio, mix, IMG, GREY, INK, RED } from "./lib";
@@ -157,10 +157,10 @@ export const F = ({ t }) => {
     </AbsoluteFill>
   );
 };
+// two real install photos (img/lab), cover-cropped to 0.66-high tiles in the log (keeps the old card height above the subtitles); tpos = crop focus on the turbo for the 430x640 enlargement (23-24)
 const PHOTOS = [
-  { id: "obj/vacuum-line-photo", label: "Turbo fitted", fit: 0.66 },
-  { id: "obj/wastegate", label: "Wastegate", fit: 0.6 },
-  { id: "part-01", label: "Kit", zoom: 1.6, fx: 0.32, fy: 0.48, fit: 0.8 },
+  { id: "lab/b-supra-turbo-during.jpg", label: "During", tpos: [0.2, 0.5] },
+  { id: "lab/b-supra-turbo-after.jpg", label: "After", tpos: [0.16, 0.5] },
 ];
 export const G = ({ t }) => {
   const settle = spring(t, 24.0, 170, 20); // 24: pull back to the parts row + log context
@@ -174,8 +174,8 @@ export const G = ({ t }) => {
           <RowCard img="part-01" name="Turbo kit" brand="Demo Brand A" date="March 14" />
         </Abs>
         <Abs x={100} y={logY} style={{ opacity: 1 - cmp, transformOrigin: "50% 0", transform: `scale(${mix(1, 0.86, settle)})` }}>
-          <LogCard date="March 14" title="Turbo install" note="Turbo, wastegate and vacuum lines installed. Photos below." photos={PHOTOS}
-            photoP={[0, 1, 2].map((k) => spring(t, 21.25 + k * 0.1, 200, 18))} />
+          <LogCard date="March 14" title="Turbo install" note="Turbo, wastegate and vacuum lines installed. Photos below." photos={PHOTOS} aspect={0.66}
+            photoP={[0, 1].map((k) => spring(t, 21.25 + k * 0.1, 200, 18))} />
         </Abs>
         <Ring t={t} t0={22.0} t1={23.0} x={130} y={logY + 70} w={820} h={90} r={22} sw={5} />
         {t >= 25 ? <>
@@ -184,8 +184,8 @@ export const G = ({ t }) => {
           <Abs x={110} y={748} style={pop(t, 25.2, { rise: 10 })}><Label style={{ fontSize: 28 }}>Owner’s record</Label></Abs>
         </> : null}
       </Cam></ProductWindow>
-      {t >= 22.7 && t < 23.4 ? <Tap t={t} t0={23.0} x={540} y={1240} /> : null}
-      <Triptych t={t} t0={23.0} t1={24.0} photos={PHOTOS} from={{ x: 140, y: 1180, w: 255 }} />
+      {t >= 22.7 && t < 23.4 ? <Tap t={t} t0={23.0} x={540} y={940} /> : null}
+      <Triptych t={t} t0={23.0} t1={24.0} photos={PHOTOS} from={{ x: 140, y: 792, w: 391, h: 258 }} to={{ y: 520, w: 430, h: 640 }} />
     </AbsoluteFill>
   );
 };

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { registerRoot, Composition, AbsoluteFill, useCurrentFrame, delayRender, continueRender, staticFile } from "remotion";
 import "./ui.css";
-import { Shots, Headline, Subtitles, Illustrative, BG, FPS } from "./lib";
+import { Shots, Headline, Subtitles, Illustrative, BG, FPS, IMG } from "./lib";
 import * as L1 from "./L1";
 import * as L2 from "./L2";
 import * as L3 from "./L3";
@@ -12,12 +12,14 @@ import D3 from "./data/B-L3.json";
 
 const VIDS = { "B-L1": [L1, D1], "B-L2": [L2, D2], "B-L3": [L3, D3] };
 const PRE = ["car-01", "car-05", "car-09", "car-13", "car-19", "car-12", "car-04", "mech", "part-01", "part-02", "part-03", "part-05", "part-06",
-  "obj/work-glove", "obj/engine-block", "obj/car-lift", "obj/vacuum-line-photo", "obj/wastegate", "obj/tool-drawer"];
+  "obj/work-glove", "obj/engine-block", "obj/car-lift", "obj/vacuum-line-photo", "obj/wastegate", "obj/tool-drawer",
+  ...["b-240z-log-before.jpg", "b-240z-log-during.jpg", "b-240z-log-after.jpg", "b-240z-wheel-closeup.jpg", "b-brake-assembly-cutout.png", "b-miata-engine-hoist.jpg",
+    "b-miata-engine-installed.jpg", "b-tech-eli-cutout.png", "b-supra-turbo-during.jpg", "b-supra-turbo-after.jpg"].map((f) => `lab/${f}`)];
 let ready = null;
 const load = () => ready || (ready = (async () => {
   const font = new FontFace("Inter", `url(${staticFile("fonts/inter-latin-opsz-normal.woff2")}) format("woff2-variations")`, { weight: "100 900" });
   document.fonts.add(await font.load());
-  await Promise.all(PRE.map((n) => new Promise((r) => { const i = new Image(); i.onload = () => i.decode().then(r, r); i.onerror = r; i.src = staticFile(`img/${n}.png`); })));
+  await Promise.all(PRE.map((n) => new Promise((r) => { const i = new Image(); i.onload = () => i.decode().then(r, r); i.onerror = r; i.src = IMG(n); })));
 })());
 
 const Video = ({ id }) => {

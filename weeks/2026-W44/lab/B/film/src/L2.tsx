@@ -1,5 +1,5 @@
 // @ts-nocheck
-// B-L2 · Garages · Same car. Different proof. (Nora = black NA Miata car-19; both shops show the same red Miata car-09; Eli = mech)
+// B-L2 · Garages · Same car. Different proof. (Nora = black NA Miata car-19; both shops show the same red Miata car-09; Eli = img/lab/b-tech-eli-cutout; install photos = img/lab Miata engine swap)
 import React from "react";
 import { AbsoluteFill } from "remotion";
 import { ProductWindow, Triptych, Cam, Abs, Photo, Tile, Avatar, Bubble, Phone, Ring, Tap, Chip, Empty, Label, Icon, Caret, typed, pop, spring, clamp, lin, eo, eio, mix, IMG, GREY, INK, RED } from "./lib";
@@ -167,10 +167,10 @@ export const G = ({ t }) => {
     </ProductWindow></AbsoluteFill>
   );
 };
+// two real install photos, shown whole (4:3 tiles) in the log; tpos = crop focus for the 430x640 portrait enlargement (21-22)
 const PHOTOS = [
-  { id: "obj/engine-block", label: "Engine out", fit: 0.6 },
-  { id: "obj/car-lift", label: "On the lift", fit: 0.62 },
-  { id: CAR, label: "Running", zoom: 1.5, fx: 0.5, fy: 0.6 },
+  { id: "lab/b-miata-engine-hoist.jpg", label: "On the hoist", tpos: [0.72, 0.5] },
+  { id: "lab/b-miata-engine-installed.jpg", label: "Installed", tpos: [0.54, 0.5] },
 ];
 export const H = ({ t }) => {
   const lift = eo(lin(t, 18.0, 18.4)); const ls = spring(t, 18.0, 200, 19);
@@ -184,13 +184,13 @@ export const H = ({ t }) => {
       <ProductWindow><Cam t={t} keys={[[17, 540, 905, 1.06], [17.6, 540, 905, 1], [24, 540, 915, 1.02]]}>
         <Abs x={PX} y={PY} style={{ opacity: 1 - 0.75 * lift, transform: `scale(${1 - 0.05 * lift})`, transformOrigin: "50% 40%" }}><Phone w={PW}><Page /></Phone></Abs>
         {t >= 18 ? <Abs x={100} y={attrY} style={{ opacity: clamp((t - 18) / 0.12), transformOrigin: "50% 0", transform: `scale(${mix(0.6, 1, ls) * (t >= 20 ? mix(1, 0.9, sheet) : 1)})` }}>
-          <AttribCard focus={fo} rows={[{ av: "letter:B", label: "Garage", value: "Shop B" }, { av: "mech", label: "Contributor", value: "Eli", right: "Engine install" }]} /></Abs> : null}
+          <AttribCard focus={fo} rows={[{ av: "letter:B", label: "Garage", value: "Shop B" }, { av: "eli", avBg: "#E4E6EA", label: "Contributor", value: "Eli", right: "Engine install" }]} /></Abs> : null}
         {t >= 20 ? <Abs x={100} y={logY} style={{ transformOrigin: "50% 0", transform: "scale(0.92)" }}>
-          <LogCard date="March 14" title="Engine install" note={t >= 22 ? "By Eli at Shop B. Swap, wiring and first start." : "Swap, wiring and first start."} photos={PHOTOS} photoP={[0, 1, 2].map((k) => spring(t, 20.25 + k * 0.1, 200, 18))} />
+          <LogCard date="March 14" title="Engine install" note={t >= 22 ? "By Eli at Shop B. Swap, wiring and first start." : "Swap, wiring and first start."} photos={PHOTOS} aspect={0.75} photoP={[0, 1].map((k) => spring(t, 20.25 + k * 0.1, 200, 18))} />
         </Abs> : null}
       </Cam></ProductWindow>
       {t >= 20.7 && t < 21.4 ? <Tap t={t} t0={21.0} x={540} y={1200} /> : null}
-      <Triptych t={t} t0={21.0} t1={22.0} photos={PHOTOS} from={{ x: 160, y: 1090, w: 235 }} />
+      <Triptych t={t} t0={21.0} t1={22.0} photos={PHOTOS} from={{ x: 176, y: 1006, w: 360, h: 270 }} to={{ y: 520, w: 430, h: 640 }} />
     </AbsoluteFill>
   );
 };

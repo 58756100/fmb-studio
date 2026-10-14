@@ -17,7 +17,9 @@ export const spring = (t, t0, k = 190, d = 17) => {
   const w0 = Math.sqrt(k), z = d / (2 * w0), wd = w0 * Math.sqrt(1 - z * z);
   return 1 - Math.exp(-z * w0 * x) * (Math.cos(wd * x) + ((z * w0) / wd) * Math.sin(wd * x));
 };
-export const IMG = (n) => staticFile(`img/${n}.png`);
+export const IMG = (n) => staticFile(/\.(png|jpg)$/.test(n) ? `img/${n}` : `img/${n}.png`);
+// real photographs (W44 lab pack, kit/remotion/public/img/lab): cover-cropped, never stretched
+export const isPic = (id) => !!id && id.endsWith(".jpg");
 
 // ---------------------------------------------------------------- layout
 // headline band y 260-420, product area ~450-1360, subtitles 1380-1530, bottom 360 px clear
@@ -66,12 +68,14 @@ export const Tile = ({ id, w, h, r = 36, fit, floor = 0.16, flip = false, bg = T
     </div>
   );
 };
-// a photo (same studio cutout, photo backdrop) with optional crop: zoom about (fx, fy) in 0..1
-export const Photo = ({ id, w, h, r = 28, zoom = 1, fx = 0.5, fy = 0.5, flip, fit, floor, bg = PHOTO_BG, imgStyle, style, children, border = true }) => (
+// a photo with optional crop: zoom about (fx, fy) in 0..1. A .jpg id is a real photo, cover-cropped about pos [x, y] (0..1);
+// any other id is a studio cutout on a photo backdrop
+export const Photo = ({ id, w, h, r = 28, zoom = 1, fx = 0.5, fy = 0.5, pos, flip, fit, floor, bg = PHOTO_BG, imgStyle, style, children, border = true }) => (
   <div style={{ position: "relative", overflow: "hidden", width: w, height: h, borderRadius: r, background: bg,
     boxShadow: border ? "0 0 0 1px rgba(0,0,0,.05), 0 14px 24px -14px rgba(0,0,0,.18)" : undefined, ...style }}>
     <div style={{ position: "absolute", inset: 0, transformOrigin: `${fx * 100}% ${fy * 100}%`, transform: `translate(${(0.5 - fx) * w * clamp(zoom - 1)}px, ${(0.5 - fy) * h * clamp(zoom - 1)}px) scale(${zoom})` }}>
-      <Tile id={id} w={w} h={h} r={0} fit={fit} floor={floor} flip={flip} bg="transparent" imgStyle={imgStyle} border={false} />
+      {isPic(id) ? <img src={IMG(id)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: `${(pos ?? [0.5, 0.5])[0] * 100}% ${(pos ?? [0.5, 0.5])[1] * 100}%`, transform: flip ? "scaleX(-1)" : undefined, ...imgStyle }} />
+        : <Tile id={id} w={w} h={h} r={0} fit={fit} floor={floor} flip={flip} bg="transparent" imgStyle={imgStyle} border={false} />}
     </div>
     {children}
   </div>
@@ -80,6 +84,7 @@ export const Photo = ({ id, w, h, r = 28, zoom = 1, fx = 0.5, fy = 0.5, flip, fi
 export const Avatar = ({ id, size, bg = "#E9E6E1", style = {} }) => (
   <div style={{ width: size, height: size, borderRadius: "50%", overflow: "hidden", position: "relative", background: bg, flex: "none", ...style }}>
     {id === "mech" ? <img src={IMG("mech")} style={{ position: "absolute", left: "50%", top: "6%", width: "120%", transform: "translateX(-50%)" }} />
+      : id === "eli" ? <img src={IMG("lab/b-tech-eli-cutout.png")} style={{ position: "absolute", left: "50%", top: "4%", width: "205%", transform: "translateX(-48%)" }} />
       : id.startsWith("letter:") ? <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", fontWeight: 600, fontSize: size * 0.42, color: "#fff", background: "#8E8E93" }}>{id.slice(7)}</div>
       : <img src={IMG(id)} style={{ position: "absolute", left: "-30%", top: "24%", width: "190%" }} />}
   </div>
@@ -265,9 +270,9 @@ export const Triptych = ({ t, t0, t1, photos, from = { x: 140, y: 790, w: 255 },
   return (
     <AbsoluteFill style={{ background: `rgba(245,245,247,${0.97 * eo(lin(t, t0, t0 + 0.3)) * (1 - lin(t, t1, t1 + 0.3))})` }}>
       {photos.map((p, k) => { const e = spring(t, t0 + k * 0.08, 200, 19); const x0 = from.x + k * (from.w + 18), x1 = 90 + k * (to.w + 30);
-        const w = mix(from.w, to.w, e), h = mix(from.w, to.h, e);
+        const w = mix(from.w, to.w, e), h = mix(from.h ?? from.w, to.h, e);
         return <Abs key={k} x={mix(x0, x1, e)} y={mix(from.y, to.y, e)} style={{ opacity: 1 - lin(t, t1, t1 + 0.3) }}>
-          <Photo id={p.id} w={w} h={h} r={26} fit={p.fit ? p.fit * 1.25 : 1.0} zoom={p.zoom || 1} fx={p.fx} fy={p.fy} flip={p.flip} imgStyle={p.imgStyle}>{p.extra}</Photo>
-          <div style={{ fontSize: 32, color: GREY, fontWeight: 500, marginTop: 12, textAlign: "center", width: w }}>{p.label}</div></Abs>; })}
+          <Photo id={p.id} w={w} h={h} r={26} fit={p.fit ? p.fit * 1.25 : 1.0} zoom={p.zoom || 1} fx={p.fx} fy={p.fy} pos={p.tpos || p.pos} flip={p.flip} imgStyle={p.imgStyle}>{p.extra}</Photo>
+          <div style={{ fontSize: 32, color: GREY, fontWeight: 500, marginTop: 12, textAlign: "center", width: w, opacity: lin(e, 0.45, 0.9) }}>{p.label}</div></Abs>; })}
     </AbsoluteFill>);
 };

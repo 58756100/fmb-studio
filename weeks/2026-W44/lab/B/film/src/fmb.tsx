@@ -57,7 +57,8 @@ export const RowCard = ({ img, name, brand, date, w = 880, brandFocus = 0, brand
   </div>
 );
 // log entry: date + title, note, photo strip; photos = [{id, label, zoom, fx, fy, flip, imgStyle}]
-export const LogCard = ({ date, title, note, photos, w = 880, photoP = [1, 1, 1], by = null, style = {}, children }) => (
+// photos may be 2 or 3; aspect = tile height / width (1 = square; 0.75 shows a whole 4:3 photo)
+export const LogCard = ({ date, title, note, photos, w = 880, photoP = [1, 1, 1], aspect = 1, by = null, style = {}, children }) => (
   <div style={{ ...card, width: w, padding: "34px 40px 40px", ...style }}>
     <div style={{ display: "flex", alignItems: "center", gap: 14, fontSize: 30, color: GREY, fontWeight: 500 }}><Icon n="cal" size={34} color={GREY} sw={1.8} />Build log · dated entry</div>
     <div style={{ fontSize: 60, fontWeight: 600, letterSpacing: "-.032em", color: INK, marginTop: 8, lineHeight: 1.08 }}>{date} <span style={{ color: GREY }}>·</span> {title}</div>
@@ -65,7 +66,7 @@ export const LogCard = ({ date, title, note, photos, w = 880, photoP = [1, 1, 1]
     {by}
     {photos ? <div style={{ display: "flex", gap: 18, marginTop: 26 }}>{photos.map((p, i) => (
       <div key={i} style={{ opacity: Math.min(1, (photoP[i] ?? 1) * 1.6), transform: `scale(${0.8 + 0.2 * Math.min(1.05, photoP[i] ?? 1)})` }}>
-        <Photo id={p.id} w={(w - 80 - 36) / 3} h={(w - 80 - 36) / 3} r={24} zoom={p.zoom || 1} fx={p.fx} fy={p.fy} flip={p.flip} fit={p.fit} imgStyle={p.imgStyle}>{p.extra}</Photo>
+        <Photo id={p.id} w={(w - 80 - 18 * (photos.length - 1)) / photos.length} h={aspect * (w - 80 - 18 * (photos.length - 1)) / photos.length} r={24} zoom={p.zoom || 1} fx={p.fx} fy={p.fy} pos={p.pos} flip={p.flip} fit={p.fit} imgStyle={p.imgStyle}>{p.extra}</Photo>
         <div style={{ fontSize: 28, color: GREY, fontWeight: 500, marginTop: 10, textAlign: "center" }}>{p.label}</div>
       </div>))}</div> : null}
     {children}
