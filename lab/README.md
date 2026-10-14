@@ -10,7 +10,18 @@ A separate test bed. It never edits lane 0's weeks, scripts or queue entries; it
 | B Informed | ChatGPT, with our full context pack | Claude | + `02-lane-b.md` and `context/<week>.md` (learnings, scripts, VO notes, house-style refs) |
 | C Critic | Claude's lane-0 reel, rebuilt from ChatGPT's critique | Claude | + `03-lane-c.md`, the lane-0 render and its metrics |
 
-Only Claude makes visuals, on opus. ChatGPT describes visual *intent* per beat; motion-director turns it into frames in the house style (or deliberately outside it for lane A, if that's what the intent asks for).
+Only Claude makes visuals, on opus. ChatGPT never makes images or video.
+
+## Who has creative control
+- **Lane A: ChatGPT decides everything; Claude only executes.** Motion-director builds from ChatGPT's visual direction alone. It must not read `state/learnings.md`, lane-0 scripts or storyboards, or the house-style refs, and it must not default to the Notion-white/iOS look unless ChatGPT asked for it. It may use the kit (Remotion, remocn, audio engine, cutouts) as tools. Where the direction is silent, pick the most literal reading and log the gap in `weeks/<week>/lab/A/<id>-gaps.md`; don't fill it with house style.
+- **Lane B: shared.** ChatGPT writes with full context; Claude builds with full creative control and the house system, and may deviate if it makes ChatGPT's idea work better (log why).
+- **Lane C: Claude has full creative control.** ChatGPT critiques; Claude chooses which changes to apply and how.
+
+## ChatGPT setup (do this once, before any context is shared)
+Use two separate ChatGPT Projects, both with **project-only memory**. Also turn off "Reference chat history" in Settings → Personalization, so nothing leaks between them.
+- **FMB Lab · Blind**: lane A only. Paste `prompts/00-brief.md`. Never add files, screenshots or renders here.
+- **FMB Lab · Informed**: lanes B and C. Paste `prompts/00-brief.md`, then attach `context/<week>.md` (Claude writes it each week) and our renders.
+Always run lane A first each week. ChatGPT never gets the repo itself, only the exported context file, so it sees the playbook but not keys or code.
 
 ## Weekly flow (20 videos)
 1. Ideation marks 3 of the 11 lane-0 concepts `lab: true` (one collectors, one garages, one suppliers).

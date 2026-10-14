@@ -8,6 +8,14 @@ This week's topics:
 2. [garages] <topic line>
 3. [suppliers] <topic line>
 
-For each, deliver the agreed format. Length: 20-35 seconds. Also pick the
-visual style yourself (palette, type, motion, shot types) and describe it in
-one paragraph, so Claude can build it.
+For each, deliver the agreed format. Length: 20-35 seconds.
+
+You own the visual style; Claude will build exactly what you describe and
+add nothing of its own. So add a VISUAL SPEC per video:
+- Look: overall style in 2 lines, plus 2-3 real reference creators/brands/videos
+- Palette (hex), typography (font names, sizes, caption style)
+- Shot types: footage, UI screens, cutouts, kinetic type, 3D, etc.
+- Motion: cut rhythm (cuts per second), transitions, camera moves
+- Per beat: exactly what is on screen, where text sits, what moves
+- Music/SFX: genre, BPM, where the drops and hits land
+Assume the builder has never seen our brand before.
