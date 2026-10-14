@@ -3,6 +3,7 @@
 ## Live FMB features (safe to show)
 - Build pages, parts registry with brand, public URL, log entries, photos, garage and contributor attribution (W42 brief)
 - Sign-ups open at fuelmybuild.com (Wayne, 2026-10-14)
+- Log entries can carry a past date, e.g. an install from 2019 (Wayne, 2026-10-14)
 - Ownership transfer: not live; hint only ("the record stays with the car"), at most once, never shown as a flow (Wayne, 2026-10-14)
 
 ## Proven
