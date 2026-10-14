@@ -65,7 +65,7 @@ export const LogCard = ({ date, title, note, photos, w = 880, photoP = [1, 1, 1]
     {by}
     {photos ? <div style={{ display: "flex", gap: 18, marginTop: 26 }}>{photos.map((p, i) => (
       <div key={i} style={{ opacity: Math.min(1, (photoP[i] ?? 1) * 1.6), transform: `scale(${0.8 + 0.2 * Math.min(1.05, photoP[i] ?? 1)})` }}>
-        <Photo id={p.id} w={(w - 80 - 36) / 3} h={(w - 80 - 36) / 3} r={24} zoom={p.zoom || 1} fx={p.fx} fy={p.fy} flip={p.flip} fit={p.fit} imgStyle={p.imgStyle} />
+        <Photo id={p.id} w={(w - 80 - 36) / 3} h={(w - 80 - 36) / 3} r={24} zoom={p.zoom || 1} fx={p.fx} fy={p.fy} flip={p.flip} fit={p.fit} imgStyle={p.imgStyle}>{p.extra}</Photo>
         <div style={{ fontSize: 28, color: GREY, fontWeight: 500, marginTop: 10, textAlign: "center" }}>{p.label}</div>
       </div>))}</div> : null}
     {children}

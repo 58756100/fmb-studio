@@ -49,7 +49,7 @@ export const Strike = ({ t, t0, dur = 0.8, from, to, style = {}, lineColor = "#F
 
 // ---------- slide-swap (registry/remocn/slide-swap) ----------
 // Shove one view off and spring the next in. Spring-in with overshoot clamping, power-curve exit.
-const springClamp = (x, k = 300, d = 60, m = 0.5) => { // remotion spring, overshootClamping
+export const springClamp = (x, k = 300, d = 60, m = 0.5) => { // remotion spring, overshootClamping
   if (x <= 0) return 0; const w0 = Math.sqrt(k / m), z = d / (2 * Math.sqrt(k * m));
   let v; if (z < 1) { const wd = w0 * Math.sqrt(1 - z * z); v = 1 - Math.exp(-z * w0 * x) * (Math.cos(wd * x) + (z * w0 / wd) * Math.sin(wd * x)); } else v = 1 - Math.exp(-w0 * x) * (1 + w0 * x);
   return Math.min(1, v);
@@ -69,3 +69,6 @@ export const slideOut = (t, t0, size = 1080, axis = "x") => {
 // ---------- drift (registry/remocn/drift) ----------
 // Slow camera push so no frame is ever static. Returns a scale for [a, b].
 export const drift = (t, a, b, grow = 0.035) => 1 + grow * clamp((t - a) / Math.max(0.001, b - a));
+
+// full-width swipe built on the slide-swap spring: returns { out, in } translateX for the old and new view
+export const swipeX = (t, t0, dist = 1000) => { const p = springClamp(Math.max(0, t - t0)); return { out: -dist * p, in: dist * (1 - p), p }; };

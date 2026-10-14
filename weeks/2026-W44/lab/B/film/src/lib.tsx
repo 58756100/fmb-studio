@@ -70,7 +70,7 @@ export const Tile = ({ id, w, h, r = 36, fit, floor = 0.16, flip = false, bg = T
 export const Photo = ({ id, w, h, r = 28, zoom = 1, fx = 0.5, fy = 0.5, flip, fit, floor, bg = PHOTO_BG, imgStyle, style, children, border = true }) => (
   <div style={{ position: "relative", overflow: "hidden", width: w, height: h, borderRadius: r, background: bg,
     boxShadow: border ? "0 0 0 1px rgba(0,0,0,.05), 0 14px 24px -14px rgba(0,0,0,.18)" : undefined, ...style }}>
-    <div style={{ position: "absolute", inset: 0, transformOrigin: `${fx * 100}% ${fy * 100}%`, transform: `scale(${zoom})` }}>
+    <div style={{ position: "absolute", inset: 0, transformOrigin: `${fx * 100}% ${fy * 100}%`, transform: `translate(${(0.5 - fx) * w * clamp(zoom - 1)}px, ${(0.5 - fy) * h * clamp(zoom - 1)}px) scale(${zoom})` }}>
       <Tile id={id} w={w} h={h} r={0} fit={fit} floor={floor} flip={flip} bg="transparent" imgStyle={imgStyle} border={false} />
     </div>
     {children}
@@ -168,7 +168,7 @@ export const Chip = ({ children, red = false, style = {} }) => (
 // dashed empty slot (missing evidence)
 export const Empty = ({ w, h, r = 28, label, style = {}, pulse = 0 }) => (
   <div style={{ width: w, height: h, borderRadius: r, border: `4px dashed rgba(134,134,139,${0.55 + 0.35 * pulse})`, background: `rgba(255,255,255,${0.55 + 0.2 * pulse})`, display: "grid", placeItems: "center", ...style }}>
-    <div style={{ textAlign: "center", color: GREY }}><Icon n="photo" size={Math.min(64, w * 0.3)} color="#AEAEB2" sw={1.6} />{label ? <div style={{ fontSize: 28, fontWeight: 500, marginTop: 6 }}>{label}</div> : null}</div>
+    <div style={{ textAlign: "center", color: GREY }}><Icon n="photo" size={Math.min(64, w * 0.3)} color="#AEAEB2" sw={1.6} />{label ? <div style={{ fontSize: w > 500 ? 36 : 28, fontWeight: 500, marginTop: 6 }}>{label}</div> : null}</div>
   </div>
 );
 
@@ -184,7 +184,13 @@ export const fitSize = (s, max = 112, min = 64, width = SAFE_R - SAFE_L) => {
   const plain = s.replace(/[*~]/g, ""); const w = measure(plain, 100);
   return Math.max(min, Math.min(max, Math.floor((100 * width * 0.97) / w)));
 };
-const parse = (s) => s.split(" ").map((w) => w.startsWith("*") ? { w: w.replace(/\*/g, ""), c: RED } : w.startsWith("~") ? { w: w.replace(/~/g, ""), c: GREY } : { w, c: undefined });
+// *a b* = red span, ~a b~ = grey span (spans may cover several words)
+export const parse = (s) => { let mode = null; return s.split(" ").map((w) => {
+  let body = w;
+  if (!mode && (w[0] === "*" || w[0] === "~")) { mode = w[0]; body = w.slice(1); }
+  const c = mode === "*" ? RED : mode === "~" ? GREY : undefined;
+  if (mode && body.includes(mode)) mode = null;
+  return { w: w.replace(/[*~]/g, ""), c }; }); };
 export const Headline = ({ t, heads, cy = HEAD_CY }) => {
   const out = [];
   heads.forEach(([t0, text, o = {}], i) => {
@@ -246,4 +252,22 @@ export const Shots = ({ t, shots }) => {
     layers.push(<AbsoluteFill key={i}>{node}</AbsoluteFill>);
   });
   return <>{layers}</>;
+};
+
+// product window: soft-masks a shot to y 440-1430 so camera pushes never cross the headline band or the subtitles
+export const ProductWindow = ({ children, top = 436, bottom = 1436 }) => (
+  <AbsoluteFill style={{ WebkitMaskImage: `linear-gradient(to bottom, transparent ${top}px, #000 ${top + 34}px, #000 ${bottom - 34}px, transparent ${bottom}px)` }}>{children}</AbsoluteFill>
+);
+
+// a log's photo strip lifts out and enlarges into a triptych (t0 .. t1)
+export const Triptych = ({ t, t0, t1, photos, from = { x: 140, y: 790, w: 255 }, to = { y: 520, w: 280, h: 640 } }) => {
+  if (t < t0 || t >= t1 + 0.3) return null;
+  return (
+    <AbsoluteFill style={{ background: `rgba(245,245,247,${0.97 * eo(lin(t, t0, t0 + 0.3)) * (1 - lin(t, t1, t1 + 0.3))})` }}>
+      {photos.map((p, k) => { const e = spring(t, t0 + k * 0.08, 200, 19); const x0 = from.x + k * (from.w + 18), x1 = 90 + k * (to.w + 30);
+        const w = mix(from.w, to.w, e), h = mix(from.w, to.h, e);
+        return <Abs key={k} x={mix(x0, x1, e)} y={mix(from.y, to.y, e)} style={{ opacity: 1 - lin(t, t1, t1 + 0.3) }}>
+          <Photo id={p.id} w={w} h={h} r={26} fit={p.fit ? p.fit * 1.25 : 1.0} zoom={p.zoom || 1} fx={p.fx} fy={p.fy} flip={p.flip} imgStyle={p.imgStyle}>{p.extra}</Photo>
+          <div style={{ fontSize: 32, color: GREY, fontWeight: 500, marginTop: 12, textAlign: "center", width: w }}>{p.label}</div></Abs>; })}
+    </AbsoluteFill>);
 };
