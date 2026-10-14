@@ -1,0 +1,682 @@
+{
+ "id": "C3-GAR",
+ "title": "You never told me",
+ "hook": "A",
+ "turn": 12.0,
+ "cta_clear": 26.6,
+ "remocn": [
+  "caption-split-flap (the board's flap engine, scaled up to a 14 x 4 board)",
+  "staggered-fade-up (the monitor's log entry)",
+  "micro-scale-fade (chips and beat pills)",
+  "caption-dim-progress (subtitles)"
+ ],
+ "vo": [
+  {
+   "n": 1,
+   "a": 0.2,
+   "b": 1.8,
+   "speaker": "Okafor",
+   "line": "You never told me.",
+   "emphasis": [
+    "never"
+   ],
+   "words": [
+    {
+     "w": "You",
+     "a": 0.2,
+     "b": 0.53
+    },
+    {
+     "w": "never",
+     "a": 0.56,
+     "b": 1.03
+    },
+    {
+     "w": "told",
+     "a": 1.07,
+     "b": 1.47
+    },
+    {
+     "w": "me.",
+     "a": 1.51,
+     "b": 1.78
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "a": 1.9,
+   "b": 5.0,
+   "speaker": "Narrator",
+   "line": "Okafor's R34. Did Gus ever call?",
+   "emphasis": [
+    "call"
+   ],
+   "words": [
+    {
+     "w": "Okafor's",
+     "a": 1.9,
+     "b": 2.58
+    },
+    {
+     "w": "R34.",
+     "a": 2.64,
+     "b": 3.01
+    },
+    {
+     "w": "Did",
+     "a": 3.2,
+     "b": 3.57
+    },
+    {
+     "w": "Gus",
+     "a": 3.61,
+     "b": 3.98
+    },
+    {
+     "w": "ever",
+     "a": 4.02,
+     "b": 4.47
+    },
+    {
+     "w": "call?",
+     "a": 4.51,
+     "b": 4.96
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "a": 5.1,
+   "b": 8.9,
+   "speaker": "Gus",
+   "line": "Tuesday, found it. Wednesday, parts. Thursday...",
+   "emphasis": [],
+   "words": [
+    {
+     "w": "Tuesday,",
+     "a": 5.1,
+     "b": 5.67
+    },
+    {
+     "w": "found",
+     "a": 5.72,
+     "b": 6.16
+    },
+    {
+     "w": "it.",
+     "a": 6.2,
+     "b": 6.45
+    },
+    {
+     "w": "Wednesday,",
+     "a": 6.68,
+     "b": 7.37
+    },
+    {
+     "w": "parts.",
+     "a": 7.43,
+     "b": 7.87
+    },
+    {
+     "w": "Thursday...",
+     "a": 8.21,
+     "b": 8.85
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "a": 9.1,
+   "b": 10.3,
+   "speaker": "Okafor",
+   "line": "So you didn't.",
+   "emphasis": [
+    "didn't"
+   ],
+   "words": [
+    {
+     "w": "So",
+     "a": 9.1,
+     "b": 9.38
+    },
+    {
+     "w": "you",
+     "a": 9.4,
+     "b": 9.75
+    },
+    {
+     "w": "didn't.",
+     "a": 9.78,
+     "b": 10.26
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "a": 10.7,
+   "b": 11.9,
+   "speaker": "Gus",
+   "line": "Hang on.",
+   "emphasis": [],
+   "words": [
+    {
+     "w": "Hang",
+     "a": 10.7,
+     "b": 11.36
+    },
+    {
+     "w": "on.",
+     "a": 11.42,
+     "b": 11.86
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "a": 12.1,
+   "b": 15.9,
+   "speaker": "Narrator",
+   "line": "Logged Tuesday. One photo. Gus's name.",
+   "emphasis": [
+    "Tuesday"
+   ],
+   "words": [
+    {
+     "w": "Logged",
+     "a": 12.1,
+     "b": 12.71
+    },
+    {
+     "w": "Tuesday.",
+     "a": 12.76,
+     "b": 13.45
+    },
+    {
+     "w": "One",
+     "a": 13.71,
+     "b": 14.09
+    },
+    {
+     "w": "photo.",
+     "a": 14.12,
+     "b": 14.66
+    },
+    {
+     "w": "Gus's",
+     "a": 14.9,
+     "b": 15.36
+    },
+    {
+     "w": "name.",
+     "a": 15.4,
+     "b": 15.86
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "a": 16.1,
+   "b": 18.9,
+   "speaker": "Okafor",
+   "line": "You still should've called.",
+   "emphasis": [
+    "called"
+   ],
+   "words": [
+    {
+     "w": "You",
+     "a": 16.1,
+     "b": 16.53
+    },
+    {
+     "w": "still",
+     "a": 16.57,
+     "b": 17.17
+    },
+    {
+     "w": "should've",
+     "a": 17.22,
+     "b": 18.08
+    },
+    {
+     "w": "called.",
+     "a": 18.15,
+     "b": 18.84
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "a": 19.1,
+   "b": 21.4,
+   "speaker": "Gus",
+   "line": "I should have.",
+   "emphasis": [
+    "should"
+   ],
+   "words": [
+    {
+     "w": "I",
+     "a": 19.1,
+     "b": 19.47
+    },
+    {
+     "w": "should",
+     "a": 19.51,
+     "b": 20.5
+    },
+    {
+     "w": "have.",
+     "a": 20.59,
+     "b": 21.34
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "a": 21.6,
+   "b": 23.9,
+   "speaker": "Narrator",
+   "line": "Then they talked about the engine.",
+   "emphasis": [
+    "engine"
+   ],
+   "words": [
+    {
+     "w": "Then",
+     "a": 21.6,
+     "b": 21.92
+    },
+    {
+     "w": "they",
+     "a": 21.95,
+     "b": 22.26
+    },
+    {
+     "w": "talked",
+     "a": 22.29,
+     "b": 22.71
+    },
+    {
+     "w": "about",
+     "a": 22.75,
+     "b": 23.12
+    },
+    {
+     "w": "the",
+     "a": 23.15,
+     "b": 23.42
+    },
+    {
+     "w": "engine.",
+     "a": 23.44,
+     "b": 23.86
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "a": 24.0,
+   "b": 26.9,
+   "speaker": "Narrator",
+   "line": "Log every find. fuelmybuild.com.",
+   "emphasis": [
+    "find"
+   ],
+   "words": [
+    {
+     "w": "Log",
+     "a": 24.0,
+     "b": 24.37
+    },
+    {
+     "w": "every",
+     "a": 24.4,
+     "b": 24.93
+    },
+    {
+     "w": "find.",
+     "a": 24.97,
+     "b": 25.42
+    },
+    {
+     "w": "fuelmybuild.com.",
+     "a": 25.61,
+     "b": 26.8
+    }
+   ]
+  }
+ ],
+ "ev": {
+  "ding": 0.03,
+  "reclatter": 0.05,
+  "chipBounce": 0.25,
+  "punchIn": 1.8,
+  "rowGarage": 2.0,
+  "rowDidHe": 3.55,
+  "punchOut": 5.0,
+  "rowMon": 5.05,
+  "rowTue": 5.3,
+  "block": 5.6,
+  "rowWed": 6.45,
+  "rowThu": 7.75,
+  "thuStall": 8.6,
+  "monSlide": 9.35,
+  "bellAside": 9.55,
+  "monTurn": 10.6,
+  "monTurned": 11.5,
+  "monFill": 12.0,
+  "musicCut": 12.0,
+  "eHeader": 12.25,
+  "eTitle": 12.35,
+  "eDate": 12.5,
+  "ePhoto": 13.2,
+  "eChip": 13.45,
+  "holdEnd": 16.0,
+  "pushPhoto": 16.0,
+  "pillWhen": 16.35,
+  "rowSorry": 19.1,
+  "monBack": 21.5,
+  "drift": 21.6,
+  "chipGrey": 22.0,
+  "pillCar": 21.8,
+  "musicBack": 21.5,
+  "monOut": 24.0,
+  "blockOut": 24.1,
+  "boardBack": 24.2,
+  "chipRed": 24.3,
+  "bellBack": 24.4,
+  "camHome": 24.0,
+  "ctaIn": 24.1,
+  "ctaOut": 26.35
+ },
+ "board": [
+  {
+   "row": 0,
+   "at": 0.05,
+   "text": "NEVER TOLD ME",
+   "note": "re-clatter onto the frame-0 text on the ding"
+  },
+  {
+   "row": 1,
+   "at": 2.0,
+   "text": "PELL ST GARAGE"
+  },
+  {
+   "row": 2,
+   "at": 3.55,
+   "text": "DID HE?",
+   "tone": "grey"
+  },
+  {
+   "row": 0,
+   "at": 5.05,
+   "text": "MON  CAR IN"
+  },
+  {
+   "row": 1,
+   "at": 5.3,
+   "text": "TUE  FOUND IT"
+  },
+  {
+   "row": 2,
+   "at": 5.15,
+   "text": ""
+  },
+  {
+   "row": 2,
+   "at": 6.45,
+   "text": "WED  PARTS"
+  },
+  {
+   "row": 3,
+   "at": 7.75,
+   "text": "THU",
+   "stall": true
+  },
+  {
+   "row": 3,
+   "at": 19.1,
+   "text": "THU  SORRY"
+  },
+  {
+   "row": 0,
+   "at": 24.2,
+   "text": "NEVER TOLD ME"
+  },
+  {
+   "row": 1,
+   "at": 24.25,
+   "text": ""
+  },
+  {
+   "row": 2,
+   "at": 24.3,
+   "text": ""
+  },
+  {
+   "row": 3,
+   "at": 24.35,
+   "text": ""
+  }
+ ],
+ "labels": [
+  {
+   "a": 16.35,
+   "b": 21.5,
+   "text": "Shows when. Not the call."
+  },
+  {
+   "a": 21.8,
+   "b": 24.0,
+   "text": "Back to the car"
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "frame": 0,
+   "name": "room-tone-shop",
+   "note": "low shop bed (-38 dB): compressor hum, far radio"
+  },
+  {
+   "t": 0.03,
+   "frame": 1,
+   "name": "bell-ding",
+   "note": "brass counter bell, hand slap (frame 1)"
+  },
+  {
+   "t": 0.05,
+   "frame": 2,
+   "name": "flap-clatter-13",
+   "note": "board re-clatters to NEVER TOLD ME (one click per flap, summed)"
+  },
+  {
+   "t": 0.25,
+   "frame": 8,
+   "name": "chip-drop",
+   "note": "$1,850 chip bounces"
+  },
+  {
+   "t": 1.8,
+   "frame": 54,
+   "name": "punch-in-thump",
+   "note": "hard cut in (low thump, no whoosh)"
+  },
+  {
+   "t": 2.0,
+   "frame": 60,
+   "name": "flap-clatter-14",
+   "note": "PELL ST GARAGE"
+  },
+  {
+   "t": 3.55,
+   "frame": 106,
+   "name": "flap-clatter-7",
+   "note": "DID HE? (grey flaps)"
+  },
+  {
+   "t": 5.0,
+   "frame": 150,
+   "name": "punch-out-thump",
+   "note": "hard cut out"
+  },
+  {
+   "t": 5.05,
+   "frame": 152,
+   "name": "flap-clatter-11",
+   "note": "MON  CAR IN"
+  },
+  {
+   "t": 5.3,
+   "frame": 159,
+   "name": "flap-clatter-13",
+   "note": "TUE  FOUND IT"
+  },
+  {
+   "t": 5.6,
+   "frame": 168,
+   "name": "caster-roll",
+   "note": "engine stand rolls in"
+  },
+  {
+   "t": 6.45,
+   "frame": 194,
+   "name": "flap-clatter-10",
+   "note": "WED  PARTS"
+  },
+  {
+   "t": 7.75,
+   "frame": 232,
+   "name": "flap-spin-slowing",
+   "note": "THU row spins, slows, stalls blank (clicks spread out, last click 8.6)"
+  },
+  {
+   "t": 9.35,
+   "frame": 280,
+   "name": "monitor-slide",
+   "note": "monitor slides along the counter"
+  },
+  {
+   "t": 9.55,
+   "frame": 286,
+   "name": "bell-slide",
+   "note": "bell pushed aside"
+  },
+  {
+   "t": 10.6,
+   "frame": 318,
+   "name": "monitor-swivel",
+   "note": "stand swivel creak"
+  },
+  {
+   "t": 11.5,
+   "frame": 345,
+   "name": "screen-on-tick",
+   "note": "screen faces us"
+  },
+  {
+   "t": 12.0,
+   "frame": 360,
+   "name": "music-cut",
+   "note": "music cuts to room tone"
+  },
+  {
+   "t": 12.35,
+   "frame": 370,
+   "name": "ui-tick-x3",
+   "note": "title, date land"
+  },
+  {
+   "t": 13.2,
+   "frame": 396,
+   "name": "photo-settle",
+   "note": "weep photo lands (on 'photo')"
+  },
+  {
+   "t": 13.45,
+   "frame": 404,
+   "name": "chip-pop",
+   "note": "logged by Gus chip"
+  },
+  {
+   "t": 16.0,
+   "frame": 480,
+   "name": "air-slow-push",
+   "note": "camera eases into the photo"
+  },
+  {
+   "t": 16.35,
+   "frame": 491,
+   "name": "pill-pop",
+   "note": "'Shows when. Not the call.'"
+  },
+  {
+   "t": 19.1,
+   "frame": 573,
+   "name": "flap-clatter-5",
+   "note": "THU  SORRY (the only flip in the window)"
+  },
+  {
+   "t": 21.5,
+   "frame": 645,
+   "name": "monitor-swivel",
+   "note": "monitor turns half back"
+  },
+  {
+   "t": 21.5,
+   "frame": 645,
+   "name": "music-return",
+   "note": "music back, softer"
+  },
+  {
+   "t": 22.0,
+   "frame": 660,
+   "name": "chip-fade",
+   "note": "chip red to grey (soft tick)"
+  },
+  {
+   "t": 24.0,
+   "frame": 720,
+   "name": "monitor-slide-out",
+   "note": ""
+  },
+  {
+   "t": 24.1,
+   "frame": 723,
+   "name": "caster-roll-out",
+   "note": ""
+  },
+  {
+   "t": 24.1,
+   "frame": 723,
+   "name": "cta-pop",
+   "note": ""
+  },
+  {
+   "t": 24.2,
+   "frame": 726,
+   "name": "flap-clatter-full",
+   "note": "board back to NEVER TOLD ME, rows 2-4 blank"
+  },
+  {
+   "t": 24.4,
+   "frame": 732,
+   "name": "bell-slide-back",
+   "note": "bell to its frame-0 spot (no ding: the ding is frame 1)"
+  },
+  {
+   "t": 26.35,
+   "frame": 790,
+   "name": "cta-out",
+   "note": ""
+  }
+ ],
+ "fps": 30,
+ "duration": 27.0,
+ "frames": 810,
+ "width": 1080,
+ "height": 1920,
+ "vo_status": "estimated from the script windows; replace word times with words.json after Wayne records"
+}

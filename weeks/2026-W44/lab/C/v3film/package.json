@@ -1,0 +1,14 @@
+{
+  "name": "fmb-lab-c-v3film",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Lab lane C v3, week 44: C3-COL, C3-GAR, C3-SUP (Remotion + remocn ports, 30 fps, 1080x1920; assets from kit/remotion/public)",
+  "type": "module",
+  "dependencies": {
+    "@remotion/bundler": "4.0.534",
+    "@remotion/renderer": "4.0.534",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.534"
+  }
+}

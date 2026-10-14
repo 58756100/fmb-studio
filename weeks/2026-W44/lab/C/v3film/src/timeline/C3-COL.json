@@ -1,0 +1,693 @@
+{
+ "id": "C3-COL",
+ "title": "Loser buys dinner",
+ "hook": "A",
+ "turn": 14.4,
+ "cta_clear": 26.6,
+ "remocn": [
+  "stage (keyframed camera over one long plane, whole film)",
+  "speed-lines (trail + squash/bounce on each flag plant)",
+  "mask-reveal-up (card lines and beat labels rising out of the tape)",
+  "caption-rise (subtitles)"
+ ],
+ "vo": [
+  {
+   "n": 1,
+   "a": 0.1,
+   "b": 1.8,
+   "speaker": "Narrator",
+   "line": "Loser buys dinner.",
+   "emphasis": [
+    "dinner"
+   ],
+   "words": [
+    {
+     "w": "Loser",
+     "a": 0.1,
+     "b": 0.62
+    },
+    {
+     "w": "buys",
+     "a": 0.67,
+     "b": 1.11
+    },
+    {
+     "w": "dinner.",
+     "a": 1.15,
+     "b": 1.75
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "a": 1.9,
+   "b": 5.0,
+   "speaker": "Narrator",
+   "line": "Marisol's Evo. When did the intake go on?",
+   "emphasis": [
+    "intake"
+   ],
+   "words": [
+    {
+     "w": "Marisol's",
+     "a": 1.9,
+     "b": 2.48
+    },
+    {
+     "w": "Evo.",
+     "a": 2.53,
+     "b": 2.82
+    },
+    {
+     "w": "When",
+     "a": 2.99,
+     "b": 3.34
+    },
+    {
+     "w": "did",
+     "a": 3.37,
+     "b": 3.66
+    },
+    {
+     "w": "the",
+     "a": 3.68,
+     "b": 3.97
+    },
+    {
+     "w": "intake",
+     "a": 4.0,
+     "b": 4.46
+    },
+    {
+     "w": "go",
+     "a": 4.5,
+     "b": 4.73
+    },
+    {
+     "w": "on?",
+     "a": 4.75,
+     "b": 4.98
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "a": 5.1,
+   "b": 7.9,
+   "speaker": "Marisol",
+   "line": "Twenty twenty-one. Hot summer.",
+   "emphasis": [
+    "summer"
+   ],
+   "words": [
+    {
+     "w": "Twenty",
+     "a": 5.1,
+     "b": 5.7
+    },
+    {
+     "w": "twenty-one.",
+     "a": 5.75,
+     "b": 6.57
+    },
+    {
+     "w": "Hot",
+     "a": 6.84,
+     "b": 7.22
+    },
+    {
+     "w": "summer.",
+     "a": 7.25,
+     "b": 7.85
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "a": 8.1,
+   "b": 10.9,
+   "speaker": "Dev",
+   "line": "Seventeen. I held the light.",
+   "emphasis": [
+    "Seventeen"
+   ],
+   "words": [
+    {
+     "w": "Seventeen.",
+     "a": 8.1,
+     "b": 8.92
+    },
+    {
+     "w": "I",
+     "a": 9.19,
+     "b": 9.42
+    },
+    {
+     "w": "held",
+     "a": 9.44,
+     "b": 9.89
+    },
+    {
+     "w": "the",
+     "a": 9.93,
+     "b": 10.3
+    },
+    {
+     "w": "light.",
+     "a": 10.33,
+     "b": 10.85
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "a": 11.0,
+   "b": 12.9,
+   "speaker": "Narrator",
+   "line": "He had a witness. Himself.",
+   "emphasis": [
+    "Himself"
+   ],
+   "words": [
+    {
+     "w": "He",
+     "a": 11.0,
+     "b": 11.2
+    },
+    {
+     "w": "had",
+     "a": 11.21,
+     "b": 11.46
+    },
+    {
+     "w": "a",
+     "a": 11.48,
+     "b": 11.63
+    },
+    {
+     "w": "witness.",
+     "a": 11.64,
+     "b": 12.08
+    },
+    {
+     "w": "Himself.",
+     "a": 12.42,
+     "b": 12.86
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "a": 13.0,
+   "b": 14.4,
+   "speaker": "Marisol",
+   "line": "Fine. Look it up.",
+   "emphasis": [
+    "up"
+   ],
+   "words": [
+    {
+     "w": "Fine.",
+     "a": 13.0,
+     "b": 13.36
+    },
+    {
+     "w": "Look",
+     "a": 13.49,
+     "b": 13.85
+    },
+    {
+     "w": "it",
+     "a": 13.88,
+     "b": 14.12
+    },
+    {
+     "w": "up.",
+     "a": 14.14,
+     "b": 14.38
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "a": 14.5,
+   "b": 18.3,
+   "speaker": "Narrator",
+   "line": "Intake. June twenty nineteen. Her own photo.",
+   "emphasis": [
+    "photo"
+   ],
+   "words": [
+    {
+     "w": "Intake.",
+     "a": 14.5,
+     "b": 15.0
+    },
+    {
+     "w": "June",
+     "a": 15.24,
+     "b": 15.61
+    },
+    {
+     "w": "twenty",
+     "a": 15.64,
+     "b": 16.14
+    },
+    {
+     "w": "nineteen.",
+     "a": 16.18,
+     "b": 16.8
+    },
+    {
+     "w": "Her",
+     "a": 17.16,
+     "b": 17.46
+    },
+    {
+     "w": "own",
+     "a": 17.49,
+     "b": 17.8
+    },
+    {
+     "w": "photo.",
+     "a": 17.83,
+     "b": 18.26
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "a": 18.5,
+   "b": 21.3,
+   "speaker": "Dev",
+   "line": "Two years off. Both of us.",
+   "emphasis": [
+    "off"
+   ],
+   "words": [
+    {
+     "w": "Two",
+     "a": 18.5,
+     "b": 18.89
+    },
+    {
+     "w": "years",
+     "a": 18.92,
+     "b": 19.46
+    },
+    {
+     "w": "off.",
+     "a": 19.51,
+     "b": 19.89
+    },
+    {
+     "w": "Both",
+     "a": 20.13,
+     "b": 20.59
+    },
+    {
+     "w": "of",
+     "a": 20.63,
+     "b": 20.94
+    },
+    {
+     "w": "us.",
+     "a": 20.96,
+     "b": 21.27
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "a": 21.5,
+   "b": 23.8,
+   "speaker": "Narrator",
+   "line": "Nobody won. They split the check.",
+   "emphasis": [
+    "check"
+   ],
+   "words": [
+    {
+     "w": "Nobody",
+     "a": 21.5,
+     "b": 21.91
+    },
+    {
+     "w": "won.",
+     "a": 21.94,
+     "b": 22.2
+    },
+    {
+     "w": "They",
+     "a": 22.42,
+     "b": 22.72
+    },
+    {
+     "w": "split",
+     "a": 22.75,
+     "b": 23.11
+    },
+    {
+     "w": "the",
+     "a": 23.14,
+     "b": 23.39
+    },
+    {
+     "w": "check.",
+     "a": 23.41,
+     "b": 23.77
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "a": 24.0,
+   "b": 26.9,
+   "speaker": "Narrator",
+   "line": "Date it once. fuelmybuild.com.",
+   "emphasis": [
+    "once"
+   ],
+   "words": [
+    {
+     "w": "Date",
+     "a": 24.0,
+     "b": 24.47
+    },
+    {
+     "w": "it",
+     "a": 24.52,
+     "b": 24.83
+    },
+    {
+     "w": "once.",
+     "a": 24.86,
+     "b": 25.33
+    },
+    {
+     "w": "fuelmybuild.com.",
+     "a": 25.52,
+     "b": 26.79
+    }
+   ]
+  }
+ ],
+ "ev": {
+  "checkLift": 0.55,
+  "checkSlap": 1.05,
+  "flagTwitch": 1.12,
+  "glide1": 1.85,
+  "intakeLift": 2.35,
+  "leader": 2.6,
+  "camMarisol": 5.0,
+  "flagMLift": 5.25,
+  "flagMPlant": 5.7,
+  "camDev": 8.0,
+  "tintFrom": 8.15,
+  "tintTo": 9.0,
+  "flagDLift": 8.75,
+  "flagDPlant": 9.15,
+  "pullBack": 11.0,
+  "checkNudge": 12.25,
+  "musicCut": 13.0,
+  "camTick": 13.0,
+  "tickSplit": 13.45,
+  "cardRise": 14.4,
+  "cardLines": 14.55,
+  "cardPhoto": 14.8,
+  "cardChip": 15.15,
+  "holdEnd": 18.4,
+  "cardShrink": 18.4,
+  "lean": 18.85,
+  "measure": 19.05,
+  "musicBack": 21.4,
+  "tintDrain": 21.4,
+  "checkCenter": 22.75,
+  "fold": 24.0,
+  "flagsBack": 24.35,
+  "checkBack": 24.4,
+  "tickClose": 24.55,
+  "camHome": 24.0,
+  "qBack": 25.0,
+  "ctaIn": 24.1,
+  "ctaOut": 26.35,
+  "chipBack": 26.35
+ },
+ "labels": [
+  {
+   "a": 0.0,
+   "b": 1.85,
+   "text": "Bet: one dinner",
+   "kind": "chip"
+  },
+  {
+   "a": 1.95,
+   "b": 5.0,
+   "text": "Installed: ?"
+  },
+  {
+   "a": 5.25,
+   "b": 8.0,
+   "text": "Marisol: 2021"
+  },
+  {
+   "a": 8.3,
+   "b": 11.0,
+   "text": "Four years apart"
+  },
+  {
+   "a": 11.15,
+   "b": 13.0,
+   "text": "Witness: also Dev"
+  },
+  {
+   "a": 19.0,
+   "b": 21.3,
+   "text": "Both off by two"
+  },
+  {
+   "a": 21.6,
+   "b": 23.6,
+   "text": "Split down the middle"
+  },
+  {
+   "a": 26.35,
+   "b": 27.0,
+   "text": "Bet: one dinner",
+   "kind": "chip",
+   "loop": true
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "frame": 0,
+   "name": "room-tone-restaurant",
+   "note": "low bed under the whole film (-38 dB); it stays through the music cut"
+  },
+  {
+   "t": 0.55,
+   "frame": 16,
+   "name": "leather-lift",
+   "note": "check presenter lifts off the tape"
+  },
+  {
+   "t": 1.05,
+   "frame": 32,
+   "name": "leather-slap",
+   "note": "check presenter slaps the tape; lands on 'dinner'"
+  },
+  {
+   "t": 1.12,
+   "frame": 34,
+   "name": "pin-twitch-x2",
+   "note": "both flags twitch, 2 ticks 60 ms apart"
+  },
+  {
+   "t": 1.85,
+   "frame": 56,
+   "name": "air-glide",
+   "note": "camera glides right (soft, long)"
+  },
+  {
+   "t": 2.35,
+   "frame": 70,
+   "name": "part-lift",
+   "note": "intake lifts 20 px"
+  },
+  {
+   "t": 2.6,
+   "frame": 78,
+   "name": "pencil-line",
+   "note": "grey leader line draws to the '?'"
+  },
+  {
+   "t": 5.0,
+   "frame": 150,
+   "name": "air-glide",
+   "note": "camera to Marisol's flag"
+  },
+  {
+   "t": 5.25,
+   "frame": 158,
+   "name": "flag-flutter",
+   "note": "her pennant lifts"
+  },
+  {
+   "t": 5.7,
+   "frame": 171,
+   "name": "tape-click",
+   "note": "replant on 2021 (speed-lines landing)"
+  },
+  {
+   "t": 8.0,
+   "frame": 240,
+   "name": "air-glide-long",
+   "note": "longest pan, across the gap"
+  },
+  {
+   "t": 8.15,
+   "frame": 244,
+   "name": "tint-swell",
+   "note": "red tint follows the camera over four years"
+  },
+  {
+   "t": 8.75,
+   "frame": 262,
+   "name": "flag-flutter",
+   "note": "his pennant lifts"
+  },
+  {
+   "t": 9.15,
+   "frame": 274,
+   "name": "tape-click",
+   "note": "replant on 2017"
+  },
+  {
+   "t": 11.0,
+   "frame": 330,
+   "name": "air-pull",
+   "note": "pull back to both flags"
+  },
+  {
+   "t": 12.25,
+   "frame": 368,
+   "name": "leather-slide",
+   "note": "check slides 40 px toward Marisol"
+  },
+  {
+   "t": 13.0,
+   "frame": 390,
+   "name": "music-cut",
+   "note": "dead stop; room tone only"
+  },
+  {
+   "t": 13.45,
+   "frame": 404,
+   "name": "tape-split",
+   "note": "2019 tick splits (soft zip + creak)"
+  },
+  {
+   "t": 14.4,
+   "frame": 432,
+   "name": "card-rise",
+   "note": "glass card rises out of the tape (air, no whoosh peak)"
+  },
+  {
+   "t": 14.55,
+   "frame": 436,
+   "name": "tick-soft-x3",
+   "note": "card lines land, 3 ticks"
+  },
+  {
+   "t": 14.8,
+   "frame": 444,
+   "name": "photo-settle",
+   "note": "install photo lands (soft paper tap)"
+  },
+  {
+   "t": 15.15,
+   "frame": 454,
+   "name": "chip-pop",
+   "note": "'logged by Marisol' chip"
+  },
+  {
+   "t": 18.4,
+   "frame": 552,
+   "name": "air-short",
+   "note": "card shrinks to the tick"
+  },
+  {
+   "t": 18.85,
+   "frame": 566,
+   "name": "pin-creak-x2",
+   "note": "flags lean in"
+  },
+  {
+   "t": 19.05,
+   "frame": 572,
+   "name": "measure-draw-x2",
+   "note": "two grey measure lines draw, '2 yrs' each"
+  },
+  {
+   "t": 21.4,
+   "frame": 642,
+   "name": "music-return",
+   "note": "music back on the downbeat"
+  },
+  {
+   "t": 21.4,
+   "frame": 642,
+   "name": "tint-drain",
+   "note": "red drains (reverse swell)"
+  },
+  {
+   "t": 22.75,
+   "frame": 682,
+   "name": "leather-slide",
+   "note": "check slides to the middle; lands on 'check'"
+  },
+  {
+   "t": 24.0,
+   "frame": 720,
+   "name": "card-fold",
+   "note": "card folds into the tape"
+  },
+  {
+   "t": 24.1,
+   "frame": 723,
+   "name": "cta-pop",
+   "note": "CTA band in"
+  },
+  {
+   "t": 24.35,
+   "frame": 730,
+   "name": "tape-click-x2",
+   "note": "flags spring back to 2017 and 2021"
+  },
+  {
+   "t": 24.4,
+   "frame": 732,
+   "name": "leather-slide",
+   "note": "check back to its frame-0 spot"
+  },
+  {
+   "t": 24.55,
+   "frame": 736,
+   "name": "tape-close",
+   "note": "tick closes"
+  },
+  {
+   "t": 26.35,
+   "frame": 790,
+   "name": "cta-out",
+   "note": "CTA clears (soft)"
+  }
+ ],
+ "fps": 30,
+ "duration": 27.0,
+ "frames": 810,
+ "width": 1080,
+ "height": 1920,
+ "vo_status": "estimated from the script windows; replace word times with words.json after Wayne records"
+}
