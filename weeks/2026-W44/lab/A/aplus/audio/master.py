@@ -6,6 +6,8 @@ import numpy as np, soundfile as sf
 from scipy.signal import resample_poly
 
 HERE = os.path.dirname(os.path.abspath(__file__)); OUT = os.path.join(HERE, "out"); SR = 48000
+# ceiling for the master wav: -3 dBTP leaves room for AAC overshoot so the delivered mp4 stays at or under -1 dBTP
+CEIL = float(os.environ.get("CEIL", "-3.0"))
 
 
 def measure(path):
@@ -53,7 +55,7 @@ if __name__ == "__main__":
     res = {}
     for vid in sys.argv[1:] or ["L1", "L2", "L3"]:
         x, sr = sf.read(os.path.join(OUT, f"A-{vid}-premaster.wav")); assert sr == SR
-        m = render(x, -14.0, -1.5, os.path.join(OUT, f"A-{vid}-master.wav"))
+        m = render(x, -14.0, CEIL, os.path.join(OUT, f"A-{vid}-master.wav"))
         b = render(x, -20.0, -1.5, os.path.join(OUT, f"A-{vid}-bed.wav"))
         res[vid] = {"master": m, "bed": b}
         print(vid, "master", m, "bed", b)
