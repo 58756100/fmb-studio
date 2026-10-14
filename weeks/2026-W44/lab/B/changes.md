@@ -5,7 +5,7 @@ Built from `B-specs.md` (B-L1, B-L2, B-L3, hook A only). Each video follows Chat
 Code: `film/` (Remotion + remocn; `src/L1.tsx`, `L2.tsx`, `L3.tsx`, shared `lib.tsx` and `fmb.tsx`, timings in `src/data/<id>.json`, audio in `film/audio/score.py`).
 
 ## Needs Wayne before posting
-- **B-L2 shows garage and contributor attribution ("Garage · Shop B", "Contributor · Eli") as FuelMyBuild fields.** These are not on the live-features list in `state/learnings.md` (build pages, parts registry with brand, public URL, log entries, photos). Marked **(confirm)**: rendered as specced because it's a lab build, but it must not be posted until Wayne confirms attribution is live. If it isn't live, the fallback is to show "Shop B" and "Eli" inside the log entry's note text (which is live) and drop the 18–19 s field enlargements.
+- **B-L2 shows garage and contributor attribution ("Garage · Shop B", "Contributor · Eli") as FuelMyBuild fields.** Resolved 2026-10-14: attribution is listed as live in the W42 brief and now in `state/learnings.md`, so no change is needed.
 - No VO yet. Wayne records to `vo-script.md`; the masters carry music, SFX and burned-in subtitles only.
 
 ## Shared (all three)
