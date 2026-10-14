@@ -12,7 +12,7 @@ import { pushThrough } from "./remocn/push-through";
 import { lensZoom } from "./remocn/lens-zoom";
 
 const CAR = "car-09", NORA = "car-19";
-const TA = { x: 90, y: 540, w: 440, h: 440 }, TB = { x: 550, y: 540, w: 440, h: 440 };
+const TA = { x: 90, y: 540, w: 440, h: 500 }, TB = { x: 550, y: 540, w: 440, h: 500 };
 const hitPulse = (t, t0) => 1 + 0.035 * Math.sin(Math.PI * clamp((t - t0) / 0.26));
 const ShopLabel = ({ name, letter, style }) => (
   <div style={{ display: "flex", alignItems: "center", gap: 14, ...style }}><Avatar id={`letter:${letter}`} size={60} /><div style={{ fontSize: 40, fontWeight: 600, letterSpacing: "-.025em", color: INK }}>{name}</div></div>
@@ -52,8 +52,8 @@ export const B = ({ t }) => (
             <div style={{ fontSize: 34, color: GREY }}>’90 Miata · next project</div></div>
         </div>
       </Abs>
-      {t >= 2.9 ? <Abs x={90} y={820} style={pop(t, 2.92, { rise: 20 })}>
-        <Bubble who="Nora" av={NORA} avBg="#E2E4E8" w={900} size={44} text={<span>{typed(Q, t, 3.0, 3.85)}<Caret t={t} on={t < 4.6} h={46} /></span>} />
+      {t >= 2.9 ? <Abs x={90} y={860} style={pop(t, 2.92, { rise: 20 })}>
+        <Bubble who="Nora" av={NORA} avBg="#E2E4E8" w={900} size={52} text={<span>{typed(Q, t, 3.0, 3.85)}<Caret t={t} on={t < 4.6} h={46} /></span>} />
       </Abs> : null}
     </Cam>
   </AbsoluteFill>
@@ -66,7 +66,7 @@ export const C = ({ t }) => {
   const gd = lin(t, 5.0, 5.2) * (1 - 0.6 * lin(t, 6.0, 6.3));
   const cr = [spring(t, 7.0, 210, 18), spring(t, 7.1, 210, 18)];
   const credit = (x, k) => (
-    <Abs x={x} y={1100} style={{ opacity: clamp(cr[k] * 1.5), transform: `translateY(${(1 - cr[k]) * 20}px)` }}>
+    <Abs x={x} y={1160} style={{ opacity: clamp(cr[k] * 1.5), transform: `translateY(${(1 - cr[k]) * 20}px)` }}>
       <div style={{ width: 440, borderRadius: 30, border: "4px dashed rgba(134,134,139,.7)", padding: "20px 24px", background: "rgba(255,255,255,.6)" }}>
         <div style={{ fontSize: 28, color: GREY, fontWeight: 500 }}>Who did the work</div>
         <div style={{ fontSize: 40, color: "#AEAEB2", fontWeight: 600, letterSpacing: "-.02em" }}>No credit</div>
@@ -74,7 +74,7 @@ export const C = ({ t }) => {
     </Abs>);
   return (
     <AbsoluteFill>
-      <Cam t={t} keys={[[4, 540, 905, 1.05], [4.4, 540, 905, 1], [6.0, 540, 905, 1], [6.6, 540, 1040, 1.06], [8, 540, 1050, 1.07]]}>
+      <ProductWindow><Cam t={t} keys={[[4, 540, 905, 1.05], [4.4, 540, 905, 1], [6.0, 540, 905, 1], [6.6, 540, 1080, 1.06], [8, 540, 1090, 1.07]]}>
         <Pair t={t} t0={4.0} off={off} under={<>
           {gd > 0 ? <svg width={1080} height={1920} style={{ position: "absolute", left: 0, top: 0 }}>
             {[TA.y, TA.y + TA.h].map((y, i) => <line key={i} x1={60} x2={1020} y1={y} y2={y} stroke={RED} strokeWidth={3} strokeDasharray="14 10" opacity={gd} />)}
@@ -82,7 +82,7 @@ export const C = ({ t }) => {
           {credit(TA.x, 0)}{credit(TB.x, 1)}
         </>} />
         <Tap t={t} t0={4.0} x={TA.x + TA.w / 2} y={TA.y + TA.h / 2} /><Tap t={t} t0={4.13} x={TB.x + TB.w / 2} y={TB.y + TB.h / 2} />
-      </Cam>
+      </Cam></ProductWindow>
       <TrimBurst t={t} t0={5.0} x={540} y={TA.y + TA.h / 2} inner={20} reach={46} count={8} weight={5} />
     </AbsoluteFill>
   );
@@ -204,13 +204,13 @@ export const I = ({ t }) => {
     <AbsoluteFill>
       <Cam t={t} keys={[[24, 540, 905, 1.05], [24.4, 540, 905, 1], [25.9, 540, 905, 1], [26.35, 540, 840, 0.94], [28, 540, 840, 0.94], [28.6, 540, 905, 1]]}>
         <Pair t={t} t0={24.0} under={
-          <Abs x={TB.x} y={TB.y + TB.h + 110} style={{ opacity: clamp(rec * 1.5), transformOrigin: "50% 0", transform: `translateY(${(1 - rec) * -120}px) scale(${0.6 + 0.4 * rec})` }}>
+          <Abs x={TB.x} y={TB.y + TB.h + 100} style={{ opacity: clamp(rec * 1.5), transformOrigin: "50% 0", transform: `translateY(${(1 - rec) * -120}px) scale(${0.6 + 0.4 * rec})` }}>
             <div style={{ width: 440, background: "#fff", borderRadius: 30, padding: "22px 26px", boxShadow: "0 0 0 1px rgba(0,0,0,.05), 0 18px 22px -16px rgba(0,0,0,.2)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 28, color: GREY, fontWeight: 500 }}><Icon n="doc" size={30} color={GREY} />Public build record</div>
               {[["Garage", "Shop B"], ["Contributor", "Eli"], ["Mar 14", "Engine install"]].map(([k, v], i) => <div key={i} style={{ fontSize: 34, color: INK, marginTop: 8, letterSpacing: "-.02em" }}><span style={{ color: GREY }}>{k} · </span><b style={{ fontWeight: 600 }}>{v}</b></div>)}
             </div>
           </Abs>} />
-        <Abs x={TA.x} y={TA.y + TA.h + 110} style={{ opacity: clamp(rec * 1.5) }}><Label style={{ width: 440, whiteSpace: "normal", fontSize: 32 }}>Finished photos only</Label></Abs>
+        <Abs x={TA.x} y={TA.y + TA.h + 100} style={{ opacity: clamp(rec * 1.5) }}><Label style={{ width: 440, whiteSpace: "normal", fontSize: 32 }}>Finished photos only</Label></Abs>
       </Cam>
       {cta ? <Abs x={0} y={440} w={1080} style={{ display: "flex", justifyContent: "center", ...pop(t, 26.0, { rise: 20, s0: 0.85 }), opacity: pop(t, 26.0).opacity * (1 - lin(t, 28.0, 28.3)) }}>
         <Chip red style={{ height: 84, fontSize: 40, padding: "0 46px", transform: `scale(${1 - 0.06 * Math.sin(Math.PI * clamp((t - 26.12) / 0.2))})` }}>{t < 26.3 ? "Follow" : <><Icon n="heart" size={34} color="#fff" sw={2.2} /> Following</>}</Chip>

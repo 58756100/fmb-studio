@@ -99,13 +99,13 @@ export const Bubble = ({ who, av, avBg, text, w = 760, size = 40, meta, attach, 
   </div>
 );
 // comment row (social post comments), native px
-export const Comment = ({ who, av, avBg, children, meta = "2h", w = 860, hl = 0, style = {} }) => (
+export const Comment = ({ who, av, avBg, children, meta = "2h", w = 900, hl = 0, style = {} }) => (
   <div style={{ display: "flex", gap: 20, width: w, padding: "20px 26px", borderRadius: 30, background: hl ? `rgba(244,48,52,${0.08 * hl})` : "#fff",
     boxShadow: "0 0 0 1px rgba(0,0,0,.045), 0 12px 22px -14px rgba(0,0,0,.14)", ...style }}>
-    <Avatar id={av} size={76} bg={avBg} />
+    <Avatar id={av} size={84} bg={avBg} />
     <div style={{ flex: 1, minWidth: 0 }}>
-      <div style={{ fontSize: 27, color: GREY, letterSpacing: "-.01em" }}><b style={{ color: INK, fontWeight: 600 }}>{who}</b> · {meta}</div>
-      <div style={{ fontSize: 42, lineHeight: 1.2, letterSpacing: "-.022em", marginTop: 4, color: "#000", whiteSpace: "nowrap" }}>{children}</div>
+      <div style={{ fontSize: 29, color: GREY, letterSpacing: "-.01em" }}><b style={{ color: INK, fontWeight: 600 }}>{who}</b> · {meta}</div>
+      <div style={{ fontSize: 48, lineHeight: 1.2, letterSpacing: "-.022em", marginTop: 4, color: "#000", whiteSpace: "nowrap" }}>{children}</div>
     </div>
   </div>
 );

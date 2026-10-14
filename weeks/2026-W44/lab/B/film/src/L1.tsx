@@ -132,7 +132,7 @@ export const C = ({ t }) => {
       <Cam t={t} keys={cam}>
         <Abs x={IL.x} y={IL.y}>
           <Tile id="part-06" w={IL.w} h={IL.h} r={44} fit={0.8}>
-            <div style={{ position: "absolute", left: 34, top: 30 }}><Label>Illustration · wheel off</Label></div>
+            <div style={{ position: "absolute", left: 300, top: 30 }}><Label>Illustration · wheel off</Label></div>
           </Tile>
           {/* everything but the focused part dims */}
           {focus ? <div style={{ position: "absolute", inset: 0, borderRadius: 44, background: `rgba(245,245,247,${0.62 * dim})`,
