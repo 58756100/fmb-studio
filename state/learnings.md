@@ -1,7 +1,7 @@
 # Learnings (state/learnings.md)
 
 ## Live FMB features (safe to show)
-- Build pages, parts registry with brand, public URL, log entries, photos
+- Build pages, parts registry with brand, public URL, log entries, photos, garage and contributor attribution (W42 brief)
 - Sign-ups open at fuelmybuild.com (Wayne, 2026-10-14)
 - Ownership transfer: not live; hint only ("the record stays with the car"), at most once, never shown as a flow (Wayne, 2026-10-14)
 
