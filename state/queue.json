@@ -241,14 +241,16 @@
     "time_et": "15:00",
     "platform": "instagram",
     "placement": "feed",
-    "status": "failed",
+    "status": "posted",
     "render": "renders:2026-W42/C1-A.mp4",
     "week": "2026-W42",
     "caption": "$68,000 on the line, and the receipt for the turbo was blank. Marcus had one move left.\n\n#supra #mk4supra #carbuild #jdm #carcollector",
     "pinned_comment": "What's in your shoebox: receipts you could actually read today, or coffee rings?",
     "approved_at": "2026-10-13T09:46:53Z",
     "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
-    "note": "ig-prepare --trial failed 2026-10-14 14:47 ET: 400 code 10 subcode 2207081 \"Trial reel not enough followers: The Instagram account does not meet the trial reel follower requirement to create trial reels.\" Not posted. Slot missed; placement changed to normal reel on Wayne's instruction 2026-10-14."
+    "note": "Posted late as a normal reel on Wayne's live instruction (trial reel failed: follower requirement)",
+    "media_id": "18110540888179651",
+    "posted_at": "2026-10-14T20:48:14Z"
   },
   {
     "concept": "C1",
