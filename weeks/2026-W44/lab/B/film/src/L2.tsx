@@ -178,20 +178,19 @@ export const H = ({ t }) => {
   const sheet = spring(t, 20.0, 170, 20);
   const settle = spring(t, 22.0, 170, 20); // 22: attribution + log in one readable view
   const attrY = mix(mix(1100, 520, ls), mix(520, 470, settle), t >= 22 ? 1 : 0);
-  const logY = mix(1500, mix(470 + 430, 470 + 300, settle), sheet);
+  const logY = mix(1500, mix(800, 760, settle), sheet);
   return (
     <AbsoluteFill>
       <ProductWindow><Cam t={t} keys={[[17, 540, 905, 1.06], [17.6, 540, 905, 1], [24, 540, 915, 1.02]]}>
         <Abs x={PX} y={PY} style={{ opacity: 1 - 0.75 * lift, transform: `scale(${1 - 0.05 * lift})`, transformOrigin: "50% 40%" }}><Phone w={PW}><Page /></Phone></Abs>
         {t >= 18 ? <Abs x={100} y={attrY} style={{ opacity: clamp((t - 18) / 0.12), transformOrigin: "50% 0", transform: `scale(${mix(0.6, 1, ls) * (t >= 20 ? mix(1, 0.9, sheet) : 1)})` }}>
           <AttribCard focus={fo} rows={[{ av: "letter:B", label: "Garage", value: "Shop B" }, { av: "mech", label: "Contributor", value: "Eli", right: "Engine install" }]} /></Abs> : null}
-        {t >= 20 ? <Abs x={100} y={logY}>
+        {t >= 20 ? <Abs x={100} y={logY} style={{ transformOrigin: "50% 0", transform: "scale(0.92)" }}>
           <LogCard date="March 14" title="Engine install" note={t >= 22 ? "By Eli at Shop B. Swap, wiring and first start." : "Swap, wiring and first start."} photos={PHOTOS} photoP={[0, 1, 2].map((k) => spring(t, 20.25 + k * 0.1, 200, 18))} />
         </Abs> : null}
       </Cam></ProductWindow>
-      {t >= 20.7 && t < 21.4 ? <Tap t={t} t0={21.0} x={540} y={1250} /> : null}
-      <Triptych t={t} t0={21.0} t1={22.0} photos={PHOTOS} from={{ x: 140, y: 1205, w: 255 }} />
-      <TrimBurst t={t} t0={23.0} x={540} y={700} inner={330} reach={46} count={12} weight={5} seed={5} />
+      {t >= 20.7 && t < 21.4 ? <Tap t={t} t0={21.0} x={540} y={1200} /> : null}
+      <Triptych t={t} t0={21.0} t1={22.0} photos={PHOTOS} from={{ x: 160, y: 1090, w: 235 }} />
     </AbsoluteFill>
   );
 };
@@ -215,7 +214,7 @@ export const I = ({ t }) => {
       {cta ? <Abs x={0} y={440} w={1080} style={{ display: "flex", justifyContent: "center", ...pop(t, 26.0, { rise: 20, s0: 0.85 }), opacity: pop(t, 26.0).opacity * (1 - lin(t, 28.0, 28.3)) }}>
         <Chip red style={{ height: 84, fontSize: 40, padding: "0 46px", transform: `scale(${1 - 0.06 * Math.sin(Math.PI * clamp((t - 26.12) / 0.2))})` }}>{t < 26.3 ? "Follow" : <><Icon n="heart" size={34} color="#fff" sw={2.2} /> Following</>}</Chip>
       </Abs> : null}
-      <TrimBurst t={t} t0={26.15} x={540} y={482} inner={70} reach={40} count={7} weight={5} rotation={90} spread={150} />
+      <TrimBurst t={t} t0={26.15} x={540} y={482} inner={170} reach={40} count={3} weight={5} rotation={0} spread={20} /><TrimBurst t={t} t0={26.15} x={540} y={482} inner={170} reach={40} count={3} weight={5} rotation={180} spread={20} seed={7} />
     </AbsoluteFill>
   );
 };

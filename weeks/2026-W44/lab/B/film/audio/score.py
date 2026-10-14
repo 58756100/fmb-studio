@@ -276,6 +276,24 @@ for it in range(4):
     sf.write(tmp, x.astype(np.float32), SR, subtype="FLOAT"); I, TP, LRA = lufs(tmp)
     if abs(I + 14) < 0.15 and TP <= -1.8: break
     x = x * 10 ** ((-14 - I) / 20); x = limit_tp(x, -2.0)
+# AAC-aware pass: the delivered master is AAC, which can ring above the wav's true peak on hard transients
+# (e.g. a hit on sample 0). Encode, decode, and dip the gain only around any region that overshoots -1.2 dBTP.
+for it in range(8):
+    sf.write(tmp, x.astype(np.float32), SR, subtype="FLOAT")
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", tmp, "-c:a", "aac", "-b:a", "256k", "-f", "adts", "-"], capture_output=True).stdout
+    dec = subprocess.run(["ffmpeg", "-v", "error", "-f", "aac", "-i", "-", "-f", "f32le", "-ac", "2", "-ar", str(SR), "-"], input=raw, capture_output=True).stdout
+    y = np.frombuffer(dec, np.float32).reshape(-1, 2)[:N]
+    up = np.abs(resample_poly(y, 4, 1, axis=0)).max(1).reshape(-1, 4).max(1)
+    over = up > 10 ** (-1.2 / 20)
+    if not over.any(): break
+    g = np.ones(len(x)); w = int(0.03 * SR)
+    for i in np.nonzero(over)[0][::max(1, w // 4)]:
+        need = min(1.0, (10 ** (-1.6 / 20) / up[max(0, i - w):i + w].max()) ** 1.5)
+        a0, a1 = max(0, i - 2 * w), min(len(x), i + 2 * w)
+        win = 1 - (1 - need) * np.sin(np.linspace(0, np.pi, a1 - a0)) ** 2
+        g[a0:a1] = np.minimum(g[a0:a1], win)
+    x = x * g[:, None]
+    print(ID, "aac pass", it, "dipped", int(over.sum()), "samples at", sorted(set(round(i / SR, 1) for i in np.nonzero(over)[0])))
 sf.write(base + "-master.wav", x.astype(np.float32), SR, subtype="PCM_24")
 os.remove(tmp)
 I, TP, LRA = lufs(base + "-master.wav")

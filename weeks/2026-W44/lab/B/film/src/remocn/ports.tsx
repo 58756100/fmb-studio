@@ -19,7 +19,7 @@ export const TrimBurst = ({ t, t0, x, y, count = 8, inner = 26, reach = 70, weig
   if (f < 0 || f > LIFE + LAG + STAGGER * count + 2) return null;
   const lines = [];
   for (let i = 0; i < count; i++) {
-    const a = ((rotation + (spread === 360 ? (i * 360) / count : -spread / 2 + (i * spread) / Math.max(1, count - 1)) + (hash(seed * 31 + i) - 0.5) * 0.5 * (360 / count)) * Math.PI) / 180;
+    const a = ((rotation + (spread === 360 ? (i * 360) / count : -spread / 2 + (i * spread) / Math.max(1, count - 1)) + (hash(seed * 31 + i) - 0.5) * 0.5 * (spread === 360 ? 360 / count : spread / count)) * Math.PI) / 180;
     const sc = 0.8 + 0.4 * hash(seed * 17 + i);
     const fi = f - (i % 3) * STAGGER;
     const pe = END_EASE(clamp(fi / LIFE)), ps = START_EASE(clamp((fi - LAG) / LIFE));

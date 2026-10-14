@@ -53,7 +53,7 @@ Code: `film/` (Remotion + remocn; `src/L1.tsx`, `L2.tsx`, `L3.tsx`, shared `lib.
 ## remocn per beat (new this reel vs the W42 reels, which used zoom-blur, whip-pan, push-through and focus-pull)
 - **lens-zoom** (new): L1 3.0 punch into the wheel, L2 10.0 pivot, L3 13.0 reset. Toned down for the house look (less rotation and shake, 5 lens steps).
 - **caret-wipe** (new): L3 21.0, red caret, no glow.
-- **trim-burst** (new): the brand-field focus, the CTA tap, the "Definitely" pop, the link tap and the record resolve.
+- **trim-burst** (new): only where it can't cross text: the L1 caliper loupe (4.0), the L2 alignment snap (5.0), and short sideways strokes off every CTA tap. In the review stills, bursts placed over cards crossed copy, so those were removed.
 - **strikethrough-replace** (new): L3 7.0.
 - **slide-swap** (new): spring for the L1 6.0 gallery swipe and the L1 13.0 card slide.
 - **typing-indicator** (new): L3 replies.
@@ -68,4 +68,5 @@ Code: `film/` (Remotion + remocn; `src/L1.tsx`, `L2.tsx`, `L3.tsx`, shared `lib.
   - L3: 109.1 bpm, D minor, pizzicato plucks. Cuts at 16.0, returns at 27.0.
 - Each cut is a 0.12 s tape stop ending exactly on the second, followed by dead silence.
 - The music ducks 7 dB under every VO window (80 ms attack before the window, 200 ms release after).
-- Masters: -14 LUFS integrated, true peak ≤ -1 dBTP. Beds: the same mix at mix-reference level for Wayne's VO.
+- Masters: -14 LUFS integrated, true peak ≤ -1 dBTP measured on the delivered AAC (not just the wav). The master is gain-matched, true-peak limited at -2.0 dBTP, then encoded and decoded. Any spot where the AAC rings above -1.2 dBTP gets a short local gain dip. This applied to three transients: L1 20.0 (sheet-open) and L2 0.0 (the opening hit on sample 0) and 20.0. Each is a few dB lower for about 60 ms, with its onset unchanged.
+- Beds: the same mix at mix-reference level for Wayne's VO (peaks at -3 dBFS, not loudness-normalised).

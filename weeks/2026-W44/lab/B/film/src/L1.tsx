@@ -255,8 +255,7 @@ export const F = ({ t }) => {
             {t < 27.3 ? "Follow" : <><Icon n="heart" size={34} color="#fff" sw={2.2} /> Following</>}
           </Chip>
         </Abs>) : null}
-      <TrimBurst t={t} t0={27.15} x={540} y={482} inner={70} reach={40} count={7} weight={5} rotation={90} spread={150} />
-      <TrimBurst t={t} t0={19.0} x={540} y={760} inner={300} reach={50} count={12} weight={5} seed={3} />
+      <TrimBurst t={t} t0={27.15} x={540} y={482} inner={170} reach={40} count={3} weight={5} rotation={0} spread={20} /><TrimBurst t={t} t0={27.15} x={540} y={482} inner={170} reach={40} count={3} weight={5} rotation={180} spread={20} seed={7} />
     </AbsoluteFill>
   );
 };

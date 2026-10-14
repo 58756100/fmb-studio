@@ -80,7 +80,6 @@ export const B = ({ t }) => {
           {tr > 0 ? <Abs x={800} y={CY[1] + 160} style={pop(t, 10.25, { rise: 12 })}><Chip style={{ height: 60, fontSize: 30 }}>Copied</Chip></Abs> : null}
         </div>
       </Cam>
-      <TrimBurst t={t} t0={7.0} x={420} y={CY[2] + 100} inner={140} reach={46} count={10} weight={5} seed={2} />
     </AbsoluteFill>
   );
 };
@@ -120,7 +119,6 @@ export const D = ({ t }) => {
         </Abs> : null}
         <Tap t={t} t0={15.0} x={360} y={1150} />
       </Cam>
-      <TrimBurst t={t} t0={14.0} x={130} y={1150} inner={40} reach={36} count={8} weight={4} seed={9} />
     </AbsoluteFill>
   );
 };
@@ -156,7 +154,6 @@ export const F = ({ t }) => {
           <RowCard img="part-01" name="Turbo kit" brand="Demo Brand A" date="March 14" brandFocus={bf} brandReveal={rev} />
         </Abs> : null}
       </Cam></ProductWindow>
-      <TrimBurst t={t} t0={20.0} x={330} y={980} inner={150} reach={44} count={10} weight={5} seed={4} />
     </AbsoluteFill>
   );
 };
@@ -218,7 +215,7 @@ export const H = ({ t }) => {
       {cta ? <Abs x={0} y={440} w={1080} style={{ display: "flex", justifyContent: "center", ...pop(t, 28.0, { rise: 20, s0: 0.85 }) }}>
         <Chip red style={{ height: 84, fontSize: 40, padding: "0 46px", transform: `scale(${1 - 0.06 * Math.sin(Math.PI * clamp((t - 28.12) / 0.2))})` }}>{t < 28.3 ? "Follow" : <><Icon n="heart" size={34} color="#fff" sw={2.2} /> Following</>}</Chip>
       </Abs> : null}
-      <TrimBurst t={t} t0={28.15} x={540} y={482} inner={70} reach={40} count={7} weight={5} rotation={90} spread={150} />
+      <TrimBurst t={t} t0={28.15} x={540} y={482} inner={170} reach={40} count={3} weight={5} rotation={0} spread={20} /><TrimBurst t={t} t0={28.15} x={540} y={482} inner={170} reach={40} count={3} weight={5} rotation={180} spread={20} seed={7} />
     </AbsoluteFill>
   );
 };
