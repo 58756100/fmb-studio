@@ -7,6 +7,11 @@ description: This skill should be used when building, storyboarding, animating o
 
 Every FMB video is built in Remotion with remocn components. Start from the studio kit (`kit/remotion`), which already contains the iOS 26 UI kit, the cutout library and remocn transitions.
 
+## Always alive (Wayne, 2026-10-14)
+- Every text line animates in and out: per-word or per-character reveals on the VO, kinetic pops on emphasis words, real exits. Drawn lines draw on.
+- No frame reads as a still for more than about 0.5 s: during holds, keep drift, parallax, sway or light sweeps going.
+- Before the final render, measure frame-difference energy per 0.5 s window and fix any static window.
+
 ## Before choosing any motion
 1. Read `references/house-style.md`, then `references/remocn-design-defaults.md` and `references/remocn-anti-patterns.md`.
 2. For each beat in the script, search `references/remocn-catalog.md` for 1–2 candidates. Check the use-when and avoid-when lines and the vibe (prefer clean or premium). Install with `npx shadcn add @remocn/<name>` when the network allows; otherwise copy the source from `github.com/Remocn/remocn` (`registry/remocn/<name>/index.tsx`, MIT).
