@@ -108,8 +108,8 @@ export const Headline = ({ t, cues, pal, top = 254, size = 96, min = 80, lh = 0.
   if (idx < 0) return null;
   const cur = cues[idx], prev = idx > 0 ? cues[idx - 1] : null;
   const L = cur[1].split("\n"), P = prev ? prev[1].split("\n") : [];
-  const fsC = cur[2]?.size || fit(L, HL, size, min, SAFE.w - 4, 0.005);
-  const fsP = prev ? prev[2]?.size || fit(P, HL, size, min, SAFE.w - 4, 0.005) : fsC;
+  const fsC = fit(L, HL, cur[2]?.size || size, min, SAFE.w - 4, 0.005);
+  const fsP = prev ? fit(P, HL, prev[2]?.size || size, min, SAFE.w - 4, 0.005) : fsC;
   const col = (c) => c[2]?.color || color || pal.tx;
   const same = (i) => P[i] === L[i] && fsP === fsC && col(prev) === col(cur);
   const lineStyle = { display: "block", whiteSpace: "nowrap", height: Math.round(fsC * lh) };
@@ -172,7 +172,7 @@ const Checker = ({ t }) => {
       while ((n = w.nextNode())) {
         if (!n.textContent.trim()) continue;
         const el = n.parentElement; if (el.closest("[data-check]")) continue;
-        if (op(el) < 0.5) continue;
+        if (op(el) < 0.5 || getComputedStyle(el).visibility === "hidden") continue;
         const sc = el.getBoundingClientRect().width / (el.offsetWidth || 1);
         const px = parseFloat(getComputedStyle(el).fontSize) * (isFinite(sc) && sc > 0 ? sc : 1);
         const r = document.createRange(); r.selectNodeContents(n);
