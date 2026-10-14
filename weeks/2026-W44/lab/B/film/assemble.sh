@@ -30,4 +30,4 @@ echo "== $ID"
 ffprobe -v error -select_streams v:0 -count_frames -show_entries stream=codec_name,width,height,r_frame_rate,nb_read_frames -of csv=p=0 $F/$ID-A.mp4
 ffprobe -v error -select_streams a:0 -show_entries stream=codec_name,sample_rate,channels -of csv=p=0 $F/$ID-A.mp4
 ffprobe -v error -show_entries format=duration -of csv=p=0 $F/$ID-A.mp4
-ffmpeg -hide_banner -nostats -i $F/$ID-A.mp4 -af ebur128=peak=true -f null - 2>&1 | grep -A12 "Summary" | grep -E "I:|LRA:|Peak:"
+ffmpeg -hide_banner -nostats -i $F/$ID-A.mp4 -af ebur128=peak=true -f null - 2>&1 | grep -A20 "Summary" | grep -E "I:|LRA:|Peak:"

@@ -270,12 +270,12 @@ pk = np.abs(bed).max(); bed_out = bed * (10 ** (-3 / 20) / pk) if pk > 10 ** (-3
 sf.write(base + "-bed.wav", bed_out.astype(np.float32), SR, subtype="PCM_24")
 sf.write(base + "-music.wav", (music_d * 0.7).astype(np.float32), SR, subtype="PCM_24")
 sf.write(base + "-sfx.wav", (sfx * 0.7).astype(np.float32), SR, subtype="PCM_24")
-# master: static gain to -14 LUFS integrated, true-peak limit at -1.5 dBTP, iterate once
+# master: static gain to -14 LUFS integrated, true-peak limit at -2.0 dBTP (AAC margin), iterate once
 tmp = base + "-tmp.wav"; x = bed.copy()
 for it in range(4):
     sf.write(tmp, x.astype(np.float32), SR, subtype="FLOAT"); I, TP, LRA = lufs(tmp)
-    if abs(I + 14) < 0.15 and TP <= -1.0: break
-    x = x * 10 ** ((-14 - I) / 20); x = limit_tp(x, -1.5)
+    if abs(I + 14) < 0.15 and TP <= -1.8: break
+    x = x * 10 ** ((-14 - I) / 20); x = limit_tp(x, -2.0)
 sf.write(base + "-master.wav", x.astype(np.float32), SR, subtype="PCM_24")
 os.remove(tmp)
 I, TP, LRA = lufs(base + "-master.wav")
