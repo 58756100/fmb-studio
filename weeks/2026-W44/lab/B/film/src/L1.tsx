@@ -126,7 +126,7 @@ export const C = ({ t }) => {
   const focus = t >= 10 ? (t < 11 ? CAL : t < 12 ? BRK : { x: LINE0[0] - 70, y: 60, w: 260, h: 230 }) : null;
   const dim = lin(t, 10.0, 10.25);
   const lp = eo(lin(t, 12.0, 12.6));
-  const path = `M ${LINE0[0]} ${LINE0[1]} C 780 120, 860 80, 900 40 S 980 -10, 1040 -40`;
+  const path = `M ${LINE0[0]} ${LINE0[1]} C 790 150, 860 125, 910 105 S 990 75, 1060 62`;
   return (
     <AbsoluteFill>
       <Cam t={t} keys={cam}>
@@ -138,15 +138,14 @@ export const C = ({ t }) => {
           {focus ? <div style={{ position: "absolute", inset: 0, borderRadius: 44, background: `rgba(245,245,247,${0.62 * dim})`,
             WebkitMaskImage: `radial-gradient(ellipse ${focus.w * 0.75}px ${focus.h * 0.75}px at ${focus.x + focus.w / 2}px ${focus.y + focus.h / 2}px, transparent 60%, #000 100%)` }} /> : null}
           <svg width={IL.w} height={IL.h} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-            <path d={path} fill="none" stroke="#2C2C2E" strokeWidth={14} strokeLinecap="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - lp} />
-            <path d={path} fill="none" stroke="#8E8E93" strokeWidth={5} strokeLinecap="round" pathLength={1} strokeDasharray="0.012 0.012" strokeDashoffset={1 - lp} opacity={lp > 0 ? 0.9 : 0} />
+            {lp > 0.001 ? <path d={path} fill="none" stroke="#2C2C2E" strokeWidth={14} strokeLinecap="round" pathLength={1} strokeDasharray={`${lp} 2`} /> : null}
           </svg>
           <Ring t={t} t0={10.0} t1={11.0} {...CAL} r={60} />
           <Ring t={t} t0={11.0} t1={12.0} {...BRK} r={40} />
           <Ring t={t} t0={12.0} x={LINE0[0] - 40} y={LINE0[1] - 40} w={80} h={80} r={40} />
           <Abs x={CAL.x - 300} y={CAL.y + 40} style={{ ...pop(t, 10.04, { rise: 16 }), opacity: (t < 11 ? 1 : 0) * pop(t, 10.04).opacity }}><Chip>Caliper</Chip></Abs>
           <Abs x={BRK.x - 310} y={BRK.y + 30} style={{ ...pop(t, 11.04, { rise: 16 }), opacity: (t >= 11 && t < 12 ? 1 : 0) }}><Chip>Bracket</Chip></Abs>
-          <Abs x={LINE0[0] - 360} y={LINE0[1] - 150} style={{ ...pop(t, 12.1, { rise: 16 }), opacity: t >= 12 ? 1 : 0 }}><Chip>Brake line</Chip></Abs>
+          <Abs x={LINE0[0] - 360} y={LINE0[1] - 120} style={{ ...pop(t, 12.1, { rise: 16 }), opacity: t >= 12 ? 1 : 0 }}><Chip>Brake line</Chip></Abs>
         </Abs>
       </Cam>
     </AbsoluteFill>
