@@ -112,7 +112,7 @@ export const flapState = (t, from, to, start, seed, stall = false) => {
   const durOf = k => stall ? lerp(0.05, 0.2, Math.pow(k / flips, 1.6)) : 0.06;
   if (t < start) return { cur: from, next: from, p: null };
   let tt = start, k = 0; while (k < flips && tt + durOf(k) <= t) { tt += durOf(k); k++; }
-  if (k >= flips) return { cur: to, next: to, p: null };
+  if (k >= flips) return { cur: to, next: to, p: null, since: t - tt };
   const g = j => j <= 0 ? from : j >= flips ? to : GLYPHS[Math.floor(hash(`${seed}-${j}`) * GLYPHS.length)];
   return { cur: g(k), next: g(k + 1), p: (t - tt) / durOf(k) };
 };
@@ -120,22 +120,30 @@ const Leaf = ({ ch, bg, fg, fs, clip, tf, br = 1, r }) => (
   <span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: bg, color: fg, borderRadius: r, clipPath: clip, transform: tf, transformOrigin: "50% 50%", filter: br < 1 ? `brightness(${br})` : undefined }}>
     <span style={{ fontSize: fs, fontWeight: 700, lineHeight: 1 }}>{ch}</span></span>
 );
-export const FlapTile = ({ st, w, h, bg = "#141415", fg = "#FFFFFF" }) => {
+export const FlapTile = ({ st, w, h, bg = "#141415", fg = "#FFFFFF", twitch = 0 }) => {
   const fs = h * 0.64, r = h * 0.07, P = `perspective(${h * 4}px)`; const { cur, next, p } = st;
+  // landing: the top leaf slaps down and bounces a few degrees (real split-flap behaviour); twitch: a leaf half-lifts and drops back
+  const since = st.since == null ? 9 : st.since;
+  const land = since < 0.2 ? -16 * Math.exp(-since * 26) * Math.abs(Math.sin(since * 48)) : 0;
+  const lift = land + twitch;
   return <span style={{ position: "relative", display: "inline-block", width: w, height: h, flex: "none" }}>
-    {p === null ? <Leaf ch={cur} bg={bg} fg={fg} fs={fs} r={r} /> : <>
-      <Leaf ch={next} bg={bg} fg={fg} fs={fs} r={r} clip="inset(0 0 50% 0)" />
+    {p === null ? (lift !== 0 ? <>
       <Leaf ch={cur} bg={bg} fg={fg} fs={fs} r={r} clip="inset(50% 0 0 0)" />
+      <Leaf ch={cur} bg={bg} fg={fg} fs={fs} r={r} clip="inset(0 0 50% 0)" tf={`${P} rotateX(${lift}deg)`} br={1 + lift / 60} />
+    </> : <Leaf ch={cur} bg={bg} fg={fg} fs={fs} r={r} />) : <>
+      <Leaf ch={next} bg={bg} fg={fg} fs={fs} r={r} clip="inset(0 0 50% 0)" br={0.55 + 0.45 * p} />
+      <Leaf ch={cur} bg={bg} fg={fg} fs={fs} r={r} clip="inset(50% 0 0 0)" br={1 - 0.45 * clamp((p - 0.5) * 2)} />
       {p < .5 ? <Leaf ch={cur} bg={bg} fg={fg} fs={fs} r={r} clip="inset(0 0 50% 0)" tf={`${P} rotateX(${-180 * p}deg)`} br={1 - .7 * p} />
         : <Leaf ch={next} bg={bg} fg={fg} fs={fs} r={r} clip="inset(50% 0 0 0)" tf={`${P} rotateX(${180 * (1 - p)}deg)`} br={.65 + .7 * (p - .5)} />}
     </>}
     <span style={{ position: "absolute", left: 0, right: 0, top: "50%", height: 2, transform: "translateY(-50%)", background: "rgba(0,0,0,.65)" }} />
+    <span style={{ position: "absolute", left: 0, right: 0, top: 0, height: "50%", borderRadius: `${r}px ${r}px 0 0`, background: "linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0))", pointerEvents: "none" }} />
   </span>;
 };
 // A board: rows of `cols` flaps. states: [{row, at, text, tone?, stall?}] (sorted per row by `at`).
-export const FlapBoard = ({ t, states, rows = 4, cols = 14, fw = 60, fh = 86, gap = 4, rgap = 8, pad = 18, initial = [] }) => {
+export const FlapBoard = ({ t, states, rows = 4, cols = 14, fw = 60, fh = 86, gap = 4, rgap = 8, pad = 18, initial = [], twitch = () => 0, children = null }) => {
   const tone = { grey: { bg: "#3A3A3C", fg: "#AEAEB2" }, ink: { bg: "#232325", fg: "#FFFFFF" } };
-  return <div style={{ display: "inline-flex", flexDirection: "column", gap: rgap, padding: pad, background: "#0A0A0A", borderRadius: 22, boxShadow: "0 1px 0 rgba(255,255,255,.08) inset, 0 18px 40px -22px rgba(0,0,0,.55)" }}>
+  return <div style={{ position: "relative", display: "inline-flex", flexDirection: "column", gap: rgap, padding: pad, background: "#0A0A0A", borderRadius: 22, overflow: "hidden", boxShadow: "0 1px 0 rgba(255,255,255,.08) inset, 0 18px 40px -22px rgba(0,0,0,.55)" }}>{children}
     {Array.from({ length: rows }, (_, r) => {
       const rs = states.filter(s => s.row === r).sort((a, b) => a.at - b.at);
       let i = -1; rs.forEach((s, k) => { if (s.at <= t) i = k; });
@@ -148,44 +156,73 @@ export const FlapBoard = ({ t, states, rows = 4, cols = 14, fw = 60, fh = 86, ga
         const stallCol = cur.stall && c >= (cur.text || "").length + 2;
         if (i >= 0 && (from !== to || (force && to) || stallCol)) st = flapState(t, from, stallCol ? "" : to, cur.at + c * 0.02, `${r}-${i}-${c}`, stallCol);
         const tn = st.p === null && !to ? tone.ink : (tone[cur.tone] || tone.ink);
-        return <FlapTile key={c} st={st} w={fw} h={fh} bg={tn.bg} fg={tn.fg} />;
+        return <FlapTile key={c} st={st} w={fw} h={fh} bg={tn.bg} fg={tn.fg} twitch={st.p === null ? twitch(r, c) : 0} />;
       })}</div>;
     })}
   </div>;
 };
 
 // ============================================================ captions (three styles over one plate)
-// Shared: the current VO line (from the timeline JSON) on a white glass plate in the subtitle band, speaker tag
-// in grey. The word-level animation is the remocn caption piece named per reel.
+// Shared: the current VO line (from the timeline JSON) on a white plate in the subtitle band, speaker tag in grey.
+// Word animation per reel: caption-rise (COL), caption-dim-progress (GAR), caption-underline (SUP).
+// Phase 2 adds, on every style: the plate springs in, emphasis words pop on their spoken time (caption-active-pop:
+// accent colour + scale; caption-weight: the word swells heavier), and the line leaves word by word (blur-out-up).
 export const curLine = (t, vo, clipEnd = 26.6) => {
-  for (let k = 0; k < vo.length; k++) { const L = vo[k], nx = vo[k + 1]; const end = Math.min(L.b + 0.2, nx ? nx.a - 0.12 : 99, clipEnd); if (t >= L.a - 0.1 && t < end) return { L, end }; }
+  for (let k = 0; k < vo.length; k++) { const L = vo[k], nx = vo[k + 1]; const end = Math.min(L.b + 0.2, nx ? nx.a - 0.12 : 99, clipEnd); if (t >= L.a - 0.12 && t < end) return { L, end }; }
   return null;
 };
+const cw = w => w.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
+const RED_ = "#F43034";
+const spr_ = (x, k = 260, d = 17) => { if (x <= 0) return 0; const w0 = Math.sqrt(k), z = d / (2 * w0), wd = w0 * Math.sqrt(1 - z * z); return 1 - Math.exp(-z * w0 * x) * (Math.cos(wd * x) + (z * w0 / wd) * Math.sin(wd * x)); };
+const bump_ = (x, amp) => x <= 0 ? 0 : amp * 1.25 * Math.exp(-x * 6.5) * Math.sin(x * 17);
+const mixc = (p) => `rgb(${Math.round(lerp(29, 244, p))},${Math.round(lerp(29, 48, p))},${Math.round(lerp(31, 52, p))})`;
 export const Captions = ({ t, vo, style = "rise", narrator = "Narrator", clipEnd = 26.6, top = CAP_TOP }) => {
   const c = curLine(t, vo, clipEnd); if (!c) return null; const { L, end } = c;
-  const pin = eo(seg(t, L.a - 0.1, L.a + 0.06)), pout = 1 - seg(t, end - 0.14, end);
+  const ps = spr_(t - (L.a - 0.12), 300, 20), pin = clamp((t - (L.a - 0.12)) / 0.12);
+  const exitAt = end - 0.3; const n = L.words.length;
+  const plateOut = eio(clamp((t - (end - 0.2)) / 0.2));
   const tag = L.speaker !== narrator ? L.speaker : null;
+  const emw = new Set((L.emphasis || []).flatMap(e => e.split(" ").map(cw)));
+  const exitOf = i => eio(clamp((t - (exitAt + i * Math.min(0.03, 0.18 / n))) / 0.2));
   const word = (w, i) => {
-    const sp = t - w.a;
-    if (style === "rise") { const p = eo(clamp(sp / 0.22)); return <span key={i} style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom", marginRight: ".26em" }}><span style={{ display: "inline-block", transform: `translateY(${(1 - p) * 105}%)` }}>{w.w}</span></span>; }
-    if (style === "dim") { const p = clamp(sp / 0.12); return <span key={i} style={{ opacity: lerp(0.32, 1, p), marginRight: ".26em", display: "inline-block" }}>{w.w}</span>; }
-    // underline: a bar travels under the word being spoken
-    return <span key={i} style={{ display: "inline-block", marginRight: ".26em", position: "relative" }}>{w.w}</span>;
+    const sp = t - w.a; const q = exitOf(i); const em = emw.has(cw(w.w));
+    const ex = { opacity: 1 - q, filter: q > 0.02 ? `blur(${q * 7}px)` : undefined };
+    const ey = -q * 18;
+    const emP = em ? clamp(sp / 0.1) : 0; const pop = em ? bump_(sp, 0.17) : 0;
+    const col = em ? mixc(emP) : INK;
+    const box = (inner, extra = {}) => <span key={i} style={{ display: "inline-grid", marginRight: ".26em", verticalAlign: "bottom", position: "relative", ...extra }}>
+      <span style={{ gridArea: "1/1", visibility: "hidden", fontWeight: em ? 760 : 600 }}>{w.w}</span>{inner}</span>;
+    if (style === "rise") {
+      const p = spr_(sp, 320, 21);
+      return box(<span style={{ gridArea: "1/1", overflow: "hidden", display: "inline-block", paddingBottom: 4 }}><span style={{ display: "inline-block", color: col, fontWeight: em ? lerp(600, 760, emP) : 600, transform: `translateY(${(1 - Math.min(p, 1.06)) * 105 + ey}%) scale(${1 + pop})`, transformOrigin: "50% 80%", ...ex }}>{w.w}</span></span>);
+    }
+    if (style === "dim") {
+      const p = clamp(sp / 0.12);
+      // caption-weight: the spoken word swells heavy, then relaxes (emphasis words stay heavy and turn red)
+      const sw = clamp(sp / 0.1) * (1 - clamp((sp - (w.b - w.a) - 0.05) / 0.2));
+      const wt = em ? lerp(600, 780, emP) : lerp(600, 690, sw);
+      return box(<span style={{ gridArea: "1/1", display: "inline-block", color: col, opacity: lerp(0.3, 1, p) * (1 - q), fontWeight: wt, transform: `translateY(${ey}px) scale(${1 + pop})`, transformOrigin: "50% 80%", filter: ex.filter }}>{w.w}</span>);
+    }
+    // underline: text stays, emphasis gets inline-highlight (ink -> red) + pop
+    return box(<span style={{ gridArea: "1/1", display: "inline-block", color: col, fontWeight: em ? lerp(600, 740, emP) : 600, transform: `translateY(${ey}px) scale(${1 + pop})`, transformOrigin: "50% 80%", opacity: (sp > -0.05 ? 1 : 0.34) * (1 - q), filter: ex.filter }}>{w.w}</span>);
   };
-  // caption-underline bar position (measured by character counts; Inter is close to proportional enough at 48 px)
   let bar = null;
   if (style === "underline") {
     const ws = L.words; let k = ws.findIndex(w => t < w.b + 0.08); if (k < 0) k = ws.length - 1;
-    const wa = ws[Math.max(0, k - 1)], wb = ws[k]; const mv = eio(clamp((t - wb.a + 0.08) / 0.16));
-    bar = { k, prev: Math.max(0, k - 1), mv, on: t >= ws[0].a - 0.05 };
+    const wb = ws[k]; const mv = eio(clamp((t - wb.a + 0.08) / 0.16));
+    bar = { k, prev: Math.max(0, k - 1), mv, on: t >= ws[0].a - 0.05, out: exitOf(n) };
   }
-  return <div style={{ position: "absolute", left: 70, right: 70, top, zIndex: 90, display: "flex", justifyContent: "center", opacity: Math.min(pin, pout), transform: `translateY(${(1 - pin) * 8}px)` }}>
-    <div style={{ maxWidth: 940, padding: "16px 32px 18px", borderRadius: 30, background: "rgba(255,255,255,.96)", boxShadow: "0 0 0 1px rgba(0,0,0,.06), 0 8px 24px -12px rgba(0,0,0,.2)", textAlign: "center", fontSize: 48, lineHeight: 1.2, fontWeight: 600, letterSpacing: "-.02em", color: INK, textWrap: "balance" }}>
-      {tag ? <span style={{ color: GREY, marginRight: 14 }}>{tag}</span> : null}
-      {L.words.map((w, i) => style === "underline" && bar && bar.on
-        ? <span key={i} style={{ display: "inline-block", marginRight: ".26em", position: "relative" }}>{w.w}
-          {(i === bar.k || i === bar.prev) ? <span style={{ position: "absolute", left: 0, right: 0, bottom: -4, height: 5, borderRadius: 3, background: INK, transformOrigin: i === bar.k ? "0 50%" : "100% 50%", transform: `scaleX(${i === bar.k ? bar.mv : (bar.k === bar.prev ? 1 : 1 - bar.mv)})` }} /> : null}</span>
-        : word(w, i))}
+  return <div style={{ position: "absolute", left: 70, right: 70, top, zIndex: 90, display: "flex", justifyContent: "center", opacity: pin * (1 - plateOut), transform: `translateY(${(1 - Math.min(ps, 1)) * 14}px) scale(${(0.94 + 0.06 * ps) * (1 - 0.04 * plateOut)})` }}>
+    <div style={{ maxWidth: 940, padding: "16px 32px 18px", borderRadius: 30, background: "rgba(255,255,255,.96)", boxShadow: "0 0 0 1px rgba(0,0,0,.06), 0 8px 24px -12px rgba(0,0,0,.2)", textAlign: "center", fontSize: 48, lineHeight: 1.2, fontWeight: 600, letterSpacing: "-.02em", color: INK, textWrap: "balance", willChange: "transform" }}>
+      {tag ? <span style={{ color: GREY, marginRight: 14, display: "inline-block", opacity: 1 - exitOf(0), transform: `translateX(${(1 - Math.min(1, spr_(t - L.a + 0.12, 300, 22))) * -16}px)` }}>{tag}</span> : null}
+      {L.words.map((w, i) => {
+        const el = word(w, i);
+        if (style === "underline" && bar && bar.on && (i === bar.k || i === bar.prev)) {
+          return <span key={i} style={{ display: "inline-block", position: "relative" }}>{el}
+            <span style={{ position: "absolute", left: 0, right: "0.26em", bottom: -4, height: 5, borderRadius: 3, background: emw.has(cw(w.w)) ? RED_ : INK, opacity: 1 - bar.out, transformOrigin: i === bar.k ? "0 50%" : "100% 50%", transform: `scaleX(${i === bar.k ? bar.mv : (bar.k === bar.prev ? 1 : 1 - bar.mv)})` }} /></span>;
+        }
+        return el;
+      })}
     </div>
   </div>;
 };

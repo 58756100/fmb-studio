@@ -483,16 +483,58 @@
    "note": "short metallic rattle (heat shield on stainless)"
   },
   {
+   "t": 0.682,
+   "frame": 20,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
    "t": 1.85,
    "frame": 56,
    "name": "air-drop",
    "note": "camera drops down the string"
   },
   {
+   "t": 1.95,
+   "frame": 58,
+   "name": "label-in",
+   "note": "'Car? Fitter? Date? Unknown.'"
+  },
+  {
+   "t": 2.369,
+   "frame": 71,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
    "t": 2.4,
    "frame": 72,
    "name": "outline-draw",
    "note": "grey car outline draws"
+  },
+  {
+   "t": 3.1,
+   "frame": 93,
+   "name": "pop-soft",
+   "note": "'?' pops in the outline"
+  },
+  {
+   "t": 3.85,
+   "frame": 116,
+   "name": "paper-flutter",
+   "note": "'Which car?' tag flies in"
+  },
+  {
+   "t": 4.05,
+   "frame": 122,
+   "name": "emph-pop",
+   "note": "'Unknown.' red"
+  },
+  {
+   "t": 4.057,
+   "frame": 122,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
   },
   {
    "t": 4.2,
@@ -513,16 +555,40 @@
    "note": "sag 40 px, light rattle"
   },
   {
+   "t": 5.745,
+   "frame": 172,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
    "t": 6.75,
    "frame": 202,
    "name": "pencil-write",
    "note": "'WRX \u00b7 day 2'"
   },
   {
+   "t": 6.75,
+   "frame": 202,
+   "name": "value-tick",
+   "note": "Day 1 -> 2"
+  },
+  {
    "t": 6.95,
    "frame": 208,
    "name": "slide-soft",
    "note": "WRX slides into the outline"
+  },
+  {
+   "t": 7.432,
+   "frame": 223,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 7.5,
+   "frame": 225,
+   "name": "paper-flutter",
+   "note": "'Who fitted it?' tag flies in"
   },
   {
    "t": 7.85,
@@ -543,10 +609,28 @@
    "note": "sag 60 px + tilt 4 deg"
   },
   {
+   "t": 9.12,
+   "frame": 274,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
    "t": 9.85,
    "frame": 296,
    "name": "pencil-write",
    "note": "'Some shop \u00b7 day 4'"
+  },
+  {
+   "t": 9.85,
+   "frame": 296,
+   "name": "value-tick",
+   "note": "Day 2 -> 4"
+  },
+  {
+   "t": 10.807,
+   "frame": 324,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
   },
   {
    "t": 11.05,
@@ -555,16 +639,52 @@
    "note": "last sag, string creak"
   },
   {
+   "t": 11.2,
+   "frame": 336,
+   "name": "label-in",
+   "note": "'Still rattling'"
+  },
+  {
+   "t": 11.33,
+   "frame": 340,
+   "name": "value-tick",
+   "note": "Day 4 -> 6"
+  },
+  {
    "t": 11.6,
    "frame": 348,
    "name": "exhaust-rattle",
    "note": "rattle repeats"
   },
   {
+   "t": 11.6,
+   "frame": 348,
+   "name": "emph-pop",
+   "note": "'rattling' red and shaking"
+  },
+  {
+   "t": 12.495,
+   "frame": 375,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
    "t": 12.9,
    "frame": 387,
    "name": "chip-drop-red",
    "note": "'Return?' chip"
+  },
+  {
+   "t": 13.37,
+   "frame": 401,
+   "name": "emph-pop",
+   "note": "'Return?' pops on 'return'"
+  },
+  {
+   "t": 14.182,
+   "frame": 425,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
   },
   {
    "t": 14.5,
@@ -591,10 +711,34 @@
    "note": "tag unfolds along its fold"
   },
   {
+   "t": 15.87,
+   "frame": 476,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
    "t": 15.95,
    "frame": 478,
    "name": "card-settle",
    "note": "glass card settles; music thins to one note"
+  },
+  {
+   "t": 16.1,
+   "frame": 483,
+   "name": "tick-soft-x3",
+   "note": "card title words"
+  },
+  {
+   "t": 17.21,
+   "frame": 516,
+   "name": "tick-soft",
+   "note": "date characters"
+  },
+  {
+   "t": 17.557,
+   "frame": 527,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
   },
   {
    "t": 18.3,
@@ -603,16 +747,226 @@
    "note": "'installed by Northline Auto' (on 'Northline')"
   },
   {
+   "t": 18.59,
+   "frame": 558,
+   "name": "emph-pop",
+   "note": "chip pops on 'Northline'"
+  },
+  {
+   "t": 18.7,
+   "frame": 561,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.733,
+   "frame": 562,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.767,
+   "frame": 563,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.8,
+   "frame": 564,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.833,
+   "frame": 565,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.867,
+   "frame": 566,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.9,
+   "frame": 567,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.933,
+   "frame": 568,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.967,
+   "frame": 569,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.0,
+   "frame": 570,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.033,
+   "frame": 571,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.067,
+   "frame": 572,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.1,
+   "frame": 573,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.133,
+   "frame": 574,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.167,
+   "frame": 575,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.2,
+   "frame": 576,
+   "name": "string-zip",
+   "note": "path-ride: cotton draws along its curve"
+  },
+  {
+   "t": 19.2,
+   "frame": 576,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.233,
+   "frame": 577,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.244,
+   "frame": 577,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 19.267,
+   "frame": 578,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.3,
+   "frame": 579,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.333,
+   "frame": 580,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.367,
+   "frame": 581,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.4,
+   "frame": 582,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.433,
+   "frame": 583,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.467,
+   "frame": 584,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.5,
+   "frame": 585,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.533,
+   "frame": 586,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.567,
+   "frame": 587,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.6,
+   "frame": 588,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
    "t": 19.65,
    "frame": 590,
    "name": "string-tie",
    "note": "small tag ties onto the rear hanger, swings once"
   },
   {
+   "t": 19.85,
+   "frame": 596,
+   "name": "knot",
+   "note": "the slack pulls taut"
+  },
+  {
+   "t": 20.0,
+   "frame": 600,
+   "name": "label-in",
+   "note": "'A place to start'"
+  },
+  {
    "t": 20.25,
    "frame": 608,
    "name": "pen-write",
    "note": "'Check first'"
+  },
+  {
+   "t": 20.932,
+   "frame": 628,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 20.97,
+   "frame": 629,
+   "name": "emph-pop",
+   "note": "'start' red"
   },
   {
    "t": 22.0,
@@ -633,6 +987,24 @@
    "note": "pipe lifts to level, music returns"
   },
   {
+   "t": 22.619,
+   "frame": 679,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 22.9,
+   "frame": 687,
+   "name": "value-tick",
+   "note": "Day 6 -> 1"
+  },
+  {
+   "t": 23.0,
+   "frame": 690,
+   "name": "tag-swing",
+   "note": "tag 1 swings home"
+  },
+  {
    "t": 23.8,
    "frame": 714,
    "name": "slide-soft",
@@ -645,12 +1017,132 @@
    "note": ""
   },
   {
+   "t": 24.307,
+   "frame": 729,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 24.95,
+   "frame": 748,
+   "name": "emph-pop",
+   "note": "'build' red"
+  },
+  {
+   "t": 25.57,
+   "frame": 767,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.612,
+   "frame": 768,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.653,
+   "frame": 770,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.695,
+   "frame": 771,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.737,
+   "frame": 772,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.778,
+   "frame": 773,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.82,
+   "frame": 775,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.862,
+   "frame": 776,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.903,
+   "frame": 777,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.945,
+   "frame": 778,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.987,
+   "frame": 780,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.994,
+   "frame": 780,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 26.028,
+   "frame": 781,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 26.07,
+   "frame": 782,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 26.112,
+   "frame": 783,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 26.153,
+   "frame": 785,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
    "t": 26.35,
    "frame": 790,
    "name": "cta-out",
    "note": ""
   }
  ],
+ "music": {
+  "bpm": 100,
+  "root": 48,
+  "mode": "minor",
+  "style": "investigate",
+  "thin": 16.0,
+  "cut": 16.0,
+  "ret": 22.6,
+  "T0": 22.6,
+  "room": "office",
+  "one_note": true
+ },
  "fps": 30,
  "duration": 27.0,
  "frames": 810,

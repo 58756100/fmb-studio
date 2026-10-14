@@ -40,8 +40,75 @@ def sfx(rows):
     return [{"t": t, "frame": round(t * FPS), "name": n, "note": note} for t, n, note in sorted(rows, key=lambda r: r[0])]
 
 
+
+# ---------------------------------------------------------------- phase 2 (always alive): extra action cues + music plan
+# Every new on-screen motion added in phase 2 gets its own sound, on the same time the scene code uses.
+def _col_ruler_ticks():
+    """Camera read-head crossing ruler ticks during the four glides (same keyframes and easings as COL.tsx)."""
+    X = lambda yr: 400 + (yr - 2016) * 250
+    expo = lambda p: 1 if p >= 1 else 1 - 2 ** (-10 * p)
+    eio = lambda p: 4 * p ** 3 if p < .5 else 1 - (-2 * p + 2) ** 3 / 2
+    segs = [(1.85, 4.7, X(2019), X(2019.45), eio), (5.0, 5.95, X(2019.45), X(2021) - 60, expo),
+            (8.0, 9.05, X(2021) - 60, X(2017) + 60, eio), (11.0, 11.9, X(2017) + 60, X(2019), expo)]
+    out = []
+    for a, b, x0, x1, ease in segs:
+        prev = x0
+        for i in range(1, 601):
+            tt = a + (b - a) * i / 600; x = x0 + (x1 - x0) * ease(i / 600)
+            for q in range(0, 33):
+                tx = X(2016 + q / 4)
+                if (prev - tx) * (x - tx) < 0:
+                    out.append((round(tt, 3), "ruler-tick-major" if q % 4 == 0 else "ruler-tick", "read-head passes a tick"))
+            prev = x
+    return out
+
+def _typing(at, n, cps, note):
+    return [(round(at + k / cps, 3), "key", note) for k in range(n)]
+
+EXTRA = {
+    "C3-COL": _col_ruler_ticks() + [
+        (1.1, "tick-ripple", "slap ripples through the ticks"), (24.6, "tick-ripple", "tick close ripples out"),
+        (1.85, "label-out", "bet chip leaves (blur-out-up)"),
+        (3.2, "pop-soft", "'?' pops as the leader line arrives"),
+        (5.9, "pennant-snap", "Marisol's pennant snaps after the plant"), (9.35, "pennant-snap", "Dev's pennant snaps"),
+        (1.95, "label-in", "'Installed: ?' words spring in"), (5.25, "label-in", "'Marisol: 2021'"), (8.3, "label-in", "'Four years apart'"),
+        (11.15, "label-in", "'Witness: also Dev'"), (19.0, "label-in", "'Both off by two'"), (21.6, "label-in", "'Split down the middle'"),
+        (4.0, "emph-pop", "'?' pops on 'intake'"), (5.9, "emph-pop", "2021 turns red"), (9.0, "emph-pop", "'Four years' red"),
+        (12.42, "emph-pop", "'Dev' red on 'Himself'"), (19.51, "emph-pop", "'two' red on 'off'"), (22.75, "emph-pop", "'middle' red"),
+        (15.24, "tick-soft", "date characters land (Jun)"), (15.64, "tick-soft", "14,"), (16.18, "tick-soft", "2019"),
+        (17.83, "shimmer", "light sweep across the photo on 'photo'"), (15.95, "shimmer-soft", "glass sheen on the card"),
+        (19.35, "tick-soft", "'2 years' characters"), (19.5, "cap-pop-x2", "measure end caps spring up"),
+        (24.91, "emph-pop", "'once' red"), (26.35, "label-in", "bet chip returns for the loop"),
+    ] + _typing(15.5, 30, 30, "URL types under the card") + _typing(25.47, 15, 24, "CTA URL types, red caret"),
+    "C3-GAR": [(a, "flap-twitch", "a stalled THU flap half-lifts and drops back") for a in (9.3, 10.85, 13.05, 14.95, 16.7, 17.95, 18.7)] + [
+        (0.06, "ring-out", "bell rings out (arcs above the bell)"), (6.15, "clunk", "engine stand stops, rocks"),
+        (12.91, "emph-pop", "'Tue' turns red on 'Tuesday'"), (12.7, "tick-soft", "date characters"), (14.12, "shimmer", "sweep across the weep photo"),
+        (14.9, "emph-pop", "'Gus' swells on 'Gus's name'"), (18.15, "emph-pop", "'Not' red on 'called'"), (21.8, "pill-pop", "'Back to the car'"),
+        (23.44, "emph-pop", "'car' red on 'engine'"), (24.3, "chip-wipe", "chip wipes back to red"), (25.02, "emph-pop", "'find' red"),
+        (5.1, "lens-settle", "punch-out lens settle"), (1.9, "lens-settle", "punch-in lens settle"),
+    ] + _typing(12.3, 26, 40, "monitor header URL types") + _typing(25.56, 15, 24, "CTA URL types"),
+    "C3-SUP": [(round(0.682 + k * 27 / 16, 3), "creak-soft", "string creaks at each end of its sway") for k in range(16)] + [
+        (3.85, "paper-flutter", "'Which car?' tag flies in"), (7.5, "paper-flutter", "'Who fitted it?' tag flies in"),
+        (6.75, "value-tick", "Day 1 -> 2"), (9.85, "value-tick", "Day 2 -> 4"), (11.33, "value-tick", "Day 4 -> 6"), (22.9, "value-tick", "Day 6 -> 1"),
+        (1.95, "label-in", "'Car? Fitter? Date? Unknown.'"), (11.2, "label-in", "'Still rattling'"), (20.0, "label-in", "'A place to start'"),
+        (4.05, "emph-pop", "'Unknown.' red"), (11.6, "emph-pop", "'rattling' red and shaking"), (20.97, "emph-pop", "'start' red"),
+        (13.37, "emph-pop", "'Return?' pops on 'return'"), (3.1, "pop-soft", "'?' pops in the outline"),
+        (16.1, "tick-soft-x3", "card title words"), (17.21, "tick-soft", "date characters"), (18.59, "emph-pop", "chip pops on 'Northline'"),
+        (19.2, "string-zip", "path-ride: cotton draws along its curve"), (19.85, "knot", "the slack pulls taut"),
+        (23.0, "tag-swing", "tag 1 swings home"), (24.95, "emph-pop", "'build' red"),
+    ] + _typing(18.7, 28, 30, "URL types under the card") + _typing(25.57, 15, 24, "CTA URL types"),
+}
+MUSIC = {
+    "C3-COL": {"bpm": 96, "root": 50, "mode": "minor", "style": "warm", "cut": 13.0, "ret": 21.4, "T0": 21.4, "room": "restaurant"},
+    "C3-GAR": {"bpm": 92, "root": 45, "mode": "minor", "style": "observe", "cut": 12.0, "ret": 21.5, "T0": 21.5, "room": "shop", "soft_after": 0.75},
+    "C3-SUP": {"bpm": 100, "root": 48, "mode": "minor", "style": "investigate", "thin": 16.0, "cut": 16.0, "ret": 22.6, "T0": 22.6, "room": "office", "one_note": True},
+}
+
+
 def write(reel):
     os.makedirs(OUT, exist_ok=True)
+    reel["sfx"] = sfx([(t, n, note) for t, n, note in [(c["t"], c["name"], c["note"]) for c in reel["sfx"]] + EXTRA.get(reel["id"], [])])
+    reel["music"] = MUSIC[reel["id"]]
     reel.update({"fps": FPS, "duration": DUR, "frames": int(DUR * FPS), "width": 1080, "height": 1920,
                  "vo_status": "estimated from the script windows; replace word times with words.json after Wayne records"})
     with open(os.path.join(OUT, reel["id"] + ".json"), "w") as f:
