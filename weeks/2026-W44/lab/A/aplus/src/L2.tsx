@@ -3,6 +3,10 @@
 import React from "react";
 import { Film, Headline, Photo, Box, Img, Tag, track, prog, E, mono, ui, fit, UI, MONO } from "./lib";
 import { valueIn } from "./remocn";
+import { Words, Chars, idle, idleT, Stage, Unstage } from "./alive";
+// one shared float per host card, so fields and thumbs ride with the card they sit on (job card 5-15, build page 16-28)
+const HOST = (t) => (t < 15.5 ? { seed: 3, y: 8, r: 0.15 } : { seed: 5, y: 8, r: 0.15 });
+const hostY = (t) => { const h = HOST(t); return idle(t, h.seed, { y: h.y }).y; };
 import VO from "./vo.json";
 
 export const PAL2 = { bg: "#22211E", tx: "#F4EBDD", em: "#E9BB62", pn: "#39362F" };
@@ -26,10 +30,12 @@ const Field = ({ st, label, value, slot, t, tv, maxW = 736, two }) => {
   if (!st || st.o <= 0.001) return null;
   const vs = value ? fit([two && st.vs >= 64 ? "OCT 12," : value], two ? MONO : UI, st.vs, 44, maxW - (st.inline ? label.length * st.ls * 0.6 + 14 : 0)) : st.vs;
   const showV = value && (tv == null || t >= tv);
-  const V = showV ? <span style={{ ...(two ? mono(vs) : ui(vs)), display: "inline-block", ...valueIn(t, tv != null && t < tv + 0.4 ? tv : null) }}>{two && st.vs >= 64 ? <>OCT 12,<br />2026</> : value}</span>
+  const t0 = tv != null && t < tv + 3 ? tv + 0.03 : null;
+  const V = showV ? <span style={{ ...(two ? mono(vs) : ui(vs)), display: "inline-block" }}>{two && st.vs >= 64 ? <><Chars t={t} t0={t0} text="OCT 12," /><br /><Chars t={t} t0={t0 == null ? null : t0 + 0.2} text="2026" /></>
+    : two ? <Chars t={t} t0={t0} text={value} /> : <Words t={t} t0={t0} text={value} stagger={3} />}</span>
     : slot ? <div style={{ width: Math.min(maxW, 560), height: 76, border: `4px dashed ${pal.em}`, opacity: 0.7, boxSizing: "border-box", marginTop: 6 }} /> : null;
   return (
-    <div style={{ position: "absolute", left: st.x, top: st.y, opacity: st.o, display: st.inline ? "flex" : "block", gap: 14, alignItems: "baseline", zIndex: 6 }}>
+    <div style={{ position: "absolute", left: st.x, top: st.y, opacity: st.o, display: st.inline ? "flex" : "block", gap: 14, alignItems: "baseline", zIndex: 6, transform: `translateY(${hostY(t).toFixed(2)}px)` }}>
       {st.ls > 0 && <div style={lab(st.ls)}>{label}</div>}
       {V}
     </div>
@@ -40,7 +46,7 @@ const Thumb = ({ s, t }) => {
   if (!s || s.o <= 0.001) return null;
   const f = s.f ?? 1;
   return (
-    <Box s={s} v z={5} style={{ background: f > 0 ? pal.bg : "transparent", border: `${5 * f}px solid ${pal.em}` }}>
+    <Box s={s} v z={5} live={{ ...HOST(t), r: 1.4, s: 0.06 }} style={{ background: f > 0 ? pal.bg : "transparent", border: `${5 * f}px solid ${pal.em}` }}>
       <Img name={KIT} style={{ position: "absolute", left: 8 + 8 * f, top: 8 + 8 * f, width: s.w - 2 * (8 + 8 * f) - 10 * f, height: s.h - 2 * (8 + 8 * f) - 10 * f, objectFit: "contain" }} />
       {t >= 9 && t < 9.18 && <div style={{ position: "absolute", inset: 0, background: "#fff", opacity: 0.85 * (1 - (t - 9) / 0.18) }} />}
     </Box>
@@ -96,6 +102,9 @@ export const L2 = () => (
         [21.0, { y: 812 }, 0.45, E.inOut],
         [22.0, { y: 798 }, 0.4, E.inOut],
       ]);
+      // 8.35-9 hold: slow push on the kit, handed back during the 9.0 move
+      if (t >= 8.35 && t < 9) TH.s = 1 + 0.1 * E.inOut((t - 8.35) / 0.65);
+      else if (t >= 9 && t < 9.4) TH.s = 1.1 - 0.1 * E.inOut((t - 9) / 0.4);
       const DATE = track(t, { x: 490, y: 690, o: 0, ls: 48, vs: 72 }, [
         [9.0, { o: 1 }, 0.3],
         [10.0, { x: 370, y: 700, ls: 44, vs: 54 }, 0.4, E.inOut],
@@ -158,18 +167,24 @@ export const L2 = () => (
       const shopLab = (s) => s.h >= 300 ? <div style={{ position: "absolute", left: 22, top: 14, ...mono(48, { color: pal.tx }), opacity: 0.92 }}>{s === B ? "SHOP B" : "SHOP A"}</div> : null;
       return (
         <>
-          <Headline t={t} cues={HEAD} pal={pal} />
+          <Headline t={t} cues={HEAD} pal={pal} emph={["WHICH", "JUDGE", "WORK", "MORE", "CONNECTED", "UNTIL"]} />
+          <Stage t={t}>
           {/* build page frame (18-28) */}
-          <Box s={G} v z={1} style={{ background: pal.pn, boxShadow: `inset 0 0 0 2px ${pal.tx}38` }}>
-            {t >= 19 && <span style={{ position: "absolute", left: 24, top: 12, ...ui(56), ...valueIn(t, 19) }}>FuelMyBuild</span>}
-            {t >= 20 && t < 22.3 && <span style={{ position: "absolute", left: 24, top: 82, ...ui(60), opacity: Math.min(prog(t, 20, 0.3), 1 - prog(t, 22, 0.25)) }}>Miata</span>}
+          <Box s={G} v z={1} live={HOST(19)} sweep={{ alpha: 0.11, period: 2.4, seed: 4 }} style={{ background: pal.pn, boxShadow: `inset 0 0 0 2px ${pal.tx}38` }}>
+            {t >= 19 && <Chars t={t} t0={19} text="FuelMyBuild" style={{ position: "absolute", left: 24, top: 12, ...ui(56) }} stagger={1.5} rise={24} />}
+            {t >= 20 && t < 22.3 && <span style={{ position: "absolute", left: 24, top: 82, ...ui(60) }}><Chars t={t} t0={20} out={22} text="Miata" stagger={2} rise={24} /></span>}
           </Box>
-          <Photo s={A} name={CAR} aspect={CAR_A} pal={pal} z={2} label={<div style={{ position: "absolute", left: 22, top: 14, ...mono(48), opacity: A.h >= 300 ? 0.92 : 0 }}>SHOP A</div>} />
-          <Photo s={{ ...B, y: B.y + B.dy }} name={CAR} aspect={CAR_A} pal={pal} z={2} label={<div style={{ position: "absolute", left: 22, top: 14, ...mono(48), opacity: 0.92 }}>SHOP B</div>} />
-          {anchorLab > 0 && <div style={{ position: "absolute", left: 486, top: 452, ...mono(52), opacity: anchorLab }}>SHOP A</div>}
-          <Box s={O} z={4} style={{ border: `8px solid ${pal.em}` }} />
-          {[2, 1].map((k) => { const b = back(k); return <Box key={k} s={{ x: 96 + k * 20, y: C.y - 16 * k, w: 784 - 40 * k, h: C.h, o: b.o * (t < 15 ? 1 : 0) * 0.8, dy: b.dy }} v z={2} style={{ background: pal.pn, boxShadow: `inset 0 0 0 2px ${pal.tx}30` }} />; })}
-          <Box s={{ ...C, y: C.y + C.dy }} v z={3} style={{ background: pal.pn, boxShadow: `inset 0 0 0 2px ${pal.tx}50`, borderTop: `8px solid ${pal.em}` }}>
+          <Photo s={A} name={CAR} aspect={CAR_A} pal={pal} z={2} seed={1} kb={A.h < 300 ? 1.7 : 1} live={t >= 17.5 ? HOST(t) : null} label={<div style={{ position: "absolute", left: 22, top: 14, ...mono(48), opacity: A.h >= 300 ? 0.92 : 0 }}>SHOP A</div>} />
+          <Photo s={{ ...B, y: B.y + B.dy }} name={CAR} aspect={CAR_A} pal={pal} z={2} seed={1.5} label={<div style={{ position: "absolute", left: 22, top: 14, ...mono(48), opacity: 0.92 }}>SHOP B</div>} />
+          {anchorLab > 0 && <div style={{ position: "absolute", left: 486, top: 452, ...mono(52) }}><Chars t={t} t0={8.2} text="SHOP A" stagger={1.5} /></div>}
+          <Box s={O} z={4}>
+            {/* the selection outline draws itself on at 2.0, then moves */}
+            <svg width={O.w} height={O.h} style={{ position: "absolute", inset: 0, overflow: "visible" }}>
+              <rect x={4} y={4} width={O.w - 8} height={O.h - 8} fill="none" stroke={pal.em} strokeWidth={8} pathLength={1000} strokeDasharray="1000" strokeDashoffset={1000 * (1 - prog(t, 2.0, 0.38, E.inOut))} />
+            </svg>
+          </Box>
+          {[2, 1].map((k) => { const b = back(k); return <Box key={k} s={{ x: 96 + k * 20, y: C.y - 16 * k, w: 784 - 40 * k, h: C.h, o: b.o * (t < 15 ? 1 : 0) * 0.8, dy: b.dy, vy: b.vy }} live={{ seed: 7 + k, y: 3, r: 0.25 }} v z={2} style={{ background: pal.pn, boxShadow: `inset 0 0 0 2px ${pal.tx}30` }} />; })}
+          <Box s={{ ...C, y: C.y + C.dy }} v z={3} live={HOST(9)} sweep={{ alpha: 0.09, period: 2.6, seed: 2 }} style={{ background: pal.pn, boxShadow: `inset 0 0 0 2px ${pal.tx}50`, borderTop: `8px solid ${pal.em}` }}>
             {/* 7 s: the opened job card shows its empty ruled lines until the first entry lands */}
             {t >= 7 && t < 8.3 && [0, 1, 2, 3, 4].map((i) => <div key={i} style={{ position: "absolute", left: 32, top: 110 + i * 90, height: 4, width: [700, 520, 700, 600, 380][i] * prog(t, 7 + i * 0.05, 0.35), background: pal.tx, opacity: 0.16 * (1 - prog(t, 8, 0.25)) }} />)}
           </Box>
@@ -184,12 +199,13 @@ export const L2 = () => (
           {lineP > 0 && <div data-v="1" style={{ position: "absolute", left: lineX - 3, width: 6, top: lineTop, height: Math.max(0, lineBot - lineTop) * lineP, background: pal.em, zIndex: 4 }} />}
           <Box s={URL} v z={7} style={{ background: pal.bg, border: `5px solid ${pal.em}`, padding: t < 21 ? "10px 18px" : "22px 28px" }}>
             <div style={lab(t < 21 ? 44 : 48)}>PUBLIC URL · DEMO</div>
-            {t >= 21 && <div style={{ ...mono(58), ...valueIn(t, 21.05), marginTop: 12, lineHeight: 1.22 }}>fuelmybuild.com/<br />demo-miata</div>}
+            {t >= 21 && <div style={{ ...mono(58), marginTop: 12, lineHeight: 1.22 }}><Chars t={t} t0={21.1} text="fuelmybuild.com/" stagger={0.8} /><br /><Chars t={t} t0={21.3} text="demo-miata" stagger={1} /></div>}
           </Box>
-          {t >= 25 && <div style={{ position: "absolute", left: 96, top: 1078, width: 784, ...ui(50), lineHeight: 1.12, zIndex: 8 }}>
-            <div style={valueIn(t, 25)}>FOLLOW FuelMyBuild</div>
-            {t >= 26 && <div style={valueIn(t, 26)}>BETTER BUILD RECORDS</div>}
-          </div>}
+          <Unstage t={t}>{t >= 25 && <div style={{ position: "absolute", left: 96, top: 1078, width: 784, ...ui(50), lineHeight: 1.12, zIndex: 8 }}>
+            <Words t={t} t0={25} text="FOLLOW FuelMyBuild" style={{ display: "block" }} pops={(w) => w === "FOLLOW"} />
+            {t >= 26 && <Words t={t} t0={26} text="BETTER BUILD RECORDS" style={{ display: "block" }} />}
+          </div>}</Unstage>
+          </Stage>
         </>
       );
     }}

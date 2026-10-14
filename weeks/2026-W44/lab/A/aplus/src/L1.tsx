@@ -3,6 +3,7 @@
 import React from "react";
 import { Film, Headline, Photo, Cut, Box, Img, Tag, track, prog, pick, E, mono, ui, fit, UI, MONO, SAFE } from "./lib";
 import { valueIn, ValueSwap, drift } from "./remocn";
+import { Words, Chars, mb, Stage, Unstage } from "./alive";
 import VO from "./vo.json";
 
 export const PAL1 = { bg: "#171A18", tx: "#F2EBDD", em: "#E6A16A", pn: "#303832" };
@@ -23,8 +24,9 @@ const LAB = pal.pn; // labels on paper
 const lab = (s) => mono(s, { color: LAB, letterSpacing: "0.02em" });
 const val = (s, extra = {}) => ui(s, { color: pal.bg, ...extra });
 
-const Ruled = () => (
-  <>{[0, 1, 2, 3].map((i) => <div key={i} style={{ position: "absolute", left: 44, top: 86 + i * 82, height: 4, width: [680, 540, 680, 400][i], background: pal.pn, opacity: 0.28 }} />)}</>
+// the blank panel's rules draw on as it lands (staggered), then hold
+const Ruled = ({ t }) => (
+  <>{[0, 1, 2, 3].map((i) => <div key={i} style={{ position: "absolute", left: 44, top: 86 + i * 82, height: 4, width: [680, 540, 680, 400][i] * prog(t, -0.05 + i * 0.1, 0.4), background: pal.pn, opacity: 0.28 }} />)}</>
 );
 const Thumb = ({ size, t, t0 }) => {
   const p = prog(t, t0, 0.3, E.back);
@@ -42,13 +44,13 @@ const Record = ({ t, mode, w, h }) => {
   const vi = (k) => valueIn(t, t < T[k] + 0.4 ? T[k] : null);
   const has = (k) => t >= T[k];
   const pad = 32;
-  if (mode === "blank") return <Ruled />;
+  if (mode === "blank") return <Ruled t={t} />;
   if (mode === "entry")
     return (
       <div style={{ position: "absolute", inset: 0, padding: "24px 32px", display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
         <div>
           <div style={lab(44)}>PART</div>
-          <div style={{ marginTop: 6 }}>{has("part") ? <span style={{ ...val(64), ...vi("part"), display: "inline-block" }}>Brake kit</span> : <Slot w={360} h={70} />}</div>
+          <div style={{ marginTop: 6 }}>{has("part") ? <Words t={t} t0={T.part} text="Brake kit" style={{ ...val(64), display: "inline-block" }} /> : <Slot w={360} h={70} />}</div>
         </div>
         <Tag pal={pal} solid size={44} />
       </div>
@@ -61,7 +63,7 @@ const Record = ({ t, mode, w, h }) => {
         <div style={val(fit(["Brake kit"], UI, 104, 56, w - 2 * pad), { marginTop: 4 })}>Brake kit</div>
         {has("brand") && <div style={{ ...vi("brand") }}>
           <div style={{ ...lab(52), marginTop: 60 }}>BRAND</div>
-          <div style={val(fit(["Demo Brand A"], UI, 80, 56, w - 2 * pad), { marginTop: 4 })}>Demo Brand A</div>
+          <div style={val(fit(["Demo Brand A"], UI, 80, 56, w - 2 * pad), { marginTop: 4 })}><Words t={t} t0={T.brand} text="Demo Brand A" /></div>
         </div>}
       </div>
     );
@@ -72,7 +74,7 @@ const Record = ({ t, mode, w, h }) => {
         <Tag pal={pal} solid size={54} />
         <div style={{ ...vi("date") }}>
           <div style={{ ...lab(54), marginTop: 22 }}>LOG DATE</div>
-          <div style={mono(66, { color: pal.bg })}>OCT 12, 2026</div>
+          <div style={mono(66, { color: pal.bg })}><Chars t={t} t0={T.date + 0.05} text="OCT 12, 2026" /></div>
         </div>
         <div style={{ display: "flex", gap: 28, marginTop: 22 }}>
           <div style={{ width: colW }}>
@@ -85,7 +87,7 @@ const Record = ({ t, mode, w, h }) => {
           </div>
         </div>
         {has("garage") && <div style={{ ...vi("garage"), marginTop: 22 }}>
-          <div style={lab(54)}>GARAGE</div><div style={val(60)}>Demo Garage A</div>
+          <div style={lab(54)}>GARAGE</div><div style={val(60)}><Words t={t} t0={T.garage + 0.05} text="Demo Garage A" /></div>
         </div>}
       </div>
     );
@@ -129,7 +131,7 @@ const RecordCard = ({ t, s }) => {
   const [t0, mode] = MODES[i], prev = i > 0 ? MODES[i - 1][1] : null;
   const p = Math.min(1, (t - t0) / 0.22);
   return (
-    <Box s={s} v z={5} style={{ background: pal.tx, color: pal.bg, overflow: "hidden", boxShadow: "0 18px 40px rgba(0,0,0,0.45)", borderLeft: mode === "blank" ? undefined : `12px solid ${pal.em}` }}>
+    <Box s={s} v z={5} live={{ seed: 3, x: 3, y: 7, r: 0.3 }} sweep={{ alpha: 0.7, color: "255,253,248", period: 3.0, seed: 2 }} style={{ background: pal.tx, color: pal.bg, overflow: "hidden", boxShadow: "0 18px 40px rgba(0,0,0,0.45)", borderLeft: mode === "blank" ? undefined : `12px solid ${pal.em}` }}>
       {prev && p < 1 && <div style={{ position: "absolute", inset: 0, opacity: 1 - p }}><Record t={t} mode={prev} w={s.w - (prev === "blank" ? 0 : 12)} h={s.h} /></div>}
       <div style={{ position: "absolute", inset: 0, opacity: prev ? p : 1 }}><Record t={t} mode={mode} w={s.w - (mode === "blank" ? 0 : 12)} h={s.h} /></div>
     </Box>
@@ -141,7 +143,7 @@ const Requester = ({ t, t0, y, text }) => {
   if (t < t0) return null;
   return (
     <>
-      <div style={{ position: "absolute", left: 580, top: y, opacity: Math.min(1, p * 1.5), transform: `translateX(${(1 - p) * 40}px)`, ...mono(50, { color: pal.em }), padding: "4px 12px", border: `3px solid ${pal.em}` }}>{text}</div>
+      <div style={{ position: "absolute", left: 580, top: y, opacity: Math.min(1, p * 1.5), transform: `translateX(${(1 - p) * 40}px)`, ...mono(50, { color: pal.em }), padding: "4px 12px", border: `3px solid ${pal.em}` }}><Chars t={t} t0={t0 + 0.05} text={text} stagger={1} /></div>
       <svg data-v="1" style={{ position: "absolute", left: 522, top: y + 18, overflow: "visible" }} width={56} height={28}>
         <path d={`M ${56} 14 L ${56 - 50 * q} 14`} stroke={pal.em} strokeWidth={5} fill="none" />
         {q > 0.95 && <path d="M 16 2 L 2 14 L 16 26" stroke={pal.em} strokeWidth={5} fill="none" />}
@@ -188,43 +190,48 @@ export const L1 = () => (
         [12.0, { x: 609, y: 771, w: 218, h: 218 }, 0.45, E.inOut],
         [13.0, { o: 0 }, 0],
       ]);
+      // 8.45-10 hold: slow push on the kit, handed back during the 10.0 move (no scale jump)
+      if (t >= 8.45 && t < 10) K.s = drift(t, 8.45, 10, 0.05);
+      else if (t >= 10 && t < 10.45) K.s = 1.05 - 0.05 * E.inOut((t - 10) / 0.45);
       const G = track(t, { x: 96, y: 400, w: 784, h: 790, o: 0, s: 1.03 }, [[16.0, { o: 1, s: 1 }, 0.4], [20.0, { o: 0, s: 1.02 }, 0.3]]);
       const U = track(t, { x: 120, y: 958, w: 736, h: 214, o: 0 }, [[18.0, { o: 1 }, 0.3, E.out], [19.0, { x: 96, y: 730, w: 784, h: 460 }, 0.45, E.back], [20.0, { o: 0 }, 0.25]]);
       const lineP = t < 20 ? 0 : prog(t, 20.25, 0.35);
       const reqOut = track(t, { dy: 0, o: 1 }, [[5.0, { dy: 900 }, 0.45, E.in]]);
       return (
         <>
-          <Headline t={t} cues={HEAD} pal={pal} />
+          <Headline t={t} cues={HEAD} pal={pal} emph={["PROVE", "UNDERNEATH?", "DOCUMENTED", "RECORD", "PROVE?"]} />
+          <Stage t={t}>
           {/* build page frame (16-20) */}
-          <Box s={G} v z={1} style={{ background: pal.pn, boxShadow: `inset 0 0 0 2px ${pal.tx}38` }}>
+          <Box s={G} v z={1} live={{ seed: 5, y: 5, r: 0.2 }} sweep={{ alpha: 0.08, period: 2.6, seed: 4 }} style={{ background: pal.pn, boxShadow: `inset 0 0 0 2px ${pal.tx}38` }}>
             <div style={{ position: "absolute", left: 24, right: 24, top: 18, display: "flex", justifyContent: "space-between", alignItems: "center", height: 64 }}>
-              <span style={{ ...ui(56), ...valueIn(t, t >= 17 ? 17 : null), opacity: t >= 17 ? valueIn(t, 17).opacity : 0 }}>FuelMyBuild</span>
+              {t >= 17 && <Chars t={t} t0={17} text="FuelMyBuild" style={ui(56)} stagger={1.5} rise={24} />}
               <Tag pal={pal} size={44} />
             </div>
           </Box>
-          <Cut s={K} name={KIT} aspect={KIT_A} z={2} />
-          <Photo s={P} name={CAR} aspect={CAR_A} pal={pal} z={3} />
+          <Cut s={K} name={KIT} aspect={KIT_A} z={2} seed={2} sway={1.6} />
+          <Photo s={P} name={CAR} aspect={CAR_A} pal={pal} z={3} seed={1} />
           {/* requester labels point at the empty record */}
-          <div style={{ position: "absolute", inset: 0, transform: `translateY(${reqOut.dy}px)`, zIndex: 6 }}>
+          <div style={{ position: "absolute", inset: 0, transform: `translateY(${reqOut.dy}px)`, zIndex: 6, filter: mb(0, reqOut.vy) }}>
             {t < 5.6 && <><Requester t={t} t0={3} y={890} text="INSURER" /><Requester t={t} t0={4} y={1060} text="APPRAISER" /></>}
           </div>
           <RecordCard t={t} s={R} />
           {/* parts section + public URL inside the page (18-20) */}
           <Box s={{ x: 120, y: 958, w: 736, h: 110, o: t >= 18 && t < 19.3 ? Math.min(prog(t, 18.1, 0.3), 1 - prog(t, 19, 0.2)) : 0 }} z={4}>
             <div style={mono(44, { color: pal.em })}>PARTS</div>
-            <div style={ui(fit(["Brake kit · Demo Brand A"], UI, 52, 44, 736))}>Brake kit · Demo Brand A</div>
+            <div style={ui(fit(["Brake kit · Demo Brand A"], UI, 52, 44, 736))}><Words t={t} t0={18.1} text="Brake kit · Demo Brand A" stagger={3} /></div>
           </Box>
           <Box s={{ ...U, y: U.y + (t < 19 ? 120 : 0), h: t < 19 ? 94 : U.h }} v z={7} style={{ background: pal.bg, border: `5px solid ${pal.em}`, padding: t < 19 ? "10px 18px" : "26px 30px" }}>
             <div style={mono(t < 19 ? 44 : 50, { color: pal.em })}>PUBLIC URL · DEMO</div>
-            {t >= 19 && <div style={{ ...mono(66), ...valueIn(t, 19.05), marginTop: 40, lineHeight: 1.25 }}>fuelmybuild.com/<br />demo-240z</div>}
+            {t >= 19 && <div style={{ ...mono(66), marginTop: 40, lineHeight: 1.25 }}><Chars t={t} t0={19.1} text="fuelmybuild.com/" stagger={0.8} /><br /><Chars t={t} t0={19.3} text="demo-240z" stagger={1} /></div>}
           </Box>
           {/* the simple line joining car and record (20-28) */}
           {t >= 20 && <div data-v="1" style={{ position: "absolute", left: 485, width: 6, top: P.y + P.h, height: Math.max(0, (R.y - P.y - P.h)) * lineP, background: pal.em, zIndex: 4 }} />}
           {/* follow line */}
-          {t >= 25 && <div style={{ position: "absolute", left: 96, top: 1078, width: 784, ...ui(50), lineHeight: 1.12, zIndex: 8 }}>
-            <div style={valueIn(t, 25)}>FOLLOW FuelMyBuild</div>
-            {t >= 26 && <div style={valueIn(t, 26)}>BETTER BUILD RECORDS</div>}
-          </div>}
+          <Unstage t={t}>{t >= 25 && <div style={{ position: "absolute", left: 96, top: 1078, width: 784, ...ui(50), lineHeight: 1.12, zIndex: 8 }}>
+            <Words t={t} t0={25} text="FOLLOW FuelMyBuild" style={{ display: "block" }} pops={(w) => w === "FOLLOW"} />
+            {t >= 26 && <Words t={t} t0={26} text="BETTER BUILD RECORDS" style={{ display: "block" }} />}
+          </div>}</Unstage>
+          </Stage>
         </>
       );
     }}

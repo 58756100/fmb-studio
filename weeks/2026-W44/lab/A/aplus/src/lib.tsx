@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { AbsoluteFill, useCurrentFrame, delayRender, continueRender, staticFile, getInputProps } from "remotion";
 import { FPS, maskRevealIn, maskRevealOut, Subtitles } from "./remocn";
+import { MBDefs, mb, idleT, kenBurns, Sweep, Words, SubtitleWords } from "./alive";
 export { FPS };
 
 export const HL = "'Barlow Condensed'", UI = "'Source Sans 3'", MONO = "'IBM Plex Mono'";
@@ -20,10 +21,10 @@ export const E = {
 };
 const lerp = (a, b, p) => a + (b - a) * p;
 // track(t, init, [[t0, {changes}, dur?, ease?], ...]) -> state. Changes tween from the settled previous state.
-export function track(t, init, kfs, dur = 0.45, ease = E.out) {
+function _track(t, init, kfs, dur, ease, cutUntil = -1) {
   let cur = { ...init };
   for (const [t0, val, d = dur, ez = ease] of kfs) {
-    if (t < t0) break;
+    if (t < t0 && !(d <= 0 && t0 <= cutUntil)) break;
     const next = { ...cur, ...val };
     const p = d <= 0 ? 1 : clamp((t - t0) / d);
     if (p < 1) {
@@ -34,6 +35,14 @@ export function track(t, init, kfs, dur = 0.45, ease = E.out) {
     cur = next;
   }
   return cur;
+}
+// track(): the state at t plus its velocity (vx, vy in px/frame, from x+dx / y+dy). Hard cuts (0-length keyframes)
+// are applied to the previous frame too, so a cut never reads as speed (no blur on cuts).
+export function track(t, init, kfs, dur = 0.45, ease = E.out) {
+  const a = _track(t, init, kfs, dur, ease), b = _track(t - 1 / 30, init, kfs, dur, ease, t);
+  const X = (q) => (q.x ?? 0) + (q.dx ?? 0), Y = (q) => (q.y ?? 0) + (q.dy ?? 0);
+  a.vx = X(a) - X(b); a.vy = Y(a) - Y(b);
+  return a;
 }
 // 0..1 progress of an entrance at t0 (for pops, line draws, fades)
 export const prog = (t, t0, d = 0.35, ez = E.out) => (t0 == null ? 1 : ez(clamp((t - t0) / d)));
@@ -56,24 +65,29 @@ export function fit(lines, family, start, min, maxW = SAFE.w, ls = 0) {
 }
 
 // ---------- primitives
-export const Box = ({ s, style = {}, children, v, z }) => {
+// live: idle amplitudes {x, y, r, s, seed} for holds; sweep: a light band crossing the box ({alpha, period, seed, color})
+export const Box = ({ s, style = {}, children, v, z, live, sweep, t }) => {
   if (!s || (s.o !== undefined && s.o <= 0.001)) return null;
+  const tt = t ?? (typeof window !== "undefined" ? window.__T : 0) ?? 0;
   return (
     <div data-v={v ? "1" : undefined} style={{
       position: "absolute", left: s.x, top: s.y, width: s.w, height: s.h, opacity: s.o ?? 1, zIndex: z,
-      transform: `translate(${s.dx || 0}px, ${s.dy || 0}px) scale(${s.s ?? 1})`, transformOrigin: s.origin || "50% 50%", boxSizing: "border-box", ...style,
-    }}>{children}</div>
+      transform: `translate(${s.dx || 0}px, ${s.dy || 0}px) scale(${s.s ?? 1})${live ? " " + idleT(tt, live.seed || 0, live) : ""}`, transformOrigin: s.origin || "50% 50%", boxSizing: "border-box",
+      filter: mb(s.vx, s.vy), ...style,
+    }}>{children}{sweep && <Sweep t={tt} {...sweep} />}</div>
   );
 };
 export const Img = ({ name, style = {} }) => <img src={staticFile(`img/${name}.png`)} style={{ display: "block", ...style }} />;
 
 // a cut-out inside a rectangular frame so it reads as a photo. s: x y w h o s, cw (cut-out width), cy (centre y in frame), zoom
-export const Photo = ({ s, name, aspect, pal, label, children, shadow = true, z }) => {
+// alive: Ken Burns (zoom breathes, subject pans) inside the fixed frame, plus a faint light sweep
+export const Photo = ({ s, name, aspect, pal, label, children, shadow = true, z, seed = 0, kb = 1, sweep = 0.07, live = null }) => {
   if (!s || s.o <= 0.001) return null;
-  const cw = (s.cw || s.w * 0.92) * (s.zoom || 1), ch = cw / aspect;
-  const cx = s.cx ?? s.w / 2, cy = s.cy ?? s.h / 2;
+  const tt = window.__T || 0, K = kenBurns(tt, seed, 0.06 * kb, 22 * kb);
+  const cw = (s.cw || s.w * 0.92) * (s.zoom || 1) * K.z, ch = cw / aspect;
+  const cx = (s.cx ?? s.w / 2) + K.dx, cy = (s.cy ?? s.h / 2) + K.dy;
   return (
-    <Box s={s} v z={z} style={{ background: pal.pn, overflow: "hidden", boxShadow: `inset 0 0 0 2px ${pal.tx}38` }}>
+    <Box s={s} v z={z} live={live} sweep={sweep ? { alpha: sweep, seed, period: 2.8 } : null} style={{ background: pal.pn, overflow: "hidden", boxShadow: `inset 0 0 0 2px ${pal.tx}38` }}>
       {shadow && <div style={{ position: "absolute", left: cx - cw * 0.46, top: cy + ch * 0.36, width: cw * 0.92, height: ch * 0.2, borderRadius: "50%",
         background: "radial-gradient(closest-side, rgba(0,0,0,0.55), rgba(0,0,0,0))" }} />}
       <Img name={name} style={{ position: "absolute", left: cx - cw / 2, top: cy - ch / 2, width: cw, height: ch }} />
@@ -83,11 +97,11 @@ export const Photo = ({ s, name, aspect, pal, label, children, shadow = true, z 
   );
 };
 // a free cut-out (no frame) centred in its box, contained
-export const Cut = ({ s, name, aspect, z, style }) => {
+export const Cut = ({ s, name, aspect, z, style, seed = 0, sway = 1 }) => {
   if (!s || s.o <= 0.001) return null;
   let w = s.w, h = w / aspect; if (h > s.h) { h = s.h; w = h * aspect; }
   return (
-    <Box s={s} v z={z} style={style}>
+    <Box s={s} v z={z} style={style} live={sway ? { seed, x: 6 * sway, y: 10 * sway, r: 2.0 * sway, s: 0.03 * sway } : null}>
       <Img name={name} style={{ position: "absolute", left: (s.w - w) / 2, top: (s.h - h) / 2, width: w, height: h }} />
     </Box>
   );
@@ -102,8 +116,11 @@ const withArrows = (line, size, color) => {
   return parts.flatMap((p, i) => (i ? [<ARROW key={i} size={size} color={color} />, p] : [p]));
 };
 
-// Headline: cues [[t0, "LINE 1\nLINE 2", {color}]]. Changed lines exit/enter with mask-reveal-up; unchanged lines hold.
-export const Headline = ({ t, cues, pal, top = 254, size = 96, min = 80, lh = 0.98, color }) => {
+// Headline: cues [[t0, "LINE 1\nLINE 2", {color}]]. Changed lines leave word by word (staggered rise + fade, motion blur)
+// and the new words spring up 4 frames apart with a little overshoot; emphasis words (emph) get a kinetic scale pop.
+// Unchanged lines hold, with a slow vertical float so a held headline never reads as a still.
+const norm = (w) => w.replace(/[^A-Z0-9+→]/gi, "").toUpperCase();
+export const Headline = ({ t, cues, pal, top = 254, size = 96, min = 80, lh = 0.98, color, emph = [] }) => {
   let idx = -1; cues.forEach(([t0], i) => { if (t >= t0) idx = i; });
   if (idx < 0) return null;
   const cur = cues[idx], prev = idx > 0 ? cues[idx - 1] : null;
@@ -113,17 +130,27 @@ export const Headline = ({ t, cues, pal, top = 254, size = 96, min = 80, lh = 0.
   const col = (c) => c[2]?.color || color || pal.tx;
   const same = (i) => P[i] === L[i] && fsP === fsC && col(prev) === col(cur);
   const lineStyle = { display: "block", whiteSpace: "nowrap", height: Math.round(fsC * lh) };
+  const E2 = new Set(emph.map(norm));
+  const pops = (w) => E2.has(norm(w));
+  const arrow = (fs, c) => (w) => (w === "→" ? <ARROW size={fs} color={c} /> : w);
   const out = [];
   if (prev) P.forEach((line, i) => {
     if (same(i)) return;
-    const o = maskRevealOut(t, cur[0], i); if (o.done) return;
-    out.push(<div key={"p" + i} style={{ position: "absolute", left: 0, top: i * Math.round(fsP * lh), fontSize: fsP, color: col(prev), whiteSpace: "nowrap", opacity: o.opacity, translate: o.translate, filter: o.filter }}>{withArrows(line, fsP, col(prev))}</div>);
+    if ((t - cur[0]) * FPS > 6 + 0.6 * line.split(" ").length + 2) return;
+    out.push(<div key={"p" + i} style={{ position: "absolute", left: 0, top: i * Math.round(fsP * lh), fontSize: fsP, color: col(prev), whiteSpace: "nowrap" }}>
+      <Words t={t} t0={null} out={cur[0] + i * 0.02} text={line} render={arrow(fsP, col(prev))} outStagger={0.6} /></div>);
   });
+  let off = 0;
   L.forEach((line, i) => {
-    const st = same(i) || cur[0] <= 0 ? {} : maskRevealIn(t, cur[0] + 0.12, i);
-    out.push(<div key={"c" + i} style={{ position: "absolute", left: 0, top: i * Math.round(fsC * lh), fontSize: fsC, color: col(cur), ...st, ...lineStyle }}>{withArrows(line, fsC, col(cur))}</div>);
+    const landed = same(i);
+    const t0 = landed ? null : cur[0] <= 0 ? -0.3 : cur[0] + 0.15; // the hook's first words are already landing on frame 0
+    out.push(<div key={"c" + i} style={{ position: "absolute", left: 0, top: i * Math.round(fsC * lh), fontSize: fsC, color: col(cur), ...lineStyle }}>
+      <Words t={t} t0={t0} text={line} pops={cur[0] > 0 ? pops : null} offset={off} render={arrow(fsC, col(cur))} /></div>);
+    if (!landed) off += line.split(" ").length;
   });
-  return <div data-hl="1" style={{ position: "absolute", left: SAFE.x0, top, width: SAFE.w, fontFamily: HL, fontWeight: 700, lineHeight: lh, letterSpacing: "0.005em" }}>{out}</div>;
+  // idle: a slow vertical float (never sideways, so the left edge stays on x 96)
+  const fy = 6 + 2.5 * Math.sin((2 * Math.PI * t) / 3.1) + 1.5 * Math.sin((2 * Math.PI * t) / 1.9 + 1); // 2..10 px: spring/pop overshoot never lifts a word above the safe line
+  return <div data-hl="1" style={{ position: "absolute", left: SAFE.x0, top, width: SAFE.w, fontFamily: HL, fontWeight: 700, lineHeight: lh, letterSpacing: "0.005em", transform: `translateY(${fy.toFixed(2)}px)` }}>{out}</div>;
 };
 
 export const Tag = ({ pal, children = "DEMO BUILD", size = 44, solid, onPaper }) => (
@@ -148,10 +175,12 @@ export const Film = ({ pal, subs, children }) => {
     Promise.all([...fonts, ...imgs]).then(() => { setReady(true); continueRender(h); });
   }, []);
   if (!ready) return <AbsoluteFill style={{ background: pal.bg }} />;
+  window.__T = t;
   return (
     <AbsoluteFill style={{ background: pal.bg, color: pal.tx, overflow: "hidden" }}>
+      <MBDefs />
       {children(t)}
-      <Subtitles t={t} subs={subs} color={pal.tx} font={UI} />
+      <SubtitleWords t={t} subs={subs} color={pal.tx} font={UI} />
       {getInputProps().check ? <Checker t={t} /> : null}
     </AbsoluteFill>
   );
