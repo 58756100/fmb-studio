@@ -13,6 +13,8 @@ A separate test bed. It never edits lane 0's weeks, scripts or queue entries; it
 Only Claude makes visuals, on opus. ChatGPT never makes images or video.
 
 ## Who has creative control
+(Updated 2026-10-15: see `state/production-standards.md`. ChatGPT owns concept, story, script and hooks in lanes A and B; Claude owns the build and may upgrade UI, layout, motion and transitions to production level in every lane. No lane may repeat a premise from another lane: everything goes through `state/visual-bank.md`.)
+
 - **Lane A: ChatGPT decides everything; Claude only executes.** Motion-director builds from ChatGPT's visual direction alone. It must not read `state/learnings.md`, lane-0 scripts or storyboards, or the house-style refs, and it must not default to the Notion-white/iOS look unless ChatGPT asked for it. It may use the kit (Remotion, remocn, audio engine, cutouts) as tools. Where the direction is silent, pick the most literal reading and log the gap in `weeks/<week>/lab/A/<id>-gaps.md`; don't fill it with house style.
 - **Lane B: shared.** ChatGPT writes with full context; Claude builds with full creative control and the house system, and may deviate if it makes ChatGPT's idea work better (log why).
 - **Lane C: Claude has full creative control.** ChatGPT critiques; Claude chooses which changes to apply and how.

@@ -37,6 +37,7 @@ Run FuelMyBuild's weekly short-form video cycle. Delegate each stage to its agen
 - Goal: 10 a day. Step up 20 → 35 → 70 a week only when the Sunday review shows 3-second hold and average watch time holding or rising at the current volume.
 
 ## Rules
+- `state/production-standards.md` applies to every lane and every agent (no labels, no captions in masters, 30–60 s by concept, conversational VO, story-carrying transitions, rotating CTAs, uniqueness across lanes).
 - Uniqueness: every video gets a premise, story device and visual treatment not already in `state/visual-bank.md`. Ideation checks it; motion-director adds the finished video's devices and props to it.
 - Pass agents file paths, not file contents, to save tokens. Each agent reads only its own skill and the files it needs.
 - Stop at step 5 and publish the storyboard as an artifact. Wait for Wayne's approval in chat, apply his comments, then continue.

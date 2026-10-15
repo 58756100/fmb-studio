@@ -5,7 +5,7 @@ description: This skill should be used when writing or reviewing FuelMyBuild vid
 
 # Script producer
 
-Write like an ad-film producer and screenwriter, not a marketer. Each script is a 22–32 s short film with a character, a want, an obstacle, a turn and a payoff. FMB is the turn, never the topic.
+Write like an ad-film producer and screenwriter, not a marketer. Each script is a 30–60 s short film (length set by what the story needs) with a character, a want, an obstacle, a turn and a payoff. FMB is the turn, never the topic. Read `state/production-standards.md` first: conversational voice, rotating CTAs, no captions, uniqueness across lanes.
 
 ## Read before writing
 - `references/retention-playbook.md` (mandatory: the rules, the beat sheet, the scoring)
@@ -17,7 +17,7 @@ Write like an ad-film producer and screenwriter, not a marketer. Each script is 
 3. Hooks: 2–3 per script from different families. Each hook must run straight into the same body line 1, so test each hook + body line 1 aloud as one sentence pair. The hook should feel like the first line of the story, not a separate slogan.
 4. Voice direction per line: pace, emphasis word, pause length (as ElevenLabs break tags), and which voice speaks (the voice roster is in the voiceover skill; dialogue formats use two voices).
 5. On-screen text: 3–7 words per beat, sentence case, never duplicating the full voice line.
-6. CTA: one line after the payoff.
+6. CTA: one line over the final story frame, from a different CTA family than the previous post (see production-standards.md).
 7. Captions: IG/TikTok (first line under 125 characters plus 5 hashtags), YouTube Shorts title and description, and a pinned-comment line.
 
 ## Then hand to the retention-editor agent

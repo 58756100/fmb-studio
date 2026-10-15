@@ -12,6 +12,10 @@ Every FMB video is built in Remotion with remocn components. Start from the stud
 - No frame reads as a still for more than about 0.5 s: during holds, keep drift, parallax, sway or light sweeps going.
 - Before the final render, measure frame-difference energy per 0.5 s window and fix any static window.
 
+## Production standard (Wayne, 2026-10-15)
+- Read `state/production-standards.md`. Masters have no subtitles and no "Illustrative" labels; transitions carry the story (match cuts, morphs, objects becoming the next scene); text enters from the action and leaves into the next beat.
+- Review copies may add subtitles as a separate render; never in the master.
+
 ## Before choosing any motion
 1. Read `references/house-style.md`, then `references/remocn-design-defaults.md` and `references/remocn-anti-patterns.md`.
 2. For each beat in the script, search `references/remocn-catalog.md` for 1–2 candidates. Check the use-when and avoid-when lines and the vibe (prefer clean or premium). Install with `npx shadcn add @remocn/<name>` when the network allows; otherwise copy the source from `github.com/Remocn/remocn` (`registry/remocn/<name>/index.tsx`, MIT).
