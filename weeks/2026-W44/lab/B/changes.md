@@ -82,3 +82,40 @@ Wayne supplied ChatGPT-generated photos and cutouts (`kit/remotion/public/img/la
 - **B-L3:** `b-supra-turbo-during.jpg` ("During") and `b-supra-turbo-after.jpg` ("After") replace the vacuum-line, wastegate and kit cutouts. Log tiles are cropped to 0.66 high, so the card keeps its old height above the subtitles at 24–25, and they enlarge into a 430×640 pair at 23.0. The note text still reads "Turbo, wastegate and vacuum lines installed." The 23.0 enlargement now starts from the tiles' real position (it used to start ~390 px low), and its tap moved onto the photos.
 - **Unchanged:** the 240Z, Miata and Supra car cutouts in the hooks, galleries and build pages; the part-01 turbo crop (0–3, 11–13, 27–30); every UI card.
 - **Checks (delivered AAC):** all three are 30.000 s, 900 frames, 1080×1920 at 30 fps, mux offset 0.00 ms, 82 of 82 cues within ±1 frame. B-L1 -14.1 LUFS, -1.5 dBTP; B-L2 -14.1 LUFS, -1.8 dBTP; B-L3 -14.2 LUFS, -1.8 dBTP. Review: 31 stills from the composition and 28 from the masters around the changed beats, with no clipped or overlapping text and "Illustrative example" on every frame. Final sheets regenerated (`storyboard/B-L*-final-sheet.png`).
+
+## 2026-10-15 · Motion pass ("Always alive" rule; re-render of B-L1, B-L2, B-L3, hook A)
+Improved in place: story, beats, seconds, layout, on-screen text, subtitles, cues, music, ducking and the audio masters are unchanged. `score.py` re-runs bit-identical and the beds are byte-identical, so only the three `.mp4` masters were replaced on `renders`.
+
+**Measure** (`film/energy.py`, same tool as lane A+): luma at 270×480, mean absolute frame-to-frame difference, averaged per 0.5 s window. *Static* means below 0.35, the energy of our slow drift-push holds.
+
+| id | static windows before → after | lowest window before → after | longest frozen run before → after |
+|---|---|---|---|
+| B-L1 | 8 → 0 (1.5, 8.5, 10.5, 19.5, 22.5, 25.5, 26.0, 29.5) | 0.000 → 0.373 | 1.37 s (25.5) → 0 |
+| B-L2 | 9 → 0 (4.5, 10.5, 13.0, 23.0, 24.5, 25.5, 26.5, 27.0, 29.5) | 0.000 → 0.448 | 0.63 s (29.4) → 0 |
+| B-L3 | 18 → 0 (3.5–10.0, 11.5, 13.5, 15.5, 18.5, 19.5, 26.5–29.5) | 0.085 → 0.351 | 0.43 s → 0 |
+
+**What changed** (`src/lib.tsx` unless noted)
+- **Headline:**
+  - Each word springs up 4 frames apart with ~12 % overshoot, with a blur that follows its speed (motion blur), replacing the eased rise-from-blur.
+  - Red key words get a kinetic pop, overshooting in scale only, from the cap line. Frame 0 still opens on the full hook headline.
+  - A held line breathes: a 1.8 % scale creep, eased back to 1.0 over 29.4–30 s for the loop seam.
+  - Exits are per word on a staggered rise, fade and blur, inside the same last 0.2 s, so every change still lands on its second.
+- **Subtitles:** the white plate springs in, and the words reveal in reading order across the spoken part of the VO window (weighted by length). Font, size, plate, red words and windows are unchanged, and the exit is unchanged.
+- **Handheld breathe on every shot** (not the headline, subtitles or "Illustrative example"):
+  - A 7 px circular drift (constant speed, so it never stalls) plus a 1.4 % scale breathe about (540, 905).
+  - Periods are 5 s and 7.5 s. Both divide 30 s and every term is 0 at t = 0, so frame 0 is unchanged and the 29–30 loop still lands on it seamlessly.
+  - The circle was chosen numerically: its slowest half-second moves 2.3× more than a sum of sines.
+- **Loop-safe life where a shot held** (all on sines of absolute time that are 0 at t = 0 and t = 30; the root publishes `window.__T`):
+  - B-L1: the opening/loop 240Z cut-out drifts ±10 px.
+  - B-L2: both shop cars drift ±18 px *identically* inside their tiles, and the tile pair, labels, alignment guides, credit slots and the 5.0 s burst bob together (±9 px). So "same car, same photo" and the 5–6 s exact alignment still hold.
+  - B-L3: the turbo detail crop has a slow ±6 % Ken Burns. The comment rows bob from 3 s, and the 9 s alignment rings, copy trace and "Copied" chip ride their rows' bob, so they stay on the brand names. The post-freeze camera push runs 0.92 → 0.95 (was 0.93) over 8.4–11 s. Jules's question in the 29–30 restore bobs.
+- Drawn lines already drew on (copy trace, alignment guides, strike, rings), and shots already used remocn moves. No new remocn pieces; the beat's existing transitions are untouched.
+
+**Checks (delivered AAC)**
+- All three are 30.000 s, 900 frames, 1080×1920 at 30 fps, with mux offset 0.00 ms and 82 of 82 cues within ±1 frame.
+- Loudness: B-L1 -14.1 LUFS, -1.5 dBTP; B-L2 -14.1 LUFS, -1.8 dBTP; B-L3 -14.2 LUFS, -1.8 dBTP. These match the previous masters, since the audio is identical.
+- Review:
+  - 75 composition stills (25 per video, every beat, with safe-area guides) plus targeted re-checks of the alignment, ring and loop beats.
+  - 24 frames from the delivered masters.
+  - No clipped or overlapping text. "Illustrative example" is on every frame, and the loop frames match frame 0 (B-L1, B-L2) or the specced restore crop (B-L3).
+- B-L3 frames 240–340 were re-rendered as a fix range and spliced (`out/B-L3-fix.mp4`, one re-encode). Final sheets were regenerated (`storyboard/B-L*-final-sheet.png`).

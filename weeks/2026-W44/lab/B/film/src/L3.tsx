@@ -47,7 +47,7 @@ export const A = ({ t }) => {
 
 // ---------------------------------------------------------------- B · first reply, next reply, same guess copied (3-11)
 const CY = [500, 770, 1040];
-const bob = (t, k) => 13 * Math.sin((2 * Math.PI * (t - 3)) / 2.6 + k * 2.1) * lin(t, 3.0, 3.6) * (1 - lin(t, 8.0, 8.5));
+const bob = (t, k) => 13 * Math.sin((2 * Math.PI * (t - 3)) / 2.6 + k * 2.1) * lin(t, 3.0, 3.6);
 const R1 = "Demo Brand B, I think";
 export const B = ({ t }) => {
   const frz = eo(lin(t, 8.0, 8.35));
@@ -57,13 +57,13 @@ export const B = ({ t }) => {
   const firm = 1 + 0.05 * Math.sin(Math.PI * clamp((t - 7.0) / 0.22));
   const al = t >= 9.0; const tr = eo(lin(t, 10.0, 10.55));
   // brand-name boxes (stage coords) for the alignment + copy trace
-  const B1 = { x: 212, y: CY[1] + 58, w: 324, h: 72 }, B2 = { x: 426, y: CY[2] + 58, w: 324, h: 72 };
+  const B1 = { x: 212, y: CY[1] + 58 + bob(t, 1), w: 324, h: 72 }, B2 = { x: 426, y: CY[2] + 58 + bob(t, 2), w: 324, h: 72 }; // ride their rows' bob
   const path = `M ${B1.x + B1.w} ${B1.y + B1.h / 2} C ${B1.x + B1.w + 260} ${B1.y + 20}, ${B2.x + B2.w + 200} ${B2.y - 40}, ${B2.x + B2.w + 8} ${B2.y + B2.h / 2}`;
   return (
     <AbsoluteFill>
-      <Cam t={t} keys={[[3, 540, 905, 1.05], [3.4, 540, 905, 1], [7.9, 540, 905, 1.045], [8.4, 540, 860, 0.92], [11, 540, 860, 0.93]]}>
+      <Cam t={t} keys={[[3, 540, 905, 1.05], [3.4, 540, 905, 1], [7.9, 540, 905, 1.045], [8.4, 540, 860, 0.92], [11, 540, 860, 0.95]]}>
         <div style={{ position: "absolute", inset: 0, filter: `saturate(${1 - 0.5 * frz})` }}>
-          {/* rows bob gently 3-8.4 s and settle before the 9 s rings / copy trace, which are drawn on their exact positions */}
+          {/* rows bob gently from 3 s; the 9 s rings, copy trace and chip ride the same bob, so they stay on the brand names */}
           <Abs x={90} y={CY[0] + bob(t, 0)}><Comment who="jules.rx7" av={JULES} avBg="#EEDDDD" meta="3h">What turbo is that?</Comment></Abs>
           <Abs x={90} y={CY[1] + bob(t, 1)} style={pop(t, 3.0, { rise: 30 })}>
             <Comment who="boost.bri" av="car-04" avBg="#DDE3EC" meta="2h">
@@ -80,7 +80,7 @@ export const B = ({ t }) => {
             <path d={path} fill="none" stroke={RED} strokeWidth={6} strokeLinecap="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - tr} />
             {tr > 0.95 ? <path d={`M ${B2.x + B2.w + 8} ${B2.y + B2.h / 2} l 26 -22 M ${B2.x + B2.w + 8} ${B2.y + B2.h / 2} l 32 10`} stroke={RED} strokeWidth={6} strokeLinecap="round" fill="none" /> : null}
           </svg> : null}
-          {tr > 0 ? <Abs x={800} y={CY[1] + 160} style={pop(t, 10.25, { rise: 12 })}><Chip style={{ height: 60, fontSize: 30 }}>Copied</Chip></Abs> : null}
+          {tr > 0 ? <Abs x={800} y={CY[1] + 160 + bob(t, 1)} style={pop(t, 10.25, { rise: 12 })}><Chip style={{ height: 60, fontSize: 30 }}>Copied</Chip></Abs> : null}
         </div>
       </Cam>
     </AbsoluteFill>
