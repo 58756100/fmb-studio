@@ -112,7 +112,18 @@ def opening_line(text, hook):
             if screen is not None and screen < len(c):
                 q = re.search(r"[\"“]([^\"”]+)[\"”]", c[screen])
                 return q.group(1).strip() if q else strip_md(c[screen])[:120]
-        return ""
+        # no row for this hook (e.g. a beat sheet): keep looking
+    # List style: "### Hook A — question" then "- **Voice (Eric):** "line"" / "- **First 1.5 s on screen:** ..."
+    m = re.search(r"^###\s*Hook\s+" + re.escape(hook) + r"\b.*?$(.*?)(?=^#|\Z)", text, re.M | re.S | re.I)
+    if m:
+        block = m.group(1)
+        v = re.search(r"^\s*-\s*\*\*(?:Voice|Spoken)[^*]*\*\*\s*(.+)$", block, re.M | re.I)
+        if v and strip_md(v.group(1)) not in ("", "—", "-"):
+            return strip_md(v.group(1))
+        s = re.search(r"^\s*-\s*\*\*[^*]*on screen[^*]*\*\*\s*(.+)$", block, re.M | re.I)
+        if s:
+            q = re.search(r"[\"“]([^\"”]+)[\"”]", s.group(1))
+            return q.group(1).strip() if q else strip_md(s.group(1))[:120]
     return ""
 
 
