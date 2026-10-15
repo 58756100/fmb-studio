@@ -323,13 +323,15 @@
     "time_et": "12:00",
     "platform": "instagram",
     "placement": "feed",
-    "status": "posting",
+    "status": "posted",
     "render": "renders:2026-W42/X2-A.mp4",
     "week": "2026-W42",
     "caption": "Shops close. Parts get discontinued. Cars get sold. One thing about your build doesn't have to go.\n\n#carbuild #supra #jdm #carculture #projectcar",
     "pinned_comment": "If someone bought your car in 2049, what would they never find out about it?",
     "approved_at": "2026-10-13T09:46:53Z",
-    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+    "media_id": "18199696942389586",
+    "posted_at": "2026-10-15T15:49:00Z"
   },
   {
     "concept": "X2",
@@ -338,13 +340,15 @@
     "time_et": "12:00",
     "platform": "tiktok",
     "placement": "post",
-    "status": "approved",
+    "status": "drafted",
     "render": "renders:2026-W42/X2-A.mp4",
     "week": "2026-W42",
     "caption": "Shops close. Parts get discontinued. Cars get sold. One thing about your build doesn't have to go.\n\n#carbuild #supra #jdm #carculture #projectcar",
     "pinned_comment": "If someone bought your car in 2049, what would they never find out about it?",
     "approved_at": "2026-10-13T09:46:53Z",
-    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+    "publish_id": "v_inbox_file~v2.7696921528008460295",
+    "drafted_at": "2026-10-15T15:49:00Z"
   },
   {
     "concept": "X2",
@@ -415,13 +419,15 @@
     "time_et": "19:00",
     "platform": "tiktok",
     "placement": "post",
-    "status": "approved",
+    "status": "drafted",
     "render": "renders:2026-W42/C3-A.mp4",
     "week": "2026-W42",
     "caption": "41,000 miles on a 1972 240Z. A weld too new. Tape on the dash: 'ask Ray about the motor.'\n\n#datsun240z #classiccars #carhistory #carcollector #mystery",
     "pinned_comment": "Which clue would have scared you off the car, the miles, the weld, or the tape?",
     "approved_at": "2026-10-13T09:46:53Z",
-    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+    "publish_id": "v_inbox_file~v2.7696921405610412084",
+    "drafted_at": "2026-10-15T15:49:00Z"
   },
   {
     "concept": "C3",
