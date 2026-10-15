@@ -1,6 +1,6 @@
 # Image bank v2: the full library (replaces the old kit cutouts)
 
-127 images in 8 sets. Paste the MASTER PROMPT once into a new ChatGPT chat, then send one set at a time ("Set A, images A01–A10"). ChatGPT makes them one by one.
+170 images in 9 sets. Paste the MASTER PROMPT once into a new ChatGPT chat, then send one set at a time ("Set A, images A01–A10"). ChatGPT makes them one by one.
 
 You don't need to rename anything. ChatGPT is asked to zip each set itself. If it can't, download the images from the chat (or from chatgpt.com/library) and zip them yourself. Send me the zips. I identify and name each one myself, and I check transparency, size and accuracy. Anything that fails comes back as a corrected prompt.
 
@@ -108,6 +108,51 @@ G01 turbo being bolted onto an exhaust manifold in an engine bay · G02 coilover
 
 ## Set H: sprint extras (11). Send after the urgent sets.
 H01 CUTOUT red rolling mechanic's tool chest, five drawers closed, 3/4 view · H02 CUTOUT the same chest with the top drawer pulled fully open, empty drawer bed with black foam liner · H03 PHOTO 4:3 close-up of a rubber lower radiator hose with a hairline split weeping green coolant beside a hose clamp, gloved fingers squeezing it · H04 CUTOUT plain brown cardboard parts box, closed and taped across the top, 3/4 view · H05 CUTOUT paint roller loaded with white paint, wooden handle, 3/4 view · H06 PHOTO 9:16 plain light-beige painted garage wall close-up, warm work light from the left, scuffs and age, no shelves · H07 CUTOUT handheld interview microphone with a plain dark grey foam windscreen, 3/4 view · H08 PHOTO 4:3 red aftermarket rear control arm freshly bolted to a 1990s Honda Civic hatchback subframe, wheel off, on a lift, gloved hand with a torque wrench on the bolt · H09 PHOTO 4:3 throttle-cable bracket bolted to the intake manifold of a late-1980s BMW inline-six, gloved finger pointing at one bolt · H10 PHOTO 4:3 faded late-1970s colour print of a small-block V8 on an engine stand in a home garage, square white border (the photo itself looks like an old print) · H11 PHOTO 9:16 suburban two-car garage seen from the driveway in morning light, white sectional door fully open, empty bay
+
+## Set I: sprint extras from the remaining scripts (43). Send after set H.
+- I01 (S0-04) CUTOUT, empty red blow-moulded socket-set case with the lid open, one row of five empty socket slots in graduated sizes, the inside of the lid plain and flat, three-quarter view from slightly above, no text or logos
+- I02 (S0-04) CUTOUT, single chrome socket, three-quarter view, no markings
+- I03 (S0-04) PHOTO 9:16, a gravel driveway beside a weathered detached wooden garage in rural morning light, doors open, empty, no people, no text
+- I04 (S0-04) PHOTO 4:3, a four-barrel carburetor half-disassembled on a shop rag on a workbench, gloved hands holding a small jet, no text or logos
+- I05 (S0-04) PHOTO 4:3, the cab of a two-tone light blue and white 1972 Ford F-100 masked off with paper and tape in a paint booth, slightly faded 2010s phone-photo look, no text
+- I06 (S0-07) PHOTO 9:16, the view out of an open roll-up bay door of a small quick-lube shop onto a sunny parking lot with a row of parked cars nose-out, no signage, no text, no people
+- I07 (S0-10) PHOTO 4:3, interior of a silver Honda S2000 seen through the open driver's door, a black fixed-back fabric bucket seat freshly installed, harness bar behind, no text or logos
+- I08 (S0-10) CUTOUT, a blank glossy 4x6 photo print lying flat at a slight angle, back side up, plain white with faint paper texture, no text
+- I09 (S0-12) CUTOUT, plain wheel center cap, bronze finish, front three-quarter view, no logo, no text
+- I10 (S0-12) CUTOUT, the same wheel center cap in gloss black, front three-quarter view, no logo
+- I11 (S0-12) PHOTO 9:16, an empty white pegboard wall above a small parts-shop counter, warm daylight, no tools, no text
+- I12 (S0-12) PHOTO 4:3, the inside of a front wheel arch on a 1969 Camaro with a scuffed plastic liner where a tyre has rubbed, wheel turned to full lock, no text
+- I13 (S0-13) PHOTO 4:3, close-up of a twenty-year-old stainless tubular header fitted in a car, seen from below through the wheel arch, clear gold, bronze, blue and violet heat-discolouration bands along the tubes, no text or logos
+- I14 (S0-13) PHOTO 9:16, an outdoor classic car show on a mown grass field at golden hour, blurred cars in a row, no faces, no text, calm sky at the top
+- I15 (SC-01) PHOTO 4:3, a red 1993 Porsche 911 (964) dashboard seen from outside through the windshield, a blank white folded tent card standing on the dash, soft studio reflections in the glass, no text or logos
+- I16 (SC-01) CUTOUT, blank white folded tent card, three-quarter view, plain matte paper, no text
+- I17 (SC-01) PHOTO 9:16, an indoor classic car show hall, polished concrete floor, soft overhead light, blurred cars, no people, no text
+- I18 (SC-02) CUTOUT, black powder-coated steel off-road front bumper for a 2021 Ford Bronco with a winch plate, three-quarter view, no logos or text
+- I19 (SC-02) CUTOUT, off-road suspension lift kit laid out together: two long-travel shocks with coil springs and two upper control arms, three-quarter view, no logos
+- I20 (SC-02) CUTOUT, a pair of sway-bar end links, three-quarter view, no logos
+- I21 (SC-03) CUTOUT, blank white rectangular roadside sign on a single weathered wooden post, three-quarter view, no text
+- I22 (SC-03) CUTOUT, blank green highway-style road sign on two steel posts, three-quarter view, no text
+- I23 (SC-03) PHOTO 4:3, the top of a Honda S2000 four-cylinder engine with the valve cover off, a feeler gauge in a gloved hand between a cam lobe and a rocker, no text or logos
+- I24 (SC-04) CUTOUT, a crumpled red mechanic's shop rag, three-quarter view, no text or logos
+- I25 (SC-04) PHOTO 4:3, the front of a blue 2003 Subaru WRX STI with the bumper off and a front-mount intercooler core installed, silicone couplers loose and hose clamps hanging open, no text
+- I26 (SC-04) PHOTO 4:3, close-up of a bumper support bracket with one bolt visibly longer than the others, gloved finger touching it, no text
+- I27 (SC-04) PHOTO 4:3, a man's hands drying a white dinner plate with a red-checked kitchen towel at a home sink, warm evening light, no faces, no text
+- I28 (SC-05) PHOTO 4:3, the underside of a silver 1999 Nissan Skyline R34 rear section shot from directly below on a creeper: rear muffler with black rubber hangers, one hanger replaced by a hand-bent flat steel bracket painted satin black with a neat weld, work light from the side, no text
+- I29 (SC-05) CUTOUT, black mechanic's creeper with six casters, three-quarter view, no logos
+- I30 (SC-05) PHOTO 4:3, a rear differential cover with a fresh dent and scuffed paint, seen from below, no text
+- I31 (SC-06) PHOTO 9:16, a paint booth's viewing window seen from outside, the window filling the middle of the frame; inside, a single freshly sprayed glossy red car front fender on a panel stand under bright white booth light, no people, no text
+- I32 (SC-06) PHOTO 4:3, close-up of a dented red front fender on a 1990s two-seat roadster, a sharp crease above the wheel arch, in a body shop, no text or logos
+- I33 (SC-06) PHOTO 4:3, the same red roadster front fender in flat grey primer on a panel stand, masking paper taped around its edges, in a body shop, no text or logos
+- I34 (SC-07) CUTOUT, steel rolling warehouse ladder with a top platform, handrails and four casters, grey powder coat, three-quarter view, no text or logos.
+- I35 (SC-08) PHOTO 4:3, gloved hands seating an in-tank fuel pump assembly through the round access hole under the rear seat of a late-1980s BMW coupe, black rubber tank seal and lock ring visible, no text or logos
+- I36 (SC-08) CUTOUT, a short yellow wooden pencil, sharpened and slightly worn, three-quarter view, no text or logos
+- I37 (SC-08) PHOTO 9:16, a small office corner inside a parts warehouse, a plain desk under a cork board with blank pinned sheets, tall shelves of unbranded boxes through the doorway, no people, no text
+- I38 (SC-09) CUTOUT, handheld label maker, plain grey and black body with a small keyboard, a short strip of blank white label tape coming out of the top, three-quarter view, no brand, no text, blank screen
+- I39 (SC-09) PHOTO 9:16, the front counter of a small independent auto parts store, shelves of unbranded boxes behind it, warm light, a register with a blank screen, no people, no signs or text
+- I40 (SC-09) CUTOUT, a man in his 20s seen from behind, waist-up, black hoodie with the hood down, short dark hair, a small cardboard box under one arm, no logos
+- I41 (SC-10) CUTOUT, 1967 Ford Mustang fastback, dark highland green, hood fully open and raised, front 3/4 view, the plain underside of the hood clearly visible, no badges or plates
+- I42 (SC-10) PHOTO 4:3, close-up of a small black automotive relay with a scorched, melted corner, held between gloved fingers above an empty car battery tray, no text or logos
+- I43 (SC-10) PHOTO 9:16, a small-town main street at golden hour with a two-bay independent garage on the right, one bay door open, an empty road in front, no people, no signs or readable text
 
 ---
 
