@@ -1,6 +1,6 @@
 # Image bank v2: the full library (replaces the old kit cutouts)
 
-116 images in 7 sets. Paste the MASTER PROMPT once into a new ChatGPT chat, then send one set at a time ("Set A, images A01–A10"). ChatGPT makes them one by one.
+127 images in 8 sets. Paste the MASTER PROMPT once into a new ChatGPT chat, then send one set at a time ("Set A, images A01–A10"). ChatGPT makes them one by one.
 
 You don't need to rename anything. ChatGPT is asked to zip each set itself. If it can't, download the images from the chat (or from chatgpt.com/library) and zip them yourself. Send me the zips. I identify and name each one myself, and I check transparency, size and accuracy. Anything that fails comes back as a corrected prompt.
 
@@ -105,6 +105,9 @@ F01 clean independent garage bay, car lift empty, morning light · F02 home gara
 ## Set G: work-in-progress photos, PHOTO 4:3 (12)
 Each shows the work clearly, hands in gloves allowed, no faces.
 G01 turbo being bolted onto an exhaust manifold in an engine bay · G02 coilover being installed, wheel off, car on a lift · G03 brake caliper bolted on, the caliper clearly visible · G04 engine hanging from a hoist above an empty bay · G05 interior with seats removed, cage being fitted · G06 fresh wheel alignment on an alignment rack · G07 oil leak at a head-gasket seam, close-up · G08 underside view of a cat-back exhaust, hangers visible · G09 wiring loom spread on a bench being labelled with blank tags · G10 car on a dyno, rear wheels on rollers · G11 freshly painted panel drying in a booth · G12 finished engine bay, clean and detailed
+
+## Set H: sprint extras (11). Send after the urgent sets.
+H01 CUTOUT red rolling mechanic's tool chest, five drawers closed, 3/4 view · H02 CUTOUT the same chest with the top drawer pulled fully open, empty drawer bed with black foam liner · H03 PHOTO 4:3 close-up of a rubber lower radiator hose with a hairline split weeping green coolant beside a hose clamp, gloved fingers squeezing it · H04 CUTOUT plain brown cardboard parts box, closed and taped across the top, 3/4 view · H05 CUTOUT paint roller loaded with white paint, wooden handle, 3/4 view · H06 PHOTO 9:16 plain light-beige painted garage wall close-up, warm work light from the left, scuffs and age, no shelves · H07 CUTOUT handheld interview microphone with a plain dark grey foam windscreen, 3/4 view · H08 PHOTO 4:3 red aftermarket rear control arm freshly bolted to a 1990s Honda Civic hatchback subframe, wheel off, on a lift, gloved hand with a torque wrench on the bolt · H09 PHOTO 4:3 throttle-cable bracket bolted to the intake manifold of a late-1980s BMW inline-six, gloved finger pointing at one bolt · H10 PHOTO 4:3 faded late-1970s colour print of a small-block V8 on an engine stand in a home garage, square white border (the photo itself looks like an old print) · H11 PHOTO 9:16 suburban two-car garage seen from the driveway in morning light, white sectional door fully open, empty bay
 
 ---
 
