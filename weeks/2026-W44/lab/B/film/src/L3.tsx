@@ -15,7 +15,8 @@ import { lensZoom } from "./remocn/lens-zoom";
 const CAR = "car-01", JULES = "car-13";
 const TURBO = { zoom: 2.05, fx: 0.3, fy: 0.475 }; // turbo inside the part-01 kit shot (checked on stills)
 const Turbo = ({ w, h = w, r = 34, label = true }) => (
-  <Photo id="part-01" w={w} h={h} r={r} bg="linear-gradient(180deg,#FFFFFF 0%,#F4F4F6 60%,#EBEBEE 100%)" {...TURBO}>
+  <Photo id="part-01" w={w} h={h} r={r} bg="linear-gradient(180deg,#FFFFFF 0%,#F4F4F6 60%,#EBEBEE 100%)" {...TURBO}
+    zoom={TURBO.zoom * (1 + 0.06 * Math.sin((2 * Math.PI * (window.__T || 0)) / 5))}>{/* slow Ken Burns: 0 at t = 0 and t = 30, moving at the loop seam */}
     {label ? <div style={{ position: "absolute", left: 24, top: 20 }}><Label style={{ fontSize: 28 }}>Turbo · detail</Label></div> : null}
   </Photo>
 );
@@ -46,6 +47,7 @@ export const A = ({ t }) => {
 
 // ---------------------------------------------------------------- B · first reply, next reply, same guess copied (3-11)
 const CY = [500, 770, 1040];
+const bob = (t, k) => 13 * Math.sin((2 * Math.PI * (t - 3)) / 2.6 + k * 2.1) * lin(t, 3.0, 3.6) * (1 - lin(t, 8.0, 8.5));
 const R1 = "Demo Brand B, I think";
 export const B = ({ t }) => {
   const frz = eo(lin(t, 8.0, 8.35));
@@ -59,15 +61,16 @@ export const B = ({ t }) => {
   const path = `M ${B1.x + B1.w} ${B1.y + B1.h / 2} C ${B1.x + B1.w + 260} ${B1.y + 20}, ${B2.x + B2.w + 200} ${B2.y - 40}, ${B2.x + B2.w + 8} ${B2.y + B2.h / 2}`;
   return (
     <AbsoluteFill>
-      <Cam t={t} keys={[[3, 540, 905, 1.05], [3.4, 540, 905, 1], [7.9, 540, 905, 1.02], [8.4, 540, 860, 0.92], [11, 540, 860, 0.93]]}>
+      <Cam t={t} keys={[[3, 540, 905, 1.05], [3.4, 540, 905, 1], [7.9, 540, 905, 1.045], [8.4, 540, 860, 0.92], [11, 540, 860, 0.93]]}>
         <div style={{ position: "absolute", inset: 0, filter: `saturate(${1 - 0.5 * frz})` }}>
-          <Abs x={90} y={CY[0]}><Comment who="jules.rx7" av={JULES} avBg="#EEDDDD" meta="3h">What turbo is that?</Comment></Abs>
-          <Abs x={90} y={CY[1]} style={pop(t, 3.0, { rise: 30 })}>
+          {/* rows bob gently 3-8.4 s and settle before the 9 s rings / copy trace, which are drawn on their exact positions */}
+          <Abs x={90} y={CY[0] + bob(t, 0)}><Comment who="jules.rx7" av={JULES} avBg="#EEDDDD" meta="3h">What turbo is that?</Comment></Abs>
+          <Abs x={90} y={CY[1] + bob(t, 1)} style={pop(t, 3.0, { rise: 30 })}>
             <Comment who="boost.bri" av="car-04" avBg="#DDE3EC" meta="2h">
               {t < 4.0 ? <Dots t={t} /> : <><span>{brand1}</span><span style={{ color: mix(0, 1, grey) ? `rgba(134,134,139,${0.4 + 0.6 * grey})` : undefined, fontStyle: grey > 0.5 ? "italic" : "normal" }}>{rest1}</span>{t < 4.95 ? <Caret t={t} h={50} /> : null}</>}
             </Comment>
           </Abs>
-          {t >= 6.0 ? <Abs x={90} y={CY[2]} style={{ ...pop(t, 6.0, { rise: 30 }), transform: `${pop(t, 6.0, { rise: 30 }).transform} scale(${firm})` }}>
+          {t >= 6.0 ? <Abs x={90} y={CY[2] + bob(t, 2)} style={{ ...pop(t, 6.0, { rise: 30 }), transform: `${pop(t, 6.0, { rise: 30 }).transform} scale(${firm})` }}>
             <Comment who="k.yamada" av="car-12" avBg="#E7E7E7" meta="1h">
               {t < 7.0 ? <Dots t={t} /> : <Strike t={t} t0={7.0} dur={0.55} from={<span style={{ color: GREY }}>Demo Brand B, I think</span>} to={<b style={{ fontWeight: 600 }}>Definitely Demo Brand B.</b>} fontSize={48} />}
             </Comment>
@@ -209,7 +212,7 @@ export const H = ({ t }) => {
             </div></Abs> : null}
         </> : <>
           <Abs x={90} y={580} style={pop(t, 29.0, { rise: 0, s0: 0.96 })}><Turbo w={400} /></Abs>
-          <Abs x={520} y={700} style={pop(t, 29.06, { rise: 20 })}><JulesQ t={t} w={470} /></Abs>
+          <Abs x={520} y={700 + 10 * Math.sin((2 * Math.PI * t) / 2.5)} style={pop(t, 29.06, { rise: 20 })}><JulesQ t={t} w={470} /></Abs>
         </>}
       </Cam>
       {cta ? <Abs x={0} y={440} w={1080} style={{ display: "flex", justifyContent: "center", ...pop(t, 28.0, { rise: 20, s0: 0.85 }) }}>

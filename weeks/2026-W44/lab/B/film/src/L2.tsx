@@ -17,13 +17,16 @@ const hitPulse = (t, t0) => 1 + 0.035 * Math.sin(Math.PI * clamp((t - t0) / 0.26
 const ShopLabel = ({ name, letter, style }) => (
   <div style={{ display: "flex", alignItems: "center", gap: 14, ...style }}><Avatar id={`letter:${letter}`} size={60} /><div style={{ fontSize: 40, fontWeight: 600, letterSpacing: "-.025em", color: INK }}>{name}</div></div>
 );
+// both cars drift identically (same car, same photo) on a 5 s sine of absolute time: 0 at t = 0 and t = 30 (loop-safe)
+const bobY = (t) => 9 * Math.sin((2 * Math.PI * t) / 2.5); // both tiles + labels together, loop-safe
+const drift5 = (t) => `${(18 * Math.sin((2 * Math.PI * t) / 5)).toFixed(2)}px 0`;
 // the paired shop tiles; lab = label progress per tile, off = B-tile y offset (for the alignment beat)
 const Pair = ({ t, t0 = -1, lab = [1, 1], off = 0, under = null }) => (
   <>
-    <Abs x={TA.x} y={TA.y} style={{ transform: `scale(${t0 >= 0 ? hitPulse(t, t0) : 1})` }}><Photo id={CAR} w={TA.w} h={TA.h} r={32} fit={0.9} /></Abs>
-    <Abs x={TB.x} y={TB.y + off} style={{ transform: `scale(${t0 >= 0 ? hitPulse(t, t0 + 0.13) : 1})` }}><Photo id={CAR} w={TB.w} h={TB.h} r={32} fit={0.9} /></Abs>
-    <Abs x={TA.x + 10} y={TA.y + TA.h + 30} style={{ opacity: clamp(lab[0] * 1.6), transform: `translateY(${(1 - lab[0]) * 24}px)` }}><ShopLabel name="Shop A" letter="A" /></Abs>
-    <Abs x={TB.x + 10} y={TB.y + TB.h + 30 + off} style={{ opacity: clamp(lab[1] * 1.6), transform: `translateY(${(1 - lab[1]) * 24}px)` }}><ShopLabel name="Shop B" letter="B" /></Abs>
+    <Abs x={TA.x} y={TA.y + bobY(t)} style={{ transform: `scale(${t0 >= 0 ? hitPulse(t, t0) : 1})` }}><Photo id={CAR} w={TA.w} h={TA.h} r={32} fit={0.9} imgStyle={{ translate: drift5(t) }} /></Abs>
+    <Abs x={TB.x} y={TB.y + off + bobY(t)} style={{ transform: `scale(${t0 >= 0 ? hitPulse(t, t0 + 0.13) : 1})` }}><Photo id={CAR} w={TB.w} h={TB.h} r={32} fit={0.9} imgStyle={{ translate: drift5(t) }} /></Abs>
+    <Abs x={TA.x + 10} y={TA.y + TA.h + 30 + bobY(t)} style={{ opacity: clamp(lab[0] * 1.6), transform: `translateY(${(1 - lab[0]) * 24}px)` }}><ShopLabel name="Shop A" letter="A" /></Abs>
+    <Abs x={TB.x + 10} y={TB.y + TB.h + 30 + off + bobY(t)} style={{ opacity: clamp(lab[1] * 1.6), transform: `translateY(${(1 - lab[1]) * 24}px)` }}><ShopLabel name="Shop B" letter="B" /></Abs>
     {under}
   </>
 );
@@ -66,7 +69,7 @@ export const C = ({ t }) => {
   const gd = lin(t, 5.0, 5.2) * (1 - 0.6 * lin(t, 6.0, 6.3));
   const cr = [spring(t, 7.0, 210, 18), spring(t, 7.1, 210, 18)];
   const credit = (x, k) => (
-    <Abs x={x} y={1160} style={{ opacity: clamp(cr[k] * 1.5), transform: `translateY(${(1 - cr[k]) * 20}px)` }}>
+    <Abs x={x} y={1160 + bobY(t)} style={{ opacity: clamp(cr[k] * 1.5), transform: `translateY(${(1 - cr[k]) * 20}px)` }}>
       <div style={{ width: 440, borderRadius: 30, border: "4px dashed rgba(134,134,139,.7)", padding: "20px 24px", background: "rgba(255,255,255,.6)" }}>
         <div style={{ fontSize: 28, color: GREY, fontWeight: 500 }}>Who did the work</div>
         <div style={{ fontSize: 40, color: "#AEAEB2", fontWeight: 600, letterSpacing: "-.02em" }}>No credit</div>
@@ -77,13 +80,13 @@ export const C = ({ t }) => {
       <ProductWindow><Cam t={t} keys={[[4, 540, 905, 1.05], [4.4, 540, 905, 1], [6.0, 540, 905, 1], [6.6, 540, 1080, 1.06], [8, 540, 1090, 1.07]]}>
         <Pair t={t} t0={4.0} off={off} under={<>
           {gd > 0 ? <svg width={1080} height={1920} style={{ position: "absolute", left: 0, top: 0 }}>
-            {[TA.y, TA.y + TA.h].map((y, i) => <line key={i} x1={60} x2={1020} y1={y} y2={y} stroke={RED} strokeWidth={3} strokeDasharray="14 10" opacity={gd} />)}
+            {[TA.y, TA.y + TA.h].map((y, i) => <line key={i} x1={60} x2={1020} y1={y + bobY(t)} y2={y + bobY(t)} stroke={RED} strokeWidth={3} strokeDasharray="14 10" opacity={gd} />)}
           </svg> : null}
           {credit(TA.x, 0)}{credit(TB.x, 1)}
         </>} />
         <Tap t={t} t0={4.0} x={TA.x + TA.w / 2} y={TA.y + TA.h / 2} /><Tap t={t} t0={4.13} x={TB.x + TB.w / 2} y={TB.y + TB.h / 2} />
       </Cam></ProductWindow>
-      <TrimBurst t={t} t0={5.0} x={540} y={TA.y + TA.h / 2} inner={20} reach={46} count={8} weight={5} />
+      <TrimBurst t={t} t0={5.0} x={540} y={TA.y + TA.h / 2 + bobY(t)} inner={20} reach={46} count={8} weight={5} />
     </AbsoluteFill>
   );
 };

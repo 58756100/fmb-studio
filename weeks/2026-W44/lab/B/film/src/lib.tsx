@@ -275,10 +275,11 @@ export const Shots = ({ t, shots }) => {
     else if (tout && t > sc.b - Lout / 2) node = <Wrap tr={tout} prog={clamp((t - (sc.b - Lout / 2)) / Lout)} dir="exiting">{node}</Wrap>;
     layers.push(<AbsoluteFill key={i}>{node}</AbsoluteFill>);
   });
-  // handheld breathe for every shot (not the headline, subtitles or label). Periods 5 / 6 / 7.5 s divide 30 s and every
-  // term is 0 at t = 0, so frame 0 is unchanged and the 29-30 loop lands back on it seamlessly.
-  const k = 1 + 0.016 * (0.5 - 0.5 * Math.cos((2 * Math.PI * t) / 5));
-  const dx = 6 * Math.sin((2 * Math.PI * t) / 7.5), dy = 7 * Math.sin((2 * Math.PI * t) / 6);
+  // handheld breathe for every shot (not the headline, subtitles or label): a 7 px circular drift (constant speed, so it
+  // never slows to a stop) plus a 1.4 % scale breathe. Periods 5 / 7.5 s divide 30 s and every term is 0 at t = 0, so frame 0
+  // is unchanged and the 29-30 loop lands back on it seamlessly.
+  const k = 1 + 0.014 * (0.5 - 0.5 * Math.cos((2 * Math.PI * t) / 7.5));
+  const dx = 7 * Math.sin((2 * Math.PI * t) / 5), dy = 7 * (1 - Math.cos((2 * Math.PI * t) / 5));
   return <AbsoluteFill style={{ transform: `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${k.toFixed(5)})`, transformOrigin: "540px 905px" }}>{layers}</AbsoluteFill>;
 };
 

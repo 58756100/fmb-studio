@@ -28,6 +28,7 @@ const Video = ({ id }) => {
   const [h] = useState(() => delayRender("assets"));
   useEffect(() => { load().then(() => { setOk(true); continueRender(h); }); }, []);
   const [M, D] = VIDS[id];
+  if (typeof window !== "undefined") window.__T = t; // absolute time for loop-safe idle life inside shots
   if (!ok) return <AbsoluteFill style={{ background: BG }} />;
   return (
     <AbsoluteFill style={{ background: BG, fontFamily: "Inter, sans-serif", overflow: "hidden" }}>
