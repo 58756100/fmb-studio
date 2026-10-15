@@ -43,7 +43,8 @@ export const A = ({ t, a }) => {
     <AbsoluteFill>
       <Cam t={lt} keys={cam}>
         <Abs x={100} y={470}><Inquiry attachO={p > 0 ? 0 : 1} /></Abs>
-        <Abs x={90} y={1030}><Tile id={CAR} w={900} h={330} r={36} fit={0.62} floor={0.12} /></Abs>
+        {/* loop-safe life: the car drifts on a 5 s sine of absolute time (0 at t = 0 and t = 30), so frame 0 and the loop pose match */}
+        <Abs x={90} y={1030}><Tile id={CAR} w={900} h={330} r={36} fit={0.62} floor={0.12} imgStyle={{ translate: `${(10 * Math.sin((2 * Math.PI * t) / 5)).toFixed(2)}px 0` }} /></Abs>
       </Cam>
       {t >= 0.98 && !loop ? <>
         <AbsoluteFill style={{ background: `rgba(245,245,247,${0.92 * p})` }} />

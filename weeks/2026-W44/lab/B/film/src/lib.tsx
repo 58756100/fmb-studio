@@ -210,7 +210,7 @@ export const Headline = ({ t, heads, cy = HEAD_CY }) => {
     const words = parse(text);
     const still = o.still || t0 === 0; // frame 0: the hook is already on screen
     const n = words.length;
-    const creep = 1 + 0.018 * eo(lin(t, t0 + 0.3, Math.min(t1, t0 + 3)));
+    const creep = 1 + 0.018 * eo(lin(t, t0 + 0.3, Math.min(t1, t0 + 3))) * (1 - lin(t, 29.4, 29.97)); // back to 1 for the loop seam
     out.push(
       <div key={i} style={{ position: "absolute", left: SAFE_L - 40, right: 1080 - SAFE_R - 40, top: cy - size * 0.56, textAlign: "center", fontWeight: 600, fontSize: size, lineHeight: 1.08,
         letterSpacing: "-.038em", color: INK, fontVariationSettings: "'opsz' 32", whiteSpace: "nowrap", willChange: "transform", transform: `scale(${creep.toFixed(4)})` }}>
@@ -277,8 +277,8 @@ export const Shots = ({ t, shots }) => {
   });
   // handheld breathe for every shot (not the headline, subtitles or label). Periods 5 / 6 / 7.5 s divide 30 s and every
   // term is 0 at t = 0, so frame 0 is unchanged and the 29-30 loop lands back on it seamlessly.
-  const k = 1 + 0.012 * (0.5 - 0.5 * Math.cos((2 * Math.PI * t) / 5));
-  const dx = 4 * Math.sin((2 * Math.PI * t) / 7.5), dy = 5 * Math.sin((2 * Math.PI * t) / 6);
+  const k = 1 + 0.016 * (0.5 - 0.5 * Math.cos((2 * Math.PI * t) / 5));
+  const dx = 6 * Math.sin((2 * Math.PI * t) / 7.5), dy = 7 * Math.sin((2 * Math.PI * t) / 6);
   return <AbsoluteFill style={{ transform: `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${k.toFixed(5)})`, transformOrigin: "540px 905px" }}>{layers}</AbsoluteFill>;
 };
 
