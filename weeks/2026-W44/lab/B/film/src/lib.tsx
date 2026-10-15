@@ -196,6 +196,10 @@ export const parse = (s) => { let mode = null; return s.split(" ").map((w) => {
   const c = mode === "*" ? RED : mode === "~" ? GREY : undefined;
   if (mode && body.includes(mode)) mode = null;
   return { w: w.replace(/[*~]/g, ""), c }; }); };
+// Always alive (2026-10-14): words spring up 4 frames apart with a little overshoot (motion blur from their speed),
+// red key words get a kinetic pop, a held headline breathes (slow scale creep), and each word leaves on its own
+// 1-frame stagger inside the same last 0.2 s (rise + fade + blur), so cue timing is unchanged.
+const sprF = (f, z = 0.55, w = 0.42) => { if (f <= 0) return 0; const wd = w * Math.sqrt(1 - z * z); return 1 - Math.exp(-z * w * f) * (Math.cos(wd * f) + ((z * w) / wd) * Math.sin(wd * f)); };
 export const Headline = ({ t, heads, cy = HEAD_CY }) => {
   const out = [];
   heads.forEach(([t0, text, o = {}], i) => {
@@ -205,14 +209,25 @@ export const Headline = ({ t, heads, cy = HEAD_CY }) => {
     const size = o.size || fitSize(text, o.max || 112);
     const words = parse(text);
     const still = o.still || t0 === 0; // frame 0: the hook is already on screen
-    const ex = t1 < 1e8 ? lin(t, t1 - 0.2, t1) : 0;
+    const n = words.length;
+    const creep = 1 + 0.018 * eo(lin(t, t0 + 0.3, Math.min(t1, t0 + 3)));
     out.push(
       <div key={i} style={{ position: "absolute", left: SAFE_L - 40, right: 1080 - SAFE_R - 40, top: cy - size * 0.56, textAlign: "center", fontWeight: 600, fontSize: size, lineHeight: 1.08,
-        letterSpacing: "-.038em", color: INK, fontVariationSettings: "'opsz' 32", whiteSpace: "nowrap", willChange: "transform" }}>
+        letterSpacing: "-.038em", color: INK, fontVariationSettings: "'opsz' 32", whiteSpace: "nowrap", willChange: "transform", transform: `scale(${creep.toFixed(4)})` }}>
         {words.map((w, j) => {
-          const p = still ? 1 : eo(lin(t, t0 + j * 0.1, t0 + j * 0.1 + 0.3));
-          return <span key={j} style={{ display: "inline-block", whiteSpace: "pre", color: w.c, opacity: p * (1 - ex), filter: `blur(${(1 - p) * 12 + ex * 10}px)`,
-            transform: `translateY(${(1 - p) * 0.22 - ex * 0.28}em)` }}>{w.w}{j < words.length - 1 ? " " : ""}</span>;
+          const popW = w.c === RED && !still;
+          const f = still ? 99 : (t - t0) * FPS - j * 4;
+          const z = popW ? 0.36 : 0.55, ww = popW ? 0.38 : 0.42;
+          const p = sprF(f, z, ww), v = sprF(f + 0.5, z, ww) - sprF(f - 0.5, z, ww);
+          const o1 = still ? 1 : clamp(f / 5);
+          // exit: word j starts j frames into the last 0.2 s and is gone 4 frames later
+          const xs = t1 < 1e8 ? t1 - 0.2 + j * Math.min(1, 2 / Math.max(1, n - 1)) / FPS : 1e9;
+          const ex = clamp((t - xs) / (4 / FPS));
+          const y = (popW ? Math.max(0, 1 - p) : 1 - p) * 0.22 - ex * 0.28;
+          const sc = popW ? 0.6 + 0.4 * p : 1;
+          const blur = Math.min(10, Math.abs(v) * 0.22 * size * 0.3) + (1 - o1) * 8 + ex * 10;
+          return <span key={j} style={{ display: "inline-block", whiteSpace: "pre", color: w.c, opacity: o1 * (1 - ex), filter: blur > 0.3 ? `blur(${blur.toFixed(2)}px)` : undefined,
+            transform: `translateY(${y.toFixed(4)}em)${sc !== 1 ? ` scale(${(0.92 + 0.08 * p).toFixed(4)}, ${sc.toFixed(4)})` : ""}`, transformOrigin: "50% 20%" }}>{w.w}{j < n - 1 ? " " : ""}</span>;
         })}
       </div>);
   });
@@ -225,13 +240,17 @@ export const Subtitles = ({ t, subs, bottom = 1530 }) => {
   const s = subs.find(([a, b]) => t >= a - 0.001 && t < b);
   if (!s) return null;
   const [a, b, text] = s;
-  const p = eo(lin(t, a, a + 0.18)), q = lin(t, b - 0.14, b);
+  // plate springs in; words reveal in reading order across the spoken part of the window (weighted by length)
+  const p = clamp(sprF((t - a) * FPS, 0.6, 0.5)), ps = sprF((t - a) * FPS, 0.6, 0.5), q = lin(t, b - 0.14, b);
   const words = parse(text);
+  const wt = words.map((w) => w.w.length + 1), tot = wt.reduce((x, y) => x + y, 0), span = Math.min(0.8 * (b - a), 0.3 * words.length + 0.15);
+  let acc = 0; const st = wt.map((w) => { const v = a + 0.02 + (span * acc) / tot; acc += w; return v; });
   return (
     <div style={{ position: "absolute", left: SAFE_L, right: 1080 - SAFE_R, top: 0, height: bottom, display: "flex", alignItems: "flex-end", justifyContent: "center", pointerEvents: "none" }}>
       <div style={{ maxWidth: SAFE_R - SAFE_L, padding: "16px 30px 18px", borderRadius: 28, background: "rgba(255,255,255,.94)", boxShadow: "0 0 0 1px rgba(0,0,0,.06), 0 8px 18px -10px rgba(0,0,0,.16)",
-        textAlign: "center", fontSize: 46, fontWeight: 600, lineHeight: 1.18, letterSpacing: "-.025em", color: INK, opacity: p * (1 - q), filter: `blur(${(1 - p) * 6 + q * 4}px)`, transform: `translateY(${(1 - p) * 10}px)` }}>
-        {words.map((w, j) => <span key={j} style={{ color: w.c }}>{w.w}{j < words.length - 1 ? " " : ""}</span>)}
+        textAlign: "center", fontSize: 46, fontWeight: 600, lineHeight: 1.18, letterSpacing: "-.025em", color: INK, opacity: p * (1 - q), filter: `blur(${(1 - p) * 6 + q * 4}px)`, transform: `translateY(${(1 - ps) * 10}px) scale(${(0.96 + 0.04 * ps).toFixed(4)})` }}>
+        {words.map((w, j) => { const f = (t - st[j]) * FPS, e = sprF(f, 0.6, 0.55), o = clamp(f / 4);
+          return <span key={j} style={{ color: w.c, display: "inline-block", whiteSpace: "pre", opacity: o, transform: `translateY(${((1 - e) * 14).toFixed(2)}px)` }}>{w.w}{j < words.length - 1 ? " " : ""}</span>; })}
       </div>
     </div>
   );
@@ -256,7 +275,11 @@ export const Shots = ({ t, shots }) => {
     else if (tout && t > sc.b - Lout / 2) node = <Wrap tr={tout} prog={clamp((t - (sc.b - Lout / 2)) / Lout)} dir="exiting">{node}</Wrap>;
     layers.push(<AbsoluteFill key={i}>{node}</AbsoluteFill>);
   });
-  return <>{layers}</>;
+  // handheld breathe for every shot (not the headline, subtitles or label). Periods 5 / 6 / 7.5 s divide 30 s and every
+  // term is 0 at t = 0, so frame 0 is unchanged and the 29-30 loop lands back on it seamlessly.
+  const k = 1 + 0.012 * (0.5 - 0.5 * Math.cos((2 * Math.PI * t) / 5));
+  const dx = 4 * Math.sin((2 * Math.PI * t) / 7.5), dy = 5 * Math.sin((2 * Math.PI * t) / 6);
+  return <AbsoluteFill style={{ transform: `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${k.toFixed(5)})`, transformOrigin: "540px 905px" }}>{layers}</AbsoluteFill>;
 };
 
 // product window: soft-masks a shot to y 440-1430 so camera pushes never cross the headline band or the subtitles
