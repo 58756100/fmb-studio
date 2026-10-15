@@ -3,7 +3,7 @@
 import React from "react";
 import { Film, Headline, Photo, Box, Img, Tag, track, prog, E, mono, ui, fit, UI, MONO } from "./lib";
 import { valueIn } from "./remocn";
-import { Words, Chars, idle, idleT, Stage, Unstage } from "./alive";
+import { Words, Chars, idle, idleT, Stage, Unstage, endAmt } from "./alive";
 // one shared float per host card, so fields and thumbs ride with the card they sit on (job card 5-15, build page 16-28)
 const HOST = (t) => (t < 15.5 ? { seed: 3, y: 8, r: 0.15 } : { seed: 5, y: 8, r: 0.15 });
 const hostY = (t) => { const h = HOST(t); return idle(t, h.seed, { y: h.y }).y; };
@@ -168,7 +168,7 @@ export const L2 = () => (
       return (
         <>
           <Headline t={t} cues={HEAD} pal={pal} emph={["WHICH", "JUDGE", "WORK", "MORE", "CONNECTED", "UNTIL"]} />
-          <Stage t={t}>
+          <Stage t={t} amt={endAmt(t)}>
           {/* build page frame (18-28) */}
           <Box s={G} v z={1} live={HOST(19)} sweep={{ alpha: 0.11, period: 2.4, seed: 4 }} style={{ background: pal.pn, boxShadow: `inset 0 0 0 2px ${pal.tx}38` }}>
             {t >= 19 && <Chars t={t} t0={19} text="FuelMyBuild" style={{ position: "absolute", left: 24, top: 12, ...ui(56) }} stagger={1.5} rise={24} />}
@@ -201,7 +201,7 @@ export const L2 = () => (
             <div style={lab(t < 21 ? 44 : 48)}>PUBLIC URL · DEMO</div>
             {t >= 21 && <div style={{ ...mono(58), marginTop: 12, lineHeight: 1.22 }}><Chars t={t} t0={21.1} text="fuelmybuild.com/" stagger={0.8} /><br /><Chars t={t} t0={21.3} text="demo-miata" stagger={1} /></div>}
           </Box>
-          <Unstage t={t}>{t >= 25 && <div style={{ position: "absolute", left: 96, top: 1078, width: 784, ...ui(50), lineHeight: 1.12, zIndex: 8 }}>
+          <Unstage t={t} amt={endAmt(t)}>{t >= 25 && <div style={{ position: "absolute", left: 96, top: 1078, width: 784, ...ui(50), lineHeight: 1.12, zIndex: 8 }}>
             <Words t={t} t0={25} text="FOLLOW FuelMyBuild" style={{ display: "block" }} pops={(w) => w === "FOLLOW"} />
             {t >= 26 && <Words t={t} t0={26} text="BETTER BUILD RECORDS" style={{ display: "block" }} />}
           </div>}</Unstage>

@@ -3,7 +3,7 @@
 import React from "react";
 import { clamp, Film, Headline, Photo, Cut, Box, Img, Tag, track, prog, E, mono, ui, fit, UI, MONO } from "./lib";
 import { valueIn, StrikeReplace, Caret } from "./remocn";
-import { Stage, Unstage, Words, Chars, idle, idleT, mb } from "./alive";
+import { Stage, Unstage, endAmt, Words, Chars, idle, idleT, mb } from "./alive";
 // the mockup (8-18) floats as one: fields, title, tag and rule ride its float so nothing slides against the card
 const MPL = { seed: 5, y: 11, r: 0.2 };
 const hostY = (t) => idle(t, MPL.seed, { y: MPL.y }).y;
@@ -28,7 +28,7 @@ const Bubble = ({ s, children, z = 6, seed = 0 }) => {
   if (!s || s.o <= 0.001) return null;
   const fs = s.fs || 54;
   return (
-    <div style={{ position: "absolute", left: s.x + (s.dx || 0), top: s.y, opacity: s.o, zIndex: z, transform: `scale(${s.s ?? 1}) ${idleT(window.__T || 0, seed, { y: 8 })}`, transformOrigin: "0% 100%", filter: mb(s.vx, 0) }}>
+    <div style={{ position: "absolute", left: s.x + (s.dx || 0), top: s.y, opacity: s.o, zIndex: z, transform: `scale(${s.s ?? 1}) ${idleT(window.__T || 0, seed, { y: 12 })}`, transformOrigin: "0% 100%", filter: mb(s.vx, 0) }}>
       <div style={{ display: "inline-block", whiteSpace: "nowrap", ...ui(fs, { lineHeight: 1.12 }), padding: `${fs * 0.4}px ${fs * 0.62}px`, borderRadius: fs * 0.62,
         background: `color-mix(in srgb, ${pal.pn} ${Math.round((s.bg ?? 1) * 100)}%, transparent)` }}>{children}</div>
     </div>
@@ -114,7 +114,7 @@ export const L3 = () => (
       return (
         <>
           <Headline t={t} cues={HEAD} pal={pal} emph={["GUESS", "ANSWER?", "ANSWER", "MISSING?", "BRAND", "FACT", "MOST?"]} />
-          <Stage t={t}>
+          <Stage t={t} amt={endAmt(t)}>
           {/* 0-6 the argument */}
           <Photo s={{ ...PH, y: PH.y + PH.dy, vy: PH.vy }} name={CAR} aspect={CAR_A} pal={pal} z={t >= 21 ? 4 : 2} seed={1} kb={PH.h < 300 ? 1.6 : 1} />
           {/* mockup crop / build page (8-18) */}
@@ -122,7 +122,7 @@ export const L3 = () => (
             {t >= 14 && <Chars t={t} t0={14} text="FuelMyBuild" style={{ position: "absolute", left: 34, top: 14, ...ui(56) }} stagger={1.5} rise={24} />}
           </Box>
           <Cut s={{ ...K, dy: (K.dy || 0) + (t >= 8 && t < 18 ? hostY(t) : 0) }} name={KIT} aspect={KIT_A} z={4} seed={2} sway={1.7} />
-          <Unstage t={t}><Box s={{ x: 96, y: 930, w: 784, h: 220, o: EBF.o, dy: EBF.dy }} z={5}>
+          <Unstage t={t} amt={endAmt(t)}><Box s={{ x: 96, y: 930, w: 784, h: 220, o: EBF.o, dy: EBF.dy }} z={5}>
             <div style={lab(52)}>BRAND</div>
             <div style={{ height: 120, border: `4px dashed ${pal.tx}88`, boxSizing: "border-box", marginTop: 8, padding: "18px 24px" }}><Caret t={t} t0={7} color={pal.em} w={8} h={76} /></div>
           </Box></Unstage>
@@ -158,8 +158,8 @@ export const L3 = () => (
           <Bubble s={QB} seed={1}>{t >= 18 && t < 18.6 ? <Words t={t} t0={18.0} text="What turbo is that?" stagger={3} rise={20} /> : "What turbo is that?"}</Bubble>
           <Bubble s={R1} seed={2}>Brand B, I think.</Bubble>
           <Bubble s={R2} z={7} seed={3}>{t < 3 ? "Brand B, I think." : <StrikeReplace t={t} t0={3.0} dur={0.75} from="Brand B, I think." to="Brand B" lineColor={pal.tx} />}</Bubble>
-          <Unstage t={t}><Bubble s={LK} seed={4}><span style={{ display: "block" }}><Chars t={t} t0={19.08} text="fuelmybuild.com/demo-supra" stagger={0.6} rise={14} /></span><span style={{ display: "block", ...mono(44, { opacity: 0.8 }) }}>(DEMO)</span></Bubble></Unstage>
-          <Unstage t={t}>{t >= 25 && <div style={{ position: "absolute", left: 96, top: 1080, width: 784, ...ui(50), lineHeight: 1.12, zIndex: 8 }}>
+          <Unstage t={t} amt={endAmt(t)}><Bubble s={LK} seed={4}><span style={{ display: "block" }}><Chars t={t} t0={19.08} text="fuelmybuild.com/demo-supra" stagger={0.6} rise={14} /></span><span style={{ display: "block", ...mono(44, { opacity: 0.8 }) }}>(DEMO)</span></Bubble></Unstage>
+          <Unstage t={t} amt={endAmt(t)}>{t >= 25 && <div style={{ position: "absolute", left: 96, top: 1080, width: 784, ...ui(50), lineHeight: 1.12, zIndex: 8 }}>
             <Words t={t} t0={25} text="FOLLOW FuelMyBuild" style={{ display: "block" }} pops={(w) => w === "FOLLOW"} />
             {t >= 26 && <Words t={t} t0={26} text="BETTER BUILD RECORDS" style={{ display: "block" }} />}
           </div>}</Unstage>

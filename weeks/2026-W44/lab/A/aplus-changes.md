@@ -96,3 +96,42 @@ Code: `aplus/` (Remotion project `src/`, sound `audio/`, QA `check.py`, VO windo
 - Bed stems: -20.0 LUFS; true peak -3.0 (L1), -2.5 (L2), -2.3 (L3) dBTP.
 - The checker overlay was run on all 27 contact-sheet frames: no text under 44 px, no clipped or overlapping text, no visuals in the subtitle band.
 - Not verified by ear: the sound design was checked only by levels, structure (per-half-second RMS shows the gaps and drops at the spec times) and onset timing. Wayne should listen to one of the three before posting.
+
+## Motion pass (2026-10-15, "Always alive" rule)
+Improved in place: same story, beats, timings, layout, text, palettes, fonts, VO windows and audio. Every SFX and music cue is untouched; the master wavs and `<id>-A-bed.wav` stems are byte-identical, so only the three `.mp4` masters were replaced on `renders`. No house-style elements were added: the ChatGPT look stays as it was, and only the way things move changed.
+
+**Measure** (`aplus/energy.py`): luma at 270×480, mean absolute frame-to-frame difference (0–255), averaged per 0.5 s window. A window is *static* below 0.35. That threshold is the energy of the slow drift-push holds in lane B, the slowest motion we already treat as alive.
+
+| id | static windows before → after | lowest window before → after | longest frozen run before → after |
+|---|---|---|---|
+| A-L1 | 38 → 0 | 0.000 → 0.383 (9.5 s) | 1.13 s → 0 |
+| A-L2 | 34 → 0 | 0.000 → 0.392 (8.5 s) | 1.17 s → 0 |
+| A-L3 | 37 → 0 | 0.000 → 0.364 (26.5 s) | 0.77 s → 0 |
+
+Before the pass, every x.5 window was dead: each row moved in its first ~0.45 s and then froze.
+
+**What moves now** (`aplus/src/alive.tsx`, used by `lib.tsx` and the three scenes):
+- **Headlines** go word by word. New words spring up 4 frames apart (closed-form spring, ~12 % overshoot, directional motion blur from velocity). Changed words leave on a 1-frame stagger with a rise, fade and blur, so the exit finishes before the next row reads. Unchanged lines still hold. Emphasis words get a kinetic pop, a stretch that overshoots in scale only, from the cap line: L1 PROVE, UNDERNEATH?, DOCUMENTED, RECORD; L2 WHICH, JUDGE, WORK, MORE, CONNECTED, UNTIL; L3 GUESS, ANSWER?, MISSING?, BRAND, MOST?. There is no pop on the t = 0 hook line, whose first words are already landing on frame 0. Held headlines float 2–10 px vertically, never sideways, so the left edge stays on x 96.
+- **Subtitles** (same font, size, colour, shadow and band) reveal per word in reading order across the spoken part of each VO window, weighted by word length to track a ~3 words/s read. They leave with a short staggered rise that ends exactly on the window end, so the VO windows are unchanged.
+- **Values** reveal per character for Plex Mono strings (dates, URLs, L3 part/brand, requester labels, PARTS REGISTRY, "FuelMyBuild" titles) and per word for UI strings (part, brand, garage, follow lines). L2's "Miata" exits per character.
+- **Drawn lines draw on:** L1's blank-panel rules (staggered at 0 s), L2's selection outline (stroke draws at 2.0 s, then moves as before), and L3's rule under PARTS (8.05 s). The existing joining lines, arrows, strike and ruled job-card lines already drew on.
+- **Motion blur on fast moves:** every track now carries its velocity. Moves faster than ~3 px/frame get a directional SVG Gaussian blur along the move, capped at 16 px. Zero-length (hard-cut) keyframes are applied to the previous frame too, so the spec's hard cuts (L2 15 s, L3 8 s and 18 s) never blur.
+- **Holds keep living:**
+  - Car photos: Ken Burns *inside* the fixed frame (zoom breathes 0–6 %, the subject pans ±22 px) plus a faint light sweep, so the frame edges and layout don't move.
+  - Cut-outs (brake kit, turbo kit): gentle sway (±2–3°, ±10–16 px bob, 3–5 % breathing).
+  - Cards (L1 paper record, L2 job card and build page, L3 mockup and record): slow float plus a light sweep. Fields, tags, rules and thumbnails ride their card's float, so nothing slides against its card.
+  - L3 comment bubbles bob.
+  - Short slow pushes on the hero kit where a hold had nothing else (L1 8.45–10 s, L2 8.35–9 s, L3 11.45–14 s). Each is handed back during the next move, so the scale never jumps.
+  - A stage camera breathe (scale 1.000–1.014 about 540,800, ±5 px drift) runs under the headline. From 24 s in L2 and L3 it grows to 2× through the closing hold. Text that sits on x 96 (follow lines, L3's empty BRAND slot) and the L3 link bubble are counter-transformed (`Unstage`) so they stay inside the safe box.
+- **Spec "hold" and "freeze" rows** (L1 1–2 s hold and 27–28 s freeze, L2 0–4 s, L3 4–6 s): no new element appears and nothing is added to the story, but they now carry idle drift, per Wayne's 2026-10-14 rule that supersedes "nothing moves" from §2.
+- remocn: the mask-reveal-up headline is replaced by per-word springs (same rise and blur feel). caption-subtitle is replaced by a per-word reveal. value-swap, strikethrough-replace, caret and drift are kept.
+
+**Checks**
+- Delivered mp4s: all three are 28.000 s, 840 frames, 1080×1920 at 30 fps. Mux lag 0 samples, every hit within ±1 frame (max cue offset 3.6 / 4.9 / 5.3 ms).
+- Loudness (unchanged audio): A-L1 -14.1 LUFS, -2.5 dBTP; A-L2 -14.0 LUFS, -1.5 dBTP; A-L3 -14.1 LUFS, -2.9 dBTP.
+- Review stills:
+  - ~110 targeted checker stills (25–30 per video around every changed beat, plus fix re-checks) and a checker sweep every 0.25 s (112 frames per video).
+  - New issues found and fixed: pop overshoot leaving the safe box and touching the next word; outgoing headline words ghosting under incoming ones; edge text pushed out by the camera; the L3 link bubble crossing x 880.
+  - The sweep's 12 remaining hits are all mid-move transients in the first 2–10 frames of existing tweens and exits (L1 5.3/5.6/18.1 s, L2 5.3/9.1/17.3/21.1 s, L3 2.1/6.3/16.3/19.1/21.1 s). The original code flags the same 12 frames.
+  - 24 frames pulled from the delivered mp4s were reviewed. Final sheets were regenerated (`storyboard/A-L*/A-L*-final-sheet.png`).
+- Render: hook (0–89) and body (90–839) rendered separately, then spliced and muxed with `finish.sh` as before.

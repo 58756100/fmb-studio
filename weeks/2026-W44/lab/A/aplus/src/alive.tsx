@@ -136,6 +136,8 @@ export const Stage = ({ t, children, amt = 1 }) => {
   const { k, dy } = cam(t, amt);
   return <div style={{ position: "absolute", inset: 0, transform: `translateY(${dy.toFixed(2)}px) scale(${k.toFixed(5)})`, transformOrigin: "540px 800px" }}>{children}</div>;
 };
+// closing hold (24 s on): the breathe grows to 2x so the last seconds never settle (L2, L3)
+export const endAmt = (t) => 1 + 1.0 * Math.min(1, Math.max(0, (t - 24) / 1.2));
 // cancels the stage camera for text that sits right on the safe edge (x 96): the follow lines, edge labels
 export const Unstage = ({ t, children, amt = 1 }) => {
   const { k, dy } = cam(t, amt);
