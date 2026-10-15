@@ -2,7 +2,7 @@
 
 116 images in 7 sets. Paste the MASTER PROMPT once into a new ChatGPT chat, then send one set at a time ("Set A, images A01–A10"). ChatGPT makes them one by one.
 
-You don't need to rename anything: download them, zip them per set (or all together) and send me the zip. I identify and name each one myself, and I check transparency, size and accuracy. Anything that fails comes back as a corrected prompt.
+You don't need to rename anything. ChatGPT is asked to zip each set itself. If it can't, download the images from the chat (or from chatgpt.com/library) and zip them yourself. Send me the zips. I identify and name each one myself, and I check transparency, size and accuracy. Anything that fails comes back as a corrected prompt.
 
 ChatGPT Plus has an image rate limit, so spread the sets over a few sessions or days if it slows down.
 
@@ -54,6 +54,11 @@ mirrorless shot in a real place. Use the aspect ratio given (4:3 landscape,
 or 9:16 vertical for backgrounds). For 9:16 backgrounds, keep the top 25%
 and bottom 20% calm (wall, ceiling, floor) so text can sit there, with no
 people unless the item asks for them.
+
+WHEN A SET IS DONE: put every image from that set into one zip named
+set-<letter>.zip (for example set-A.zip) using your file tool and give me the
+download link. If you can't reach the generated images from your file tool,
+say so and I'll download them from the chat instead.
 
 Reply "ready" and wait for Set A.
 ```
