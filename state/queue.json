@@ -541,13 +541,16 @@
     "time_et": "15:00",
     "platform": "instagram",
     "placement": "feed",
-    "status": "posting",
+    "status": "posted",
     "render": "renders:2026-W42/C1-C.mp4",
     "week": "2026-W42",
     "caption": "$68,000 on the line, and the receipt for the turbo was blank. Marcus had one move left.\n\n#supra #mk4supra #carbuild #jdm #carcollector",
     "pinned_comment": "What's in your shoebox: receipts you could actually read today, or coffee rings?",
     "approved_at": "2026-10-13T09:46:53Z",
-    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+    "media_id": "17926761573424729",
+    "container_id": "17962985547231959",
+    "posted_at": "2026-10-16T18:47:21Z"
   },
   {
     "concept": "C1",
