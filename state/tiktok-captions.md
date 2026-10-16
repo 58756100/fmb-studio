@@ -1,19 +1,30 @@
-# TikTok captions to paste (updated 2026-10-15 11:50 ET)
+# TikTok captions to paste (Fri 2026-10-16)
 
-## 2026-10-15
+Open draft, paste caption, tap Post at the time.
 
-### 12:00 ET / 19:00 Nairobi — X2-A (drafted)
-Recognise it: opens "Your car won't remember who built it." over a white frame, Supra fading up, red underline under "who built it".
+## 12:00 ET / 19:00 Nairobi — G3 hook C
+Recognise it: Rita: "I'm under a Tacoma, brake fluid to my elbows, and—" / text "POV: you own the shop and the phone", gloved hand reaches for buzzing phone
+
 ```
-Shops close. Parts get discontinued. Cars get sold. One thing about your build doesn't have to go.
+9 texts. 1 hour. Same question. Rita's Tacoma brake job didn't move until she tried this.
 
-#carbuild #supra #jdm #carculture #projectcar
+#shoplife #mechaniclife #autoshop #shopowner #customerservice
 ```
 
-### 19:00 ET / 02:00 Nairobi (Oct 16) — C3-A (drafted)
-Recognise it: opens "Nadia found three things on her new 240Z that didn't add up." over an orange 240Z on white, three red dots blinking on.
-```
-41,000 miles on a 1972 240Z. A weld too new. Tape on the dash: 'ask Ray about the motor.'
+## 15:00 ET / 22:00 Nairobi — C1 hook C
+Recognise it: Eric: "Your build isn't worth what you spent on it. It's worth what you can prove." / typewriter text "worth what you spent" struck out
 
-#datsun240z #classiccars #carhistory #carcollector #mystery
+```
+$68,000 on the line, and the receipt for the turbo was blank. Marcus had one move left.
+
+#supra #mk4supra #carbuild #jdm #carcollector
+```
+
+## 19:00 ET / 02:00 (Sat) Nairobi — P2 hook A
+Recognise it: Eric: "What does $2,400 of attention look like on a graph?" / empty chart axes draw in, red "$2,400" tag swings
+
+```
+A wheel brand paid $2,400 for one post. It lasted 24 hours. 19 free builds were the real ad.
+
+#carparts #aftermarket #wheels #carbuild #marketing
 ```
