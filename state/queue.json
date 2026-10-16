@@ -456,13 +456,16 @@
     "time_et": "21:30",
     "platform": "instagram",
     "placement": "feed",
-    "status": "posting",
+    "status": "posted",
     "render": "renders:2026-W42/P1-B.mp4",
     "week": "2026-W42",
     "caption": "We tried to follow one turbo after it shipped. Tracking died in 4 days. The build log didn't.\n\n#turbo #carbuild #aftermarketparts #supra #carparts",
     "pinned_comment": "Brands: what happens to your best seller after \"Delivered\"? Drop the part, we'll look for it in build logs.",
     "approved_at": "2026-10-13T09:46:53Z",
-    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+    "media_id": "18136148248654606",
+    "container_id": "17962858389231959",
+    "posted_at": "2026-10-16T01:47:25Z"
   },
   {
     "concept": "P1",
