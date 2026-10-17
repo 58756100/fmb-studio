@@ -1,0 +1,98 @@
+[
+  {
+    "id": "G01",
+    "name": "turbo-install",
+    "set": "G",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL WORKSHOP BACKGROUND, sharp phone or mirrorless photograph, EXACT 4:3 LANDSCAPE 2048x1536 or 1536x1152 canvas. Clearly show the work in progress, practical mechanically plausible installation. NO FACES. Gloved hands only if useful. Subject: A turbocharger BEING BOLTED onto an exhaust manifold in a realistic ENGINE BAY. Clearly show mounting flange, turbo and wrench working on fastener. Gloved hands allowed.",
+    "ref": null
+  },
+  {
+    "id": "G02",
+    "name": "coilover-install",
+    "set": "G",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL WORKSHOP BACKGROUND, sharp phone or mirrorless photograph, EXACT 4:3 LANDSCAPE 2048x1536 or 1536x1152 canvas. Clearly show the work in progress, practical mechanically plausible installation. NO FACES. Gloved hands only if useful. Subject: A COILOVER BEING INSTALLED, car WHEEL OFF, car ON A LIFT. Clearly show suspension mounting area and gloved hands fitting coilover.",
+    "ref": null
+  },
+  {
+    "id": "G03",
+    "name": "caliper-installed",
+    "set": "G",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL WORKSHOP BACKGROUND, sharp phone or mirrorless photograph, EXACT 4:3 LANDSCAPE 2048x1536 or 1536x1152 canvas. Clearly show the work in progress, practical mechanically plausible installation. NO FACES. Gloved hands only if useful. Subject: A BRAKE CALIPER correctly BOLTED ON around brake rotor, wheel off. THE CALIPER CLEARLY VISIBLE, practical shop repair photo.",
+    "ref": null
+  },
+  {
+    "id": "G04",
+    "name": "engine-hoist",
+    "set": "G",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL WORKSHOP BACKGROUND, sharp phone or mirrorless photograph, EXACT 4:3 LANDSCAPE 2048x1536 or 1536x1152 canvas. Clearly show the work in progress, practical mechanically plausible installation. NO FACES. Gloved hands only if useful. Subject: An ENGINE HANGING securely FROM A HOIST above an EMPTY ENGINE BAY. Hoist chains, suspended engine and empty car bay clearly visible.",
+    "ref": null
+  },
+  {
+    "id": "G05",
+    "name": "cage-fitting",
+    "set": "G",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL WORKSHOP BACKGROUND, sharp phone or mirrorless photograph, EXACT 4:3 LANDSCAPE 2048x1536 or 1536x1152 canvas. Clearly show the work in progress, practical mechanically plausible installation. NO FACES. Gloved hands only if useful. Subject: A CAR INTERIOR with SEATS REMOVED, a metal ROLL CAGE BEING FITTED, mounting points visible. Gloved hands allowed.",
+    "ref": null
+  },
+  {
+    "id": "G06",
+    "name": "wheel-alignment",
+    "set": "G",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL WORKSHOP BACKGROUND, sharp phone or mirrorless photograph, EXACT 4:3 LANDSCAPE 2048x1536 or 1536x1152 canvas. Clearly show the work in progress, practical mechanically plausible installation. NO FACES. Gloved hands only if useful. Subject: A car undergoing FRESH WHEEL ALIGNMENT on an ALIGNMENT RACK, wheel-mounted alignment targets and rack visible. No readable screens or markings.",
+    "ref": null
+  },
+  {
+    "id": "G07",
+    "name": "head-gasket-leak",
+    "set": "G",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL WORKSHOP BACKGROUND, sharp phone or mirrorless photograph, EXACT 4:3 LANDSCAPE 2048x1536 or 1536x1152 canvas. Clearly show the work in progress, practical mechanically plausible installation. NO FACES. Gloved hands only if useful. Subject: CLOSE-UP of an OIL LEAK at a HEAD-GASKET SEAM between cylinder head and engine block. Fresh oily seepage along the seam clearly visible; realistic grime and metal texture.",
+    "ref": null
+  },
+  {
+    "id": "G08",
+    "name": "exhaust-underside",
+    "set": "G",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL WORKSHOP BACKGROUND, sharp phone or mirrorless photograph, EXACT 4:3 LANDSCAPE 2048x1536 or 1536x1152 canvas. Clearly show the work in progress, practical mechanically plausible installation. NO FACES. Gloved hands only if useful. Subject: UNDERSIDE VIEW of a fitted CAT-BACK EXHAUST, HANGERS clearly visible, realistic stainless pipe and muffler under vehicle.",
+    "ref": null
+  },
+  {
+    "id": "G09",
+    "name": "wiring-bench",
+    "set": "G",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL WORKSHOP BACKGROUND, sharp phone or mirrorless photograph, EXACT 4:3 LANDSCAPE 2048x1536 or 1536x1152 canvas. Clearly show the work in progress, practical mechanically plausible installation. NO FACES. Gloved hands only if useful. Subject: A WIRING LOOM spread on a WORKBENCH BEING LABELLED with BLANK TAGS. Gloved hands attaching one blank tag, all tags have NO text.",
+    "ref": null
+  },
+  {
+    "id": "G10",
+    "name": "car-on-dyno",
+    "set": "G",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL WORKSHOP BACKGROUND, sharp phone or mirrorless photograph, EXACT 4:3 LANDSCAPE 2048x1536 or 1536x1152 canvas. Clearly show the work in progress, practical mechanically plausible installation. NO FACES. Gloved hands only if useful. Subject: A REAR-WHEEL-DRIVE CAR on a chassis DYNO, REAR WHEELS ON ROLLERS. Rear three-quarter workshop view clearly showing rear tyres correctly seated on twin rollers, secured tie-down straps.",
+    "ref": null
+  },
+  {
+    "id": "G11",
+    "name": "painted-panel",
+    "set": "G",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL WORKSHOP BACKGROUND, sharp phone or mirrorless photograph, EXACT 4:3 LANDSCAPE 2048x1536 or 1536x1152 canvas. Clearly show the work in progress, practical mechanically plausible installation. NO FACES. Gloved hands only if useful. Subject: A FRESHLY PAINTED automotive BODY PANEL DRYING in a PAINT BOOTH, glossy clean paint, stand visible.",
+    "ref": null
+  },
+  {
+    "id": "G12",
+    "name": "finished-engine-bay",
+    "set": "G",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL WORKSHOP BACKGROUND, sharp phone or mirrorless photograph, EXACT 4:3 LANDSCAPE 2048x1536 or 1536x1152 canvas. Clearly show the work in progress, practical mechanically plausible installation. NO FACES. Gloved hands only if useful. Subject: A FINISHED ENGINE BAY, CLEAN AND DETAILED, realistic hoses, wiring and metal parts with a neat professionally completed installation. No logos, text or readable markings.",
+    "ref": null
+  }
+]
