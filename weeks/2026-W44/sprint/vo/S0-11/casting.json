@@ -1,0 +1,31 @@
+{
+  "reel": "S0-11",
+  "calendar_voice": "Justin Case",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 0.96,
+  "stability": 0.5,
+  "style": 0.15,
+  "speed_note": "",
+  "target_seconds": 42,
+  "airings_calendar": "10-27 A, 11-01 B, 11-06 C (11:00)",
+  "tempo_post": 1.06,
+  "speakers": {
+    "Eric (Narrator)": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    },
+    "Chris (Ben)": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Narrator on Justin Case (lead, normal = 0.96). Ben on Dan.",
+  "characters": {
+    "master": 620,
+    "hookB": 57,
+    "hookC": 62
+  }
+}

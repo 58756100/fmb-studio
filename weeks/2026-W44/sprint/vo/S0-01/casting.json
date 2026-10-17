@@ -1,0 +1,36 @@
+{
+  "reel": "S0-01",
+  "calendar_voice": "Jerry B.",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 1.0,
+  "stability": 0.55,
+  "style": 0.1,
+  "speed_note": "",
+  "target_seconds": 39,
+  "airings_calendar": "10-29 A, 11-03 B, 11-08 C (11:00)",
+  "tempo_post": 1.06,
+  "speakers": {
+    "Brian (Gene)": {
+      "voice_name": "Jerry B.",
+      "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+      "model": "eleven_v4"
+    },
+    "Chris (Cody)": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    },
+    "Eric (CTA)": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Script casting Brian/Chris/Eric mapped to Jerry B./Dan/Justin Case. Hook C airs per calendar (script note says it never airs; calendar governs).",
+  "characters": {
+    "master": 571,
+    "hookB": 64,
+    "hookC": 47
+  }
+}

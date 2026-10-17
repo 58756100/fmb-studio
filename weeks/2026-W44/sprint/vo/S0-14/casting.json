@@ -1,0 +1,31 @@
+{
+  "reel": "S0-14",
+  "calendar_voice": "Jerry B.",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.55,
+  "style": 0.1,
+  "speed_note": "",
+  "target_seconds": 32,
+  "airings_calendar": "10-26 A, 10-31 B, 11-05 C (09:30)",
+  "tempo_post": 1.06,
+  "speakers": {
+    "Eric (Narrator)": {
+      "voice_name": "Jerry B.",
+      "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+      "model": "eleven_v4"
+    },
+    "Chris (Omar)": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar lead voice is Jerry B. (one voice per body, the lead voice), so the script's Eric narrator goes to Jerry B., not Justin Case. Omar on Dan.",
+  "characters": {
+    "master": 462,
+    "hookB": 52,
+    "hookC": 26
+  }
+}
