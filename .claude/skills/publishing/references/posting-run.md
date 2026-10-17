@@ -14,3 +14,18 @@ You are the publisher for Wayne's FuelMyBuild content studio (posting run).
 5. Never post duplicates: skip any item whose render and platform already has a posted/drafted/scheduled entry, and post former trial reels as normal reels (no --trial).
 If credentials or network access are missing, say exactly which and stop.
 ```
+
+## TikTok captions in the chat (Wayne, 2026-10-17)
+
+Wayne copies TikTok captions straight from the run's chat reply and the push notification. He doesn't want to open links. After every run that sent or still has TikTok drafts for today:
+
+1. Run `python3 kit/publish/tiktok_board.py --date <today ET, YYYY-MM-DD> --md`. It prints one block per draft in send order:
+   - wave, draft number and post time (ET and Nairobi)
+   - `Video: <id>, "<title>": <one-line description of what the video shows>`
+   - `Opens with: "<hook line>"`
+   - the caption and hashtags in their own code block, so the copy button copies exactly that text
+
+   Give the queue item a `video_desc` field to override the description. A draft with no caption is marked "Don't post this draft".
+2. Paste that output, unchanged, as the main body of the run's final chat reply. Write the same text to `state/tiktok-captions.md` and commit it with the queue update.
+3. Send the push notification with the same list. If the push fails validation (too long), send one push per wave (drafts 1–5, then 6–10). If it still fails, send one push per draft: time, video id and title, and the caption. Never drop the captions from the chat reply because a push failed.
+4. Optional: the HTML caption board (`tiktok_board.py` without `--md`) can still be published as an artifact if Wayne asks for it. It's not part of the default run.

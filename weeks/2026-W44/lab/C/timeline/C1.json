@@ -1,0 +1,36 @@
+{
+  "id": "C-C1",
+  "title": "The shoebox (v2)",
+  "dur": 30.0,
+  "lead_hook": "B",
+  "ev": {
+    "chipIn": 0.1,
+    "w_grand": 0.62, "w_one": 1.25, "w_shoebox": 1.5,
+    "lidLift": 1.55,
+    "push1": 2.5,
+    "receiptRise": 2.75, "turboIn": 3.25, "fadeBlank": 4.55,
+    "daleIn": 5.5, "labelSwap": 5.6, "drop1": 7.25,
+    "whip1": 8.5, "receiptLand": 8.95, "drop2": 10.2,
+    "silence": 11.5, "chipDim": 11.6, "daleOut": 12.15,
+    "lidDrop": 14.2, "phoneUp": 14.33,
+    "push2": 16.0, "entryIn": 16.3, "dateLine": 16.75, "photo1": 17.6, "photo2": 17.75,
+    "handoff": 19.5, "chipOut": 19.55, "scroll": 20.05, "row1": 20.35, "row2": 20.95, "row3": 21.55,
+    "tap": 22.95, "sheetUp": 23.05, "sheetLand": 23.55,
+    "wide": 24.5,
+    "handOut": 27.0, "camHome": 27.0, "ctaHead": 27.15, "ctaUrl": 28.0, "textOut": 29.6
+  },
+  "vo": [
+    { "a": 0.15, "b": 2.35, "who": "Eric", "text": "Sixty-eight grand. One shoebox." },
+    { "a": 2.6, "b": 5.35, "who": "Eric", "text": "Marcus kept every receipt. The turbo's? Blank." },
+    { "a": 5.6, "b": 6.5, "who": "Chris", "text": "That the turbo?" },
+    { "a": 6.8, "b": 8.35, "who": "Eric", "text": "Offer: sixty-four five.", "cap": "Offer: $64,500." },
+    { "a": 8.6, "b": 11.35, "who": "Eric", "text": "Coilovers. Fourteen hundred. No install date.", "cap": "Coilovers. $1,400. No install date." },
+    { "a": 11.6, "b": 12.9, "who": "Eric", "text": "Dale went quiet." },
+    { "a": 14.1, "b": 15.85, "who": "Eric", "text": "Lid on. Phone out." },
+    { "a": 16.1, "b": 19.35, "who": "Eric", "text": "Turbo: March twelfth, twenty nineteen. Photos of the work.", "cap": "Turbo: March 12, 2019. Photos of the work." },
+    { "a": 19.6, "b": 21.85, "who": "Eric", "text": "Dale took the phone. Kept scrolling." },
+    { "a": 22.1, "b": 24.35, "who": "Chris", "text": "Coilovers in '21. Alignment since?", "cap": "Coilovers in ’21. Alignment since?" },
+    { "a": 24.6, "b": 26.85, "who": "Eric", "text": "Dale was asking again. About the car." },
+    { "a": 27.1, "b": 29.4, "who": "Eric", "text": "Start your build's record: fuelmybuild.com.", "cap": "Start your build’s record: fuelmybuild.com" }
+  ]
+}

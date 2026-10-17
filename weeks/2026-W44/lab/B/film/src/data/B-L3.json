@@ -1,0 +1,335 @@
+{
+ "voice": "Eric",
+ "heads": [
+  [
+   0,
+   "Who made"
+  ],
+  [
+   1,
+   "This turbo?"
+  ],
+  [
+   2,
+   "Jules · What turbo is that?"
+  ],
+  [
+   3,
+   "First reply"
+  ],
+  [
+   4,
+   "Demo Brand B,"
+  ],
+  [
+   5,
+   "~I~ ~think~"
+  ],
+  [
+   6,
+   "Next reply"
+  ],
+  [
+   7,
+   "Definitely B"
+  ],
+  [
+   8,
+   "But…"
+  ],
+  [
+   9,
+   "Same guess"
+  ],
+  [
+   10,
+   "*Copied*"
+  ],
+  [
+   11,
+   "Brand B"
+  ],
+  [
+   12,
+   "Credit follows the guess"
+  ],
+  [
+   13,
+   "Where's the record?"
+  ],
+  [
+   14,
+   "Check the owner's record"
+  ],
+  [
+   15,
+   "Jules opens the build"
+  ],
+  [
+   16,
+   "White '99 Supra"
+  ],
+  [
+   17,
+   "FuelMyBuild"
+  ],
+  [
+   18,
+   "Turbo kit"
+  ],
+  [
+   19,
+   "Brand"
+  ],
+  [
+   20,
+   "Demo Brand A"
+  ],
+  [
+   21,
+   "Install record"
+  ],
+  [
+   22,
+   "March 14 · Turbo install"
+  ],
+  [
+   23,
+   "Install photos"
+  ],
+  [
+   24,
+   "Check the record"
+  ],
+  [
+   25,
+   "Before repeating"
+  ],
+  [
+   26,
+   "Which brand"
+  ],
+  [
+   27,
+   "Gets *misnamed?*"
+  ],
+  [
+   28,
+   "Follow for"
+  ],
+  [
+   29,
+   "Documented builds"
+  ]
+ ],
+ "subs": [
+  [
+   0.0,
+   1.95,
+   "Who made this turbo?"
+  ],
+  [
+   2.0,
+   2.95,
+   "Jules asks."
+  ],
+  [
+   3.0,
+   3.95,
+   "First reply:"
+  ],
+  [
+   4.0,
+   5.95,
+   "“Demo Brand B, I think.”"
+  ],
+  [
+   6.0,
+   6.95,
+   "Next reply:"
+  ],
+  [
+   7.0,
+   7.95,
+   "“Definitely B.”"
+  ],
+  [
+   8.0,
+   10.95,
+   "But that's the same guess, *copied.*"
+  ],
+  [
+   11.0,
+   12.98,
+   "Now Brand B gets the credit."
+  ],
+  [
+   13.0,
+   14.9,
+   "So where's the owner's record?"
+  ],
+  [
+   15.0,
+   17.98,
+   "Jules opens the Supra's build on FuelMyBuild."
+  ],
+  [
+   18.0,
+   18.95,
+   "Turbo kit."
+  ],
+  [
+   19.0,
+   19.75,
+   "Brand:"
+  ],
+  [
+   19.95,
+   20.98,
+   "*Demo Brand A.*"
+  ],
+  [
+   21.0,
+   23.95,
+   "Then the install log and photos."
+  ],
+  [
+   24.0,
+   25.95,
+   "We check before repeating."
+  ],
+  [
+   26.0,
+   27.95,
+   "Which brand gets misnamed?"
+  ],
+  [
+   28.0,
+   29.95,
+   "Follow for documented builds."
+  ]
+ ],
+ "sfx": [
+  [
+   0,
+   "whoosh"
+  ],
+  [
+   1,
+   "commentPop"
+  ],
+  [
+   2,
+   "lightTap"
+  ],
+  [
+   3,
+   "commentPop"
+  ],
+  [
+   4,
+   "typing"
+  ],
+  [
+   5,
+   "smallTick"
+  ],
+  [
+   6,
+   "commentPop"
+  ],
+  [
+   7,
+   "firmPop"
+  ],
+  [
+   8,
+   "pivotHit"
+  ],
+  [
+   9,
+   "alignClick"
+  ],
+  [
+   10,
+   "copyTick"
+  ],
+  [
+   11,
+   "cardSlide"
+  ],
+  [
+   12,
+   "lowStop"
+  ],
+  [
+   13,
+   "qTick"
+  ],
+  [
+   14,
+   "linkTap"
+  ],
+  [
+   15,
+   "tap"
+  ],
+  [
+   17,
+   "revealClick"
+  ],
+  [
+   18,
+   "rowTap"
+  ],
+  [
+   19,
+   "shortTick"
+  ],
+  [
+   20,
+   "cleanResolve"
+  ],
+  [
+   21,
+   "sheetOpen"
+  ],
+  [
+   22,
+   "tick"
+  ],
+  [
+   23,
+   "photoOpen"
+  ],
+  [
+   24,
+   "softSettle"
+  ],
+  [
+   25,
+   "mutedStop"
+  ],
+  [
+   26,
+   "qTick"
+  ],
+  [
+   28,
+   "ctaTap"
+  ],
+  [
+   29,
+   "openingPickup"
+  ]
+ ],
+ "music": {
+  "bpm": 109.0909090909091,
+  "root": 38,
+  "mode": "minor",
+  "T0": 0.6,
+  "cut": 16.0,
+  "ret": 27.0,
+  "style": "investigate"
+ }
+}

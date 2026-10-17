@@ -1,0 +1,1152 @@
+{
+ "id": "C3-SUP",
+ "title": "Rattle. Fix?",
+ "hook": "A",
+ "turn": 14.5,
+ "cta_clear": 26.6,
+ "remocn": [
+  "paper-sticker (each tag lands in two stop-motion poses with paper jitter)",
+  "caption-handwrite (its ink-sweep mask writes the tag text)",
+  "soft-blur-in (log card fields, beat labels)",
+  "caption-underline (subtitles)"
+ ],
+ "vo": [
+  {
+   "n": 1,
+   "a": 0.1,
+   "b": 1.8,
+   "speaker": "Noor",
+   "line": "Rattle. Fix? That's it.",
+   "emphasis": [
+    "it"
+   ],
+   "words": [
+    {
+     "w": "Rattle.",
+     "a": 0.1,
+     "b": 0.5
+    },
+    {
+     "w": "Fix?",
+     "a": 0.73,
+     "b": 0.98
+    },
+    {
+     "w": "That's",
+     "a": 1.2,
+     "b": 1.55
+    },
+    {
+     "w": "it.",
+     "a": 1.58,
+     "b": 1.78
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "a": 1.9,
+   "b": 5.0,
+   "speaker": "Narrator",
+   "line": "Noor had his order number. Nothing else.",
+   "emphasis": [
+    "order number"
+   ],
+   "words": [
+    {
+     "w": "Noor",
+     "a": 1.9,
+     "b": 2.25
+    },
+    {
+     "w": "had",
+     "a": 2.28,
+     "b": 2.57
+    },
+    {
+     "w": "his",
+     "a": 2.59,
+     "b": 2.88
+    },
+    {
+     "w": "order",
+     "a": 2.91,
+     "b": 3.31
+    },
+    {
+     "w": "number.",
+     "a": 3.35,
+     "b": 3.81
+    },
+    {
+     "w": "Nothing",
+     "a": 4.05,
+     "b": 4.58
+    },
+    {
+     "w": "else.",
+     "a": 4.62,
+     "b": 4.97
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "a": 5.1,
+   "b": 5.9,
+   "speaker": "Noor",
+   "line": "Which car?",
+   "emphasis": [],
+   "words": [
+    {
+     "w": "Which",
+     "a": 5.1,
+     "b": 5.53
+    },
+    {
+     "w": "car?",
+     "a": 5.57,
+     "b": 5.87
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "a": 6.6,
+   "b": 7.9,
+   "speaker": "Theo",
+   "line": "A W-R-X.",
+   "emphasis": [],
+   "words": [
+    {
+     "w": "A",
+     "a": 6.6,
+     "b": 7.05
+    },
+    {
+     "w": "W-R-X.",
+     "a": 7.09,
+     "b": 7.84
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "a": 8.1,
+   "b": 9.1,
+   "speaker": "Noor",
+   "line": "Who fitted it?",
+   "emphasis": [
+    "fitted"
+   ],
+   "words": [
+    {
+     "w": "Who",
+     "a": 8.1,
+     "b": 8.37
+    },
+    {
+     "w": "fitted",
+     "a": 8.39,
+     "b": 8.83
+    },
+    {
+     "w": "it?",
+     "a": 8.86,
+     "b": 9.08
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "a": 9.8,
+   "b": 10.9,
+   "speaker": "Theo",
+   "line": "Some shop.",
+   "emphasis": [],
+   "words": [
+    {
+     "w": "Some",
+     "a": 9.8,
+     "b": 10.31
+    },
+    {
+     "w": "shop.",
+     "a": 10.35,
+     "b": 10.86
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "a": 11.0,
+   "b": 13.9,
+   "speaker": "Narrator",
+   "line": "Day six. Theo asked about a return.",
+   "emphasis": [
+    "six",
+    "return"
+   ],
+   "words": [
+    {
+     "w": "Day",
+     "a": 11.0,
+     "b": 11.3
+    },
+    {
+     "w": "six.",
+     "a": 11.33,
+     "b": 11.63
+    },
+    {
+     "w": "Theo",
+     "a": 11.86,
+     "b": 12.22
+    },
+    {
+     "w": "asked",
+     "a": 12.25,
+     "b": 12.68
+    },
+    {
+     "w": "about",
+     "a": 12.71,
+     "b": 13.14
+    },
+    {
+     "w": "a",
+     "a": 13.18,
+     "b": 13.36
+    },
+    {
+     "w": "return.",
+     "a": 13.37,
+     "b": 13.86
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "a": 14.1,
+   "b": 15.9,
+   "speaker": "Theo",
+   "line": "Just read my build.",
+   "emphasis": [
+    "build"
+   ],
+   "words": [
+    {
+     "w": "Just",
+     "a": 14.1,
+     "b": 14.53
+    },
+    {
+     "w": "read",
+     "a": 14.57,
+     "b": 15.0
+    },
+    {
+     "w": "my",
+     "a": 15.04,
+     "b": 15.33
+    },
+    {
+     "w": "build.",
+     "a": 15.35,
+     "b": 15.86
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "a": 16.1,
+   "b": 19.4,
+   "speaker": "Narrator",
+   "line": "Calder exhaust. July twenty-second. Northline Auto.",
+   "emphasis": [
+    "Northline"
+   ],
+   "words": [
+    {
+     "w": "Calder",
+     "a": 16.1,
+     "b": 16.5
+    },
+    {
+     "w": "exhaust.",
+     "a": 16.53,
+     "b": 16.97
+    },
+    {
+     "w": "July",
+     "a": 17.21,
+     "b": 17.51
+    },
+    {
+     "w": "twenty-second.",
+     "a": 17.54,
+     "b": 18.23
+    },
+    {
+     "w": "Northline",
+     "a": 18.49,
+     "b": 19.03
+    },
+    {
+     "w": "Auto.",
+     "a": 19.08,
+     "b": 19.37
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "a": 19.6,
+   "b": 21.9,
+   "speaker": "Noor",
+   "line": "That rear hanger. Worth a look.",
+   "emphasis": [
+    "hanger"
+   ],
+   "words": [
+    {
+     "w": "That",
+     "a": 19.6,
+     "b": 19.92
+    },
+    {
+     "w": "rear",
+     "a": 19.95,
+     "b": 20.27
+    },
+    {
+     "w": "hanger.",
+     "a": 20.3,
+     "b": 20.73
+    },
+    {
+     "w": "Worth",
+     "a": 20.97,
+     "b": 21.34
+    },
+    {
+     "w": "a",
+     "a": 21.37,
+     "b": 21.54
+    },
+    {
+     "w": "look.",
+     "a": 21.55,
+     "b": 21.87
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "a": 22.0,
+   "b": 23.6,
+   "speaker": "Narrator",
+   "line": "Six days. One link.",
+   "emphasis": [
+    "link"
+   ],
+   "words": [
+    {
+     "w": "Six",
+     "a": 22.0,
+     "b": 22.29
+    },
+    {
+     "w": "days.",
+     "a": 22.32,
+     "b": 22.67
+    },
+    {
+     "w": "One",
+     "a": 22.9,
+     "b": 23.19
+    },
+    {
+     "w": "link.",
+     "a": 23.22,
+     "b": 23.57
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "a": 23.7,
+   "b": 26.9,
+   "speaker": "Narrator",
+   "line": "Ask for the build. fuelmybuild.com.",
+   "emphasis": [
+    "build"
+   ],
+   "words": [
+    {
+     "w": "Ask",
+     "a": 23.7,
+     "b": 24.07
+    },
+    {
+     "w": "for",
+     "a": 24.1,
+     "b": 24.47
+    },
+    {
+     "w": "the",
+     "a": 24.5,
+     "b": 24.87
+    },
+    {
+     "w": "build.",
+     "a": 24.9,
+     "b": 25.42
+    },
+    {
+     "w": "fuelmybuild.com.",
+     "a": 25.62,
+     "b": 26.8
+    }
+   ]
+  }
+ ],
+ "ev": {
+  "swing": 0.12,
+  "rattle1": 0.3,
+  "camDrop": 1.85,
+  "outline": 2.4,
+  "write2": 4.2,
+  "land2": 5.0,
+  "sag1": 5.05,
+  "pencil2": 6.75,
+  "wrxIn": 6.95,
+  "write3": 7.85,
+  "land3": 8.45,
+  "sag2": 8.5,
+  "pencil3": 9.85,
+  "sag3": 11.05,
+  "rattle2": 11.6,
+  "returnChip": 12.9,
+  "snap": 14.5,
+  "toCenter": 14.75,
+  "unfold": 15.35,
+  "cardIn": 15.95,
+  "chipIn": 18.3,
+  "holdEnd": 19.5,
+  "tieTag": 19.65,
+  "writeCheck": 20.25,
+  "foldBack": 22.0,
+  "tagHome": 22.45,
+  "lift": 22.6,
+  "returnOut": 22.4,
+  "wrxOut": 23.8,
+  "outlineOut": 24.2,
+  "camHome": 23.8,
+  "ctaIn": 23.8,
+  "ctaOut": 26.35
+ },
+ "labels": [
+  {
+   "a": 1.95,
+   "b": 5.0,
+   "text": "Car? Fitter? Date? Unknown."
+  },
+  {
+   "a": 11.2,
+   "b": 14.4,
+   "text": "Still rattling"
+  },
+  {
+   "a": 20.0,
+   "b": 22.0,
+   "text": "A place to start"
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "frame": 0,
+   "name": "room-tone-office",
+   "note": "quiet support desk bed (-40 dB)"
+  },
+  {
+   "t": 0.12,
+   "frame": 4,
+   "name": "string-creak",
+   "note": "tag swings on its loop"
+  },
+  {
+   "t": 0.3,
+   "frame": 9,
+   "name": "exhaust-rattle",
+   "note": "short metallic rattle (heat shield on stainless)"
+  },
+  {
+   "t": 0.682,
+   "frame": 20,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 1.85,
+   "frame": 56,
+   "name": "air-drop",
+   "note": "camera drops down the string"
+  },
+  {
+   "t": 1.95,
+   "frame": 58,
+   "name": "label-in",
+   "note": "'Car? Fitter? Date? Unknown.'"
+  },
+  {
+   "t": 2.369,
+   "frame": 71,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 2.4,
+   "frame": 72,
+   "name": "outline-draw",
+   "note": "grey car outline draws"
+  },
+  {
+   "t": 3.1,
+   "frame": 93,
+   "name": "pop-soft",
+   "note": "'?' pops in the outline"
+  },
+  {
+   "t": 3.85,
+   "frame": 116,
+   "name": "paper-flutter",
+   "note": "'Which car?' tag flies in"
+  },
+  {
+   "t": 4.05,
+   "frame": 122,
+   "name": "emph-pop",
+   "note": "'Unknown.' red"
+  },
+  {
+   "t": 4.057,
+   "frame": 122,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 4.2,
+   "frame": 126,
+   "name": "pen-write",
+   "note": "'Which car?' written in ink"
+  },
+  {
+   "t": 5.0,
+   "frame": 150,
+   "name": "paper-thud",
+   "note": "tag 2 lands (two poses: thud + small slap)"
+  },
+  {
+   "t": 5.05,
+   "frame": 152,
+   "name": "pipe-sag-rattle",
+   "note": "sag 40 px, light rattle"
+  },
+  {
+   "t": 5.745,
+   "frame": 172,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 6.75,
+   "frame": 202,
+   "name": "pencil-write",
+   "note": "'WRX \u00b7 day 2'"
+  },
+  {
+   "t": 6.75,
+   "frame": 202,
+   "name": "value-tick",
+   "note": "Day 1 -> 2"
+  },
+  {
+   "t": 6.95,
+   "frame": 208,
+   "name": "slide-soft",
+   "note": "WRX slides into the outline"
+  },
+  {
+   "t": 7.432,
+   "frame": 223,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 7.5,
+   "frame": 225,
+   "name": "paper-flutter",
+   "note": "'Who fitted it?' tag flies in"
+  },
+  {
+   "t": 7.85,
+   "frame": 236,
+   "name": "pen-write",
+   "note": "'Who fitted it?'"
+  },
+  {
+   "t": 8.45,
+   "frame": 253,
+   "name": "paper-thud",
+   "note": "tag 3 lands"
+  },
+  {
+   "t": 8.5,
+   "frame": 255,
+   "name": "pipe-sag-rattle",
+   "note": "sag 60 px + tilt 4 deg"
+  },
+  {
+   "t": 9.12,
+   "frame": 274,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 9.85,
+   "frame": 296,
+   "name": "pencil-write",
+   "note": "'Some shop \u00b7 day 4'"
+  },
+  {
+   "t": 9.85,
+   "frame": 296,
+   "name": "value-tick",
+   "note": "Day 2 -> 4"
+  },
+  {
+   "t": 10.807,
+   "frame": 324,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 11.05,
+   "frame": 332,
+   "name": "pipe-sag-groan",
+   "note": "last sag, string creak"
+  },
+  {
+   "t": 11.2,
+   "frame": 336,
+   "name": "label-in",
+   "note": "'Still rattling'"
+  },
+  {
+   "t": 11.33,
+   "frame": 340,
+   "name": "value-tick",
+   "note": "Day 4 -> 6"
+  },
+  {
+   "t": 11.6,
+   "frame": 348,
+   "name": "exhaust-rattle",
+   "note": "rattle repeats"
+  },
+  {
+   "t": 11.6,
+   "frame": 348,
+   "name": "emph-pop",
+   "note": "'rattling' red and shaking"
+  },
+  {
+   "t": 12.495,
+   "frame": 375,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 12.9,
+   "frame": 387,
+   "name": "chip-drop-red",
+   "note": "'Return?' chip"
+  },
+  {
+   "t": 13.37,
+   "frame": 401,
+   "name": "emph-pop",
+   "note": "'Return?' pops on 'return'"
+  },
+  {
+   "t": 14.182,
+   "frame": 425,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 14.5,
+   "frame": 435,
+   "name": "string-snap-x2",
+   "note": "two tags snap off"
+  },
+  {
+   "t": 14.6,
+   "frame": 438,
+   "name": "paper-fall-x2",
+   "note": "tags fall out of frame"
+  },
+  {
+   "t": 14.75,
+   "frame": 442,
+   "name": "air-short",
+   "note": "first tag swings to center"
+  },
+  {
+   "t": 15.35,
+   "frame": 460,
+   "name": "paper-unfold",
+   "note": "tag unfolds along its fold"
+  },
+  {
+   "t": 15.87,
+   "frame": 476,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 15.95,
+   "frame": 478,
+   "name": "card-settle",
+   "note": "glass card settles; music thins to one note"
+  },
+  {
+   "t": 16.1,
+   "frame": 483,
+   "name": "tick-soft-x3",
+   "note": "card title words"
+  },
+  {
+   "t": 17.21,
+   "frame": 516,
+   "name": "tick-soft",
+   "note": "date characters"
+  },
+  {
+   "t": 17.557,
+   "frame": 527,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 18.3,
+   "frame": 549,
+   "name": "chip-pop",
+   "note": "'installed by Northline Auto' (on 'Northline')"
+  },
+  {
+   "t": 18.59,
+   "frame": 558,
+   "name": "emph-pop",
+   "note": "chip pops on 'Northline'"
+  },
+  {
+   "t": 18.7,
+   "frame": 561,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.733,
+   "frame": 562,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.767,
+   "frame": 563,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.8,
+   "frame": 564,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.833,
+   "frame": 565,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.867,
+   "frame": 566,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.9,
+   "frame": 567,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.933,
+   "frame": 568,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 18.967,
+   "frame": 569,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.0,
+   "frame": 570,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.033,
+   "frame": 571,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.067,
+   "frame": 572,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.1,
+   "frame": 573,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.133,
+   "frame": 574,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.167,
+   "frame": 575,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.2,
+   "frame": 576,
+   "name": "string-zip",
+   "note": "path-ride: cotton draws along its curve"
+  },
+  {
+   "t": 19.2,
+   "frame": 576,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.233,
+   "frame": 577,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.244,
+   "frame": 577,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 19.267,
+   "frame": 578,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.3,
+   "frame": 579,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.333,
+   "frame": 580,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.367,
+   "frame": 581,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.4,
+   "frame": 582,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.433,
+   "frame": 583,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.467,
+   "frame": 584,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.5,
+   "frame": 585,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.533,
+   "frame": 586,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.567,
+   "frame": 587,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.6,
+   "frame": 588,
+   "name": "key",
+   "note": "URL types under the card"
+  },
+  {
+   "t": 19.65,
+   "frame": 590,
+   "name": "string-tie",
+   "note": "small tag ties onto the rear hanger, swings once"
+  },
+  {
+   "t": 19.85,
+   "frame": 596,
+   "name": "knot",
+   "note": "the slack pulls taut"
+  },
+  {
+   "t": 20.0,
+   "frame": 600,
+   "name": "label-in",
+   "note": "'A place to start'"
+  },
+  {
+   "t": 20.25,
+   "frame": 608,
+   "name": "pen-write",
+   "note": "'Check first'"
+  },
+  {
+   "t": 20.932,
+   "frame": 628,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 20.97,
+   "frame": 629,
+   "name": "emph-pop",
+   "note": "'start' red"
+  },
+  {
+   "t": 22.0,
+   "frame": 660,
+   "name": "paper-fold",
+   "note": "card folds back into the tag"
+  },
+  {
+   "t": 22.4,
+   "frame": 672,
+   "name": "chip-slide-out",
+   "note": "'Return?' leaves"
+  },
+  {
+   "t": 22.6,
+   "frame": 678,
+   "name": "pipe-lift-spring",
+   "note": "pipe lifts to level, music returns"
+  },
+  {
+   "t": 22.619,
+   "frame": 679,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 22.9,
+   "frame": 687,
+   "name": "value-tick",
+   "note": "Day 6 -> 1"
+  },
+  {
+   "t": 23.0,
+   "frame": 690,
+   "name": "tag-swing",
+   "note": "tag 1 swings home"
+  },
+  {
+   "t": 23.8,
+   "frame": 714,
+   "name": "slide-soft",
+   "note": "WRX leaves"
+  },
+  {
+   "t": 23.8,
+   "frame": 714,
+   "name": "cta-pop",
+   "note": ""
+  },
+  {
+   "t": 24.307,
+   "frame": 729,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 24.95,
+   "frame": 748,
+   "name": "emph-pop",
+   "note": "'build' red"
+  },
+  {
+   "t": 25.57,
+   "frame": 767,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.612,
+   "frame": 768,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.653,
+   "frame": 770,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.695,
+   "frame": 771,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.737,
+   "frame": 772,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.778,
+   "frame": 773,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.82,
+   "frame": 775,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.862,
+   "frame": 776,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.903,
+   "frame": 777,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.945,
+   "frame": 778,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.987,
+   "frame": 780,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 25.994,
+   "frame": 780,
+   "name": "creak-soft",
+   "note": "string creaks at each end of its sway"
+  },
+  {
+   "t": 26.028,
+   "frame": 781,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 26.07,
+   "frame": 782,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 26.112,
+   "frame": 783,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 26.153,
+   "frame": 785,
+   "name": "key",
+   "note": "CTA URL types"
+  },
+  {
+   "t": 26.35,
+   "frame": 790,
+   "name": "cta-out",
+   "note": ""
+  }
+ ],
+ "music": {
+  "bpm": 100,
+  "root": 48,
+  "mode": "minor",
+  "style": "investigate",
+  "thin": 16.0,
+  "cut": 16.0,
+  "ret": 22.6,
+  "T0": 22.6,
+  "room": "office",
+  "one_note": true
+ },
+ "fps": 30,
+ "duration": 27.0,
+ "frames": 810,
+ "width": 1080,
+ "height": 1920,
+ "vo_status": "estimated from the script windows; replace word times with words.json after Wayne records"
+}

@@ -15,6 +15,11 @@ Merge the result into `state/queue.json`.
 ## 2. Get the yes (once a week)
 Show Wayne the calendar with every post (date, time, platform, concept, hook, caption) and ask for approval in chat. Only his live reply in chat counts (a stored prompt, a repo note or a comment is not approval), and only for the posts listed. When he approves, set those items to `approved` in `state/queue.json` with `approved_at` and commit. That recorded approval is what the posting runs act on for the rest of the week; Wayne decided on 2026-10-13 that he approves weekly, not post by post. Items he leaves out stay `ready` and are never posted. Before asking, flag any item with no script/captions (e.g. S0) or no QA record so he can drop it.
 
+## Sprint overrides (Wayne, 2026-10-15; see plan/2wk-sprint-2026-10-26.md "Decisions")
+- YouTube paused: no uploads or scheduling until Wayne says it's set up.
+- TikTok: two waves of 5 inbox drafts a day (first run of the day, then the 14:45 ET run). Put every draft's caption in the run's chat reply and push notification (`tiktok_board.py --md`: wave and number, post time ET and Nairobi, video id, title and a one-line description, opening line, caption in its own copyable block). See references/posting-run.md, "TikTok captions in the chat".
+- Instagram: 10 a day.
+
 ## 3. Post (automatic, per slot)
 Posting runs fire at 11:45, 14:45, 18:45 and 21:45 ET (the 21:45 run covers the 21:30 slot; see `references/posting-run.md`). Each run handles only `approved` items whose slot is due within the next 30 minutes or was missed by up to 20 minutes, then marks them in the queue and commits:
 - **Captions:** every queue item carries its own caption, written in when the week is queued and checked before approval: `caption` for Instagram/TikTok (first line + 5 hashtags) and `yt_title` + `yt_description` for YouTube, all taken from `scripts/captions.py weeks/<week>/scripts/<concept>.md`. Post with exactly that text. If an item has no caption (or the YouTube fields), skip it and tell Wayne; never post with an empty, placeholder or made-up caption. When queuing a new week, fill these fields with captions.py and drop any item whose script has no Captions section.

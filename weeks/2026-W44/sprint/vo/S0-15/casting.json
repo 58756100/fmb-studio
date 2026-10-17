@@ -1,0 +1,31 @@
+{
+  "reel": "S0-15",
+  "calendar_voice": "audition",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.5,
+  "style": 0.15,
+  "speed_note": "",
+  "target_seconds": 36,
+  "airings_calendar": "10-28 A, 11-02 B, 11-07 C (12:30)",
+  "tempo_post": 1.06,
+  "speakers": {
+    "Chris (The wrench)": {
+      "voice_name": "Frank, Wise & Deep",
+      "voice_id": "V2bPluzT7MuirpucVAKH",
+      "model": "eleven_v4"
+    },
+    "Eric (Nate)": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Wrench on Frank (audition resolved per Wayne's sprint note). Nate on Justin Case.",
+  "characters": {
+    "master": 499,
+    "hookB": 49,
+    "hookC": 62
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "reel": "S0-06",
+  "calendar_voice": "Justin Case",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.04,
+  "stability": 0.5,
+  "style": 0.15,
+  "speed_note": "house Justin Case 0.96 x fast 1.08 = 1.04",
+  "target_seconds": 45,
+  "airings_calendar": "10-29 A, 11-03 B, 11-08 C (15:30)",
+  "tempo_post": 1.06,
+  "speakers": {
+    "Eric (Narrator)": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    },
+    "Rita (Mia)": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Narrator Eric on Justin Case (lead, so 1.04 = 0.96 x 1.08). Rita/Sarah (Mia) mapped to Emma, not the premade Sarah.",
+  "characters": {
+    "master": 684,
+    "hookB": 54,
+    "hookC": 64
+  }
+}

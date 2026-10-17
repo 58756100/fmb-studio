@@ -1,0 +1,41 @@
+{
+  "reel": "S0-03",
+  "calendar_voice": "two-voice",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.04,
+  "stability": 0.5,
+  "style": 0.15,
+  "speed_note": "house Justin Case 0.96 x fast 1.08 = 1.04",
+  "target_seconds": 38,
+  "airings_calendar": "10-27 A, 11-01 B, 11-06 C (09:30)",
+  "tempo_post": 1.06,
+  "speakers": {
+    "Eric (Host)": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    },
+    "Brian (Lou)": {
+      "voice_name": "Jerry B.",
+      "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+      "model": "eleven_v4"
+    },
+    "Rita (Tasha)": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    },
+    "Chris (Andre)": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Host (off camera, also CTA) on Justin Case, so the Justin house factor (0.96 x 1.08) applies to the reel.",
+  "characters": {
+    "master": 516,
+    "hookB": 69,
+    "hookC": 72
+  }
+}

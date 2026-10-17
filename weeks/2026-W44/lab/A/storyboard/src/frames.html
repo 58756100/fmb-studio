@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- Lane A storyboard key frames, built only from A-L1..L3 VISUAL SPEC + BEATS (hook 1).
+     Usage: frames.html?v=L1&t=7  -> renders the settled state of the beat starting at t s. -->
+<style>
+@font-face { font-family: "Barlow Condensed"; font-weight: 700; src: url(../../fonts/barlow-condensed-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 600; src: url(../../fonts/source-sans-3-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 500; src: url(../../fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2"); }
+html, body { margin: 0; padding: 0; }
+#c { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); color: var(--tx); }
+.a { position: absolute; box-sizing: border-box; }
+/* type roles from the spec */
+.hl { font-family: "Barlow Condensed"; font-weight: 700; font-size: 96px; line-height: 0.96; letter-spacing: 0.005em; }
+.ui { font-family: "Source Sans 3"; font-weight: 600; font-size: 48px; line-height: 1.12; }
+.mono { font-family: "IBM Plex Mono"; font-weight: 500; font-size: 44px; line-height: 1.15; letter-spacing: 0.01em; }
+.sub { left: 96px; width: 784px; top: 1220px; height: 190px; display: flex; align-items: center; justify-content: center; text-align: center;
+       font-family: "Source Sans 3"; font-weight: 600; font-size: 52px; line-height: 1.15; }
+.photo { background: var(--pn); outline: 2px solid color-mix(in srgb, var(--tx) 22%, transparent); outline-offset: -2px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.photo img, .fit img { display: block; max-width: 92%; max-height: 92%; object-fit: contain; }
+.fit { display: flex; align-items: center; justify-content: center; }
+.fit img { max-width: 100%; max-height: 100%; }
+.panel { background: var(--pn); }
+.paper { background: var(--tx); color: var(--bg); }
+.lbl { color: var(--em); }
+.dim { opacity: .62; }
+.tag { display: inline-block; white-space: nowrap; padding: 2px 14px; border: 3px solid var(--em); color: var(--em); }
+.rule { position: absolute; height: 4px; background: var(--pn); }
+.line { position: absolute; background: var(--em); }
+.bubble { display: inline-block; background: var(--pn); border-radius: 34px; padding: 22px 34px; font-family: "Source Sans 3"; font-weight: 600; font-size: 52px; line-height: 1.12; }
+.empty { border: 4px dashed color-mix(in srgb, var(--tx) 55%, transparent); }
+.row { display: flex; align-items: baseline; gap: 20px; white-space: nowrap; }
+.hl { white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="c"></div>
+<script>
+const IMG = "../../../../../../kit/remotion/public/img/";
+const PAL = {
+  L1: { bg: "#171A18", tx: "#F2EBDD", em: "#E6A16A", pn: "#303832" },
+  L2: { bg: "#22211E", tx: "#F4EBDD", em: "#E9BB62", pn: "#39362F" },
+  L3: { bg: "#1D1B20", tx: "#F3ECE2", em: "#C8B4E8", pn: "#36313C" },
+};
+// Hero cut-outs (kit tools only): 240Z car-05, Miata car-09, '99 Supra car-01, brake kit part-06, turbo kit part-01
+const CAR = { L1: "car-05", L2: "car-09", L3: "car-01" };
+const BRAKE = "part-06", TURBO = "part-01";
+
+const box = (x, y, w, h, cls = "", html = "", st = "") =>
+  `<div class="a ${cls}" style="left:${x}px;top:${y}px;width:${w}px;${h ? `height:${h}px;` : ""}${st}">${html}</div>`;
+const img = (n, st = "") => `<img src="${IMG}${n}.png" style="${st}">`;
+const hl = (txt, st = "", top = 254) => box(96, top, 784, 0, "hl", txt, st);
+const sub = (txt) => (txt ? `<div class="a sub">${txt}</div>` : "");
+const photo = (x, y, w, h, car, label = "", st = "") =>
+  box(x, y, w, h, "photo", img(car) + (label ? `<div class="a mono" style="left:24px;top:16px">${label}</div>` : ""), st);
+const fit = (x, y, w, h, n, st = "") => box(x, y, w, h, "fit", img(n), st);
+const field = (label, value, vcls = "ui", vst = "") =>
+  `<div><div class="mono lbl">${label}</div><div class="${vcls}" style="${vst}">${value}</div></div>`;
+const tag = (t = "DEMO BUILD") => `<span class="mono tag">${t}</span>`;
+const vline = (x, y1, y2, w = 6) => `<div class="line" style="left:${x - w / 2}px;top:${y1}px;width:${w}px;height:${y2 - y1}px"></div>`;
+const follow = (y = 1088) => box(96, y, 784, 0, "ui", `FOLLOW FuelMyBuild<br>BETTER BUILD RECORDS`, "font-size:48px;line-height:1.15");
+const ARROW = `<svg width="92" height="64" viewBox="0 0 92 64" style="vertical-align:-0.02em;margin:0 6px"><path d="M4 32 H76 M52 8 L80 32 L52 56" fill="none" stroke="currentColor" stroke-width="13" stroke-linecap="butt" stroke-linejoin="miter"/></svg>`;
+
+// a paper record card (L1 dossier). rows = array of html strings
+const card = (x, y, w, h, inner, cls = "panel", st = "") => box(x, y, w, h, cls, inner, `padding:28px 32px;${st}`);
+
+/* ---------------- L1 ---------------- */
+const L1 = {
+  0: () => [
+    hl("PROVE THE WORK."),
+    photo(60, 430, 960, 560, CAR.L1),
+    // blank evidence panel (paper) sliding over the photo's lower half; empty ruled lines only
+    box(96, 730, 784, 450, "paper", [0, 1, 2, 3].map(i => `<div class="rule" style="left:40px;width:${[704, 560, 704, 420][i]}px;top:${92 + i * 92}px;background:#30383255"></div>`).join("")),
+    sub("Prove the work."),
+  ],
+  5: () => [
+    hl("A FINISHED-CAR PHOTO"),
+    photo(30, 420, 1020, 760, CAR.L1),
+    sub("A finished-car photo"),
+  ],
+  7: () => [
+    hl("WHAT'S UNDERNEATH?"),
+    fit(250, 720, 500, 470, BRAKE),
+    photo(30, 390, 1020, 340, CAR.L1, "", "box-shadow:0 24px 40px #0008"),
+    sub("what's underneath."),
+  ],
+  10: () => [
+    hl("PART: BRAKE KIT"),
+    box(96, 430, 0, 0, "", tag()),
+    card(96, 530, 520, 300, `${field("PART", "Brake kit", "ui", "font-size:80px;margin-top:10px")}`, "paper", "border-left:14px solid var(--em)"),
+    box(96, 860, 520, 120, "empty", ""),
+    fit(620, 470, 440, 520, BRAKE),
+    sub("Name the part."),
+  ],
+  13: () => [
+    hl("PHOTO ATTACHED"),
+    card(96, 430, 784, 0, `
+      <div class="row" style="justify-content:space-between">${tag()}<span class="mono">OCT 12, 2026</span></div>
+      <div style="display:flex;gap:28px;margin-top:34px">
+        <div style="flex:1;display:flex;flex-direction:column;gap:26px">
+          ${field("PART", "Brake kit")}${field("BRAND", "Demo Brand A")}${field("LOG DATE", "OCT 12, 2026", "mono")}
+        </div>
+        <div style="width:330px">
+          <div class="mono lbl">PHOTO</div>
+          <div class="fit" style="width:330px;height:330px;margin-top:8px;background:#171A18;border:5px solid var(--em);box-sizing:border-box;padding:18px">${img(BRAKE)}</div>
+        </div>
+      </div>`, "panel"),
+    sub("Attach the photo."),
+  ],
+  19: () => [
+    hl("ONE PUBLIC LINK"),
+    card(60, 420, 960, 0, `
+      <div class="row" style="justify-content:space-between;padding:0 4px"><span class="ui" style="font-size:52px">FuelMyBuild</span>${tag()}</div>
+      <div class="photo" style="position:relative;height:230px;margin-top:18px;background:#171A18">${img(CAR.L1, "max-height:96%")}</div>
+      <div class="row" style="margin-top:20px"><span class="mono lbl">OCT 12, 2026</span><span class="ui">Brake kit</span></div>
+      <div class="row" style="margin-top:6px"><span class="mono lbl">PARTS</span><span class="ui">Brake kit · Demo Brand A</span></div>
+      <div style="margin-top:24px;border:5px solid var(--em);padding:16px 20px;background:#171A18">
+        <div class="mono lbl" style="font-size:44px">PUBLIC URL · DEMO</div>
+        <div class="mono" style="font-size:46px">fuelmybuild.com/demo-240z</div>
+      </div>`, "panel", "padding:24px 140px 24px 36px"),
+    sub("One public link."),
+  ],
+  21: () => [
+    hl("THE CAR + ITS RECORD"),
+    photo(96, 410, 784, 330, CAR.L1),
+    vline(488, 740, 800),
+    card(96, 800, 784, 380, recordL1(), "panel"),
+    sub("has a record."),
+  ],
+  24: () => [
+    hl("HARDEST UPGRADE<br>TO PROVE?"),
+    photo(96, 470, 784, 290, CAR.L1),
+    vline(488, 760, 810),
+    card(96, 810, 784, 380, recordL1(), "panel"),
+    sub(""),
+  ],
+  27: () => [
+    hl("HARDEST UPGRADE<br>TO PROVE?"),
+    photo(96, 460, 784, 250, CAR.L1),
+    vline(488, 710, 740),
+    card(96, 740, 784, 320, recordL1(true), "panel"),
+    follow(1080),
+    sub(""),
+  ],
+};
+function recordL1(compact) {
+  return `
+    <div class="row" style="justify-content:space-between">${tag()}<span class="mono">OCT 12, 2026</span></div>
+    <div style="display:flex;gap:26px;margin-top:${compact ? 14 : 26}px;align-items:center">
+      <div class="fit" style="width:${compact ? 180 : 230}px;height:${compact ? 180 : 230}px;background:#171A18;padding:12px;box-sizing:border-box">${img(BRAKE)}</div>
+      <div style="display:flex;flex-direction:column;gap:${compact ? 4 : 12}px">
+        <div class="ui">Brake kit</div>
+        <div class="ui dim">Demo Brand A</div>
+        <div class="row"><span class="mono lbl">GARAGE</span><span class="ui">Demo Garage A</span></div>
+      </div>
+    </div>`;
+}
+
+/* ---------------- L2 ---------------- */
+const shopPanel = (y, label) => photo(96, y, 784, 360, CAR.L2, label, "");
+const L2 = {
+  0: () => [hl("WHICH SHOP?"), shopPanel(440, "SHOP A"), shopPanel(830, "SHOP B"), sub("Same car. Same photo.")],
+  3: () => [
+    hl("A OR B?"), shopPanel(440, "SHOP A"), shopPanel(830, "SHOP B"),
+    box(78, 620, 820, 390, "", "", "border:8px solid var(--em)"),
+    sub("would you hire?"),
+  ],
+  5: () => [
+    hl("SHOW THE WORK"),
+    photo(96, 400, 784, 330, CAR.L2, "SHOP A"),
+    // record stack entering below (job folder edges)
+    box(136, 820, 704, 360, "panel", "", "opacity:.55"),
+    box(116, 800, 744, 380, "panel", "", "opacity:.8;outline:2px solid #F4EBDD33"),
+    box(96, 780, 784, 400, "panel", `<div style="padding:28px 32px">${tag()}</div>`, "outline:2px solid #F4EBDD55"),
+    sub("Now show"),
+  ],
+  9: () => [
+    hl("DATED PHOTO LOG"),
+    anchorL2(),
+    card(96, 620, 784, 560, `
+      <div class="row" style="justify-content:space-between">${tag()}<span class="mono">SHOP A</span></div>
+      <div style="display:flex;gap:30px;margin-top:34px;align-items:flex-start">
+        <div style="flex:1">
+          <div class="mono lbl">LOG DATE</div>
+          <div class="mono" style="font-size:64px;line-height:1.1;margin-top:6px">OCT 12,<br>2026</div>
+          <div class="ui dim" style="margin-top:20px">Brake kit</div>
+        </div>
+        <div style="width:360px"><div class="mono lbl">PHOTO</div>
+          <div class="fit" style="width:360px;height:360px;margin-top:8px;background:#22211E;border:5px solid var(--em);box-sizing:border-box;padding:18px">${img(BRAKE)}</div></div>
+      </div>`, "panel"),
+    sub("Dated install photo."),
+  ],
+  13: () => [
+    hl("CONTRIBUTOR"),
+    anchorL2(),
+    card(96, 620, 784, 560, `
+      <div class="row" style="justify-content:space-between">${tag()}<span class="mono">OCT 12, 2026</span></div>
+      <div style="display:flex;gap:24px;margin-top:22px;align-items:center">
+        <div class="fit" style="width:150px;height:150px;background:#22211E;padding:10px;box-sizing:border-box">${img(BRAKE)}</div>
+        <div><div class="ui">Brake kit</div><div class="ui dim">Demo Brand A</div></div>
+      </div>
+      <div style="margin-top:24px">${field("GARAGE", "Demo Garage A")}</div>
+      <div style="margin-top:20px"><div class="mono lbl">CONTRIBUTOR</div><div class="empty" style="height:68px;margin-top:8px;border-color:var(--em)"></div></div>`, "panel"),
+    sub("The contributor"),
+  ],
+  15: () => [hl("SAME FINISHED CAR"), shopPanel(440, "SHOP A"), sub("Same finished car.")],
+  16: () => [
+    hl("MORE TO JUDGE"), shopPanel(440, "SHOP A"),
+    card(96, 830, 784, 360, `
+      <div class="row" style="justify-content:space-between">${tag()}<span class="mono">OCT 12, 2026</span></div>
+      <div class="row" style="margin-top:14px"><span class="ui">Brake kit</span><span class="ui dim">Demo Brand A</span></div>
+      <div class="row" style="margin-top:8px"><span class="mono lbl">GARAGE</span><span class="ui">Demo Garage A</span></div>
+      <div class="row" style="margin-top:8px"><span class="mono lbl">CONTRIBUTOR</span><span class="ui">Demo Contributor A</span></div>`, "panel", "padding:24px 30px"),
+    sub("More to judge."),
+  ],
+  21: () => [
+    hl("SHARE THE PUBLIC LINK"),
+    card(60, 400, 960, 0, `
+      <div class="row" style="justify-content:space-between;padding:0 4px"><span class="ui" style="font-size:52px">FuelMyBuild</span>${tag()}</div>
+      <div class="ui" style="font-size:64px;margin-top:14px;padding:0 4px">Miata</div>
+      <div style="margin-top:12px;border:5px solid var(--em);padding:14px 20px;background:#22211E">
+        <div class="mono lbl">PUBLIC URL · DEMO</div>
+        <div class="mono" style="font-size:46px">fuelmybuild.com/demo-miata</div>
+      </div>
+      <div class="photo" style="position:relative;height:180px;margin-top:20px;background:#22211E">${img(CAR.L2, "max-height:96%")}</div>
+      <div class="mono lbl" style="margin-top:14px">OCT 12, 2026</div><div class="ui">Brake kit · Demo Brand A</div>
+      <div class="row" style="margin-top:4px"><span class="mono lbl">GARAGE</span><span class="ui">Demo Garage A</span></div>`, "panel", "padding:24px 140px 24px 36px"),
+    sub("Share its public link."),
+  ],
+  24: () => [
+    hl("WHAT WORK<br>LOOKS EASY…<br>…UNTIL YOU DO IT?", "font-size:92px"),
+    card(96, 560, 784, 620, `
+      <div class="row" style="justify-content:space-between"><span class="ui">FuelMyBuild</span>${tag()}</div>
+      <div class="photo" style="position:relative;height:170px;margin-top:14px;background:#22211E">${img(CAR.L2, "max-height:96%")}</div>
+      <div style="display:flex;gap:24px;margin-top:18px;align-items:center">
+        <div class="fit" style="width:150px;height:150px;background:#22211E;padding:10px;box-sizing:border-box">${img(BRAKE)}</div>
+        <div><div class="mono lbl">OCT 12, 2026</div><div class="ui">Brake kit · Demo Brand A</div></div>
+      </div>
+      <div class="row" style="margin-top:14px"><span class="mono lbl">GARAGE</span><span class="ui">Demo Garage A</span></div>`, "panel"),
+    sub("until you do it?"),
+  ],
+};
+function anchorL2() { return photo(96, 400, 380, 180, CAR.L2, "") + box(500, 450, 380, 0, "mono", "SHOP A"); }
+
+/* ---------------- L3 ---------------- */
+const Q = (x, y, st = "") => box(x, y, 900, 0, "", `<div class="bubble" style="white-space:nowrap;${st}">What turbo is that?</div>`);
+const R = (x, y, t, st = "") => box(x, y, 900, 0, "", `<div class="bubble" style="white-space:nowrap;${st}">${t}</div>`);
+const supraKit = (y = 800) => photo(96, y, 560, 380, CAR.L3, "") + fit(640, y + 20, 340, 340, TURBO);
+const L3 = {
+  0: () => [hl(`GUESS${ARROW}ANSWER?`), Q(96, 420), R(250, 590, "Brand B, I think."), supraKit(), sub("Someone guessed your turbo.")],
+  3: () => [
+    hl(`"BRAND B"`), Q(96, 420), R(250, 560, "Brand B, I think.", "opacity:.35"), R(330, 690, "Brand B"),
+    supraKit(), sub("repeats it."),
+  ],
+  5: () => [
+    hl("A GUESS…<br>…BECOMES THE ANSWER"),
+    R(96, 500, "Brand B, I think.", "opacity:.3"),
+    box(96, 610, 784, 0, "", `<div class="bubble" style="font-size:132px;line-height:1.05;padding:30px 52px;display:inline-block">Brand B</div>`),
+    supraKit(830), sub("sounds like fact."),
+  ],
+  7: () => [
+    hl("THE BRAND"),
+    R(905, 470, "Brand B, I think.", "opacity:.3"),
+    fit(170, 410, 640, 540, TURBO),
+    box(96, 990, 784, 0, "", `<div class="mono lbl">BRAND</div><div class="empty" style="height:100px;margin-top:10px"></div>`),
+    sub("The brand."),
+  ],
+  10: () => [
+    hl("BRAND: DEMO BRAND A"),
+    box(96, 392, 784, 0, "mono", `’99 Supra · <span class="lbl">DEMO BUILD</span>`),
+    card(96, 480, 520, 620, `
+      ${field("PART", "Turbo kit", "mono", "font-size:60px;margin-top:6px")}
+      <div style="margin-top:44px">${field("BRAND", "Demo Brand A", "mono", "font-size:60px;margin-top:6px;color:var(--em)")}</div>`, "panel", "padding:40px 34px"),
+    fit(600, 560, 460, 440, TURBO),
+    sub("record its brand,"),
+  ],
+  15: () => [
+    hl("PARTS REGISTRY"),
+    card(60, 400, 960, 0, `
+      <div class="row" style="justify-content:space-between;padding:0 4px"><span class="ui" style="font-size:52px">FuelMyBuild</span>${tag()}</div>
+      <div class="ui" style="font-size:64px;margin-top:18px;padding:0 4px">’99 Supra</div>
+      <div class="mono lbl" style="margin-top:34px;padding:0 4px;border-bottom:3px solid #F3ECE244;padding-bottom:10px">PARTS REGISTRY</div>
+      <div style="display:flex;gap:26px;margin-top:26px;align-items:center;padding:0 4px">
+        <div class="fit" style="width:220px;height:220px;background:#1D1B20;padding:12px;box-sizing:border-box">${img(TURBO)}</div>
+        <div><div class="mono lbl">PART</div><div class="mono" style="font-size:52px">Turbo kit</div>
+             <div class="mono lbl" style="margin-top:14px">BRAND</div><div class="mono" style="font-size:52px;color:var(--em)">Demo Brand A</div></div>
+      </div>`, "panel", "padding:28px 140px 28px 36px"),
+    sub("parts registry."),
+  ],
+  17: () => [
+    hl("PUBLIC BUILD LINK"),
+    card(60, 400, 960, 0, `
+      <div class="row" style="justify-content:space-between;padding:0 4px"><span class="ui" style="font-size:52px">FuelMyBuild</span>${tag()}</div>
+      <div class="ui" style="font-size:60px;margin-top:8px;padding:0 4px">’99 Supra</div>
+      <div class="photo" style="position:relative;height:220px;margin-top:12px;background:#1D1B20">${img(CAR.L3, "max-height:96%")}</div>
+      <div class="row" style="margin-top:16px;padding:0 4px"><span class="mono lbl">PARTS</span><span class="mono">Turbo kit</span><span class="mono" style="color:var(--em)">Demo Brand A</span></div>
+      <div style="margin-top:22px;border:5px solid var(--em);padding:16px 20px;background:#1D1B20">
+        <div class="mono lbl">PUBLIC URL · DEMO</div>
+        <div class="mono" style="font-size:46px">fuelmybuild.com/demo-supra</div>
+      </div>`, "panel", "padding:24px 140px 24px 36px"),
+    sub("has a public link."),
+  ],
+  19: () => [
+    hl("REPLY WITH THE<br>BUILD LINK"),
+    Q(96, 470),
+    box(110, 620, 770, 0, "", `<div class="bubble" style="white-space:nowrap;letter-spacing:0"><div class="mono" style="font-size:44px">fuelmybuild.com/demo-supra</div><div class="mono dim" style="font-size:44px;margin-top:4px">(DEMO)</div></div>`),
+    card(96, 860, 784, 320, `
+      <div class="row" style="justify-content:space-between"><span class="ui">’99 Supra</span>${tag()}</div>
+      <div style="display:flex;gap:24px;margin-top:16px;align-items:center">
+        <div class="fit" style="width:170px;height:170px;background:#1D1B20;padding:10px;box-sizing:border-box">${img(TURBO)}</div>
+        <div><div class="mono">Turbo kit</div><div class="mono" style="color:var(--em)">Demo Brand A</div></div>
+      </div>`, "panel", "outline:2px solid #F3ECE233"),
+    sub("when someone asks."),
+  ],
+  24: () => [
+    hl("WHAT PART<br>GETS MISIDENTIFIED<br>THE MOST?", "color:var(--em);font-size:92px"),
+    fit(250, 540, 500, 360, TURBO),
+    card(96, 920, 784, 260, `
+      <div class="row" style="justify-content:space-between"><span class="ui">’99 Supra</span>${tag()}</div>
+      <div class="row" style="margin-top:14px"><span class="mono lbl">PART</span><span class="mono">Turbo kit</span></div>
+      <div class="row" style="margin-top:4px"><span class="mono lbl">BRAND</span><span class="mono" style="color:var(--em)">Demo Brand A</span></div>`, "panel"),
+    sub("the most?"),
+  ],
+};
+
+const V = { L1, L2, L3 };
+const p = new URLSearchParams(location.search);
+const v = p.get("v") || "L1", t = +(p.get("t") || 0);
+const c = document.getElementById("c");
+for (const [k, val] of Object.entries(PAL[v])) c.style.setProperty("--" + k, val);
+c.innerHTML = V[v][t]().join("");
+// guides=1 overlays the safe regions for checking
+if (p.get("guides")) c.insertAdjacentHTML("beforeend",
+  `<div class="a" style="left:96px;top:240px;width:784px;height:1190px;outline:2px dashed #0f0"></div>
+   <div class="a" style="left:96px;top:1220px;width:784px;height:190px;outline:2px dashed #f0f"></div>`);
+document.fonts.ready.then(() => {
+  for (const h of c.querySelectorAll(".hl")) {
+    let fs = parseFloat(getComputedStyle(h).fontSize);
+    while (h.scrollWidth > 784 && fs > 80) { fs -= 2; h.style.fontSize = fs + "px"; }
+    if (h.scrollWidth > 784) h.style.whiteSpace = "normal";
+  }
+  window.READY = true;
+});
+window.KEYS = Object.keys(V[v]);
+</script>
+</body>
+</html>

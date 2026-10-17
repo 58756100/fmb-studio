@@ -1,0 +1,28 @@
+{
+  "reel": "C3-COL",
+  "calendar_voice": "Justin Case",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.04,
+  "stability": 0.5,
+  "style": 0.15,
+  "speed_note": "one speed per reel call (tts.py takes one value); Justin Case fast = 1.04 (house 0.96 x 1.08)",
+  "tempo_post": 1,
+  "speakers": {
+    "D": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    },
+    "M": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    },
+    "N": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    }
+  }
+}

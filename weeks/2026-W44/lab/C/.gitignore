@@ -1,0 +1,6 @@
+film/node_modules/
+film/out/
+film/stills/
+audio/out/
+*.mp4
+*.wav

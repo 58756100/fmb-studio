@@ -1,0 +1,308 @@
+{
+ "voice": "Eric",
+ "heads": [
+  [
+   0,
+   "Where's the *proof?*"
+  ],
+  [
+   1,
+   "Please document brake work"
+  ],
+  [
+   2,
+   "Maya's 240Z"
+  ],
+  [
+   3,
+   "Brake kit"
+  ],
+  [
+   4,
+   "Part visible"
+  ],
+  [
+   5,
+   "*Installation?*"
+  ],
+  [
+   6,
+   "Exterior photos"
+  ],
+  [
+   7,
+   "Work *missing*"
+  ],
+  [
+   8,
+   "But underneath…"
+  ],
+  [
+   9,
+   "Underneath"
+  ],
+  [
+   10,
+   "Calipers"
+  ],
+  [
+   11,
+   "Brackets"
+  ],
+  [
+   12,
+   "Brake lines"
+  ],
+  [
+   13,
+   "Which photos"
+  ],
+  [
+   14,
+   "Would you send?"
+  ],
+  [
+   15,
+   "Maya opens her record"
+  ],
+  [
+   16,
+   "Her build"
+  ],
+  [
+   17,
+   "FuelMyBuild"
+  ],
+  [
+   18,
+   "Brake kit"
+  ],
+  [
+   19,
+   "Demo Brand A"
+  ],
+  [
+   20,
+   "March 12 · Brake install"
+  ],
+  [
+   21,
+   "Install photos"
+  ],
+  [
+   22,
+   "Before"
+  ],
+  [
+   23,
+   "During"
+  ],
+  [
+   24,
+   "After"
+  ],
+  [
+   25,
+   "Work to *inspect*"
+  ],
+  [
+   27,
+   "Follow for"
+  ],
+  [
+   28,
+   "Documented builds"
+  ],
+  [
+   29,
+   "Where's the *proof?*"
+  ]
+ ],
+ "subs": [
+  [
+   0.0,
+   1.3,
+   "Where's the proof?"
+  ],
+  [
+   1.85,
+   2.95,
+   "Maya's 240Z."
+  ],
+  [
+   3.0,
+   4.95,
+   "Brake kit: visible."
+  ],
+  [
+   5.0,
+   5.75,
+   "*Installation?*"
+  ],
+  [
+   6.0,
+   7.95,
+   "These photos don't show it."
+  ],
+  [
+   8.0,
+   9.95,
+   "But the work is *underneath.*"
+  ],
+  [
+   10.0,
+   12.95,
+   "Calipers, brackets, brake lines."
+  ],
+  [
+   13.0,
+   14.95,
+   "Which photos would you send?"
+  ],
+  [
+   15.0,
+   17.95,
+   "Maya opens the build on FuelMyBuild."
+  ],
+  [
+   18.0,
+   20.95,
+   "Brake kit, brand, dated install log."
+  ],
+  [
+   21.0,
+   24.95,
+   "Then the photos: before, during, after."
+  ],
+  [
+   25.0,
+   26.95,
+   "Now there's work to *inspect.*"
+  ],
+  [
+   27.0,
+   28.95,
+   "Follow for documented builds."
+  ]
+ ],
+ "sfx": [
+  [
+   0,
+   "msgTap"
+  ],
+  [
+   1,
+   "photoOpen"
+  ],
+  [
+   2,
+   "softLand"
+  ],
+  [
+   3,
+   "whoosh"
+  ],
+  [
+   4,
+   "tick"
+  ],
+  [
+   5,
+   "qTick"
+  ],
+  [
+   6,
+   "swipe"
+  ],
+  [
+   7,
+   "mutedStop"
+  ],
+  [
+   8,
+   "pivotHit"
+  ],
+  [
+   9,
+   "whoosh"
+  ],
+  [
+   10,
+   "tick"
+  ],
+  [
+   11,
+   "tick"
+  ],
+  [
+   12,
+   "tick"
+  ],
+  [
+   13,
+   "cardSlide"
+  ],
+  [
+   15,
+   "softLift"
+  ],
+  [
+   17,
+   "revealClick"
+  ],
+  [
+   18,
+   "tap"
+  ],
+  [
+   19,
+   "tick"
+  ],
+  [
+   20,
+   "sheetOpen"
+  ],
+  [
+   21,
+   "photoOpen"
+  ],
+  [
+   22,
+   "tick"
+  ],
+  [
+   23,
+   "tick"
+  ],
+  [
+   24,
+   "tick"
+  ],
+  [
+   25,
+   "softResolve"
+  ],
+  [
+   27,
+   "ctaTap"
+  ],
+  [
+   28,
+   "lightResolve"
+  ],
+  [
+   29,
+   "msgPickup"
+  ]
+ ],
+ "music": {
+  "bpm": 96,
+  "root": 40,
+  "mode": "minor",
+  "T0": 1.0,
+  "thin": 14.0,
+  "cut": 16.0,
+  "ret": 26.0,
+  "style": "observe"
+ }
+}

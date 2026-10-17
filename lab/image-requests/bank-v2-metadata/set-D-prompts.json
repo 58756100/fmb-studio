@@ -1,0 +1,114 @@
+[
+  {
+    "id": "D01",
+    "name": "smartphone-front",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: A single modern smartphone FRONT VIEW, blank BLACK screen, thin bezels, plain unbranded black frame. Entire phone visible.",
+    "ref": null
+  },
+  {
+    "id": "D02",
+    "name": "smartphone-angle",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: The SAME phone as D01, at a three-quarter product angle showing front screen and side edge. Blank BLACK screen, thin bezels, no logo.",
+    "ref": "D01"
+  },
+  {
+    "id": "D03",
+    "name": "laptop",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: One laptop OPEN, blank screen, three-quarter product view. No logo, lettering on keyboard or marks. Plain unmarked keyboard keys, all laptop in frame.",
+    "ref": null
+  },
+  {
+    "id": "D04",
+    "name": "torque-wrench",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: One realistic click-type TORQUE WRENCH, polished metal shaft, ratchet head, textured dark handle. Unmarked adjustment scale, no numbers or text.",
+    "ref": null
+  },
+  {
+    "id": "D05",
+    "name": "socket-set",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: One SOCKET SET in an OPEN fitted carry case, chrome sockets and ratchet neatly arranged in molded trays. No lettering, stamped numbers or logos.",
+    "ref": null
+  },
+  {
+    "id": "D06",
+    "name": "clipboard",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: One clipboard holding a single blank WHITE PAPER sheet. Entire board and metal spring clip visible, slightly elevated three-quarter view. No pen or other props.",
+    "ref": null
+  },
+  {
+    "id": "D07",
+    "name": "manila-folder",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: One MANILA FILE FOLDER slightly open, a few blank white paper sheets inside, entire folder visible, no tabs with text.",
+    "ref": null
+  },
+  {
+    "id": "D08",
+    "name": "car-key",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: One plain unbranded CAR KEY with a BLANK PAPER KEY TAG on a simple metal key ring. Key, ring and blank tag clearly visible together.",
+    "ref": null
+  },
+  {
+    "id": "D09",
+    "name": "blank-receipts",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: A small STACK of BLANK faded paper RECEIPTS, slightly fanned. Plain aged off-white thermal-paper slips, no printing or marks. Entire stack visible.",
+    "ref": null
+  },
+  {
+    "id": "D10",
+    "name": "white-mug",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: One plain WHITE ceramic COFFEE MUG, no steam, no logos or decoration. Handle clearly visible, slightly elevated three-quarter view.",
+    "ref": null
+  },
+  {
+    "id": "D11",
+    "name": "tape-measure",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: One realistic TAPE MEASURE with its metal tape extended a little. Tape and case completely unmarked: no numbers, graduations, logos or text.",
+    "ref": null
+  },
+  {
+    "id": "D12",
+    "name": "magnifying-glass",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: One realistic MAGNIFYING GLASS with clear glass lens, plain metal rim and simple dark handle. Entire object visible.",
+    "ref": null
+  },
+  {
+    "id": "D13",
+    "name": "floor-jack",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: One RED hydraulic automotive FLOOR JACK, three-quarter product view, realistic wheels, lifting saddle and long handle, all fully visible. No labels or lettering.",
+    "ref": null
+  },
+  {
+    "id": "D14",
+    "name": "parts-box",
+    "set": "D",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Subject: One OPEN unbranded CARDBOARD PARTS BOX with crumpled brown PACKING PAPER inside. No shipping labels, tape printing, symbols, logos or text.",
+    "ref": null
+  }
+]

@@ -24,7 +24,7 @@ def keys():
     return seen
 
 def synth(vid, text, a):
-    body = json.dumps({"text": text, "model_id": "eleven_multilingual_v2",
+    body = json.dumps({"text": text, "model_id": a.model,
         "voice_settings": {"stability": a.stability, "similarity_boost": 0.8, "style": a.style, "use_speaker_boost": True, "speed": a.speed}}).encode()
     errs = []
     for i, k in enumerate(keys()):
@@ -65,15 +65,53 @@ def decode(b64):
     y, sr = sf.read(wav); return y, sr
 
 def tighten(y, sr, words, lead=0.12):
+    """Shorten long pauses without touching speech. A pause is only cut inside audio that is
+    actually silent (frame RMS well below the speech level), with 60 ms of untouched room kept
+    after the last word and before the next one, and every splice crossfaded over 12 ms.
+    ElevenLabs word times can be early or late by 50-100 ms, so the timings alone are never
+    trusted to decide where speech is (v1 cut by timings only and clipped word onsets)."""
+    hop = int(0.01 * sr)
+    n = len(y) // hop
+    rms = np.sqrt(np.mean(y[:n * hop].reshape(n, hop) ** 2, axis=1) + 1e-12) if n else np.zeros(0)
+    speech = np.percentile(rms[rms > 0], 90) if n else 1.0
+    quiet = rms < speech * 10 ** (-38 / 20)          # 38 dB under loud speech counts as silence
+    keep_after, keep_before, xf = 0.06, 0.06, 0.012
     cuts = []
     for i in range(len(words) - 1):
         w, s, e = words[i]; gap = words[i + 1][1] - e
-        t = 0.26 if w[-1:] in ".?!:" or w.endswith('"') else (min(gap, 0.16) if w.endswith(",") else gap)
-        if gap > t + 0.02:
-            a = e + t * 0.55; cuts.append((a, a + gap - t))
+        # natural flow: keep a real breath at sentence ends and commas; only trim pauses that drag
+        t = 0.40 if w[-1:] in ".?!:" or w.endswith('"') else (0.24 if w.endswith(",") else gap)
+        if gap <= t + 0.10:
+            continue
+        # longest silent run between the two words, measured on the audio itself
+        f0, f1 = int(max(e - 0.05, 0) / 0.01), int(min(words[i + 1][1] + 0.05, len(y) / sr) / 0.01)
+        best, run = (0, 0), None
+        for f in range(f0, min(f1, n)):
+            if quiet[f]:
+                run = f if run is None else run
+                if f - run + 1 > best[1] - best[0]:
+                    best = (run, f + 1)
+            else:
+                run = None
+        sil0, sil1 = best[0] * 0.01 + keep_after, best[1] * 0.01 - keep_before
+        remove = min(gap - t, sil1 - sil0)
+        if remove > 0.04:
+            mid = (sil0 + sil1) / 2
+            cuts.append((mid - remove / 2, mid + remove / 2))
     parts, last = [], 0.0
-    for a, b in cuts: parts.append(y[int(last * sr):int(a * sr)]); last = b
-    parts.append(y[int(last * sr):])
+    fx = int(xf * sr)
+    ramp = np.linspace(0, 1, fx) if fx else np.zeros(0)
+    for a, b in cuts:
+        seg = y[int(last * sr):int(a * sr)].copy()
+        if fx and len(seg) > fx:
+            seg[-fx:] *= ramp[::-1]
+        if parts and fx and len(seg) > fx:
+            seg[:fx] *= ramp
+        parts.append(seg); last = b
+    tail = y[int(last * sr):].copy()
+    if parts and fx and len(tail) > fx:
+        tail[:fx] *= ramp
+    parts.append(tail)
     out = np.concatenate([np.zeros(int(lead * sr))] + parts)
     def rm(t):
         d = sum((b - a) if t >= b else max(0, t - a) for a, b in cuts)
@@ -83,6 +121,7 @@ def tighten(y, sr, words, lead=0.12):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--voice"); ap.add_argument("--text-file"); ap.add_argument("--dialogue"); ap.add_argument("--out", required=True)
+    ap.add_argument("--model", default=os.environ.get("ELEVENLABS_MODEL", "eleven_v4"))
     ap.add_argument("--speed", type=float, default=1.0); ap.add_argument("--stability", type=float, default=0.5); ap.add_argument("--style", type=float, default=0.15)
     ap.add_argument("--tighten", action="store_true"); ap.add_argument("--tempo", type=float, default=1.0)
     a = ap.parse_args()
@@ -93,6 +132,9 @@ def main():
         r = synth(ln["voice"], ln["text"], a)
         y, sr = decode(r["audio_base64"])
         w = words_from(r["alignment"])
+        os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
+        sf.write(f"{a.out}.take{len(audio)//2}.wav", y, sr)
+        json.dump(w, open(f"{a.out}.take{len(audio)//2}.words.json", "w"))
         if a.tighten: y, w = tighten(y, sr, w, lead=0.0)
         g = ln.get("gap", 0.18) if audio else 0.12
         audio += [np.zeros(int(g * sr)), y]; t += g
