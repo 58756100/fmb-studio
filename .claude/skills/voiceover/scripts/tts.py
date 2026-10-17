@@ -79,8 +79,9 @@ def tighten(y, sr, words, lead=0.12):
     cuts = []
     for i in range(len(words) - 1):
         w, s, e = words[i]; gap = words[i + 1][1] - e
-        t = 0.30 if w[-1:] in ".?!:" or w.endswith('"') else (min(gap, 0.18) if w.endswith(",") else gap)
-        if gap <= t + 0.04:
+        # natural flow: keep a real breath at sentence ends and commas; only trim pauses that drag
+        t = 0.40 if w[-1:] in ".?!:" or w.endswith('"') else (0.24 if w.endswith(",") else gap)
+        if gap <= t + 0.10:
             continue
         # longest silent run between the two words, measured on the audio itself
         f0, f1 = int(max(e - 0.05, 0) / 0.01), int(min(words[i + 1][1] + 0.05, len(y) / sr) / 0.01)

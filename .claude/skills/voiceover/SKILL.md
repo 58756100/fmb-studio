@@ -28,6 +28,6 @@ Every voice has its own natural speed, pause length and energy, so never assume 
 
 ## Process
 1. Use the eleven_v4 model (tts.py default; override with --model or ELEVENLABS_MODEL) with the with-timestamps endpoint, and break tags from the script's direction.
-2. Tighten pauses from the alignment (`tts.py --tighten`): sentence gaps of 0.22–0.3 s, the reveal silence as scripted.
+2. Trim only dragging pauses (`tts.py --tighten`): it keeps about 0.4 s at sentence ends and 0.24 s at commas, cuts only in real silence and crossfades every join. Statements must flow naturally (Wayne, 2026-10-17); never cut into a word.
 3. Fit the runtime with atempo 1.00–1.06 at most. If it's still long, cut words, not speed.
 4. Output `vo.wav`, `words.json` (word, start, end) and one file per hook opener.
