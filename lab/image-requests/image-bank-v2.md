@@ -154,6 +154,23 @@ H01 CUTOUT red rolling mechanic's tool chest, five drawers closed, 3/4 view · H
 - I42 (SC-10) PHOTO 4:3, close-up of a small black automotive relay with a scorched, melted corner, held between gloved fingers above an empty car battery tray, no text or logos
 - I43 (SC-10) PHOTO 9:16, a small-town main street at golden hour with a two-bay independent garage on the right, one bay door open, an empty road in front, no people, no signs or readable text
 
+## Set J: from the lane C rebuilds (15). Send after set I.
+- J01 (SC-02) PHOTO 4:3, a mechanic's gloved hand gripping a sway-bar end link under a lifted truck, work light, no text
+- J02 (SC-03) PHOTO 9:16, a small independent auto shop's roll-up door half open onto a gravel lot at evening, warm interior light, no signage text
+- J03 (SC-04) PHOTO 4:3, the same blue WRX front end finished with the bumper on, a folded red shop rag on the fender, morning light, no text
+- J04 (SC-05) CUTOUT, black mechanic's creeper with six casters and a strip of red tape wrapped around its head-end handle, three-quarter view, no logos
+- J05 (SC-05) PHOTO 4:3, under a car in a shop: a torn rubber exhaust hanger, a dented rear differential cover, and a black creeper with red tape on its handle at the edge of frame, slightly faded 2022 phone-photo look, no text
+- J06 (SC-06) PHOTO 9:16, a paint booth's viewing window seen from outside, filling the middle of the frame; inside, the front corner of a red 1991 Mazda Miata with a freshly sprayed glossy front fender and driver's door, under bright booth light, no people, no text
+- J07 (SC-06) PHOTO 4:3, the same red roadster front fender in flat grey primer, fitted on the car, masking paper on the door edge, in a body shop, no text or logos
+- J08 (SC-08) PHOTO 4:3, a fuel pump assembly held on a plain metal test flange on a workbench in a parts warehouse, a black rubber seal visibly folded under the lock ring, gloved hand turning the ring, no text or logos.
+- J09 (SC-10) CUTOUT, small-town mechanic, man in his late 50s, short grey beard, faded navy work shirt with sleeves rolled, worn ball cap with no logo, wiping his hands on a rag, waist-up, warm expression, no name tag, no logos.
+- J10 (S0-04) CUTOUT, empty red blow-moulded socket-set case with the lid open, one row of five empty socket slots in graduated sizes, the inside of the lid plain and flat with an elastic document pocket, three-quarter view from slightly above, no text or logos
+- J11 (S0-04) CUTOUT, a slightly yellowed folded paint-shop invoice on plain paper, three-quarter view, blank fields (text added in code)
+- J12 (S0-07) CUTOUT, quick-lube shop owner, Latino man in his mid-50s, salt-and-pepper moustache, dark grey short-sleeve work shirt, holding a red shop rag, waist-up, calm half-smile, no name tag, no logos.
+- J13 (S0-10) CUTOUT, young mechanic, man in his early 20s, dark blue work shirt with sleeves pushed up, grease on his fingers, short dark hair, cheeky half-grin, waist-up, no name tag, no logos.
+- J14 (S0-12) CUTOUT, wheel-shop owner, South Asian American woman in her late 40s, dark hair tied back, olive work jacket over a white tee, holding a pen, waist-up, thoughtful expression, no name tag, no logos.
+- J15 (S0-13) PHOTO 4:3, a man in his 60s with grey hair in a navy quarter-zip and a woman in her 40s in a denim jacket crouched together beside the front wheel of a dark green late-1980s BMW coupe on a grass field at golden hour, both smiling at the camera like a quick phone photo, no text or logos.
+
 ---
 
 ## After the bank lands
