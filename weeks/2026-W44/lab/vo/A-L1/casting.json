@@ -1,0 +1,18 @@
+{
+  "reel": "A-L1",
+  "calendar_voice": "Jerry B.",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.55,
+  "style": 0.1,
+  "speed_note": "one speed per reel call (tts.py takes one value); Justin Case fast = 1.04 (house 0.96 x 1.08)",
+  "tempo_post": 1.0,
+  "speakers": {
+    "J": {
+      "voice_name": "Jerry B.",
+      "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+      "model": "eleven_v4"
+    }
+  }
+}

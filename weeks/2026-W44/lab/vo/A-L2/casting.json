@@ -1,0 +1,19 @@
+{
+  "reel": "A-L2",
+  "calendar_voice": "Jerry B.",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 1.0,
+  "stability": 0.55,
+  "style": 0.1,
+  "speed_note": "",
+  "tempo_post": 1.06,
+  "speakers": {
+    "J": {
+      "voice_name": "Jerry B.",
+      "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+      "model": "eleven_v4"
+    }
+  },
+  "tempo_note": "atempo 1.06 applied after tts.py to master and hook openers (skill step 3)"
+}
