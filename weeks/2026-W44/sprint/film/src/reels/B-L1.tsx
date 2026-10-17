@@ -46,7 +46,7 @@ export function build(tl, hook) {
     fuel: at("fuel"), kit2: at("brake", 3), brand: at("brand"), dated: at("dated"), log: at("log"), then: at("then"), before: at("before"), during: at("during"),
     after: at("after"), now: at("now"), inspect: at("inspect"), follow: at("follow"),
   };
-  const TAP1 = T.maya - 0.1, WIPE = T.but - 0.05, BACK = T.which - 0.08, TAP2 = at("maya", 2) - 0.08;
+  const TAP1 = T.maya - 0.1, WIPE = T.but - 0.05, BACK = T.which - 0.08, TAP2 = at("maya") - 0.08;
   const B = (txt, from, extra = {}) => ({ words: wordsFor(tl.body, txt, from), ...extra });
   const fx = (h, ts) => { h.words = h.words.map((w, i) => ({ ...w, t: ts[i] ?? w.t })); return h; };
   const heads = [

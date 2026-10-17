@@ -77,7 +77,7 @@ export function build(tl, hook) {
   const hi = (txt) => heads.find((h) => h.words.map((w) => w.w).join(" ").startsWith(txt));
   fix(hi("Connected"), [T.we + 0.2, at("details"), at("build", 1), T.page]);
   fix(hi("What the"), [at("what"), at("the", 1), T.photo, T.leaves, at("out")]);
-  fix(hi("Easy"), [at("easy"), at("until"), at("you", 2), at("do"), at("it?")]);
+  fix(hi("Easy"), [at("easy"), at("until"), at("you", 2), at("do"), at("it", 2)]);
 
   // the record behind Shop B's photo
   const rows = [

@@ -65,17 +65,15 @@ export function makeTL(master, hookIdx, hookWords = null) {
   const body = M.slice(hookIdx).map((x, i) => ({ ...x, s: x.s + shift, e: x.e + shift, i }));
   const all = [...hook, ...body];
   const cut = cutA + shift;
-  const at = (text, n = 1, from = 0) => {
-    const k = norm(text); let c = 0;
-    for (const x of body) if (x.i >= from && norm(x.w).startsWith(k) && ++c === n) return x.s;
+  // n-th spoken word equal to text (normalised); falls back to prefix matching when there are fewer exact matches
+  const find = (text, n = 1) => {
+    const k = norm(text);
+    for (const pref of [false, true]) { let c = 0; for (const x of body) if ((pref ? norm(x.w).startsWith(k) : norm(x.w) === k) && ++c === n) return x; }
     throw new Error("word not found: " + text + " #" + n);
   };
-  const end = (text, n = 1) => {
-    const k = norm(text); let c = 0;
-    for (const x of body) if (norm(x.w).startsWith(k) && ++c === n) return x.e;
-    throw new Error("word not found: " + text);
-  };
-  const idx = (text, n = 1) => { const k = norm(text); let c = 0; for (const x of body) if (norm(x.w).startsWith(k) && ++c === n) return x.i; throw new Error("nf " + text); };
+  const at = (text, n = 1) => find(text, n).s;
+  const end = (text, n = 1) => find(text, n).e;
+  const idx = (text, n = 1) => find(text, n).i;
   return { hook, body, all, cut, cutA, shift, at, end, idx, last: body[body.length - 1].e, hookEnd: hook[hook.length - 1].e };
 }
 // headline words timed to speech. text uses "/" for a line break. Tokens are matched in order against the
@@ -328,7 +326,7 @@ export const Typed = ({ t, t0, t1, text, caret = RED, style = {}, keepCaret = 0.
   if (t < t0) return null;
   const n = Math.round(seg(t, t0, t1) * text.length);
   const on = t < t1 + keepCaret && Math.floor((t - t0) * 2.6) % 2 === 0 || t < t1;
-  return <span style={{ whiteSpace: "pre", ...style }}>{text.slice(0, n)}<span style={{ display: "inline-block", width: "0.07em", height: "0.9em", background: caret, verticalAlign: "-0.1em", marginLeft: "0.04em", borderRadius: 2, opacity: on ? 1 : 0 }} /></span>;
+  return <span style={{ whiteSpace: "pre-wrap", ...style }}>{text.slice(0, n)}<span style={{ display: "inline-block", width: "0.07em", height: "0.9em", background: caret, verticalAlign: "-0.1em", marginLeft: "0.04em", borderRadius: 2, opacity: on ? 1 : 0 }} /></span>;
 };
 
 // line that draws on (@remotion/paths evolvePath)

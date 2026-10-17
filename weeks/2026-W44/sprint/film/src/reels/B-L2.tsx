@@ -43,7 +43,7 @@ export function build(tl, hook) {
   const T = {
     nora: at("nora"), swap: at("swap"), two: at("two"), same: at("same"), who: at("who"), shopA: at("shop"), finish: at("finish"), but: at("but"),
     installed: at("installed"), a: at("photo"), answer: at("answer"), so: at("so"), opens: at("opens"), pub: at("public"), fuel: at("fuel"),
-    garage: at("garage"), contrib: at("contributor"), eli: at("eli"), dated: at("dated"), install: at("install", 2), now: at("now"), whodid: at("who", 3),
+    garage: at("garage"), contrib: at("contributor"), eli: at("eli"), dated: at("dated"), install: at("install"), now: at("now"), whodid: at("who", 3),
     which: at("which"), call: at("call"), follow: at("follow"),
   };
   const SWAP = T.nora - 0.12, BACK = T.two - 0.08, TAPA = T.shopA - 0.08, TAPB = T.so - 0.05, BACK2 = T.which - 0.08;
@@ -59,7 +59,7 @@ export function build(tl, hook) {
     B("Shows the finish.", at("shows"), { key: [2] }),
     B("Who installed the engine?", T.who + 3.5, { key: [1] }),
     B("A photo can't answer.", T.a - 0.3, { key: [2], hold: 1.0 }),
-    fx(B("Shop B's public build", T.opens), [at("shop", 3), at("b's"), T.pub, at("build")]),
+    fx(B("Shop B's public build", T.opens), [at("shop", 2), at("b's"), T.pub, at("build")]),
     B("Garage: Shop B.", T.garage),
     B("Contributor: Eli.", T.contrib, { key: [1] }),
     B("Dated log.", T.dated, { hold: 0.5 }),
@@ -141,7 +141,7 @@ export function build(tl, hook) {
     const d = drift(t, "bp", 3, 0.25);
     return <AbsoluteFill><Studio t={t}>
       <div style={{ position: "absolute", inset: 0, transform: dT(d, 0.5) }}>
-        <PageCard t={t} y={590} h={980} hero="L05" heroH={340} fy={0.55} title="'91 Miata · Engine swap" owner="Nora · Public build" ownerAv={<Avatar id="E10" size={56} face={NORA} bg="#E6DED3" />}
+        <PageCard t={t} y={590} h={980} hero="L05" heroH={340} fy={0.55} title="'91 Miata · Engine swap" owner="Shop B · Public build" ownerAv={<LetterAv ch="B" size={56} bg="#0A84FF" />}
           brandAt={T.fuel - 0.1} s={1 - 0.05 * lift} o={1 - 0.45 * lift}>
           <div style={{ marginTop: 22, borderRadius: 30, background: "#F2F2F7", padding: "6px 26px" }}>
             {[["Garage", "Shop B", <LetterAv ch="B" size={64} bg="#0A84FF" />, g], ["Contributor", "Eli", <Avatar id="E05" size={64} face={ELI} bg="#DDD6CC" />, c]].map(([l, v, av, f], i) => (

@@ -2,7 +2,7 @@
 // House look (lanes B and C): white / #F5F5F7 canvas, Inter, one red accent, iOS 26-style cards, bank cutouts with
 // soft contact shadows. Sizes are native 1080-wide px, readable on a phone (UI text >= 40 px).
 import React from "react";
-import { W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, Typed, src, rgba } from "../kit";
+import { W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, Typed, src, rgba, ASPECT } from "../kit";
 
 export const BG = "#F5F5F7";
 export const TEXT = { font: "Inter", weight: 600, size: 112, min: 76, ls: "-0.038em", opsz: 32, color: INK, accent: RED, line2: null, align: "center", maxW: 920, top: 292, lead: 1.04 };
@@ -20,7 +20,7 @@ export const Studio = ({ children, t = 0 }) => (
 // a person / car avatar (bank cutout cropped to the face or the car's front)
 export const Avatar = ({ id, size, bg = "#E9E6E1", face = { x: 0.5, y: 0.2, z: 2.0 }, ring }) => (
   <div style={{ width: size, height: size, borderRadius: "50%", overflow: "hidden", position: "relative", background: bg, flex: "none", boxShadow: ring ? `0 0 0 5px ${ring}` : undefined }}>
-    <img src={src(id)} style={{ position: "absolute", width: size * face.z, left: size / 2 - size * face.z * face.x, top: size * 0.5 - size * face.z * face.y * 0.95 }} />
+    <img src={src(id)} style={{ position: "absolute", width: size * face.z, left: size / 2 - size * face.z * face.x, top: size / 2 - (size * face.z / ASPECT[id]) * face.y }} />
   </div>
 );
 export const LetterAv = ({ ch, size, bg = "#8E8E93" }) => <div style={{ width: size, height: size, borderRadius: "50%", background: bg, display: "grid", placeItems: "center", ...inter(size * 0.44, "#fff"), flex: "none" }}>{ch}</div>;
