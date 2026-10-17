@@ -17,7 +17,7 @@ Show Wayne the calendar with every post (date, time, platform, concept, hook, ca
 
 ## Sprint overrides (Wayne, 2026-10-15; see plan/2wk-sprint-2026-10-26.md "Decisions")
 - YouTube paused: no uploads or scheduling until Wayne says it's set up.
-- TikTok: two waves of 5 inbox drafts a day (first run of the day, then the 14:45 ET run). Publish the TikTok caption board (one card per draft in send order: wave and number, post time ET and Nairobi, title, opening line, first-frame thumbnail, caption with a Copy button) at its fixed artifact URL and link it in the push notification.
+- TikTok: two waves of 5 inbox drafts a day (first run of the day, then the 14:45 ET run). Put every draft's caption in the run's chat reply and push notification (`tiktok_board.py --md`: wave and number, post time ET and Nairobi, video id, title and a one-line description, opening line, caption in its own copyable block). See references/posting-run.md, "TikTok captions in the chat".
 - Instagram: 10 a day.
 
 ## 3. Post (automatic, per slot)

@@ -176,6 +176,37 @@ def times(date, time_et):
     return t.strftime("%H:%M"), nbo
 
 
+def premise_line(text):
+    """One plain-language line about what the video shows: the queue's video_desc wins; otherwise the
+    script's PREMISE, or the first line of its story spine (the "who"), trimmed to one sentence."""
+    m = re.search(r"^#+\s*(?:\d+\.\s*)?(?:PREMISE|Premise|Story spine)[^\n]*\n+(.+?)(?:\n\s*\n|\Z)", text, re.M | re.S)
+    if not m:
+        return ""
+    first = next((l for l in m.group(1).splitlines() if l.strip()), "")
+    line = strip_md(first.strip().lstrip("0123456789.-* "))
+    line = re.sub(r"^(Who|Wants|But|Therefore|Payoff[^:]*):\s*", "", line)
+    line = re.split(r"(?<=[.!?])\s", line)[0]
+    return (line[:160].rsplit(" ", 1)[0] + "…") if len(line) > 160 else line
+
+
+def render_md(date, cards):
+    """Chat/notification version: one block per draft, caption in its own code block for one-tap copy."""
+    out = [f"**TikTok drafts for {date}**, post each at its time and paste its caption."]
+    for c in cards:
+        out.append("")
+        out.append(f'**Wave {c["wave"]} · Draft {c["n"]}: post {c["et"]} ET ({c["nbo"]} Nairobi)**')
+        out.append(f'Video: {c["id"]}, "{c["title"]}"' + (f': {c["desc"]}' if c.get("desc") else ""))
+        if c.get("opening"):
+            out.append(f'Opens with: "{c["opening"]}"')
+        if c["caption"]:
+            out.append("```")
+            out.append(c["caption"])
+            out.append("```")
+        else:
+            out.append("**No caption yet. Don't post this draft.**")
+    return "\n".join(out)
+
+
 def build_cards(items, date, fetch=True):
     caps_mod = load_captions_module()
     if fetch:
@@ -203,7 +234,8 @@ def build_cards(items, date, fetch=True):
             "title": it.get("title") or script_title(text, it.get("concept", "")) or it.get("yt_title") or it.get("concept", ""),
             "opening": it.get("opening_line") or opening_line(text, it.get("hook")),
             "caption": caption,
-            "thumb": thumbnail(it.get("render"), cache),
+            "desc": it.get("video_desc") or premise_line(text),
+            "thumb": thumbnail(it.get("render"), cache) if fetch else "",
             "status": it.get("status", ""),
         })
     return cards
@@ -363,6 +395,7 @@ def main():
     ap.add_argument("--queue", default=os.path.join(REPO, "state", "queue.json"))
     ap.add_argument("--out", help="output HTML path (default out/tiktok-board/<date>/index.html)")
     ap.add_argument("--no-fetch", action="store_true", help="don't fetch the renders branch first")
+    ap.add_argument("--md", action="store_true", help="print the chat/notification Markdown (no thumbnails, no HTML) and exit")
     a = ap.parse_args()
     try:
         dt.date.fromisoformat(a.date)
@@ -376,6 +409,9 @@ def main():
         sys.exit(3)
     if len(items) > 2 * WAVE_SIZE:
         warn(f"WARN {len(items)} TikTok items on {a.date}; more than two waves of {WAVE_SIZE}")
+    if a.md:
+        print(render_md(a.date, build_cards(items, a.date, fetch=False)))
+        return
     cards = build_cards(items, a.date, fetch=not a.no_fetch)
     generated = dt.datetime.now(ET).strftime("%b %d, %H:%M ET")
     out = a.out or os.path.join(REPO, "out", "tiktok-board", a.date, "index.html")
