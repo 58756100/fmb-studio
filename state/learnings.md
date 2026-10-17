@@ -26,3 +26,6 @@
 
 ## Offers (Wayne, 2026-10-15)
 - Done-for-you setup: "we set up your build page for you, no setup on your end." Usable in CTAs (comment/DM keyword or link in bio).
+
+## Licences
+- Remotion: FuelMyBuild is a one-person company (Wayne, 2026-10-17), so Remotion's free licence (companies of 3 or fewer people) applies. Re-check if the team grows past 3.
