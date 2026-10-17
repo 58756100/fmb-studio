@@ -88,7 +88,7 @@ export function wordsFor(list, text, from, opts = {}) {
     if (tk === "/") { line++; continue; }
     const k = norm(tk);
     let hit = -1;
-    for (let q = j; q < Math.min(list.length, j + 8); q++) {
+    for (let q = j; q < Math.min(list.length, j + (out.length ? 4 : 2)); q++) {
       const nw = norm(list[q].w);
       if (k && (nw === k || nw.startsWith(k) || k.startsWith(nw) && nw.length > 2)) { hit = q; break; }
     }
@@ -111,14 +111,16 @@ const FILES = ["A01-supra-front.webp", "A02-supra-side.webp", "A03-supra-rear.we
   "E08-skeptical-customer.webp", "E09-collector-laughing.webp", "E10-owner-explaining.webp", "E01-collector-man.webp",
   "F01-garage-bay.jpg", "F02-home-garage.jpg", "F05-shop-counter.jpg", "F06-car-meet.jpg", "F04-warehouse-aisle.jpg",
   "G01-turbo-install.jpg", "G02-coilover-install.jpg", "G03-caliper-installed.jpg", "G04-engine-hoist.jpg", "G07-head-gasket-leak.jpg", "G08-exhaust-underside.jpg",
-  "G12-finished-engine-bay.jpg", "G06-wheel-alignment.jpg", "legacy-evo-car-14.png"];
-export const FILE = Object.fromEntries(FILES.map((f) => [f.slice(0, 3) === "leg" ? "EVO" : f.slice(0, 3), f]));
+  "G12-finished-engine-bay.jpg", "G06-wheel-alignment.jpg", "F10-detailing-studio.jpg", "F03-showroom-floor.jpg", "D13-floor-jack.webp", "D02-smartphone-angle.webp", "legacy-evo-car-14.png"];
+export const FILE = { ...Object.fromEntries(FILES.map((f) => [f.slice(0, 3) === "leg" ? "EVO" : f.slice(0, 3), f])),
+  L01: "lab-b-240z-log-before.jpg", L02: "lab-b-240z-log-during.jpg", L03: "lab-b-240z-log-after.jpg", L04: "lab-b-miata-engine-hoist.jpg",
+  L05: "lab-b-miata-engine-installed.jpg", L06: "lab-b-supra-turbo-during.jpg", L07: "lab-b-supra-turbo-after.jpg" };
 export const ASPECT = {
   A01: 1581 / 723, A02: 1602 / 582, A03: 1594 / 783, A04: 1569 / 722, A05: 1586 / 600, A06: 1607 / 787, A07: 1597 / 793, A08: 1583 / 617, A09: 1575 / 801,
   A13: 1606 / 765, A14: 1601 / 591, A15: 1599 / 777, A28: 1581 / 793, A29: 1621 / 649, A30: 1572 / 821, C01: 1335 / 1060, C03: 1113 / 1042, C04: 1607 / 942,
   C05: 1579 / 977, C15: 1572 / 1053, C16: 1611 / 825, D01: 554 / 1036, D03: 1521 / 1067, D06: 1130 / 1078, D07: 1281 / 1002, D09: 1248 / 1047, D12: 1500 / 1003,
   D14: 1473 / 1055, D04: 1578 / 1026, D08: 1485 / 938, D10: 1062 / 953, E02: 850 / 1096, E03: 1378 / 1110, E04: 847 / 1092, E05: 866 / 1101, E06: 960 / 1099, E07: 864 / 1069,
-  E08: 490 / 1003, E09: 1251 / 1098, E10: 1279 / 1109, E01: 1031 / 1087, EVO: 1241 / 560,
+  E08: 490 / 1003, D13: 1513 / 1032, D02: 475 / 1046, E09: 1251 / 1098, E10: 1279 / 1109, E01: 1031 / 1087, EVO: 1241 / 560,
 };
 export const src = (id) => staticFile("img/" + FILE[id]);
 export const preloadList = (ids) => ids.map((id) => src(id));
@@ -279,13 +281,13 @@ export const FlowText = ({ t, head, st }) => {
     const lead = 4 / FPS; // words start rising 4 frames before their onset
     const local = t - (wd.t - lead); if (local < 0) return null;
     const pin = spr(local, 210, 20), o = seg(local, 0, 5 / FPS);
-    let tx = 0, ty = (1 - pin) * size * 0.9 + fy, sc = 1, op = o, bl = 0;
+    let tx = 0, ty = (1 - pin) * size * 1.15 + fy, sc = 1, op = o, bl = 0;
     let col = (wd.line > 0 && st.line2 && !head.ink2) ? st.line2 : (head.color ?? st.color);
     if (keyset.has(i)) { const ka = head.keyAt ?? wd.t + 0.08; col = mixColor(col.startsWith("#") ? col : st.color, st.accent, seg(t, ka, ka + 0.2)); }
     const isCarry = head.carry && head.carry.i === i;
     const ex = head.exit;
     if (ex && !isCarry && t >= ex.at) {
-      const st0 = ex.at + i * (ex.stagger ?? 0.05), q = EASE.in(seg(t, st0, st0 + (ex.dur ?? 0.34)));
+      const st0 = ex.at + i * (ex.stagger ?? 0.03), q = EASE.in(seg(t, st0, st0 + (ex.dur ?? 0.28)));
       const cx = pos[i].x + pos[i].w / 2, cy = pos[i].y + size / 2;
       if (ex.mode === "left") tx -= q * 320; else if (ex.mode === "right") tx += q * 320;
       else if (ex.mode === "up") ty -= q * 90; else if (ex.mode === "down") ty += q * 90;
@@ -301,7 +303,9 @@ export const FlowText = ({ t, head, st }) => {
       sc *= lerp(1, c.to.size / size, clamp(p)); col = mixColor(st.color, c.color || st.accent, ln); clip = undefined;
       if (c.fade != null) op *= 1 - seg(t, c.fade, c.fade + 0.25);
     }
-    return <div key={i} style={{ position: "absolute", left: pos[i].x, top: pos[i].y, height: size * 1.25, clipPath: clip, zIndex: isCarry ? 61 : 60 }}>
+    const dot = head.dot && i === head.words.length - 1 ? <PeriodDrop t={t} t0={head.dot} x={pos[i].w + size * 0.06} y={size * 0.86 - size * 0.2} size={size * 0.2} color={st.accent} /> : null;
+    return <div key={i} style={{ position: "absolute", left: pos[i].x, top: pos[i].y, height: size * 1.06, clipPath: dot ? undefined : clip, zIndex: isCarry ? 61 : 60 }}>
+      {dot}
       <div style={{ fontFamily: st.font, fontSize: size, fontWeight: st.weight, letterSpacing: st.ls, fontVariationSettings: st.opsz ? `'opsz' ${st.opsz}` : undefined,
         textTransform: st.upper ? "uppercase" : "none", lineHeight: 1.12, whiteSpace: "pre", color: col, opacity: op, transformOrigin: "50% 60%",
         transform: `translate(${tx.toFixed(2)}px, ${ty.toFixed(2)}px) scale(${sc.toFixed(4)})`, filter: bl > 0.3 ? `blur(${bl.toFixed(1)}px)` : undefined }}>{wd.w}</div>
@@ -312,8 +316,9 @@ export const FlowText = ({ t, head, st }) => {
 export const Heads = ({ t, heads, st }) => {
   const hs = heads.map((h, i) => {
     if (h.exit || !heads[i + 1]) return h;
-    const nx = heads[i + 1].words[0].t;
-    return { ...h, exit: { at: Math.max(h.words[h.words.length - 1].t + 0.5, nx - 0.32), mode: h.out || "up" } };
+    const nx = heads[i + 1].words[0].t, last = h.words[h.words.length - 1].t;
+    // leave just before the next beat, or when the thought ends (gaps in speech = gaps on screen)
+    return { ...h, exit: { at: Math.max(last + 0.5, Math.min(nx - 0.42, last + (h.hold ?? 1.3))), mode: h.out || "up" } };
   });
   return <>{hs.map((h, i) => <FlowText key={i} t={t} head={h} st={st} />)}</>;
 };

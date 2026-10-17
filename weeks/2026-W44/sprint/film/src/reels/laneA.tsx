@@ -75,22 +75,22 @@ export const Requester = ({ pal, t, t0, x, y, text, out = 99 }) => {
 };
 
 // the build page, in the lane palette: wordmark, hero photo, title, URL pill, a log or parts section (children)
-export const BuildPage = ({ pal, t, x = 96, y = 380, w = 888, photo, title, sub, url, urlAt = 99, urlBig = 0, brandAt = 0, children, o = 1, s = 1, origin = "50% 30%", photoH = 380, z = 4 }) => {
+export const BuildPage = ({ pal, t, x = 96, y = 380, w = 888, photo, title, sub, url, urlAt = 99, urlBig = 0, brandAt = 0, children, o = 1, s = 1, origin = "50% 30%", photoH = 380, z = 4, h }) => {
   if (o <= 0.002) return null;
   const d = drift(t, "page", 2.5, 0.25);
   return (
-    <div style={{ position: "absolute", left: x, top: y, width: w, opacity: o, transform: `scale(${s}) ${dT(d, 0.5)}`, transformOrigin: origin, zIndex: z,
+    <div style={{ position: "absolute", left: x, top: y, width: w, height: h, opacity: o, transform: `scale(${s}) ${dT(d, 0.5)}`, transformOrigin: origin, zIndex: z,
       background: pal.panel, borderRadius: 30, boxShadow: `0 0 0 2px ${rgba(pal.tx, 0.12)}, 0 50px 80px -30px rgba(0,0,0,.8)`, overflow: "hidden", paddingBottom: 30 }}>
       <div style={{ height: 96, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 34px" }}>
         <span style={{ ...ui(46, pal.tx), opacity: seg(t, brandAt, brandAt + 0.2), transform: `translateY(${(1 - EASE.out(seg(t, brandAt, brandAt + 0.35))) * 20}px)`, display: "inline-block" }}>Fuel<span style={{ color: pal.em }}>My</span>Build</span>
-        <span style={mono(36, rgba(pal.tx, 0.6))}>Build page</span>
+        <span style={mono(40, rgba(pal.tx, 0.6))}>Build page</span>
       </div>
       <div style={{ position: "relative", height: photoH, overflow: "hidden" }}>
         <img src={src(photo)} style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${1.04 + 0.03 * Math.sin(t * 0.4)})` }} />
       </div>
       <div style={{ padding: "26px 34px 0" }}>
-        <div style={ui(64, pal.tx)}>{title}</div>
-        {sub && <div style={{ ...ui(42, rgba(pal.tx, 0.62)), marginTop: 6 }}>{sub}</div>}
+        <div style={{ display: "flex", alignItems: "baseline", gap: 20 }}><span style={ui(64, pal.tx)}>{title}</span>{sub && <span style={ui(44, rgba(pal.tx, 0.62))}>{sub}</span>}</div>
+        
         {url && <div style={{ opacity: seg(t, urlAt - 0.1, urlAt + 0.1), marginTop: 22, display: "inline-flex", alignItems: "center", gap: 16, height: 84 + 26 * urlBig, padding: "0 28px", borderRadius: 42,
           background: rgba(pal.em, 0.12 + 0.1 * urlBig), border: `3px solid ${pal.em}`, transform: `scale(${1 + 0.08 * urlBig})`, transformOrigin: "0 50%" }}>
           <svg width={40} height={40} viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" stroke={pal.em} strokeWidth="2.4" fill="none" strokeLinecap="round" /></svg>
