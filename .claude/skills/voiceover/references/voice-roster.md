@@ -15,3 +15,15 @@ Pacing differs a lot between voices. `wps` is measured words per second at speed
 ## Casting for 2026-W42 (weeks/2026-W42/vo/casting.json)
 - C1 narrator Justin, buyer Chris · C2 Jay Chris, Walt Brian · C3 Brian · G1 Chris · G2 Justin · G3 Rita Emma, customers Chris
 - P1, P2 Eric · P3 Emma (tests a female narrator on suppliers) · X1 Eric (Korvane), Chris (Marcus), Brian (Sal) · X2 Jerry B
+
+## Sprint roster (Wayne's picks, 2026-10-17; model eleven_v4)
+| Voice | ID | Use |
+|---|---|---|
+| Jerry B. | Dg1lUQiSAGVHkoQMG3QX | premium / trailer narration (house) |
+| Emma | 9HBoEQ8LqyvVZFYDodnr | clear professional narration (house) |
+| Justin Case | DtQLDxHbTiQTpVVanTy1 | warm ad narrator (house; speed ~0.96) |
+| Dan, Upbeat & Dynamic | 9F4C8ztpNUmXkdDDbz3J | US young, upbeat social, fast-pace reels |
+| Frank, Wise & Deep | V2bPluzT7MuirpucVAKH | US older, gritty: shop owners, mechanics, collectors |
+| Archer, Conversational | Fahco4VZzobUeiPqni1S | UK test reels (British male) |
+| Ben, Effortless & Casual | aTTiK3YzK3dXETpuDE2h | Germany test reels (native German) |
+Australia: no pick yet (Steve was too fast); audition another before AU reels.

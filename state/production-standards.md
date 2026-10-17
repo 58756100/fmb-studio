@@ -11,7 +11,7 @@ These override older notes in skills, lab files and past scripts wherever they d
 - Write how people actually talk: full flowing sentences that connect ("so", "and then", "which is why", "honestly"), natural fillers used sparingly ("look,", "okay so", "right?"), contractions, and a little personality. No stacks of three-word fragments.
 - Each line hands off to the next. A viewer who only hears the audio should understand the story.
 - Within the first 3–5 s the viewer must know what the video is about and who it's for.
-- ElevenLabs: eleven_multilingual_v2 (or v3 for dialogue). Keep stability lower for liveliness and let the voice breathe; don't over-tighten pauses.
+- ElevenLabs: eleven_v4 (latest; same credit cost as v2). Keep stability lower for liveliness and let the voice breathe; don't over-tighten pauses.
 
 ## Visual flow: transitions that mean something
 - Every transition carries the story: the object we talk about becomes the next scene (match cuts, morphs, a card that opens into the next idea, the camera following an action). No cut-to-unrelated-layout.

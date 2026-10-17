@@ -24,7 +24,7 @@ def keys():
     return seen
 
 def synth(vid, text, a):
-    body = json.dumps({"text": text, "model_id": "eleven_multilingual_v2",
+    body = json.dumps({"text": text, "model_id": a.model,
         "voice_settings": {"stability": a.stability, "similarity_boost": 0.8, "style": a.style, "use_speaker_boost": True, "speed": a.speed}}).encode()
     errs = []
     for i, k in enumerate(keys()):
@@ -83,6 +83,7 @@ def tighten(y, sr, words, lead=0.12):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--voice"); ap.add_argument("--text-file"); ap.add_argument("--dialogue"); ap.add_argument("--out", required=True)
+    ap.add_argument("--model", default=os.environ.get("ELEVENLABS_MODEL", "eleven_v4"))
     ap.add_argument("--speed", type=float, default=1.0); ap.add_argument("--stability", type=float, default=0.5); ap.add_argument("--style", type=float, default=0.15)
     ap.add_argument("--tighten", action="store_true"); ap.add_argument("--tempo", type=float, default=1.0)
     a = ap.parse_args()

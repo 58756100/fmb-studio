@@ -27,7 +27,7 @@ Every voice has its own natural speed, pause length and energy, so never assume 
 6. Casting per week lives in `weeks/<week>/vo/casting.json` (speaker → actor). `extract_vo.py` pulls the lines; apply casting before generating.
 
 ## Process
-1. Use the eleven_multilingual_v2 model with the with-timestamps endpoint, and break tags from the script's direction.
+1. Use the eleven_v4 model (tts.py default; override with --model or ELEVENLABS_MODEL) with the with-timestamps endpoint, and break tags from the script's direction.
 2. Tighten pauses from the alignment (`tts.py --tighten`): sentence gaps of 0.22–0.3 s, the reveal silence as scripted.
 3. Fit the runtime with atempo 1.00–1.06 at most. If it's still long, cut words, not speed.
 4. Output `vo.wav`, `words.json` (word, start, end) and one file per hook opener.
