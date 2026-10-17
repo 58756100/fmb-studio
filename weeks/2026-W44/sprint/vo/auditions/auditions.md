@@ -31,3 +31,16 @@ Once the library search is allowed, these follow the same numbering from 07 on.
 
 - House target is about 2.7 wps. At speed 1.0, Emma (2.66) is already on target, Justin (2.80) is a touch fast, and Jerry B (2.29) is slow. Jerry B stays slower by design.
 - Speed 1.0 to 1.1 moves the pace by only 0.09 to 0.19 wps across the three, so casting should decide the pace, not the speed knob.
+
+## Library candidates (rendered 2026-10-17 by the orchestrator, speed 1.0)
+
+| No. | Voice | Voice ID | Accent | Character | wps |
+|---|---|---|---|---|---|
+| 07 | Liam, Viral Short-Form Storyteller | VCgLBmBjldJmfphyB8sZ | US | young male, short-form storyteller | 3.22 |
+| 08 | Desiree, Warm Storyteller | HvylbcEdW4ILK4GRwetV | US | middle-aged female, warm conversational | 2.70 |
+| 09 | Frank, Wise, Deep | V2bPluzT7MuirpucVAKH | US | older male, gritty, deep | 3.02 |
+| 10 | Dan, Upbeat, Dynamic | 9F4C8ztpNUmXkdDDbz3J | US | young male, upbeat social | 2.79 |
+| 11 | Archer, Conversational | Fahco4VZzobUeiPqni1S | British | male, casual thirties | 3.05 |
+| 12 | Blondie, Conversational | exsUS4vynmxd379XN4yO | British | female, warm natural | 2.75 |
+| 13 | Steve, Australian Male | aGkVQvWUZi16EH8aZJvT | Australian | male, mid-40s professional | 3.74 |
+| 14 | Ben, Effortless and Casual | aTTiK3YzK3dXETpuDE2h | German | young male, casual (German line) | 2.59 |
