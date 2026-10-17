@@ -1,4 +1,4 @@
-# Lane C scripts for ChatGPT's critique (sprint, SC-01 to SC-10)
+# Lane C scripts for ChatGPT's critique (sprint: SC-01 to SC-10, plus S0-04, S0-07, S0-10, S0-12, S0-13)
 
 ---
 
@@ -910,3 +910,460 @@ Average 1.60, with no zeros in 3–9 s. The longer body has a reason at every 6 
 - **Hero pairing:** the '67 Mustang fastback with an electric-fan conversion and its relay is new. S0-01 uses the fastback (Oct 26 and Oct 31) for a knolled rebuild, never on the same day as this. The story has no radiator, to stay clear of S0-06 and S0-01.
 - **Dates:** Jun 2021 and Oct 2026.
 - **Assets:** A16, A17, A18, C12 (cropped to the fan), F12, F01 (fallback bay), E05, E08. Hood-underside type is built in code over the hood cutout. **Image requests:** (1) "CUTOUT, 1967 Ford Mustang fastback, dark highland green, hood fully open and raised, front 3/4 view, the plain underside of the hood clearly visible, no badges or plates", (2) "PHOTO 4:3, close-up of a small black automotive relay with a scorched, melted corner, held between gloved fingers above an empty car battery tray, no text or logos", and (3) "PHOTO 9:16, a small-town main street at golden hour with a two-bay independent garage on the right, one bay door open, an empty road in front, no people, no signs or readable text".
+
+---
+
+## S0-04: Backdate in 60
+
+**VO characters: 895** = main take 788 (hook A + body + CTA) + hook B 56 + hook C 51. Spoken text only, no break tags.
+
+- **Audience:** collectors · **Format:** how-to-in-60 (five steps, told as a story against a deadline) · **Lane:** 0, group G3
+- **Target length: 58 s.** Five steps at about 6 s each need a reason to exist beyond a tutorial: a deadline (Gil in forty minutes), an interruption (he's early) and a payoff (he already read it in the driveway). That is the concept's 60 s, minus 2 s of air the steps don't need.
+- **Slots:** Wed Oct 28 20:00 (A), Mon Nov 2 20:00 (B), Sat Nov 7 20:00 (C).
+- **CTA family:** done-for-you (comment BUILD). **Calendar override:** Nov 2 has SHR. One CTA per master, so all three airings carry BUILD. Neighbours on every airing are SC-02 (link) and SC-10 (link), so the rotation holds. This is one of only 2 keyword reels in this batch of 10 (with S0-07): 6 of 30 airings, and 13 of 58 across batches 2 and 3 (22 %), under the 1-in-4 cap.
+- **Learning applied:** a named character in the first 5 s ("this F one-hundred" and Gil by 5.5 s; "Ruth's '72 F-100" on screen at 0 s). By 5 s the viewer knows it's a truck owner putting years of old jobs on record, with a clock on it.
+- **Fictional:** Ruth (E02), Gil (E01, a friend restoring the same truck), Pine Hollow Body (paint shop).
+- **Casting:** `"S0-04": {"Rita": "Emma", "Eric": "Justin"}`. Rita (cast as Emma) = Ruth, narrating in first person. Brian = Gil. Eric (cast as Justin) = CTA only.
+
+## 1. Story spine
+1. **Who:** Ruth and her two-tone '72 F-100, ten years of jobs and none of them written down.
+2. **Wants:** to have the truck's whole story ready before Gil arrives, because he's restoring the same truck and will ask about every job.
+3. **But:** she can't remember half of it, and everyone assumes a log only counts if you write it the day you do the job. The oldest job is twelve years old.
+4. **Therefore:** five sockets, five steps. Each socket she seats writes one line into the case lid, which is the truck's page: the truck, the 2014 repaint with its real date and shop, the 2019 carb rebuild with photos, last month's fuel pump with brand, then the link. The page is on screen from step one (14.0 s, 24 %) because the steps are the content. The contrarian claim is paid at 20.4 s, and the story's turn (the link reaching Gil before he's out of his truck) lands at 40.0 s (69 %).
+5. **Payoff + loop:** Gil walks in already knowing who did the paint. "Since when do you write things down?" "Since about forty minutes ago." The case pops open again on five empty slots, which is frame 0.
+
+## 2. Hooks (each runs into body line 1, Ruth: "This F one-hundred has ten years of jobs on it, and Gil gets here in forty minutes.")
+
+| # | Family | Voice line | On screen, 0–3.6 s | Sentence pair test |
+|---|---|---|---|---|
+| A | contrarian | **Rita (Ruth):** "You don't have to log a job the day you do it." | Top-down on an open red socket case on the F-100's tailgate. Five empty slots. Ruth's hand (E02) holds the first socket over slot one. Headline: "Ruth's '72 F-100". | "...the day you do it. / This F one-hundred has ten years of jobs on it..." |
+| B | specific number | **Rita (Ruth):** "Five steps, sixty seconds, and my truck's whole history." | The same case. Five sockets roll into a line beside it, smallest to largest. | "...my truck's whole history. / This F one-hundred has ten years..." |
+| C | POV line | **Rita (Ruth):** "POV: you're only now writing down a decade of jobs." | Headline "POV: ten years late". The camera looks down the tailgate from Ruth's eye line. | "...a decade of jobs. / This F one-hundred has ten years..." |
+
+**Lead hook:** A. It's the one thing collectors believe that stops them starting, said as a dare.
+
+## 3. Beat sheet
+
+The device is a socket-set case on the tailgate. Each socket Ruth seats is one step, and with each click a line sets into the flat inside of the lid, which is the truck's page. On the fifth socket the case snaps shut.
+
+| t (s) | Voice | On screen (headline) | Visual intent | Transition into the next beat (how it carries the story) | Why keep watching | Re-hook device |
+|---|---|---|---|---|---|---|
+| Hook 0–3.6 | Hook A / B / C (section 2) | "Ruth's '72 F-100" | The case on the tailgate, morning light on gravel. The truck (A24, rear 3/4) fills the frame behind it. | The camera rises off the case and swings round to the front of the truck (A22). | You can backdate? | Rise and swing |
+| 3.6–9.4 | **Rita (Ruth):** "This F one-hundred has ten years of jobs on it, and Gil gets here in forty minutes." | "Gil · 40 minutes" | The two-tone F-100 in the driveway. Ruth leans on the fender with the case. | The camera tilts down the driveway to the empty road where Gil will come from. | Forty minutes for ten years? | The deadline |
+| 9.4–14.0 | **Rita (Ruth):** "He's restoring the same truck, and he'll ask about every job I can't remember." | "Every job she can't remember" | Ruth taps the hood, the bed, the tank: three places she shrugs at. Each spot greys out on the truck. | Her hand comes back to the case, and she picks up the smallest socket. | How will she remember? | The stakes made physical |
+| 14.0–20.4 | **Rita (Ruth):** "So, five sockets, five steps. One: start the truck's page, the year and one good photo." | "1 · Start the page" | Socket one clicks into its slot. The lid's flat inside lights up as the page: "1972 Ford F-100" with the truck's photo. | The second socket hovers over slot two, the biggest gap in the lid. | Then what? | First click |
+| 20.4–28.0 | **Rita (Ruth):** "Two, the one everybody skips: the oldest job, with its real date. Repaint, June twenty fourteen, Pine Hollow Body." | "2 · Its real date" | Socket two clicks. A line sets in the lid: "Repaint · Jun 2014 · Pine Hollow Body", with a faded photo of the cab masked off in a booth. The page's timeline stretches back to 2014. | The timeline's middle is empty, and the third socket drops toward it. | What about everything in between? | The hook is paid (a past date) |
+| 28.0–33.4 | **Rita (Ruth):** "Three, same trick for the middle years: the twenty nineteen carb rebuild, with photos." | "3 · The middle years" | Click. "Carb rebuild · 2019" with two photos of the carburetor on a rag. The 2014 and 2019 lines sit in date order. | The fourth socket is the largest. Ruth lifts it, and the fuel pump (C19) rises into frame beside it. | Almost done. Will she make it? | Click + a part enters |
+| 33.4–37.8 | **Rita (Ruth):** "Four, parts with the brand: last month's fuel pump, logged by me." | "4 · Logged by Ruth" | Click. "Fuel pump · Bolder · Sep 2026 · logged by Ruth" sets in, with the pump cutout. | Gravel crunches off screen. Ruth's head turns, and the camera turns with her. | Who's that? | Sound cue |
+| 37.8–40.0 | **Rita (Ruth):** "And of course, Gil's early." | "Gil's early" | Gil's truck pulls into the far end of the driveway. Dust drifts. | Ruth's hand snatches the last socket. | Will she finish in time? | The deadline jumps |
+| 40.0–44.2 | **Rita (Ruth):** "Five: send him the link before he's out of his truck." | "5 · Send the link" | **Turn.** Socket five clicks and the case snaps shut. A slim link strip ("fuelmybuild.com/ruth/f100") slides out of the latch and travels down the driveway to Gil's driver's door. | Gil's door opens. He's still reading. We never see his screen. | Did he read it? | Snap shut + travelling strip |
+| 44.2–48.8 | **Brian (Gil):** "Pine Hollow did your paint? Since when do you write things down?" | "'Since when?'" | Gil (E01) walks up the driveway, looking from his hand to her cab. | Ruth taps the closed case. | Payoff: he already knows. | The friend arrives informed |
+| 48.8–51.0 | **Rita (Ruth):** "Since about forty minutes ago." | — | Ruth, dry, half a smile. Gil laughs. | The CTA arrives over the two of them and the closed case. | Button. | The laugh |
+| CTA 51.0–58.0 | CTA line (section 5) | "Comment BUILD" · "We set it up for you" | The CTA sits over the driveway, the truck and the closed case, the final story frame. | At 57.4 s the case pops open on the tailgate with five empty slots, which is frame 0 (loop). | Loop | Loop |
+
+Live features shown: build page with public URL, past-dated log entries (2014, 2019), photos, parts registry with brand, garage attribution (Pine Hollow Body), contributor attribution (Ruth). No ownership transfer and no sale.
+
+## 4. Speakers and voice direction
+
+| Slot | Plays | Voice | ElevenLabs settings |
+|---|---|---|---|
+| **Rita → Emma** | Ruth, 40s, narrating and in the scene | Practical, dry, quick. She's talking a friend through it while doing it, not presenting. A little hurry creeps in at "And of course". | stability 0.40, similarity 0.80, style 0.25, speed 1.0 |
+| **Brian** | Gil, 60s | Deep, amused, a friend who's known her for years. | stability 0.35, similarity 0.80, style 0.30, speed 1.0 |
+| **Eric → Justin** | CTA voice ("we") | Warm, conversational. | stability 0.45, similarity 0.80, style 0.20, speed 1.0 |
+
+- **Emphasis words:** day · forty · can't · five · real date · twenty fourteen · same trick · me · early · link · forty minutes.
+- **Pauses:** a 0.35 s gap after each step number (One, Two, Three, Four, Five) for the socket click. 0.5 s of gravel before "And of course". 0.20 s between speakers. Render with `tts.py --dialogue`.
+- **Pronunciation:** "F one-hundred" is written out on purpose. "fuelmybuild.com" is on screen only.
+- **Conversational check:** "So, five sockets", "the one everybody skips", "same trick for", "And of course". Every step is a full sentence with a reason in it, never a bare list.
+
+## 5. CTA (done-for-you)
+**Eric (CTA voice, cast Justin):** "Comment BUILD and we'll set up your build page for you."
+
+Over the final story frame. The on-screen line adds "No setup on your end", which is the punchline for a how-to: you can skip all five steps. Needs comment replies (Wayne answers by hand).
+
+## 6. Captions
+- **IG / TikTok:** "Ten years of jobs on her F-100, forty minutes before her friend shows up. Five steps." (85 chars)
+  #fordf100 #classictruck #f100 #oldfordtrucks #classiccars
+- **YouTube Shorts title:** "Ten years of truck history in 60 seconds"
+- **YouTube description:** "Ruth's '72 F-100 has a decade of jobs on it and none of them written down. Her friend Gil is on his way. You don't have to log a job the day you do it. fuelmybuild.com"
+- **Pinned comment:** "What's the oldest job on your car you could still put a real date on?"
+
+## 7. Retention pre-check
+
+| Window (s) | 0-3 | 3-6 | 6-9 | 9-12 | 12-15 | 15-18 | 18-21 | 21-24 | 24-27 | 27-30 | 30-33 | 33-36 | 36-39 | 39-42 | 42-45 | 45-48 | 48-51 | 51-54 | 54-57 | 57-58 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Self | 2 | 2 | 2 | 1 | 2 | 2 | 2 | 2 | 1 | 2 | 2 | 1 | 2 | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+
+Average 1.70, with no zeros in 3–9 s. The deadline lands at 3.6 s and the hook's claim is paid at 20.4 s by the 2014 date. The body runs past 25 s, so there's a reason at every 6 s mark: the deadline (3.6), the forgotten jobs (9.4), the first click (14.0), the past date (20.4), the empty middle years (28.0), the gravel (37.8), the race to send (40.0), Gil's line (44.2). The weakest spots are 9–12 (setup) and 24–27 (the shop name). If the editor fails 24–27, cut "Pine Hollow Body" from the voice and leave it on screen, then pick it up in Gil's line.
+
+## 8. Bank check and assets
+- **Premise / device:** a backdating how-to told against a deadline, with a socket case whose lid is the page. C3-COL used a past-dated entry as the punchline of a bet; S0-01 used a knolled grid. No bet, no grid, no phone, no counter (the forty minutes is spoken, never shown as a clock).
+- **Product framing:** the flat inside of the case lid is the page, and the closed case's latch sends the link. No phone frame; Gil's screen is never shown.
+- **Hero pairing:** the F-100 with a repaint, a carb rebuild and a fuel pump is new. S0-11 uses the F-100 with coilovers and SC-10 with a radiator, so the 2019 job here is the carburetor, not the concept's radiator.
+- **Assets:** A22, A23, A24, D05 (reference for the case), C19, G11 (fallback for the 2014 booth photo), E02, E01. **Image requests:** (1) "CUTOUT, empty red blow-moulded socket-set case with the lid open, one row of five empty socket slots in graduated sizes, the inside of the lid plain and flat, three-quarter view from slightly above, no text or logos", (2) "CUTOUT, single chrome socket, three-quarter view, no markings", (3) "PHOTO 9:16, a gravel driveway beside a weathered detached wooden garage in rural morning light, doors open, empty, no people, no text", (4) "PHOTO 4:3, a four-barrel carburetor half-disassembled on a shop rag on a workbench, gloved hands holding a small jet, no text or logos", and (5) "PHOTO 4:3, the cab of a two-tone light blue and white 1972 Ford F-100 masked off with paper and tape in a paint booth, slightly faded 2010s phone-photo look, no text".
+
+---
+
+## S0-07: The Oil-Change Shop
+
+**VO characters: 717** = main take 599 (hook A + body + CTA) + hook B 67 + hook C 51. Spoken text only, no break tags.
+
+- **Audience:** garages · **Format:** challenge (ninety seconds to prove it) · **Lane:** 0, group G3
+- **Target length: 44 s.** A challenge, two pieces of proof and a twist: the best proof is the oil-change guy's own car. The concept planned 40 s. The twist needs a 2 s beat to land and a button after it, so it's 44 s rather than cutting the joke.
+- **Slots:** Wed Oct 28 17:00 (A), Mon Nov 2 17:00 (B), Sat Nov 7 17:00 (C).
+- **CTA family:** audience-specific (DM SHOP), matching the calendar. One of only 2 keyword reels in this batch (with S0-04). The neighbours are LB-07 (link) and SC-02 (link) on every airing.
+- **Learning applied:** a named character in the first 5 s (Luis at 3 s, Grant and his Miata by 7 s). By 5 s the viewer knows it's a quick-lube shop being asked for a much bigger job. This also tests dialogue vs a single narrator (three voices).
+- **Fictional:** Luis (E05), Grant (E08), Fifth Street Lube (Luis's shop). The Civic's and Mustang's owners are never named.
+- **Casting:** `"S0-07": {"Eric": "Justin"}`. Eric (cast as Justin) = narrator and CTA, Chris = Luis, Brian = Grant.
+
+## 1. Story spine
+1. **Who:** Luis, who runs Fifth Street Lube, a shop everyone knows for oil changes.
+2. **Wants:** the job that changes that: Grant's standalone ECU and tune on his red Miata.
+3. **But:** Grant says it to his face ("you guys do oil changes"), and he's double-parked, so Luis has about ninety seconds.
+4. **Therefore:** Luis points at the service stickers in the corner of every windshield on the lot. Each one peels off and opens into that car's page with his shop's name on the job: a Civic's full engine rewire, photographed connector by connector. FMB is shown working from 20.6 s (47 %). Grant pushes back ("an actual ECU?"), and the last sticker, on the white car at the end of the row, opens into a standalone ECU, base map and dyno photo, logged by Luis.
+5. **Payoff + loop:** "Whose car is that?" "Mine. I tune on Sundays." "...Can you do Tuesday?" Luis presses a fresh sticker into the corner of the Miata's windshield, which is frame 0's sticker position.
+
+## 2. Hooks (each runs into body line 1, Narrator: "Grant wants a standalone ECU and a tune on his Miata.")
+
+| # | Family | Voice line | On screen, 0–3.6 s | Sentence pair test |
+|---|---|---|---|---|
+| A | direct callout | **Eric (Narrator):** "If your shop is known for oil changes, watch Luis." | Macro on a small white service sticker in the corner of a windshield, morning light through the glass. Pull back: Luis (E05) wiping his hands in an open bay door (F01). Headline: "Fifth Street Lube". | "...watch Luis. / Grant wants a standalone ECU and a tune on his Miata." |
+| B | contrarian | **Eric (Narrator):** "Your oil-change sticker is a portfolio. You just haven't opened it." | The same macro. The sticker's corner lifts a millimetre, as if it could open. | "...haven't opened it. / Grant wants a standalone ECU..." |
+| C | stakes | **Eric (Narrator):** "One job could change what Luis's shop is known for." | Luis in the bay door. A red Miata (A07) rolls into frame and stops across it. | "...is known for. / Grant wants a standalone ECU..." |
+
+**Lead hook:** A. It names who it's for and promises a demonstration in one line.
+
+## 3. Beat sheet
+
+The device is the windshield service sticker. Every car that leaves Fifth Street gets one. When Luis points at one, it peels off the glass, unfolds like a ticket, and opens into that car's page.
+
+| t (s) | Voice | On screen (headline) | Visual intent | Transition into the next beat (how it carries the story) | Why keep watching | Re-hook device |
+|---|---|---|---|---|---|---|
+| Hook 0–3.6 | Hook A / B / C (section 2) | "Fifth Street Lube" | Sticker macro, pull back to the bay door and Luis. | The red Miata noses into the bay door and stops. | Watch him do what? | Pull-back reveal |
+| 3.6–7.6 | **Eric (Narrator):** "Grant wants a standalone ECU and a tune on his Miata." | "Standalone ECU + tune" | Grant (E08) leans on the Miata's door with a standalone ECU box (C17) in his hand. | Grant looks up past Luis at the shop sign area (blank) and the oil-change racks. | Can an oil-change shop do that? | A bigger ask than the shop |
+| 7.6–10.6 | **Brian (Grant):** "No offense, man, but you guys do oil changes." | "'You guys do oil changes.'" | Grant, flat and sceptical. Behind Luis, a rack of oil filters. | Grant glances back at his hazard lights blinking out on the street. | How does Luis answer that? | The challenge is spoken |
+| 10.6–13.6 | **Eric (Narrator):** "And he's double-parked, so Luis gets ninety seconds." | "90 seconds" | The Miata's hazards blinking. Luis drops the rag on the counter. | Luis walks out the bay door, and the camera follows him into the lot. | What can he show in ninety seconds? | The clock is a person, not a counter |
+| 13.6–16.4 | **Chris (Luis):** "See the sticker on every windshield out there?" | — | The lot: a row of parked cars nose-out, each with a small white sticker in the windshield corner. | The camera tracks along the row, sticker to sticker. | Why the stickers? | Tracking along the row |
+| 16.4–20.6 | **Eric (Narrator):** "Every car leaves with one. Not every car came in for oil." | "Not every car came in for oil" | The track slows at a red Civic (A37). Its sticker catches the light. | Luis taps the Civic's glass, and the sticker peels off toward the camera. | What did that one come in for? | The sticker lifts |
+| 20.6–25.6 | **Chris (Luis):** "That Civic, we rewired the whole engine, and every connector's on its page." | "Engine rewire · Fifth Street Lube" | **Turn shown working.** The sticker unfolds into the Civic's page: "Engine harness rebuild · Aug 2026 · Fifth Street Lube", a fan of photos of the labelled loom (G09), one per connector, flicking past. | The page folds back into the sticker, which sticks itself back on the Civic. Grant's voice cuts in over it. | Is that enough? | Unfold + photo flick |
+| 25.6–27.4 | **Brian (Grant):** "Sure, but an actual ECU?" | "'An actual ECU?'" | Grant, arms folded, still unconvinced. | Luis points down the row without looking. | He's not sold. What's left? | Pushback |
+| 27.4–29.2 | **Chris (Luis):** "The white one at the end." | — | The camera whips down the row to the last car, a white-and-black AE86 (A39). | Its sticker peels off and opens. | Whose is it? | Whip to the end of the row |
+| 29.2–33.6 | **Eric (Narrator):** "Standalone ECU, the base map, the dyno photo, logged by Luis." | "Standalone ECU · logged by Luis" | The sticker opens into the AE86's page: "Standalone ECU + base map · May 2026 · Fifth Street Lube · logged by Luis", the same ECU box as Grant's (C17), and a dyno photo (G10). | Grant looks from the page to Luis. | Wait, logged by Luis? | The twist set up |
+| 33.6–36.8 | **Brian (Grant):** "Whose car is that?" **Chris (Luis):** "Mine. I tune on Sundays." | "'I tune on Sundays.'" | Luis shrugs. The AE86 page folds back into its sticker. | Grant's ECU box lowers. | Payoff: the proof was his own car. | Twist + laugh |
+| 36.8–38.4 | **Brian (Grant):** "...Can you do Tuesday?" | "Tuesday." | Grant hands Luis the ECU box. | Luis peels a fresh sticker off a roll as the CTA arrives. | Booked. | The button |
+| CTA 38.4–44.0 | CTA line (section 5) | "DM 'SHOP'" · "We load your first builds" | The CTA sits over the Miata in the bay door, the final story frame. | At 43.4 s Luis presses the fresh sticker into the Miata's windshield corner, the exact frame-0 macro (loop). | Loop | Loop |
+
+Live features shown: build pages, dated log entries with photos, garage attribution (Fifth Street Lube), contributor attribution (Luis). No shop profile page is claimed: each sticker opens a single car's page.
+
+## 4. Speakers and voice direction
+
+| Slot | Plays | Voice | ElevenLabs settings |
+|---|---|---|---|
+| **Eric → Justin** | Narrator and CTA | Warm, on Luis's side, a little amused. He tells it like a story about a friend's shop. | stability 0.45, similarity 0.80, style 0.20, speed 1.0 |
+| **Chris** | Luis, 30s | Calm and unhurried, never defensive. He knows what's on the lot. | stability 0.40, similarity 0.80, style 0.30, speed 1.0 |
+| **Brian** | Grant, 40s | Deep and sceptical, polite about it. The last line is quiet and a bit sheepish. | stability 0.35, similarity 0.80, style 0.30, speed 1.0 |
+
+- **Emphasis words:** oil changes · standalone · ninety · every · Not every · whole · actual · end · Luis · Mine · Tuesday.
+- **Pauses:** render with `tts.py --dialogue`. 0.20 s between speakers. 0.5 s before "Whose car is that?" (Grant reads the name). 0.4 s before "...Can you do Tuesday?". 
+- **Pronunciation:** "ECU" = E-C-U. "AE86" is never spoken.
+- **Conversational check:** "No offense, man, but", "And he's double-parked, so", "Sure, but". Each line answers the one before it.
+
+## 5. CTA (audience-specific: shops)
+**Eric (CTA voice, cast Justin):** "DM SHOP and we'll load your first builds for you."
+
+Over the final story frame. Needs DM replies (Wayne answers by hand).
+
+## 6. Captions
+- **IG / TikTok:** "'You guys do oil changes.' Luis had ninety seconds and a lot full of windshield stickers." (89 chars)
+  #autoshop #mechaniclife #miata #ecutuning #smallbusiness
+- **YouTube Shorts title:** "The oil-change shop that tunes on Sundays"
+- **YouTube description:** "Grant wants a standalone ECU on his Miata, and Luis's shop is known for oil changes. He's double-parked. Luis points at the stickers on the lot. fuelmybuild.com"
+- **Pinned comment:** "Shop owners: what's the job you're best at that nobody knows you do?"
+
+## 7. Retention pre-check
+
+| Window (s) | 0-3 | 3-6 | 6-9 | 9-12 | 12-15 | 15-18 | 18-21 | 21-24 | 24-27 | 27-30 | 30-33 | 33-36 | 36-39 | 39-42 | 42-44 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Self | 2 | 2 | 2 | 2 | 1 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 1 | 1 | 1 |
+
+Average 1.73, with no zeros in 3–9 s. The challenge is spoken at 7.6 s and the clock (a double-parked car) at 10.6 s. 12–15 is a 1 (walking into the lot), and the sticker row is the reset. FMB is shown at 20.6 s (47 %), a little early, because the Civic is the first proof and Grant's pushback ("an actual ECU?") makes the real turn the AE86 at 29.2 s (66 %). Flag this for the retention-editor.
+
+## 8. Bank check and assets
+- **Premise / device:** a quick-lube shop proving it can do a bigger job, where service stickers open into car pages. G2 was two identical shops and a mirrored split. This is one shop, no rival, no split screen, no phone and no thread.
+- **Product framing:** each sticker unfolds into its car's page and folds back onto the glass. No phone frame.
+- **Hero pairing:** the Miata with a standalone ECU is new (A-L2/B-L2 used the Miata with brakes, P2 as an avatar). The AE86 appears as the twist car with an ECU, a different pairing from S0-05's hand-off. The Civic appears with a wiring harness, which is new.
+- **Dates:** Aug 2026 and May 2026, avoiding March.
+- **Assets:** A07, A08, A37, A39, C17, G09, G10, F01, E05, E08. The stickers are code-built (blank white with a thin border, no text until they open). **Image request:** "PHOTO 9:16, the view out of an open roll-up bay door of a small quick-lube shop onto a sunny parking lot with a row of parked cars nose-out, no signage, no text, no people".
+
+---
+
+## S0-10: Photo Credit
+
+**VO characters: 567** = main take 455 (hook A + body + CTA) + hook B 56 + hook C 56. Spoken text only, no break tags.
+
+- **Audience:** garages · **Format:** two-voice skit (dialogue only; the CTA is a separate brand voice) · **Lane:** 0, group G3
+- **Target length: 35 s.** Banter, a stalemate, one turn and a button. That's the concept's 35 s. It includes 1.5 s of silent pen-scratching where the device does the arguing.
+- **Slots:** Wed Oct 28 12:30 (A), Mon Nov 2 12:30 (B), Sat Nov 7 12:30 (C).
+- **CTA family:** link (matches the calendar). The concept suggested DM SHOP, but the neighbours are B-L3 / LB-09 (PARTS) and SC-07 (PARTS), and the keyword cap is already used by S0-04 and S0-07.
+- **Hook order changed for the feed:** B is direct callout and C is entertainment, the reverse of the concept. SC-07 follows at 14:00 with hook B entertainment and hook C direct callout, so the same order would put matching families next to each other.
+- **Learning applied:** a named character in the first 5 s (the two voices at 0 s, "Lorraine's Garage" spoken at 4 s, names on screen). This tests dialogue vs a single narrator. By 5 s the viewer knows a mechanic and her boss are fighting over credit for an install.
+- **Fictional:** Dani (E06), Lorraine (E04/E10, shop owner), Lorraine's Garage, Corvo (seat brand). The concept's "Colleen" is renamed because S0-06 already uses Colleen for the same image.
+- **Casting:** `"S0-10": {"Eric": "Emma"}`. Rita (slot default, Sarah) = Dani, Eric (cast as Emma) = Lorraine, Chris = CTA voice. Two female characters need two slots; P3 cast Eric as Emma before.
+
+## 1. Story spine
+1. **Who:** Dani, a tech in her 20s, and Lorraine, who owns the shop.
+2. **Wants:** Dani wants credit for the bucket-seat install in a silver S2000 that went viral on the shop's account.
+3. **But:** the caption only says "Lorraine's Garage". Dani threatens to post it herself, and Lorraine points out that then it isn't the shop's job any more. They both grab the printed photo and start writing their names on the back, over each other.
+4. **Therefore:** Lorraine stops and puts the job where it actually lives: the S2000's page. The print flips over and the scrawl on its back becomes the entry's attribution: garage Lorraine's Garage, installed by Dani. FMB is shown working from 18.4 s (53 %).
+5. **Payoff + loop:** "Both names. Happy?" "Can my name be bigger?" "No." The next job's print slides onto the bench, blank on the back, which is frame 0.
+
+## 2. Hooks (each runs into body line 1, Dani: "Three hundred thousand views, and the caption just says 'Lorraine's Garage.'")
+
+| # | Family | Voice line | On screen, 0–2.6 s | Sentence pair test |
+|---|---|---|---|---|
+| A | in-medias-res | **Rita (Dani):** "That's my install." **Eric (Lorraine):** "It's on our page." | A printed 4×6 photo slaps onto a steel bench (F01): the black bucket seat (C09) in the silver S2000 (A32 interior view). Two hands pin opposite corners. Headline: "Whose install?" | "...It's on our page. / Three hundred thousand views, and the caption just says..." |
+| B | direct callout | **Rita (Dani):** "Techs, who gets the credit when your install goes viral?" | Dani (E06) holds the print up to camera. | "...goes viral? / Three hundred thousand views..." |
+| C | entertainment | **Rita (Dani):** "My boss and I have been arguing about one seat all week." | The print on the bench. Lorraine's finger taps it, Dani's finger taps it back. | "...all week. / Three hundred thousand views..." |
+
+**Lead hook:** A. The whole conflict in two lines and two voices.
+
+## 3. Beat sheet
+
+The device is one printed photo. The argument happens on its back in pen, and the answer is on its front.
+
+| t (s) | Voice | On screen (headline) | Visual intent | Transition into the next beat (how it carries the story) | Why keep watching | Re-hook device |
+|---|---|---|---|---|---|---|
+| Hook 0–2.6 | Hook A / B / C (section 2) | "Whose install?" | Two hands on one print. | Dani slides the print toward herself, and the camera tilts up to her face. | Whose is it? | Tug of war |
+| 2.6–7.0 | **Rita (Dani):** "Three hundred thousand views, and the caption just says 'Lorraine's Garage.'" | "300K views · 'Lorraine's Garage'" | Dani holds the print. A caption strip in the shop's handle style slides in under it and stops on the shop name. No phone frame. | Lorraine (E04, arms folded) steps into frame from the right. | What does the boss say? | A second person enters |
+| 7.0–10.0 | **Eric (Lorraine):** "Because it happened in my bay, on my lift." | "'My bay. My lift.'" | Lorraine gestures (E10) at the bay and lift behind them, the S2000 (A31) still on it. | Dani holds up her hands, palms out. | Who's right? | Each line a counter-move |
+| 10.0–12.8 | **Rita (Dani):** "With my hands. Then I'll post it myself." | "'With my hands.'" | Dani wiggles her fingers. Grease on them. | Lorraine's eyebrows go up. | She's escalating. | The threat |
+| 12.8–15.4 | **Eric (Lorraine):** "Then it's not the shop's job, is it?" | — | Lorraine, calm, which is worse. | Silence. Both reach for the print and flip it face down. | Stalemate. Now what? | The flip |
+| 15.4–16.9 | (no voice: 1.5 s of pen scratching) | — | Top-down on the back of the print. Lorraine writes "Lorraine's Garage" in big letters. Dani squeezes "DANI" into the corner, then underlines it twice. Lorraine underlines hers three times. | Lorraine stops, pen in the air, and pulls the print back. | Who wins the back of a photo? | Silent comedy |
+| 16.9–21.4 | **Eric (Lorraine):** "Okay. Or we put it where it actually lives: on the car's page." | "Where it actually lives" | **Turn.** The print flips face up and grows into the S2000's page. The scrawl on the back resolves into the entry: "Bucket seat · Corvo · Oct 2026", garage chip "Lorraine's Garage", contributor chip "installed by Dani". FMB shown working from 18.4 s. | Dani leans over the page, reading. | Does that settle it? | Flip-to-page |
+| 21.4–24.6 | **Rita (Dani):** "Seat install, Lorraine's Garage... installed by Dani." | "Installed by Dani" | Dani's finger slides along the two chips. Her name sits on the job itself, not in a caption. | Lorraine looks sideways at her. | Payoff: both names. | Reading her own name |
+| 24.6–26.0 | **Eric (Lorraine):** "Both names. Happy?" | — | Lorraine, deadpan. | Dani's mouth opens. | One more ask? | The setup |
+| 26.0–28.6 | **Rita (Dani):** "Can my name be bigger?" **Eric (Lorraine):** "No." | "No." | Dani grins. Lorraine walks off. | A new blank print slides onto the bench as the CTA arrives. | The button. | Laugh |
+| CTA 28.6–35.0 | CTA line (section 5) | "Start your shop's build pages" + fuelmybuild.com | The CTA sits over the bench and the S2000 on the lift, the final story frame. | At 34.4 s the new print slaps down face up under two hands, the frame-0 position (loop). | Loop | Loop |
+
+Live features shown: build page, parts registry with brand, dated log entry with photo, garage and contributor attribution together on one entry.
+
+## 4. Speakers and voice direction
+
+| Slot | Plays | Voice | ElevenLabs settings |
+|---|---|---|---|
+| **Rita (Sarah, slot default)** | Dani, 20s | Quick, cocky, likeable. She knows she's pushing it. | stability 0.35, similarity 0.80, style 0.35, speed 1.0 |
+| **Eric → Emma** | Lorraine, 50s | Dry, unbothered, a boss who's won this argument before. Never shouts. | stability 0.45, similarity 0.80, style 0.25, speed 1.0 |
+| **Chris** | CTA voice ("we") | Casual, down to earth. | stability 0.45, similarity 0.80, style 0.20, speed 1.0 |
+
+- **Emphasis words:** my · our · just · bay · hands · shop's · actually lives · Dani · Both · bigger · No.
+- **Pauses:** render with `tts.py --dialogue`. Tight 0.12 s gaps through the argument (2.6–15.4 s). 1.5 s of pen sound after "is it?" (built in the edit). 0.3 s before "No."
+- **Conversational check:** "Because", "Then", "Okay. Or we". Each line answers the last one, like a real argument.
+
+## 5. CTA (link)
+**Chris (CTA voice):** "Start your shop's build pages at fuelmybuild.com. Link's in the bio."
+
+Over the final story frame.
+
+## 6. Captions
+- **IG / TikTok:** "'That's my install.' 'It's on our page.' 300K views, and one seat we both want credit for." (89 chars)
+  #mechaniclife #autoshop #s2000 #bucketseats #shoplife
+- **YouTube Shorts title:** "Who gets credit for the viral install?"
+- **YouTube description:** "Dani bolted the seat in. Lorraine owns the shop. The post went viral with one name on it. There's a better place for both. fuelmybuild.com"
+- **Pinned comment:** "Techs and shop owners: whose name should be on the job?"
+
+## 7. Retention pre-check
+
+| Window (s) | 0-3 | 3-6 | 6-9 | 9-12 | 12-15 | 15-18 | 18-21 | 21-24 | 24-27 | 27-30 | 30-33 | 33-35 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Self | 2 | 2 | 2 | 2 | 1 | 2 | 2 | 2 | 1 | 2 | 1 | 1 |
+
+Average 1.67, with no zeros in 3–9 s. Each line is a counter-move, so the argument carries 3–12 s. 12–15 is a 1 (Lorraine's calm reply), and the silent pen fight at 15.4 s resets it. FMB is shown at 18.4 s (53 %).
+
+## 8. Bank check and assets
+- **Premise / device:** an internal credit dispute settled on the job itself, with a printed photo argued over on its back and flipped to its front. B-L2 used attribution chips to help a customer choose between shops. This has no customer, no two shops and no phone.
+- **Product framing:** the print flips and grows into the page. No phone frame. The viral caption is a styled strip, not a phone UI.
+- **Hero pairing:** the S2000 with a bucket seat is new. SC-03 uses the S2000 the next day on a road with a valve adjustment (a different scene and part; see SC-03).
+- **Assets:** A31, A32, C09, F01, E06, E04, E10. G05 (seats out) is a fallback for the install photo. **Image requests:** (1) "PHOTO 4:3, interior of a silver Honda S2000 seen through the open driver's door, a black fixed-back fabric bucket seat freshly installed, harness bar behind, no text or logos" and (2) "CUTOUT, a blank glossy 4x6 photo print lying flat at a slight angle, back side up, plain white with faint paper texture, no text".
+
+---
+
+## S0-12: Thirty-Eight Sets
+
+**VO characters: 841** = main take 727 (hook A + body + CTA) + hook B 54 + hook C 60. Spoken text only, no break tags.
+
+- **Audience:** parts suppliers · **Format:** data reveal (Priya's own numbers only) · **Lane:** 0, group G2
+- **Target length: 48 s.** A setup (the count), a decision about to go wrong (double the bestseller), two pieces of evidence, the consequence nobody told her, and the changed order. The concept planned 45 s. The second car (the Mustang) is what turns one complaint into a pattern, and it costs 3 s.
+- **Slots:** Tue Oct 27 18:30 (A), Sun Nov 1 18:30 (B), Fri Nov 6 18:30 (C).
+- **CTA family:** link (matches the calendar). The concept suggested DM PARTS, but S0-06 before it is share/save and SC-08 after it is PARTS, so link is the only family that keeps the rotation and the keyword cap.
+- **Hook order changed for the feed:** A specific number, B nobody tells you, C curiosity gap. S0-06 (17:00) airs in-medias-res / specific number / POV and SC-08 (20:00) airs nobody tells you / curiosity / stakes, so this order never puts two matching families side by side.
+- **Learning applied:** a named character in the first 5 s (Priya, first person from 0 s; her name on screen). By 5 s the viewer knows it's a small wheel shop that only knows where four of its sets went.
+- **Fictional:** Priya (E04), Laurel Wheel Co. (her shop and her own wheel line). The four customers appear only as cars. All numbers are hers.
+- **Casting:** `"S0-12": {"Rita": "Emma"}`. Rita (cast as Emma) = Priya, narrating in first person. Eric = CTA (the house supplier voice).
+
+## 1. Story spine
+1. **Who:** Priya, who runs Laurel Wheel Co. and sells her own wheels.
+2. **Wants:** to get her spring order right.
+3. **But:** she sold thirty-eight sets this year and only knows where four went. The easy call is to double the bronze eighteens, because they sold best.
+4. **Therefore:** before she signs, she reads the four build pages her customers sent her. The Camaro's bronze eighteens: six weeks later, "rubbing at full lock, swapped to seventeens". The Mustang: the same note. FMB is shown working from 21.8 s (45 %), and the reveal that changes the order lands at 29.6 s (62 %): both bronze customers quietly bought seventeens from someone else.
+5. **Payoff + loop:** the order changes to bronze in seventeens, with a fitment note. "Thirty-four still dark. Next time, I'm asking for the link." The four caps dim back into the wall of thirty-eight, which is frame 0.
+
+## 2. Hooks (each runs into body line 1, Priya: "Every set gets a spare center cap on this wall, so that's thirty-four I know nothing about.")
+
+| # | Family | Voice line | On screen, 0–4.8 s | Sentence pair test |
+|---|---|---|---|---|
+| A | specific number | **Rita (Priya):** "I sold thirty-eight sets of wheels this year. I know where four went." | A white pegboard wall behind a shop counter, thirty-eight wheel center caps on pegs, bronze and black, all dark. Four of them glow faintly. Priya (E04) in front, arms folded. Headline: "Priya · 38 sets sold". | "...where four went. / Every set gets a spare center cap on this wall, so that's thirty-four..." |
+| B | nobody tells you | **Rita (Priya):** "Nobody tells a wheel shop what happens after checkout." | The same wall. A set of bronze wheels (C07) rolls out of frame on a cart, and its cap is hung on the wall. The headline "38 sets sold" stays, so "thirty-four" in line 1 lands. | "...after checkout. / Every set gets a spare center cap..." |
+| C | curiosity gap | **Rita (Priya):** "Only four of these caps can tell me where their wheels went." | Tight on one glowing cap, pull back to the whole wall. Headline "38 sets sold". | "...where their wheels went. / Every set gets a spare center cap..." |
+
+**Lead hook:** A. It's the data reveal in one breath: her number, and the gap in it.
+
+## 3. Beat sheet
+
+The device is the cap wall. Priya keeps one spare center cap from every set she sells. A cap that knows where its wheels went glows, and its face opens like a porthole into the car.
+
+| t (s) | Voice | On screen (headline) | Visual intent | Transition into the next beat (how it carries the story) | Why keep watching | Re-hook device |
+|---|---|---|---|---|---|---|
+| Hook 0–4.8 | Hook A / B / C (section 2) | "Priya · 38 sets sold" | The cap wall, four faint glows. | The camera slides along the dark caps. | Which four? | Glow in a dark grid |
+| 4.8–11.0 | **Rita (Priya):** "Every set gets a spare center cap on this wall, so that's thirty-four I know nothing about." | "34 unknown" | Priya hangs a new cap. The dark caps sit flat, like closed eyes. | Her hand moves from the wall to an order form on the counter. | Why does that matter now? | The wall becomes the problem |
+| 11.0–17.2 | **Rita (Priya):** "And my spring order's due, so the easy call is to double the bronze eighteens. They sold best." | "Spring order: 2× bronze 18s?" | The order form: "Bronze 18 · qty" with her pen writing a big number. Bronze wheels (C07) stack up behind her as she writes. | Her pen stops over the signature line. She glances back at the four glowing caps. | Is that the right call? | The decision is about to go wrong |
+| 17.2–21.8 | **Rita (Priya):** "But four customers sent me their build pages, so I read those first." | "Read first" | The four caps brighten. The first one's face irises open like a porthole. | The camera pushes into the open cap, and the car is on the other side. | What's inside? | Push through the cap (not a phone) |
+| 21.8–27.4 | **Rita (Priya):** "The Camaro, bronze eighteens. Six weeks later: rubbing at full lock, swapped to seventeens." | "Rubbing at full lock" | **Turn shown working.** Through the cap, the Camaro's page (A19): "Wheels · Laurel bronze 18 · Jul 2026" and below it, logged by the owner, "Rubbing at full lock · swapped to 17s · Aug 2026", with a photo of the scuffed inner liner. | The camera pulls back out of the cap and slides to the second glowing cap, which opens. | Is it just one car? | The bestseller has a problem |
+| 27.4–29.6 | **Rita (Priya):** "The Mustang, same wheels, same note." | "Same note" | The Mustang's page (A16) opens through its cap: the same two lines, a different month. | Both cap portholes sit side by side and their bottom lines light up together: "17-inch · another brand". | It's a pattern. What does it mean for her? | Repetition = proof |
+| 29.6–35.4 | **Rita (Priya):** "So both my bronze customers ended up buying seventeens somewhere else, and never told me." | "Bought somewhere else" | The two "another brand" lines slide out of the caps and off the wall, out the shop's door. The bronze stack behind her loses two sets. | Priya turns back to the order form. The other two glowing caps (Miata A07 and Civic A37, both on black forged C08) open briefly and show clean, untroubled entries. | What will she order now? | The cost she never saw |
+| 35.4–39.0 | **Rita (Priya):** "Spring order: bronze, in seventeens, with a fitment note." | "Bronze · 17s · fitment note" | She crosses out "18", writes "17", and adds "fitment note" in the margin. | She signs, and the four caps dim back to a faint glow. | Payoff: the data changed the order. | The pen changes the decision |
+| 39.0–42.6 | **Rita (Priya):** "Thirty-four still dark. Next time, I'm asking for the link." | "34 still dark" | The camera pulls back to the whole wall: thirty-four dark caps, four glowing. Priya hangs the next cap. | The new cap clicks onto its peg as the CTA arrives. | What's the next cap going to be? | The wall re-framed as a goal |
+| CTA 42.6–48.0 | CTA line (section 5) | fuelmybuild.com | The CTA sits over the cap wall, the final story frame. | At 47.4 s the four glows fade to the faint level of frame 0, the same framing (loop). | Loop | Loop |
+
+Live features shown: build pages (sent by the customers as links), parts registry with brand, owner-logged dated entries with photos. No supplier page, no brand search and no analytics are claimed: Priya only sees pages her customers sent her.
+
+## 4. Speakers and voice direction
+
+| Slot | Plays | Voice | ElevenLabs settings |
+|---|---|---|---|
+| **Rita → Emma** | Priya, 50s | Level-headed and frank, a small-business owner thinking out loud. A flash of irritation on "and never told me", then practical again. | stability 0.40, similarity 0.80, style 0.25, speed 1.0 |
+| **Eric** | CTA voice | Smooth, the house supplier narrator. | stability 0.45, similarity 0.80, style 0.20, speed 1.0 (measured 2.6 wps) |
+
+- **Emphasis words:** four · nothing · double · But · first · rubbing · same · both · never · seventeens · link.
+- **Pauses:** 0.3 s before "But four customers" (the turn word). 0.4 s after "same note." to let the pattern land. 0.3 s before "Next time".
+- **Pronunciation:** "eighteens" and "seventeens" mean wheel sizes; keep the plural natural.
+- **Conversational check:** "so that's", "And my spring order's due, so", "But", "So both". It's a person reasoning out loud, with each fact causing the next.
+
+## 5. CTA (link)
+**Eric (CTA voice):** "Your customers' build pages start at fuelmybuild.com. Link's in the bio."
+
+Over the final story frame. No promise of a supplier page.
+
+## 6. Captions
+- **IG / TikTok:** "Priya sold 38 sets of wheels this year. She knows where four went, and that changed her order." (95 chars)
+  #wheels #aftermarket #wheelshop #fitment #carparts
+- **YouTube Shorts title:** "38 sets sold. Four of them talked."
+- **YouTube description:** "Priya runs a small wheel shop and was about to double her bestseller. Then she read the four build pages her customers sent her. fuelmybuild.com"
+- **Pinned comment:** "Parts folks: what's something you only found out about a part months after you sold it?"
+
+## 7. Retention pre-check
+
+| Window (s) | 0-3 | 3-6 | 6-9 | 9-12 | 12-15 | 15-18 | 18-21 | 21-24 | 24-27 | 27-30 | 30-33 | 33-36 | 36-39 | 39-42 | 42-45 | 45-48 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Self | 2 | 2 | 1 | 2 | 2 | 1 | 2 | 2 | 2 | 2 | 2 | 2 | 1 | 2 | 1 | 1 |
+
+Average 1.69, with no zeros in 3–9 s. 6–9 is a 1 (the wall explained), and the order form at 11.0 s raises the stakes. FMB is shown at 21.8 s (45 %), a little early for a data reveal, because the number that changes the decision (both bronze customers bought elsewhere) only lands at 29.6 s (62 %). Flag this for the retention-editor.
+
+## 8. Bank check and assets
+- **Premise / device:** a small wheel shop counting where its sets went, with a wall of spare center caps that open like portholes. P1 tracked one turbo with a red dashed line; P2 had a chart. C3-SUP used manila hang tags, so this is deliberately not a tag wall: no tags, no chart, no dashed line, no counter UI (the numbers are spoken and written by hand).
+- **Product framing:** the cap face opens like a porthole onto the car's page. No phone.
+- **Hero pairing:** bronze 18-inch wheels with a fitment problem on a Camaro and a Mustang is new. P2 used the bronze wheel on a GR86 only.
+- **Assets:** A19, A16, A07, A37, C07, C08, F04 (soft background), E04. **Image requests:** (1) "CUTOUT, plain wheel center cap, bronze finish, front three-quarter view, no logo, no text", (2) "CUTOUT, the same wheel center cap in gloss black, front three-quarter view, no logo", (3) "PHOTO 9:16, an empty white pegboard wall above a small parts-shop counter, warm daylight, no tools, no text", and (4) "PHOTO 4:3, the inside of a front wheel arch on a 1969 Camaro with a scuffed plastic liner where a tyre has rubbed, wheel turned to full lock, no text".
+
+---
+
+## S0-13: Twenty Years of Heat
+
+**VO characters: 844** = main take 736 (hook A + body + CTA) + hook B 49 + hook C 59. Spoken text only, no break tags.
+
+- **Audience:** parts suppliers · **Format:** mini story (a reunion with a reveal) · **Lane:** 0, group G4
+- **Target length: 52 s.** A maker who never hears back, a chance meeting, the part's life read ring by ring, the reveal that he made it, and a last entry that puts him on the page. The concept planned 50 s. The 0.8 s beat before "That's me" is the moment of the film, so it gets 2 s more.
+- **Slots:** Thu Oct 29 22:00 (A), Tue Nov 3 22:00 (B), Sun Nov 8 22:00 (C).
+- **CTA family:** link (matches the calendar). The concept suggested DM PARTS, but SC-09 (PARTS) airs just before at 20:00 on all three days.
+- **Hook order changed for the feed:** A nobody tells you, B curiosity gap, C specific number. SC-09 (20:00) airs question / contrarian / curiosity gap, so the concept's order would put two curiosity gaps side by side on Nov 8.
+- **Learning applied:** a named character in the first 5 s (Hank at 3.4 s, a header builder in a garage). By 5 s the viewer knows it's a small parts maker who never learns what happens to his parts.
+- **Fictional:** Hank Ashby (E01), Ashby Fabrication (his one-man header shop), Renata (E02, the E30's owner). The concept's "Walt" is renamed because W42's C2 already had a Walt (Brian).
+- **Casting:** `"S0-13": {"Rita": "Emma"}`. Eric = narrator and CTA (the house supplier voice), Brian = Hank, Rita (cast as Emma) = Renata.
+
+## 1. Story spine
+1. **Who:** Hank, who has welded stainless headers in his garage for thirty years under the name Ashby Fabrication.
+2. **Wants:** to know whether any of them lasted.
+3. **But:** reviews say "great fit" in week one and then every header disappears into the world. He never stamped a logo on them, so he couldn't recognise one if he saw it.
+4. **Therefore:** at a show he stops at a green E30 whose header has twenty years of heat colour on it. Its owner, Renata, has logged its whole life on the car's page, and each colour ring on the tube opens into a dated entry: 2006 installed, 2012 first track day, 2019 new gaskets, same header. FMB is shown working from 25.0 s (48 %). Then he asks who made it, and the brand on her page is his own name (37.8 s, 73 %).
+5. **Payoff + loop:** "Then you're going on the page." The newest entry on a twenty-year-old header: inspected by the man who built it. The camera slides back down the tube to the first ring, which is frame 0.
+
+## 2. Hooks (each runs into body line 1, Narrator: "Hank's welded headers in his garage for thirty years, and never found out what happened to one.")
+
+| # | Family | Voice line | On screen, 0–3.4 s | Sentence pair test |
+|---|---|---|---|---|
+| A | nobody tells you | **Eric (Narrator):** "Nobody tells a parts maker his product survived." | Macro along a stainless header tube: bands of gold, bronze, blue and violet heat colour, like the rings of a cut tree. No car yet. | "...his product survived. / Hank's welded headers in his garage for thirty years..." |
+| B | curiosity gap | **Eric (Narrator):** "Why did Hank stop dead in front of this E thirty?" | A grey-haired man (E01) stops mid-stride beside a dark green E30 (A10) on a grass field at golden hour. | "...in front of this E thirty? / Hank's welded headers in his garage..." |
+| C | specific number | **Eric (Narrator):** "This header is twenty years old, and it's still on the car." | The header macro, then a fast pull back through the wheel arch to the whole E30. Headline "20 years". | "...still on the car. / Hank's welded headers in his garage..." |
+
+**Lead hook:** A. It names the supplier's blind spot as a feeling, not a statistic.
+
+## 3. Beat sheet
+
+The device is the header's heat colour read like tree rings. Each band on the tube is a period of the part's life, and when it's touched it lifts off the steel as a dated entry, then settles back.
+
+| t (s) | Voice | On screen (headline) | Visual intent | Transition into the next beat (how it carries the story) | Why keep watching | Re-hook device |
+|---|---|---|---|---|---|---|
+| Hook 0–3.4 | Hook A / B / C (section 2) | — (hook C: "20 years") | The heat-ring macro, slow lateral slide. | The rings dissolve into the polished, uncoloured tubes of a new header (C06) on a garage bench. | Survived what? | Ring macro |
+| 3.4–9.8 | **Eric (Narrator):** "Hank's welded headers in his garage for thirty years, and never found out what happened to one." | "Hank · 30 years of headers" | Hank (E01) at a workbench under a single lamp, finishing a weld on a new header. No logo on it anywhere. | He lowers it into an open parts box (D14), and the box flaps close. | Where do they go? | A new part leaves |
+| 9.8–15.0 | **Eric (Narrator):** "The reviews say 'great fit' in week one, and then the headers just disappear." | "'Great fit.' Then nothing." | The box slides out of frame. A single plain review line ("Great fit, fast shipping") floats up and fades. The bench is empty. | Light changes to golden hour; the bench edge becomes the edge of a grass show field. | Will he ever see one again? | The empty bench |
+| 15.0–20.2 | **Eric (Narrator):** "Until a show last month, when he walks past a green E thirty and stops." | "Until a show" | A grass-field car show, blurred cars. Hank walks, then stops beside the E30 (A12, rear 3/4) with its hood up. | The camera drops low under the E30's front, to the header and its rings. | Why did he stop? | Turn word + a stop |
+| 20.2–23.8 | **Brian (Hank):** "Those rings... that header's been hot a long time." | — | Hank crouches, his finger an inch from the coloured tube. | A woman's boots step in beside him. | Whose car is it? | A second character |
+| 23.8–27.4 | **Rita (Renata):** "Twenty years. And every one of them's on its page." | "Every year, on its page" | Renata (E02) leans on the fender. At 25.0 s the first ring brightens. | The rings light one by one from the collector outward. | What does the header's life look like? | Rings light |
+| 27.4–34.0 | **Rita (Renata):** "Two thousand six, installed. Twenty twelve, first track day. Twenty nineteen, new gaskets, same header." | "2006 · 2012 · 2019" | **Turn shown working.** Each ring lifts off the steel as an entry of the E30's page, in order along the tube: "Header · Ashby Fabrication · Jun 2006" with a photo of it new and polished; "Track day · Sep 2012"; "Header gaskets · Apr 2019 · same header". | The 2006 ring stays lit; its brand line glows. Hank's eyes are on it. | Who made it? | Three rings, three dates |
+| 34.0–35.2 | **Brian (Hank):** "Who made it?" | — | Hank, very quiet. | Renata glances at the 2006 entry. | The question the viewer has too. | Quiet question |
+| 35.2–37.0 | **Rita (Renata):** "Little shop called Ashby." | "Ashby Fabrication" | The brand line enlarges on the 2006 entry. | Silence, 0.8 s. Push in slowly on Hank's face. | Wait... | Held silence |
+| 37.8–39.6 | **Brian (Hank):** "That's me. I'm Ashby." | "'I'm Ashby.'" | Hank, half a laugh, eyes wet. Renata's head snaps round. | Renata pushes off the fender. | Reveal. What will she do? | The reveal |
+| 39.6–42.2 | **Rita (Renata):** "No way. Then you're going on the page." | — | Renata grins and gestures Hank closer to the car. | A new ring of light forms at the outer edge of the colour bands. | Going on the page how? | A new ring forms |
+| 42.2–47.6 | **Eric (Narrator):** "So the newest entry on a twenty-year-old header says: inspected by the man who built it." | "Inspected by the man who built it" | The new outer ring lifts as an entry: "Inspected · Oct 2026 · Hank Ashby", contributor chip "Hank Ashby", with a photo of Hank crouched by the wheel. | The camera glides back along the tube toward the collector. | Payoff. | The last ring |
+| CTA 47.6–52.0 | CTA line (section 5) | fuelmybuild.com | The CTA sits over the E30 at golden hour with Hank and Renata at the fender, the final story frame. | At 51.4 s the camera settles in the ring macro at the frame-0 position and speed (loop). | Loop | Loop |
+
+Live features shown: build page, parts registry with brand, past-dated log entries (2006, 2012, 2019) with photos, contributor attribution (Hank). No supplier page, no brand search and no analytics claimed. The header belongs to Renata, who has owned the car throughout, so there's no transfer.
+
+## 4. Speakers and voice direction
+
+| Slot | Plays | Voice | ElevenLabs settings |
+|---|---|---|---|
+| **Eric** | Narrator and CTA | Smooth, warm, a little reverent. The house supplier voice telling a small story. | stability 0.45, similarity 0.80, style 0.20, speed 1.0 (measured 2.6 wps) |
+| **Brian** | Hank, 60s | Deep, gruff, few words. "That's me. I'm Ashby." is almost a whisper with a laugh caught in it. | stability 0.35, similarity 0.80, style 0.35, speed 0.95 |
+| **Rita → Emma** | Renata, 40s | Proud of her car, easy, then delighted. | stability 0.40, similarity 0.80, style 0.30, speed 1.0 |
+
+- **Emphasis words:** survived · thirty · never · disappear · Until · stops · hot · every · same header · Ashby · me · going · built.
+- **Pauses:** render with `tts.py --dialogue`. 0.3 s before "Until" (the turn word). Let "Those rings..." hang 0.3 s. 0.8 s of silence before "That's me." (scripted, don't tighten). 0.20 s between other speakers.
+- **Pronunciation:** "E thirty" and the years are written out. Ashby = ASH-bee.
+- **Conversational check:** "and never found out", "and then the headers just disappear", "Until a show last month, when", "So the newest entry". A story told in one breath, not a list.
+
+## 5. CTA (link)
+**Eric (Narrator):** "Send your customers to fuelmybuild.com. Link's in the bio."
+
+Over the final story frame. No promise of a supplier page.
+
+## 6. Captions
+- **IG / TikTok:** "Hank built headers for thirty years and never knew if one lasted. Then he walked past this E30." (95 chars)
+  #bmwe30 #e30 #headers #fabrication #carparts
+- **YouTube Shorts title:** "He found his own header, twenty years later"
+- **YouTube description:** "Hank has welded headers in his garage for thirty years and never heard what happened to one. At a show, an E30's heat rings tell him. fuelmybuild.com"
+- **Pinned comment:** "Makers: what's the oldest part of yours you've ever found still running?"
+
+## 7. Retention pre-check
+
+| Window (s) | 0-3 | 3-6 | 6-9 | 9-12 | 12-15 | 15-18 | 18-21 | 21-24 | 24-27 | 27-30 | 30-33 | 33-36 | 36-39 | 39-42 | 42-45 | 45-48 | 48-51 | 51-52 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Self | 2 | 2 | 1 | 2 | 1 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 1 | 1 | 1 | 1 |
+
+Average 1.67, with no zeros in 3–9 s. The body runs past 25 s, so each 6 s mark has a reason: the part leaving (3.4), the silence after shipping (9.8), "Until" (15.0), the rings (20.2), the dates (27.4), the question (34.0), the reveal (37.8), the new ring (42.2). The weakest spots are 6–9 and 12–15 (Hank's backstory). If the editor fails 12–15, cut the floating review line and go straight to the golden-hour light change. FMB is shown at 25.0 s (48 %), and the story's turn, his own name, lands at 37.8 s (73 %).
+
+## 8. Bank check and assets
+- **Premise / device:** a founder reunion where heat colour reads like tree rings. P3 was durability as myth/fact with an odometer. This has no myth, no stamp, no odometer and no counter: the years are rings on the part itself.
+- **Product framing:** the rings lift off the steel as entries and settle back. No phone.
+- **Hero pairing:** the E30 with a header is new (S0-09 used the same green E30 with an intake, in a bay). Keep this one outdoors at golden hour on grass so the two never look alike.
+- **Setting:** a grass show field, not F06 (S0-03 uses the dusk parking-lot meet).
+- **Assets:** A10, A12, C06, D14, E01, E02. G08 is a fallback for the under-car angle. **Image requests:** (1) "PHOTO 4:3, close-up of a twenty-year-old stainless tubular header fitted in a car, seen from below through the wheel arch, clear gold, bronze, blue and violet heat-discolouration bands along the tubes, no text or logos" and (2) "PHOTO 9:16, an outdoor classic car show on a mown grass field at golden hour, blurred cars in a row, no faces, no text, calm sky at the top".
