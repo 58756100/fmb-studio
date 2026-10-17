@@ -5,10 +5,10 @@ import React from "react";
 import { W, seg, lerp, clamp, spr, EASE, drift, dT, Typed, src, rgba } from "../kit";
 
 export const HL = "'Barlow Condensed'", UI = "'Source Sans 3'", MONO = "'IBM Plex Mono'";
-export const textStyle = (pal) => ({ font: HL, weight: 700, size: 112, min: 80, ls: "0.004em", upper: true, color: pal.tx, accent: pal.em, line2: null,
+export const textStyle = (pal) => ({ font: HL, weight: 700, size: 112, min: 66, ls: "0.004em", upper: true, color: pal.tx, accent: pal.em, line2: null,
   align: "left", x0: 96, maxW: 888, top: 262, lead: 0.98 });
-export const mono = (size, color, extra = {}) => ({ fontFamily: MONO, fontWeight: 500, fontSize: size, lineHeight: 1.15, whiteSpace: "nowrap", color, ...extra });
-export const ui = (size, color, extra = {}) => ({ fontFamily: UI, fontWeight: 600, fontSize: size, lineHeight: 1.12, whiteSpace: "nowrap", color, ...extra });
+export const mono = (size, color, extra = {}) => ({ fontFamily: MONO, fontWeight: 500, fontSize: Math.max(42, size), lineHeight: 1.15, whiteSpace: "nowrap", color, ...extra });
+export const ui = (size, color, extra = {}) => ({ fontFamily: UI, fontWeight: 600, fontSize: Math.max(42, size), lineHeight: 1.12, whiteSpace: "nowrap", color, ...extra });
 
 // the photo frame of the lane: a showroom photo in a thin rule with a soft vignette (no plain stock look)
 export const Frame = ({ pal, x, y, w, h, id, t, k = 1, fx = 0.5, fy = 0.5, kb = 0.03, o = 1, r = 18, children, z }) => {

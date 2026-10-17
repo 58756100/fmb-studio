@@ -125,7 +125,7 @@ export function build(tl, hook) {
     return <AbsoluteFill><Studio t={t}>
       <div style={{ position: "absolute", inset: 0, transform: dT(d, 0.5) }}>
         <PageCard t={t} y={590} h={980} hero="B01" heroH={360} fy={0.62} title="'99 Supra" owner="Ken · Public build" ownerAv={<Avatar id="A01" size={56} face={{ x: 0.42, y: 0.5, z: 2.6 }} bg="#ECECF0" />}
-          url="fuelmybuild.com/ken/supra" urlAt={T.fuel + 0.05} brandAt={T.fuel - 0.1} s={1 - 0.05 * lift} o={1 - 0.45 * lift}>
+          url="fuelmybuild.com/ken/supra" urlAt={T.fuel + 0.05} brandAt={T.fuel - 0.1} s={1 - 0.05 * lift} o={1 - 0.65 * lift}>
           <div style={{ marginTop: 22, borderRadius: 30, background: "#F2F2F7", padding: "18px 24px", display: "flex", alignItems: "center", gap: 22, opacity: row, transform: `scale(${0.96 + 0.04 * row})` }}>
             <div style={{ width: 130, height: 110, position: "relative" }}><Cut id="C01" cx={65} cy={55} w={120} shadow={0.15} /></div>
             <div style={{ flex: 1 }}><div style={inter(36, GREY, 500)}>Parts registry</div><div style={inter(52, INK)}>Turbo kit</div></div>

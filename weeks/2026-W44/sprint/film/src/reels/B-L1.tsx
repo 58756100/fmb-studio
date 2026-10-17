@@ -135,7 +135,7 @@ export function build(tl, hook) {
     return <AbsoluteFill><Studio t={t}>
       <div style={{ position: "absolute", inset: 0, transform: `scale(${1 - 0.04 * cta})`, transformOrigin: "50% 50%" }}>
         <PageCard t={t} y={600} h={960} hero="B02" heroH={360} fy={0.62} title="Maya's 240Z" owner="Maya · Public build" ownerAv={<Avatar id="E02" size={56} face={MAYA} bg="#E8DCCB" />}
-          url="fuelmybuild.com/maya/240z" urlAt={T.fuel + 0.1} brandAt={T.fuel - 0.1} s={1 - 0.05 * lift} o={1 - 0.5 * lift}>
+          url="fuelmybuild.com/maya/240z" urlAt={T.fuel + 0.1} brandAt={T.fuel - 0.1} s={1 - 0.05 * lift} o={1 - 0.65 * lift}>
           <div style={{ marginTop: 24, display: "flex", alignItems: "center", gap: 24, padding: "18px 24px", borderRadius: 30, background: "#F2F2F7", ...rise(t, T.kit2 - 0.15) }}>
             <div style={{ width: 120, height: 100, position: "relative" }}><Cut id="C03" cx={60} cy={50} w={104} shadow={0.2} /></div>
             <div style={{ flex: 1 }}><div style={inter(36, GREY, 500)}>Parts registry</div><div style={inter(52, INK)}>Brake kit</div></div>

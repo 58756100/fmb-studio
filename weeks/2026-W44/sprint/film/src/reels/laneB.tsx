@@ -6,7 +6,7 @@ import { W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, Typed, s
 
 export const BG = "#F5F5F7";
 export const TEXT = { font: "Inter", weight: 600, size: 112, min: 76, ls: "-0.038em", opsz: 32, color: INK, accent: RED, line2: null, align: "center", maxW: 920, top: 292, lead: 1.04 };
-export const inter = (size, color = INK, weight = 600, extra = {}) => ({ fontFamily: "Inter", fontSize: size, fontWeight: weight, letterSpacing: size >= 60 ? "-0.03em" : "-0.015em",
+export const inter = (size, color = INK, weight = 600, extra = {}) => ({ fontFamily: "Inter", fontSize: Math.max(42, size), fontWeight: weight, letterSpacing: size >= 60 ? "-0.03em" : "-0.015em",
   fontVariationSettings: `'opsz' ${size >= 60 ? 32 : 28}`, lineHeight: 1.15, color, whiteSpace: "nowrap", ...extra });
 export const CARD = { background: "#fff", borderRadius: 44, boxShadow: "0 0 0 1px rgba(0,0,0,.05), 0 2px 4px rgba(0,0,0,.04), 0 30px 40px -26px rgba(0,0,0,.28)" };
 
@@ -23,7 +23,7 @@ export const Avatar = ({ id, size, bg = "#E9E6E1", face = { x: 0.5, y: 0.2, z: 2
     <img src={src(id)} style={{ position: "absolute", width: size * face.z, left: size / 2 - size * face.z * face.x, top: size / 2 - (size * face.z / ASPECT[id]) * face.y }} />
   </div>
 );
-export const LetterAv = ({ ch, size, bg = "#8E8E93" }) => <div style={{ width: size, height: size, borderRadius: "50%", background: bg, display: "grid", placeItems: "center", ...inter(size * 0.44, "#fff"), flex: "none" }}>{ch}</div>;
+export const LetterAv = ({ ch, size, bg = "#8E8E93" }) => <div data-check="avatar" style={{ width: size, height: size, borderRadius: "50%", background: bg, display: "grid", placeItems: "center", ...inter(size * 0.44, "#fff"), flex: "none" }}>{ch}</div>;
 // photo in a rounded card, Ken Burns
 export const Pic = ({ id, x, y, w, h, t, r = 36, k0 = 1.02, k1 = 1.08, t0 = 0, t1 = 8, fx = 0.5, fy = 0.5, o = 1, s = 1, z, children, style = {} }) => {
   if (o <= 0.002) return null;

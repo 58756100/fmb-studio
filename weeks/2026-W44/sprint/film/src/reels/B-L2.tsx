@@ -142,7 +142,7 @@ export function build(tl, hook) {
     return <AbsoluteFill><Studio t={t}>
       <div style={{ position: "absolute", inset: 0, transform: dT(d, 0.5) }}>
         <PageCard t={t} y={590} h={980} hero="L05" heroH={340} fy={0.55} title="'91 Miata · Engine swap" owner="Shop B · Public build" ownerAv={<LetterAv ch="B" size={56} bg="#0A84FF" />}
-          brandAt={T.fuel - 0.1} s={1 - 0.05 * lift} o={1 - 0.45 * lift}>
+          brandAt={T.fuel - 0.1} s={1 - 0.05 * lift} o={1 - 0.65 * lift}>
           <div style={{ marginTop: 22, borderRadius: 30, background: "#F2F2F7", padding: "6px 26px" }}>
             {[["Garage", "Shop B", <LetterAv ch="B" size={64} bg="#0A84FF" />, g], ["Contributor", "Eli", <Avatar id="E05" size={64} face={ELI} bg="#DDD6CC" />, c]].map(([l, v, av, f], i) => (
               <div key={i} style={{ display: "flex", alignItems: "center", gap: 20, height: 104, borderTop: i ? "1px solid rgba(60,60,67,.16)" : undefined, opacity: 0.35 + 0.65 * f }}>

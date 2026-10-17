@@ -19,7 +19,7 @@ export const BG = "#FFFFFF";
 export const TEXT = { ...HTEXT, size: 116 };
 export const IMAGES = ["EVO", "C04", "F02"];
 const HOOKS = { A: "Loser buys dinner.", B: "Every car friend / has this bet.", C: "Dinner's on it." };
-const PX = 230, TAPE_Y = 1290, CREAM = "#F2EBDD";
+const PX = 205, TAPE_Y = 1290, CREAM = "#F2EBDD";
 
 // the check presenter (no bank image yet): black leatherette folder with a paper edge
 const Check = ({ x, y, s = 1, rot = 0 }) => (
@@ -149,10 +149,10 @@ const LogCard = ({ t, p, T, x }) => {
         <img src={src("F02")} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 72%", filter: "blur(3px) brightness(.9)", transform: "scale(1.1)" }} />
         <Cut id="C04" cx={406} cy={240} w={600 * (1 + 0.03 * seg(t, T.her, T.her + 4))} rot={-6} shadow={0.6} />
       </div>
-      <div style={{ display: "flex", alignItems: "center", gap: 18, marginTop: 24, ...f(T.her) }}>
-        <span style={{ padding: "10px 24px", borderRadius: 30, background: "#F2F2F7", ...inter(40, GREY, 500) }}>logged by Marisol</span>
-        <span style={inter(40, GREY, 500)}>fuelmybuild.com/marisol/evo</span>
+      <div style={{ display: "flex", alignItems: "center", gap: 18, marginTop: 22, ...f(T.her) }}>
+        <span style={{ padding: "8px 24px", borderRadius: 30, background: "#F2F2F7", ...inter(40, GREY, 500) }}>logged by Marisol</span>
       </div>
+      <div style={{ marginTop: 10, ...inter(40, GREY, 500), ...f(T.her + 0.25) }}>fuelmybuild.com/marisol/evo</div>
     </div>
   </div>;
 };

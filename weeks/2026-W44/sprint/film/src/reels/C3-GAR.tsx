@@ -69,19 +69,19 @@ const Monitor = ({ t, T, x, y, w, rot, push = 0 }) => {
       {back ? <div style={{ position: "absolute", left: 0, top: 0, width: w, height: h, borderRadius: 22 * k, background: "linear-gradient(180deg,#3A3A3C,#1f1f21)" }} />
         : <div style={{ position: "absolute", left: 0, top: 0, width: w, height: h, borderRadius: 22 * k, background: "#0E0E10", padding: 16 * k }}>
           <div style={{ position: "relative", width: w - 32 * k, height: h - 32 * k, borderRadius: 8 * k, overflow: "hidden", background: "#fff" }}>
-            <div style={{ position: "absolute", left: 0, top: 0, width: 888, height: 556, transformOrigin: "0 0", transform: `scale(${(w - 32 * k) / 888})` }}>
-              <div style={{ height: 64, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 26px", background: "#F5F5F7", ...inter(26, GREY, 500) }}>
-                <span><Typed t={t} t0={T.logged - 0.6} t1={T.logged + 0.4} text="fuelmybuild.com/okafor/r34" caret={GREY} style={inter(26, GREY, 500)} keepCaret={0} /></span><span>Okafor's R34 · Build log</span>
+            <div style={{ position: "absolute", left: 0, top: 0, width: 700, height: 438, transformOrigin: "0 0", transform: `scale(${(w - 32 * k) / 700})` }}>
+              <div style={{ height: 50, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 20px", background: "#F5F5F7" }}>
+                <Typed t={t} t0={T.logged - 0.6} t1={T.logged + 0.4} text="fuelmybuild.com/okafor/r34" caret={GREY} style={inter(30, GREY, 500)} keepCaret={0} />
               </div>
-              <div style={{ position: "absolute", left: 30, top: 88, ...inter(52, INK, 650), ...f(T.logged - 0.3) }}>Oil weep at head gasket</div>
-              <div style={{ position: "absolute", left: 30, top: 156, padding: "2px 12px", borderRadius: 10, background: `rgba(244,48,52,${0.12 * hl(T.logged + 0.6)})`, ...inter(44, hl(T.logged + 0.6) > 0.5 ? RED : INK, 600), ...f(T.logged) }}>Tue, Oct 20</div>
-              <div style={{ position: "absolute", left: 30, top: 228, width: 480, height: 300, borderRadius: 16, overflow: "hidden", boxShadow: `0 0 0 ${5 * hl(T.photo)}px ${RED}`, ...f(T.photo - 0.15) }}>
+              <div style={{ position: "absolute", left: 22, top: 64, ...inter(44, INK, 650), ...f(T.logged - 0.3) }}>Oil weep at head gasket</div>
+              <div style={{ position: "absolute", left: 22, top: 118, padding: "0 10px", borderRadius: 8, background: `rgba(244,48,52,${0.12 * hl(T.logged + 0.6)})`, ...inter(36, hl(T.logged + 0.6) > 0.5 ? RED : INK, 600), ...f(T.logged) }}>Tue, Oct 20</div>
+              <div style={{ position: "absolute", left: 22, top: 172, width: 390, height: 248, borderRadius: 14, overflow: "hidden", boxShadow: `0 0 0 ${4 * hl(T.photo)}px ${RED}`, ...f(T.photo - 0.15) }}>
                 <img src={src("G07")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "40% 60%", transformOrigin: "42% 55%", transform: `scale(${1.05 + 0.12 * push})` }} />
               </div>
-              <div style={{ position: "absolute", left: 540, top: 240, width: 320, padding: "22px 24px", borderRadius: 22, background: "#F5F5F7", ...f(T.gus - 0.2), boxShadow: `0 0 0 ${5 * hl(T.gus)}px ${RED}` }}>
+              <div style={{ position: "absolute", left: 430, top: 180, width: 250, padding: "16px 18px", borderRadius: 18, background: "#F5F5F7", ...f(T.gus - 0.2), boxShadow: `0 0 0 ${4 * hl(T.gus)}px ${RED}` }}>
                 <div style={inter(30, GREY, 500)}>logged by</div>
-                <div style={inter(48, INK, 650)}>Gus</div>
-                <div style={{ ...inter(28, GREY, 500), marginTop: 10, whiteSpace: "normal" }}>Pell Street Garage</div>
+                <div style={inter(44, INK, 650)}>Gus</div>
+                <div style={{ ...inter(30, GREY, 500), marginTop: 8, whiteSpace: "normal", lineHeight: 1.05 }}>Pell Street Garage</div>
               </div>
             </div>
             <div style={{ position: "absolute", top: 0, bottom: 0, width: 160, left: ((t * 120) % 1400) - 300, background: "linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,.25), rgba(255,255,255,0))" }} />
@@ -120,7 +120,7 @@ export function build(tl, hook) {
     const d = drift(t, "gar", 3, 0.22);
     const mon = track(t, { x: 860, y: 1140, w: 240, rot: 180, o: 0 }, [
       [T.hang - 0.1, { o: 1 }, 0.2, EASE.out], [T.hang, { x: 540, y: 600, w: 960, rot: 0 }, 0.95, EASE.camera],
-      [T.should - 0.15, { x: 850, y: 1060, w: 300, rot: 160 }, 0.8, EASE.camera], [T.log - 0.3, { o: 0 }, 0.3, EASE.in],
+      [T.should - 0.15, { x: 860, y: 1100, w: 300, rot: 160, o: 0 }, 0.8, EASE.camera],
     ]);
     const push = ez(t, T.still - 0.2, 1.6, EASE.io) * (1 - ez(t, T.should - 0.15, 0.4));
     const boardDim = clamp(mon.w / 960) * (mon.rot < 90 ? 1 : 0);

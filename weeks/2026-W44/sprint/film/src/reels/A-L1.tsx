@@ -77,13 +77,13 @@ export function build(tl, hook) {
     ]);
     const d = drift(t, "s1", 4, 0.25);
     const cardY = 1010 + EASE.in(cam.card) * 900;
-    const cardW = 600; // narrow card during the hook so the requesters can point at the empty rows
+    const cardW = 520; // narrow card during the hook so the requesters can point at the empty rows
     return <AbsoluteFill style={{ background: pal.bg }}>
       <div style={{ position: "absolute", inset: 0, transform: `scale(${1 + 0.02 * seg(t, T.q, T.fin)}) ${dT(d, 0.5)}`, transformOrigin: "50% 60%" }}>
         <Frame pal={pal} t={t} id="B02" x={cam.x} y={cam.y} w={cam.w} h={cam.h} k={cam.k} fx={0.22} fy={0.6} kb={0.015} />
         <Paper pal={pal} t={t} x={96} y={cardY} w={cardW} rows={ROWS(false).map((r) => ({ ...r, at: null }))} rowH={84} pad={34} drawAt={0.05} o={1 - cam.card * 0.3} seed="p0" />
-        <Requester pal={pal} t={t} t0={T.ins - 0.1} x={700} y={1068} text="INSURER" out={T.fin - 0.3} />
-        <Requester pal={pal} t={t} t0={T.app - 0.1} x={700} y={1236} text="APPRAISER" out={T.fin - 0.25} />
+        <Requester pal={pal} t={t} t0={T.ins - 0.1} x={630} y={1068} text="INSURER" out={T.fin - 0.3} />
+        <Requester pal={pal} t={t} t0={T.app - 0.1} x={630} y={1236} text="APPRAISER" out={T.fin - 0.25} />
       </div>
     </AbsoluteFill>;
   };
