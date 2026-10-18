@@ -123,7 +123,7 @@ Production copies of all 116 images. Cutouts are trimmed to the subject with 4% 
 
 ## Collector bank (ChatGPT, received 2026-10-18)
 
-High-end collector cars ($1M–$20M class) for collector reels. Same processing as above. File names describe the car without naming the maker or model, and they must stay that way: never name the maker or model on screen or in the VO, never show a badge, and never imply endorsement (see state/production-standards.md, "Collector reels"). The style each item was prompted from is in lab/image-requests/image-bank-collectors.md. All 32 were checked: no badges, emblems, plates or readable text, and real alpha on every cutout. K3 (collector world) and K4 (collectors) are still to come.
+High-end collector cars ($1M–$20M class) for collector reels. Same processing as above. File names describe the car without naming the maker or model, and they must stay that way: never name the maker or model on screen or in the VO, never show a badge, and never imply endorsement (see state/production-standards.md, "Collector reels"). The style each item was prompted from is in lab/image-requests/image-bank-collectors.md. All 32 were checked: no badges, emblems, plates or readable text, and real alpha on every cutout. K3 (collector-world photos) and K4 (collector and specialist cutouts, waist-up, so they sit on the bottom edge of the frame) were added the same day. The people are fictional: never give them a real collector's name.
 
 | id | file | type |
 |---|---|---|
@@ -159,3 +159,19 @@ High-end collector cars ($1M–$20M class) for collector reels. Same processing 
 | K2-06 | K2-06-v10-roadster-glass-museum.jpg | collector showroom 3:2 |
 | K2-07 | K2-07-british-gt-transporter.jpg | collector showroom 3:2 |
 | K2-08 | K2-08-3seat-super-gallery.jpg | collector showroom 3:2 |
+| K3-01 | K3-01-covered-collection-9x16.jpg | collector photo 9:16 |
+| K3-02 | K3-02-auction-paddles-9x16.jpg | collector photo 9:16 |
+| K3-03 | K3-03-service-binder.jpg | collector photo 4:3 |
+| K3-04 | K3-04-white-glove-chrome.jpg | collector photo 4:3 |
+| K3-05 | K3-05-paint-gauge.jpg | collector photo 4:3 |
+| K3-06 | K3-06-archive-race-bw.jpg | collector photo 4:3 |
+| K3-07 | K3-07-v12-engine-bay.jpg | collector photo 4:3 |
+| K3-08 | K3-08-concours-lawn-9x16.jpg | collector photo 9:16 |
+| K3-09 | K3-09-restoration-lift.jpg | collector photo 4:3 |
+| K3-10 | K3-10-covered-car-transporter.jpg | collector photo 4:3 |
+| K4-01 | K4-01-collector-navy-blazer.webp | collector person cutout |
+| K4-02 | K4-02-collector-cream-sweater.webp | collector person cutout |
+| K4-03 | K4-03-collector-leather-folder.webp | collector person cutout |
+| K4-04 | K4-04-restoration-specialist.webp | collector person cutout |
+| K4-05 | K4-05-auction-specialist.webp | collector person cutout |
+| K4-06 | K4-06-collector-pointing.webp | collector person cutout |

@@ -45,7 +45,7 @@ Reply "ready" and wait for Set K1.
 ---
 
 ## Status (2026-10-18)
-K1 (24) and K2 (8) are received, checked and in the bank as `kit/remotion/public/img/bank/K1-*` and `K2-*` (index in that folder's README). All passed with no redos. K3 and K4 are still open.
+K1 (24) and K2 (8) are received, checked and in the bank as `kit/remotion/public/img/bank/K1-*` and `K2-*` (index in that folder's README). K3 (10) and K4 (6) followed the same day. All 48 passed with no redos; the set is complete.
 
 ## Set K1: collector cars, cutouts (24)
 Two angles each: **front 3/4** (front-left corner toward camera, car pointing left) and **side** (profile, pointing left).
