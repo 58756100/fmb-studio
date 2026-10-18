@@ -1,0 +1,44 @@
+{
+  "reel": "S0-13",
+  "calendar_voice": "Jerry B.",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.04,
+  "stability": 0.45,
+  "style": 0.2,
+  "speed_note": "1.04 instead of 1.08 because Hank (Frank) must not be sped up",
+  "target_seconds": 44,
+  "airings_calendar": "10-28 A, 11-02 B, 11-07 C (22:00)",
+  "tempo_post": 1.0,
+  "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+  "voice_name": "Jerry B.",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Jerry B.",
+      "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+      "model": "eleven_v4"
+    },
+    "Hank": {
+      "voice_name": "Frank, Wise & Deep",
+      "voice_id": "V2bPluzT7MuirpucVAKH",
+      "model": "eleven_v4"
+    },
+    "Renata": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Jerry B. (narrator, CTA). Hank on Frank, Renata on Emma. Fast pace, call speed 1.04 so Frank is not pushed.",
+  "durations_seconds": {
+    "master": 42.41,
+    "hookA_in_master": 5.08,
+    "hookB": 5.16,
+    "hookC": 5.64
+  },
+  "characters": {
+    "master": 529,
+    "hookB": 78,
+    "hookC": 83
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "reel": "SC-07",
+  "calendar_voice": "two-voice",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 1.0,
+  "stability": 0.4,
+  "style": 0.28,
+  "speed_note": "",
+  "target_seconds": 43,
+  "airings_calendar": "10-28 A, 11-02 B, 11-07 C (11:00)",
+  "tempo_post": 1.06,
+  "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+  "voice_name": "Dan, Upbeat & Dynamic",
+  "speakers": {
+    "Thad": {
+      "voice_name": "Frank, Wise & Deep",
+      "voice_id": "V2bPluzT7MuirpucVAKH",
+      "model": "eleven_v4"
+    },
+    "Kofi": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    },
+    "CTA": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Two-voice: Thad Frank, Kofi Dan, brand CTA Justin Case (as the script casts it). Normal pace, speed 1.0.",
+  "durations_seconds": {
+    "master": 43.2,
+    "hookA_in_master": 3.66,
+    "hookB": 3.89,
+    "hookC": 4.58
+  },
+  "characters": {
+    "master": 612,
+    "hookB": 56,
+    "hookC": 75
+  }
+}

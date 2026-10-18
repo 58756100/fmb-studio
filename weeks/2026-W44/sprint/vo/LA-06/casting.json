@@ -1,0 +1,34 @@
+{
+  "reel": "LA-06",
+  "calendar_voice": "Justin Case",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 0.96,
+  "stability": 0.45,
+  "style": 0.2,
+  "speed_note": "",
+  "target_seconds": 46,
+  "airings_calendar": "10-28 A (14:00); Nov 2 slot became INTL; hooks B and C rendered anyway",
+  "tempo_post": 1.0,
+  "voice_id": "DtQLDxHbTiQTpVVanTy1",
+  "voice_name": "Justin Case",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Justin Case; normal pace at his house speed 0.96.",
+  "durations_seconds": {
+    "master": 38.23,
+    "hookA_in_master": 3.32,
+    "hookB": 2.6,
+    "hookC": 3.08
+  },
+  "characters": {
+    "master": 622,
+    "hookB": 38,
+    "hookC": 39
+  }
+}
