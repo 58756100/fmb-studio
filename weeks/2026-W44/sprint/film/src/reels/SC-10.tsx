@@ -67,7 +67,7 @@ export function build(tl, hook) {
     his: at("his"), saturday: at("saturday,"), getaway: at("getaway"), so: at("so"), limps: at("limps"), shop: at("shop"), leland: at("leland's"), never: at("never"),
     your: at("your"), fan: at("fan's"), and2: at("and", 3), wired: at("wired"), who: at("who"), notes: at("notes?"), coldwater: at("coldwater,"), hang: at("hang"), page: at("page."),
     he: tl.after("he", at("page.")), opens: at("opens"), entry: at("entry"), hood: at("hood."), teller: at("teller"), twenty: at("twenty"), cauto: at("coldwater", 2), photo: at("photo."),
-    relay: at("relay's"), tray: at("tray?"), found: at("found"), cooked: at("cooked."), shelf: at("shelf."), shelfE: tl.end("shelf."), before: at("before"), logs: at("logs"),
+    relay: at("relay's"), tray: at("tray?"), found: at("found"), cooked: at("cooked."), shelf: at("shelf."), shelfE: tl.end("shelf."), before: tl.after("before", at("shelf.")), logs: at("logs"),
     two: at("two"), story: at("story"), good: at("good."), whoever: at("whoever"), next: at("next"), cta: tl.cta("start") ?? at("start"),
   };
   const B = (txt, from, extra = {}) => ({ words: wordsFor(tl.body, txt, from), ...extra });
