@@ -16,6 +16,7 @@ import { BG as HBG, TEXT as HTEXT, inter, CARD } from "./laneB";
 
 export const HOOK_WORDS = 4;
 export const TAIL = 1.0;
+export const LIFE = 1.8; // white set: stronger camera drift keeps the hanging pipe's holds alive
 export const BG = "#FFFFFF";
 export const TEXT = { ...HTEXT, size: 112 };
 export const IMAGES = ["C05", "A29", "G08"];
@@ -70,8 +71,10 @@ export function build(tl, hook) {
     const sag = 40 * ez(t, T.which + 0.3, 0.5, EASE.out) + 50 * ez(t, T.who + 0.3, 0.5, EASE.out) + 40 * ez(t, T.day, 0.5, EASE.out);
     const lift = ez(t, T.link - 0.3, 0.9, (p) => spr(p * 0.9, 120, 11));
     const S = sag * (1 - lift), tilt = (4 * ez(t, T.who + 0.3, 0.5) + 2 * ez(t, T.day, 0.5)) * (1 - lift);
-    const sway = Math.sin(t * 1.3) * 1.2 + (t < 1 ? Math.sin(t * 9) * 4 * (1 - t) : 0);
+    const sway = Math.sin(t * 1.3) * 2.0 + Math.sin(t * 0.71 + 1) * 0.8 + (t < 1.4 ? Math.sin(t * 9) * 5 * (1 - t / 1.4) : 0);
     const cam = track(t, { y: 0 }, [[T.noor - 0.1, { y: -60 }, 1.0, EASE.io], [T.day - 0.2, { y: -110 }, 0.8, EASE.io], [T.just - 0.1, { y: 0 }, 0.7], [T.ask - 0.3, { y: 0 }, 0.5]]);
+    // keep the opening hold and the end card alive: a slow rise at the open, a slow lift under the CTA
+    const life = 34 * Math.sin(Math.PI * seg(t, 0, 2.4)) - 60 * EASE.io(seg(t, T.ask, tl.last + 1.1));
     const CX = 540, CY = 930 + S;
     const ang = (-24 + tilt + sway * 0.3) * Math.PI / 180;
     const rot = (-6 + tilt + sway * 0.3) * Math.PI / 180, PW = 820, PHh = 820 * 977 / 1579;
@@ -86,7 +89,7 @@ export function build(tl, hook) {
     ];
     const t0p = pt(0.24, 0.3);
     return <AbsoluteFill style={{ background: "#fff" }}>
-      <div style={{ position: "absolute", inset: 0, transform: `translateY(${cam.y}px) ${dT(drift(t, "sup", 2.5, 0.2), 0.5)}` }}>
+      <div style={{ position: "absolute", inset: 0, transform: `translateY(${cam.y + life}px) ${dT(drift(t, "sup", 2.5, 0.2), 0.5)}` }}>
         {/* ghost car outline that fills with the WRX */}
         <div style={{ position: "absolute", left: 590, top: 560, width: 420, height: 200, opacity: ez(t, T.nothing - 0.2, 0.5) * (1 - morph) * (1 - ez(t, T.ask - 0.2, 0.5)) }}>
           <Cut id="A29" cx={210} cy={100} w={400} shadow={0} style={{ filter: `grayscale(${1 - car}) brightness(${lerp(2.2, 1, car)}) contrast(${lerp(0.25, 1, car)})`, opacity: lerp(0.5, 1, car) }} />
