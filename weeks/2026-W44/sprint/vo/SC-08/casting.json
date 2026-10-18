@@ -1,0 +1,39 @@
+{
+  "reel": "SC-08",
+  "calendar_voice": "Jerry B.",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 1.0,
+  "stability": 0.45,
+  "style": 0.1,
+  "speed_note": "",
+  "target_seconds": 53,
+  "airings_calendar": "10-27 A, 11-01 B, 11-06 C (20:00)",
+  "tempo_post": 1.0,
+  "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+  "voice_name": "Jerry B.",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Jerry B.",
+      "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+      "model": "eleven_v4"
+    },
+    "Zeke": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Jerry B. (narrator and CTA). Zeke on Dan, and he voices hooks A and C.",
+  "durations_seconds": {
+    "master": 42.19,
+    "hookA_in_master": 4.12,
+    "hookB": 5.32,
+    "hookC": 3.56
+  },
+  "characters": {
+    "master": 630,
+    "hookB": 79,
+    "hookC": 58
+  }
+}

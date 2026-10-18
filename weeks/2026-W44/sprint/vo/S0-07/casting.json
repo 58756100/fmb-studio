@@ -1,0 +1,44 @@
+{
+  "reel": "S0-07",
+  "calendar_voice": "Justin Case",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.06,
+  "stability": 0.42,
+  "style": 0.25,
+  "speed_note": "",
+  "target_seconds": 39,
+  "airings_calendar": "10-27 A, 11-01 B, 11-06 C (18:30)",
+  "tempo_post": 1.0,
+  "voice_id": "DtQLDxHbTiQTpVVanTy1",
+  "voice_name": "Justin Case",
+  "speakers": {
+    "Grant": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    },
+    "Luis": {
+      "voice_name": "Frank, Wise & Deep",
+      "voice_id": "V2bPluzT7MuirpucVAKH",
+      "model": "eleven_v4"
+    },
+    "CTA": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Justin Case, who reads the CTA; the story is carried by Dan (Grant) and Frank (Luis), as the script casts it. Fast, speed 1.06 for all voices (Frank not sped to 1.08).",
+  "durations_seconds": {
+    "master": 35.82,
+    "hookA_in_master": 4.04,
+    "hookB": 4.2,
+    "hookC": 4.44
+  },
+  "characters": {
+    "master": 485,
+    "hookB": 59,
+    "hookC": 62
+  }
+}

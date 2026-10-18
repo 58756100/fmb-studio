@@ -1,0 +1,37 @@
+{
+  "reel": "SC-01",
+  "calendar_voice": "Jerry B.",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 1.0,
+  "stability": 0.4,
+  "style": 0.2,
+  "speed_note": "",
+  "target_seconds": 42,
+  "airings_calendar": "10-27 A, 11-01 B, 11-06 C (17:00)",
+  "tempo_post": 1.0,
+  "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+  "voice_name": "Jerry B.",
+  "speakers": {
+    "Lyle": {
+      "voice_name": "Jerry B.",
+      "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Jerry B. Normal pace, speed 1.0. Hook B rewritten to open 'Collectors:'.",
+  "durations_seconds": {
+    "master": 39.52,
+    "hookA_in_master": 4.44,
+    "hookB": 5.96,
+    "hookC": 4.04
+  },
+  "characters": {
+    "master": 509,
+    "hookB": 73,
+    "hookC": 59
+  },
+  "script_edits": [
+    "hook B now opens 'Collectors:' (collector-naming hook, SC-01 is a COL body)"
+  ]
+}

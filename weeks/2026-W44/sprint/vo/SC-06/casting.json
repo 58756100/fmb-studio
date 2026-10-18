@@ -1,0 +1,34 @@
+{
+  "reel": "SC-06",
+  "calendar_voice": "Emma",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.38,
+  "style": 0.25,
+  "speed_note": "",
+  "target_seconds": 51,
+  "airings_calendar": "10-27 A, 11-01 B, 11-06 C (22:00)",
+  "tempo_post": 1.0575,
+  "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+  "voice_name": "Emma",
+  "speakers": {
+    "Loretta": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "",
+  "durations_seconds": {
+    "master": 51.01,
+    "hookA_in_master": 3.97,
+    "hookB": 4.82,
+    "hookC": 2.69
+  },
+  "characters": {
+    "master": 726,
+    "hookB": 65,
+    "hookC": 41
+  }
+}
