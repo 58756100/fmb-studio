@@ -2,7 +2,7 @@
 # ./push-render.sh <local file> <path on renders> "<message>"  -> one small commit on the orphan `renders` branch.
 # Uses a temporary index (no checkout, so no render blobs are downloaded); fetches the tip first and retries on a race.
 set -euo pipefail
-F=$1; P=$2; MSG=$3; R=$(git rev-parse --show-toplevel)
+F=$(realpath "$1"); P=$2; MSG=$3; R=$(git rev-parse --show-toplevel)
 for try in 1 2 3 4 5; do
   git -C "$R" fetch --depth 1 --filter=blob:none origin renders >/dev/null 2>&1
   TIP=$(git -C "$R" rev-parse FETCH_HEAD); IDX=$(mktemp -u)

@@ -3,9 +3,12 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 ID=$1; HOOKS=${2:-A,B,C}
+clean() { find /tmp -maxdepth 1 -name "remotion-webpack-bundle-*" -mmin +20 -exec rm -rf {} + 2>/dev/null || true; }  # each bundle copies public/ (85 MB)
+clean
 node cues.mjs $ID $HOOKS
 for h in ${HOOKS//,/ }; do python3 audio/score.py $ID $h out/audio | tail -1; done
 node render.mjs $ID $HOOKS 2>&1 | grep -E "^done|Error" || true
+clean
 for h in ${HOOKS//,/ }; do echo "== $ID-$h"; ./assemble.sh $ID $h; done
 rm -rf out/sheet/$ID; mkdir -p out/sheet/$ID
 D=$(ffprobe -v error -show_entries format=duration -of csv=p=0 out/masters/$ID-A.mp4)
