@@ -1,0 +1,39 @@
+{
+  "reel": "SC-04",
+  "calendar_voice": "two-voice",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.4,
+  "style": 0.25,
+  "speed_note": "",
+  "target_seconds": 43,
+  "airings_calendar": "10-26 A, 10-31 B, 11-05 C (12:30)",
+  "tempo_post": 1.0,
+  "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+  "voice_name": "Dan, Upbeat & Dynamic",
+  "speakers": {
+    "Reggie": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    },
+    "Inez": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Two-voice per calendar: Reggie on Dan (reads the CTA), Inez on Emma. Fast pace, speed 1.08 for both.",
+  "durations_seconds": {
+    "master": 39.06,
+    "hookA_in_master": 5.08,
+    "hookB": 6.2,
+    "hookC": 4.44
+  },
+  "characters": {
+    "master": 595,
+    "hookB": 80,
+    "hookC": 67
+  }
+}
