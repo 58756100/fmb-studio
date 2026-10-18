@@ -120,3 +120,42 @@ Production copies of all 116 images. Cutouts are trimmed to the subject with 4% 
 | G10 | G10-car-on-dyno.jpg | workshop photo 4:3 |
 | G11 | G11-painted-panel.jpg | workshop photo 4:3 |
 | G12 | G12-finished-engine-bay.jpg | workshop photo 4:3 |
+
+## Collector bank (ChatGPT, received 2026-10-18)
+
+High-end collector cars ($1M–$20M class) for collector reels. Same processing as above. File names describe the car without naming the maker or model, and they must stay that way: never name the maker or model on screen or in the VO, never show a badge, and never imply endorsement (see state/production-standards.md, "Collector reels"). The style each item was prompted from is in lab/image-requests/image-bank-collectors.md. All 32 were checked: no badges, emblems, plates or readable text, and real alpha on every cutout. K3 (collector world) and K4 (collectors) are still to come.
+
+| id | file | type |
+|---|---|---|
+| K1-01 | K1-01-red-v12-racer-front.webp | collector car cutout |
+| K1-02 | K1-02-red-v12-racer-side.webp | collector car cutout |
+| K1-03 | K1-03-silver-spyder-front.webp | collector car cutout |
+| K1-04 | K1-04-silver-spyder-side.webp | collector car cutout |
+| K1-05 | K1-05-red-turbo-wing-front.webp | collector car cutout |
+| K1-06 | K1-06-red-turbo-wing-side.webp | collector car cutout |
+| K1-07 | K1-07-red-v12-hyper-front.webp | collector car cutout |
+| K1-08 | K1-08-red-v12-hyper-side.webp | collector car cutout |
+| K1-09 | K1-09-silver-awd-super-front.webp | collector car cutout |
+| K1-10 | K1-10-silver-awd-super-side.webp | collector car cutout |
+| K1-11 | K1-11-silver-v10-roadster-front.webp | collector car cutout |
+| K1-12 | K1-12-silver-v10-roadster-side.webp | collector car cutout |
+| K1-13 | K1-13-silver-gullwing-front.webp | collector car cutout |
+| K1-14 | K1-14-silver-gullwing-side.webp | collector car cutout |
+| K1-15 | K1-15-green-3seat-super-front.webp | collector car cutout |
+| K1-16 | K1-16-green-3seat-super-side.webp | collector car cutout |
+| K1-17 | K1-17-orange-mid-v12-front.webp | collector car cutout |
+| K1-18 | K1-18-orange-mid-v12-side.webp | collector car cutout |
+| K1-19 | K1-19-blue-lemans-racer-front.webp | collector car cutout |
+| K1-20 | K1-20-blue-lemans-racer-side.webp | collector car cutout |
+| K1-21 | K1-21-blue-roadster-427-front.webp | collector car cutout |
+| K1-22 | K1-22-blue-roadster-427-side.webp | collector car cutout |
+| K1-23 | K1-23-silver-british-gt-front.webp | collector car cutout |
+| K1-24 | K1-24-silver-british-gt-side.webp | collector car cutout |
+| K2-01 | K2-01-v12-racer-auction-stage.jpg | collector showroom 3:2 |
+| K2-02 | K2-02-gullwing-private-garage.jpg | collector showroom 3:2 |
+| K2-03 | K2-03-turbo-wing-concrete-garage.jpg | collector showroom 3:2 |
+| K2-04 | K2-04-awd-super-concours-lawn.jpg | collector showroom 3:2 |
+| K2-05 | K2-05-mid-v12-restoration-shop.jpg | collector showroom 3:2 |
+| K2-06 | K2-06-v10-roadster-glass-museum.jpg | collector showroom 3:2 |
+| K2-07 | K2-07-british-gt-transporter.jpg | collector showroom 3:2 |
+| K2-08 | K2-08-3seat-super-gallery.jpg | collector showroom 3:2 |
