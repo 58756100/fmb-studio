@@ -11,7 +11,12 @@ import platforms as P
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--queue", required=True); ap.add_argument("--week", required=True); ap.add_argument("--out", required=True)
     a = ap.parse_args()
-    q = [x for x in json.load(open(a.queue)) if x.get("status") == "posted" and x.get("post_id")]
+    q = []
+    for x in json.load(open(a.queue)):
+        # the publisher stores IG ids as media_id and YouTube ids as video_id; accept any of them
+        pid = x.get("post_id") or x.get("media_id") or x.get("video_id")
+        if x.get("status") == "posted" and pid:
+            q.append({**x, "post_id": pid})
     end = dt.date.today(); start = end - dt.timedelta(days=14)
     out = {"week": a.week, "pulled": dt.datetime.utcnow().isoformat() + "Z", "items": []}
     yt_ids = [x["post_id"] for x in q if x["platform"] == "youtube"]
