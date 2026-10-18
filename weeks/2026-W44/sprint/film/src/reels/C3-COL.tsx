@@ -15,6 +15,7 @@ import { BG as HBG, TEXT as HTEXT, inter, CARD, Studio } from "./laneB";
 
 export const HOOK_WORDS = 3;
 export const TAIL = 1.0;
+export const LIFE = 1.8; // white set: stronger camera drift keeps holds alive
 export const BG = "#FFFFFF";
 export const TEXT = { ...HTEXT, size: 116 };
 export const IMAGES = ["EVO", "C04", "F02"];
@@ -78,7 +79,9 @@ export function build(tl, hook) {
       [T.y21 - 0.1, { y: 2020.3 }, 1.0], [T.y17 - 0.15, { y: 2017.7 }, 1.2], [T.he - 0.1, { y: 2019, k: 0.94 }, 0.9],
       [T.fine - 0.05, { k: 1.1 }, 1.2], [T.two - 0.2, { k: 1.0 }, 0.8], [T.date - 0.2, { k: 0.96 }, 1.0],
     ]);
-    const X = (yr) => 540 + (yr - cam.y) * PX * cam.k;
+    // end card: the ruler keeps gliding slowly under the CTA (a held end frame never reads as a still)
+    const glide = 0.35 * EASE.io(seg(t, T.date - 0.2, tl.last + 1.2));
+    const X = (yr) => 540 + (yr - cam.y - glide) * PX * cam.k;
     const d = drift(t, "col", 3, 0.22);
     const tint = ez(t, T.y17 - 0.1, 1.0) * (1 - ez(t, T.split - 0.1, 0.8));
     const open = ez(t, T.look - 0.05, 0.6, EASE.camera) * (1 - ez(t, T.date - 0.3, 0.8, EASE.camera));
@@ -153,6 +156,7 @@ const LogCard = ({ t, p, T, x }) => {
   const f = (t0) => { const q = spr(t - t0, 200, 19); return { opacity: clamp(q * 2), transform: `translateY(${(1 - q) * 24}px)`, filter: q < 0.6 ? `blur(${(1 - q / 0.6) * 8}px)` : undefined }; };
   return <div style={{ position: "absolute", left: x - 450, top: lerp(TAPE_Y - 40, 540, p), width: 900, height: lerp(60, 840, p), overflow: "hidden", zIndex: 25, borderRadius: 40,
     background: "rgba(255,255,255,.9)", backdropFilter: "blur(20px)", boxShadow: "0 0 0 1px rgba(0,0,0,.05), 0 40px 60px -30px rgba(0,0,0,.35)", opacity: clamp(p * 3) }}>
+    <div style={{ position: "absolute", top: 0, bottom: 0, width: 300, left: ((t * 160) % 1500) - 500, background: "linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,.4), rgba(255,255,255,0))", zIndex: 2 }} />
     <div style={{ padding: "40px 44px" }}>
       <div style={{ ...inter(66, INK, 650), ...f(T.int2) }}>Intake · Velden Air</div>
       <div style={{ ...inter(52, RED, 600), marginTop: 8, ...f(T.june - 0.05) }}>Jun 14, 2019</div>
