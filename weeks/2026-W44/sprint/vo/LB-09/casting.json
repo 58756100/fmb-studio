@@ -1,0 +1,30 @@
+{
+  "reel": "LB-09",
+  "calendar_voice": "Justin Case",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.06,
+  "stability": 0.42,
+  "style": 0.22,
+  "speed_note": "",
+  "target_seconds": 48,
+  "airings_calendar": "11-04 A (12:30)",
+  "tempo_post": 1.0,
+  "voice_id": "DtQLDxHbTiQTpVVanTy1",
+  "voice_name": "Justin Case",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Justin Case, fast, speed 1.06. Hook A only (late single).",
+  "durations_seconds": {
+    "master": 44.73,
+    "hookA_in_master": 2.76
+  },
+  "characters": {
+    "master": 709
+  }
+}

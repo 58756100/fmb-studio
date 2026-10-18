@@ -1,0 +1,30 @@
+{
+  "reel": "LB-04",
+  "calendar_voice": "Emma",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.4,
+  "style": 0.22,
+  "speed_note": "",
+  "target_seconds": 48,
+  "airings_calendar": "11-04 A (22:00)",
+  "tempo_post": 1.0,
+  "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+  "voice_name": "Emma",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Emma, fast, speed 1.08. Hook A only. The script's 0.5 s silent open before 'That pump won't sit down' is left to the edit (speech starts at 0.12 s).",
+  "durations_seconds": {
+    "master": 43.84,
+    "hookA_in_master": 2.2
+  },
+  "characters": {
+    "master": 655
+  }
+}

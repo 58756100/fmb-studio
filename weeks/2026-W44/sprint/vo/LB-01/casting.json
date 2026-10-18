@@ -1,0 +1,32 @@
+{
+  "reel": "LB-01",
+  "calendar_voice": "Emma",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.4,
+  "style": 0.22,
+  "speed_note": "",
+  "target_seconds": 48,
+  "airings_calendar": "10-30 A, 11-04 B (18:30)",
+  "tempo_post": 1.0,
+  "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+  "voice_name": "Emma",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Emma, fast, speed 1.08.",
+  "durations_seconds": {
+    "master": 46.09,
+    "hookA_in_master": 2.36,
+    "hookB": 2.84
+  },
+  "characters": {
+    "master": 660,
+    "hookB": 37
+  }
+}

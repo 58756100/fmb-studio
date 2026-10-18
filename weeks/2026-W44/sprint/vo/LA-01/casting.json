@@ -1,0 +1,32 @@
+{
+  "reel": "LA-01",
+  "calendar_voice": "Justin Case",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.06,
+  "stability": 0.42,
+  "style": 0.22,
+  "speed_note": "",
+  "target_seconds": 48,
+  "airings_calendar": "10-30 A, 11-04 B (15:30)",
+  "tempo_post": 1.0,
+  "voice_id": "DtQLDxHbTiQTpVVanTy1",
+  "voice_name": "Justin Case",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Justin Case, fast, speed 1.06. Hook B already names collectors (ChatGPT's own).",
+  "durations_seconds": {
+    "master": 39.85,
+    "hookA_in_master": 3.0,
+    "hookB": 3.32
+  },
+  "characters": {
+    "master": 646,
+    "hookB": 42
+  }
+}

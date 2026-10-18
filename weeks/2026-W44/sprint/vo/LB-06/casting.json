@@ -1,0 +1,30 @@
+{
+  "reel": "LB-06",
+  "calendar_voice": "Emma",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 1.0,
+  "stability": 0.4,
+  "style": 0.22,
+  "speed_note": "",
+  "target_seconds": 48,
+  "airings_calendar": "11-04 A (17:00)",
+  "tempo_post": 1.0,
+  "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+  "voice_name": "Emma",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Emma, normal. Hook A only.",
+  "durations_seconds": {
+    "master": 46.67,
+    "hookA_in_master": 2.2
+  },
+  "characters": {
+    "master": 657
+  }
+}
