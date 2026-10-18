@@ -1,0 +1,34 @@
+{
+  "reel": "LA-08",
+  "calendar_voice": "Emma",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 1.0,
+  "stability": 0.4,
+  "style": 0.22,
+  "speed_note": "",
+  "target_seconds": 35,
+  "airings_calendar": "10-29 A (14:00); Nov 3 slot became INTL; hooks B and C rendered anyway",
+  "tempo_post": 1.0,
+  "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+  "voice_name": "Emma",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Emma, normal pace.",
+  "durations_seconds": {
+    "master": 32.11,
+    "hookA_in_master": 3.8,
+    "hookB": 3.96,
+    "hookC": 3.16
+  },
+  "characters": {
+    "master": 488,
+    "hookB": 46,
+    "hookC": 37
+  }
+}
