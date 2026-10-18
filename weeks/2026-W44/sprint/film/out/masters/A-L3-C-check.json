@@ -1,0 +1,17 @@
+{
+ "file": "out/masters/A-L3-C.mp4",
+ "video": "h264 1080x1920 30/1 frames=976",
+ "audio": "aac 48000 ch=2",
+ "v_dur": 32.533333,
+ "a_dur": 32.533,
+ "expected": 32.53333333333333,
+ "vo_end": 31.525,
+ "tail": 1.008,
+ "v_start": 0.0,
+ "a_start": 0.0,
+ "xcorr_lag_samples": 0,
+ "lufs_I": -14.2,
+ "true_peak": -2.2,
+ "subtitle_streams": "none",
+ "cta": "\"Send them this\" at 28.13s, last shot starts 19.75s (over final frame)"
+}

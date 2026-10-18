@@ -1,0 +1,71 @@
+{
+  "set": "B",
+  "image_count": 8,
+  "generation_mode": "built-in image_gen",
+  "items": [
+    {
+      "id": "B01",
+      "short_name": "supra",
+      "reference": "set-A/A01-supra-front.png",
+      "subject": "1999 Toyota Supra A80 twin-turbo, WHITE, bronze FIVE-spoke wheels, two-door hatch coupe, factory rear wing",
+      "view": "front 3/4, front-left corner toward camera, nose pointing LEFT",
+      "prompt": "Generate exactly ONE photorealistic premium dealer-listing automotive SHOWROOM photograph. Full background, landscape aspect ratio 3:2, largest tool-supported resolution and at least 1536px long side. Seamless light-grey / warm-concrete studio, soft overhead studio light, natural paint/rubber/metal textures and realistic reflections, subtle floor reflection. Entire car in frame with ample margin. Camera at headlight height, standard lens, wheels straight, crisp focus and true-to-life colours. No other objects or people. Not illustration or CGI-gloss render. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or licence plates; plate areas blank. No readable screens. One car only, no grid, collage, split or variants. Use supplied cutout solely as a reference for the exact car body, paint, wheels and trim, preserving them in the showroom photo. Subject: 1999 Toyota Supra A80 twin-turbo, WHITE, bronze FIVE-spoke wheels, two-door hatch coupe, factory rear wing. View: front 3/4, front-left corner toward camera, nose pointing LEFT. Replace the reference backdrop completely with a seamless LIGHT GREY studio and visible pale concrete floor. This is a fully opaque photograph, no transparency."
+    },
+    {
+      "id": "B02",
+      "short_name": "240z",
+      "reference": "set-A/A05-240z-side.png",
+      "subject": "1972 Datsun 240Z, ORANGE, silver FOUR-spoke steel-look wheels, two-door coupe",
+      "view": "perfect perpendicular SIDE PROFILE, nose LEFT",
+      "prompt": "Generate exactly ONE photorealistic premium dealer-listing automotive SHOWROOM photograph. Full background, landscape aspect ratio 3:2, largest tool-supported resolution and at least 1536px long side. Seamless light-grey / warm-concrete studio, soft overhead studio light, natural paint/rubber/metal textures and realistic reflections, subtle floor reflection. Entire car in frame with ample margin. Camera at headlight height, standard lens, wheels straight, crisp focus and true-to-life colours. No other objects or people. Not illustration or CGI-gloss render. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or licence plates; plate areas blank. No readable screens. One car only, no grid, collage, split or variants. Use supplied cutout solely as a reference for the exact car body, paint, wheels and trim, preserving them in the showroom photo. Subject: 1972 Datsun 240Z, ORANGE, silver FOUR-spoke steel-look wheels, two-door coupe. View: perfect perpendicular SIDE PROFILE, nose LEFT. Preserve exactly FOUR broad silver wheel spokes in an X/cruciform arrangement. C-pillar vent plain black without graphic. Replace backdrop completely with seamless LIGHT GREY studio and visible warm-concrete floor with subtle reflection. Fully opaque photograph."
+    },
+    {
+      "id": "B03",
+      "short_name": "mustang",
+      "reference": "set-A/A16-mustang-front.png",
+      "subject": "1967 Ford Mustang FASTBACK, dark highland GREEN, chrome bumpers, two doors",
+      "view": "front 3/4, front-left corner toward camera, nose LEFT",
+      "prompt": "Generate exactly ONE photorealistic premium dealer-listing automotive SHOWROOM photograph. Full background, landscape aspect ratio 3:2, largest tool-supported resolution and at least 1536px long side. Seamless light-grey / warm-concrete studio, soft overhead studio light, natural paint/rubber/metal textures and realistic reflections, subtle floor reflection. Entire car in frame with ample margin. Camera at headlight height, standard lens, wheels straight, crisp focus and true-to-life colours. No other objects or people. Not illustration or CGI-gloss render. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or licence plates; plate areas blank. No readable screens. One car only, no grid, collage, split or variants. Use supplied cutout solely as a reference for the exact car body, paint, wheels and trim, preserving them in the showroom photo. Subject: 1967 Ford Mustang FASTBACK, dark highland GREEN, chrome bumpers, two doors. View: front 3/4, front-left corner toward camera, nose LEFT. Preserve exact dark green fastback reference shape, wheels and chrome trim. Grille plain without horse emblem, no fender scripts. Replace backdrop entirely with seamless light-grey studio, warm-concrete floor and subtle reflection. Fully opaque background."
+    },
+    {
+      "id": "B04",
+      "short_name": "911",
+      "reference": "set-A/A27-911-rear.png",
+      "subject": "1993 Porsche 911 964 Carrera, guards RED, two-door coupe, factory silver cup wheels",
+      "view": "rear 3/4, rear-right corner toward camera, rear lamps and bumper prominently visible",
+      "prompt": "Generate exactly ONE photorealistic premium dealer-listing automotive SHOWROOM photograph. Full background, landscape aspect ratio 3:2, largest tool-supported resolution and at least 1536px long side. Seamless light-grey / warm-concrete studio, soft overhead studio light, natural paint/rubber/metal textures and realistic reflections, subtle floor reflection. Entire car in frame with ample margin. Camera at headlight height, standard lens, wheels straight, crisp focus and true-to-life colours. No other objects or people. Not illustration or CGI-gloss render. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or licence plates; plate areas blank. No readable screens. One car only, no grid, collage, split or variants. Use supplied cutout solely as a reference for the exact car body, paint, wheels and trim, preserving them in the showroom photo. Subject: 1993 Porsche 911 964 Carrera, guards RED, two-door coupe, factory silver cup wheels. View: rear 3/4, rear-right corner toward camera, rear lamps and bumper prominently visible. Retain the reference rear three-quarter camera angle, red 964 coupe, silver CUP wheels and flush engine lid. The full-width red rear light strip has NO lettering, rear lid has NO script. Replace backdrop with seamless light-grey studio, warm-concrete floor, subtle reflection. Fully opaque background."
+    },
+    {
+      "id": "B05",
+      "short_name": "r34",
+      "reference": "set-A/A13-r34-front.png",
+      "subject": "1999 Nissan Skyline GT-R R34, SILVER, two-door coupe, dark SIX-spoke wheels, factory rear wing",
+      "view": "front 3/4, front-left corner toward camera, nose LEFT",
+      "prompt": "Generate exactly ONE photorealistic premium dealer-listing automotive SHOWROOM photograph. Full background, landscape aspect ratio 3:2, largest tool-supported resolution and at least 1536px long side. Seamless light-grey / warm-concrete studio, soft overhead studio light, natural paint/rubber/metal textures and realistic reflections, subtle floor reflection. Entire car in frame with ample margin. Camera at headlight height, standard lens, wheels straight, crisp focus and true-to-life colours. No other objects or people. Not illustration or CGI-gloss render. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or licence plates; plate areas blank. No readable screens. One car only, no grid, collage, split or variants. Use supplied cutout solely as a reference for the exact car body, paint, wheels and trim, preserving them in the showroom photo. Subject: 1999 Nissan Skyline GT-R R34, SILVER, two-door coupe, dark SIX-spoke wheels, factory rear wing. View: front 3/4, front-left corner toward camera, nose LEFT. Preserve reference silver R34 two-door coupe and exactly SIX dark wheel spokes. All grille badges removed and wheel centers plain. Replace backdrop with seamless light-grey studio, warm-concrete floor and subtle reflection. Fully opaque full-background photograph."
+    },
+    {
+      "id": "B06",
+      "short_name": "wrx",
+      "reference": "set-A/A28-wrx-front.png",
+      "subject": "2003 Subaru Impreza WRX STI GD BUGEYE with rounded bugeye headlight housings, World Rally BLUE, GOLD wheels, four-door sedan, large rear wing",
+      "view": "front 3/4, front-left corner toward camera, nose LEFT",
+      "prompt": "Generate exactly ONE photorealistic premium dealer-listing automotive SHOWROOM photograph. Full background, landscape aspect ratio 3:2, largest tool-supported resolution and at least 1536px long side. Seamless light-grey / warm-concrete studio, soft overhead studio light, natural paint/rubber/metal textures and realistic reflections, subtle floor reflection. Entire car in frame with ample margin. Camera at headlight height, standard lens, wheels straight, crisp focus and true-to-life colours. No other objects or people. Not illustration or CGI-gloss render. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or licence plates; plate areas blank. No readable screens. One car only, no grid, collage, split or variants. Use supplied cutout solely as a reference for the exact car body, paint, wheels and trim, preserving them in the showroom photo. Subject: 2003 Subaru Impreza WRX STI GD BUGEYE with rounded bugeye headlight housings, World Rally BLUE, GOLD wheels, four-door sedan, large rear wing. View: front 3/4, front-left corner toward camera, nose LEFT. Match reference exactly: BUGEYE front with large round/oval headlight housings, not later blobeye/hawkeye, blue paint, gold wheels, four doors, rear wing. No star emblem or STI letters. Replace backdrop with seamless light-grey studio and warm-concrete floor, subtle reflection. Fully opaque photograph."
+    },
+    {
+      "id": "B07",
+      "short_name": "f100",
+      "reference": "set-A/A23-f100-side.png",
+      "subject": "1972 Ford F-100 pickup, two-tone LIGHT BLUE and WHITE matching reference, regular cab, SHORT bed, chrome bumpers",
+      "view": "perfect perpendicular SIDE PROFILE, nose LEFT",
+      "prompt": "Generate exactly ONE photorealistic premium dealer-listing automotive SHOWROOM photograph. Full background, landscape aspect ratio 3:2, largest tool-supported resolution and at least 1536px long side. Seamless light-grey / warm-concrete studio, soft overhead studio light, natural paint/rubber/metal textures and realistic reflections, subtle floor reflection. Entire car in frame with ample margin. Camera at headlight height, standard lens, wheels straight, crisp focus and true-to-life colours. No other objects or people. Not illustration or CGI-gloss render. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or licence plates; plate areas blank. No readable screens. One car only, no grid, collage, split or variants. Use supplied cutout solely as a reference for the exact car body, paint, wheels and trim, preserving them in the showroom photo. Subject: 1972 Ford F-100 pickup, two-tone LIGHT BLUE and WHITE matching reference, regular cab, SHORT bed, chrome bumpers. View: perfect perpendicular SIDE PROFILE, nose LEFT. Preserve reference regular cab, short bed, white cab roof, broad white side stripe over light blue body, chrome wheels and bumpers. No Ford letters, fender scripts or stamped wording. Replace backdrop with seamless light-grey studio and warm-concrete floor with subtle reflection. Fully opaque photograph."
+    },
+    {
+      "id": "B08",
+      "short_name": "bronco",
+      "reference": "set-A/A34-bronco-front.png",
+      "subject": "2021 Ford Bronco TWO-door short wheelbase, Cactus GRAY, black hard roof, black wheels, off-road tyres",
+      "view": "front 3/4, front-left corner toward camera, nose LEFT",
+      "prompt": "Generate exactly ONE photorealistic premium dealer-listing automotive SHOWROOM photograph. Full background, landscape aspect ratio 3:2, largest tool-supported resolution and at least 1536px long side. Seamless light-grey / warm-concrete studio, soft overhead studio light, natural paint/rubber/metal textures and realistic reflections, subtle floor reflection. Entire car in frame with ample margin. Camera at headlight height, standard lens, wheels straight, crisp focus and true-to-life colours. No other objects or people. Not illustration or CGI-gloss render. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or licence plates; plate areas blank. No readable screens. One car only, no grid, collage, split or variants. Use supplied cutout solely as a reference for the exact car body, paint, wheels and trim, preserving them in the showroom photo. Subject: 2021 Ford Bronco TWO-door short wheelbase, Cactus GRAY, black hard roof, black wheels, off-road tyres. View: front 3/4, front-left corner toward camera, nose LEFT. Preserve reference TWO-door full-size Bronco, pale Cactus Gray-green body, black roof and wheels, chunky tyres. No grille letters, no horse badge, no Ford oval. Replace backdrop entirely with seamless light-grey studio, warm-concrete floor and subtle reflection. Fully opaque photograph."
+    }
+  ]
+}

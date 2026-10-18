@@ -1,0 +1,108 @@
+{
+  "id": "C-P1",
+  "title": "After \"Delivered\" (v2)",
+  "dur": 28.0,
+  "lead_hook": "A",
+  "ev": {
+    "drop": 0.35,
+    "dropLand": 0.68,
+    "lidSnap": 0.85,
+    "lineStart": 1.1,
+    "pan1": 2.5,
+    "shipped": 3.0,
+    "transit": 3.6,
+    "delivered": 4.2,
+    "overrun": 4.35,
+    "pan2": 5.5,
+    "reviewType": 6.85,
+    "reviewDone": 7.65,
+    "pan3": 8.5,
+    "slotIn": 8.7,
+    "lineStop": 9.3,
+    "musicDrop": 8.75,
+    "supraLand": 11.85,
+    "push1": 12.55,
+    "rowHi": 13.7,
+    "expand": 14.55,
+    "date": 14.95,
+    "attr": 16.2,
+    "photos": 17.15,
+    "tap": 18.35,
+    "whip": 18.6,
+    "tile1": 19.2,
+    "tile2": 19.45,
+    "tile3": 19.6,
+    "tile4": 19.75,
+    "pullBack": 21.0,
+    "turboHome": 21.35,
+    "endTile": 21.65,
+    "lineDraw": 21.75,
+    "retract": 24.6,
+    "boxBack": 25.0,
+    "boxLand": 25.45,
+    "ctaHead": 24.2,
+    "ctaUrl": 26.45,
+    "textOut": 27.6
+  },
+  "vo": [
+    {
+      "a": 0.15,
+      "b": 2.25,
+      "who": "Eric",
+      "text": "Where do your turbos end up?"
+    },
+    {
+      "a": 2.6,
+      "b": 5.3,
+      "who": "Eric",
+      "text": "Korvane's trail ends at 'Delivered.'",
+      "cap": "Korvane’s trail ends at “Delivered.”"
+    },
+    {
+      "a": 5.6,
+      "b": 8.3,
+      "who": "Eric",
+      "text": "Their one review? 'Arrived fast.'",
+      "cap": "Their one review? “Arrived fast.”"
+    },
+    {
+      "a": 8.6,
+      "b": 11.2,
+      "who": "Eric",
+      "text": "Fast. But on what car?"
+    },
+    {
+      "a": 11.6,
+      "b": 14.3,
+      "who": "Eric",
+      "text": "A white Supra. Its build lists the part."
+    },
+    {
+      "a": 14.6,
+      "b": 17.8,
+      "who": "Eric",
+      "text": "Installed March fourteenth. Kessler Motorsport. Install photos.",
+      "cap": "Installed March 14. Kessler Motorsport. Install photos."
+    },
+    {
+      "a": 18.1,
+      "b": 20.8,
+      "who": "Eric",
+      "text": "We're building the page that lists them all.",
+      "cap": "We’re building the page that lists them all."
+    },
+    {
+      "a": 21.1,
+      "b": 23.6,
+      "who": "Eric",
+      "text": "Not just delivered. Installed."
+    },
+    {
+      "a": 24.1,
+      "b": 27.45,
+      "who": "Eric",
+      "text": "@cta (see P1-cta.json)",
+      "confirm": true
+    }
+  ]
+}

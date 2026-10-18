@@ -1,0 +1,39 @@
+{
+  "reel": "SC-02",
+  "calendar_voice": "Emma",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 1.0,
+  "stability": 0.38,
+  "style": 0.3,
+  "speed_note": "",
+  "target_seconds": 44,
+  "airings_calendar": "10-28 A, 11-02 B, 11-07 C (17:00)",
+  "tempo_post": 1.0,
+  "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+  "voice_name": "Emma",
+  "speakers": {
+    "Cassie": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    },
+    "Marco": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Emma (Cassie, CTA). Marco on Dan.",
+  "durations_seconds": {
+    "master": 39.35,
+    "hookA_in_master": 4.6,
+    "hookB": 5.16,
+    "hookC": 4.52
+  },
+  "characters": {
+    "master": 537,
+    "hookB": 73,
+    "hookC": 63
+  }
+}

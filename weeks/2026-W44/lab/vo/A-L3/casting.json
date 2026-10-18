@@ -1,0 +1,19 @@
+{
+  "reel": "A-L3",
+  "calendar_voice": "Emma",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 1.0,
+  "stability": 0.5,
+  "style": 0.15,
+  "speed_note": "",
+  "tempo_post": 1.06,
+  "speakers": {
+    "E": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    }
+  },
+  "tempo_note": "atempo 1.06 applied after tts.py to master and hook openers (skill step 3)"
+}

@@ -1,0 +1,30 @@
+{
+  "reel": "LB-10",
+  "calendar_voice": "Jerry B.",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.45,
+  "style": 0.15,
+  "speed_note": "",
+  "target_seconds": 48,
+  "airings_calendar": "11-07 A (18:30)",
+  "tempo_post": 1.0,
+  "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+  "voice_name": "Jerry B.",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Jerry B.",
+      "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Jerry B., fast, speed 1.08. Hook A only.",
+  "durations_seconds": {
+    "master": 44.47,
+    "hookA_in_master": 2.92
+  },
+  "characters": {
+    "master": 650
+  }
+}

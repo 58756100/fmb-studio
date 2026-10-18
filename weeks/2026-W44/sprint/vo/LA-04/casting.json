@@ -1,0 +1,32 @@
+{
+  "reel": "LA-04",
+  "calendar_voice": "Jerry B.",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 1.0,
+  "stability": 0.45,
+  "style": 0.15,
+  "speed_note": "",
+  "target_seconds": 44,
+  "airings_calendar": "10-30 A (17:00); Nov 4 slot became LB-06; hook B rendered anyway",
+  "tempo_post": 1.0,
+  "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+  "voice_name": "Jerry B.",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Jerry B.",
+      "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Jerry B., normal.",
+  "durations_seconds": {
+    "master": 40.23,
+    "hookA_in_master": 3.96,
+    "hookB": 3.0
+  },
+  "characters": {
+    "master": 588,
+    "hookB": 36
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "reel": "S0-05",
+  "calendar_voice": "two-voice",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.5,
+  "style": 0.15,
+  "speed_note": "",
+  "target_seconds": 37,
+  "airings_calendar": "10-28 A, 11-02 B, 11-07 C (09:30)",
+  "tempo_post": 1.06,
+  "speakers": {
+    "Rita (Jo)": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    },
+    "Brian (Hal)": {
+      "voice_name": "Jerry B.",
+      "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+      "model": "eleven_v4"
+    },
+    "Eric (CTA)": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Rita/Sarah mapped to Emma, Brian to Jerry B., Eric to Justin Case (CTA only).",
+  "characters": {
+    "master": 529,
+    "hookB": 70,
+    "hookC": 62
+  }
+}

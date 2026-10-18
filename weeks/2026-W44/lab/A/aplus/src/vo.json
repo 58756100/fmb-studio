@@ -1,0 +1,408 @@
+{
+ "L1": {
+  "windows": [
+   [
+    0.0,
+    1.3
+   ],
+   [
+    2.0,
+    4.95
+   ],
+   [
+    5.0,
+    7.9
+   ],
+   [
+    8.0,
+    9.9
+   ],
+   [
+    10.0,
+    10.98
+   ],
+   [
+    11.0,
+    11.98
+   ],
+   [
+    12.0,
+    12.98
+   ],
+   [
+    13.0,
+    13.98
+   ],
+   [
+    14.0,
+    14.98
+   ],
+   [
+    15.0,
+    18.9
+   ],
+   [
+    18.95,
+    19.95
+   ],
+   [
+    20.0,
+    21.95
+   ],
+   [
+    22.0,
+    24.6
+   ],
+   [
+    25.0,
+    27.2
+   ]
+  ],
+  "subs": [
+   [
+    "Prove the work.",
+    0.0,
+    1.3
+   ],
+   [
+    "That's the question an insurer or appraiser can ask.",
+    2.0,
+    4.95
+   ],
+   [
+    "A finished-car photo can't show what's underneath.",
+    5.0,
+    7.9
+   ],
+   [
+    "Start with the brake kit.",
+    8.0,
+    9.9
+   ],
+   [
+    "Name the part.",
+    10.0,
+    10.98
+   ],
+   [
+    "Show the brand.",
+    11.0,
+    11.98
+   ],
+   [
+    "Date the install.",
+    12.0,
+    12.98
+   ],
+   [
+    "Attach the photo.",
+    13.0,
+    13.98
+   ],
+   [
+    "Credit the garage.",
+    14.0,
+    14.98
+   ],
+   [
+    "We put that record on a FuelMyBuild build page.",
+    15.0,
+    18.9
+   ],
+   [
+    "One public link.",
+    18.95,
+    19.95
+   ],
+   [
+    "Now the work has a record.",
+    20.0,
+    21.95
+   ],
+   [
+    "What's your hardest upgrade to prove?",
+    22.0,
+    24.6
+   ],
+   [
+    "Follow for better build records.",
+    25.0,
+    27.2
+   ]
+  ]
+ },
+ "L2": {
+  "windows": [
+   [
+    0.0,
+    1.6
+   ],
+   [
+    2.0,
+    3.95
+   ],
+   [
+    4.0,
+    4.98
+   ],
+   [
+    5.05,
+    7.95
+   ],
+   [
+    8.0,
+    8.8
+   ],
+   [
+    8.95,
+    9.95
+   ],
+   [
+    10.0,
+    10.98
+   ],
+   [
+    11.0,
+    12.95
+   ],
+   [
+    13.0,
+    14.95
+   ],
+   [
+    15.0,
+    15.95
+   ],
+   [
+    16.1,
+    17.1
+   ],
+   [
+    17.15,
+    20.7
+   ],
+   [
+    20.8,
+    22.1
+   ],
+   [
+    22.2,
+    25.0
+   ],
+   [
+    25.0,
+    27.2
+   ]
+  ],
+  "subs": [
+   [
+    "Same car. Same photo.",
+    0.0,
+    1.6
+   ],
+   [
+    "Which shop would you hire?",
+    2.0,
+    3.95
+   ],
+   [
+    "You can't tell.",
+    4.0,
+    4.98
+   ],
+   [
+    "Now show what the photo leaves out.",
+    5.05,
+    7.95
+   ],
+   [
+    "Brake kit.",
+    8.0,
+    8.8
+   ],
+   [
+    "Dated install photo.",
+    8.95,
+    9.95
+   ],
+   [
+    "Parts and brands.",
+    10.0,
+    10.98
+   ],
+   [
+    "The garage that did it.",
+    11.0,
+    12.95
+   ],
+   [
+    "The contributor behind the work.",
+    13.0,
+    14.95
+   ],
+   [
+    "Same finished car.",
+    15.0,
+    15.95
+   ],
+   [
+    "More to judge.",
+    16.1,
+    17.1
+   ],
+   [
+    "We connect those details on a FuelMyBuild build page.",
+    17.15,
+    20.7
+   ],
+   [
+    "Share its public link.",
+    20.8,
+    22.1
+   ],
+   [
+    "What work looks easy until you do it?",
+    22.2,
+    25.0
+   ],
+   [
+    "Follow for better build records.",
+    25.0,
+    27.2
+   ]
+  ]
+ },
+ "L3": {
+  "windows": [
+   [
+    0.0,
+    1.5
+   ],
+   [
+    2.0,
+    3.95
+   ],
+   [
+    4.0,
+    5.95
+   ],
+   [
+    6.0,
+    6.95
+   ],
+   [
+    7.15,
+    7.95
+   ],
+   [
+    8.0,
+    12.95
+   ],
+   [
+    13.0,
+    15.9
+   ],
+   [
+    16.0,
+    18.3
+   ],
+   [
+    18.4,
+    20.05
+   ],
+   [
+    20.15,
+    20.95
+   ],
+   [
+    21.0,
+    21.9
+   ],
+   [
+    22.0,
+    24.8
+   ],
+   [
+    25.0,
+    27.2
+   ]
+  ],
+  "subs": [
+   [
+    "Someone guessed your turbo.",
+    0.0,
+    1.5
+   ],
+   [
+    "The next person repeats it.",
+    2.0,
+    3.95
+   ],
+   [
+    "Now the guess sounds like fact.",
+    4.0,
+    5.95
+   ],
+   [
+    "The missing detail?",
+    6.0,
+    6.95
+   ],
+   [
+    "The brand.",
+    7.15,
+    7.95
+   ],
+   [
+    "Here's the fix:",
+    8.0,
+    8.99
+   ],
+   [
+    "name the part, record its brand,",
+    8.99,
+    10.97
+   ],
+   [
+    "on the build where it's used.",
+    10.97,
+    12.95
+   ],
+   [
+    "We put both in FuelMyBuild's parts registry.",
+    13.0,
+    15.9
+   ],
+   [
+    "The build page has a public link.",
+    16.0,
+    18.3
+   ],
+   [
+    "Share that when someone asks.",
+    18.4,
+    20.05
+   ],
+   [
+    "Less guesswork.",
+    20.15,
+    20.95
+   ],
+   [
+    "More context.",
+    21.0,
+    21.9
+   ],
+   [
+    "Suppliers: what part gets misidentified the most?",
+    22.0,
+    24.8
+   ],
+   [
+    "Follow for better build records.",
+    25.0,
+    27.2
+   ]
+  ]
+ }
+}

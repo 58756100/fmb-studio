@@ -1,0 +1,82 @@
+[
+  {
+    "id": "E01",
+    "name": "collector-man",
+    "set": "E",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Natural professional portrait photograph of a real-looking adult, realistic skin, hair, clothing texture and anatomically correct hands. Subject: A realistic US car collector, MAN in his 60s, grey hair, navy quarter-zip, warm smile. Waist-up, arms and hands fully in frame. Plain solid clothing, no logos or name tags.",
+    "ref": null
+  },
+  {
+    "id": "E02",
+    "name": "collector-woman",
+    "set": "E",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Natural professional portrait photograph of a real-looking adult, realistic skin, hair, clothing texture and anatomically correct hands. Subject: A realistic US car collector, WOMAN in her 40s, plain denim jacket, confident natural expression. Waist-up, arms and hands fully in frame, no logos or name tags.",
+    "ref": null
+  },
+  {
+    "id": "E03",
+    "name": "young-enthusiast",
+    "set": "E",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Natural professional portrait photograph of a real-looking adult, realistic skin, hair, clothing texture and anatomically correct hands. Subject: A realistic US young car enthusiast, MAN in his 20s, plain BLACK HOODIE, excited natural expression. Waist-up, arms and hands fully in frame, no logos.",
+    "ref": null
+  },
+  {
+    "id": "E04",
+    "name": "shop-owner",
+    "set": "E",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Natural professional portrait photograph of a real-looking adult, realistic skin, hair, clothing texture and anatomically correct hands. Subject: A realistic US auto shop owner, WOMAN in her 50s, plain CHARCOAL WORK SHIRT, ARMS FOLDED, natural confident expression. Waist-up, no logos or name tags.",
+    "ref": null
+  },
+  {
+    "id": "E05",
+    "name": "mechanic-man",
+    "set": "E",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Natural professional portrait photograph of a real-looking adult, realistic skin, hair, clothing texture and anatomically correct hands. Subject: A realistic US mechanic, MAN in his 30s, plain GREY COVERALLS, WIPING HANDS ON A RAG, natural expression. Waist-up, all hands and rag visible. No logos or name tags.",
+    "ref": null
+  },
+  {
+    "id": "E06",
+    "name": "mechanic-woman",
+    "set": "E",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Natural professional portrait photograph of a real-looking adult, realistic skin, hair, clothing texture and anatomically correct hands. Subject: A realistic US mechanic, WOMAN in her 20s, plain DARK BLUE WORK SHIRT, HOLDING A TABLET with BLANK screen facing camera. Waist-up, hands visible, no logos or name tags.",
+    "ref": null
+  },
+  {
+    "id": "E07",
+    "name": "parts-rep",
+    "set": "E",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Natural professional portrait photograph of a real-looking adult, realistic skin, hair, clothing texture and anatomically correct hands. Subject: A realistic US parts brand representative, MAN in his 30s, plain solid-colour POLO SHIRT, HOLDING A SMALL unbranded PARTS BOX. Waist-up, hands visible, no logos or name tags.",
+    "ref": null
+  },
+  {
+    "id": "E08",
+    "name": "skeptical-customer",
+    "set": "E",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Natural professional portrait photograph of a real-looking adult, realistic skin, hair, clothing texture and anatomically correct hands. Subject: A realistic US customer at a counter, MAN in his 40s, plain FLANNEL SHIRT, SKEPTICAL natural expression, FULL BODY from head to shoes, all limbs fully visible. Pose as if standing at a counter, but no counter or environment in this transparent cutout. No logos or name tags.",
+    "ref": null
+  },
+  {
+    "id": "E09",
+    "name": "collector-laughing",
+    "set": "E",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Natural professional portrait photograph of a real-looking adult, realistic skin, hair, clothing texture and anatomically correct hands. Subject: SAME MAN as E01, same face, age, grey hair and navy quarter-zip. LAUGHING naturally and POINTING TO THE SIDE. Waist-up, entire pointing arm and hand visible. Preserve identity and clothing exactly.",
+    "ref": "E01"
+  },
+  {
+    "id": "E10",
+    "name": "owner-explaining",
+    "set": "E",
+    "transparent": true,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. CUTOUT PNG with genuine transparent alpha background, not white or grey, no drawn checkerboard. Entire subject fully in frame with about 6% empty margin on every side. No floor, ground shadow, reflection or extra props. Neutral studio lighting: soft key upper left, gentle fill, 5500K white balance. Landscape canvas 1536x1024 or larger unless full-body portrait needs portrait orientation. Natural professional portrait photograph of a real-looking adult, realistic skin, hair, clothing texture and anatomically correct hands. Subject: SAME WOMAN as E04, same face, age and charcoal work shirt. GESTURING TOWARD THE SIDE AS IF EXPLAINING, hands naturally open. Waist-up, both hands and gesturing arms fully visible. Preserve identity and clothing exactly.",
+    "ref": "E04"
+  }
+]

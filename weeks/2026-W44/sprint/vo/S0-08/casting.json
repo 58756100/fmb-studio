@@ -1,0 +1,36 @@
+{
+  "reel": "S0-08",
+  "calendar_voice": "Emma",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.5,
+  "style": 0.15,
+  "speed_note": "",
+  "target_seconds": 32,
+  "airings_calendar": "10-26 A, 10-31 B, 11-05 C (11:00)",
+  "tempo_post": 1.06,
+  "speakers": {
+    "Rita (Dolores)": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    },
+    "Chris (Pete)": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    },
+    "Eric (CTA)": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Rita (Dolores) mapped to Emma, Chris (Pete) to Dan, Eric (CTA) to Justin Case. Calendar lead voice Emma. Silent 1.0 s open on hook A is padded onto the master in post.",
+  "characters": {
+    "master": 434,
+    "hookB": 53,
+    "hookC": 52
+  }
+}

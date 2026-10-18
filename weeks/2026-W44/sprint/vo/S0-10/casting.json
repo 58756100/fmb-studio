@@ -1,0 +1,39 @@
+{
+  "reel": "S0-10",
+  "calendar_voice": "two-voice",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.38,
+  "style": 0.3,
+  "speed_note": "",
+  "target_seconds": 33,
+  "airings_calendar": "10-29 A, 11-03 B, 11-08 C (09:30)",
+  "tempo_post": 1.0,
+  "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+  "voice_name": "Dan, Upbeat & Dynamic",
+  "speakers": {
+    "Danny": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    },
+    "Lorraine": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Two-voice per calendar: Danny Dan, Lorraine Emma (reads the CTA). Fast, speed 1.08.",
+  "durations_seconds": {
+    "master": 32.73,
+    "hookA_in_master": 3.07,
+    "hookB": 5.08,
+    "hookC": 3.16
+  },
+  "characters": {
+    "master": 401,
+    "hookB": 81,
+    "hookC": 51
+  }
+}

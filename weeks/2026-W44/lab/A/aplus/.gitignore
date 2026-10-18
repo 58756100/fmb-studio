@@ -1,0 +1,6 @@
+node_modules/
+public/
+out/
+stills/
+audio/out/
+__pycache__/

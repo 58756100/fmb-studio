@@ -1,0 +1,14 @@
+######## C3-SUP 12:55:26
+C3-SUP-A: 33.87s (VO 32.84 + tail 1.03), I -14.1 LUFS, TP -2.1 dBTP, lowest energy 0.399 at 32.5s, lag 0 OK
+C3-SUP-B: 33.70s (VO 32.69 + tail 1.01), I -14.2 LUFS, TP -1.9 dBTP, lowest energy 0.427 at 32.5s, lag 0 OK
+C3-SUP-C: 33.87s (VO 32.84 + tail 1.02), I -14.2 LUFS, TP -1.3 dBTP, lowest energy 0.399 at 32.5s, lag 0 OK
+   f28e94b..8c5e307  8c5e307ba37dc70059bcd62826e453d1083dab7b -> renders
+pushed 2026-W44/sprint/masters/C3-SUP-A.mp4 (8c5e307ba37dc70059bcd62826e453d1083dab7b)
+   8c5e307..aea3fa4  aea3fa4d4775742b574b213bfff587922c2a09c5 -> renders
+pushed 2026-W44/sprint/masters/C3-SUP-B.mp4 (aea3fa4d4775742b574b213bfff587922c2a09c5)
+   aea3fa4..de686c2  de686c24a3c8b389af8968beeca2441fe9bd0b44 -> renders
+pushed 2026-W44/sprint/masters/C3-SUP-C.mp4 (de686c24a3c8b389af8968beeca2441fe9bd0b44)
+   de686c2..0823f0f  0823f0fb963fb7ce4e8cb3df1691c0069fe22fd1 -> renders
+pushed 2026-W44/sprint/masters/C3-SUP-bed.wav (0823f0fb963fb7ce4e8cb3df1691c0069fe22fd1)
+C3-SUP done 13:06:13
+RUNALL EXIT 0

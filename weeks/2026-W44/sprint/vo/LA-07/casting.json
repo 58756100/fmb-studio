@@ -1,0 +1,34 @@
+{
+  "reel": "LA-07",
+  "calendar_voice": "Justin Case",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.06,
+  "stability": 0.42,
+  "style": 0.22,
+  "speed_note": "",
+  "target_seconds": 44,
+  "airings_calendar": "10-29 A, 11-03 B, 11-08 C (18:30)",
+  "tempo_post": 1.0,
+  "voice_id": "DtQLDxHbTiQTpVVanTy1",
+  "voice_name": "Justin Case",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Justin Case, fast, speed 1.06 (house 0.96 x 1.1).",
+  "durations_seconds": {
+    "master": 36.09,
+    "hookA_in_master": 3.4,
+    "hookB": 3.08,
+    "hookC": 3.88
+  },
+  "characters": {
+    "master": 599,
+    "hookB": 45,
+    "hookC": 44
+  }
+}

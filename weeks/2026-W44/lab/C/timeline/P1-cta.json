@@ -1,0 +1,16 @@
+{
+  "_note": "P1 CTA, marked (confirm) for Wayne. Edit ONLY this file: the VO script, the burned-in subtitle and the on-screen CTA all read from here. To switch to the fallback, copy the fallback block over the top-level fields and re-render 24-28 s.",
+  "status": "confirm",
+  "vo": "First hundred brands get a free page. fuelmybuild.com",
+  "cap": "First 100 brands get a free page. fuelmybuild.com",
+  "head": ["First 100 brands:", "free page"],
+  "url": "fuelmybuild.com",
+  "small": ["Supplier pages in development", "Illustrative · brands are fictional"],
+  "fallback": {
+    "vo": "Brands: get on the list at fuelmybuild.com.",
+    "cap": "Brands: get on the list at fuelmybuild.com",
+    "head": ["Supplier pages:", "join the list"],
+    "url": "fuelmybuild.com",
+    "small": ["Supplier pages in development", "Illustrative · brands are fictional"]
+  }
+}

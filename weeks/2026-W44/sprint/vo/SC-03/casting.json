@@ -1,0 +1,37 @@
+{
+  "reel": "SC-03",
+  "calendar_voice": "Justin Case",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 0.96,
+  "stability": 0.4,
+  "style": 0.25,
+  "speed_note": "",
+  "target_seconds": 42,
+  "airings_calendar": "10-29 A, 11-03 B, 11-08 C (17:00)",
+  "tempo_post": 1.0,
+  "voice_id": "DtQLDxHbTiQTpVVanTy1",
+  "voice_name": "Justin Case",
+  "speakers": {
+    "Wes": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Justin Case, speed 0.96. Hook C rewritten to open 'Collectors,'.",
+  "durations_seconds": {
+    "master": 40.57,
+    "hookA_in_master": 4.44,
+    "hookB": 4.2,
+    "hookC": 4.52
+  },
+  "characters": {
+    "master": 573,
+    "hookB": 62,
+    "hookC": 54
+  },
+  "script_edits": [
+    "hook C now opens 'Collectors,' (collector-naming hook, SC-03 is a COL body)"
+  ]
+}

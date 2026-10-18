@@ -1,0 +1,98 @@
+[
+  {
+    "id": "F01",
+    "name": "garage-bay",
+    "set": "F",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL-PLACE BACKGROUND, a sharp phone or mirrorless photo, exact 9:16 VERTICAL portrait canvas, 1152x2048 or 1080x1920 or larger same ratio. Keep TOP 25% and BOTTOM 20% calm and uncluttered for later text overlay (plain ceiling/wall/sky above, plain floor/road below). NO text rendered, no people. Subject: A CLEAN independent auto GARAGE BAY, CAR LIFT EMPTY, MORNING LIGHT.",
+    "ref": null
+  },
+  {
+    "id": "F02",
+    "name": "home-garage",
+    "set": "F",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL-PLACE BACKGROUND, a sharp phone or mirrorless photo, exact 9:16 VERTICAL portrait canvas, 1152x2048 or 1080x1920 or larger same ratio. Keep TOP 25% and BOTTOM 20% calm and uncluttered for later text overlay (plain ceiling/wall/sky above, plain floor/road below). NO text rendered, no people. Subject: A HOME GARAGE AT NIGHT with warm work light and a workbench.",
+    "ref": null
+  },
+  {
+    "id": "F03",
+    "name": "showroom-floor",
+    "set": "F",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL-PLACE BACKGROUND, a sharp phone or mirrorless photo, exact 9:16 VERTICAL portrait canvas, 1152x2048 or 1080x1920 or larger same ratio. Keep TOP 25% and BOTTOM 20% calm and uncluttered for later text overlay (plain ceiling/wall/sky above, plain floor/road below). NO text rendered, no people. Subject: A PREMIUM SHOWROOM FLOOR, EMPTY, soft daylight.",
+    "ref": null
+  },
+  {
+    "id": "F04",
+    "name": "warehouse-aisle",
+    "set": "F",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL-PLACE BACKGROUND, a sharp phone or mirrorless photo, exact 9:16 VERTICAL portrait canvas, 1152x2048 or 1080x1920 or larger same ratio. Keep TOP 25% and BOTTOM 20% calm and uncluttered for later text overlay (plain ceiling/wall/sky above, plain floor/road below). NO text rendered, no people. Subject: A PARTS WAREHOUSE AISLE with tall shelves of UNBRANDED BOXES.",
+    "ref": null
+  },
+  {
+    "id": "F05",
+    "name": "shop-counter",
+    "set": "F",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL-PLACE BACKGROUND, a sharp phone or mirrorless photo, exact 9:16 VERTICAL portrait canvas, 1152x2048 or 1080x1920 or larger same ratio. Keep TOP 25% and BOTTOM 20% calm and uncluttered for later text overlay (plain ceiling/wall/sky above, plain floor/road below). NO text rendered, no people. Subject: An auto SHOP FRONT COUNTER with monitor having BLANK screen, SERVICE BELL and blank PAPERS.",
+    "ref": null
+  },
+  {
+    "id": "F06",
+    "name": "car-meet",
+    "set": "F",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL-PLACE BACKGROUND, a sharp phone or mirrorless photo, exact 9:16 VERTICAL portrait canvas, 1152x2048 or 1080x1920 or larger same ratio. Keep TOP 25% and BOTTOM 20% calm and uncluttered for later text overlay (plain ceiling/wall/sky above, plain floor/road below). NO text rendered, no people. Subject: A CAR MEET in a PARKING LOT AT DUSK, blurred cars, no faces, no identifiable people. Cars have no badges or readable plates.",
+    "ref": null
+  },
+  {
+    "id": "F07",
+    "name": "dyno-room",
+    "set": "F",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL-PLACE BACKGROUND, a sharp phone or mirrorless photo, exact 9:16 VERTICAL portrait canvas, 1152x2048 or 1080x1920 or larger same ratio. Keep TOP 25% and BOTTOM 20% calm and uncluttered for later text overlay (plain ceiling/wall/sky above, plain floor/road below). NO text rendered, no people. Subject: A DYNO ROOM with EMPTY ROLLERS, moody light, no car.",
+    "ref": null
+  },
+  {
+    "id": "F08",
+    "name": "paint-booth",
+    "set": "F",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL-PLACE BACKGROUND, a sharp phone or mirrorless photo, exact 9:16 VERTICAL portrait canvas, 1152x2048 or 1080x1920 or larger same ratio. Keep TOP 25% and BOTTOM 20% calm and uncluttered for later text overlay (plain ceiling/wall/sky above, plain floor/road below). NO text rendered, no people. Subject: A clean bright automotive PAINT BOOTH, empty.",
+    "ref": null
+  },
+  {
+    "id": "F09",
+    "name": "auction-hall",
+    "set": "F",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL-PLACE BACKGROUND, a sharp phone or mirrorless photo, exact 9:16 VERTICAL portrait canvas, 1152x2048 or 1080x1920 or larger same ratio. Keep TOP 25% and BOTTOM 20% calm and uncluttered for later text overlay (plain ceiling/wall/sky above, plain floor/road below). NO text rendered, no people. Subject: A CLASSIC CAR AUCTION HALL with EMPTY STAGE, no lettering or signage.",
+    "ref": null
+  },
+  {
+    "id": "F10",
+    "name": "detailing-studio",
+    "set": "F",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL-PLACE BACKGROUND, a sharp phone or mirrorless photo, exact 9:16 VERTICAL portrait canvas, 1152x2048 or 1080x1920 or larger same ratio. Keep TOP 25% and BOTTOM 20% calm and uncluttered for later text overlay (plain ceiling/wall/sky above, plain floor/road below). NO text rendered, no people. Subject: An automotive DETAILING STUDIO with LED LIGHT STRIPS.",
+    "ref": null
+  },
+  {
+    "id": "F11",
+    "name": "suburban-driveway",
+    "set": "F",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL-PLACE BACKGROUND, a sharp phone or mirrorless photo, exact 9:16 VERTICAL portrait canvas, 1152x2048 or 1080x1920 or larger same ratio. Keep TOP 25% and BOTTOM 20% calm and uncluttered for later text overlay (plain ceiling/wall/sky above, plain floor/road below). NO text rendered, no people. Subject: A DRIVEWAY in a US SUBURB, MORNING light.",
+    "ref": null
+  },
+  {
+    "id": "F12",
+    "name": "country-road",
+    "set": "F",
+    "transparent": false,
+    "prompt": "Create exactly ONE photorealistic image, true-to-life colours, crisp focus, real materials and natural reflections. No illustration, cartoon, painterly or glossy CGI look. Absolutely NO text, numbers, logos, brand names, badges, emblems, stickers, watermarks or readable screens. Device screens blank black or plain white. No grids, collages, multiple panels or variants. Largest supported resolution, long side at least 1536 pixels. PHOTO with FULL REAL-PLACE BACKGROUND, a sharp phone or mirrorless photo, exact 9:16 VERTICAL portrait canvas, 1152x2048 or 1080x1920 or larger same ratio. Keep TOP 25% and BOTTOM 20% calm and uncluttered for later text overlay (plain ceiling/wall/sky above, plain floor/road below). NO text rendered, no people. Subject: An EMPTY COUNTRY ROAD at GOLDEN HOUR.",
+    "ref": null
+  }
+]

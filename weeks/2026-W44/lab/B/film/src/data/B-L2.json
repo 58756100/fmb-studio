@@ -1,0 +1,319 @@
+{
+ "voice": "Chris",
+ "heads": [
+  [
+   0,
+   "Same car."
+  ],
+  [
+   1,
+   "Different *proof.*"
+  ],
+  [
+   2,
+   "Nora's next project"
+  ],
+  [
+   3,
+   "Engine swap"
+  ],
+  [
+   4,
+   "Shop A / Shop B"
+  ],
+  [
+   5,
+   "Same finished photo"
+  ],
+  [
+   6,
+   "Who did"
+  ],
+  [
+   7,
+   "The *work?*"
+  ],
+  [
+   8,
+   "Shop A's gallery"
+  ],
+  [
+   9,
+   "Finished car"
+  ],
+  [
+   10,
+   "But who"
+  ],
+  [
+   11,
+   "Installed the engine?"
+  ],
+  [
+   12,
+   "A finished photo"
+  ],
+  [
+   13,
+   "Credit *missing*"
+  ],
+  [
+   14,
+   "Nora checks the record"
+  ],
+  [
+   15,
+   "Shop B's build record"
+  ],
+  [
+   16,
+   "Public build"
+  ],
+  [
+   17,
+   "FuelMyBuild"
+  ],
+  [
+   18,
+   "Garage · Shop B"
+  ],
+  [
+   19,
+   "Contributor · Eli"
+  ],
+  [
+   20,
+   "March 14 · Engine install"
+  ],
+  [
+   21,
+   "Install photos"
+  ],
+  [
+   22,
+   "Work with credit"
+  ],
+  [
+   23,
+   "Who did what"
+  ],
+  [
+   24,
+   "Which would"
+  ],
+  [
+   25,
+   "You call?"
+  ],
+  [
+   26,
+   "Follow for"
+  ],
+  [
+   27,
+   "Documented builds"
+  ],
+  [
+   28,
+   "Same car."
+  ],
+  [
+   29,
+   "Different *proof.*"
+  ]
+ ],
+ "subs": [
+  [
+   0.0,
+   1.95,
+   "Same car. Different proof."
+  ],
+  [
+   2.0,
+   3.95,
+   "Nora needs an engine swap."
+  ],
+  [
+   4.0,
+   5.95,
+   "Two garages. Same polished Miata."
+  ],
+  [
+   6.0,
+   7.95,
+   "Who did the *work?*"
+  ],
+  [
+   8.0,
+   9.98,
+   "Shop A's gallery shows the finish."
+  ],
+  [
+   10.0,
+   11.95,
+   "But who installed the engine?"
+  ],
+  [
+   12.0,
+   13.85,
+   "A photo can't answer."
+  ],
+  [
+   14.0,
+   17.95,
+   "So Nora opens Shop B's public build on FuelMyBuild."
+  ],
+  [
+   18.0,
+   19.95,
+   "Garage: Shop B. Contributor: Eli."
+  ],
+  [
+   20.0,
+   21.95,
+   "Dated log. Install photos."
+  ],
+  [
+   22.0,
+   23.98,
+   "Now we see *who did what.*"
+  ],
+  [
+   24.0,
+   25.95,
+   "Which would you call?"
+  ],
+  [
+   26.0,
+   27.95,
+   "Follow for documented builds."
+  ]
+ ],
+ "sfx": [
+  [
+   0,
+   "pairedHits"
+  ],
+  [
+   1,
+   "labelTicks"
+  ],
+  [
+   2,
+   "cardSlide"
+  ],
+  [
+   3,
+   "typing"
+  ],
+  [
+   4,
+   "pairedTaps"
+  ],
+  [
+   5,
+   "alignClick"
+  ],
+  [
+   6,
+   "whoosh"
+  ],
+  [
+   8,
+   "tap"
+  ],
+  [
+   9,
+   "photoOpen"
+  ],
+  [
+   10,
+   "pivotHit"
+  ],
+  [
+   11,
+   "lowTick"
+  ],
+  [
+   12,
+   "softContract"
+  ],
+  [
+   14,
+   "msgTap"
+  ],
+  [
+   15,
+   "tap"
+  ],
+  [
+   17,
+   "revealClick"
+  ],
+  [
+   18,
+   "tick"
+  ],
+  [
+   19,
+   "tick"
+  ],
+  [
+   20,
+   "sheetOpen"
+  ],
+  [
+   21,
+   "photoOpen"
+  ],
+  [
+   22,
+   "softSettle"
+  ],
+  [
+   23,
+   "resolve"
+  ],
+  [
+   24,
+   "pairedTaps"
+  ],
+  [
+   25,
+   "qTick"
+  ],
+  [
+   26,
+   "ctaTap"
+  ],
+  [
+   27,
+   "lightResolve"
+  ],
+  [
+   28,
+   "softSlide"
+  ],
+  [
+   29,
+   "openingPickup"
+  ]
+ ],
+ "music": {
+  "bpm": 102.85714285714286,
+  "root": 46,
+  "mode": "major",
+  "T0": 2.0,
+  "dip": [
+   7.0,
+   8.0
+  ],
+  "silence": [
+   13.0,
+   13.6
+  ],
+  "cut": 16.0,
+  "ret": 23.0,
+  "style": "warm"
+ }
+}

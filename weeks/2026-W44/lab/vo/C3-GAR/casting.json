@@ -1,0 +1,28 @@
+{
+  "reel": "C3-GAR",
+  "calendar_voice": "Justin Case",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 0.96,
+  "stability": 0.5,
+  "style": 0.15,
+  "speed_note": "one speed per reel call (tts.py takes one value); Justin Case fast = 1.04 (house 0.96 x 1.08)",
+  "tempo_post": 1,
+  "speakers": {
+    "G": {
+      "voice_name": "Jerry B.",
+      "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+      "model": "eleven_v4"
+    },
+    "N": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    },
+    "O": {
+      "voice_name": "Frank, Wise & Deep",
+      "voice_id": "V2bPluzT7MuirpucVAKH",
+      "model": "eleven_v4"
+    }
+  }
+}

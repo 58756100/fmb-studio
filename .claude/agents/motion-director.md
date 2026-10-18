@@ -1,7 +1,7 @@
 ---
 name: motion-director
 description: Use this agent to storyboard, animate, score and render FuelMyBuild reels in Remotion with remocn. <example>VO ready → studio delegates storyboard frames to motion-director; after approval, the build and render</example>
-model: sonnet
+model: opus
 color: blue
 tools: ["Read", "Write", "Edit", "Bash", "Glob", "Grep"]
 ---

@@ -1,0 +1,34 @@
+{
+  "reel": "SC-05",
+  "calendar_voice": "Jerry B.",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 1.0,
+  "stability": 0.45,
+  "style": 0.15,
+  "speed_note": "",
+  "target_seconds": 37,
+  "airings_calendar": "10-29 A, 11-03 B, 11-08 C (08:00)",
+  "tempo_post": 1.0289,
+  "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+  "voice_name": "Jerry B.",
+  "speakers": {
+    "Otis": {
+      "voice_name": "Jerry B.",
+      "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Jerry B. (the script cast Frank; the calendar governs). Normal pace, speed 1.0.",
+  "durations_seconds": {
+    "master": 37.0,
+    "hookA_in_master": 3.54,
+    "hookB": 3.23,
+    "hookC": 4.63
+  },
+  "characters": {
+    "master": 464,
+    "hookB": 53,
+    "hookC": 63
+  }
+}

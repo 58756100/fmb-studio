@@ -1,0 +1,37 @@
+{
+  "reel": "LB-03",
+  "calendar_voice": "two-voice",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.38,
+  "style": 0.3,
+  "speed_note": "",
+  "target_seconds": 36,
+  "airings_calendar": "10-30 A, 11-04 B (09:30)",
+  "tempo_post": 1.0122,
+  "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+  "voice_name": "Dan, Upbeat & Dynamic",
+  "speakers": {
+    "Bea": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    },
+    "Owen": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Two-voice per calendar: Bea Emma, Owen Dan (also reads the CTA). Fast, speed 1.08.",
+  "durations_seconds": {
+    "master": 36.0,
+    "hookA_in_master": 2.73,
+    "hookB": 2.74
+  },
+  "characters": {
+    "master": 493,
+    "hookB": 42
+  }
+}

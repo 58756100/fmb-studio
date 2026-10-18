@@ -1,0 +1,44 @@
+{
+  "reel": "SC-10",
+  "calendar_voice": "Justin Case",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.06,
+  "stability": 0.42,
+  "style": 0.22,
+  "speed_note": "",
+  "target_seconds": 57,
+  "airings_calendar": "10-26 A, 10-31 B, 11-05 C (22:00)",
+  "tempo_post": 1.0,
+  "voice_id": "DtQLDxHbTiQTpVVanTy1",
+  "voice_name": "Justin Case",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    },
+    "Wendell": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    },
+    "Leland": {
+      "voice_name": "Frank, Wise & Deep",
+      "voice_id": "V2bPluzT7MuirpucVAKH",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Justin Case (narrator, CTA). Wendell Dan, Leland Frank. Justin speed 1.06 = house 0.96 x fast.",
+  "durations_seconds": {
+    "master": 53.31,
+    "hookA_in_master": 4.68,
+    "hookB": 5.0,
+    "hookC": 4.12
+  },
+  "characters": {
+    "master": 789,
+    "hookB": 82,
+    "hookC": 65
+  }
+}

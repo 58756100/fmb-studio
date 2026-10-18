@@ -1,0 +1,47 @@
+{
+  "reel": "S0-04",
+  "calendar_voice": "Emma",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.38,
+  "style": 0.25,
+  "speed_note": "",
+  "target_seconds": 56,
+  "airings_calendar": "10-26 A, 10-31 B, 11-05 C (18:30)",
+  "tempo_post": 1.0,
+  "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+  "voice_name": "Emma",
+  "speakers": {
+    "Ruth": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    },
+    "Gil": {
+      "voice_name": "Frank, Wise & Deep",
+      "voice_id": "V2bPluzT7MuirpucVAKH",
+      "model": "eleven_v4"
+    },
+    "CTA": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Emma (Ruth). Gil on Frank, CTA on Justin Case as the script casts it. Hook C rewritten to name collectors in the first 1.5 s.",
+  "durations_seconds": {
+    "master": 52.93,
+    "hookA_in_master": 5.32,
+    "hookB": 4.6,
+    "hookC": 5.8
+  },
+  "characters": {
+    "master": 760,
+    "hookB": 73,
+    "hookC": 83
+  },
+  "script_edits": [
+    "hook C now opens 'Car collectors,' (collector-naming hook, S0-04 is a COL body)"
+  ]
+}

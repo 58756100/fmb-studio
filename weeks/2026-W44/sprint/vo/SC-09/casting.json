@@ -1,0 +1,44 @@
+{
+  "reel": "SC-09",
+  "calendar_voice": "two-voice",
+  "calendar_pace": "normal",
+  "model": "eleven_v4",
+  "speed": 1.0,
+  "stability": 0.4,
+  "style": 0.28,
+  "speed_note": "",
+  "target_seconds": 52,
+  "airings_calendar": "10-28 A, 11-02 B, 11-07 C (20:00)",
+  "tempo_post": 1.0233,
+  "voice_id": "DtQLDxHbTiQTpVVanTy1",
+  "voice_name": "Justin Case",
+  "speakers": {
+    "Host": {
+      "voice_name": "Justin Case",
+      "voice_id": "DtQLDxHbTiQTpVVanTy1",
+      "model": "eleven_v4"
+    },
+    "Ortiz": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    },
+    "Arlo": {
+      "voice_name": "Dan, Upbeat & Dynamic",
+      "voice_id": "9F4C8ztpNUmXkdDDbz3J",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Two-voice per calendar: Host Justin Case (lead, CTA), Ortiz Emma, Arlo Dan.",
+  "durations_seconds": {
+    "master": 52.0,
+    "hookA_in_master": 2.54,
+    "hookB": 5.59,
+    "hookC": 4.74
+  },
+  "characters": {
+    "master": 620,
+    "hookB": 82,
+    "hookC": 66
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "reel": "LA-10",
+  "calendar_voice": "Emma",
+  "calendar_pace": "fast",
+  "model": "eleven_v4",
+  "speed": 1.08,
+  "stability": 0.4,
+  "style": 0.22,
+  "speed_note": "",
+  "target_seconds": 50,
+  "airings_calendar": "10-28 A, 11-02 B (18:30); Nov 7 slot became LB-10, hook C rendered anyway",
+  "tempo_post": 1.0,
+  "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+  "voice_name": "Emma",
+  "speakers": {
+    "Narrator": {
+      "voice_name": "Emma",
+      "voice_id": "9HBoEQ8LqyvVZFYDodnr",
+      "model": "eleven_v4"
+    }
+  },
+  "casting_note": "Calendar voice Emma, fast.",
+  "durations_seconds": {
+    "master": 44.09,
+    "hookA_in_master": 3.0,
+    "hookB": 4.04,
+    "hookC": 3.08
+  },
+  "characters": {
+    "master": 663,
+    "hookB": 46,
+    "hookC": 41
+  }
+}
