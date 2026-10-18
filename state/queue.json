@@ -810,13 +810,14 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "posting",
+  "status": "approved",
   "render": "renders:2026-W42/C2-C.mp4",
   "week": "2026-W42",
   "caption": "He asked for service records. The seller's typing dots stalled for 2 seconds. Then one link.\n\n#datsun240z #fairlady #classiccars #carcollector #jdmclassic",
   "pinned_comment": "Be honest: at 'a guy in Reno, he retired,' were you already looking at the other Z?",
   "approved_at": "2026-10-13T09:46:53Z",
-  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+  "note": "IG publish failed 2026-10-18 14:48 ET: OAuthException 190/460 token invalidated (password change); not posted"
  },
  {
   "concept": "C2",
