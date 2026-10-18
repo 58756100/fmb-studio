@@ -66,7 +66,7 @@ export function build(tl, hook) {
     B("Install photos.", T.install - 0.1, { hold: 0.8 }),
     fx(B("Who did what.", T.now), [T.whodid, at("did", 2), at("what")]),
     B("Which would you call?", T.which, { key: [3] }),
-    { ...ctaHead(tl, "Send this their way.", T.follow), key: [3] },
+    { ...ctaHead(tl, "Send this their way", T.follow), key: [3] },
   ];
   // "Who installed the engine?" must find "who" after "but"
   heads[7] = B("Who installed the engine?", at("who", 2), { key: [1] });

@@ -66,7 +66,7 @@ export function build(tl, hook) {
     B("Both of us.", T.both, { hold: 0.6 }),
     B("Nobody won.", T.nobody, { hold: 0.5 }),
     B("They split the check.", T.split - 0.2, { key: [3], hold: 0.5 }),
-    { ...ctaHead(tl, "Save this one.", T.date), key: [2] },
+    { ...ctaHead(tl, "Save this one", T.date), key: [2] },
   ];
   heads[2].key = [2];
   heads[heads.length - 1].hold = 9;

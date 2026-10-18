@@ -59,7 +59,7 @@ export function build(tl, hook) {
     B("Just read my build.", T.just, { key: [3], hold: 0.9 }),
     B("That rear hanger.", T.that, { key: [2], hold: 1.2 }),
     fx(B("Six days. One link.", T.six), [T.six, at("days.", 1), at("one"), T.link]),
-    { ...ctaHead(tl, "Send this to parts brands.", T.ask), key: [3, 4] },
+    { ...ctaHead(tl, "Send this to parts brands", T.ask), key: [3, 4] },
   ];
   heads[3].words = heads[3].words.map((w, i) => ({ ...w, t: [at("a"), T.wrx][i] }));
   heads[heads.length - 1].hold = 9;
@@ -132,7 +132,7 @@ const LogCard = ({ t, T, p, from }) => {
     <div style={{ position: "absolute", left: 0, top: 0, width: 940, height: 860, transformOrigin: "0 0", transform: `scale(${w / 940}, ${h / 860})` }}>
       <div style={{ position: "absolute", left: 40, top: 40, ...inter(66, INK, 650), ...f(T.calder) }}>Exhaust · Calder</div>
       <div style={{ position: "absolute", left: 40, top: 120, ...inter(52, RED, 600), ...f(T.july) }}>Jul 22, 2026</div>
-      <div style={{ position: "absolute", left: PH.x, top: PH.y, width: PH.w, height: PH.h, borderRadius: 28, overflow: "hidden", ...f(T.just + 0.95) }}>
+      <div style={{ position: "absolute", left: PH.x, top: PH.y, width: PH.w, height: PH.h, borderRadius: 28, overflow: "hidden", ...f(T.just + 0.75) }}>
         <img src={src("G08")} style={{ width: "100%", height: "100%", objectFit: "cover", transformOrigin: "73% 20%", transform: `scale(${1.02 + 0.08 * ez(t, T.that, 1.5, EASE.io)})` }} />
       </div>
       {ride > 0.01 && <div style={{ position: "absolute", left: 0, top: 0, opacity: c }}>

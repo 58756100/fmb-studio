@@ -109,7 +109,7 @@ export function build(tl, hook) {
     B("Hang on.", T.hang, { hold: 0.5 }),
     B("You still should've called.", T.still - 0.25, { key: [3] }),
     B("Then they talked engine.", T.then, { key: [3] }),
-    { ...ctaHead(tl, "Shop owners, save this.", T.log), key: [2, 3] },
+    { ...ctaHead(tl, "Shop owners, save this", T.log), key: [2, 3] },
   ];
   fx(heads[5], [T.then, at("they"), at("talked"), T.engine]);
   heads[heads.length - 1].hold = 9;

@@ -65,7 +65,7 @@ export function build(tl, hook) {
     B("Less guesswork.", T.less, { hold: 0.6 }),
     B("More context.", T.more, { key: [1], hold: 1.0 }),
     ...(T.mis && T.mis < T.follow ? [B("Most misidentified part?", T.sup, { key: [1] })] : []),
-    { ...ctaHead(tl, "Send them this.", T.follow), key: [2] },
+    { ...ctaHead(tl, "Send them this", T.follow), key: [2] },
   ];
   const fx = (h, ts) => { h.words = h.words.map((w, i) => ({ ...w, t: ts[i] ?? w.t })); };
   fx(heads.find((h) => h.words[0].w === "In"), [at("both"), at("in"), at("parts"), T.registry]);

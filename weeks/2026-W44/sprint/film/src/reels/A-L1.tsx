@@ -42,7 +42,7 @@ export function build(tl, hook) {
     ...hk.map((h, i) => (i === hk.length - 1 ? { ...h, exit: { at: T.fin - 0.35, mode: "up" } } : h)),
     { words: wordsFor(tl.body, "Finished-car photo", T.fin), out: "up" },
     { words: wordsFor(tl.body, "What's underneath?", T.cant + 0.4), key: [1], exit: { at: PORTAL - 0.25, mode: "push", to: { x: 300, y: 820 } } },
-    { words: wordsFor(tl.body, "The brake kit.", T.kit - 0.2), key: [1, 2], exit: { at: T.name - 0.3, mode: "into", to: { x: 540, y: 620 } } },
+    { words: wordsFor(tl.body, "The brake kit.", T.kit - 0.2), key: [1, 2], exit: { at: T.name - 0.32, mode: "up" } },
     fieldHead("Name the part.", T.name, "PART", 0),
     fieldHead("Show the brand.", T.show, "BRAND", 1),
     fieldHead("Date the install.", T.date, "DATE", 2),
@@ -52,7 +52,7 @@ export function build(tl, hook) {
     { words: wordsFor(tl.body, "One public link.", T.one), key: [2] },
     { words: wordsFor(tl.body, "Work, recorded.", T.now), key: [1], keyAt: T.record },
     ...(T.what && T.what < T.follow ? [{ words: wordsFor(tl.body, "Hardest to prove?", T.what), key: [2] }] : []),
-    { ...ctaHead(tl, "Send them this.", T.follow), key: [2] },
+    { ...ctaHead(tl, "Send them this", T.follow), key: [2] },
   ];
   // fix the "The work, recorded." timing: its words are not spoken verbatim, spread them over the line
   const rec = heads[heads.length - 3];
