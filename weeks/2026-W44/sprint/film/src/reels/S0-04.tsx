@@ -204,7 +204,7 @@ export function build(tl, hook) {
     const open = ez(t, CL[0] - 0.05, 0.6, EASE.camera) * (1 - ez(t, T.cta - 0.3, 0.6, EASE.camera));
     const r = { x: lerp(LID.x, PAGE.x, open), y: lerp(LID.y, PAGE.y, open), w: lerp(LID.w, PAGE.w, open), h: lerp(LID.h, PAGE.h, open) };
     const E = [
-      { t: CL[1], date: "JUN 14, 2014", title: "Repaint", sub: "Pine Hollow Body", thumb: "inv" },
+      { t: CL[1], date: "JUN 14, 2014", title: "Repaint", sub: "Pine Hollow", thumb: "inv" },
       { t: CL[2], date: "AUG 3, 2019", title: "Carb rebuild", sub: "2 photos", thumb: "G12" },
       { t: CL[3], date: "SEP 2026", title: "Fuel pump · Bolder", sub: "logged by Ruth", thumb: "C19" },
     ];

@@ -87,7 +87,7 @@ export function build(tl, hook) {
   const runOn = (t) => {
     if (typeof document === "undefined") return null;
     LAY = LAY || layout();
-    const gone = ez(t, T.its - 0.2, 0.4, EASE.in);
+    const gone = ez(t, T.how - 0.35, 0.3, EASE.in);
     if (gone >= 1) return null;
     return <div style={{ position: "absolute", inset: 0, zIndex: 55, opacity: 1 - gone }}>
       {LAY.map((l, i) => {
@@ -121,18 +121,18 @@ export function build(tl, hook) {
     const louS = lerp(1, 0.86, lean), tasS = lerp(1, 0.82, lean);
     const d = drift(t, "meet", 5, 0.3);
     // mic target: the current speaker's mouth (screen space), and the swings between them
-    const mk = track(t, { x: sx(LOU) + 170, y: 1260, a: 205, s: 1 }, [
-      [T.my - 0.35, { x: 540 + 150, y: 1180 }, 0.8], [T.tw - 0.4, { x: 540 + 170, y: 1260 }, 0.8], [T.before - 0.35, { x: 540 + 150, y: 1180 }, 0.8],
-      [T.okay + 0.15, { x: 760, y: 1210, a: 215 }, 1.1], [T.how - 0.7, { x: 900, y: 1500, a: 170 }, 0.6], [T.whend - 0.3, { x: 540, y: 1420, a: 92, s: 2.3 }, 0.8, EASE.camera],
+    const mk = track(t, { x: 760, y: 1390, a: 38, s: 1 }, [
+      [T.my - 0.35, { x: 700, y: 1330, a: 34 }, 0.8], [T.tw - 0.4, { x: 760, y: 1390, a: 38 }, 0.8], [T.before - 0.35, { x: 700, y: 1330, a: 34 }, 0.8],
+      [T.okay + 0.15, { x: 860, y: 1380, a: 42 }, 1.1], [T.how - 0.7, { x: 840, y: 1560, a: 20 }, 0.6], [T.whend - 0.3, { x: 540, y: 1420, a: 90, s: 2.3 }, 0.8, EASE.camera],
     ]);
-    const micIn = hook === "C" ? ez(t, hw[9].s - 0.4, 0.6) : ez(t, 0.0, 0.6);
+    const micIn = hook === "C" ? ez(t, hw[9].s - 0.4, 0.6) : ez(t, -0.3, 0.6);
     const micBlur = lerp(0, 9, focus) * (1 - ez(t, T.my - 0.4, 0.4));
     const person = (id, wx, cy, w, s, extra = {}) => <div style={{ position: "absolute", left: 0, top: 0, width: W, height: H, transformOrigin: `${sx(wx)}px 1920px`, transform: `scale(${s})`, filter: WARM, ...extra }}>
       <Cut id={id} cx={sx(wx)} cy={cy} w={w} shadow={0} /></div>;
     const louBlur = lerp(10, 0, focus);
     return <AbsoluteFill style={{ background: BG }}>
       {/* the meet, parallax at 0.28 of the dolly */}
-      <div style={{ position: "absolute", left: -380 - (cx - LOU) * 0.25, top: -60, width: 1900, height: 2100 }}>
+      <div style={{ position: "absolute", left: -380 - (cx - LOU) * 0.2, top: -60, width: 2700, height: 2100 }}>
         <img src={src("F06")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "30% 50%", filter: "blur(5px) brightness(.85)" }} />
       </div>
       <div style={{ position: "absolute", inset: 0, transform: `scale(${c.z}) ${dT(d, 0.5)}`, transformOrigin: "540px 1300px" }}>
@@ -164,7 +164,7 @@ export function build(tl, hook) {
     const f = (t0) => { const q = spr(t - t0, 200, 19); return { opacity: clamp(q * 2) * cIn, transform: `translateY(${(1 - q) * 16}px)`, filter: q < 0.6 ? `blur(${(1 - q / 0.6) * 6}px)` : undefined }; };
     const s = 1 - 0.5 * out, o = 1 - ez(t, T.okay2 + 0.3, 0.3);
     return <div style={{ position: "absolute", left: x, top: y, width: w, height: h, zIndex: 60, borderRadius: lerp(r, 44, m), overflow: "hidden", opacity: o, transform: `scale(${s})`, transformOrigin: "50% 100%",
-      background: m < 0.5 ? RED : `rgba(255,255,255,${lerp(0.9, 0.16, cIn)})`, backdropFilter: m > 0.5 ? "blur(26px)" : undefined, boxShadow: m > 0.5 ? "inset 0 0 0 1.5px rgba(255,255,255,.25), 0 40px 70px -30px rgba(0,0,0,.7)" : undefined }}>
+      background: m < 0.5 ? RED : `rgba(16,18,26,${lerp(0.9, 0.62, cIn)})`, backdropFilter: m > 0.5 ? "blur(26px)" : undefined, boxShadow: m > 0.5 ? "inset 0 0 0 1.5px rgba(255,255,255,.25), 0 40px 70px -30px rgba(0,0,0,.7)" : undefined }}>
       <div style={{ position: "absolute", left: 0, top: 0, width: CARD.w, height: CARD.h, transformOrigin: "0 0", transform: `scale(${w / CARD.w}, ${h / CARD.h})` }}>
         <div style={{ position: "absolute", left: 40, top: 34, ...font("Inter", 40, "rgba(255,255,255,.75)", 500), ...f(T.its) }}>Andre's Civic · build log</div>
         <div style={{ position: "absolute", left: 40, top: 92, ...font("Inter", 68, "#fff", 650), ...f(T.date - 0.15) }}>Clutch kit</div>
