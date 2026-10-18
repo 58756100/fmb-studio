@@ -8,7 +8,7 @@
 // typewriter (link reply), period-drop (CTA). New vs A-L2: strikethrough-replace, lens-zoom.
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { W, H, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, rgba, src } from "../kit";
+import { ctaHead, W, H, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, rgba, src } from "../kit";
 import { textStyle, BuildPage, mono, ui, Frame } from "./laneA";
 
 export const HOOK_WORDS = 4;
@@ -39,11 +39,12 @@ const P = { asker: { name: "@nightboost", av: "A02" }, r1: { name: "@kuro_garage
 
 export function build(tl, hook) {
   const at = tl.at;
+  const tryAt = (w, n = 1) => { try { return at(w, n); } catch (e) { return null; } };
   const T = {
     next: at("the"), repeats: at("repeats"), now: at("now"), fact: at("fact"), missing: at("missing"), brand1: at("brand"), heres: at("here's"),
     name: at("name"), record: at("record"), brand2: at("brand", 2), on: at("on"), used: at("used"), we: at("we"), fuel: at("fuel"), registry: at("registry"),
-    page: at("page") - 0.31, pub: at("public"), link: at("link"), share: at("share"), less: at("less"), more: at("more"), sup: at("suppliers"),
-    mis: at("misidentified"), follow: at("follow"),
+    page: at("page") - 0.31, pub: at("public"), link: at("link"), share: at("share"), less: at("less"), more: at("more"), sup: tryAt("suppliers"),
+    mis: tryAt("misidentified"), follow: tl.cta("know") ?? at("follow"),
   };
   const WHIP = T.missing - 0.22, PUNCH = T.heres - 0.05, BACK = T.share - 0.08;
   const hk = HOOKS[hook].map((txt, i) => ({ words: wordsFor(tl.hook, txt, i ? tl.hook[2].s - 0.05 : 0) }));
@@ -63,16 +64,15 @@ export function build(tl, hook) {
     B("Share it when someone asks.", T.share, { exit: { at: T.less - 0.3, mode: "up" } }),
     B("Less guesswork.", T.less, { hold: 0.6 }),
     B("More context.", T.more, { key: [1], hold: 1.0 }),
-    B("Most misidentified part?", T.sup, { key: [1] }),
-    B("Follow for build records", T.follow),
+    ...(T.mis && T.mis < T.follow ? [B("Most misidentified part?", T.sup, { key: [1] })] : []),
+    { ...ctaHead(tl, "Send them this.", T.follow), key: [2] },
   ];
   const fx = (h, ts) => { h.words = h.words.map((w, i) => ({ ...w, t: ts[i] ?? w.t })); };
   fx(heads.find((h) => h.words[0].w === "In"), [at("both"), at("in"), at("parts"), T.registry]);
   fx(heads.find((h) => h.words[0].w === "Build"), [T.page, at("page"), T.pub, T.link]);
   fx(heads.find((h) => h.words[0].w === "Share"), [T.share, at("that"), at("when"), at("someone"), at("asks")]);
-  fx(heads.find((h) => h.words[0].w === "Most"), [T.mis - 0.3, T.mis, at("part", 2)]);
-  fx(heads[heads.length - 1], [T.follow, at("for"), at("records") - 0.3, at("records")]);
-  heads[heads.length - 1].dot = at("records") + 0.3;
+  const most = heads.find((h) => h.words[0].w === "Most"); if (most) fx(most, [T.mis - 0.3, T.mis, at("part", 2)]);
+  heads[heads.length - 1].dot = tl.last + 0.1;
 
   // ---------- shot 1 / 4: the thread under the Supra photo
   const thread = (t, phase) => {

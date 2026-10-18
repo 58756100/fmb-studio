@@ -72,9 +72,16 @@ export function makeTL(master, hookIdx, hookWords = null) {
     throw new Error("word not found: " + text + " #" + n);
   };
   const at = (text, n = 1) => find(text, n).s;
+  const has = (text) => { try { find(text); return true; } catch (e) { return false; } };
+  // first of several candidate words that is spoken (lets the code survive a re-voiced line)
+  const any = (...texts) => { for (const x of texts) if (has(x)) return at(x); throw new Error("none spoken: " + texts.join("/")); };
+  // first occurrence of text after time t0 (exact, then prefix)
+  const after = (text, t0) => { const k = norm(text); for (const pref of [false, true]) for (const x of body) if (x.s > t0 && (pref ? norm(x.w).startsWith(k) : norm(x.w) === k)) return x.s; throw new Error("nf after " + text); };
+  // the closing CTA: first word of the last sentence that starts with one of the candidates (searched from the end)
+  const cta = (...texts) => { const ks = texts.map(norm); for (let i = body.length - 1; i >= 0; i--) { const prev = body[i - 1]; if (ks.includes(norm(body[i].w)) && (!prev || /[.?!:]$/.test(prev.w))) return body[i].s; } return null; };
   const end = (text, n = 1) => find(text, n).e;
   const idx = (text, n = 1) => find(text, n).i;
-  return { hook, body, all, cut, cutA, shift, at, end, idx, last: body[body.length - 1].e, hookEnd: hook[hook.length - 1].e };
+  return { hook, body, all, cut, cutA, shift, at, has, any, after, cta, end, idx, last: body[body.length - 1].e, hookEnd: hook[hook.length - 1].e };
 }
 // headline words timed to speech. text uses "/" for a line break. Tokens are matched in order against the
 // spoken words starting at time `from` (seconds); unmatched tokens borrow the previous token's time + 0.1 s.
@@ -319,6 +326,15 @@ export const Heads = ({ t, heads, st }) => {
     return { ...h, exit: { at: Math.max(last + 0.5, Math.min(nx - 0.42, last + (h.hold ?? 1.3))), mode: h.out || "up" } };
   });
   return <>{hs.map((h, i) => <FlowText key={i} t={t} head={h} st={st} />)}</>;
+};
+
+// on-screen CTA (<= 6 words) over the spoken CTA line: words matched where spoken, otherwise spread over the line
+export const ctaHead = (tl, text, t0) => {
+  const line = tl.body.filter((x) => x.s >= t0 - 0.01);
+  const ws = wordsFor(line, text, t0);
+  const span = Math.max(0.6, Math.min(1.6, (line.length ? line[line.length - 1].s : t0 + 1) - t0));
+  let lastT = t0;
+  return { words: ws.map((w, i) => { const tt = Math.max(w.t, lastT + (i ? 0.12 : 0), t0 + (span * i) / Math.max(1, ws.length)); lastT = tt; return { ...w, t: tt }; }), hold: 9, dot: null };
 };
 
 // typed text with a caret (URLs, fields, log entries)

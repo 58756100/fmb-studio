@@ -10,7 +10,7 @@
 // period-drop. New vs B-L3: squiggle-style measure lines, per-character date rise.
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, DrawPath, src, rgba } from "../kit";
+import { ctaHead, W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, DrawPath, src, rgba } from "../kit";
 import { BG as HBG, TEXT as HTEXT, inter, CARD, Studio } from "./laneB";
 
 export const HOOK_WORDS = 3;
@@ -49,7 +49,7 @@ export function build(tl, hook) {
     mar: at("marisol's"), when: at("when"), intake: at("intake"), on: at("on?"), y21: at("twenty"), hot: at("hot"), y17: at("seventeen"), held: at("held"),
     he: at("he"), witness: at("witness"), himself: at("himself"), fine: at("fine"), look: at("look"), int2: at("intake", 2), june: at("june"), nineteen: at("nineteen"),
     her: at("her"), photo: at("photo"), two: at("two"), off: at("off"), both: at("both"), nobody: at("nobody"), split: at("split"), check: at("check"),
-    date: at("date"), url: at("fuel"), end: tl.last,
+    date: tl.cta("save") ?? at("date"), end: tl.last,
   };
   const B = (txt, from, extra = {}) => ({ words: wordsFor(tl.body, txt, from), ...extra });
   const fx = (h, ts) => { h.words = h.words.map((w, i) => ({ ...w, t: ts[i] ?? w.t })); return h; };
@@ -66,10 +66,11 @@ export function build(tl, hook) {
     B("Both of us.", T.both, { hold: 0.6 }),
     B("Nobody won.", T.nobody, { hold: 0.5 }),
     B("They split the check.", T.split - 0.2, { key: [3], hold: 0.5 }),
-    B("Date it once.", T.date, { key: [2] }),
+    { ...ctaHead(tl, "Save this one.", T.date), key: [2] },
   ];
   heads[2].key = [2];
   heads[heads.length - 1].hold = 9;
+  heads[heads.length - 1].dot = tl.last + 0.1;
 
   const scene = (t) => {
     // camera: centre year + zoom (world: x = (year - camYear) * PX)
@@ -129,9 +130,6 @@ export function build(tl, hook) {
           <div style={inter(40, INK, 600)}>Intake</div><div style={inter(44, RED, 600)}>Jun 14, 2019</div>
         </div>}
         {/* CTA URL under the headline */}
-        {t > T.url - 0.1 && <div style={{ position: "absolute", left: 0, right: 0, top: 440, textAlign: "center", zIndex: 70 }}>
-          <Typed t={t} t0={T.url - 0.05} t1={at("com.")} text="fuelmybuild.com" style={inter(64, RED, 600)} keepCaret={0.8} />
-        </div>}
       </div>
     </AbsoluteFill>;
   };

@@ -11,7 +11,7 @@
 // New vs C3-GAR: path-ride, ink typewriter.
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, src, rgba } from "../kit";
+import { ctaHead, W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, src, rgba } from "../kit";
 import { BG as HBG, TEXT as HTEXT, inter, CARD } from "./laneB";
 
 export const HOOK_WORDS = 4;
@@ -41,7 +41,7 @@ export function build(tl, hook) {
   const T = {
     noor: at("noor"), order: at("order"), nothing: at("nothing"), which: at("which"), wrx: at("w-r-x."), who: at("who"), some: at("some"), day: at("day"),
     theo: at("theo"), ret: at("return."), just: at("just"), read: at("read"), calder: at("calder"), july: at("july"), north: at("northline"), that: at("that"),
-    hanger: at("hanger."), worth: at("worth"), six: at("six", 2), link: at("link."), ask: at("ask"), url: at("fuel"),
+    hanger: at("hanger."), worth: at("worth"), six: at("six", 2), link: at("link."), ask: tl.cta("send") ?? at("ask"),
   };
   const B = (txt, from, extra = {}) => ({ words: wordsFor(tl.body, txt, from), ...extra });
   const fx = (h, ts) => { h.words = h.words.map((w, i) => ({ ...w, t: ts[i] ?? w.t })); return h; };
@@ -59,10 +59,11 @@ export function build(tl, hook) {
     B("Just read my build.", T.just, { key: [3], hold: 0.9 }),
     B("That rear hanger.", T.that, { key: [2], hold: 1.2 }),
     fx(B("Six days. One link.", T.six), [T.six, at("days.", 1), at("one"), T.link]),
-    B("Ask for the build.", T.ask, { key: [3] }),
+    { ...ctaHead(tl, "Send this to parts brands.", T.ask), key: [3, 4] },
   ];
   heads[3].words = heads[3].words.map((w, i) => ({ ...w, t: [at("a"), T.wrx][i] }));
   heads[heads.length - 1].hold = 9;
+  heads[heads.length - 1].dot = tl.last + 0.1;
 
   const scene = (t) => {
     // weight: sag (px) and tilt (deg) per answered question; lift at "One link."
@@ -110,9 +111,6 @@ export function build(tl, hook) {
         {/* the first tag: "Rattle. Fix?" -> unfolds into the log card -> folds back */}
         {morph < 0.02 ? <Tag t={t} x={t0p.x} y={t0p.y + 60} rot={Math.sin(t * 1.7) * 4} ink="Rattle. Fix?" />
           : <LogCard t={t} T={T} p={morph} from={{ x: t0p.x - 125, y: t0p.y + 60, w: 250, h: 150 }} />}
-        {t > T.url - 0.1 && <div style={{ position: "absolute", left: 0, right: 0, top: 440, textAlign: "center", zIndex: 70 }}>
-          <Typed t={t} t0={T.url - 0.05} t1={at("com.")} text="fuelmybuild.com" style={inter(64, RED, 600)} keepCaret={0.8} />
-        </div>}
       </div>
     </AbsoluteFill>;
   };
@@ -134,7 +132,7 @@ const LogCard = ({ t, T, p, from }) => {
     <div style={{ position: "absolute", left: 0, top: 0, width: 940, height: 860, transformOrigin: "0 0", transform: `scale(${w / 940}, ${h / 860})` }}>
       <div style={{ position: "absolute", left: 40, top: 40, ...inter(66, INK, 650), ...f(T.calder) }}>Exhaust · Calder</div>
       <div style={{ position: "absolute", left: 40, top: 120, ...inter(52, RED, 600), ...f(T.july) }}>Jul 22, 2026</div>
-      <div style={{ position: "absolute", left: PH.x, top: PH.y, width: PH.w, height: PH.h, borderRadius: 28, overflow: "hidden", ...f(T.calder + 0.4) }}>
+      <div style={{ position: "absolute", left: PH.x, top: PH.y, width: PH.w, height: PH.h, borderRadius: 28, overflow: "hidden", ...f(T.just + 0.95) }}>
         <img src={src("G08")} style={{ width: "100%", height: "100%", objectFit: "cover", transformOrigin: "73% 20%", transform: `scale(${1.02 + 0.08 * ez(t, T.that, 1.5, EASE.io)})` }} />
       </div>
       {ride > 0.01 && <div style={{ position: "absolute", left: 0, top: 0, opacity: c }}>

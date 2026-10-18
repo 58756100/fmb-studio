@@ -10,7 +10,7 @@
 // typewriter (URL), period-drop. New vs C3-COL: caption-split-flap, lens-zoom.
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, src, rgba } from "../kit";
+import { ctaHead, W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, src, rgba } from "../kit";
 import { BG as HBG, TEXT as HTEXT, inter, CARD } from "./laneB";
 
 export const HOOK_WORDS = 4;
@@ -96,7 +96,7 @@ export function build(tl, hook) {
   const T = {
     okafor: at("okafor's"), did: at("did"), call: at("call?"), tue: at("tuesday,"), wed: at("wednesday,"), parts: at("parts."), thu: at("thursday..."),
     so: at("so"), didnt: at("didn't."), hang: at("hang"), logged: at("logged"), photo: at("photo."), gus: at("gus's"), still: at("still"), should: at("i"),
-    then: at("then"), engine: at("engine."), log: at("log"), url: at("fuel"), end: tl.last,
+    then: at("then"), engine: at("engine."), log: tl.cta("shop") ?? at("log"), end: tl.last,
   };
   const h0 = tl.hook[0].s;
   const bellAt = hook === "C" ? 0.05 : hook === "B" ? tl.hook[2].s : 0.02;
@@ -109,10 +109,11 @@ export function build(tl, hook) {
     B("Hang on.", T.hang, { hold: 0.5 }),
     B("You still should've called.", T.still - 0.25, { key: [3] }),
     B("Then they talked engine.", T.then, { key: [3] }),
-    B("Log every find.", T.log - 0.1, { key: [2] }),
+    { ...ctaHead(tl, "Shop owners, save this.", T.log), key: [2, 3] },
   ];
   fx(heads[5], [T.then, at("they"), at("talked"), T.engine]);
   heads[heads.length - 1].hold = 9;
+  heads[heads.length - 1].dot = tl.last + 0.1;
 
   const scene = (t) => {
     const cam = track(t, { k: 1, y: 0 }, [[T.okafor - 0.05, { k: 1.06, y: 40 }, 0.18, EASE.out], [T.tue - 0.1, { k: 1, y: 0 }, 0.3], [T.engine - 0.6, { k: 1.04, y: -50 }, 1.2, EASE.io], [T.log - 0.2, { k: 0.97, y: 0 }, 0.9]]);
@@ -124,7 +125,7 @@ export function build(tl, hook) {
     ]);
     const push = ez(t, T.still - 0.2, 1.6, EASE.io) * (1 - ez(t, T.should - 0.15, 0.4));
     const boardDim = clamp(mon.w / 960) * (mon.rot < 90 ? 1 : 0);
-    const chipGrey = ez(t, T.engine - 0.2, 0.6) * (1 - ez(t, T.url, 0.4));
+    const chipGrey = ez(t, T.engine - 0.2, 0.6) * (1 - ez(t, T.log + 0.3, 0.4));
     const chipDrop = hook === "B" ? spr(t - (h0 - 0.05), 260, 15) : spr(t - 0.45, 260, 15);
     // board text timeline
     const r0 = t < T.tue - 0.15 ? "NEVER TOLD ME" : t < T.log - 0.2 ? "MON  CAR IN" : "NEVER TOLD ME";
@@ -150,9 +151,6 @@ export function build(tl, hook) {
           background: chipGrey > 0.5 ? "#E5E5EA" : RED, ...inter(44, chipGrey > 0.5 ? "#6E6E73" : "#fff", 600), transition: "none" }}>Head gasket · $1,850</div>
         <Bell x={930} y={1300} hit={t - bellAt} />
         {mon.o > 0.01 && <div style={{ opacity: mon.o }}><Monitor t={t} T={T} x={mon.x} y={mon.y} w={mon.w} rot={mon.rot} push={push} /></div>}
-        {t > T.url - 0.1 && <div style={{ position: "absolute", left: 0, right: 0, top: 440, textAlign: "center", zIndex: 70 }}>
-          <Typed t={t} t0={T.url - 0.05} t1={at("com.")} text="fuelmybuild.com" style={inter(64, RED, 600)} keepCaret={0.8} />
-        </div>}
       </div>
     </AbsoluteFill>;
   };

@@ -9,7 +9,7 @@
 // period-drop (CTA). New vs the previous reel (A-L3): simulated-cursor ripple, callout leader draw.
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, src, rgba } from "../kit";
+import { ctaHead, W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, src, rgba } from "../kit";
 import { BG as HBG, TEXT as HTEXT, inter, CARD, Studio, Avatar, LetterAv, Pic, rise, Callout, PageCard } from "./laneB";
 
 export const HOOK_WORDS = 3;
@@ -44,7 +44,7 @@ export function build(tl, hook) {
     maya: at("maya's"), brake: at("brake"), visible: at("visible"), inst: at("installation"), these: at("these"), photos: at("photos"), but: at("but"),
     under: at("underneath"), cal: at("calipers"), brk: at("brackets"), lines: at("lines"), which: at("which"), send: at("send"), opens: at("opens"),
     fuel: at("fuel"), kit2: at("brake", 3), brand: at("brand"), dated: at("dated"), log: at("log"), then: at("then"), before: at("before"), during: at("during"),
-    after: at("after"), now: at("now"), inspect: at("inspect"), follow: at("follow"),
+    after: at("after"), now: at("now"), inspect: at("inspect"), follow: tl.cta("send") ?? at("follow"),
   };
   const TAP1 = T.maya - 0.1, WIPE = T.but - 0.05, BACK = T.which - 0.08, TAP2 = at("maya") - 0.08;
   const B = (txt, from, extra = {}) => ({ words: wordsFor(tl.body, txt, from), ...extra });
@@ -65,9 +65,9 @@ export function build(tl, hook) {
     B("Dated install log.", T.dated, { key: [0] }),
     B("Before, during, after.", T.before, { hold: 0.8 }),
     B("Work to inspect.", T.now + 0.2, { key: [2] }),
-    B("Follow for / documented builds", T.follow),
+    { ...ctaHead(tl, "Send it to collectors", T.follow), key: [3] },
   ];
-  heads[heads.length - 1].dot = at("builds") + 0.35;
+  heads[heads.length - 1].dot = tl.last + 0.1;
 
   // ---------- shot 1 + 4: the inquiry
   const inquiry = (t, phase) => {

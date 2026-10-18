@@ -8,7 +8,7 @@
 // period-drop (CTA), focus-blur-resolve (rows coming into focus). New vs A-L1: micro-scale-fade, focus-blur-resolve.
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { mbx, W, H, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, PeriodDrop, rgba, src } from "../kit";
+import { ctaHead, mbx, W, H, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, PeriodDrop, rgba, src } from "../kit";
 import { textStyle, BuildPage, mono, ui } from "./laneA";
 
 export const HOOK_WORDS = 4;
@@ -47,10 +47,11 @@ const Row = ({ t, at, label, value, media, y, focus = 0, mono: m }) => {
 
 export function build(tl, hook) {
   const at = tl.at;
+  const tryAt = (w, n = 1) => { try { return at(w, n); } catch (e) { return null; } };
   const T = {
     which: at("which"), hire: at("hire"), you: at("you"), cant: at("can't"), now: at("now"), photo: at("photo"), leaves: at("leaves"),
     brake: at("brake"), dated: at("dated"), parts: at("parts"), garage: at("garage"), contrib: at("contributor"), same: at("same"), more: at("more"),
-    we: at("we"), fuel: at("fuel"), page: at("page"), share: at("share"), link: at("link"), what: at("what", 2), follow: at("follow"),
+    we: at("we"), fuel: at("fuel"), page: at("page"), share: at("share"), link: at("link"), what: tryAt("what", 2), follow: tl.cta("send") ?? at("follow"),
   };
   const OPEN = T.now - 0.08, BACK = T.same - 0.08;
   const hk = HOOKS[hook].map(([txt]) => ({ words: wordsFor(tl.hook, txt, 0) }));
@@ -69,15 +70,15 @@ export function build(tl, hook) {
     B("More to judge.", T.more, { key: [2] }),
     B("Connected on a build page", T.we, { key: [3, 4] }),
     B("Share its public link.", T.share, { key: [3] }),
-    B("Easy until you do it?", T.what + 0.5, { key: [0] }),
-    B("Follow for build records", T.follow),
+    ...(T.what && T.what < T.follow ? [B("Easy until you do it?", T.what + 0.5, { key: [0] })] : []),
+    { ...ctaHead(tl, "Send this to the shop owner", T.follow), key: [4, 5] },
   ];
   // non-verbatim heads: spread over their spoken line
   const fix = (h, ts) => { h.words = h.words.map((w, i) => ({ ...w, t: ts[i] ?? w.t })); };
   const hi = (txt) => heads.find((h) => h.words.map((w) => w.w).join(" ").startsWith(txt));
   fix(hi("Connected"), [T.we + 0.2, at("details"), at("build", 1), T.page]);
   fix(hi("What the"), [at("what"), at("the", 1), T.photo, T.leaves, at("out")]);
-  fix(hi("Easy"), [at("easy"), at("until"), at("you", 2), at("do"), at("it", 2)]);
+  if (hi("Easy")) fix(hi("Easy"), [at("easy"), at("until"), at("you", 2), at("do"), at("it", 2)]);
 
   // the record behind Shop B's photo
   const rows = [
@@ -150,7 +151,7 @@ export function build(tl, hook) {
     { at: OPEN, render: s2, enter: { kind: "tap", d: 0.55, rect: { x: 96, y: 960, w: 888, h: 480 }, r: 20 } },
     { at: BACK, render: s3, enter: { kind: "match" } },
   ];
-  heads[heads.length - 1].dot = at("records") + 0.3;
+  heads[heads.length - 1].dot = tl.last + 0.1;
   return { shots, heads };
 }
 const CTA_DOT = { x: 640, y: 446 };

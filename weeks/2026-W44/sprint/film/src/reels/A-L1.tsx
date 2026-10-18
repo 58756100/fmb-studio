@@ -8,7 +8,7 @@
 // ink-underline -> leader line via evolvePath, period-drop (CTA). New vs the previous reel (A+ L1): blur-out-up, period-drop.
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { W, H, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Photo, DrawPath, PeriodDrop, rgba, src } from "../kit";
+import { ctaHead, W, H, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Photo, DrawPath, PeriodDrop, rgba, src } from "../kit";
 import { textStyle, Frame, Paper, Requester, BuildPage, mono, ui } from "./laneA";
 
 export const HOOK_WORDS = 3;
@@ -22,11 +22,12 @@ const HOOKS = { A: [["Prove the work.", 0]], B: [["Prove this / upgrade?", 0]], 
 
 export function build(tl, hook) {
   const at = tl.at;
+  const tryAt = (w, n = 1) => { try { return at(w, n); } catch (e) { return null; } };
   const T = {
     q: at("that's"), ins: at("insurer"), app: at("appraiser"), fin: at("finished"), cant: at("can't"), under: at("underneath"),
     start: at("start"), kit: at("brake"), name: at("name"), part: at("part"), show: at("show", 2), brand: at("brand"), date: at("date"), install: at("install"),
     attach: at("attach"), photo: at("photo", 2), credit: at("credit"), garage: at("garage"), we: at("we"), fuel: at("fuel"), build: at("build", 2), page: at("page"),
-    one: at("one"), link: at("link"), now: at("now"), record: at("record", 2), what: at("what's", 2), follow: at("follow"), end: tl.last,
+    one: at("one"), link: at("link"), now: at("now"), record: at("record", 2), what: tryAt("what's", 2), follow: tl.cta("got") ?? at("follow"), end: tl.last,
   };
   const PORTAL = T.under - 0.05, MATCH = T.start - 0.1;
   // ---------- headlines (≤4 words, fast pace)
@@ -50,15 +51,14 @@ export function build(tl, hook) {
     { words: wordsFor(tl.body, "On a build page", T.we + 0.5), key: [2, 3] },
     { words: wordsFor(tl.body, "One public link.", T.one), key: [2] },
     { words: wordsFor(tl.body, "Work, recorded.", T.now), key: [1], keyAt: T.record },
-    { words: wordsFor(tl.body, "Hardest to prove?", T.what), key: [2] },
-    { words: wordsFor(tl.body, "Follow for better records", T.follow), key: [] },
+    ...(T.what && T.what < T.follow ? [{ words: wordsFor(tl.body, "Hardest to prove?", T.what), key: [2] }] : []),
+    { ...ctaHead(tl, "Send them this.", T.follow), key: [2] },
   ];
   // fix the "The work, recorded." timing: its words are not spoken verbatim, spread them over the line
   const rec = heads[heads.length - 3];
   rec.words = rec.words.map((w, i) => ({ ...w, t: [T.now + 0.45, T.record][i] }));
   // the CTA words don't match the spoken words one to one either
-  const cta = heads[heads.length - 1];
-  cta.words = cta.words.map((w, i) => ({ ...w, t: [T.follow, T.follow + 0.5, at("better"), at("records")][i] }));
+
 
   // ---------- record rows (filled by the carried words)
   const ROWS = (full) => [
@@ -127,7 +127,7 @@ export function build(tl, hook) {
     { at: PORTAL, render: s2, enter: { kind: "portal", d: 0.62, rect: { x: 300 - 120, y: 830 - 120, w: 240, h: 240 }, r: 120 } },
     { at: MATCH, render: s3, enter: { kind: "match" } },
   ];
-  heads[heads.length - 1].dot = at("records") + 0.3;
+  heads[heads.length - 1].dot = tl.last + 0.1;
   return { shots, heads };
 }
 // record row geometry (shot 3, full-size card at x 96, y 840, pad 40, rowH 112, title none)

@@ -10,7 +10,7 @@
 // (credit fields), period-drop. New vs B-L1: shared-axis, inline-highlight.
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, src, rgba } from "../kit";
+import { ctaHead, W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, src, rgba } from "../kit";
 import { BG as HBG, TEXT as HTEXT, inter, CARD, Studio, Avatar, LetterAv, Pic, rise, PageCard } from "./laneB";
 
 export const HOOK_WORDS = 4;
@@ -44,7 +44,7 @@ export function build(tl, hook) {
     nora: at("nora"), swap: at("swap"), two: at("two"), same: at("same"), who: at("who"), shopA: at("shop"), finish: at("finish"), but: at("but"),
     installed: at("installed"), a: at("photo"), answer: at("answer"), so: at("so"), opens: at("opens"), pub: at("public"), fuel: at("fuel"),
     garage: at("garage"), contrib: at("contributor"), eli: at("eli"), dated: at("dated"), install: at("install"), now: at("now"), whodid: at("who", 3),
-    which: at("which"), call: at("call"), follow: at("follow"),
+    which: at("which"), call: at("call"), follow: tl.cta("got") ?? at("follow"),
   };
   const SWAP = T.nora - 0.12, BACK = T.two - 0.08, TAPA = T.shopA - 0.08, TAPB = T.so - 0.05, BACK2 = T.which - 0.08;
   const B = (txt, from, extra = {}) => ({ words: wordsFor(tl.body, txt, from), ...extra });
@@ -66,11 +66,11 @@ export function build(tl, hook) {
     B("Install photos.", T.install - 0.1, { hold: 0.8 }),
     fx(B("Who did what.", T.now), [T.whodid, at("did", 2), at("what")]),
     B("Which would you call?", T.which, { key: [3] }),
-    B("Follow for / documented builds", T.follow),
+    { ...ctaHead(tl, "Send this their way.", T.follow), key: [3] },
   ];
   // "Who installed the engine?" must find "who" after "but"
   heads[7] = B("Who installed the engine?", at("who", 2), { key: [1] });
-  heads[heads.length - 1].dot = at("builds") + 0.35;
+  heads[heads.length - 1].dot = tl.last + 0.1;
 
   // ---------- pair of shops (shot 1, 3, 7)
   const pair = (t, phase) => {

@@ -1,6 +1,6 @@
 // @ts-nocheck
-// B-L3 (lane B, suppliers): "Who made this turbo?" Jules asks; the first reply guesses Brand B ("I think"), the next
-// says "Definitely B": the same guess, copied, and Brand B gets the credit. Jules opens the Supra's build: turbo kit,
+// B-L3 (lane B, suppliers): "Who made this turbo?" Jules asks; the first reply guesses Vantor ("I think"), the next
+// says "Definitely": the same guess, copied, and Vantor gets the credit (recorded brand: Kestrel). Jules opens the Supra's build: turbo kit,
 // brand A, the install log and photos. We check before repeating.
 // Hero: '99 Supra (A01, B01) + turbo (C01); Jules E03; the Supra's turbo install (lab photos L06/L07, same car).
 // Transitions: lens push from the car to the turbo, comment stack (shared axis), copy trace (marker highlight + line
@@ -10,7 +10,7 @@
 // period-drop. New vs B-L2: marker-highlight, focus-blur-resolve.
 import React from "react";
 import { AbsoluteFill } from "remotion";
-import { W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, DrawPath, src, rgba } from "../kit";
+import { ctaHead, W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, DrawPath, src, rgba } from "../kit";
 import { BG as HBG, TEXT as HTEXT, inter, CARD, Studio, Avatar, LetterAv, Pic, rise, PageCard } from "./laneB";
 
 export const HOOK_WORDS = 4;
@@ -43,11 +43,12 @@ const Mark = ({ t, t0, children }) => {
 
 export function build(tl, hook) {
   const at = tl.at;
+  const tryAt = (w, n = 1) => { try { return at(w, n); } catch (e) { return null; } };
   const T = {
-    jules: at("jules"), first: at("first"), demo: at("demo"), think: at("think"), next: at("next"), def: at("definitely"), but: at("but"), same: at("same"),
+    jules: at("jules"), first: at("first"), demo: tl.any("vantor", "demo"), think: at("think"), next: at("next"), def: at("definitely"), but: at("but"), same: at("same"),
     copied: at("copied"), now: at("now"), credit: at("credit"), so: at("so"), record: at("record"), opens: at("opens"), fuel: at("fuel"), turbo: at("turbo"),
-    brandF: at("brand", 3), brandA: at("a"), then: at("then"), log: at("log"), photos: at("photos"), we: at("we"), repeating: at("repeating"),
-    which: at("which"), mis: at("misnamed"), follow: at("follow"),
+    brandF: tl.after("brand", at("turbo") + 0.2), brandA: tl.has("kestrel") ? at("kestrel") : at("a"), then: at("then"), log: at("log"), photos: at("photos"), we: at("we"), repeating: at("repeating"),
+    which: tryAt("which"), mis: tryAt("misnamed"), follow: tl.cta("send") ?? at("follow"),
   };
   const TAP = T.opens - 0.55, BACK = T.we - 0.08;
   const B = (txt, from, extra = {}) => ({ words: wordsFor(tl.body, txt, from), ...extra });
@@ -58,18 +59,18 @@ export function build(tl, hook) {
     B("First reply:", T.first, { hold: 2.4 }),
     B("Next reply:", T.next, { hold: 1.9 }),
     fx(B("Same guess, copied.", T.same), [T.same, at("guess"), T.copied]),
-    fx(B("Brand B gets credit.", T.now), [at("brand", 2), at("b", 3), at("gets"), T.credit]),
+    fx(B("Vantor gets the credit.", T.now), [tl.has("vantor") ? tl.after("vantor", T.now - 0.05) : at("brand", 2), at("gets"), at("the", 2) > T.now ? at("the", 2) : T.credit - 0.1, T.credit]),
     fx(B("Where's the record?", T.so), [at("where's"), at("owner's"), T.record]),
     B("Jules opens the build", T.opens - 0.4),
     B("Turbo kit.", T.turbo, { hold: 0.6 }),
-    fx(B("Brand: A.", T.brandF), [T.brandF, T.brandA]),
+    fx(B("Brand: Kestrel.", T.brandF), [T.brandF, T.brandA]),
     fx(B("Install log, photos.", T.then), [at("install"), T.log, T.photos]),
     B("Check before repeating.", T.we + 0.1, { key: [0] }),
-    B("Which brand gets misnamed?", T.which, { key: [3] }),
-    B("Follow for / documented builds", T.follow),
+    ...(T.which && T.which < T.follow ? [B("Which brand gets misnamed?", T.which, { key: [3] })] : []),
+    { ...ctaHead(tl, "For your group chat", T.follow), key: [3] },
   ];
   heads[2].key = [];
-  heads[heads.length - 1].dot = at("builds") + 0.35;
+  heads[heads.length - 1].dot = tl.last + 0.1;
 
   // ---------- the post + thread (shot 1 and the return)
   const thread = (t, phase) => {
@@ -92,15 +93,15 @@ export function build(tl, hook) {
           </div>
           {/* credit chip carried onto the post */}
           {credit > 0.01 && <div style={{ position: "absolute", left: lerp(120, 610, credit), top: lerp(640, 300, credit), padding: "10px 26px", borderRadius: 30, background: RED, ...inter(44, "#fff"),
-            transform: `scale(${0.8 + 0.2 * credit})`, boxShadow: "0 10px 24px rgba(244,48,52,.35)" }}>Brand B</div>}
+            transform: `scale(${0.8 + 0.2 * credit})`, boxShadow: "0 10px 24px rgba(244,48,52,.35)" }}>Vantor</div>}
         </div>
         <div style={{ position: "absolute", inset: 0, transform: `translateY(${-shift * 0}px)` }}>
           <Comment t={t} t0={phase === 1 ? Math.max(0, tl.cut - 0.2) : -1} y={1040} name="jules.wrk" av={<Avatar id="E03" size={84} face={JULES} bg="#DDD8D0" />}>What turbo is that?</Comment>
           <Comment t={t} t0={phase === 1 ? T.first + 0.2 : -1} y={1210} x={140} w={880} name="dm_tuned" av={<LetterAv ch="D" size={84} bg="#8E8E93" />} o={back ? 1 - 0.5 * ez(t, BACK + 0.4, 0.4) : 1 - 0.85 * ez(t, T.so, 0.4)} hl={copy}>
-            {phase === 1 ? <><Typed t={t} t0={T.demo} t1={T.think + 0.25} text={"Brand B, I think."} />{copy > 0 && null}</> : "Brand B, I think."}
+            {phase === 1 ? <><Typed t={t} t0={T.demo} t1={T.think + 0.25} text={"Vantor, I think."} /></> : "Vantor, I think."}
           </Comment>
           <Comment t={t} t0={phase === 1 ? T.next + 0.2 : -1} y={1380} x={140} w={880} name="boostcase" av={<LetterAv ch="B" size={84} bg="#AEAEB2" />} o={back ? 1 - 0.5 * ez(t, BACK + 0.4, 0.4) : 1 - 0.85 * ez(t, T.so, 0.4)} hl={copy}>
-            {phase === 1 && t < T.same ? <Typed t={t} t0={T.def - 0.1} t1={T.def + 0.6} text="Definitely B." /> : <>Definitely <Mark t={t} t0={phase === 1 ? T.same + 0.15 : -9}>B</Mark>.</>}
+            {phase === 1 && t < T.same ? <Typed t={t} t0={T.def - 0.1} t1={T.def + 0.7} text="Definitely Vantor." /> : <>Definitely <Mark t={t} t0={phase === 1 ? T.same + 0.15 : -9}>Vantor</Mark>.</>}
           </Comment>
           {phase === 1 && t < T.so + 0.3 && <DrawPath d="M 330 1330 C 250 1360, 250 1420, 470 1460" p={ez(t, T.copied - 0.1, 0.45)} color={RED} width={6} z={20} />}
           {/* owner's link reply (where's the record?) */}
@@ -111,7 +112,7 @@ export function build(tl, hook) {
           </div>}
           {back && <div style={{ position: "absolute", left: 60, top: 1210, width: 960, zIndex: 9, ...CARD, padding: "22px 30px", display: "flex", alignItems: "center", gap: 22, ...rise(t, BACK + 0.45) }}>
             <div style={{ width: 120, height: 100, position: "relative" }}><Cut id="C01" cx={60} cy={50} w={110} shadow={0.15} /></div>
-            <div style={{ flex: 1 }}><div style={inter(36, GREY, 500)}>Owner's record · Parts registry</div><div style={inter(52, INK)}>Turbo kit · Brand A</div></div>
+            <div style={{ flex: 1 }}><div style={inter(36, GREY, 500)}>Owner's record · Parts registry</div><div style={inter(52, INK)}>Turbo kit · Kestrel</div></div>
           </div>}
         </div>
       </div>
@@ -131,14 +132,14 @@ export function build(tl, hook) {
             <div style={{ flex: 1 }}><div style={inter(36, GREY, 500)}>Parts registry</div><div style={inter(52, INK)}>Turbo kit</div></div>
             <div style={{ padding: "10px 22px", borderRadius: 24, background: `rgba(244,48,52,${0.1 * bf})`, boxShadow: `0 0 0 ${4 * bf}px ${RED}`, minWidth: 220 }}>
               <div style={inter(32, GREY, 500)}>Brand</div>
-              <div style={{ ...inter(50, INK), filter: `blur(${(1 - reveal) * 14}px)`, opacity: 0.25 + 0.75 * reveal }}>Brand A</div>
+              <div style={{ ...inter(50, INK), filter: `blur(${(1 - reveal) * 14}px)`, opacity: 0.25 + 0.75 * reveal }}>Kestrel</div>
             </div>
           </div>
         </PageCard>
         {lift > 0.01 && <div style={{ position: "absolute", left: 60, top: lerp(1300, 640, lift), width: 960, ...CARD, padding: "34px 40px 40px", opacity: clamp(lift * 2.5), zIndex: 8 }}>
           <div style={inter(38, GREY, 500)}>Build log · dated entry</div>
           <div style={{ ...inter(62, INK), marginTop: 6 }}>May 2, 2026 <span style={{ color: GREY }}>·</span> Turbo install</div>
-          <div style={{ ...inter(42, "#3A3A3C", 500), marginTop: 12 }}>Turbo kit, Brand A. Logged by the owner.</div>
+          <div style={{ ...inter(42, "#3A3A3C", 500), marginTop: 12 }}>Turbo kit, Kestrel. Logged by the owner.</div>
           <div style={{ display: "flex", gap: 18, marginTop: 24 }}>{[["L06", T.photos - 0.2], ["L07", T.photos + 0.25]].map(([id, tt]) => {
             const p = spr(t - tt, 220, 18), on = t >= tt;
             return <div key={id} style={{ flex: 1, height: 330, borderRadius: 26, overflow: "hidden", border: on ? "none" : "4px dashed #C7C7CC" }}>
