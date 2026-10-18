@@ -37,3 +37,8 @@ Never stack two CTAs. The CTA sits over the final story frame.
 
 ## Images
 - Build from the image bank (`kit/remotion/public/img/bank/`, see `lab/image-requests/image-bank-v2.md`). Prefer real-looking photos and clean cutouts over code-drawn stand-ins. If a scene needs an image the bank lacks, add a prompt to the next image request rather than faking it.
+
+## Collector reels (Wayne, 2026-10-18)
+- About a third of collector-audience reels open by naming the audience in the first 2 seconds ("Car collectors…", "If you collect cars…", "Every collector knows…"), so the right viewer knows it's for them.
+- Collector reels may use the high-end collector bank (`lab/image-requests/image-bank-collectors.md`: $1M–$20M-class cars, auction, concours and private-garage settings). Never name the maker or model on screen or in the voiceover, never show a badge, and never imply a brand's endorsement. Owners and collections are fictional.
+- Stakes for this audience are provenance, matching numbers, documented ownership history, restoration records and auction value. Don't invent prices or claim the record changes a valuation.
