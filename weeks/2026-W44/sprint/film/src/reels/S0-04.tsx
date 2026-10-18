@@ -14,7 +14,7 @@
 // remocn (ported): micro-scale-fade (markers), focus-blur-resolve (entries), card flip (photo date), typewriter (URL
 // strip), period-drop. New vs the previous reels: socket-seat clicks as entry beats, photo flip.
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img } from "remotion";
 import { ctaHead, W, H, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, src, rgba } from "../kit";
 import { TEXT as HTEXT, inter, CARD, Studio } from "./laneB";
 import { land, Wordmark, Who, Thumb, Sweep, Ripple } from "./b2kit";
@@ -49,7 +49,7 @@ const Socket = ({ x, y, p = 1, size = 74 }) => p <= 0 ? null : (
 const Print = ({ id, x, y, w = 300, h = 220, rot = 0, o = 1, fx = 0.5, fy = 0.5, flip = 0, back, z = 20 }) => o <= 0.002 ? null : (
   <div style={{ position: "absolute", left: x, top: y, width: w, height: h, transform: `rotate(${rot}deg) perspective(1200px) rotateY(${flip * 180}deg)`, opacity: o, zIndex: z, transformStyle: "preserve-3d" }}>
     <div style={{ position: "absolute", inset: 0, background: "#FBF8F0", padding: 14, boxSizing: "border-box", boxShadow: "0 16px 26px -12px rgba(0,0,0,.45)", backfaceVisibility: "hidden" }}>
-      <img src={src(id)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: `${fx * 100}% ${fy * 100}%`, filter: "sepia(.45) saturate(.8) contrast(.92) brightness(1.04)" }} />
+      <Img src={src(id)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: `${fx * 100}% ${fy * 100}%`, filter: "sepia(.45) saturate(.8) contrast(.92) brightness(1.04)" }} />
     </div>
     {back && <div style={{ position: "absolute", inset: 0, background: "#F4EFE2", transform: "rotateY(180deg)", backfaceVisibility: "hidden", display: "grid", placeItems: "center", boxShadow: "0 16px 26px -12px rgba(0,0,0,.45)" }}>
       <span style={{ fontFamily: "'IBM Plex Mono'", fontSize: 46, color: "#C8562B", transform: "rotate(-4deg)" }}>{back}</span></div>}
@@ -160,7 +160,7 @@ export function build(tl, hook) {
     const ruth = spr(t - (T.since - 0.4), 170, 17);
     return <AbsoluteFill>
       <div style={{ position: "absolute", inset: -40, transform: `${dT(d, 0.8)} scale(${1.05 + 0.03 * seg(t, T.oh, tl.last)})` }}>
-        <img src={src("F11")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "60% 60%" }} />
+        <Img src={src("F11")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "60% 60%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,0) 35%)" }} />
       </div>
       <Cut id="A22" cx={lerp(820, 760, walk)} cy={1180} w={330} shadow={0.35} />
@@ -213,7 +213,7 @@ export function build(tl, hook) {
       <div style={{ position: "absolute", left: 0, top: 0, width: PAGE.w, height: PAGE.h, transformOrigin: "0 0", transform: `scale(${s})` }}>
         <Sweep t={t} w={PAGE.w} o={0.25} />
         <div style={{ position: "absolute", left: 0, top: 0, width: PAGE.w, height: 200, overflow: "hidden" }}>
-          <img src={src("B07")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 62%", transform: `scale(${1.04 + 0.02 * Math.sin(t * 0.4)})` }} />
+          <Img src={src("B07")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 62%", transform: `scale(${1.04 + 0.02 * Math.sin(t * 0.4)})` }} />
           <div style={{ position: "absolute", left: 24, top: 20, padding: "8px 20px", borderRadius: 26, background: "rgba(255,255,255,.85)" }}><Wordmark size={46} /></div>
         </div>
         <div style={{ position: "absolute", left: 36, top: 214, display: "flex", alignItems: "baseline", gap: 18 }}><span style={inter(58, INK, 700)}>'72 F-100</span><span style={inter(46, GREY, 500)}>Ruth</span></div>
@@ -224,7 +224,7 @@ export function build(tl, hook) {
             <div style={{ width: 52, height: 52, borderRadius: 26, background: RED, boxShadow: `0 0 0 ${10 * flash}px ${rgba(RED, 0.25)}`, flex: "none" }} />
             <div style={{ width: 140, height: 112, borderRadius: 18, overflow: "hidden", position: "relative", flex: "none", background: "#F2F2F7" }}>
               {e.thumb === "inv" ? <div style={{ position: "absolute", left: 18, top: 8, width: 114, height: 104, background: "#F7F0DC", boxShadow: "0 2px 6px rgba(0,0,0,.2)" }}><div style={{ margin: 12, height: 10, background: "#3B342A", opacity: 0.7 }} />{[0, 1, 2, 3].map((k) => <div key={k} style={{ margin: "10px 12px", height: 5, background: "#3B342A", opacity: 0.25 }} />)}</div>
-                : e.thumb === "C19" ? <Cut id="C19" cx={75} cy={60} w={140} shadow={0} /> : <img src={src("G12")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 30%" }} />}
+                : e.thumb === "C19" ? <Cut id="C19" cx={75} cy={60} w={140} shadow={0} /> : <Img src={src("G12")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 30%" }} />}
             </div>
             <div><div style={inter(50, INK, 650)}>{e.title}</div>
               <div style={{ display: "flex", gap: 16, alignItems: "center", marginTop: 6 }}><span style={{ ...inter(44, RED, 650), padding: "2px 12px", borderRadius: 10, background: rgba(RED, 0.08) }}>{e.date}</span><span style={inter(44, GREY, 500)}>{e.sub}</span></div></div>

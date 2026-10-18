@@ -23,7 +23,7 @@ export const LIFE = 1.4;
 export const BG = "#EDE7DC";
 export const TEXT = { font: "Inter", weight: 650, size: 108, min: 76, ls: "-0.04em", opsz: 32, color: INK, accent: RED, line2: null, align: "center", maxW: 940, top: 270, lead: 1.04 };
 export const IMAGES = ["F02", "A39", "K4-01", "K4-02"];
-const OP = { x: 250, y: 640, w: 760, h: 800 }, PH = 160; // the opening and one panel
+const OP = { x: 110, y: 610, w: 860, h: 880 }, PH = 176; // the opening and one panel
 const LINES = [
   { a: "Hal's AE86 · fuelmybuild.com", sub: "with Jo for 3 weeks" },
   { a: "Coolant: light sweat, normal", sub: "logged by Jo · from Hal" },
@@ -71,24 +71,25 @@ export function build(tl, hook) {
   const scene = (t) => {
     const d = doorAt(t), bottom = OP.y + d * PH; // door bottom edge
     const gapC = (bottom + OP.y + OP.h) / 2;
-    const cam = track(t, { z: 1, y: 0 }, [[T.timing - 0.3, { z: 1.1, y: -60 }, 2.5, EASE.io], [T.dad - 0.2, { z: 1.2, y: -170 }, 1.6, EASE.io], [STOP + 0.15, { z: 0.97, y: 30 }, 1.3, EASE.camera], [T.your - 0.2, { z: 1.0, y: 0 }, 2.5, EASE.io]]);
+    const cam = track(t, { z: 1, y: 0 }, [[T.timing - 0.3, { z: 1.06, y: -50 }, 2.5, EASE.io], [T.dad - 0.2, { z: 1.12, y: -150 }, 1.6, EASE.io], [STOP + 0.15, { z: 1.0, y: 0 }, 1.3, EASE.camera]]);
     // Hal: turns back (hook C), crouches at the timing belt, one knee at "Dad. The door.", stands and knocks after "Logged."
     const crouch = ez(t, T.timing - 0.2, 0.7, EASE.camera) * 0.5 + ez(t, T.door - 0.2, 0.6, EASE.camera) * 0.5 - ez(t, T.flight - 0.6, 0.8, EASE.camera);
     const knock = t > T.flight + 0.15 && t < T.flight + 0.75 ? Math.abs(Math.sin((t - T.flight - 0.15) * Math.PI * 3.3)) * 14 : 0;
     const d2 = drift(t, "hal", 5, 0.35);
     const typing = t > T.got1 - 1.2 && t < STOP;
     return <AbsoluteFill style={{ background: BG }}>
-      <div style={{ position: "absolute", inset: 0, transform: `translateY(${cam.y}px) scale(${cam.z})`, transformOrigin: `620px ${gapC}px` }}>
+      <div style={{ position: "absolute", inset: 0, transform: `translateY(${cam.y}px) scale(${cam.z})`, transformOrigin: `540px ${gapC}px` }}>
         {/* facade: siding above and around the opening, the concrete drive below */}
         <div style={{ position: "absolute", left: -200, top: -200, width: W + 400, height: OP.y + OP.h + 200, background: "repeating-linear-gradient(180deg, #ECE6DA 0 46px, #DED6C8 46px 48px)" }} />
+        <div style={{ position: "absolute", top: -200, width: 500, height: OP.y + OP.h + 200, left: -600 + ((t * 70) % 2200), background: "linear-gradient(90deg, rgba(255,250,235,0), rgba(255,250,235,.55), rgba(255,250,235,0))" }} />
         <div style={{ position: "absolute", left: -200, top: OP.y + OP.h, width: W + 400, height: 900, background: "linear-gradient(180deg, #CFCAC2, #E4E0D9 30%, #D8D3CB)" }} />
         <div style={{ position: "absolute", left: OP.x - 26, top: OP.y - 26, width: OP.w + 52, height: OP.h + 26, background: "#F7F4EE", boxShadow: "0 0 0 2px rgba(0,0,0,.05)" }} />
         {/* inside: the lit garage, the AE86, Jo with her thumbs going */}
         <div style={{ position: "absolute", left: OP.x, top: OP.y, width: OP.w, height: OP.h, overflow: "hidden", background: "#1A1610" }}>
           <img src={src("F02")} style={{ position: "absolute", left: -200, top: -260, width: OP.w + 400, height: OP.h + 520, objectFit: "cover", objectPosition: "50% 70%", filter: "brightness(.9)" }} />
-          <Cut id="A39" cx={330} cy={610} w={640} shadow={0.55} />
-          <div style={{ position: "absolute", left: 0, top: 0, transform: `translateY(${Math.sin(t * 1.7) * 3}px)` }}><Cut id="K4-02" cx={640} cy={560} w={330} shadow={0} /></div>
-          {typing && <div style={{ position: "absolute", left: 610, top: 640, width: 70, height: 40, borderRadius: 20, background: "rgba(190,215,255,.55)", filter: "blur(10px)", opacity: 0.6 + 0.4 * Math.sin(t * 13) }} />}
+          <Cut id="A39" cx={360} cy={680} w={700} shadow={0.55} />
+          <div style={{ position: "absolute", left: 0, top: 0, transform: `translateY(${Math.sin(t * 1.7) * 3}px)` }}><Cut id="K4-02" cx={700} cy={620} w={360} shadow={0} /></div>
+          {typing && <div style={{ position: "absolute", left: 670, top: 700, width: 70, height: 40, borderRadius: 20, background: "rgba(190,215,255,.55)", filter: "blur(10px)", opacity: 0.6 + 0.4 * Math.sin(t * 13) }} />}
           <div style={{ position: "absolute", left: 0, right: 0, top: 0, height: Math.max(0, bottom - OP.y) + 30, background: "linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.35))" }} />
         </div>
         {/* the door: five panels, the outside face; lines show from the reveal */}
@@ -99,20 +100,20 @@ export function build(tl, hook) {
               const show = t > T.relax + 0.1;
               return <div key={i} style={{ position: "absolute", left: 0, top: i * PH, width: OP.w, height: PH, background: "linear-gradient(180deg, #FFFFFF, #F1F1F3 70%, #E3E3E6)", boxShadow: "inset 0 -3px 0 rgba(0,0,0,.08), inset 0 2px 0 #fff" }}>
                 {show && i < 4 && <div style={{ position: "absolute", left: 30, top: 22, opacity: clamp(q * 2), transform: `translateY(${(1 - q) * 14}px)`, filter: q < 0.6 ? `blur(${(1 - q / 0.6) * 6}px)` : undefined }}>
-                  <div style={font("Inter", i === 0 ? 46 : 44, INK, 650)}>{ln.a}</div><div style={{ ...font("Inter", 40, GREY, 500), marginTop: 4 }}>{ln.sub}</div></div>}
+                  <div style={font("Inter", i === 0 ? 48 : 46, INK, 650)}>{ln.a}</div><div style={{ ...font("Inter", 42, GREY, 500), marginTop: 4 }}>{ln.sub}</div></div>}
                 {i === 4 && t > T.never - 0.1 && <div style={{ position: "absolute", left: 30, top: 22 }}>
-                  <Typed t={t} t0={T.never - 0.05} t1={T.rain + 0.1} text={ln.a} caret={RED} style={font("Inter", 46, RED, 650)} />
-                  <div style={{ ...font("Inter", 40, GREY, 500), marginTop: 4, opacity: ez(t, T.keep, 0.4) }}>{ln.sub}</div></div>}
+                  <Typed t={t} t0={T.never - 0.05} t1={T.rain + 0.1} text={ln.a} caret={RED} style={font("Inter", 48, RED, 650)} />
+                  <div style={{ ...font("Inter", 42, GREY, 500), marginTop: 4, opacity: ez(t, T.keep, 0.4) }}>{ln.sub}</div></div>}
               </div>;
             })}
           </div>
         </div>
         {/* Hal, outside at the left edge, on the drive */}
-        <div style={{ position: "absolute", left: 0, top: 0, transform: `translate(${d2.x + crouch * 30}px, ${crouch * 230 + knock * 0}px) rotate(${crouch * 4 + (hook === "C" ? -6 * (1 - ez(t, 0.4, 0.8)) : 0)}deg)`, transformOrigin: "160px 1900px" }}>
-          <Cut id="K4-01" cx={150} cy={1420} w={520} shadow={0.3} />
+        <div style={{ position: "absolute", left: 0, top: 0, transform: `translate(${d2.x - crouch * 20}px, ${crouch * 110}px) rotate(${crouch * 4 + (hook === "C" ? -6 * (1 - ez(t, 0.4, 0.8)) : 0)}deg)`, transformOrigin: "960px 1900px" }}>
+          <Cut id="K4-01" cx={990} cy={1500} w={480} shadow={0.3} flip />
         </div>
         {/* knock: two taps on the closed door */}
-        {[0, 1].map((k) => { const tk = T.flight + 0.25 + k * 0.28, p = seg(t, tk, tk + 0.4); return p > 0 && p < 1 && <div key={k} style={{ position: "absolute", left: 330 - 40, top: 1100 - 40, width: 80, height: 80, borderRadius: 40, border: "4px solid rgba(29,29,31,.35)", transform: `scale(${0.5 + 1.6 * p})`, opacity: 1 - p }} />; })}
+        {[0, 1].map((k) => { const tk = T.flight + 0.25 + k * 0.28, p = seg(t, tk, tk + 0.4); return p > 0 && p < 1 && <div key={k} style={{ position: "absolute", left: 700 - 40, top: 1150 - 40, width: 80, height: 80, borderRadius: 40, border: "4px solid rgba(29,29,31,.35)", transform: `scale(${0.5 + 1.6 * p})`, opacity: 1 - p }} />; })}
       </div>
     </AbsoluteFill>;
   };

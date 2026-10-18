@@ -37,7 +37,7 @@ const CARDR = { x: 60, y: 560, w: 960, h: 860 };
 const SLOT = { x: 60 + 40 + 430 + 20, y: 560 + 420, w: 430, h: 270 };
 
 // the bumper support bracket with three bolts, the middle one longer (drawn; full-frame close-up, used as a photo too)
-const Bracket = ({ t, ring = 0, glint = 0 }) => {
+const Bracket = ({ t, ring = 0, glint = 0, push = 0 }) => {
   const bolt = (x, y, long, i) => (
     <g key={i} transform={`translate(${x} ${y})`}>
       {long && <g><rect x={-26} y={-250} width={52} height={250} rx={8} fill="url(#thread)" /><rect x={-26} y={-250} width={52} height={250} rx={8} fill="url(#shaft)" opacity={0.65} /></g>}
@@ -45,9 +45,9 @@ const Bracket = ({ t, ring = 0, glint = 0 }) => {
       <polygon points="-48,-27 0,-55 48,-27 48,27 0,55 -48,27" fill="none" stroke="rgba(255,255,255,.35)" strokeWidth={4} />
       <circle r={30} fill="url(#washer)" opacity={0.5} />
     </g>);
-  return <AbsoluteFill style={{ background: `radial-gradient(120% 80% at 40% 35%, #2D63CF 0%, ${BLUE} 45%, #0E2A66 100%)` }}>
-    {/* bumper paint reflections */}
-    <div style={{ position: "absolute", left: -200, top: 200 + 30 * Math.sin(t * 0.6), width: 1500, height: 220, background: "linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.18), rgba(255,255,255,0))", transform: "rotate(-12deg)" }} />
+  return <AbsoluteFill style={{ background: `radial-gradient(120% 80% at ${40 + 8 * Math.sin(t * 0.9)}% 35%, #2D63CF 0%, ${BLUE} 45%, #0E2A66 100%)`, transform: `scale(${1 + 0.14 * push}) rotate(${1.5 * Math.sin(t * 0.8)}deg)` }}>
+    {/* bumper paint reflections, sliding */}
+    {[0, 1].map((i) => <div key={i} style={{ position: "absolute", left: -300, top: ((t * 260 + i * 900) % 2200) - 300, width: 1700, height: 200, background: "linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.22), rgba(255,255,255,0))", transform: "rotate(-12deg)" }} />)}
     <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
       <defs>
         <linearGradient id="plate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#c9ced4" /><stop offset=".5" stopColor="#8e959d" /><stop offset="1" stopColor="#5f666e" /></linearGradient>
@@ -178,7 +178,8 @@ export function build(tl, hook) {
     const d = drift(t, "din", 4, 0.3);
     return <AbsoluteFill style={{ filter: "grayscale(1) contrast(.92) brightness(1.03)" }}>
       <div style={{ position: "absolute", inset: 0, background: "radial-gradient(110% 80% at 50% 40%, #E9E1D6 0%, #CDBFAE 100%)" }} />
-      <div style={{ position: "absolute", inset: 0, transform: dT(d, 0.6) }}>
+      <div style={{ position: "absolute", top: -300, width: 500, height: 2600, left: ((t * 240) % 2000) - 700, background: "linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.35), rgba(255,255,255,0))", transform: "rotate(20deg)" }} />
+      <div style={{ position: "absolute", inset: 0, transform: `${dT(d, 0.6)} scale(${1 + 0.08 * seg(t, T.phone - 0.2, T.so)})` }}>
         {/* plate + fork */}
         <div style={{ position: "absolute", left: 200, top: 820, width: 560, height: 560, borderRadius: "50%", background: "radial-gradient(circle at 45% 40%, #fff 0 52%, #F2F0EC 53% 64%, #E2DED8 65% 100%)", boxShadow: "0 30px 50px -20px rgba(0,0,0,.35)" }} />
         <div style={{ position: "absolute", left: 800 + bz * 0.2, top: 820, width: 34, height: 520, borderRadius: 17, background: "linear-gradient(90deg, #9aa1a8, #eef0f2, #9aa1a8)", transform: `rotate(${4 + bz * 0.3}deg)` }} />
@@ -252,7 +253,7 @@ export function build(tl, hook) {
     { at: 0, render: (t) => bay(t, "hook") },
     { at: T.phone - 0.12, render: dinner, enter: { kind: "match" } },
     { at: T.so - 0.08, render: (t) => bay(t, "build"), enter: { kind: "wipe", d: 0.7, dir: -1, edge: (p) => lerp(1350, -900, EASE.io(p)) + 120, obj: RAGWIPE } },
-    { at: T.bumper - 0.08, render: (t) => <Bracket t={t} ring={ez(t, T.longer - 0.1, 0.6, EASE.io)} glint={seg(t, T.stripped, T.stripped + 0.8)} />, enter: { kind: "punch" } },
+    { at: T.bumper - 0.08, render: (t) => <Bracket t={t} ring={ez(t, T.longer - 0.1, 0.6, EASE.io)} glint={(t * 0.6) % 1} push={seg(t, T.bumper, T.photo)} />, enter: { kind: "punch" } },
     { at: T.photo - 0.02, render: (t) => bay(t, "build"), enter: { kind: "match" } },
     { at: PASS + 0.12, render: inez, enter: { kind: "whip", d: 0.42, dir: -1 } },
     { at: T.myph - 0.1, render: kitchen, enter: { kind: "match" } },

@@ -14,7 +14,7 @@
 // remocn (ported): lens-zoom settle (porthole), strikethrough-replace (order line), focus-blur-resolve (log rows),
 // marker squiggle, typewriter (URL), period-drop. New vs the previous reels: porthole iris, handwritten form.
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img } from "remotion";
 import { ctaHead, W, H, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, src, rgba, DrawPath } from "../kit";
 import { TEXT as HTEXT, inter, CARD, Studio } from "./laneB";
 import { land, Wordmark, Thumb, Sweep } from "./b2kit";

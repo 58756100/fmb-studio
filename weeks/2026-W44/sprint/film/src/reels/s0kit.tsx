@@ -59,3 +59,6 @@ export const SideBolt = ({ L = 600, h = 90, phase = 0 }) => {
     {Array.from({ length: n }, (_, i) => { const x = hw + sh * 0.3 + ((i + (phase % 1)) * th); return x < L - th * 0.6 ? <line key={i} x1={x} y1={-h / 2 + 2} x2={x + th * 0.55} y2={h / 2 - 2} stroke="rgba(40,44,50,.55)" strokeWidth={Math.max(1.5, th * 0.28)} /> : null; })}
   </g>;
 };
+// light top haze so dark headlines read over photos (the headline band is y 250-560)
+export const Haze = ({ h = 760, a = 0.88, c = "245,245,247" }) => <div style={{ position: "absolute", left: 0, top: 0, width: W, height: h, zIndex: 3,
+  background: `linear-gradient(180deg, rgba(${c},${a}) 0%, rgba(${c},${a * 0.82}) 50%, rgba(${c},0) 100%)` }} />;

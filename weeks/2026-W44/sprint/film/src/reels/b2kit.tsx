@@ -4,6 +4,7 @@
 //  - Entry: a FuelMyBuild build-log entry card (title, meta, lines, photo, contributor) with focus-blur field landings
 //  - Blur-in helper, smooth closed paths, a simple wordmark
 import React from "react";
+import { Img } from "remotion";
 import { W, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, src, rgba, mixColor } from "../kit";
 import { inter, CARD } from "./laneB";
 
@@ -80,7 +81,7 @@ export const Who = ({ ch, name, role, bg = "#8E8E93", size = 64 }) => (
 // photo inside a UI card (cover crop + slow Ken Burns)
 export const Thumb = ({ id, w, h, t, r = 24, fx = 0.5, fy = 0.5, k = 1.04, style = {}, children }) => (
   <div style={{ position: "relative", width: w, height: h, borderRadius: r, overflow: "hidden", flex: "none", background: "#ddd", ...style }}>
-    <img src={src(id)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: `${fx * 100}% ${fy * 100}%`, transformOrigin: `${fx * 100}% ${fy * 100}%`, transform: `scale(${(k + 0.02 * Math.sin(t * 0.5)).toFixed(4)})` }} />
+    <Img src={src(id)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: `${fx * 100}% ${fy * 100}%`, transformOrigin: `${fx * 100}% ${fy * 100}%`, transform: `scale(${(k + 0.02 * Math.sin(t * 0.5)).toFixed(4)})` }} />
     {children}
   </div>
 );

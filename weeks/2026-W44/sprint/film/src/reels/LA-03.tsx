@@ -13,7 +13,7 @@
 // over the same bench frame (key still beside the record).
 // remocn (ported): shared-axis split, focus-blur-resolve (log rows), squiggle check draw, typewriter (URL), period-drop.
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img } from "remotion";
 import { ctaHead, W, H, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, src, rgba, mixColor, DrawPath } from "../kit";
 import { land, Sweep } from "./b2kit";
 
@@ -155,7 +155,7 @@ export function build(tl, hook) {
           <div style={{ position: "absolute", left: 40, top: 34, ...nun(46, SLATE, 900) }}>Fuel<span style={{ color: ACC }}>My</span>Build</div>
           <div style={{ position: "absolute", right: 40, top: 40, ...mono(42, "#6B7480") }}>build log</div>
           <div style={{ position: "absolute", left: 40, top: 110, width: 880, height: 300, borderRadius: 20, overflow: "hidden" }}>
-            <img src={src("K2-07")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 58%", transform: `scale(${1.04 + 0.03 * Math.sin(t * 0.4)})` }} />
+            <Img src={src("K2-07")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 58%", transform: `scale(${1.04 + 0.03 * Math.sin(t * 0.4)})` }} />
           </div>
           <div style={{ position: "absolute", left: 40, top: 432, ...nun(58, INKD, 900) }}>Ellery's silver GT</div>
           {/* entries */}
@@ -164,7 +164,7 @@ export function build(tl, hook) {
           <div style={{ position: "absolute", left: 40, top: 616, display: "flex", alignItems: "center", gap: 22, ...land(t, T.last - 0.1) }}>
             <span style={{ ...mono(42, "#fff"), padding: "6px 14px", borderRadius: 10, background: ACC }}>NOV 14</span><span style={nun(46, INKD, 800)}>Oil drained</span></div>
           <div style={{ position: "absolute", left: lerp(40, 40, ph), top: 700, width: lerp(300, 560, ph), height: lerp(170, 220, ph), borderRadius: 18, overflow: "hidden", ...land(t, T.dated - 0.05) }}>
-            <img src={src("K3-09")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "40% 55%", transform: `scale(${1.05 + 0.05 * ph})` }} />
+            <Img src={src("K3-09")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "40% 55%", transform: `scale(${1.05 + 0.05 * ph})` }} />
           </div>
           {/* the missing refill: an empty dashed row */}
           <div style={{ position: "absolute", left: 40, top: 950 - 10, width: 880, height: 80, borderRadius: 16, border: "4px dashed #B9B19E", display: "flex", alignItems: "center", gap: 22, padding: "0 20px", boxSizing: "border-box", ...land(t, T.no - 0.1) }}>
@@ -192,7 +192,7 @@ export function build(tl, hook) {
         <Cut id="K1-23" cx={500} cy={930} w={900} shadow={0} style={{ filter: STICKER, zIndex: 8 }} />
         {/* the record on the bench, beside the key */}
         <Paper x={REF.x} y={REF.y} w={REF.w} h={REF.h} rot={3} z={12}>
-          <img src={src("K3-09")} style={{ position: "absolute", left: 0, top: 0, width: "100%", height: 200, objectFit: "cover", objectPosition: "40% 55%" }} />
+          <Img src={src("K3-09")} style={{ position: "absolute", left: 0, top: 0, width: "100%", height: 200, objectFit: "cover", objectPosition: "40% 55%" }} />
           <div style={{ position: "absolute", left: 20, top: 220, display: "flex", gap: 14, alignItems: "center" }}>
             <span style={{ ...mono(42, "#fff"), padding: "4px 12px", borderRadius: 8, background: ACC }}>NOV 14</span><span style={nun(42, INKD, 800)}>Drained</span></div>
         </Paper>
@@ -200,7 +200,7 @@ export function build(tl, hook) {
         <Bottle x={170 - slide * 600} y={1210} rot={-slide * 30} o={1 - slide} dim={ez(t, T.instead - 0.1, 0.4)} />
         {/* gloved check */}
         {glove > 0.01 && gOut < 1 && <Paper x={110} y={560 + (1 - glove) * 200} w={520} h={390} rot={-3} o={clamp(glove * 2) * (1 - gOut)} z={30}>
-          <img src={src("K3-04")} style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${1.04 + 0.04 * seg(t, T.checking, T.instead)})` }} /></Paper>}
+          <Img src={src("K3-04")} style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${1.04 + 0.04 * seg(t, T.checking, T.instead)})` }} /></Paper>}
         {t > T.your + 0.8 && <div style={{ position: "absolute", left: 0, right: 0, top: 520, textAlign: "center", zIndex: 40 }}>
           <Typed t={t} t0={T.your + 0.9} t1={T.your + 1.6} text="fuelmybuild.com" caret={ACC} style={nun(52, INKD, 800)} keepCaret={0.5} /></div>}
       </div>

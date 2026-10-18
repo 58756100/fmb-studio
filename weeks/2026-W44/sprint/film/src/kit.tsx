@@ -6,7 +6,7 @@
 //  - FlowText: headlines on a layer above the cuts, words land on their spoken time and leave into the next beat
 //  - image bank components (cutouts with contact shadows, photos with Ken Burns)
 import React from "react";
-import { AbsoluteFill, Easing, staticFile } from "remotion";
+import { AbsoluteFill, Easing, staticFile, Img } from "remotion";
 import { noise2D } from "@remotion/noise";
 import { evolvePath } from "@remotion/paths";
 
@@ -141,7 +141,7 @@ export const Cut = ({ id, cx, cy, w, rot = 0, s = 1, o = 1, flip = false, shadow
     <div style={{ position: "absolute", left: cx - w / 2, top: cy - h / 2, width: w, height: h, opacity: o, zIndex: z, transform: `rotate(${rot}deg) scale(${s})`, filter: blurX > 0.4 ? `url(#mbx${Math.min(8, Math.round(blurX))})` : undefined, ...style }}>
       {shadow > 0 && <div style={{ position: "absolute", left: isCar ? "6%" : "14%", right: isCar ? "6%" : "14%", top: `${(0.5 + gy) * 100 - 4}%`, height: isCar ? "9%" : "8%", borderRadius: "50%",
         background: `radial-gradient(closest-side, rgba(0,0,0,${shadow}), rgba(0,0,0,0))`, filter: "blur(6px)" }} />}
-      <img src={src(id)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", transform: flip ? "scaleX(-1)" : undefined }} />
+      <Img src={src(id)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", transform: flip ? "scaleX(-1)" : undefined }} />
     </div>
   );
 };
@@ -152,7 +152,7 @@ export const Photo = ({ id, x, y, w, h, r = 28, t = 0, t0 = 0, t1 = 6, k0 = 1.04
   return (
     <div style={{ position: "absolute", left: x, top: y, width: w, height: h, borderRadius: r, overflow: "hidden", opacity: o, zIndex: z, transform: `scale(${s})`,
       boxShadow: shadow ? "0 0 0 1px rgba(0,0,0,.06), 0 30px 50px -28px rgba(0,0,0,.45)" : undefined, background: "#111", ...style }}>
-      <img src={src(id)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: `${fx * 100}% ${fy * 100}%`,
+      <Img src={src(id)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: `${fx * 100}% ${fy * 100}%`,
         transformOrigin: `${fx * 100}% ${fy * 100}%`, transform: `translateX(${pan * (p - 0.5)}px) scale(${k})`, ...imgStyle }} />
       {children}
     </div>

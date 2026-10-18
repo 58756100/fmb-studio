@@ -14,7 +14,7 @@
 // (pull), match to the road for the CTA (same road as frame 0, no steam).
 // remocn (ported): lens-zoom settle, marker-highlight (Leland reads fields), focus-blur-resolve, typewriter, period-drop.
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img } from "remotion";
 import { ctaHead, W, H, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, src, rgba, DrawPath } from "../kit";
 import { TEXT as HTEXT, inter, CARD, Studio } from "./laneB";
 import { land, Wordmark, Who, Thumb, Sweep, Ripple } from "./b2kit";
@@ -96,7 +96,7 @@ export function build(tl, hook) {
     const rib = !end && t > T.saturday - 0.3 ? spr(t - (T.saturday - 0.3), 200, 14) : end ? 1 : 0;
     return <AbsoluteFill>
       <div style={{ position: "absolute", inset: -40, transform: `${dT(d, 0.8)} scale(${1.04 + 0.02 * Math.sin(t * 0.2)})` }}>
-        <img src={src("F12")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 60%" }} />
+        <Img src={src("F12")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 60%" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(255,250,240,.72) 0%, rgba(255,250,240,.35) 26%, rgba(255,255,255,0) 42%)" }} />
       </div>
       <div style={{ position: "absolute", left: 0, top: bob, width: W, height: H }}>
@@ -113,7 +113,7 @@ export function build(tl, hook) {
     const lel = spr(t - (T.leland - 0.1), 160, 17);
     return <AbsoluteFill>
       <div style={{ position: "absolute", inset: -40, transform: `${dT(d, 0.8)} scale(1.05)` }}>
-        <img src={src("F01")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 55%", filter: "sepia(.25) saturate(1.1) brightness(1.02)" }} />
+        <Img src={src("F01")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 55%", filter: "sepia(.25) saturate(1.1) brightness(1.02)" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(255,240,215,.55) 0%, rgba(255,240,215,0) 40%)" }} />
       </div>
       {/* the painted shop sign */}
@@ -135,7 +135,7 @@ export function build(tl, hook) {
     const ang = phase === "fixed" ? 900 * Math.pow(Math.max(0, t - T.fanOn), 1.6) : 0;
     return <AbsoluteFill style={{ background: "#1E2024" }}>
       <div style={{ position: "absolute", inset: -40, transform: `${dT(d, 0.8)} scale(${1.06 + 0.02 * seg(t, T.your, T.who)})` }}>
-        <img src={src("G12")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 50%", filter: "brightness(.8)" }} />
+        <Img src={src("G12")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 50%", filter: "brightness(.8)" }} />
       </div>
       <div style={{ position: "absolute", left: 140, top: 520, width: 800, height: 560, borderRadius: 24, background: "radial-gradient(120% 100% at 50% 30%, #f4f5f7, #d9dce1)", boxShadow: "0 30px 60px rgba(0,0,0,.6)" }}>
         <Cut id="C12" cx={400} cy={290} w={700} shadow={0} />
@@ -187,7 +187,7 @@ export function build(tl, hook) {
     return <AbsoluteFill style={{ background: "#121316" }}>
       <div style={{ position: "absolute", inset: 0, background: "radial-gradient(90% 60% at 50% 100%, rgba(255,190,120,.25), rgba(0,0,0,0))" }} />
       {later && close > 0.01 && <div style={{ position: "absolute", inset: -40, opacity: seg(close, 0.3, 1), transform: `scale(${1.08 - 0.03 * seg(t, T.good, tl.last)})` }}>
-        <img src={src("F01")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 55%", filter: "sepia(.25) brightness(.95)" }} />
+        <Img src={src("F01")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 55%", filter: "sepia(.25) brightness(.95)" }} />
         <Cut id="A16" cx={620} cy={1400} w={900} shadow={0.45} /></div>}
       <Hood t={t} close={close}>
         <div style={{ position: "absolute", left: 120, top: 200, width: 960, borderRadius: 34, background: "#fff", padding: "34px 40px", boxSizing: "border-box", boxShadow: "0 20px 40px rgba(0,0,0,.5)" }}>

@@ -170,7 +170,7 @@ export function build(tl, hook) {
         <div style={{ position: "absolute", left: 40, top: 92, ...font("Inter", 68, "#fff", 650), ...f(T.date - 0.15) }}>Clutch kit</div>
         <div style={{ position: "absolute", left: 40, top: 178, ...font("Inter", 48, "#FF6B6E", 600), ...f(T.date) }}>Oct 9, 2023</div>
         <div style={{ position: "absolute", left: 40, top: 250, ...font("Inter", 44, "#fff", 500), ...f(T.shop - 0.1) }}>Hollis Motorsport</div>
-        <div style={{ position: "absolute", right: 40, top: 250, padding: "6px 20px", borderRadius: 24, background: "rgba(255,255,255,.2)", ...font("Inter", 40, "#fff", 600), ...f(T.clutch) }}>Tarrow Clutch</div>
+        <div style={{ position: "absolute", right: 40, top: 250, padding: "6px 20px", borderRadius: 24, background: "rgba(255,255,255,.2)", ...font("Inter", 40, "#fff", 600), ...f(T.clutch) }}>Brayfield Clutch</div>
         <div style={{ position: "absolute", left: 40, top: 340, width: 410, height: 320, borderRadius: 26, overflow: "hidden", background: "#fff", ...f(T.photos - 0.15) }}><Cut id="C13" cx={205} cy={160} w={380} shadow={0.2} /></div>
         <div style={{ position: "absolute", left: 470, top: 340, width: 410, height: 320, borderRadius: 26, overflow: "hidden", ...f(T.photos) }}>
           <img src={src("G04")} style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${1.05 + 0.04 * ez(t, T.photos, 2)})` }} /></div>
