@@ -9,6 +9,7 @@ import React from "react";
 import { AbsoluteFill, Easing, staticFile } from "remotion";
 import { noise2D } from "@remotion/noise";
 import { evolvePath } from "@remotion/paths";
+import BANK from "./bank.json"; // every bank image: id -> [file, aspect] (K ids use 5 chars, e.g. "K1-02")
 
 export const FPS = 30, W = 1080, H = 1920;
 export const RED = "#F43034", INK = "#1D1D1F", GREY = "#86868B", BG2 = "#F5F5F7";
@@ -50,7 +51,8 @@ export const dT = (d, k = 1) => `translate(${(d.x * k).toFixed(2)}px, ${(d.y * k
 // words.json rows: [word, start, end, voiceId]. A version = hook words + body words, with the body shifted so it
 // starts LEAD seconds after the hook line ends (same gap as in the master).
 const norm = (s) => String(s).toLowerCase().replace(/[^a-z0-9]/g, "");
-export function makeTL(master, hookIdx, hookWords = null) {
+export function makeTL(master, hookIdx, hookWords = null, pad = 0) {
+  // pad: seconds of silence before a hook B/C opener (a silent visual open built in the edit)
   // hookIdx: number of words in the master's hook line (hook A)
   const M = master.map(([w, s, e, v], i) => ({ w, s, e, v, i }));
   const bodyStart = M[hookIdx].s;
@@ -58,7 +60,7 @@ export function makeTL(master, hookIdx, hookWords = null) {
   const cutA = bodyStart - Math.min(0.14, gapA / 2); // the body cut (splice point) in the master
   let hook = M.slice(0, hookIdx), shift = 0;
   if (hookWords) {
-    hook = hookWords.map(([w, s, e, v], i) => ({ w, s, e, v, i }));
+    hook = hookWords.map(([w, s, e, v], i) => ({ w, s: s + pad, e: e + pad, v, i }));
     const cutX = hook[hook.length - 1].e + (cutA - M[hookIdx - 1].e);
     shift = cutX - cutA;
   }
@@ -81,7 +83,7 @@ export function makeTL(master, hookIdx, hookWords = null) {
   const cta = (...texts) => { const ks = texts.map(norm); for (let i = body.length - 1; i >= 0; i--) { const prev = body[i - 1]; if (ks.includes(norm(body[i].w)) && (!prev || /[.?!:]$/.test(prev.w))) return body[i].s; } return null; };
   const end = (text, n = 1) => find(text, n).e;
   const idx = (text, n = 1) => find(text, n).i;
-  return { hook, body, all, cut, cutA, shift, at, has, any, after, cta, end, idx, last: body[body.length - 1].e, hookEnd: hook[hook.length - 1].e };
+  return { hook, body, all, cut, cutA, shift, pad, at, has, any, after, cta, end, idx, last: body[body.length - 1].e, hookEnd: hook[hook.length - 1].e };
 }
 // headline words timed to speech. text uses "/" for a line break. Tokens are matched in order against the
 // spoken words starting at time `from` (seconds); unmatched tokens borrow the previous token's time + 0.1 s.
@@ -127,6 +129,8 @@ export const ASPECT = {
   D14: 1473 / 1055, D04: 1578 / 1026, D08: 1485 / 938, D10: 1062 / 953, E02: 850 / 1096, E03: 1378 / 1110, E04: 847 / 1092, E05: 866 / 1101, E06: 960 / 1099, E07: 864 / 1069,
   E08: 490 / 1003, D13: 1513 / 1032, D02: 475 / 1046, E09: 1251 / 1098, E10: 1279 / 1109, E01: 1031 / 1087, EVO: 1241 / 560,
 };
+// every other bank image (K1-K4 collector bank, the rest of bank v2) resolves through bank.json
+for (const [k, [f, a]] of Object.entries(BANK)) { if (!FILE[k]) FILE[k] = f; if (!ASPECT[k]) ASPECT[k] = a; }
 export const src = (id) => staticFile("img/" + FILE[id]);
 export const preloadList = (ids) => ids.map((id) => src(id));
 
@@ -134,7 +138,7 @@ export const preloadList = (ids) => ids.map((id) => src(id));
 export const Cut = ({ id, cx, cy, w, rot = 0, s = 1, o = 1, flip = false, shadow = 0.32, ground = null, blurX = 0, z, style = {} }) => {
   if (o <= 0.002) return null;
   const h = w / ASPECT[id];
-  const isCar = id[0] === "A" || id === "EVO";
+  const isCar = id[0] === "A" || id === "EVO" || id.startsWith("K1");
   const gy = ground ?? (isCar ? 0.47 : 0.46);
   return (
     <div style={{ position: "absolute", left: cx - w / 2, top: cy - h / 2, width: w, height: h, opacity: o, zIndex: z, transform: `rotate(${rot}deg) scale(${s})`, filter: blurX > 0.4 ? `url(#mbx${Math.min(8, Math.round(blurX))})` : undefined, ...style }}>
@@ -382,3 +386,173 @@ export const track = (t, init, kfs, dur = 0.5, ease = EASE.camera) => {
 
 // the CTA band (Signature 10, CTA landing): sits over the final story frame
 export const ctaFrame = (t, t0) => { const e = EASE.camera(seg(t, t0, t0 + 0.9)); return { s: 1 - 0.04 * e, e }; };
+
+// ---------------------------------------------------------------- full bank v2 + collector bank (sprint bodies S0-*)
+// key -> [file, width, height]. Adds every bank image to FILE and ASPECT without touching the entries above.
+export const BANK = {
+  "A01": ["A01-supra-front.webp", 1581, 723],
+  "A02": ["A02-supra-side.webp", 1602, 582],
+  "A03": ["A03-supra-rear.webp", 1594, 783],
+  "A04": ["A04-240z-front.webp", 1569, 722],
+  "A05": ["A05-240z-side.webp", 1586, 600],
+  "A06": ["A06-240z-rear.webp", 1607, 787],
+  "A07": ["A07-miata-front.webp", 1597, 793],
+  "A08": ["A08-miata-side.webp", 1583, 617],
+  "A09": ["A09-miata-rear.webp", 1575, 801],
+  "A10": ["A10-e30-front.webp", 1606, 792],
+  "A11": ["A11-e30-side.webp", 1598, 627],
+  "A12": ["A12-e30-rear.webp", 1616, 852],
+  "A13": ["A13-r34-front.webp", 1606, 765],
+  "A14": ["A14-r34-side.webp", 1601, 591],
+  "A15": ["A15-r34-rear.webp", 1599, 777],
+  "A16": ["A16-mustang-front.webp", 1587, 758],
+  "A17": ["A17-mustang-side.webp", 1615, 615],
+  "A18": ["A18-mustang-rear.webp", 1597, 762],
+  "A19": ["A19-camaro-front.webp", 1611, 759],
+  "A20": ["A20-camaro-side.webp", 1625, 607],
+  "A21": ["A21-camaro-rear.webp", 1602, 773],
+  "A22": ["A22-f100-front.webp", 1611, 851],
+  "A23": ["A23-f100-side.webp", 1608, 707],
+  "A24": ["A24-f100-rear.webp", 1615, 866],
+  "A25": ["A25-911-front.webp", 1570, 775],
+  "A26": ["A26-911-side.webp", 1605, 620],
+  "A27": ["A27-911-rear.webp", 1587, 770],
+  "A28": ["A28-wrx-front.webp", 1581, 793],
+  "A29": ["A29-wrx-side.webp", 1621, 649],
+  "A30": ["A30-wrx-rear.webp", 1572, 821],
+  "A31": ["A31-s2000-front.webp", 1598, 770],
+  "A32": ["A32-s2000-side.webp", 1609, 624],
+  "A33": ["A33-s2000-rear.webp", 1609, 821],
+  "A34": ["A34-bronco-front.webp", 1589, 953],
+  "A35": ["A35-bronco-side.webp", 1615, 830],
+  "A36": ["A36-bronco-rear.webp", 1589, 986],
+  "A37": ["A37-civic-front.webp", 1608, 803],
+  "A38": ["A38-civic-side.webp", 1611, 659],
+  "A39": ["A39-ae86-front.webp", 1586, 750],
+  "A40": ["A40-ae86-side.webp", 1622, 639],
+  "B01": ["B01-supra-showroom.jpg", 1536, 1024],
+  "B02": ["B02-240z-showroom.jpg", 1536, 1024],
+  "B03": ["B03-mustang-showroom.jpg", 1536, 1024],
+  "B04": ["B04-911-showroom.jpg", 1536, 1024],
+  "B05": ["B05-r34-showroom.jpg", 1536, 1024],
+  "B06": ["B06-wrx-showroom.jpg", 1536, 1024],
+  "B07": ["B07-f100-showroom.jpg", 1536, 1024],
+  "B08": ["B08-bronco-showroom.jpg", 1536, 1024],
+  "C01": ["C01-turbocharger.webp", 1335, 1060],
+  "C02": ["C02-coilovers.webp", 1473, 1104],
+  "C03": ["C03-brake-kit.webp", 1113, 1042],
+  "C04": ["C04-cold-air-intake.webp", 1607, 942],
+  "C05": ["C05-cat-back-exhaust.webp", 1579, 977],
+  "C06": ["C06-six-into-one-header.webp", 1582, 1017],
+  "C07": ["C07-bronze-wheel.webp", 1010, 998],
+  "C08": ["C08-black-forged-wheel.webp", 1021, 1035],
+  "C09": ["C09-racing-seat.webp", 860, 1077],
+  "C10": ["C10-suede-steering-wheel.webp", 1100, 1065],
+  "C11": ["C11-intercooler.webp", 1582, 963],
+  "C12": ["C12-radiator.webp", 1506, 1035],
+  "C13": ["C13-clutch-kit.webp", 1411, 1070],
+  "C14": ["C14-control-arms.webp", 1576, 1098],
+  "C15": ["C15-v8-block.webp", 1572, 1053],
+  "C16": ["C16-inline-six-head.webp", 1611, 825],
+  "C17": ["C17-ecu.webp", 1559, 929],
+  "C18": ["C18-three-gauge-pod.webp", 1617, 860],
+  "C19": ["C19-fuel-pump.webp", 1590, 1002],
+  "C20": ["C20-used-coilover.webp", 1579, 1023],
+  "D01": ["D01-smartphone-front.webp", 554, 1036],
+  "D02": ["D02-smartphone-angle.webp", 475, 1046],
+  "D03": ["D03-laptop.webp", 1521, 1067],
+  "D04": ["D04-torque-wrench.webp", 1578, 1026],
+  "D05": ["D05-socket-set.webp", 1118, 1040],
+  "D06": ["D06-clipboard.webp", 1130, 1078],
+  "D07": ["D07-manila-folder.webp", 1281, 1002],
+  "D08": ["D08-car-key.webp", 1485, 938],
+  "D09": ["D09-blank-receipts.webp", 1248, 1047],
+  "D10": ["D10-white-mug.webp", 1062, 953],
+  "D11": ["D11-tape-measure.webp", 1490, 918],
+  "D12": ["D12-magnifying-glass.webp", 1500, 1003],
+  "D13": ["D13-floor-jack.webp", 1513, 1032],
+  "D14": ["D14-parts-box.webp", 1473, 1055],
+  "E01": ["E01-collector-man.webp", 1031, 1087],
+  "E02": ["E02-collector-woman.webp", 850, 1096],
+  "E03": ["E03-young-enthusiast.webp", 1378, 1110],
+  "E04": ["E04-shop-owner.webp", 847, 1092],
+  "E05": ["E05-mechanic-man.webp", 866, 1101],
+  "E06": ["E06-mechanic-woman.webp", 960, 1099],
+  "E07": ["E07-parts-rep.webp", 864, 1069],
+  "E08": ["E08-skeptical-customer.webp", 490, 1003],
+  "E09": ["E09-collector-laughing.webp", 1251, 1098],
+  "E10": ["E10-owner-explaining.webp", 1279, 1109],
+  "F01": ["F01-garage-bay.jpg", 1152, 2048],
+  "F02": ["F02-home-garage.jpg", 1152, 2048],
+  "F03": ["F03-showroom-floor.jpg", 1152, 2048],
+  "F04": ["F04-warehouse-aisle.jpg", 1152, 2048],
+  "F05": ["F05-shop-counter.jpg", 1152, 2048],
+  "F06": ["F06-car-meet.jpg", 1152, 2048],
+  "F07": ["F07-dyno-room.jpg", 1152, 2048],
+  "F08": ["F08-paint-booth.jpg", 1152, 2048],
+  "F09": ["F09-auction-hall.jpg", 1152, 2048],
+  "F10": ["F10-detailing-studio.jpg", 1152, 2048],
+  "F11": ["F11-suburban-driveway.jpg", 1152, 2048],
+  "F12": ["F12-country-road.jpg", 1152, 2048],
+  "G01": ["G01-turbo-install.jpg", 1536, 1152],
+  "G02": ["G02-coilover-install.jpg", 1536, 1152],
+  "G03": ["G03-caliper-installed.jpg", 1536, 1152],
+  "G04": ["G04-engine-hoist.jpg", 1536, 1152],
+  "G05": ["G05-cage-fitting.jpg", 1536, 1152],
+  "G06": ["G06-wheel-alignment.jpg", 1536, 1152],
+  "G07": ["G07-head-gasket-leak.jpg", 1536, 1152],
+  "G08": ["G08-exhaust-underside.jpg", 1536, 1152],
+  "G09": ["G09-wiring-bench.jpg", 1536, 1152],
+  "G10": ["G10-car-on-dyno.jpg", 1536, 1152],
+  "G11": ["G11-painted-panel.jpg", 1536, 1152],
+  "G12": ["G12-finished-engine-bay.jpg", 1536, 1152],
+  "K1-01": ["K1-01-red-v12-racer-front.webp", 1844, 831],
+  "K1-02": ["K1-02-red-v12-racer-side.webp", 1988, 710],
+  "K1-03": ["K1-03-silver-spyder-front.webp", 1845, 819],
+  "K1-04": ["K1-04-silver-spyder-side.webp", 2047, 708],
+  "K1-05": ["K1-05-red-turbo-wing-front.webp", 1867, 784],
+  "K1-06": ["K1-06-red-turbo-wing-side.webp", 2116, 701],
+  "K1-07": ["K1-07-red-v12-hyper-front.webp", 1817, 770],
+  "K1-08": ["K1-08-red-v12-hyper-side.webp", 2019, 648],
+  "K1-09": ["K1-09-silver-awd-super-front.webp", 1813, 805],
+  "K1-10": ["K1-10-silver-awd-super-side.webp", 1884, 681],
+  "K1-11": ["K1-11-silver-v10-roadster-front.webp", 1769, 741],
+  "K1-12": ["K1-12-silver-v10-roadster-side.webp", 2034, 688],
+  "K1-13": ["K1-13-silver-gullwing-front.webp", 1831, 842],
+  "K1-14": ["K1-14-silver-gullwing-side.webp", 1828, 662],
+  "K1-15": ["K1-15-green-3seat-super-front.webp", 1803, 777],
+  "K1-16": ["K1-16-green-3seat-super-side.webp", 1980, 680],
+  "K1-17": ["K1-17-orange-mid-v12-front.webp", 1840, 766],
+  "K1-18": ["K1-18-orange-mid-v12-side.webp", 1956, 640],
+  "K1-19": ["K1-19-blue-lemans-racer-front.webp", 1795, 758],
+  "K1-20": ["K1-20-blue-lemans-racer-side.webp", 2041, 672],
+  "K1-21": ["K1-21-blue-roadster-427-front.webp", 1819, 858],
+  "K1-22": ["K1-22-blue-roadster-427-side.webp", 2100, 808],
+  "K1-23": ["K1-23-silver-british-gt-front.webp", 1832, 824],
+  "K1-24": ["K1-24-silver-british-gt-side.webp", 2008, 724],
+  "K2-01": ["K2-01-v12-racer-auction-stage.jpg", 1536, 1024],
+  "K2-02": ["K2-02-gullwing-private-garage.jpg", 1536, 1024],
+  "K2-03": ["K2-03-turbo-wing-concrete-garage.jpg", 1536, 1024],
+  "K2-04": ["K2-04-awd-super-concours-lawn.jpg", 1536, 1024],
+  "K2-05": ["K2-05-mid-v12-restoration-shop.jpg", 1536, 1024],
+  "K2-06": ["K2-06-v10-roadster-glass-museum.jpg", 1536, 1024],
+  "K2-07": ["K2-07-british-gt-transporter.jpg", 1536, 1024],
+  "K2-08": ["K2-08-3seat-super-gallery.jpg", 1536, 1024],
+  "K3-01": ["K3-01-covered-collection-9x16.jpg", 941, 1672],
+  "K3-02": ["K3-02-auction-paddles-9x16.jpg", 941, 1672],
+  "K3-03": ["K3-03-service-binder.jpg", 1536, 1152],
+  "K3-04": ["K3-04-white-glove-chrome.jpg", 1536, 1152],
+  "K3-05": ["K3-05-paint-gauge.jpg", 1536, 1152],
+  "K3-06": ["K3-06-archive-race-bw.jpg", 1536, 1152],
+  "K3-07": ["K3-07-v12-engine-bay.jpg", 1536, 1152],
+  "K3-08": ["K3-08-concours-lawn-9x16.jpg", 941, 1672],
+  "K3-09": ["K3-09-restoration-lift.jpg", 1536, 1152],
+  "K3-10": ["K3-10-covered-car-transporter.jpg", 1536, 1152],
+  "K4-01": ["K4-01-collector-navy-blazer.webp", 1129, 1636],
+  "K4-02": ["K4-02-collector-cream-sweater.webp", 1097, 1658],
+  "K4-03": ["K4-03-collector-leather-folder.webp", 1099, 1623],
+  "K4-04": ["K4-04-restoration-specialist.webp", 1114, 1605],
+  "K4-05": ["K4-05-auction-specialist.webp", 1012, 1621],
+  "K4-06": ["K4-06-collector-pointing.webp", 1450, 1117],
+};
+for (const [k, [f, w, h]] of Object.entries(BANK)) { if (!FILE[k]) FILE[k] = f; if (!ASPECT[k]) ASPECT[k] = w / h; }

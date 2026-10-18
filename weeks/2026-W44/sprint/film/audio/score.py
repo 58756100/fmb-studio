@@ -378,7 +378,7 @@ vo = np.zeros(N)
 if HOOK == "A":
     n = min(N, len(body)); vo[:n] = body[:n]
 else:
-    hk = mono(f"hook-{HOOK}.wav"); c = L(D["cut"]); ca = L(D["cutA"]); f = L(0.01)
+    hk = mono(f"hook-{HOOK}.wav"); hk = np.concatenate([np.zeros(L(D.get("hookPad", 0))), hk]); c = L(D["cut"]); ca = L(D["cutA"]); f = L(0.01)
     h = np.zeros(c + f); h[:min(len(hk), c + f)] = hk[:c + f]; h[c:c + f] *= np.linspace(1, 0, f)
     vo[:min(N, c + f)] += h[:min(N, c + f)]
     b = body[ca:].copy(); b[:f] *= np.linspace(0, 1, f); n = min(N - c, len(b)); vo[c:c + n] += b[:n]

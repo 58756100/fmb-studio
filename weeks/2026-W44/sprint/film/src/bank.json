@@ -1,0 +1,658 @@
+{
+"A01": [
+"A01-supra-front.webp",
+2.18672
+],
+"A02": [
+"A02-supra-side.webp",
+2.75258
+],
+"A03": [
+"A03-supra-rear.webp",
+2.03576
+],
+"A04": [
+"A04-240z-front.webp",
+2.17313
+],
+"A05": [
+"A05-240z-side.webp",
+2.64333
+],
+"A06": [
+"A06-240z-rear.webp",
+2.04193
+],
+"A07": [
+"A07-miata-front.webp",
+2.01387
+],
+"A08": [
+"A08-miata-side.webp",
+2.56564
+],
+"A09": [
+"A09-miata-rear.webp",
+1.96629
+],
+"A10": [
+"A10-e30-front.webp",
+2.02778
+],
+"A11": [
+"A11-e30-side.webp",
+2.54864
+],
+"A12": [
+"A12-e30-rear.webp",
+1.89671
+],
+"A13": [
+"A13-r34-front.webp",
+2.09935
+],
+"A14": [
+"A14-r34-side.webp",
+2.70897
+],
+"A15": [
+"A15-r34-rear.webp",
+2.05792
+],
+"A16": [
+"A16-mustang-front.webp",
+2.09367
+],
+"A17": [
+"A17-mustang-side.webp",
+2.62602
+],
+"A18": [
+"A18-mustang-rear.webp",
+2.0958
+],
+"A19": [
+"A19-camaro-front.webp",
+2.12253
+],
+"A20": [
+"A20-camaro-side.webp",
+2.6771
+],
+"A21": [
+"A21-camaro-rear.webp",
+2.07245
+],
+"A22": [
+"A22-f100-front.webp",
+1.89307
+],
+"A23": [
+"A23-f100-side.webp",
+2.2744
+],
+"A24": [
+"A24-f100-rear.webp",
+1.8649
+],
+"A25": [
+"A25-911-front.webp",
+2.02581
+],
+"A26": [
+"A26-911-side.webp",
+2.58871
+],
+"A27": [
+"A27-911-rear.webp",
+2.06104
+],
+"A28": [
+"A28-wrx-front.webp",
+1.99369
+],
+"A29": [
+"A29-wrx-side.webp",
+2.49769
+],
+"A30": [
+"A30-wrx-rear.webp",
+1.91474
+],
+"A31": [
+"A31-s2000-front.webp",
+2.07532
+],
+"A32": [
+"A32-s2000-side.webp",
+2.57853
+],
+"A33": [
+"A33-s2000-rear.webp",
+1.95981
+],
+"A34": [
+"A34-bronco-front.webp",
+1.66737
+],
+"A35": [
+"A35-bronco-side.webp",
+1.94578
+],
+"A36": [
+"A36-bronco-rear.webp",
+1.61156
+],
+"A37": [
+"A37-civic-front.webp",
+2.00249
+],
+"A38": [
+"A38-civic-side.webp",
+2.44461
+],
+"A39": [
+"A39-ae86-front.webp",
+2.11467
+],
+"A40": [
+"A40-ae86-side.webp",
+2.53834
+],
+"B01": [
+"B01-supra-showroom.jpg",
+1.5
+],
+"B02": [
+"B02-240z-showroom.jpg",
+1.5
+],
+"B03": [
+"B03-mustang-showroom.jpg",
+1.5
+],
+"B04": [
+"B04-911-showroom.jpg",
+1.5
+],
+"B05": [
+"B05-r34-showroom.jpg",
+1.5
+],
+"B06": [
+"B06-wrx-showroom.jpg",
+1.5
+],
+"B07": [
+"B07-f100-showroom.jpg",
+1.5
+],
+"B08": [
+"B08-bronco-showroom.jpg",
+1.5
+],
+"C01": [
+"C01-turbocharger.webp",
+1.25943
+],
+"C02": [
+"C02-coilovers.webp",
+1.33424
+],
+"C03": [
+"C03-brake-kit.webp",
+1.06814
+],
+"C04": [
+"C04-cold-air-intake.webp",
+1.70594
+],
+"C05": [
+"C05-cat-back-exhaust.webp",
+1.61617
+],
+"C06": [
+"C06-six-into-one-header.webp",
+1.55556
+],
+"C07": [
+"C07-bronze-wheel.webp",
+1.01202
+],
+"C08": [
+"C08-black-forged-wheel.webp",
+0.98647
+],
+"C09": [
+"C09-racing-seat.webp",
+0.79851
+],
+"C10": [
+"C10-suede-steering-wheel.webp",
+1.03286
+],
+"C11": [
+"C11-intercooler.webp",
+1.64278
+],
+"C12": [
+"C12-radiator.webp",
+1.45507
+],
+"C13": [
+"C13-clutch-kit.webp",
+1.31869
+],
+"C14": [
+"C14-control-arms.webp",
+1.43534
+],
+"C15": [
+"C15-v8-block.webp",
+1.49288
+],
+"C16": [
+"C16-inline-six-head.webp",
+1.95273
+],
+"C17": [
+"C17-ecu.webp",
+1.67815
+],
+"C18": [
+"C18-three-gauge-pod.webp",
+1.88023
+],
+"C19": [
+"C19-fuel-pump.webp",
+1.58683
+],
+"C20": [
+"C20-used-coilover.webp",
+1.5435
+],
+"D01": [
+"D01-smartphone-front.webp",
+0.53475
+],
+"D02": [
+"D02-smartphone-angle.webp",
+0.45411
+],
+"D03": [
+"D03-laptop.webp",
+1.42549
+],
+"D04": [
+"D04-torque-wrench.webp",
+1.53801
+],
+"D05": [
+"D05-socket-set.webp",
+1.075
+],
+"D06": [
+"D06-clipboard.webp",
+1.04824
+],
+"D07": [
+"D07-manila-folder.webp",
+1.27844
+],
+"D08": [
+"D08-car-key.webp",
+1.58316
+],
+"D09": [
+"D09-blank-receipts.webp",
+1.19198
+],
+"D10": [
+"D10-white-mug.webp",
+1.11438
+],
+"D11": [
+"D11-tape-measure.webp",
+1.62309
+],
+"D12": [
+"D12-magnifying-glass.webp",
+1.49551
+],
+"D13": [
+"D13-floor-jack.webp",
+1.46609
+],
+"D14": [
+"D14-parts-box.webp",
+1.39621
+],
+"E01": [
+"E01-collector-man.webp",
+0.94848
+],
+"E02": [
+"E02-collector-woman.webp",
+0.77555
+],
+"E03": [
+"E03-young-enthusiast.webp",
+1.24144
+],
+"E04": [
+"E04-shop-owner.webp",
+0.77564
+],
+"E05": [
+"E05-mechanic-man.webp",
+0.78656
+],
+"E06": [
+"E06-mechanic-woman.webp",
+0.87352
+],
+"E07": [
+"E07-parts-rep.webp",
+0.80823
+],
+"E08": [
+"E08-skeptical-customer.webp",
+0.48853
+],
+"E09": [
+"E09-collector-laughing.webp",
+1.13934
+],
+"E10": [
+"E10-owner-explaining.webp",
+1.15329
+],
+"F01": [
+"F01-garage-bay.jpg",
+0.5625
+],
+"F02": [
+"F02-home-garage.jpg",
+0.5625
+],
+"F03": [
+"F03-showroom-floor.jpg",
+0.5625
+],
+"F04": [
+"F04-warehouse-aisle.jpg",
+0.5625
+],
+"F05": [
+"F05-shop-counter.jpg",
+0.5625
+],
+"F06": [
+"F06-car-meet.jpg",
+0.5625
+],
+"F07": [
+"F07-dyno-room.jpg",
+0.5625
+],
+"F08": [
+"F08-paint-booth.jpg",
+0.5625
+],
+"F09": [
+"F09-auction-hall.jpg",
+0.5625
+],
+"F10": [
+"F10-detailing-studio.jpg",
+0.5625
+],
+"F11": [
+"F11-suburban-driveway.jpg",
+0.5625
+],
+"F12": [
+"F12-country-road.jpg",
+0.5625
+],
+"G01": [
+"G01-turbo-install.jpg",
+1.33333
+],
+"G02": [
+"G02-coilover-install.jpg",
+1.33333
+],
+"G03": [
+"G03-caliper-installed.jpg",
+1.33333
+],
+"G04": [
+"G04-engine-hoist.jpg",
+1.33333
+],
+"G05": [
+"G05-cage-fitting.jpg",
+1.33333
+],
+"G06": [
+"G06-wheel-alignment.jpg",
+1.33333
+],
+"G07": [
+"G07-head-gasket-leak.jpg",
+1.33333
+],
+"G08": [
+"G08-exhaust-underside.jpg",
+1.33333
+],
+"G09": [
+"G09-wiring-bench.jpg",
+1.33333
+],
+"G10": [
+"G10-car-on-dyno.jpg",
+1.33333
+],
+"G11": [
+"G11-painted-panel.jpg",
+1.33333
+],
+"G12": [
+"G12-finished-engine-bay.jpg",
+1.33333
+],
+"K1-01": [
+"K1-01-red-v12-racer-front.webp",
+2.21901
+],
+"K1-02": [
+"K1-02-red-v12-racer-side.webp",
+2.8
+],
+"K1-03": [
+"K1-03-silver-spyder-front.webp",
+2.25275
+],
+"K1-04": [
+"K1-04-silver-spyder-side.webp",
+2.89124
+],
+"K1-05": [
+"K1-05-red-turbo-wing-front.webp",
+2.38138
+],
+"K1-06": [
+"K1-06-red-turbo-wing-side.webp",
+3.01854
+],
+"K1-07": [
+"K1-07-red-v12-hyper-front.webp",
+2.35974
+],
+"K1-08": [
+"K1-08-red-v12-hyper-side.webp",
+3.11574
+],
+"K1-09": [
+"K1-09-silver-awd-super-front.webp",
+2.25217
+],
+"K1-10": [
+"K1-10-silver-awd-super-side.webp",
+2.76652
+],
+"K1-11": [
+"K1-11-silver-v10-roadster-front.webp",
+2.38731
+],
+"K1-12": [
+"K1-12-silver-v10-roadster-side.webp",
+2.9564
+],
+"K1-13": [
+"K1-13-silver-gullwing-front.webp",
+2.17458
+],
+"K1-14": [
+"K1-14-silver-gullwing-side.webp",
+2.76133
+],
+"K1-15": [
+"K1-15-green-3seat-super-front.webp",
+2.32046
+],
+"K1-16": [
+"K1-16-green-3seat-super-side.webp",
+2.91176
+],
+"K1-17": [
+"K1-17-orange-mid-v12-front.webp",
+2.40209
+],
+"K1-18": [
+"K1-18-orange-mid-v12-side.webp",
+3.05625
+],
+"K1-19": [
+"K1-19-blue-lemans-racer-front.webp",
+2.36807
+],
+"K1-20": [
+"K1-20-blue-lemans-racer-side.webp",
+3.0372
+],
+"K1-21": [
+"K1-21-blue-roadster-427-front.webp",
+2.12005
+],
+"K1-22": [
+"K1-22-blue-roadster-427-side.webp",
+2.59901
+],
+"K1-23": [
+"K1-23-silver-british-gt-front.webp",
+2.2233
+],
+"K1-24": [
+"K1-24-silver-british-gt-side.webp",
+2.77348
+],
+"K2-01": [
+"K2-01-v12-racer-auction-stage.jpg",
+1.5
+],
+"K2-02": [
+"K2-02-gullwing-private-garage.jpg",
+1.5
+],
+"K2-03": [
+"K2-03-turbo-wing-concrete-garage.jpg",
+1.5
+],
+"K2-04": [
+"K2-04-awd-super-concours-lawn.jpg",
+1.5
+],
+"K2-05": [
+"K2-05-mid-v12-restoration-shop.jpg",
+1.5
+],
+"K2-06": [
+"K2-06-v10-roadster-glass-museum.jpg",
+1.5
+],
+"K2-07": [
+"K2-07-british-gt-transporter.jpg",
+1.5
+],
+"K2-08": [
+"K2-08-3seat-super-gallery.jpg",
+1.5
+],
+"K3-01": [
+"K3-01-covered-collection-9x16.jpg",
+0.5628
+],
+"K3-02": [
+"K3-02-auction-paddles-9x16.jpg",
+0.5628
+],
+"K3-03": [
+"K3-03-service-binder.jpg",
+1.33333
+],
+"K3-04": [
+"K3-04-white-glove-chrome.jpg",
+1.33333
+],
+"K3-05": [
+"K3-05-paint-gauge.jpg",
+1.33333
+],
+"K3-06": [
+"K3-06-archive-race-bw.jpg",
+1.33333
+],
+"K3-07": [
+"K3-07-v12-engine-bay.jpg",
+1.33333
+],
+"K3-08": [
+"K3-08-concours-lawn-9x16.jpg",
+0.5628
+],
+"K3-09": [
+"K3-09-restoration-lift.jpg",
+1.33333
+],
+"K3-10": [
+"K3-10-covered-car-transporter.jpg",
+1.33333
+],
+"K4-01": [
+"K4-01-collector-navy-blazer.webp",
+0.6901
+],
+"K4-02": [
+"K4-02-collector-cream-sweater.webp",
+0.66164
+],
+"K4-03": [
+"K4-03-collector-leather-folder.webp",
+0.67714
+],
+"K4-04": [
+"K4-04-restoration-specialist.webp",
+0.69408
+],
+"K4-05": [
+"K4-05-auction-specialist.webp",
+0.62431
+],
+"K4-06": [
+"K4-06-collector-pointing.webp",
+1.29812
+]
+}

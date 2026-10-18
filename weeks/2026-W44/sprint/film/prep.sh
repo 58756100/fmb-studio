@@ -17,3 +17,9 @@ for id in A-L1 A-L2 A-L3 B-L1 B-L2 B-L3 C3-COL C3-GAR C3-SUP; do
   done
 done
 echo prep done
+# sprint lane-0 bodies (voiced in batch 2): VO from the renders branch at 2026-W44/sprint/vo/<id>/
+for id in S0-09 S0-14 S0-08 S0-03 S0-11 S0-05 S0-15 S0-01 S0-06 S0-02; do
+  mkdir -p public/vo/$id src/vo/$id
+  for f in vo.wav hook-B.wav hook-C.wav; do [ -s public/vo/$id/$f ] || git -C $R show origin/renders:2026-W44/sprint/vo/$id/$f > public/vo/$id/$f; done
+  for f in words.json hook-B.words.json hook-C.words.json; do [ -s src/vo/$id/$f ] || cp $R/weeks/2026-W44/sprint/vo/$id/$f src/vo/$id/; done
+done

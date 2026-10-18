@@ -13,15 +13,16 @@ import * as BL3 from "./reels/B-L3";
 import * as COL from "./reels/C3-COL";
 import * as GAR from "./reels/C3-GAR";
 import * as SUP from "./reels/C3-SUP";
+import { S0 } from "./reels/s0-index";
 
 const VO = {};
 const ctx = require.context("./vo", true, /\.json$/);
 ctx.keys().forEach((k) => { const [, id, f] = k.match(/\.\/([^/]+)\/(.+)\.json$/); (VO[id] = VO[id] || {})[f] = ctx(k); });
 
-export const REELS = { "A-L1": AL1, "A-L2": AL2, "A-L3": AL3, "B-L1": BL1, "B-L2": BL2, "B-L3": BL3, "C3-COL": COL, "C3-GAR": GAR, "C3-SUP": SUP };
+export const REELS = { "A-L1": AL1, "A-L2": AL2, "A-L3": AL3, "B-L1": BL1, "B-L2": BL2, "B-L3": BL3, "C3-COL": COL, "C3-GAR": GAR, "C3-SUP": SUP, ...S0 };
 export const timeline = (id, hook) => {
   const v = VO[id], R = REELS[id];
-  return makeTL(v.words, R.HOOK_WORDS, hook === "A" ? null : v[`hook-${hook}.words`]);
+  return makeTL(v.words, R.HOOK_WORDS, hook === "A" ? null : v[`hook-${hook}.words`], R.HOOK_PAD?.[hook] ?? 0);
 };
 const FONTS = {
   Inter: ["inter-latin-opsz-normal.woff2", "100 900"],
