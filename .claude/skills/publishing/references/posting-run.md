@@ -1,6 +1,6 @@
 # Posting run (scheduled task prompt)
 
-Scheduled task "FMB posting runs" (trig_01QXkh3ndZnMucYDW7sXRr4d), in the claude.ai/code **Default** environment (the one holding the IG/TT/YT credentials), cron `CRON_TZ=America/New_York 45 11,14,18,21 * * *`. The 21:45 run covers the 21:30 slot.
+Scheduled task "FMB posting runs" (trig_01QXkh3ndZnMucYDW7sXRr4d), in the claude.ai/code **Default** environment (the one holding the IG/TT/YT credentials), cron `CRON_TZ=America/New_York 55 7,10,13,16,19,21 * * *`, plus "FMB posting runs (half-hour slots)", cron `CRON_TZ=America/New_York 25 9,12,15,18 * * *` (from Oct 19). Together they run a few minutes before each of the 10 sprint slots.
 
 Prompt:
 

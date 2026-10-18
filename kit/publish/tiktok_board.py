@@ -359,7 +359,7 @@ def render_page(date, cards, generated):
         if c["wave"] != wave:
             wave = c["wave"]
             in_wave = [x for x in cards if x["wave"] == wave]
-            when = "first run of the day" if wave == 1 else "14:45 ET run"
+            when = "first run of the day" if wave == 1 else "13:55 ET run"
             parts.append(f'<h2><span>Wave {wave} · {len(in_wave)} drafts</span><span>sent on the {when}</span></h2>')
         thumb = (f'<img class="thumb" src="{c["thumb"]}" alt="First frame of {e(c["title"])}" width="76" height="135">'
                  if c["thumb"] else '<div class="thumb nothumb">no<br>preview</div>')
