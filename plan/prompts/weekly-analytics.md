@@ -22,8 +22,9 @@ You are FuelMyBuild's studio analyst running the Sunday review. Work in the repo
 2. Instagram: call `GET /{IG_USER_ID}?fields=username,followers_count,media_count`.
    - If it fails with OAuth error 190, the token is dead. Give me the regeneration steps from .claude/skills/publishing/references/platform-setup.md, then carry on with TikTok.
    - Also run a debug_token call and tell me how many days the token has left. Warn me if it's under 10.
-3. TikTok: exchange the refresh token for an access token, then call `/v2/user/info/` (follower_count, likes_count, video_count) and `/v2/video/list/`.
-   - On `scope_not_authorized`, tell me to re-authorise the app with the `video.list` and `user.info.stats` scopes, and walk me through the code exchange.
+3. TikTok: exchange the refresh token for an access token, then call `/v2/user/info/?fields=follower_count,following_count,likes_count,video_count`.
+   - Record these as this week's account totals, next to last week's in state/metrics/.
+   - The sandbox app can't get `video.list`, so the API has no per-video numbers. Don't try `/v2/video/list/` or `/v2/video/query/`.
 4. If a platform stays blocked, ask me for screenshots or CSV exports instead (Instagram Insights per reel; TikTok Studio per video, including the retention graph). Analyse those, and mark which numbers came from screenshots.
 
 ## Step 1: collect the numbers
@@ -35,15 +36,19 @@ You are FuelMyBuild's studio analyst running the Sunday review. Work in the repo
 
 **Instagram, account level:** daily follower count, reach, profile views and website clicks for the window, wherever the API allows.
 
-**TikTok, per video:** from `/v2/video/list/`, every video in the window with id, title, video_description, create_time, duration, cover_image_url, share_url, view_count, like_count, comment_count and share_count. The API gives no watch time or retention: ask me for TikTok Studio screenshots of the top 3 and bottom 3 videos (average watch time, % watched in full, retention graph, traffic sources, new followers).
+**TikTok, per video (from screenshots):** at the start of the run, ask me for TikTok Studio screenshots. Studio is at tiktok.com/tiktokstudio on a computer, or Creator tools → Analytics in the app. Ask for:
+- the Content list for the week (each video's views, likes, comments and shares)
+- for each of the 5 most-viewed and 3 least-viewed videos, its analytics page: total play time, average watch time, % watched in full, the retention graph, traffic sources and new followers
+
+Read the numbers off the screenshots, mark them "from screenshot", and wait for them before you rank TikTok. Account totals (followers, total likes, video count) come from the API.
 
 **Match every post to its queue item**
 - Instagram: by `media_id`.
-- TikTok: Wayne posts the drafts by hand, so the queue has no TikTok id. Match on posting day (draft day ±1), length and caption or opening text. Write the matched id into the queue item as `tt_video_id`, and list any posts you couldn't match.
+- TikTok: Wayne posts the drafts by hand, so the queue has no TikTok id. Match each screenshot row to its queue item by posting day (draft day ±1), the cover frame and the caption. List any you couldn't match.
 
 **Fix `.claude/skills/analytics/scripts/fetch_metrics.py` while you're there**
 - It only reads `post_id`, but posted Instagram items store `media_id`, so the last run found nothing.
-- Make it use `media_id` for Instagram and `/v2/video/list/` plus the matching above for TikTok.
+- Make it use `media_id` for Instagram, and pull TikTok account totals from `/v2/user/info/`.
 
 Save the raw data to state/metrics/<week>.json.
 
