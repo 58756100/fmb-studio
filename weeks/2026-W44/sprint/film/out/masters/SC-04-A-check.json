@@ -1,0 +1,17 @@
+{
+ "file": "out/masters/SC-04-A.mp4",
+ "video": "h264 1080x1920 30/1 frames=1208",
+ "audio": "aac 48000 ch=2",
+ "v_dur": 40.266667,
+ "a_dur": 40.266,
+ "expected": 40.266666666666666,
+ "vo_end": 39.06,
+ "tail": 1.207,
+ "v_start": 0.0,
+ "a_start": 0.0,
+ "xcorr_lag_samples": 0,
+ "lufs_I": -14.1,
+ "true_peak": -1.8,
+ "subtitle_streams": "none",
+ "cta": "\"Send to whoever takes over\" at 36.66s, last shot starts 30.89s (over final frame)"
+}

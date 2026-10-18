@@ -13,7 +13,7 @@
 // remocn (ported): focus-blur-resolve (card fields), simulated-cursor ripple (Save), typewriter (flag line),
 // period-drop (CTA). New vs the lab reels: cloth shape morph (crumpled / draped / folded) as the carrier object.
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Img } from "remotion";
 import { ctaHead, W, H, RED, INK, GREY, seg, lerp, clamp, spr, EASE, ez, drift, dT, track, wordsFor, Cut, Typed, src, rgba, DrawPath } from "../kit";
 import { TEXT as HTEXT, inter, CARD, Studio } from "./laneB";
 import { Cloth, CLOTH, mixPts, land, Wordmark, Who, Thumb, Sweep, Ripple, Tick } from "./b2kit";
