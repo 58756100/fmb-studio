@@ -126,7 +126,7 @@ export function build(tl, hook) {
       {/* hook B: the single bolt falls and bounces before the title builds around it */}
       {hook === "B" && t < 1.3 && (() => { const f = clamp(t / 0.55), y = t < 0.55 ? lerp(GAPPT.y - 760, GAPPT.y, f * f) : GAPPT.y - Math.abs(Math.sin((t - 0.55) * 9)) * 60 * Math.exp(-(t - 0.55) * 6);
         const x = lerp(560, GAPPT.x, EASE.out(f));
-        return <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}><g transform={`translate(${x},${y})`}><HexHead r={lerp(46, 26, f) - 12.5 * seg(t, 0.9, 1.25)} rot={t * 200} /></g></svg>; })()}
+        return <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>{ALL.map((p, i) => <circle key={i} cx={p.x} cy={p.y} r={p.r0 * 0.8} fill="none" stroke="#fff" strokeWidth={2} opacity={(0.06 + 0.08 * Math.max(0, Math.sin(t * 7 - p.x / 90 - p.y / 140))) * seg(t, 0.15, 0.5) * (1 - seg(t, 1.05, 1.3))} />)}<g transform={`translate(${x},${y})`}><HexHead r={lerp(46, 26, f) - 12.5 * seg(t, 0.9, 1.25)} rot={t * 200} /></g></svg>; })()}
     </AbsoluteFill>;
   };
   // the bolt that falls out of the title and lands on the fender (overlay above the cut)
@@ -174,10 +174,10 @@ export function build(tl, hook) {
   // ---------- shot 3: macro on the bolt (spinning thread), bay blurred behind
   const MAC = { x: 200, y: 900, L: 680, h: 132 };
   const macro = (t) => {
-    const spin = (t - MACRO) * 2.2, d = drift(t, "mac", 6, 0.4);
+    const spin = (t - MACRO) * 3.0, d = drift(t, "mac", 16, 0.5);
     const turn = ez(t, CLOCK - 0.5, 0.45, EASE.camera); // the bolt settles horizontal for the match cut
     return <AbsoluteFill>
-      <Full id="F01" t={t} k0={1.6} k1={1.7} fy={0.8} dim={0.7} blur={22} />
+      <Full id="F01" t={t} t0={MACRO} t1={CLOCK} k0={1.6} k1={1.9} fy={0.8} dim={0.7} blur={22} />
       <Vignette a={0.7} />
       <svg width={W} height={H} style={{ position: "absolute", inset: 0, zIndex: 5 }}><g transform={`translate(${MAC.x + d.x * (1 - turn)},${MAC.y + d.y * (1 - turn)}) rotate(${lerp(-14 + d.r * 4, 0, turn)}, ${MAC.L / 2}, 0)`}><SideBolt L={MAC.L} h={MAC.h} phase={spin} /></g></svg>
       <div style={{ position: "absolute", left: MAC.x + MAC.L - 120, top: MAC.y + 140, width: 240, height: 20, borderRadius: "50%", background: "rgba(255,255,255,.07)", filter: "blur(8px)" }} />
@@ -218,9 +218,10 @@ export function build(tl, hook) {
     const ring = ez(t, T.there - 0.1, 0.6);
     const zoom = ez(t, T.throttle - 0.2, 1.4, EASE.io);
     return <AbsoluteFill>
-      <Full id="F01" t={t} k0={1.3} k1={1.34} fy={0.8} dim={0.72} blur={16} />
-      <Tray x={540} y={1690} w={420} glow={1} tip={4 * slide} />
+      <Full id="F01" t={t} t0={REC} t1={HOME} k0={1.3} k1={1.48} fy={0.8} dim={0.72} blur={16} />
+      <Tray x={540} y={1690} w={420} glow={0.75 + 0.25 * Math.sin(t * 4)} tip={4 * slide} />
       <div style={{ position: "absolute", left: CARDR.x, top: CARDR.y + (1 - slide) * 900, width: CARDR.w, height: CARDR.h, ...glass(0.13), zIndex: 10, overflow: "hidden", opacity: clamp(slide * 3) }}>
+        <div style={{ position: "absolute", top: -100, bottom: -100, width: 260, left: lerp(-400, 1300, seg(t, REC + 0.25, REC + 1.6)), transform: "rotate(14deg)", background: "linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.22), rgba(255,255,255,0))" }} />
         <div style={{ position: "absolute", left: 40, top: 36, ...font("Inter", 40, "rgba(255,255,255,.7)", 500), ...f(REC + 0.2) }}>Build log · '89 E30</div>
         <div style={{ position: "absolute", left: 40, top: 92, ...font("Inter", 68, "#fff", 650), ...f(T.spring - 0.1) }}>Throttle bracket</div>
         <div style={{ position: "absolute", left: 40, top: 172, ...font("Inter", 48, RED, 600), ...f(T.spring + 0.15) }}>Apr 18, 2026</div>

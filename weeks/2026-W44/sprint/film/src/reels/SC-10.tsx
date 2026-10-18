@@ -43,7 +43,7 @@ const Ribbon = ({ x, y, t, s = 1 }) => (
 // the hood underside: dark stamped steel with an insulation pad outline
 const Hood = ({ t, children, close = 0 }) => (
   <div style={{ position: "absolute", left: -60, top: 380, width: 1200, height: 1260, perspective: 1800, zIndex: 5 }}>
-    <div style={{ position: "absolute", inset: 0, transformOrigin: "50% 100%", transform: `rotateX(${close * 88}deg)`, borderRadius: "48px 48px 20px 20px", overflow: "hidden",
+    <div style={{ position: "absolute", inset: 0, transformOrigin: "50% 100%", transform: `rotateX(${close * 80}deg)`, opacity: 1 - seg(close, 0.55, 0.95), borderRadius: "48px 48px 20px 20px", overflow: "hidden",
       background: `radial-gradient(120% 90% at 50% 30%, ${STEEL[0]}, ${STEEL[1]})`, boxShadow: "0 40px 80px -30px rgba(0,0,0,.6)" }}>
       {[0, 1, 2, 3].map((i) => <div key={i} style={{ position: "absolute", left: 120 + i * 250, top: 80, width: 170, height: 1100, borderRadius: 60, background: "rgba(255,255,255,.035)", boxShadow: "inset 0 0 0 3px rgba(255,255,255,.04)" }} />)}
       <div style={{ position: "absolute", top: 0, bottom: 0, width: 300, left: ((t * 120) % 2000) - 600, background: "linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,.08), rgba(255,255,255,0))" }} />
@@ -67,7 +67,7 @@ export function build(tl, hook) {
     his: at("his"), saturday: at("saturday,"), getaway: at("getaway"), so: at("so"), limps: at("limps"), shop: at("shop"), leland: at("leland's"), never: at("never"),
     your: at("your"), fan: at("fan's"), and2: at("and", 3), wired: at("wired"), who: at("who"), notes: at("notes?"), coldwater: at("coldwater,"), hang: at("hang"), page: at("page."),
     he: tl.after("he", at("page.")), opens: at("opens"), entry: at("entry"), hood: at("hood."), teller: at("teller"), twenty: at("twenty"), cauto: at("coldwater", 2), photo: at("photo."),
-    relay: at("relay's"), tray: at("tray?"), found: at("found"), cooked: at("cooked."), shelf: at("shelf."), shelfE: tl.end("shelf."), before: tl.after("before", at("shelf.")), logs: at("logs"),
+    relay: at("relay's"), tray: at("tray?"), found: at("found"), cooked: at("cooked."), shelf: at("shelf."), shelfE: tl.end("shelf."), before: tl.after("before", at("shelf.")), fanOn: at("shelf.") + 0.3, logs: at("logs"),
     two: at("two"), story: at("story"), good: at("good."), whoever: at("whoever"), next: at("next"), cta: tl.cta("start") ?? at("start"),
   };
   const B = (txt, from, extra = {}) => ({ words: wordsFor(tl.body, txt, from), ...extra });
@@ -79,7 +79,7 @@ export function build(tl, hook) {
   const heads = [
     hk,
     { ...fx(B("Saturday. / Getaway car.", T.his), [T.saturday, T.getaway, at("car.")]), key: [0], hold: 0.7 },
-    { words: [], key: [3], hold: 1.6 },
+    { words: [], key: [3], hold: 1.6, color: "#FFFFFF" },
     { ...ctaHead(tl, "Start your / car's record", T.cta), key: [3] },
   ];
   heads[2].words = [{ w: "Logged", t: T.logs, line: 0 }, { w: "by", t: T.logs + 0.25, line: 0 }, { w: "Two", t: T.two, line: 1 }, { w: "Forks.", t: at("forks"), line: 1 }];
@@ -131,8 +131,8 @@ export function build(tl, hook) {
   const WIRE = "M 300 1260 C 420 1180 520 1240 610 1150 C 690 1070 760 1120 820 1040";
   const engine = (t, phase) => {
     const d = drift(t, "eng", 3, 0.3);
-    const spin = phase === "fixed" ? clamp((t - (T.shelfE + 0.05)) / 0.6) : 0;
-    const ang = phase === "fixed" ? 900 * Math.pow(Math.max(0, t - T.shelfE), 1.6) : 0;
+    const spin = phase === "fixed" ? clamp((t - T.fanOn) / 0.6) : 0;
+    const ang = phase === "fixed" ? 900 * Math.pow(Math.max(0, t - T.fanOn), 1.6) : 0;
     return <AbsoluteFill style={{ background: "#1E2024" }}>
       <div style={{ position: "absolute", inset: -40, transform: `${dT(d, 0.8)} scale(${1.06 + 0.02 * seg(t, T.your, T.who)})` }}>
         <img src={src("G12")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 50%", filter: "brightness(.8)" }} />
@@ -152,7 +152,7 @@ export function build(tl, hook) {
         <div style={{ position: "absolute", left: 230, top: 1200, ...land(t, T.your + 0.3), zIndex: 45, padding: "14px 26px", borderRadius: 36, ...CARD }}>
           <div style={{ display: "flex", alignItems: "center", gap: 14 }}><div style={{ width: 22, height: 22, borderRadius: 11, background: RED }} /><span style={inter(44, INK)}>Fan not running</span></div></div>
       </>}
-      {phase === "fixed" && <div style={{ position: "absolute", left: 230, top: 1200, zIndex: 45, padding: "14px 26px", borderRadius: 36, ...CARD, ...land(t, T.shelfE + 0.3) }}>
+      {phase === "fixed" && <div style={{ position: "absolute", left: 230, top: 1200, zIndex: 45, padding: "14px 26px", borderRadius: 36, ...CARD, ...land(t, T.fanOn + 0.3) }}>
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}><div style={{ width: 22, height: 22, borderRadius: 11, background: "#34C759" }} /><span style={inter(44, INK)}>Fan running</span></div></div>}
     </AbsoluteFill>;
   };
@@ -186,8 +186,11 @@ export function build(tl, hook) {
     const newE = later ? spr(t - (T.logs - 0.1), 180, 17) : 0;
     return <AbsoluteFill style={{ background: "#121316" }}>
       <div style={{ position: "absolute", inset: 0, background: "radial-gradient(90% 60% at 50% 100%, rgba(255,190,120,.25), rgba(0,0,0,0))" }} />
+      {later && close > 0.01 && <div style={{ position: "absolute", inset: -40, opacity: seg(close, 0.3, 1), transform: `scale(${1.08 - 0.03 * seg(t, T.good, tl.last)})` }}>
+        <img src={src("F01")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 55%", filter: "sepia(.25) brightness(.95)" }} />
+        <Cut id="A16" cx={620} cy={1400} w={900} shadow={0.45} /></div>}
       <Hood t={t} close={close}>
-        <div style={{ position: "absolute", left: 120, top: 120, width: 960, borderRadius: 34, background: "#fff", padding: "34px 40px", boxSizing: "border-box", boxShadow: "0 20px 40px rgba(0,0,0,.5)" }}>
+        <div style={{ position: "absolute", left: 120, top: 200, width: 960, borderRadius: 34, background: "#fff", padding: "34px 40px", boxSizing: "border-box", boxShadow: "0 20px 40px rgba(0,0,0,.5)" }}>
           <Sweep t={t} o={0.3} />
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}><Wordmark size={42} /><span style={inter(40, GREY, 500)}>· her build log</span></div>
           <div style={{ ...inter(60, INK, 700), marginTop: 18 }}>Electric fan conversion</div>
@@ -200,9 +203,9 @@ export function build(tl, hook) {
             <div style={{ ...inter(46, "#3A3A3C", 550, { whiteSpace: "normal" }), width: 520 }}>Note: <span style={hi(T.relay)}>relay mounted under the battery tray</span></div>
           </div>
         </div>
-        {later && newE > 0.01 && <div style={{ position: "absolute", left: 120, top: 760 + (1 - clamp(newE)) * 200, width: 960, borderRadius: 34, background: "#fff", padding: "30px 40px", boxSizing: "border-box", opacity: clamp(newE * 2), boxShadow: `0 0 0 5px ${rgba("#34C759", 0.5 * (1 - seg(t, T.logs + 0.4, T.story)))}, 0 20px 40px rgba(0,0,0,.5)` }}>
+        {later && newE > 0.01 && <div style={{ position: "absolute", left: 120, top: 830 + (1 - clamp(newE)) * 200, width: 960, borderRadius: 34, background: "#fff", padding: "30px 40px", boxSizing: "border-box", opacity: clamp(newE * 2), boxShadow: `0 0 0 5px ${rgba("#34C759", 0.5 * (1 - seg(t, T.logs + 0.4, T.story)))}, 0 20px 40px rgba(0,0,0,.5)` }}>
           <div style={inter(56, INK, 700)}>Fan relay replaced</div>
-          <div style={{ display: "flex", gap: 22, marginTop: 10, alignItems: "center" }}><span style={inter(46, RED, 600)}>Oct 2026</span><Who ch="L" name="Two Forks Garage" role="· Leland" bg="#FF9F0A" size={52} /></div>
+          <div style={{ display: "flex", gap: 22, marginTop: 10, alignItems: "center" }}><span style={inter(46, RED, 600)}>Oct 2026</span><Who ch="L" name="Two Forks" role="· Leland" bg="#FF9F0A" size={52} /></div>
           <div style={{ position: "absolute", right: 40, top: 30, width: 150, height: 130 }}><Relay x={0} y={0} s={0.9} /></div>
         </div>}
       </Hood>
@@ -241,8 +244,8 @@ export function build(tl, hook) {
     { at: T.coldwater - 0.12, render: wendell, enter: { kind: "whip", d: 0.42, dir: -1 } },
     { at: T.he - 0.05, render: (t) => hoodShot(t, "read"), enter: { kind: "portal", d: 0.7, rect: { x: PH.x + 14, y: PH.y + 14, w: PH.w - 28, h: PH.h - 28 }, r: 42 } },
     { at: T.found - 0.45, render: tray, enter: { kind: "rise", d: 0.5 } },
-    { at: T.shelfE - 0.05, render: (t) => engine(t, "fixed"), enter: { kind: "match" } },
-    { at: T.before - 0.12, render: (t) => hoodShot(t, "later"), enter: { kind: "rise", d: 0.55 } },
+    { at: T.shelf + 0.2, render: (t) => engine(t, "fixed"), enter: { kind: "match" } },
+    { at: T.logs - 0.35, render: (t) => hoodShot(t, "later"), enter: { kind: "rise", d: 0.55 } },
     { at: T.cta - 0.12, render: (t) => road(t, "end"), enter: { kind: "match" } },
   ];
   const ctaT = heads[heads.length - 1].words[0].t;
@@ -251,9 +254,9 @@ export function build(tl, hook) {
     [T.your + 0.3, "chip-pop"], [T.wired - 0.1, "draw"], [T.hang - 0.2, "slide-soft"], [T.page - 0.3, "pop-soft"], [T.opens, "tap"],
     [T.teller, "tick-soft"], [T.twenty, "tick-soft"], [T.cauto, "tick-soft"], [T.photo - 0.1, "tick-soft"], [T.relay, "pen-write", 0.6],
     [T.tray, "clunk"], [T.tray + 0.45, "tap"], [T.found, "low-hit", 0.6], [T.shelf - 0.2, "part-lift"], [T.shelf + 0.1, "torque-click"],
-    [T.shelfE + 0.05, "tint-swell"], [T.logs - 0.1, "card-rise"], [T.logs + 0.4, "check"], [T.good - 0.1, "clunk"], [ctaT, "cta-pop"],
+    [T.fanOn, "tint-swell"], [T.logs - 0.1, "card-rise"], [T.logs + 0.4, "check"], [T.good - 0.1, "clunk"], [ctaT, "cta-pop"],
   ];
   // road-movie warmth; the band stops while Leland tests the relay and comes back when the fan runs
-  const music = { bpm: 98, root: 52, mode: "major", style: "warm", cut: T.found - 0.5, ret: T.shelfE - 0.05, room: "shop" };
+  const music = { bpm: 98, root: 52, mode: "major", style: "warm", cut: T.found - 0.5, ret: T.shelf + 0.2, room: "shop" };
   return { shots, heads, sfx, music };
 }

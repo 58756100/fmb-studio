@@ -99,14 +99,14 @@ export function build(tl, hook) {
         <div style={{ position: "absolute", left: 0, top: 0, width: W, height: BOX.cy - 60, overflow: "hidden" }}>
           <Coil cx={560} cy={lerp(1260, 900, r)} w={640} rot={lerp(10, -8, r)} dust={1} t={t} />
         </div>
-        <Note x={lerp(1200, 430, n)} y={1440} w={460} h={220} rot={lerp(20, -4, n)} />
+        <Note x={lerp(1200, 430, n)} y={1370} w={460} h={200} rot={lerp(20, -4, n)} />
         {refundIn > 0.01 && <div style={{ position: "absolute", left: lerp(1200, 520, refundIn), top: 1360, width: 480, height: 300, background: "#fff", borderRadius: 10, boxShadow: "0 18px 30px -16px rgba(0,0,0,.4)", padding: 30, boxSizing: "border-box", zIndex: 25 }}>
           <div style={font("Inter", 48, INK, 700)}>Refund</div><div style={{ marginTop: 18, height: 6, width: 300, background: "#E5E5EA" }} /><div style={{ marginTop: 26, height: 6, width: 360, background: "#E5E5EA" }} /></div>}
       </div>
     </AbsoluteFill>;
   };
   // ---------- shot 2: Ben at the desk; the note in front, flips (blank back); he turns the coilover
-  const NOTE = { x: 80, y: 1300, w: 560, h: 280 };
+  const NOTE = { x: 80, y: 1310, w: 520, h: 260 };
   const desk = (t) => {
     const flip = ez(t, at("failed.'") + 0.35, 0.5, EASE.camera);
     const turn = Math.sin((t - T.how) * 1.6) * 14 * seg(t, T.how - 0.3, T.how + 0.3);
@@ -117,7 +117,7 @@ export function build(tl, hook) {
         <div style={{ position: "absolute", left: 0, top: 0, width: W, height: 1310, overflow: "hidden" }}><Cut id="K4-04" cx={720} cy={1180} w={720} shadow={0} /></div>
         <Coil cx={560 + 40 * Math.sin(t * 0.7)} cy={1130 + Math.cos(t * 0.9) * 8} w={540} rot={-24 + turn} />
         <Note x={NOTE.x} y={NOTE.y} w={NOTE.w} h={NOTE.h} flip={flip} rot={-3} />
-        <div style={{ position: "absolute", left: 660, top: 1360, width: 360, padding: "20px 24px", background: PAPER, borderRadius: 8, boxShadow: "0 14px 24px -14px rgba(0,0,0,.35)", transform: "rotate(2deg)",
+        <div style={{ position: "absolute", left: 620, top: 1340, width: 360, padding: "20px 24px", background: PAPER, borderRadius: 8, boxShadow: "0 14px 24px -14px rgba(0,0,0,.35)", transform: "rotate(2deg)",
           opacity: ez(t, at("rick's") - 0.1, 0.3) }}>
           <div style={font("Inter", 40, GREY, 500)}>Return slip</div><div style={{ ...font("Inter", 44, INK, 600), marginTop: 6 }}>R. Doyle · '72 F-100</div>
         </div>
@@ -131,12 +131,12 @@ export function build(tl, hook) {
     return <AbsoluteFill>
       <Desk t={t} edge={1500} />
       <Coil cx={540} cy={1080} w={1000} rot={-16 + 4 * Math.sin(t * 0.6)} clean={clamp(c)} />
-      <div style={{ position: "absolute", left: 80, top: 1560, ...font("Inter", 44, GREY, 600), opacity: ez(t, T.bad - 0.1, 0.3) }}>Bad unit?</div>
-      <div style={{ position: "absolute", right: 80, top: 1560, ...font("Inter", 44, GREY, 600), opacity: ez(t, T.hard - 0.1, 0.3) }}>Hard miles?</div>
+      <div style={{ position: "absolute", left: 80, top: 1450, ...font("Inter", 44, GREY, 600), opacity: ez(t, T.bad - 0.1, 0.3) }}>Bad unit?</div>
+      <div style={{ position: "absolute", right: 80, top: 1450, ...font("Inter", 44, GREY, 600), opacity: ez(t, T.hard - 0.1, 0.3) }}>Hard miles?</div>
     </AbsoluteFill>;
   };
   // ---------- shot 4/5: the refund form over the slip; then the slip's last line lifts into the truck's page; case file
-  const FORM = { x: 140, y: 620, w: 800, h: 760 };
+  const FORM = { x: 96, y: 626, w: 888, h: 850 };
   const PAGE = { x: 60, y: 540, w: 960 };
   const slip = (t, phase) => {
     const off = phase === 0 ? 0 : ez(t, SLIP + 0.05, 0.6, EASE.camera); // the form moves aside, uncovering the slip
@@ -226,7 +226,7 @@ export function build(tl, hook) {
   const BOXWIPE = (t, p) => { const x = lerp(W + 400, -400, EASE.io(p)); return <div style={{ position: "absolute", left: 0, top: 0, zIndex: 50, filter: "url(#mbx3)" }}><Cut id="D14" cx={x} cy={1000} w={900} shadow={0} /></div>; };
   const shots = [
     { at: 0, render: hookShot },
-    { at: CUT, render: desk, enter: { kind: "portal", d: 0.6, rect: { x: 430, y: 1440, w: 460, h: 220 }, r: 8 } },
+    { at: CUT, render: desk, enter: { kind: "portal", d: 0.6, rect: { x: 430, y: 1370, w: 460, h: 200 }, r: 8 } },
     { at: MORPH, render: morph, enter: { kind: "portal", d: 0.6, rect: { x: 330, y: 960, w: 460, h: 300 }, r: 30 } },
     { at: REF, render: (t) => slip(t, 0), enter: { kind: "wipe", d: 0.7, dir: 1, edge: (p) => lerp(W + 50, FORM.x, EASE.out(p)), obj: FORMWIPE } },
     { at: SLIP, render: (t) => slip(t, 1), enter: { kind: "match" } },
