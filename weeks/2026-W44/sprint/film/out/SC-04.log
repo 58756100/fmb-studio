@@ -4,9 +4,11 @@ SC-04 C 39.63s 8 shots 7 heads 37 sfx music
 SC-04-A master (AAC) I=-14.10 LUFS TP=-1.80 dBTP LRA=3.6 | cues 46 (37 reel, 9 auto)
 SC-04-B master (AAC) I=-14.10 LUFS TP=-1.60 dBTP LRA=3.5 | cues 46 (37 reel, 9 auto)
 SC-04-C master (AAC) I=-14.10 LUFS TP=-1.90 dBTP LRA=3.7 | cues 46 (37 reel, 9 auto)
-done out/video/SC-04-A.mp4 1208 frames 1632s
-done out/video/SC-04-B.mp4 1242 frames 1351s
-done out/video/SC-04-C.mp4 1189 frames 1654s
+done out/video/SC-04-A.mp4 1208 frames 1382s
+SC-04-B: opener 0-410 + A from 377, total 1242
+done out/video/SC-04-B-part.mp4 1242 frames 222s
+SC-04-C: opener 0-357 + A from 377, total 1189
+done out/video/SC-04-C-part.mp4 1189 frames 195s
 == SC-04-A
   file: out/masters/SC-04-A.mp4
   video: h264 1080x1920 30/1 frames=1208
@@ -23,8 +25,8 @@ done out/video/SC-04-C.mp4 1189 frames 1654s
   true_peak: -1.8
   subtitle_streams: none
   cta: "Send to whoever takes over" at 36.66s, last shot starts 30.89s (over final frame)
-out/masters/SC-04-A.mp4: 80 windows, lowest 0.288 at 20.5s, static(<0.35) 2, longest freeze 0.00s at 0.03s
-  static: 20.5(0.29) 22.5(0.32)
+out/masters/SC-04-A.mp4: 80 windows, lowest 0.441 at 38.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
 == SC-04-B
   file: out/masters/SC-04-B.mp4
   video: h264 1080x1920 30/1 frames=1242
@@ -41,8 +43,8 @@ out/masters/SC-04-A.mp4: 80 windows, lowest 0.288 at 20.5s, static(<0.35) 2, lon
   true_peak: -1.6
   subtitle_streams: none
   cta: "Send to whoever takes over" at 37.78s, last shot starts 32.01s (over final frame)
-out/masters/SC-04-B.mp4: 82 windows, lowest 0.202 at 23.5s, static(<0.35) 2, longest freeze 0.00s at 0.03s
-  static: 22.5(0.31) 23.5(0.20)
+out/masters/SC-04-B.mp4: 82 windows, lowest 0.486 at 23.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
 == SC-04-C
   file: out/masters/SC-04-C.mp4
   video: h264 1080x1920 30/1 frames=1189
@@ -59,14 +61,10 @@ out/masters/SC-04-B.mp4: 82 windows, lowest 0.202 at 23.5s, static(<0.35) 2, lon
   true_peak: -1.9
   subtitle_streams: none
   cta: "Send to whoever takes over" at 36.02s, last shot starts 30.25s (over final frame)
-out/masters/SC-04-C.mp4: 79 windows, lowest 0.248 at 13.0s, static(<0.35) 4, longest freeze 0.00s at 0.03s
-  static: 13.0(0.25) 19.5(0.25) 20.5(0.26) 21.0(0.34)
+out/masters/SC-04-C.mp4: 79 windows, lowest 0.446 at 21.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
 ../storyboard/SC-04-final-sheet.jpg (2244, 1420)
-SC-04-A: 40.27s (VO 39.06 + tail 1.21), I -14.1 LUFS, TP -1.8 dBTP, lowest energy 0.288 at 20.5s, lag 0 FAIL static [[20.5, 0.2875720262527466], [22.5, 0.3161872327327728]]
-SC-04-B: 41.40s (VO 40.18 + tail 1.22), I -14.1 LUFS, TP -1.6 dBTP, lowest energy 0.202 at 23.5s, lag 0 FAIL static [[22.5, 0.3069588243961334], [23.5, 0.2018621265888214]]
-SC-04-C: 39.63s (VO 38.42 + tail 1.21), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.248 at 13.0s, lag 0 FAIL static [[13.0, 0.24816305935382843], [19.5, 0.2504747807979584], [20.5, 0.2617664635181427], [21.0, 0.3389233648777008]]
-EXIT 1
 == gate
-SC-04-A: 40.27s (VO 39.06 + tail 1.21), I -14.1 LUFS, TP -1.8 dBTP, lowest energy 0.288 at 20.5s, lag 0 FAIL static [[20.5, 0.2875720262527466], [22.5, 0.3161872327327728]]
-SC-04-B: 41.40s (VO 40.18 + tail 1.22), I -14.1 LUFS, TP -1.6 dBTP, lowest energy 0.202 at 23.5s, lag 0 FAIL static [[22.5, 0.3069588243961334], [23.5, 0.2018621265888214]]
-SC-04-C: 39.63s (VO 38.42 + tail 1.21), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.248 at 13.0s, lag 0 FAIL static [[13.0, 0.24816305935382843], [19.5, 0.2504747807979584], [20.5, 0.2617664635181427], [21.0, 0.3389233648777008]]
+SC-04-A: 40.27s (VO 39.06 + tail 1.21), I -14.1 LUFS, TP -1.8 dBTP, lowest energy 0.441 at 38.5s, lag 0 OK
+SC-04-B: 41.40s (VO 40.18 + tail 1.22), I -14.1 LUFS, TP -1.6 dBTP, lowest energy 0.486 at 23.0s, lag 0 OK
+SC-04-C: 39.63s (VO 38.42 + tail 1.21), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.446 at 21.0s, lag 0 OK
