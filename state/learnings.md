@@ -17,7 +17,7 @@
 |---|---|---|---|
 
 ## Pre-flight diagnostics (2026-10-18, from W42 VO word timings, NOT platform metrics)
-- No metrics yet: 11 IG reels posted Oct 12-16, but this run had no IG/YT/TT credentials and those APIs were blocked (403). YouTube: 0 uploads so far (all YT items still `approved`), so no retention curves exist. TikTok: 8 inbox drafts, post status unknown.
+- No metrics yet: 11 IG reels posted Oct 12-16, but this run had no IG/YT/TT credentials and those APIs were blocked (403). YouTube: 0 uploads so far (Wayne confirmed 2026-10-18: posts are only on Instagram and TikTok, nothing on YouTube), so no YouTube retention curves exist and the exact-drop-second analysis cannot run; use IG/TikTok native retention graphs (Wayne to screenshot or paste) until YT uploads start. All W42 YT queue rows are still `approved`, never uploaded.
 - Pace cliff at the hook/body seam: hooks run 3.1-4.1 words/s, bodies 1.9-2.8 w/s (all 11 concepts). The VO slows by ~30-40% exactly at 3-5 s, the window where Wayne sees the drop. Rule: body line 1 must match hook pace (>=3 w/s) and carry no pause >0.3 s in the first 4 s of body.
 - Dead air early in the body: C2 0.56 s after "Typing..." (body 0.8 s = ~3.5 s total), G1 0.66 s after "Dave." (body 7.2 s), P2 0.51 s after "twenty-four." (body 8.1 s). Keep deliberate silences after 12 s only.
 - Runtime overrun vs target: P3 39-40 s (target 32), X2-B 36.8 s (32), P1 34-35 s (32), P2 32-35 s (32), C3 32-34 s (30). Cap at target; overruns stretch the tail and kill completion.
