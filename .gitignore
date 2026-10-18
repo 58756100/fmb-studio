@@ -7,3 +7,5 @@ node_modules/
 !kit/audio/vo_final.wav
 node_modules
 kit/storyboard/w42/out/
+__pycache__/
+*.pyc
