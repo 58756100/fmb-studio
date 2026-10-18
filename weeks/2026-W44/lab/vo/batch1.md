@@ -38,3 +38,36 @@ Raw runtimes went up versus the first pass (for example A-L2 from 29.96 to 32.50
 - **Casting:** B-lane spec VO direction named Eric (B-L1, B-L3) and Chris (B-L2); the calendar's voice column (Emma, Emma, Jerry B.) was used per the brief. Multi-speaker C3 reels cast from the roster with the best fit; Gus on Jerry B. is the weakest match.
 - **Speed per reel:** tts.py takes one speed per call, so each multi-voice reel runs all its voices at the reel's pace. Per-voice speed would need a tts.py change; not made.
 - **Model:** eleven_v4 for every call.
+
+## CTA patch, 2026-10-17
+
+Closing CTAs replaced with share/save lines, spoken by each reel's narrator at the reel's own speed and the same atempo as its master. Masters on `renders` at `2026-W44/lab/vo/<id>/` (one commit per reel). Words files here are the new tails. Hook openers (hook-B/C) are unchanged: none of them carries a CTA or a brand name.
+
+| Reel | Narrator | Speed / stab. / style | atempo | New CTA line | Chars | Old CTA (removed) | Master (s) before to after |
+|---|---|---|---|---|---|---|---|
+| A-L1 | Jerry B. | 1.08 / 0.55 / 0.10 | 1.038 | Got a friend whose best upgrade has zero proof? Send them this. | 63 | Follow for better build records. | 28.00 to 30.23 |
+| A-L2 | Jerry B. | 1.00 / 0.55 / 0.10 | 1.06 | Send this to the shop owner whose best work never makes the photos. | 67 | Follow for better build records. | 30.67 to 32.61 |
+| A-L3 | Emma | 1.00 / 0.50 / 0.15 | 1.06 | Know a parts brand that keeps getting guessed? Send them this. | 62 | Follow for better build records. | 29.34 to 30.61 |
+| B-L1 | Emma | 1.08 / 0.50 / 0.15 | 1.032 | Send this to the collector who still says, trust me, it's done. | 63 | Follow for documented builds. | 30.01 to 32.58 |
+| B-L2 | Emma | 1.08 / 0.50 / 0.15 | 1.06 | Got a buddy picking a shop right now? Send this their way. | 58 | Follow for documented builds. | 30.22 to 31.16 |
+| B-L3 | Jerry B. | 1.08 / 0.55 / 0.10 | 1.06 | Send this to whoever answers 'what turbo is that' first in your group chat. (full re-render) | 417 (whole master) | Follow for documented builds. | 30.91 to 32.20 |
+| C3-COL | Justin Case | 1.04 / 0.50 / 0.15 | 1.022 | Save this for the next time someone in your crew swears they remember the year. | 79 | fuel my build dot com. | 27.00 to 29.45 |
+| C3-GAR | Justin Case | 0.96 / 0.50 / 0.15 | none | Shop owners, save this one for the next 'you never told me'. | 60 | fuel my build dot com. | 25.58 to 27.59 |
+| C3-SUP | Justin Case | 0.96 / 0.50 / 0.15 | 1.06 | Send this to the parts brand still answering 'rattle, fix?' with ten questions. | 79 | fuel my build dot com. | 29.85 to 32.84 |
+
+**Characters used in this patch: 948 of 1,500** (8 CTA lines at 531, plus B-L3 full master at 417). One pass, no retakes.
+
+### Joins
+- Splice method (eight reels): the old CTA starts at the audio onset found from the master's own waveform, not from words.json. The cut sits 0.05 s before that onset, inside verified digital silence. The silence before the new line is set to 0.40 s from the last body speech (measured 0.39 to 0.41 s in the output). A 12 ms crossfade is applied at each join. The body prefix is bit-identical to the old master.
+- Tails: the new tail matches the old tail, with a 0.10 s minimum.
+- B-L3 was re-rendered in full rather than spliced, because "Demo Brand B" sits in line 1 and "Demo Brand A" in line 4, and each would have been a join inside a single take. The line 2 "Brand B" and line 1 "Definitely B" are not literal "Demo Brand" strings and were left as written.
+
+### Risky join
+- **B-L1:** the word timing for "Follow" sat 0.17 s after the audio onset (word-time cut would have landed 0.12 s inside the CTA's first word). The cut was placed on the audio onset instead. Checked: silence before the cut, 0.40 s seam, no clipping. Worth a listen.
+- **C3-GAR:** word timing trailed the audio by 0.19 s at the old CTA. Same audio-based cut, seam verified.
+
+### Flags
+- **Runtimes grew.** All masters now run longer than their scripts' targets (targets 28 / 30 / 27 s): A-L1 +8%, A-L2 +16%, A-L3 +9%, B-L1 +9%, B-L2 +4%, B-L3 +7%, C3-COL +9%, C3-GAR +2%, C3-SUP +22%. The new CTA is longer than the old "Follow ..." tag. Per the brief, words were not cut and atempo was not raised past the existing factor. Options for Wayne: trim a body line (retention-editor), or accept.
+- **B-L3 line 2 still says "Brand B"** ("Now Brand B gets the credit") next to Vantor and Kestrel. Left as written because the brief named only "Demo Brand B" and "Demo Brand A". Check with Wayne.
+- **B-L3 hook openers** do not mention the names, so they were not re-rendered.
+- **Word ends** are clamped to file length (ElevenLabs tail timing).
