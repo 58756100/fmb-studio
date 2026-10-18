@@ -41,7 +41,7 @@ const load = (ids) => {
 const camLife = (t, id, k = 1) => {
   const d = drift(t, id + "cam", 11 * k, 0.55), z = drift(t, id + "zoom", 1, 0.3);
   const sx = 5 * k * Math.sin((2 * Math.PI * t) / 3.7), sy = 4 * k * Math.sin((2 * Math.PI * t) / 4.3 + 1); // no shared zero-velocity point
-  return `translate(${(d.x + sx).toFixed(2)}px, ${(d.y + sy).toFixed(2)}px) rotate(${(d.r * 0.5 * k).toFixed(3)}deg) scale(${(1.025 + 0.012 * k * z.s).toFixed(4)})`;
+  return `translate(${(d.x + sx).toFixed(2)}px, ${(d.y + sy).toFixed(2)}px) rotate(${(d.r * 0.5 * k).toFixed(3)}deg) scale(${(1.006 + 0.006 * k * z.s).toFixed(4)})`;
 };
 const Reel = ({ id, hook }) => {
   const frame = useCurrentFrame(), t = frame / FPS;

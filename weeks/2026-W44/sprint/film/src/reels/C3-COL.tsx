@@ -63,7 +63,7 @@ export function build(tl, hook) {
     fx(B("Witness: himself.", T.he), [T.witness, T.himself]),
     B("Fine. Look it up.", T.fine, { exit: { at: T.int2 - 0.3, mode: "push", to: { x: 540, y: TAPE_Y } } }),
     B("Two years off.", T.two, { key: [2] }),
-    B("Both of us.", T.both, { hold: 0.6 }),
+    B("Both of us.", T.both, { exit: { at: Math.max(T.both + 0.75, T.nobody - 0.42), mode: "up" } }),
     B("Nobody won.", T.nobody, { hold: 0.5 }),
     B("They split the check.", T.split - 0.2, { key: [3], hold: 0.5 }),
     { ...ctaHead(tl, "Save this one", T.date), key: [2] },
@@ -133,7 +133,20 @@ export function build(tl, hook) {
       </div>
     </AbsoluteFill>;
   };
-  return { shots: [{ at: 0, render: scene }], heads };
+  // sound: one cue per on-screen action (one continuous shot; headline landings are added by audio/score.py)
+  const slap = hook === "A" ? tl.hook[2].s : hook === "C" ? tl.hook[0].s - 0.5 : tl.hook[5].s;
+  const ctaT = heads[heads.length - 1].words[0].t;
+  const sfx = [
+    [Math.max(0, slap - 0.12), "leather-slap"], [T.intake - 0.1, "part-lift"], [T.intake, "pencil-line"],
+    [T.y21 - 0.15, "flag-flutter"], [T.y21 - 0.1, "air-glide"], [T.y17 - 0.2, "air-glide-long"], [T.y17 - 0.05, "flag-flutter"], [T.y17 + 0.1, "tint-swell"],
+    [T.he - 0.1, "air-pull"], [T.witness, "leather-slide"], [T.fine - 0.05, "air-slow-push"], [T.look - 0.05, "tape-split"],
+    [T.int2 - 0.25, "card-rise"], [T.june - 0.05, "value-tick"], [T.june + 0.5, "photo-settle"], [T.her, "pop-soft"], [T.her + 0.25, "tick-soft"],
+    [T.two - 0.25, "card-fold"], [T.two + 0.2, "measure-draw-x2"], [T.two + 0.35, "card-settle"], [T.off - 0.1, "label-in"],
+    [T.split - 0.1, "leather-slide"], [T.split + 0.1, "tint-drain"], [T.date - 0.3, "paper-fold", 0.7], [ctaT, "cta-pop"],
+  ];
+  // music (as in the lab): the band stops for the look-up, dead air with the restaurant under it, back in on "two years off"
+  const music = { bpm: 96, root: 50, mode: "minor", style: "warm", cut: T.look - 0.4, ret: T.two - 0.25, room: "restaurant" };
+  return { shots: [{ at: 0, render: scene }], heads, sfx, music };
 }
 
 const LogCard = ({ t, p, T, x }) => {

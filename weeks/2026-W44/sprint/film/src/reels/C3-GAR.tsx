@@ -138,7 +138,7 @@ export function build(tl, hook) {
         <div style={{ position: "absolute", left: BX - 22, top: BY - 22, width: COLS * CW + 44, height: 4 * (CH + 10) + 34, borderRadius: 26, background: "#0B0B0C", boxShadow: "0 30px 50px -24px rgba(0,0,0,.5)", opacity: 1 - 0.75 * boardDim }} />
         <div style={{ opacity: 1 - 0.75 * boardDim }}>
           <Row t={t} row={0} text={r0} t0={r0t0} prev={t < T.log - 0.2 ? "NEVER TOLD ME" : "MON  CAR IN"} prevAt={0} color={r0 === "NEVER TOLD ME" ? "#FF6B6E" : "#F5F5F7"} />
-          <Row t={t} row={1} text={t < T.tue - 0.15 ? (t >= T.okafor ? "PELL ST GARAGE".slice(0, COLS) : "") : t < T.log - 0.2 ? "TUE  FOUND IT" : ""} t0={t < T.tue - 0.15 ? T.okafor : t < T.log - 0.2 ? T.tue - 0.05 : T.log - 0.1} prev={t < T.tue - 0.15 ? "" : t < T.log - 0.2 ? "PELL ST GARAG" : "TUE  FOUND IT"} prevAt={0} color="#C7C7CC" />
+          <Row t={t} row={1} text={t < T.tue - 0.15 ? (t >= T.okafor ? "PELL STREET" : "") : t < T.log - 0.2 ? "TUE  FOUND IT" : ""} t0={t < T.tue - 0.15 ? T.okafor : t < T.log - 0.2 ? T.tue - 0.05 : T.log - 0.1} prev={t < T.tue - 0.15 ? "" : t < T.log - 0.2 ? "PELL ST GARAG" : "TUE  FOUND IT"} prevAt={0} color="#C7C7CC" />
           <Row t={t} row={2} text={t >= T.wed - 0.1 && t < T.log - 0.2 ? "WED  PARTS" : ""} t0={t < T.log - 0.2 ? T.wed - 0.1 : T.log} prev={t >= T.log - 0.2 ? "WED  PARTS" : ""} prevAt={0} />
           <Row t={t} row={3} text={t >= T.thu - 0.1 && t < T.log - 0.2 ? thuText : ""} t0={t < T.should - 0.05 ? T.thu - 0.1 : T.should - 0.05} prev={t >= T.should - 0.05 && t < T.log - 0.2 ? "THU" : t >= T.log - 0.2 ? "THU  SORRY" : ""} prevAt={0}
             color={thuText.includes("SORRY") ? "#FF6B6E" : "#F5F5F7"} twitchAt={twitches} />
@@ -154,5 +154,18 @@ export function build(tl, hook) {
       </div>
     </AbsoluteFill>;
   };
-  return { shots: [{ at: 0, render: scene }], heads };
+  // sound: one cue per on-screen action (one continuous shot; headline landings are added by audio/score.py)
+  const ctaT = heads[heads.length - 1].words[0].t;
+  const twitches = [T.so - 0.2, T.didnt + 0.1, T.hang - 0.3].filter((x) => x < T.should - 0.1);
+  const sfx = [
+    [bellAt, "bell-ding"], [hook === "C" ? 0.25 : 0.05, "flap-clatter-13"], [hook === "B" ? h0 - 0.05 : 0.45, "chip-drop-red"],
+    [T.okafor - 0.05, "punch-in-thump"], [T.okafor + 0.02, "flap-clatter-13"], [T.tue - 0.15, "flap-clatter-13"], [T.wed - 0.1, "flap-clatter-10"], [T.thu - 0.1, "flap-spin-slowing"],
+    ...twitches.map((x) => [x, "flap-twitch"]),
+    [T.hang - 0.1, "monitor-slide"], [T.hang + 0.2, "monitor-swivel"], [T.logged - 0.6, "typing:1.0"], [T.logged - 0.3, "label-in"], [T.logged, "value-tick"], [T.logged + 0.6, "emph-pop"],
+    [T.photo - 0.15, "shutter"], [T.gus - 0.2, "pop-soft"], [T.still - 0.2, "air-slow-push"], [T.should - 0.15, "monitor-slide-out"], [T.should - 0.05, "flap-clatter-5"],
+    [T.engine - 0.6, "air-glide"], [T.engine - 0.2, "chip-fade"], [T.log - 0.2, "flap-clatter-full"], [ctaT, "cta-pop"],
+  ];
+  // music (as in the lab): the board stalls on Thursday and the music stops; shop air only until "you still should've called"
+  const music = { bpm: 92, root: 45, mode: "minor", style: "observe", cut: T.thu - 0.1, ret: T.still - 0.25, room: "shop" };
+  return { shots: [{ at: 0, render: scene }], heads, sfx, music };
 }

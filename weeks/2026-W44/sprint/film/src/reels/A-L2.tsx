@@ -70,7 +70,7 @@ export function build(tl, hook) {
     B("More to judge.", T.more, { key: [2] }),
     B("Connected on a build page", T.we, { key: [3, 4] }),
     B("Share its public link.", T.share, { key: [3] }),
-    ...(T.what && T.what < T.follow ? [B("Easy until you do it?", T.what + 0.5, { key: [0] })] : []),
+    ...(T.what && T.what < T.follow ? [B("Easy until you do it?", T.what + 0.5, { key: [0], exit: { at: T.follow - 0.32, mode: "up" } })] : []),
     { ...ctaHead(tl, "Send this to the shop owner", T.follow), key: [4, 5] },
   ];
   // non-verbatim heads: spread over their spoken line
@@ -78,7 +78,7 @@ export function build(tl, hook) {
   const hi = (txt) => heads.find((h) => h.words.map((w) => w.w).join(" ").startsWith(txt));
   fix(hi("Connected"), [T.we + 0.2, at("details"), at("build", 1), T.page]);
   fix(hi("What the"), [at("what"), at("the", 1), T.photo, T.leaves, at("out")]);
-  if (hi("Easy")) fix(hi("Easy"), [at("easy"), at("until"), at("you", 2), at("do"), at("it", 2)]);
+  if (hi("Easy")) { const u = at("until"); fix(hi("Easy"), [at("easy"), u, tl.after("you", u), tl.after("do", u), tl.after("it", u)]); }
 
   // the record behind Shop B's photo
   const rows = [
@@ -152,6 +152,16 @@ export function build(tl, hook) {
     { at: BACK, render: s3, enter: { kind: "match" } },
   ];
   heads[heads.length - 1].dot = tl.last + 0.1;
-  return { shots, heads };
+  // sound: one cue per on-screen action (transitions and headline landings are added by audio/score.py)
+  const ctaT = heads[heads.length - 1].words[0].t;
+  const sfx = [
+    [T.which, "tick-soft"], [T.hire - 0.1, "slide-soft"], [T.hire + 0.45, "slide-soft"], [T.cant, "chip-fade"],
+    [OPEN + 0.2, "paper-unfold"], [rows[0].at, "card-settle"], [rows[1].at, "shutter"], [rows[2].at, "value-tick"], [rows[3].at, "stamp"], [rows[4].at, "pop-soft"],
+    [T.more - 0.1, "slide-soft"], [T.more + 0.05, "paper-unfold", 0.7], [T.we - 0.05, "whip"], [T.we + 0.1, "card-rise"], [T.fuel, "pop-soft"],
+    [T.share + 0.3, "typing:0.82"], [T.link, "emph-pop"], [ctaT, "cta-pop"],
+  ];
+  // music: tape stop into the open (what the photo leaves out), silence, back in on the first record row
+  const music = { bpm: 92, root: 52, mode: "minor", style: "warm", cut: OPEN - 0.55, ret: rows[0].at };
+  return { shots, heads, sfx, music };
 }
 const CTA_DOT = { x: 640, y: 446 };

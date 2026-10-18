@@ -124,6 +124,10 @@ if cut < DUR:  # tape stop into the cut (0.18 s, ends on the cut), dead silence 
     pos = np.clip(np.cumsum(np.linspace(1, 0.08, n_)), 0, n_ - 1).astype(int)
     music[ts:te] = sg[pos] * np.linspace(1, 0, n_)[:, None] ** 0.6
     music[te:min(N, L(ret))] = 0
+if M.get("one_note") and cut < DUR:  # (lab C3-SUP) the music thins to one held note under the record
+    n = L(ret - cut); f = note(R + 12); x = (sine(f, n) + 0.3 * sine(2 * f, n) + 0.08 * sine(3.01 * f, n)) * (0.85 + 0.15 * sine(0.9, n))
+    x *= np.minimum(1, np.arange(n) / (0.25 * SR)) * np.minimum(1, (n - np.arange(n)) / (0.2 * SR)) * 0.12
+    add(music, x, cut, 1.0)
 # ending: fade the music out over the last 0.6 s
 music[-L(0.6):] *= np.linspace(1, 0, L(0.6))[:, None] ** 1.5
 
@@ -352,6 +356,19 @@ for t, k, g in cues:
     place(t, k)
     if before is not None: sfx[:] = before + (sfx - before) * g
 
+# room tone (lane C stories: restaurant / shop / office), continuous and low, stays through the music cut
+room = np.zeros((N, 2))
+if M.get("room"):
+    n = N
+    if M["room"] == "restaurant":
+        base_ = bp(noise(n), 250, 2600) * (0.6 + 0.4 * lp(np.abs(noise(n)), 2)[:n] * 8).clip(0.3, 1.4)
+        for _ in range(int(DUR / 2.2)): add(room, tink(rng.uniform(2800, 4200), 0.05) * 0.4, rng.uniform(0.5, DUR - 0.5), 0.5, rng.uniform(-.7, .7))
+    elif M["room"] == "shop":
+        base_ = lp(noise(n), 500) * 0.6 + (sine(60, n) * 0.25 + sine(120, n) * 0.18) + bp(noise(n), 900, 3000) * 0.08
+    else:
+        base_ = lp(noise(n), 1800) * 0.4 + sine(50, n) * 0.06
+    room[:, 0] += base_; room[:, 1] += np.roll(base_, 2400)
+
 # ------------------------------------------------------------------ VO track (hook B/C openers spliced onto the body, as in makeTL)
 def mono(path):
     x, sr = sf.read(os.path.join(FILM, "public", "vo", ID, path), dtype="float32", always_2d=True); x = x.mean(1)
@@ -381,7 +398,8 @@ duck = np.ones(N)
 for a, b in wins: duck[max(0, L(a - 0.08)):min(N, L(b + 0.2))] = 10 ** (-7 / 20)
 k = L(0.08); duck = np.convolve(np.pad(duck, (k, k), mode="edge"), np.ones(k) / k, mode="same")[k:-k]
 music_d = music * duck[:, None]
-bed = music_d + sfx
+if M.get("room"): room *= 10 ** ((-42 - rms_db(room)) / 20)
+bed = music_d + sfx + room
 mix = bed + vo[:, None]
 os.makedirs(OUT, exist_ok=True)
 base = os.path.join(OUT, f"{ID}-{HOOK}")

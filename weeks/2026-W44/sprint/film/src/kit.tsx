@@ -309,7 +309,7 @@ export const FlowText = ({ t, head, st }) => {
       if (c.fade != null) op *= 1 - seg(t, c.fade, c.fade + 0.25);
     }
     const dot = head.dot && i === head.words.length - 1 ? <PeriodDrop t={t} t0={head.dot} x={pos[i].w + size * 0.06} y={size * 0.86 - size * 0.2} size={size * 0.2} color={st.accent} /> : null;
-    return <div key={i} style={{ position: "absolute", left: pos[i].x, top: pos[i].y, height: size * 1.06, clipPath: dot ? undefined : clip, zIndex: isCarry ? 61 : 60 }}>
+    return <div key={i} style={{ position: "absolute", left: pos[i].x, top: pos[i].y, height: size * 1.06, clipPath: dot && t >= head.dot ? undefined : clip, zIndex: isCarry ? 61 : 60 }}>
       {dot}
       <div style={{ fontFamily: st.font, fontSize: size, fontWeight: st.weight, letterSpacing: st.ls, fontVariationSettings: st.opsz ? `'opsz' ${st.opsz}` : undefined,
         textTransform: st.upper ? "uppercase" : "none", lineHeight: 1.12, whiteSpace: "pre", color: col, opacity: op, transformOrigin: "50% 60%",

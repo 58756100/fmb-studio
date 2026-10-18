@@ -62,10 +62,10 @@ export function build(tl, hook) {
     fx(B("Shop B's public build", T.opens), [at("shop", 2), at("b's"), T.pub, at("build")]),
     B("Garage: Shop B.", T.garage),
     B("Contributor: Eli.", T.contrib, { key: [1] }),
-    B("Dated log.", T.dated, { hold: 0.5 }),
+    B("Dated log.", T.dated, { exit: { at: T.install - 0.4, mode: "up" } }),
     B("Install photos.", T.install - 0.1, { hold: 0.8 }),
     fx(B("Who did what.", T.now), [T.whodid, at("did", 2), at("what")]),
-    B("Which would you call?", T.which, { key: [3] }),
+    B("Which would you call?", T.which, { key: [3], exit: { at: T.follow - 0.35, mode: "up" } }),
     { ...ctaHead(tl, "Send this their way", T.follow), key: [3] },
   ];
   // "Who installed the engine?" must find "who" after "but"
@@ -172,5 +172,17 @@ export function build(tl, hook) {
     { at: TAPB, render: page, enter: { kind: "tap", d: 0.55, rect: { x: 60, y: 1340, w: 960, h: 130 }, r: 44 } },
     { at: BACK2, render: (t) => pair(t, 3), enter: { kind: "pull", d: 0.6, rect: { x: 60, y: 1080, w: 960, h: 420 } } },
   ];
-  return { shots, heads };
+  // sound: one cue per on-screen action (transitions and headline landings are added by audio/score.py)
+  const ctaT = heads[heads.length - 1].words[0].t;
+  const sfx = [
+    [SWAP + 0.05, "pop-soft"], [SWAP + 0.2, "card-rise"], [SWAP + 0.4, `typing:${Math.max(0.5, T.swap - 0.1 - SWAP).toFixed(2)}`], [T.swap + 0.1, "pop-soft"], [T.swap + 0.22, "pop-soft"],
+    [T.who - 0.1, "tick-soft"], [T.same, "measure-draw-x2"],
+    [TAPA + 0.15, "tick-ripple"], [T.a - 0.2, "card-fold"], [T.a + 0.25, "muted-stop"], [TAPB - 0.9, "notif"],
+    [T.fuel - 0.1, "pop-soft"], [T.garage - 0.1, "check"], [T.contrib - 0.1, "check"], [T.dated - 0.15, "card-rise"],
+    [T.install - 0.1, "shutter"], [T.install + 0.25, "shutter"], [T.now - 0.1, "slide-soft"],
+    [BACK2 + 0.3, "chip-fade"], [T.call, "tick-soft"], [ctaT, "cta-pop"],
+  ];
+  // music: Shop B's reply lands in silence; the music returns as the build page opens
+  const music = { bpm: 104, root: 50, mode: "major", style: "warm", cut: TAPB - 1.0, ret: TAPB };
+  return { shots, heads, sfx, music };
 }

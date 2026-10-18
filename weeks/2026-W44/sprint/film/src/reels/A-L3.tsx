@@ -71,7 +71,7 @@ export function build(tl, hook) {
   fx(heads.find((h) => h.words[0].w === "In"), [at("both"), at("in"), at("parts"), T.registry]);
   fx(heads.find((h) => h.words[0].w === "Build"), [T.page, at("page"), T.pub, T.link]);
   fx(heads.find((h) => h.words[0].w === "Share"), [T.share, at("that"), at("when"), at("someone"), at("asks")]);
-  const most = heads.find((h) => h.words[0].w === "Most"); if (most) fx(most, [T.mis - 0.3, T.mis, at("part", 2)]);
+  const most = heads.find((h) => h.words[0].w === "Most"); if (most) fx(most, [T.mis - 0.3, T.mis, tl.after("part", T.mis)]);
   heads[heads.length - 1].dot = tl.last + 0.1;
 
   // ---------- shot 1 / 4: the thread under the Supra photo
@@ -89,7 +89,7 @@ export function build(tl, hook) {
         {!after && <>
           <Comment t={t} t0={hook === "A" ? tl.hook[3].s - 0.25 : tl.hook[1].s} y={1000} x={150} w={834} who={P.r1} dim={big}>Brand B, I think.</Comment>
           <Comment t={t} t0={T.repeats - 0.2} y={lerp(1000, 1180, ez(t, T.repeats - 0.2, 0.45, EASE.camera))} x={150} w={834} s={1 + 0.12 * big} who={P.r2} z={6} hl={big}>
-            Brand B<span style={{ position: "relative", opacity: 1 - seg(t, T.now, T.now + 0.3) }}>, I think<span style={{ position: "absolute", left: 0, top: "52%", height: 6, background: pal.em, width: `${strike * 100}%` }} /></span>.
+            Brand B<span style={{ position: "relative", display: "inline-block", verticalAlign: "bottom", whiteSpace: "nowrap", overflow: seg(t, T.now, T.now + 0.3) > 0 ? "hidden" : "visible", opacity: 1 - seg(t, T.now, T.now + 0.3), maxWidth: `${(1 - EASE.camera(seg(t, T.now + 0.1, T.now + 0.5))) * 6}em` }}>, I think<span style={{ position: "absolute", left: 0, top: "52%", height: 6, background: pal.em, width: `${strike * 100}%` }} /></span>.
           </Comment>
         </>}
         {after && <>
@@ -165,5 +165,15 @@ export function build(tl, hook) {
     { at: PUNCH, render: s3, enter: { kind: "punch" } },
     { at: BACK, render: (t) => thread(t, 2), enter: { kind: "match" } },
   ];
-  return { shots, heads };
+  // sound: one cue per on-screen action (transitions and headline landings are added by audio/score.py)
+  const ctaT = heads[heads.length - 1].words[0].t;
+  const sfx = [
+    [hook === "A" ? tl.hook[3].s - 0.25 : tl.hook[1].s, "msg-pop"], [T.repeats - 0.2, "msg-pop"], [T.repeats + 0.35, "pencil-line"], [T.now, "chip-fade"], [T.now + 0.3, "emph-pop"],
+    [T.brand1 - 0.3, "card-rise"], [T.name + 0.45, "value-tick"], [T.brand2 + 0.75, "stamp"], [T.on + 0.35, "value-tick"], [T.on + 0.4, "draw"],
+    [T.page - 0.15, "slide-soft"], [T.page - 0.05, "card-rise"], [T.fuel - 0.1, "pop-soft"], [T.pub, "typing:0.86"], [T.link, "emph-pop"],
+    [T.share + 0.15, "msg-pop"], [T.share + 0.35, "typing:0.95"], [T.less, "air-pull"], [T.more, "card-settle"], [ctaT, "cta-pop"],
+  ];
+  // music: dead silence before the fix (silence punch), back in on the punch
+  const music = { bpm: 98, root: 49, mode: "minor", style: "investigate", cut: PUNCH - 0.5, ret: PUNCH };
+  return { shots, heads, sfx, music };
 }

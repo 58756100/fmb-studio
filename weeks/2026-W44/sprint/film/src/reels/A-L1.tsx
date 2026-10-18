@@ -13,9 +13,10 @@ import { textStyle, Frame, Paper, Requester, BuildPage, mono, ui } from "./laneA
 
 export const HOOK_WORDS = 3;
 export const TAIL = 1.0;
+export const LIFE = 1.4; // camera drift strength (hook C holds longer on the opening dossier)
 const pal = { bg: "#171A18", tx: "#F2EBDD", em: "#E6A16A", panel: "#262C28", paper: "#F2EBDD", ink: "#171A18", ink2: "#3F4A42" };
 export const BG = pal.bg;
-export const TEXT = textStyle(pal);
+export const TEXT = { ...textStyle(pal), size: 106 };
 export const IMAGES = ["B02", "G03", "C03"];
 
 const HOOKS = { A: [["Prove the work.", 0]], B: [["Prove this / upgrade?", 0]], C: [["Nice car.", 0], ["Where's the proof?", 1]] };
@@ -36,7 +37,7 @@ export function build(tl, hook) {
     const words = wordsFor(tl.body, txt, from);
     const i = words.findIndex((w) => w.w.toUpperCase().startsWith(carryWord));
     const ca = words[i].t + 0.3;
-    return { words, key: [i], carry: { i, at: ca, dur: 0.5, to: { x: ROWX + carryW[row] / 2, y: rowY(row) + 30, size: 40 }, fade: ca + 0.55, color: pal.em } };
+    return { words, key: [i], carry: { i, at: ca, dur: 0.5, to: { x: ROWX + carryW[row] / 2, y: rowY(row) + 30, size: 40 }, fade: ca + 0.33, color: pal.em } };
   };
   const heads = [
     ...hk.map((h, i) => (i === hk.length - 1 ? { ...h, exit: { at: T.fin - 0.35, mode: "up" } } : h)),
@@ -62,11 +63,11 @@ export function build(tl, hook) {
 
   // ---------- record rows (filled by the carried words)
   const ROWS = (full) => [
-    { label: "PART", value: "Brake kit", at: full ? -9 : T.part + 0.55, labelAt: full ? null : T.part + 0.78 },
-    { label: "BRAND", value: "Halden", at: full ? -9 : T.brand + 0.5, labelAt: full ? null : T.brand + 0.73 },
+    { label: "PART", value: "Brake kit", at: full ? -9 : T.part + 0.55, labelAt: full ? null : T.part + 0.86 },
+    { label: "BRAND", value: "Halden", at: full ? -9 : T.brand + 0.5, labelAt: full ? null : T.brand + 0.86 },
     { label: "DATE", value: "OCT 12, 2026", mono: 1, typed: !full, at: full ? -9 : T.install + 0.35, labelAt: full ? null : T.date + 0.95 },
-    { label: "PHOTO", thumb: "G03", at: full ? -9 : T.photo + 0.5, labelAt: full ? null : T.photo + 0.73 },
-    { label: "GARAGE", value: "Eastside Classic Works", at: full ? -9 : T.garage + 0.5, labelAt: full ? null : T.garage + 0.73 },
+    { label: "PHOTO", thumb: "G03", at: full ? -9 : T.photo + 0.5, labelAt: full ? null : T.photo + 0.86 },
+    { label: "GARAGE", value: "Eastside Classic Works", at: full ? -9 : T.garage + 0.5, labelAt: full ? null : T.garage + 0.86 },
   ];
 
   // ---------- shot 1: the opening dossier (car photo + blank record), push to the front wheel
@@ -79,7 +80,7 @@ export function build(tl, hook) {
     const cardY = 1010 + EASE.in(cam.card) * 900;
     const cardW = 520; // narrow card during the hook so the requesters can point at the empty rows
     return <AbsoluteFill style={{ background: pal.bg }}>
-      <div style={{ position: "absolute", inset: 0, transform: `scale(${1 + 0.02 * seg(t, T.q, T.fin)}) ${dT(d, 0.5)}`, transformOrigin: "50% 60%" }}>
+      <div style={{ position: "absolute", inset: 0, transform: `scale(${1 + 0.06 * EASE.io(seg(t, T.q, T.fin))}) ${dT(d, 0.5)}`, transformOrigin: "50% 60%" }}>
         <Frame pal={pal} t={t} id="B02" x={cam.x} y={cam.y} w={cam.w} h={cam.h} k={cam.k} fx={0.22} fy={0.6} kb={0.015} />
         <Paper pal={pal} t={t} x={96} y={cardY} w={cardW} rows={ROWS(false).map((r) => ({ ...r, at: null }))} rowH={84} pad={34} drawAt={0.05} o={1 - cam.card * 0.3} seed="p0" />
         <Requester pal={pal} t={t} t0={T.ins - 0.1} x={630} y={1068} text="INSURER" out={T.fin - 0.3} />

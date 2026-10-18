@@ -114,7 +114,19 @@ export function build(tl, hook) {
       </div>
     </AbsoluteFill>;
   };
-  return { shots: [{ at: 0, render: scene }], heads };
+  // sound: one cue per on-screen action (one continuous shot; headline landings are added by audio/score.py)
+  const ctaT = heads[heads.length - 1].words[0].t;
+  const sfx = [
+    [0.05, "creak-soft"], [T.noor - 0.1, "air-slow-push", 0.6], [T.nothing - 0.2, "air-short"], [T.which - 0.05, "string-tie"], [T.which + 0.3, "pipe-sag-groan"],
+    [T.wrx - 0.1, "shimmer-soft"], [T.wrx + 0.1, "pencil-write"], [T.who - 0.05, "string-tie"], [T.who + 0.3, "pipe-sag-rattle"], [T.some + 0.1, "pencil-write"],
+    [T.day - 0.2, "air-glide"], [T.day, "pipe-sag-groan"], [T.ret - 0.2, "chip-drop-red"],
+    [T.just + 0.1, "string-snap-x2"], [T.just + 0.2, "paper-fall-x2"], [T.just + 0.35, "paper-unfold"], [T.calder, "value-tick"], [T.july, "pen-write"], [T.just + 0.75, "photo-settle"],
+    [T.north - 0.1, "pop-soft"], [T.north + 0.3, "tick-soft"], [T.that - 0.1, "string-zip"], [T.worth - 0.1, "pen-write"],
+    [T.six - 0.2, "paper-fold"], [T.link - 0.3, "pipe-lift-spring"], [T.link - 0.2, "chip-wipe"], [ctaT, "cta-pop"],
+  ];
+  // music (as in the lab): thins to one held note under the record, the band returns on "six days, one link"
+  const music = { bpm: 100, root: 48, mode: "minor", style: "investigate", cut: T.just - 0.3, ret: T.six - 0.2, one_note: true, room: "office" };
+  return { shots: [{ at: 0, render: scene }], heads, sfx, music };
 }
 
 const LogCard = ({ t, T, p, from }) => {

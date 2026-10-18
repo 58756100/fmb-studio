@@ -122,7 +122,7 @@ export function build(tl, hook) {
       <Callout t={t} t0={T.cal - 0.1} x={260} y={1180} px={c.x} py={c.y} text="Caliper" out={T.brk - 0.2} red />
       <Callout t={t} t0={T.brk - 0.1} x={250} y={930} px={b.x} py={b.y} text="Bracket" out={at("brake", 2) - 0.2} red />
       <Callout t={t} t0={at("brake", 2) - 0.05} x={330} y={700} px={l.x} py={l.y} text="Brake line" out={BACK - 0.2} red />
-      <div style={{ position: "absolute", left: 60, top: 1360, ...rise(t, WIPE + 0.4), ...inter(42, GREY, 500) }}>Underneath: calipers, brackets, lines</div>
+      <div style={{ position: "absolute", left: 84, top: 1360, ...rise(t, WIPE + 0.4), ...inter(42, GREY, 500) }}>Underneath: calipers, brackets, lines</div>
     </Studio></AbsoluteFill>;
   };
   // ---------- shot 5: Maya's build page, the parts row, then the dated log lifted out of it
@@ -170,5 +170,17 @@ export function build(tl, hook) {
     { at: BACK, render: (t) => inquiry(t, 2), enter: { kind: "match" } },
     { at: TAP2, render: page, enter: { kind: "tap", d: 0.55, rect: { x: 60, y: 1490, w: 420, h: 112 }, r: 56 } },
   ];
-  return { shots, heads };
+  // sound: one cue per on-screen action (transitions and headline landings are added by audio/score.py)
+  const ctaT = heads[heads.length - 1].words[0].t;
+  const sfx = [
+    [0.1, "notif", 0.7], [TAP1 + 0.25, "pop-soft"], [T.brake - 0.25, "air-short"], [T.brake + 0.3, "lens-settle"], [T.inst - 0.2, "chip-fade"],
+    [T.these - 0.1, "slide-soft"], [T.these + 0.1, "pop-soft"], [T.these + 0.22, "pop-soft"], [T.photos + 0.2, "muted-stop"],
+    [WIPE - 0.375, "caster-roll"], [WIPE + 0.4, "label-in"], [T.cal - 0.1, "draw"], [T.brk - 0.1, "draw"], [at("brake", 2) - 0.05, "draw"],
+    [BACK + 0.15, "tick-soft-x3"], [BACK + 0.6, "pop-soft"],
+    [T.fuel - 0.1, "pop-soft"], [T.fuel + 0.1, "typing:0.9"], [T.kit2 - 0.15, "card-settle"], [T.brand - 0.1, "emph-pop"], [T.dated - 0.15, "card-rise"],
+    [T.before - 0.08, "shutter"], [T.during - 0.08, "shutter"], [T.after - 0.08, "shutter"], [ctaT, "cta-pop"],
+  ];
+  // music: silence before Maya opens the build, back in on the tap
+  const music = { bpm: 100, root: 53, mode: "major", style: "warm", cut: TAP2 - 0.6, ret: TAP2 };
+  return { shots, heads, sfx, music };
 }

@@ -6,7 +6,7 @@ import { W, seg, lerp, clamp, spr, EASE, drift, dT, Typed, src, rgba } from "../
 
 export const HL = "'Barlow Condensed'", UI = "'Source Sans 3'", MONO = "'IBM Plex Mono'";
 export const textStyle = (pal) => ({ font: HL, weight: 700, size: 112, min: 66, ls: "0.004em", upper: true, color: pal.tx, accent: pal.em, line2: null,
-  align: "left", x0: 96, maxW: 888, top: 262, lead: 0.98 });
+  align: "left", x0: 96, maxW: 888, top: 240, lead: 0.98 }); // top 240: clears the 400 px photo frames by >= 15 px
 export const mono = (size, color, extra = {}) => ({ fontFamily: MONO, fontWeight: 500, fontSize: Math.max(42, size), lineHeight: 1.15, whiteSpace: "nowrap", color, ...extra });
 export const ui = (size, color, extra = {}) => ({ fontFamily: UI, fontWeight: 600, fontSize: Math.max(42, size), lineHeight: 1.12, whiteSpace: "nowrap", color, ...extra });
 
@@ -20,6 +20,8 @@ export const Frame = ({ pal, x, y, w, h, id, t, k = 1, fx = 0.5, fy = 0.5, kb = 
       <img src={src(typeof id === "string" ? id : id)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover",
         transformOrigin: `${fx * 100}% ${fy * 100}%`, transform: `scale(${kk})` }} />
       <div style={{ position: "absolute", inset: 0, background: "radial-gradient(120% 90% at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,.28) 100%)" }} />
+      {/* showroom light sweep: keeps a held photo alive */}
+      <div style={{ position: "absolute", top: 0, bottom: 0, width: 300, left: ((t * 170) % (w + 1100)) - 550, background: "linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,.16), rgba(255,255,255,0))" }} />
       {children}
     </div>
   );

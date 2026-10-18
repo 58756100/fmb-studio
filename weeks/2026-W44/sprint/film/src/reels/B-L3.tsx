@@ -59,7 +59,9 @@ export function build(tl, hook) {
     B("First reply:", T.first, { hold: 2.4 }),
     B("Next reply:", T.next, { hold: 1.9 }),
     fx(B("Same guess, copied.", T.same), [T.same, at("guess"), T.copied]),
-    fx(B("Vantor gets the credit.", T.now), [tl.has("vantor") ? tl.after("vantor", T.now - 0.05) : at("brand", 2), at("gets"), at("the", 2) > T.now ? at("the", 2) : T.credit - 0.1, T.credit]),
+    // VO line 2 says "Now Brand B gets the credit"; the thread on screen names Vantor, so the headline says Vantor and lands on
+    // the spoken "Brand B" (the name the replies gave it)
+    fx(B("Vantor gets the credit.", T.now), [tl.after("brand", T.now - 0.05), at("gets"), at("the", 2) > T.now ? at("the", 2) : T.credit - 0.1, T.credit]),
     fx(B("Where's the record?", T.so), [at("where's"), at("owner's"), T.record]),
     B("Jules opens the build", T.opens - 0.4),
     B("Turbo kit.", T.turbo, { hold: 0.6 }),
@@ -97,7 +99,7 @@ export function build(tl, hook) {
         </div>
         <div style={{ position: "absolute", inset: 0, transform: `translateY(${-shift * 0}px)` }}>
           <Comment t={t} t0={phase === 1 ? Math.max(0, tl.cut - 0.2) : -1} y={1040} name="jules.wrk" av={<Avatar id="E03" size={84} face={JULES} bg="#DDD8D0" />}>What turbo is that?</Comment>
-          <Comment t={t} t0={phase === 1 ? T.first + 0.2 : -1} y={1210} x={140} w={880} name="dm_tuned" av={<LetterAv ch="D" size={84} bg="#8E8E93" />} o={back ? 1 - 0.5 * ez(t, BACK + 0.4, 0.4) : 1 - 0.85 * ez(t, T.so, 0.4)} hl={copy}>
+          <Comment t={t} t0={phase === 1 ? T.first + 0.2 : -1} y={1210} x={140} w={880} name="dm_tuned" av={<LetterAv ch="D" size={84} bg="#8E8E93" />} o={back ? 1 - ez(t, BACK + 0.3, 0.35) : 1 - 0.85 * ez(t, T.so, 0.4)} hl={copy}>
             {phase === 1 ? <><Typed t={t} t0={T.demo} t1={T.think + 0.25} text={"Vantor, I think."} /></> : "Vantor, I think."}
           </Comment>
           <Comment t={t} t0={phase === 1 ? T.next + 0.2 : -1} y={1380} x={140} w={880} name="boostcase" av={<LetterAv ch="B" size={84} bg="#AEAEB2" />} o={back ? 1 - 0.5 * ez(t, BACK + 0.4, 0.4) : 1 - 0.85 * ez(t, T.so, 0.4)} hl={copy}>
@@ -155,5 +157,16 @@ export function build(tl, hook) {
     { at: TAP, render: page, enter: { kind: "tap", d: 0.55, rect: { x: 60, y: 1210, w: 960, h: 140 }, r: 32 } },
     { at: BACK, render: (t) => thread(t, 2), enter: { kind: "pull", d: 0.6, rect: { x: 60, y: 1210, w: 960, h: 140 } } },
   ];
-  return { shots, heads };
+  // sound: one cue per on-screen action (transitions and headline landings are added by audio/score.py)
+  const ctaT = heads[heads.length - 1].words[0].t;
+  const sfx = [
+    [0.1, "air-short", 0.7], [Math.max(0, tl.cut - 0.2), "msg-pop"], [T.first + 0.2, "msg-pop"], [T.demo, `typing:${Math.max(0.5, T.think + 0.25 - T.demo).toFixed(2)}`],
+    [T.next + 0.2, "msg-pop"], [T.def - 0.1, "typing:0.8"], [T.same + 0.15, "pencil-line"], [T.copied - 0.1, "draw"],
+    [T.now + 0.2, "chip-pop"], [T.now + 0.8, "chip-drop"], [T.so, "chip-fade"], [T.record - 0.1, "msg-pop"],
+    [T.fuel - 0.1, "pop-soft"], [T.fuel + 0.05, "typing:0.96"], [T.turbo - 0.15, "card-settle"], [T.brandF - 0.1, "emph-pop"], [T.brandA, "resolve"],
+    [T.then - 0.1, "card-rise"], [T.photos - 0.2, "shutter"], [T.photos + 0.25, "shutter"], [BACK + 0.4, "chip-fade"], [BACK + 0.45, "card-settle"], [ctaT, "cta-pop"],
+  ];
+  // music: dead silence before the brand reveal (Kestrel), back in on the reveal downbeat
+  const music = { bpm: 100, root: 50, mode: "minor", style: "investigate", cut: T.brandA - 0.9, ret: T.brandA };
+  return { shots, heads, sfx, music };
 }
