@@ -15,7 +15,7 @@ if (times.startsWith("auto:")) { const n = +times.slice(5); ts = Array.from({ le
 else ts = times.split(",").map(Number);
 for (const s of ts) {
   const f = Math.min(comp.durationInFrames - 1, Math.round(s * 30));
-  await renderStill({ composition: comp, serveUrl, frame: f, output: `${out}/${(f / 30).toFixed(2).padStart(5, "0")}.png`, puppeteerInstance: browser, inputProps });
+  await renderStill({ composition: comp, serveUrl, frame: f, output: `${out}/${(f / 30).toFixed(2).padStart(5, "0")}.png`, puppeteerInstance: browser, inputProps, onBrowserLog: (l) => { if (l.text.startsWith("CHECK") && !/ n=0\s*$/.test(l.text)) console.log(l.text); } });
 }
 await browser.close({ silent: true });
 console.log("done", out, comp.durationInFrames, "frames");

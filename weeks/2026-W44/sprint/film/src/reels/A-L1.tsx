@@ -128,7 +128,19 @@ export function build(tl, hook) {
     { at: MATCH, render: s3, enter: { kind: "match" } },
   ];
   heads[heads.length - 1].dot = tl.last + 0.1;
-  return { shots, heads };
+  // sound: one cue per on-screen action (same times as the scene code); transitions and headline landings are added by audio/score.py
+  const ctaT = heads[heads.length - 1].words[0].t;
+  const sfx = [
+    [0.05, "outline-draw"], [T.ins - 0.1, "label-in"], [T.app - 0.1, "label-in"],
+    [T.fin - 0.15, "air-drop", 0.8], [T.cant, "air-slow-push"],
+    [MATCH + 0.35, "card-rise"], [MATCH + 0.4, "outline-draw"], [MATCH + 0.77, "card-settle"],
+    [T.part + 0.55, "pen-write"], [T.brand + 0.5, "pen-write"], [T.install + 0.35, "typing:0.5"], [T.photo + 0.5, "shutter"], [T.garage + 0.5, "pen-write"],
+    [T.we, "air-glide"], [T.we + 0.15, "card-rise"], [T.fuel, "pop-soft"], [T.one, "typing:0.93"], [T.link, "emph-pop"],
+    [T.now - 0.15, "air-pull"], [T.now + 0.45, "card-settle"], [T.record - 0.1, "pencil-line"], [ctaT, "cta-pop"],
+  ];
+  // music: dead silence before the build-page reveal, back in on its downbeat
+  const music = { bpm: 96, root: 50, mode: "minor", style: "observe", cut: T.we - 0.55, ret: T.we + 0.15 };
+  return { shots, heads, sfx, music };
 }
 // record row geometry (shot 3, full-size card at x 96, y 840, pad 40, rowH 112, title none)
 const ROWX = 96 + 40 + 12;

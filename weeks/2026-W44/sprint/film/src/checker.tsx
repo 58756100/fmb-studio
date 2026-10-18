@@ -34,6 +34,7 @@ export const Checker = ({ t }) => {
         const ix = Math.min(A.b.right, B.b.right) - Math.max(A.b.left, B.b.left), iy = Math.min(A.b.bottom, B.b.bottom) - Math.max(A.b.top, B.b.top);
         if (ix > 3 && iy > 6) res.push({ b: A.b, m: `overlap: ${A.lab} / ${B.lab}` });
       }
+      console.log("CHECK t=" + t.toFixed(2) + " n=" + res.length + " " + [...new Set(res.map((r) => r.m))].join(" | "));
       setIssues(res.map(({ b, m }) => ({ x: b.left, y: b.top, w: b.width, h: b.height, m })));
       requestAnimationFrame(() => continueRender(hd));
     });

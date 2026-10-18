@@ -2,7 +2,7 @@
 // Compositions: <id>-<hook> for the 9 reels x hooks A/B/C. 1080x1920, 30 fps. Length follows the VO.
 import React, { useEffect, useMemo, useState } from "react";
 import { registerRoot, Composition, AbsoluteFill, useCurrentFrame, delayRender, continueRender, staticFile, getInputProps } from "remotion";
-import { FPS, W, H, makeTL, Shots, Heads, MBDefs, src } from "./kit";
+import { FPS, W, H, makeTL, Shots, Heads, MBDefs, src, drift } from "./kit";
 import { Checker } from "./checker";
 import * as AL1 from "./reels/A-L1";
 import * as AL2 from "./reels/A-L2";
@@ -38,6 +38,11 @@ const load = (ids) => {
   })());
 };
 
+const camLife = (t, id, k = 1) => {
+  const d = drift(t, id + "cam", 11 * k, 0.55), z = drift(t, id + "zoom", 1, 0.3);
+  const sx = 5 * k * Math.sin((2 * Math.PI * t) / 3.7), sy = 4 * k * Math.sin((2 * Math.PI * t) / 4.3 + 1); // no shared zero-velocity point
+  return `translate(${(d.x + sx).toFixed(2)}px, ${(d.y + sy).toFixed(2)}px) rotate(${(d.r * 0.5 * k).toFixed(3)}deg) scale(${(1.025 + 0.012 * k * z.s).toFixed(4)})`;
+};
 const Reel = ({ id, hook }) => {
   const frame = useCurrentFrame(), t = frame / FPS;
   const R = REELS[id];
@@ -50,7 +55,8 @@ const Reel = ({ id, hook }) => {
   return (
     <AbsoluteFill style={{ background: R.BG, overflow: "hidden" }}>
       <MBDefs />
-      <Shots t={t} shots={film.shots} />
+      {/* always alive: a slow handheld camera drift under the whole picture (headlines float on their own) */}
+      <AbsoluteFill style={{ transform: camLife(t, id, R.LIFE) }}><Shots t={t} shots={film.shots} /></AbsoluteFill>
       {film.over ? film.over(t) : null}
       <Heads t={t} heads={film.heads} st={R.TEXT} />
       {getInputProps().check ? <Checker t={t} /> : null}
