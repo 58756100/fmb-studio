@@ -1,0 +1,32 @@
+######## C3-COL 12:03:07
+C3-COL-A: 30.47s (VO 29.45 + tail 1.02), I -14.1 LUFS, TP -1.7 dBTP, lowest energy 0.413 at 28.5s, lag 0 OK
+C3-COL-B: 31.37s (VO 30.35 + tail 1.02), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.402 at 16.5s, lag 0 OK
+C3-COL-C: 31.23s (VO 30.23 + tail 1.00), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.369 at 16.0s, lag 0 OK
+   38db786..fb69821  fb698210b4f8f8a2098cca7f7f095d294ff23be9 -> renders
+pushed 2026-W44/sprint/masters/C3-COL-A.mp4 (fb698210b4f8f8a2098cca7f7f095d294ff23be9)
+   fb69821..6c76c16  6c76c16fa354f967dce4a3f8f8fd0cb5076bcd2e -> renders
+pushed 2026-W44/sprint/masters/C3-COL-B.mp4 (6c76c16fa354f967dce4a3f8f8fd0cb5076bcd2e)
+   6c76c16..d3b9c48  d3b9c4861ce8c3d7a35899d527d58a9d96dd0fba -> renders
+pushed 2026-W44/sprint/masters/C3-COL-C.mp4 (d3b9c4861ce8c3d7a35899d527d58a9d96dd0fba)
+   d3b9c48..8091c50  8091c502811f276fb8e6c03419b99dd2e1c9263a -> renders
+pushed 2026-W44/sprint/masters/C3-COL-bed.wav (8091c502811f276fb8e6c03419b99dd2e1c9263a)
+C3-COL done 12:16:43
+######## C3-GAR 12:16:43
+C3-GAR-A: 28.60s (VO 27.59 + tail 1.01), I -13.9 LUFS, TP -1.1 dBTP, lowest energy 0.484 at 26.0s, lag 0 OK
+C3-GAR-B: 29.63s (VO 28.63 + tail 1.00), I -14.1 LUFS, TP -1.6 dBTP, lowest energy 0.508 at 28.5s, lag 0 OK
+C3-GAR-C: 29.30s (VO 28.27 + tail 1.03), I -14.0 LUFS, TP -2.2 dBTP, lowest energy 0.508 at 26.0s, lag 0 OK
+   8091c50..f89b0f7  f89b0f78c5bc54d1cdc8059b8800cffcb1331d4e -> renders
+pushed 2026-W44/sprint/masters/C3-GAR-A.mp4 (f89b0f78c5bc54d1cdc8059b8800cffcb1331d4e)
+   f89b0f7..19deb66  19deb66212e9061f64593fa4790382fcb7a2b2f3 -> renders
+pushed 2026-W44/sprint/masters/C3-GAR-B.mp4 (19deb66212e9061f64593fa4790382fcb7a2b2f3)
+   19deb66..ef8f6ce  ef8f6ce64c60a5a89007beb284bbb8fd6bee16fb -> renders
+pushed 2026-W44/sprint/masters/C3-GAR-C.mp4 (ef8f6ce64c60a5a89007beb284bbb8fd6bee16fb)
+   ef8f6ce..f28e94b  f28e94bc7a1e9cce52efec9575f67f7c6fcfcf97 -> renders
+pushed 2026-W44/sprint/masters/C3-GAR-bed.wav (f28e94bc7a1e9cce52efec9575f67f7c6fcfcf97)
+C3-GAR done 12:43:34
+######## C3-SUP 12:43:34
+C3-SUP-A: 33.87s (VO 32.84 + tail 1.03), I -14.1 LUFS, TP -2.1 dBTP, lowest energy 0.214 at 0.5s, lag 0 FAIL static [[0.5, 0.21413065493106842], [31.5, 0.2601090371608734]]
+C3-SUP-B: 33.70s (VO 32.69 + tail 1.01), I -14.2 LUFS, TP -1.9 dBTP, lowest energy 0.218 at 0.5s, lag 0 FAIL static [[0.5, 0.21815070509910583], [31.5, 0.2604254186153412]]
+C3-SUP-C: 33.87s (VO 32.84 + tail 1.02), I -14.2 LUFS, TP -1.3 dBTP, lowest energy 0.260 at 31.5s, lag 0 FAIL static [[0.5, 0.30712807178497314], [31.5, 0.26014095544815063]]
+C3-SUP: gate failed, stopping
+RUNALL EXIT 1

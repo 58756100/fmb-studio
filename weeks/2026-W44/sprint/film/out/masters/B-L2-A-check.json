@@ -1,0 +1,17 @@
+{
+ "file": "out/masters/B-L2-A.mp4",
+ "video": "h264 1080x1920 30/1 frames=965",
+ "audio": "aac 48000 ch=2",
+ "v_dur": 32.166667,
+ "a_dur": 32.166,
+ "expected": 32.166666666666664,
+ "vo_end": 31.163,
+ "tail": 1.004,
+ "v_start": 0.0,
+ "a_start": 0.0,
+ "xcorr_lag_samples": 0,
+ "lufs_I": -14.1,
+ "true_peak": -2.0,
+ "subtitle_streams": "none",
+ "cta": "\"Send this their way\" at 28.08s, last shot starts 26.81s (over final frame)"
+}

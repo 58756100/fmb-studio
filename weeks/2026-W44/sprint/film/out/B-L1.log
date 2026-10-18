@@ -1,0 +1,64 @@
+B-L1 A 33.60s 5 shots 16 heads 25 sfx music
+B-L1 B 34.43s 5 shots 16 heads 25 sfx music
+B-L1 C 34.43s 5 shots 16 heads 25 sfx music
+B-L1-A master (AAC) I=-14.10 LUFS TP=-1.90 dBTP LRA=2.9 | cues 47 (25 reel, 22 auto)
+B-L1-B master (AAC) I=-14.20 LUFS TP=-1.90 dBTP LRA=2.8 | cues 46 (25 reel, 21 auto)
+B-L1-C master (AAC) I=-14.10 LUFS TP=-1.80 dBTP LRA=2.8 | cues 46 (25 reel, 21 auto)
+done out/video/B-L1-A.mp4 1008 frames 408s
+done out/video/B-L1-B.mp4 1033 frames 421s
+done out/video/B-L1-C.mp4 1033 frames 418s
+== B-L1-A
+  file: out/masters/B-L1-A.mp4
+  video: h264 1080x1920 30/1 frames=1008
+  audio: aac 48000 ch=2
+  v_dur: 33.6
+  a_dur: 33.6
+  expected: 33.6
+  vo_end: 32.575
+  tail: 1.025
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "Send it to collectors" at 28.32s, last shot starts 16.49s (over final frame)
+out/masters/B-L1-A.mp4: 67 windows, lowest 0.361 at 6.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== B-L1-B
+  file: out/masters/B-L1-B.mp4
+  video: h264 1080x1920 30/1 frames=1033
+  audio: aac 48000 ch=2
+  v_dur: 34.433333
+  a_dur: 34.433
+  expected: 34.43333333333333
+  vo_end: 33.431
+  tail: 1.002
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.2
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "Send it to collectors" at 29.17s, last shot starts 17.34s (over final frame)
+out/masters/B-L1-B.mp4: 68 windows, lowest 0.362 at 19.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== B-L1-C
+  file: out/masters/B-L1-C.mp4
+  video: h264 1080x1920 30/1 frames=1033
+  audio: aac 48000 ch=2
+  v_dur: 34.433333
+  a_dur: 34.433
+  expected: 34.43333333333333
+  vo_end: 33.428
+  tail: 1.005
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.8
+  subtitle_streams: none
+  cta: "Send it to collectors" at 29.17s, last shot starts 17.34s (over final frame)
+out/masters/B-L1-C.mp4: 68 windows, lowest 0.362 at 19.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+../storyboard/B-L1-final-sheet.jpg (2244, 1420)

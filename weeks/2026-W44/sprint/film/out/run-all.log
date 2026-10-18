@@ -1,0 +1,71 @@
+######## A-L2 07:46:14
+A-L2-A: 33.63s (VO 32.60 + tail 1.03), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.485 at 22.5s, lag 0 OK
+A-L2-B: 32.73s (VO 31.70 + tail 1.03), I -14.0 LUFS, TP -2.0 dBTP, lowest energy 0.423 at 5.5s, lag 0 OK
+A-L2-C: 33.23s (VO 32.23 + tail 1.00), I -14.1 LUFS, TP -1.8 dBTP, lowest energy 0.542 at 6.5s, lag 0 OK
+   28dea60..1ea6d27  1ea6d2704505b733ae677a336be446f681d3bd08 -> renders
+pushed 2026-W44/sprint/masters/A-L2-A.mp4 (1ea6d2704505b733ae677a336be446f681d3bd08)
+   1ea6d27..6f74f13  6f74f13a98e6e0104131c01d3c2b1f90dc6da758 -> renders
+pushed 2026-W44/sprint/masters/A-L2-B.mp4 (6f74f13a98e6e0104131c01d3c2b1f90dc6da758)
+   6f74f13..69bbf8a  69bbf8a1ab757435480a9dc112a8da6a9b2b3c56 -> renders
+pushed 2026-W44/sprint/masters/A-L2-C.mp4 (69bbf8a1ab757435480a9dc112a8da6a9b2b3c56)
+   69bbf8a..306d654  306d654af780a4ceaf68507d162a775572034dd9 -> renders
+pushed 2026-W44/sprint/masters/A-L2-bed.wav (306d654af780a4ceaf68507d162a775572034dd9)
+A-L2 done 07:59:00
+######## A-L3 07:59:00
+A-L3-A: 31.63s (VO 30.61 + tail 1.02), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.382 at 24.5s, lag 0 OK
+A-L3-B: 32.63s (VO 31.61 + tail 1.03), I -14.1 LUFS, TP -1.7 dBTP, lowest energy 0.384 at 24.5s, lag 0 OK
+A-L3-C: 32.53s (VO 31.52 + tail 1.01), I -14.2 LUFS, TP -2.2 dBTP, lowest energy 0.382 at 24.5s, lag 0 OK
+   306d654..8d168d0  8d168d07baac2ca0e3b6677ab090f4e3b2feb46c -> renders
+pushed 2026-W44/sprint/masters/A-L3-A.mp4 (8d168d07baac2ca0e3b6677ab090f4e3b2feb46c)
+   8d168d0..599140c  599140cd5a5f9e46cf502c895ab71f163e7f6ddb -> renders
+pushed 2026-W44/sprint/masters/A-L3-B.mp4 (599140cd5a5f9e46cf502c895ab71f163e7f6ddb)
+   599140c..fb59612  fb59612d8976d9955063d54a47f2fe67d9c384a6 -> renders
+pushed 2026-W44/sprint/masters/A-L3-C.mp4 (fb59612d8976d9955063d54a47f2fe67d9c384a6)
+   fb59612..8d51ba6  8d51ba61bf4128b16f3ca5a728f906c3fa33588d -> renders
+pushed 2026-W44/sprint/masters/A-L3-bed.wav (8d51ba61bf4128b16f3ca5a728f906c3fa33588d)
+A-L3 done 08:10:05
+######## B-L1 08:10:05
+B-L1-A: 33.60s (VO 32.58 + tail 1.02), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.361 at 6.5s, lag 0 OK
+B-L1-B: 34.43s (VO 33.43 + tail 1.00), I -14.2 LUFS, TP -1.9 dBTP, lowest energy 0.362 at 19.0s, lag 0 OK
+B-L1-C: 34.43s (VO 33.43 + tail 1.00), I -14.1 LUFS, TP -1.8 dBTP, lowest energy 0.362 at 19.0s, lag 0 OK
+   8d51ba6..06c43c4  06c43c40713bc7efcf473bae61cfa15906ff12f4 -> renders
+pushed 2026-W44/sprint/masters/B-L1-A.mp4 (06c43c40713bc7efcf473bae61cfa15906ff12f4)
+   06c43c4..943e408  943e4080067925b901ddd59e9bed805ef8c0480e -> renders
+pushed 2026-W44/sprint/masters/B-L1-B.mp4 (943e4080067925b901ddd59e9bed805ef8c0480e)
+   943e408..153abee  153abee1a140cdfb954b6bb2f0af7fdea3ef07ef -> renders
+pushed 2026-W44/sprint/masters/B-L1-C.mp4 (153abee1a140cdfb954b6bb2f0af7fdea3ef07ef)
+   153abee..cd95b19  cd95b19ff324bd2a722f1703e8cfe79a5d10873b -> renders
+pushed 2026-W44/sprint/masters/B-L1-bed.wav (cd95b19ff324bd2a722f1703e8cfe79a5d10873b)
+B-L1 done 08:32:56
+######## B-L2 08:32:56
+B-L2-A: 32.17s (VO 31.16 + tail 1.00), I -14.1 LUFS, TP -2.0 dBTP, lowest energy 0.486 at 12.0s, lag 0 OK
+B-L2-B: 31.53s (VO 30.50 + tail 1.03), I -14.1 LUFS, TP -1.4 dBTP, lowest energy 0.512 at 31.0s, lag 0 OK
+B-L2-C: 31.60s (VO 30.58 + tail 1.02), I -14.1 LUFS, TP -1.8 dBTP, lowest energy 0.514 at 31.0s, lag 0 OK
+   cd95b19..8a491f4  8a491f4823417e76408aca09517765f991f12941 -> renders
+pushed 2026-W44/sprint/masters/B-L2-A.mp4 (8a491f4823417e76408aca09517765f991f12941)
+   8a491f4..cb71eb7  cb71eb743d804be382b96c81fcc78aab34272518 -> renders
+pushed 2026-W44/sprint/masters/B-L2-B.mp4 (cb71eb743d804be382b96c81fcc78aab34272518)
+   cb71eb7..6628976  662897607450ba3f4b1602575629eeaf3035d495 -> renders
+pushed 2026-W44/sprint/masters/B-L2-C.mp4 (662897607450ba3f4b1602575629eeaf3035d495)
+   6628976..21d0bc6  21d0bc60ad4cf9a5f5ead3d37ff694bc0811b40d -> renders
+pushed 2026-W44/sprint/masters/B-L2-bed.wav (21d0bc60ad4cf9a5f5ead3d37ff694bc0811b40d)
+B-L2 done 09:00:51
+######## B-L3 09:00:51
+B-L3-A: 33.20s (VO 32.20 + tail 1.00), I -14.1 LUFS, TP -1.8 dBTP, lowest energy 0.443 at 19.0s, lag 0 OK
+B-L3-B: 34.20s (VO 33.18 + tail 1.02), I -14.0 LUFS, TP -2.0 dBTP, lowest energy 0.454 at 5.0s, lag 0 OK
+B-L3-C: 33.97s (VO 32.95 + tail 1.01), I -14.1 LUFS, TP -1.3 dBTP, lowest energy 0.471 at 5.0s, lag 0 OK
+   21d0bc6..7061725  70617252f7fe2f953f52625e5ae7f5fd79ba83fb -> renders
+pushed 2026-W44/sprint/masters/B-L3-A.mp4 (70617252f7fe2f953f52625e5ae7f5fd79ba83fb)
+   7061725..34b5f89  34b5f89360ab95138212aab5b1f7152c226d81b5 -> renders
+pushed 2026-W44/sprint/masters/B-L3-B.mp4 (34b5f89360ab95138212aab5b1f7152c226d81b5)
+   34b5f89..cadab12  cadab122af2a06b47161aa427b5cded128ed276a -> renders
+pushed 2026-W44/sprint/masters/B-L3-C.mp4 (cadab122af2a06b47161aa427b5cded128ed276a)
+   cadab12..38db786  38db786cae60609db07299a0df5ea1c21c635973 -> renders
+pushed 2026-W44/sprint/masters/B-L3-bed.wav (38db786cae60609db07299a0df5ea1c21c635973)
+B-L3 done 09:30:41
+######## C3-COL 09:30:41
+C3-COL-A: 30.47s (VO 29.45 + tail 1.02), I -14.1 LUFS, TP -1.7 dBTP, lowest energy 0.203 at 28.5s, lag 0 FAIL static [[28.5, 0.20308798551559448]]
+C3-COL-B: 31.37s (VO 30.35 + tail 1.02), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.202 at 28.5s, lag 0 FAIL static [[16.5, 0.3242829144001007], [28.5, 0.2020529806613922]]
+C3-COL-C: 31.23s (VO 30.23 + tail 1.00), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.202 at 28.5s, lag 0 FAIL static [[16.0, 0.2873513102531433], [16.5, 0.3426193594932556], [28.5, 0.20174640417099]]
+C3-COL: gate failed, stopping
+RUNALL EXIT 1

@@ -1,0 +1,65 @@
+A-L1 A 31.27s 3 shots 14 heads 22 sfx music
+A-L1 B 31.73s 3 shots 14 heads 22 sfx music
+A-L1 C 32.33s 3 shots 15 heads 22 sfx music
+A-L1-A master (AAC) I=-14.10 LUFS TP=-2.00 dBTP LRA=2.0 | cues 52 (22 reel, 30 auto)
+A-L1-B master (AAC) I=-14.10 LUFS TP=-1.80 dBTP LRA=2.0 | cues 52 (22 reel, 30 auto)
+A-L1-C master (AAC) I=-14.10 LUFS TP=-1.90 dBTP LRA=2.2 | cues 52 (22 reel, 30 auto)
+done out/video/A-L1-A.mp4 938 frames 313s
+done out/video/A-L1-B.mp4 952 frames 284s
+done out/video/A-L1-C.mp4 970 frames 222s
+== A-L1-A
+  file: out/masters/A-L1-A.mp4
+  video: h264 1080x1920 30/1 frames=938
+  audio: aac 48000 ch=2
+  v_dur: 31.266667
+  a_dur: 31.266
+  expected: 31.266666666666666
+  vo_end: 30.234
+  tail: 1.033
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -2.0
+  subtitle_streams: none
+  cta: "Send them this" at 26.10s, last shot starts 8.56s (over final frame)
+out/masters/A-L1-A.mp4: 62 windows, lowest 0.535 at 1.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== A-L1-B
+  file: out/masters/A-L1-B.mp4
+  video: h264 1080x1920 30/1 frames=952
+  audio: aac 48000 ch=2
+  v_dur: 31.733333
+  a_dur: 31.733
+  expected: 31.733333333333334
+  vo_end: 30.7
+  tail: 1.033
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.8
+  subtitle_streams: none
+  cta: "Send them this" at 26.56s, last shot starts 9.03s (over final frame)
+out/masters/A-L1-B.mp4: 63 windows, lowest 0.554 at 1.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== A-L1-C
+  file: out/masters/A-L1-C.mp4
+  video: h264 1080x1920 30/1 frames=970
+  audio: aac 48000 ch=2
+  v_dur: 32.333333
+  a_dur: 32.333
+  expected: 32.333333333333336
+  vo_end: 31.314
+  tail: 1.019
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "Send them this" at 27.18s, last shot starts 9.64s (over final frame)
+out/masters/A-L1-C.mp4: 64 windows, lowest 0.366 at 5.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+../storyboard/A-L1-final-sheet.jpg (2244, 1420)
+EXIT 0
