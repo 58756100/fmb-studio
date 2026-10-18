@@ -106,7 +106,7 @@ def opening_line(text, hook):
             if first not in (hook, hook_num):
                 continue
             if voice is not None and voice < len(c):
-                v = strip_md(c[voice])
+                v = strip_md(re.sub(r"^\s*\([^)]*\)\s*", "", c[voice]))  # drop a leading "(1.0 s silence: ...)" stage note
                 if v and v not in ("—", "-"):
                     return v
             if screen is not None and screen < len(c):
@@ -228,7 +228,7 @@ def build_cards(items, date, fetch=True):
         et, nbo = times(date, it["time_et"])
         cards.append({
             "n": n,
-            "wave": int(it.get("wave") or (1 if n <= WAVE_SIZE else 2)),
+            "wave": int(it.get("wave") or it.get("tiktok_wave") or (1 if n <= WAVE_SIZE else 2)),
             "id": f"{it.get('concept')}-{it.get('hook')}",
             "et": et, "nbo": nbo,
             "title": it.get("title") or script_title(text, it.get("concept", "")) or it.get("yt_title") or it.get("concept", ""),
