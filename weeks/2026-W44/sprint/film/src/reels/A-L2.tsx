@@ -13,6 +13,7 @@ import { textStyle, BuildPage, mono, ui } from "./laneA";
 
 export const HOOK_WORDS = 4;
 export const TAIL = 1.0;
+export const LIFE = 1.7; // camera drift strength (the record opens in silence)
 const pal = { bg: "#22211E", tx: "#F3EEE4", em: "#E9BB62", panel: "#2E2C28", paper: "#F3EEE4", ink: "#22211E", ink2: "#4A463E" };
 export const BG = pal.bg;
 export const TEXT = { ...textStyle(pal), size: 104 };
