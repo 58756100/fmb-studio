@@ -42,3 +42,6 @@ Never stack two CTAs. The CTA sits over the final story frame.
 - About a third of collector-audience reels open by naming the audience in the first 2 seconds ("Car collectors…", "If you collect cars…", "Every collector knows…"), so the right viewer knows it's for them.
 - Collector reels may use the high-end collector bank (`lab/image-requests/image-bank-collectors.md`: $1M–$20M-class cars, auction, concours and private-garage settings). Never name the maker or model on screen or in the voiceover, never show a badge, and never imply a brand's endorsement. Owners and collections are fictional.
 - Stakes for this audience are provenance, matching numbers, documented ownership history, restoration records and auction value. Don't invent prices or claim the record changes a valuation.
+
+## Names (Wayne, 2026-10-18)
+- Never use placeholder names like "Shop A", "Garage B", "Brand B" or "Supplier C", on screen or in the voiceover. Make up believable names: garages and shops like "Benny's Garage", "Ridgeline Auto", "Pell Street Motors"; parts brands and suppliers like "Halden Brakes", "Arden Turbo", "Northline Auto Parts". The names are fictional, so check they aren't a real, well-known company, and don't reuse a name another reel has already made its hero. The used names are listed in `state/visual-bank.md`.
