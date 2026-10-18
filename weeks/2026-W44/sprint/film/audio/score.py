@@ -349,6 +349,10 @@ def place(t, k):
     elif k == "page-turn": add(sfx, rustle(0.4, 0.9), t, 0.8, 0.3); add(sfx, whoosh(0.35, 1500, 4000, 0.5, 0.3), t, 0.5, 0.3)
     elif k == "key-turn": add(sfx, click(2400, 0.7), t); add(sfx, metal(900, d=0.05), t + 0.08, 0.6); add(sfx, click(1800, 0.5), t + 0.16)
     elif k == "fabric-pull": add(sfx, rustle(0.7, 1.0), t, 0.8, -0.2); add(sfx, whoosh(0.8, 300, 2000, 0.6, 0.6), t, 0.6, -0.2)
+    elif k == "gravel":
+        n = L(0.9); x = bp(noise(n), 400, 3500) * 0.3
+        for j in range(14): c = click(rng.uniform(700, 1600), 0.35); i0 = L(rng.uniform(0, 0.8)); x[i0:i0 + len(c)] += c[:n - i0]
+        add(sfx, x * np.sin(np.pi * np.linspace(0, 1, n)), t, 0.6, 0.4)
     elif k == "bottle-tap": add(sfx, tink(1100, 0.08), t, 0.7, P); add(sfx, thump(320, 0.02, 0.4), t)
     else: raise SystemExit("unknown sfx " + k)
 

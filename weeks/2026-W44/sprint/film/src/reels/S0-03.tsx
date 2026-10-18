@@ -46,8 +46,8 @@ export function build(tl, hook) {
   const T = {
     oh: at("oh,"), spring: at("spring-ish?"), my: at("my", 1), whenever: at("whenever"), free: at("free?"), tw: at("twenty", 1), maybe: at("maybe"), before: at("before", 1),
     defin: at("definitely"), okay: at("okay."), you: at("you,"), civic: at("civic?"), oct: at("october"), ninth: at("ninth,"), tw3: at("twenty-three."), hollis: at("hollis"),
-    how: at("...how"), its: at("it's"), date: at("date,"), shop: at("shop,"), clutch: at("clutch"), photos: at("photos,"), okay2: at("okay,"), start1: at("start", 1),
-    whend: at("when'd"), yours: at("yours?"), spring2: at("...spring-ish."), cta: tl.cta("start") ?? at("start", 2), fuel: at("fuel"),
+    how: at("...how"), its: at("it's"), date: at("date,"), shop: at("shop,"), clutch: at("clutch"), photos: at("photos,"), okay2: at("okay", 2), start1: at("start", 1),
+    whend: at("when'd"), yours: at("yours?"), spring2: at("spring-ish", 2), cta: tl.cta("start") ?? at("start", 2), fuel: at("fuel"),
   };
   const hw = tl.hook;
   const W_ = (list, extra = {}) => ({ words: list.map(([w, t, line = 0]) => ({ w, t, line })), ...extra });
@@ -56,9 +56,9 @@ export function build(tl, hook) {
     : [W_([["“It", hw[4].s], ["was", hw[5].s], ["around", hw[6].s], ["2019…”", hw[7].s]], { hold: 0.4 }), W_([["This", hw[9].s], ["one's", hw[10].s], ["for", hw[11].s], ["you.", hw[12].s]], { key: [3], exit: { at: T.oh + 0.2, mode: "up" } })];
   const heads = [
     ...hk,
-    W_([["How", T.how], ["do", at("do", 2)], ["you", at("you", 2)], ["know?", at("know")]], { key: [3], hold: 0.8 }),
-    W_([["How", at("how", 2)], ["do", at("do", 3)], ["I", at("i")], ["start", T.start1], ["one?", at("one")]], { key: [3], hold: 0.6 }),
-    W_([["When'd", T.whend], ["you", at("you", 3)], ["do", at("do", 4)], ["yours?", T.yours]], { key: [3], exit: { at: T.spring2 - 0.35, mode: "up" } }),
+    W_([["How", T.how], ["do", at("do", 1)], ["you", at("you", 2)], ["know?", at("know")]], { key: [3], hold: 0.8 }),
+    W_([["How", at("how", 2)], ["do", at("do", 2)], ["I", at("i")], ["start", T.start1], ["one?", at("one")]], { key: [3], hold: 0.6 }),
+    W_([["When'd", T.whend], ["you", at("you", 3)], ["do", at("do", 3)], ["yours?", T.yours]], { key: [3], exit: { at: T.spring2 - 0.35, mode: "up" } }),
     { ...ctaHead(tl, "Start your car's record", T.cta), key: [3] },
   ];
   heads[heads.length - 1].hold = 9;
@@ -96,13 +96,12 @@ export function build(tl, hook) {
         if (t < t0 - 0.02) return null;
         const q = spr(t - t0, 220, 20);
         const old = nxt && t > nxt.t ? 0.5 : 1;
-        const col = f.end ? mixRed(t, T.ninth) : "#FFFFFF";
+        const col = "#FFFFFF";
         return <div key={i} style={{ position: "absolute", left: RUN.x + l.x, top: RUN.top + l.line * RUN.lead, ...font("Inter", RUN.size, col, 600, { letterSpacing: "-0.02em" }), opacity: clamp(q * 2) * old,
           transform: `translateY(${(1 - q) * 30}px)` }}>{l.w}</div>;
       })}
     </div>;
   };
-  const mixRed = (t, t0) => (t > t0 ? "#FFFFFF" : "#FFFFFF");
   // the restarted sentence (our own answer) on the loop
   const restart = (t) => { if (t < T.spring2 - 0.05) return null; const q = spr(t - (T.spring2 - 0.05), 220, 20), o = 1 - ez(t, T.cta - 0.35, 0.3, EASE.in);
     return <div style={{ position: "absolute", left: RUN.x, top: RUN.top + 170, ...font("Inter", RUN.size, "#FFFFFF", 600), opacity: clamp(q * 2) * o, transform: `translateY(${(1 - q) * 30}px)`, zIndex: 55 }}>spring-ish…</div>; };
@@ -115,7 +114,7 @@ export function build(tl, hook) {
   const scene = (t) => {
     const c = cam(t), cx = c.x;
     const sx = (wx) => wx - cx + 540;
-    const focus = hook === "A" || true ? ez(t, Math.max(0.6, tl.cut - 0.9), 0.7, EASE.camera) : 1; // rack focus mic -> Lou
+    const focus = ez(t, Math.max(0.6, tl.cut - 0.9), 0.7, EASE.camera); // rack focus mic -> Lou
     // Lou and Tasha lean into Andre's frame for "How do you know that?"
     const lean = ez(t, T.how - 0.7, 0.8, EASE.camera);
     const louX = lerp(LOU, (CIVIC + ANDRE) / 2 - 640, lean), tasX = lerp(TASHA, (CIVIC + ANDRE) / 2 + 560, lean);

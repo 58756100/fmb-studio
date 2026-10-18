@@ -4,4 +4,5 @@
 import * as SC04 from "./SC-04";
 import * as LA03 from "./LA-03";
 import * as S012 from "./S0-12";
-export const B2 = { "SC-04": SC04, "LA-03": LA03, "S0-12": S012 };
+import * as S004 from "./S0-04";
+export const B2 = { "SC-04": SC04, "LA-03": LA03, "S0-12": S012, "S0-04": S004 };
