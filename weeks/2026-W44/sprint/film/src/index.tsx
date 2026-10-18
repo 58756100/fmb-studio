@@ -14,12 +14,13 @@ import * as COL from "./reels/C3-COL";
 import * as GAR from "./reels/C3-GAR";
 import * as SUP from "./reels/C3-SUP";
 import { S0 } from "./reels/s0-index";
+import { B2 } from "./reels/b2-index";
 
 const VO = {};
 const ctx = require.context("./vo", true, /\.json$/);
 ctx.keys().forEach((k) => { const [, id, f] = k.match(/\.\/([^/]+)\/(.+)\.json$/); (VO[id] = VO[id] || {})[f] = ctx(k); });
 
-export const REELS = { "A-L1": AL1, "A-L2": AL2, "A-L3": AL3, "B-L1": BL1, "B-L2": BL2, "B-L3": BL3, "C3-COL": COL, "C3-GAR": GAR, "C3-SUP": SUP, ...S0 };
+export const REELS = { "A-L1": AL1, "A-L2": AL2, "A-L3": AL3, "B-L1": BL1, "B-L2": BL2, "B-L3": BL3, "C3-COL": COL, "C3-GAR": GAR, "C3-SUP": SUP, ...S0, ...B2 };
 export const timeline = (id, hook) => {
   const v = VO[id], R = REELS[id];
   return makeTL(v.words, R.HOOK_WORDS, hook === "A" ? null : v[`hook-${hook}.words`], R.HOOK_PAD?.[hook] ?? 0);
@@ -65,6 +66,8 @@ const Reel = ({ id, hook }) => {
   );
 };
 export const durationOf = (id, hook) => { const tl = timeline(id, hook); return Math.ceil((tl.last + REELS[id].TAIL) * FPS); };
-const Root = () => <>{Object.keys(REELS).flatMap((id) => ["A", "B", "C"].map((hook) => (
+// only reels that have VO, and only the hooks that were voiced (G5 bodies have A and B, late singles A only)
+const voiced = (id) => (VO[id]?.words ? ["A", "B", "C"].filter((h) => h === "A" || VO[id][`hook-${h}.words`]) : []);
+const Root = () => <>{Object.keys(REELS).flatMap((id) => voiced(id).map((hook) => (
   <Composition key={id + hook} id={`${id}-${hook}`} component={Reel} defaultProps={{ id, hook }} fps={FPS} width={W} height={H} durationInFrames={durationOf(id, hook)} />)))}</>;
 registerRoot(Root);

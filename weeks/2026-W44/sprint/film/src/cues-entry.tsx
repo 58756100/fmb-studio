@@ -7,7 +7,8 @@ import * as AL1 from "./reels/A-L1"; import * as AL2 from "./reels/A-L2"; import
 import * as BL1 from "./reels/B-L1"; import * as BL2 from "./reels/B-L2"; import * as BL3 from "./reels/B-L3";
 import * as COL from "./reels/C3-COL"; import * as GAR from "./reels/C3-GAR"; import * as SUP from "./reels/C3-SUP";
 import { S0 } from "./reels/s0-index";
-const REELS = { "A-L1": AL1, "A-L2": AL2, "A-L3": AL3, "B-L1": BL1, "B-L2": BL2, "B-L3": BL3, "C3-COL": COL, "C3-GAR": GAR, "C3-SUP": SUP, ...S0 };
+import { B2 } from "./reels/b2-index";
+const REELS = { "A-L1": AL1, "A-L2": AL2, "A-L3": AL3, "B-L1": BL1, "B-L2": BL2, "B-L3": BL3, "C3-COL": COL, "C3-GAR": GAR, "C3-SUP": SUP, ...S0, ...B2 };
 const rd = (id, f) => JSON.parse(fs.readFileSync(`src/vo/${id}/${f}.json`, "utf8"));
 export function exportCues(id, hook) {
   const R = REELS[id];

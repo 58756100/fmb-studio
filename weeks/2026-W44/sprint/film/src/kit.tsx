@@ -9,7 +9,6 @@ import React from "react";
 import { AbsoluteFill, Easing, staticFile } from "remotion";
 import { noise2D } from "@remotion/noise";
 import { evolvePath } from "@remotion/paths";
-import BANK from "./bank.json"; // every bank image: id -> [file, aspect] (K ids use 5 chars, e.g. "K1-02")
 
 export const FPS = 30, W = 1080, H = 1920;
 export const RED = "#F43034", INK = "#1D1D1F", GREY = "#86868B", BG2 = "#F5F5F7";
@@ -129,8 +128,6 @@ export const ASPECT = {
   D14: 1473 / 1055, D04: 1578 / 1026, D08: 1485 / 938, D10: 1062 / 953, E02: 850 / 1096, E03: 1378 / 1110, E04: 847 / 1092, E05: 866 / 1101, E06: 960 / 1099, E07: 864 / 1069,
   E08: 490 / 1003, D13: 1513 / 1032, D02: 475 / 1046, E09: 1251 / 1098, E10: 1279 / 1109, E01: 1031 / 1087, EVO: 1241 / 560,
 };
-// every other bank image (K1-K4 collector bank, the rest of bank v2) resolves through bank.json
-for (const [k, [f, a]] of Object.entries(BANK)) { if (!FILE[k]) FILE[k] = f; if (!ASPECT[k]) ASPECT[k] = a; }
 export const src = (id) => staticFile("img/" + FILE[id]);
 export const preloadList = (ids) => ids.map((id) => src(id));
 
