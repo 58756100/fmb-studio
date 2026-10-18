@@ -1,7 +1,7 @@
 // @ts-nocheck
 // A-L3 (lane A+, suppliers): "Someone guessed your turbo." A tentative reply gets copied until it sounds like fact;
 // the fix is the part and its brand named on the build where it's used, shared as the build page's public link.
-// Hero: '99 Supra (B01 showroom photo) + turbo (C01), install photo G01.
+// Hero: '99 Supra (B01 showroom photo) + turbo (C01), install photo G01. Guessed brand: Wrenfield (fictional); recorded brand: Arden (fictional).
 // Transitions: whip carry (the guessed replies are flung aside, the turbo lands), silence punch (the fix), word carry
 // (BRAND -> its field), shared-element assembly into the build page, match cut back to the thread, CTA landing.
 // remocn (ported): strikethrough-replace ("I think" struck), caret (empty brand field), lens-zoom settle (silence punch),
@@ -87,14 +87,14 @@ export function build(tl, hook) {
         <Frame pal={pal} t={t} id="B01" x={96} y={400} w={888} h={380} fx={0.5} fy={0.62} kb={0.02} />
         <Comment t={t} t0={-1} y={820} who={P.asker}>What turbo is that?</Comment>
         {!after && <>
-          <Comment t={t} t0={hook === "A" ? tl.hook[3].s - 0.25 : tl.hook[1].s} y={1000} x={150} w={834} who={P.r1} dim={big}>Brand B, I think.</Comment>
+          <Comment t={t} t0={hook === "A" ? tl.hook[3].s - 0.25 : tl.hook[1].s} y={1000} x={150} w={834} who={P.r1} dim={big}>Wrenfield, I think.</Comment>
           <Comment t={t} t0={T.repeats - 0.2} y={lerp(1000, 1180, ez(t, T.repeats - 0.2, 0.45, EASE.camera))} x={150} w={834} s={1 + 0.12 * big} who={P.r2} z={6} hl={big}>
-            Brand B<span style={{ position: "relative", display: "inline-block", verticalAlign: "bottom", whiteSpace: "nowrap", overflow: seg(t, T.now, T.now + 0.3) > 0 ? "hidden" : "visible", opacity: 1 - seg(t, T.now, T.now + 0.3), maxWidth: `${(1 - EASE.camera(seg(t, T.now + 0.1, T.now + 0.5))) * 6}em` }}>, I think<span style={{ position: "absolute", left: 0, top: "52%", height: 6, background: pal.em, width: `${strike * 100}%` }} /></span>.
+            Wrenfield<span style={{ position: "relative", display: "inline-block", verticalAlign: "bottom", whiteSpace: "nowrap", overflow: seg(t, T.now, T.now + 0.3) > 0 ? "hidden" : "visible", opacity: 1 - seg(t, T.now, T.now + 0.3), maxWidth: `${(1 - EASE.camera(seg(t, T.now + 0.1, T.now + 0.5))) * 6}em` }}>, I think<span style={{ position: "absolute", left: 0, top: "52%", height: 6, background: pal.em, width: `${strike * 100}%` }} /></span>.
           </Comment>
         </>}
         {after && <>
-          <Comment t={t} t0={-1} y={1000} x={150} w={834} who={P.r1} o={1 - less} dim={less}>Brand B, I think.</Comment>
-          <Comment t={t} t0={-1} y={1180} x={150} w={834} who={P.r2} o={1 - less} dim={less}>Brand B.</Comment>
+          <Comment t={t} t0={-1} y={1000} x={150} w={834} who={P.r1} o={1 - less} dim={less}>Wrenfield, I think.</Comment>
+          <Comment t={t} t0={-1} y={1180} x={150} w={834} who={P.r2} o={1 - less} dim={less}>Wrenfield.</Comment>
           <Comment t={t} t0={T.share + 0.15} y={lerp(1360, 1000, less)} x={150} w={834} who={P.own} hl={less}>
             <Typed t={t} t0={T.share + 0.35} t1={T.share + 1.3} text="fuelmybuild.com/ken/supra" caret={pal.em} style={{ ...mono(46, pal.tx) }} keepCaret={0.6} />
           </Comment>

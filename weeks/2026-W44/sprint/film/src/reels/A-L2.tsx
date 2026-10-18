@@ -1,9 +1,9 @@
 // @ts-nocheck
-// A-L2 (lane A+, garages): "Same car. Same photo." Two shops, one finished Miata photo each; the record behind
-// Shop B's photo (brake kit, dated install photo, parts and brands, garage, contributor) is what makes them judgeable.
+// A-L2 (lane A+, garages): "Same car. Same photo." Two shops (Benny's Garage, Ridgeline Garage), one finished Miata photo each; the record behind
+// Ridgeline Garage's photo (brake kit, dated install photo, parts and brands, garage, contributor) is what makes them judgeable.
 // Hero: Miata (A08 cutout in the F10 detailing studio) + brake kit (C03), install photo G03, contributor E05.
-// Transitions: tap-to-open (Shop B photo -> its record), focus walk down the record (camera), match cut back to the
-// exact opening crop, shared-element assembly into the build page (Shop A whips out), CTA landing.
+// Transitions: tap-to-open (Ridgeline photo -> its record), focus walk down the record (camera), match cut back to the
+// exact opening crop, shared-element assembly into the build page (Benny's Garage whips out), CTA landing.
 // remocn (ported): micro-scale-fade (row labels), fade-through (selection outline), typewriter caret (URL),
 // period-drop (CTA), focus-blur-resolve (rows coming into focus). New vs A-L1: micro-scale-fade, focus-blur-resolve.
 import React from "react";
@@ -18,6 +18,8 @@ const pal = { bg: "#22211E", tx: "#F3EEE4", em: "#E9BB62", panel: "#2E2C28", pap
 export const BG = pal.bg;
 export const TEXT = { ...textStyle(pal), size: 104 };
 export const IMAGES = ["F10", "A08", "C03", "G03", "E05"];
+// fictional shops (state/visual-bank.md): Benny's Garage posts the photo only; Ridgeline Garage has the record
+const SHOP_A = "BENNY'S GARAGE", SHOP_B = "RIDGELINE GARAGE";
 const HOOKS = { A: [["Same car. Same photo.", 0]], B: [["Which shop would you hire?", 0]], C: [["This photo hides the work.", 0]] };
 
 // the "finished photo": the Miata cutout in the detailing studio, always the same crop
@@ -81,7 +83,7 @@ export function build(tl, hook) {
   fix(hi("What the"), [at("what"), at("the", 1), T.photo, T.leaves, at("out")]);
   if (hi("Easy")) { const u = at("until"); fix(hi("Easy"), [at("easy"), u, tl.after("you", u), tl.after("do", u), tl.after("it", u)]); }
 
-  // the record behind Shop B's photo
+  // the record behind Ridgeline Garage's photo
   const rows = [
     { at: T.brake - 0.05, label: "PART", value: "Brake kit", media: <div style={{ position: "absolute", right: 0, top: -30, width: 210, height: 200 }}><Cut id="C03" cx={105} cy={100} w={190} shadow={0.25} /></div> },
     { at: T.dated - 0.05, label: "LOG · INSTALL", value: "Sep 4, 2026", mono: 1, media: <div style={{ position: "absolute", right: 0, top: 10, width: 200, height: 130, borderRadius: 10, overflow: "hidden", border: `4px solid ${pal.em}` }}><img src={src("G03")} style={{ width: "100%", height: "100%", objectFit: "cover" }} /></div> },
@@ -98,20 +100,20 @@ export function build(tl, hook) {
     const breathe = 1 + 0.02 * seg(t, 0, OPEN);
     return <AbsoluteFill style={{ background: pal.bg }}>
       <div style={{ position: "absolute", inset: 0, transform: `scale(${breathe}) ${dT(d, 0.6)}`, transformOrigin: "50% 55%" }}>
-        <MiataPhoto t={t} x={96} y={430} w={888} h={480} label="SHOP A" seed="a" />
-        <MiataPhoto t={t} x={96} y={960} w={888} h={480} label="SHOP B" seed="b" />
+        <MiataPhoto t={t} x={96} y={430} w={888} h={480} label={SHOP_A} seed="a" />
+        <MiataPhoto t={t} x={96} y={960} w={888} h={480} label={SHOP_B} seed="b" />
         {sel.o > 0.01 && <div style={{ position: "absolute", left: 82, top: 416 + sel.y * 530, width: 916, height: 508, borderRadius: 30, border: `6px solid ${pal.em}`, opacity: sel.o }} />}
       </div>
     </AbsoluteFill>;
   };
-  // ---------- shot 2: Shop B's record (the photo becomes the header, rows build below; camera walks down)
+  // ---------- shot 2: Ridgeline Garage's record (the photo becomes the header, rows build below; camera walks down)
   const s2 = (t) => {
     const k = focusIdx(t);
     const camY = 0;
     const d = drift(t, "s2", 3, 0.25);
     return <AbsoluteFill style={{ background: pal.bg }}>
       <div style={{ position: "absolute", inset: 0, transform: `translateY(${camY}px) ${dT(d, 0.6)}` }}>
-        <MiataPhoto t={t} x={96} y={400} w={888} h={340} label="SHOP B" seed="b" />
+        <MiataPhoto t={t} x={96} y={400} w={888} h={340} label={SHOP_B} seed="b" />
         <div style={{ position: "absolute", left: 96, top: 770, width: 888, height: 40 + rows.length * 142, background: pal.paper, borderRadius: 14, overflow: "hidden", boxShadow: "0 30px 60px -24px rgba(0,0,0,.65)",
           clipPath: `inset(0 0 ${(1 - ez(t, OPEN + 0.2, 0.5)) * 100}% 0 round 14px)` }}>
           <div style={{ position: "absolute", top: 0, bottom: 0, width: 260, left: ((t * 150) % 1300) - 400, background: "linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.3), rgba(255,255,255,0))" }} />
@@ -124,7 +126,7 @@ export function build(tl, hook) {
       </div>
     </AbsoluteFill>;
   };
-  // ---------- shot 3: back to the exact opening crop; Shop B's record now sits under its photo; then the build page
+  // ---------- shot 3: back to the exact opening crop; Ridgeline's record now sits under its photo; then the build page
   const s3 = (t) => {
     const cta = EASE.camera(seg(t, T.follow - 0.2, T.follow + 0.8));
     const d = drift(t, "s3", 3, 0.25);
@@ -135,8 +137,8 @@ export function build(tl, hook) {
     return <AbsoluteFill style={{ background: pal.bg }}>
       <div style={{ position: "absolute", inset: 0, transform: `scale(${1 - 0.04 * cta}) ${dT(d, 0.6)}`, transformOrigin: "50% 50%" }}>
         {pg > 0.01 && <BuildPage pal={pal} t={t} x={70} y={390} w={940} h={960} o={pg} photo="F10" photoH={330} title="1991 Miata" sub="Ridgeline Garage" url="fuelmybuild.com/rg/miata" urlAt={T.share + 0.3} urlBig={ez(t, T.link, 0.4)} brandAt={T.fuel} />}
-        {A.x > -1000 && <div style={{ position: "absolute", left: A.x, top: A.y, filter: mbx(Math.abs(A.vx) / 12) }}><MiataPhoto t={t} x={0} y={0} w={888} h={A.h} o={A.o} label="SHOP A" seed="a" /></div>}
-        <MiataPhoto t={t} x={Bp.x} y={Bp.y} w={Bp.w} h={Bp.h} label={pg > 0.4 ? null : "SHOP B"} seed="b" z={5} />
+        {A.x > -1000 && <div style={{ position: "absolute", left: A.x, top: A.y, filter: mbx(Math.abs(A.vx) / 12) }}><MiataPhoto t={t} x={0} y={0} w={888} h={A.h} o={A.o} label={SHOP_A} seed="a" /></div>}
+        <MiataPhoto t={t} x={Bp.x} y={Bp.y} w={Bp.w} h={Bp.h} label={pg > 0.4 ? null : SHOP_B} seed="b" z={5} />
         {R.o > 0.01 && <div style={{ position: "absolute", left: 96, top: R.y, width: 888, background: pal.paper, borderRadius: 14, zIndex: 6,
           overflow: "hidden", opacity: R.o, clipPath: `inset(0 0 ${(1 - R.o) * 100}% 0 round 14px)`, boxShadow: "0 30px 60px -24px rgba(0,0,0,.65)", padding: "18px 30px 22px 42px" }}>
           <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 12, background: pal.em }} />

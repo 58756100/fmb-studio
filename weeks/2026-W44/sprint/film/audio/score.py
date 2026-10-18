@@ -330,6 +330,26 @@ def place(t, k):
     elif k == "pull": add(sfx, whoosh(0.6, 3000, 500, 0.8, 0.25), t, 0.8)
     elif k == "head-in": add(sfx, whoosh(0.22, 2500, 6000, 0.35, 0.3), t, 0.35, P)
     elif k == "head-out": add(sfx, whoosh(0.25, 5000, 1800, 0.3, 0.2), t, 0.3, P)
+    # second builder (sprint bodies): phone buzz, torque click, cloth, ceramic, shutter-soft, engine-off quiet, paddle, gavel
+    elif k == "buzz":  # phone vibrating on a hard surface: 2 short motor pulses
+        for j in range(2):
+            n = L(0.26); tt = np.arange(n) / SR; x = (sine(155, n) + 0.6 * np.sign(sine(155, n)) * 0.3 + 0.25 * bp(noise(n), 300, 1400)) * env(n, 0.01, 0.2) * (tt < 0.24)
+            add(sfx, lp(x, 1800) * 0.7, t + j * 0.34, 0.9, 0.2)
+    elif k == "ratchet":
+        for j in range(4): add(sfx, click(rng.uniform(1500, 2100), 0.6), t + j * 0.07, 0.8, 0.2)
+        add(sfx, metal(1400, d=0.05), t + 0.3, 0.6, 0.2)
+    elif k == "torque-click": add(sfx, click(1300, 1.0), t, 1.0); add(sfx, thump(260, 0.02, 0.5), t); add(sfx, metal(2100, d=0.04), t + 0.01, 0.5)
+    elif k == "cloth": add(sfx, rustle(0.35, 0.7), t, 0.7, P); add(sfx, whoosh(0.3, 400, 1600, 0.3, 0.3), t, 0.4, P)
+    elif k == "cloth-toss": add(sfx, rustle(0.3, 0.9), t, 0.8, 0.3); add(sfx, whoosh(0.5, 300, 2400, 0.7, 0.3), t, 0.7, 0.5)
+    elif k == "cloth-land": add(sfx, thump(130, 0.04, 0.45), t); add(sfx, rustle(0.25, 0.6), t, 0.6, P)
+    elif k == "ceramic": add(sfx, tink(2600, 0.12), t, 0.5, P); add(sfx, tink(3900, 0.06), t + 0.01, 0.3, P)
+    elif k == "plate-rub": add(sfx, scratch(0.8, 700, 2600, 5, False), t, 0.35, P)
+    elif k == "gavel": add(sfx, thump(180, 0.05, 1.1), t); add(sfx, click(1200, 0.7), t)
+    elif k == "paddle": add(sfx, whoosh(0.25, 800, 3000, 0.5, 0.2), t, 0.6, P); add(sfx, popf(700, 0.03), t + 0.15, 0.6, P)
+    elif k == "page-turn": add(sfx, rustle(0.4, 0.9), t, 0.8, 0.3); add(sfx, whoosh(0.35, 1500, 4000, 0.5, 0.3), t, 0.5, 0.3)
+    elif k == "key-turn": add(sfx, click(2400, 0.7), t); add(sfx, metal(900, d=0.05), t + 0.08, 0.6); add(sfx, click(1800, 0.5), t + 0.16)
+    elif k == "fabric-pull": add(sfx, rustle(0.7, 1.0), t, 0.8, -0.2); add(sfx, whoosh(0.8, 300, 2000, 0.6, 0.6), t, 0.6, -0.2)
+    elif k == "bottle-tap": add(sfx, tink(1100, 0.08), t, 0.7, P); add(sfx, thump(320, 0.02, 0.4), t)
     else: raise SystemExit("unknown sfx " + k)
 
 # ------------------------------------------------------------------ cue list: the reel's own actions + transitions + headline landings

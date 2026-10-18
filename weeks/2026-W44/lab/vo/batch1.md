@@ -71,3 +71,19 @@ Closing CTAs replaced with share/save lines, spoken by each reel's narrator at t
 - **B-L3 line 2 still says "Brand B"** ("Now Brand B gets the credit") next to Vantor and Kestrel. Left as written because the brief named only "Demo Brand B" and "Demo Brand A". Check with Wayne.
 - **B-L3 hook openers** do not mention the names, so they were not re-rendered.
 - **Word ends** are clamped to file length (ElevenLabs tail timing).
+
+## Names patch, 2026-10-18 (no placeholder names)
+
+Wayne's rule (state/production-standards.md, Names): no "Shop A" / "Brand B" style names, on screen or in the VO. Only the spoken placeholder lines were re-voiced, with each reel's own voice and settings (eleven_v4, `tts.py --tighten --tempo 1.06`, run with `</dev/null`), and spliced into the existing master. Hook openers are unchanged (none carries a name).
+
+| Reel | Voice | Speed / stab. / style | Old line(s) | New line(s) | Chars |
+|---|---|---|---|---|---|
+| B-L3 | Jerry B. (Dg1lUQiSAGVHkoQMG3QX) | 1.08 / 0.55 / 0.10 | Next reply: Definitely B. / Now Brand B gets the credit. | Next reply: Definitely Vantor. / Now Vantor gets the credit. | 57 |
+| B-L2 | Emma (9HBoEQ8LqyvVZFYDodnr) | 1.08 / 0.50 / 0.15 | Shop A's gallery shows the finish. / So Nora opens Shop B's public build on Fuel My Build. Garage: Shop B. | Delmar Auto's gallery shows the finish. / So Nora opens Tanner Street's public build on Fuel My Build. Garage: Tanner Street Motors. | 129 |
+
+**Characters used: 186** (four takes, one pass, no retakes).
+
+- Splice: same method as the CTA patch. Each cut sits 0.05 s before an audio onset found from the master's waveform (8 frames of silence required before the onset, -55 dB threshold), inside verified silence; the new take is trimmed to its own speech (0.05 s lead, 30 ms fade-out) and followed by the old line's trailing silence (0.30 / 0.40 s for B-L3, 0.30 / 0.38 s for B-L2); 12 ms crossfades at each join. Speech level of the new takes is within about 1 dB of the neighbouring lines; integrated level of the VO file unchanged (B-L3 -20.8 to -20.7 LUFS, B-L2 -22.1 LUFS).
+- Lengths: B-L3 master VO 32.20 to 32.47 s; B-L2 31.16 to 32.15 s.
+- Words files: `words.json` here, in `sprint/film/src/vo/<id>/` and `sprint/film/public/vo/<id>/`. WAVs replaced on `renders` at `2026-W44/lab/vo/<id>/vo.wav`.
+- A-L2 and A-L3 had placeholders on screen only (VO clean), so no re-voice.

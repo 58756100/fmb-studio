@@ -5,7 +5,7 @@
 set -uo pipefail
 cd "$(dirname "$0")"; R=$(git rev-parse --show-toplevel); ID=$1; V=$R/weeks/2026-W44/sprint/vo/$ID
 [ -s $V/words.json ] || { echo "no VO for $ID"; exit 1; }
-mkdir -p src/vo/$ID public/vo/$ID
+mkdir -p src/vo/$ID public/vo/$ID public/fonts; cp -u fonts-b2/*.woff2 public/fonts/
 HOOKS=A
 for f in words hook-B.words hook-C.words; do [ -s $V/$f.json ] && cp $V/$f.json src/vo/$ID/; done
 git -C $R fetch --depth 1 --filter=blob:none origin renders >/dev/null 2>&1 || true

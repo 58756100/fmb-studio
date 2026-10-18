@@ -1,7 +1,7 @@
 // @ts-nocheck
 // B-L3 (lane B, suppliers): "Who made this turbo?" Jules asks; the first reply guesses Vantor ("I think"), the next
-// says "Definitely": the same guess, copied, and Vantor gets the credit (recorded brand: Kestrel). Jules opens the Supra's build: turbo kit,
-// brand A, the install log and photos. We check before repeating.
+// says "Definitely Vantor": the same guess, copied, and Vantor gets the credit (recorded brand: Kestrel). Jules opens the Supra's build:
+// turbo kit, brand Kestrel, the install log and photos. We check before repeating. (VO lines 3 and 5 re-voiced 2026-10-18 to say Vantor.)
 // Hero: '99 Supra (A01, B01) + turbo (C01); Jules E03; the Supra's turbo install (lab photos L06/L07, same car).
 // Transitions: lens push from the car to the turbo, comment stack (shared axis), copy trace (marker highlight + line
 // between the two guesses), credit chip carried to the turbo, tap-to-open (owner's link -> build page), field focus,
@@ -59,9 +59,8 @@ export function build(tl, hook) {
     B("First reply:", T.first, { hold: 2.4 }),
     B("Next reply:", T.next, { hold: 1.9 }),
     fx(B("Same guess, copied.", T.same), [T.same, at("guess"), T.copied]),
-    // VO line 2 says "Now Brand B gets the credit"; the thread on screen names Vantor, so the headline says Vantor and lands on
-    // the spoken "Brand B" (the name the replies gave it)
-    fx(B("Vantor gets the credit.", T.now), [tl.after("brand", T.now - 0.05), at("gets"), at("the", 2) > T.now ? at("the", 2) : T.credit - 0.1, T.credit]),
+    // VO: "Now Vantor gets the credit" (re-voiced 2026-10-18; it said a placeholder before)
+    fx(B("Vantor gets the credit.", T.now), [tl.after("vantor", T.now - 0.05), at("gets"), at("the", 2) > T.now ? at("the", 2) : T.credit - 0.1, T.credit]),
     fx(B("Where's the record?", T.so), [at("where's"), at("owner's"), T.record]),
     B("Jules opens the build", T.opens - 0.4),
     B("Turbo kit.", T.turbo, { hold: 0.6 }),
