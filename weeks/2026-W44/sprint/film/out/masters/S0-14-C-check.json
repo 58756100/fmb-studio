@@ -1,0 +1,17 @@
+{
+ "file": "out/masters/S0-14-C.mp4",
+ "video": "h264 1080x1920 30/1 frames=990",
+ "audio": "aac 48000 ch=2",
+ "v_dur": 33.0,
+ "a_dur": 33.0,
+ "expected": 33,
+ "vo_end": 31.991,
+ "tail": 1.009,
+ "v_start": 0.0,
+ "a_start": 0.0,
+ "xcorr_lag_samples": 0,
+ "lufs_I": -14.1,
+ "true_peak": -2.0,
+ "subtitle_streams": "none",
+ "cta": "\"Start your first nine\" at 27.76s, last shot starts 27.36s (over final frame)"
+}
