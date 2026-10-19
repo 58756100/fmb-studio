@@ -43,9 +43,9 @@ const Cooler = ({ x, y, w = 760, turn = 0, under = false, glint = 0, id = "c" })
       <rect x={422} y={26} width={48} height={268} rx={12} fill={`url(#ct${id})`} stroke="#5D646B" strokeWidth={2} />
       {[[54, 10], [446, 10], [54, 296], [446, 296]].map(([cx, cy], i) => <g key={i}><rect x={cx - 14} y={cy - 10} width={28} height={22} rx={4} fill={i % 2 ? "#2F67C8" : "#C8352F"} /><rect x={cx - 9} y={cy - 22} width={18} height={14} fill="#B8BEC4" /></g>)}
     </svg>
-    {!under ? <div style={{ position: "absolute", left: "33%", top: "40%", width: "34%", height: "20%", borderRadius: 6, background: "linear-gradient(180deg, #F4F5F6, #C9CED3)", boxShadow: "0 2px 6px rgba(0,0,0,.35)", display: "grid", placeItems: "center" }}>
+    {!under ? <div data-check="part" style={{ position: "absolute", left: "33%", top: "40%", width: "34%", height: "20%", borderRadius: 6, background: "linear-gradient(180deg, #F4F5F6, #C9CED3)", boxShadow: "0 2px 6px rgba(0,0,0,.35)", display: "grid", placeItems: "center" }}>
       <span style={{ fontFamily: "Inter", fontWeight: 800, fontSize: w * 0.05, letterSpacing: "0.08em", color: BRAMBLE }}>BRAMBLE CORE</span></div>
-      : <div style={{ position: "absolute", left: "30%", top: "38%", width: "40%", height: "24%", borderRadius: 6, background: "linear-gradient(180deg, #D7DBDF, #9EA4AA)", display: "grid", placeItems: "center", boxShadow: "inset 0 2px 4px rgba(0,0,0,.3)" }}>
+      : <div data-check="part" style={{ position: "absolute", left: "30%", top: "38%", width: "40%", height: "24%", borderRadius: 6, background: "linear-gradient(180deg, #D7DBDF, #9EA4AA)", display: "grid", placeItems: "center", boxShadow: "inset 0 2px 4px rgba(0,0,0,.3)" }}>
         <span style={{ fontFamily: "IBM Plex Mono", fontWeight: 500, fontSize: w * 0.04, color: "#3A3F45" }}>BC-OC19 · 2211</span></div>}
   </div>;
 };

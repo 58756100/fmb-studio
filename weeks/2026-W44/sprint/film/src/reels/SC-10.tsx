@@ -219,7 +219,8 @@ export function build(tl, hook) {
     const out = EASE.in(seg(t, T.shelf - 0.2, T.shelf + 0.2)), inn = spr(t - (T.shelf + 0.1), 260, 16);
     const probe = ez(t, T.tray + 0.45, 0.35);
     return <AbsoluteFill style={{ background: "radial-gradient(100% 70% at 50% 45%, #3A3D42, #16181B)" }}>
-      <div style={{ position: "absolute", inset: 0, transform: dT(d, 0.6) }}>
+      <div style={{ position: "absolute", inset: 0, transform: `${dT(d, 0.6)} scale(${(1 + 0.1 * EASE.io(seg(t, T.found - 0.45, T.shelf + 0.6))).toFixed(4)}) rotate(${(1.2 * Math.sin(t * 1.1)).toFixed(3)}deg)`, transformOrigin: "540px 1150px" }}>
+        <div style={{ position: "absolute", inset: -200, background: `radial-gradient(420px 320px at ${540 + 260 * Math.sin(t * 1.4)}px ${1150 + 140 * Math.cos(t * 1.1)}px, rgba(255,240,200,.22), rgba(0,0,0,0) 70%)`, zIndex: 35, pointerEvents: "none" }} />
         <div style={{ position: "absolute", left: 160, top: 1000, width: 760, height: 420, borderRadius: 20, background: "linear-gradient(180deg, #2a2d31, #1b1d20)", boxShadow: "inset 0 0 0 6px #3a3d42" }} />
         {/* battery lifted away */}
         <div style={{ position: "absolute", left: 200, top: 620 - lift * 520, width: 680, height: 420, borderRadius: 26, background: "linear-gradient(170deg, #34373c, #121316)", boxShadow: "0 30px 50px rgba(0,0,0,.6)", zIndex: 30, transform: `rotate(${-3 * lift}deg)` }}>
