@@ -1,0 +1,17 @@
+{
+ "file": "out/masters/SC-10-A.mp4",
+ "video": "h264 1080x1920 30/1 frames=1639",
+ "audio": "aac 48000 ch=2",
+ "v_dur": 54.633333,
+ "a_dur": 54.633,
+ "expected": 54.63333333333333,
+ "vo_end": 53.31,
+ "tail": 1.323,
+ "v_start": 0.0,
+ "a_start": 0.0,
+ "xcorr_lag_samples": 0,
+ "lufs_I": -14.1,
+ "true_peak": -1.8,
+ "subtitle_streams": "none",
+ "cta": "\"Start your car's record\" at 48.99s, last shot starts 48.87s (over final frame)"
+}
