@@ -4,9 +4,9 @@ A-L3 C 32.53s 4 shots 17 heads 20 sfx music
 A-L3-A master (AAC) I=-14.10 LUFS TP=-1.90 dBTP LRA=2.3 | cues 47 (20 reel, 27 auto)
 A-L3-B master (AAC) I=-14.10 LUFS TP=-1.70 dBTP LRA=2.4 | cues 48 (20 reel, 28 auto)
 A-L3-C master (AAC) I=-14.20 LUFS TP=-2.20 dBTP LRA=2.2 | cues 48 (20 reel, 28 auto)
-done out/video/A-L3-A.mp4 949 frames 182s
-done out/video/A-L3-B.mp4 979 frames 184s
-done out/video/A-L3-C.mp4 976 frames 180s
+done out/video/A-L3-A.mp4 949 frames 393s
+done out/video/A-L3-B.mp4 979 frames 410s
+done out/video/A-L3-C.mp4 976 frames 392s
 == A-L3-A
   file: out/masters/A-L3-A.mp4
   video: h264 1080x1920 30/1 frames=949
@@ -23,7 +23,7 @@ done out/video/A-L3-C.mp4 976 frames 180s
   true_peak: -1.9
   subtitle_streams: none
   cta: "Send them this" at 27.21s, last shot starts 18.84s (over final frame)
-out/masters/A-L3-A.mp4: 63 windows, lowest 0.382 at 24.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+out/masters/A-L3-A.mp4: 63 windows, lowest 0.383 at 24.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
   static: 
 == A-L3-B
   file: out/masters/A-L3-B.mp4
@@ -62,3 +62,7 @@ out/masters/A-L3-B.mp4: 65 windows, lowest 0.384 at 24.5s, static(<0.35) 0, long
 out/masters/A-L3-C.mp4: 65 windows, lowest 0.382 at 24.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
   static: 
 ../storyboard/A-L3-final-sheet.jpg (2244, 1420)
+== gate
+A-L3-A: 31.63s (VO 30.61 + tail 1.02), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.383 at 24.5s, lag 0 OK
+A-L3-B: 32.63s (VO 31.61 + tail 1.03), I -14.1 LUFS, TP -1.7 dBTP, lowest energy 0.384 at 24.5s, lag 0 OK
+A-L3-C: 32.53s (VO 31.52 + tail 1.01), I -14.2 LUFS, TP -2.2 dBTP, lowest energy 0.382 at 24.5s, lag 0 OK

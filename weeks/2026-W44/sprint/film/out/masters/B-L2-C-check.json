@@ -1,17 +1,17 @@
 {
  "file": "out/masters/B-L2-C.mp4",
- "video": "h264 1080x1920 30/1 frames=948",
+ "video": "h264 1080x1920 30/1 frames=978",
  "audio": "aac 48000 ch=2",
- "v_dur": 31.6,
- "a_dur": 31.6,
- "expected": 31.6,
- "vo_end": 30.576,
- "tail": 1.024,
+ "v_dur": 32.6,
+ "a_dur": 32.6,
+ "expected": 32.6,
+ "vo_end": 31.568,
+ "tail": 1.032,
  "v_start": 0.0,
  "a_start": 0.0,
  "xcorr_lag_samples": 0,
- "lufs_I": -14.1,
+ "lufs_I": -14.2,
  "true_peak": -1.8,
  "subtitle_streams": "none",
- "cta": "\"Send this their way\" at 27.50s, last shot starts 26.22s (over final frame)"
+ "cta": "\"Send this their way\" at 28.54s, last shot starts 27.26s (over final frame)"
 }
