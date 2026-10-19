@@ -32,4 +32,5 @@ import * as LA04 from "./LA-04";
 import * as LB01 from "./LB-01";
 import * as LA02 from "./LA-02";
 import * as LA05 from "./LA-05";
-export const B2 = { "SC-04": SC04, "LA-03": LA03, "S0-12": S012, "S0-04": S004, "SC-10": SC10, "LB-07": LB07, "SC-01": SC01, "S0-07": S007, "SC-08": SC08, "SC-06": SC06, "SC-07": SC07, "LA-06": LA06, "SC-02": SC02, "LA-10": LA10, "SC-09": SC09, "S0-13": S013, "SC-05": SC05, "S0-10": S010, "LA-08": LA08, "SC-03": SC03, "LA-07": LA07, "LB-08": LB08, "LB-03": LB03, "LB-02": LB02, "LA-09": LA09, "LB-05": LB05, "LA-01": LA01, "LA-04": LA04, "LB-01": LB01, "LA-02": LA02, "LA-05": LA05 };
+import * as LB09 from "./LB-09";
+export const B2 = { "SC-04": SC04, "LA-03": LA03, "S0-12": S012, "S0-04": S004, "SC-10": SC10, "LB-07": LB07, "SC-01": SC01, "S0-07": S007, "SC-08": SC08, "SC-06": SC06, "SC-07": SC07, "LA-06": LA06, "SC-02": SC02, "LA-10": LA10, "SC-09": SC09, "S0-13": S013, "SC-05": SC05, "S0-10": S010, "LA-08": LA08, "SC-03": SC03, "LA-07": LA07, "LB-08": LB08, "LB-03": LB03, "LB-02": LB02, "LA-09": LA09, "LB-05": LB05, "LA-01": LA01, "LA-04": LA04, "LB-01": LB01, "LA-02": LA02, "LA-05": LA05, "LB-09": LB09 };
