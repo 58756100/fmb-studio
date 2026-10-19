@@ -8,7 +8,7 @@
 // Device (reserved): glove occlusion revealing the source photo. Jori's work glove stops the piston in the hook, turns
 // over to show the empty bench, covers the card in the old photo and slides aside to reveal it, and returns for the loop.
 // Images: block C15 (bank). Drawn: piston, glove, stand, card, sleeve, tray and cloth, wall phone, machinist's desk.
-// Fictional: Jori, Ellis Vale, Cedar Slot Engines, Vale Bench Machine. No measurement values are readable (source detail).
+// Fictional: Jori, Hal Vale, Cedar Slot Engines, Vale Bench Machine. No measurement values are readable (source detail).
 // Transitions: glove carries the camera down to the empty card space (match), lowering finger becomes the tray cover
 // (wipe-like slide), shutter flash into the old photo (punch), photo straightens into the entry (match), tap opens the
 // source crop (tap), phone cord leads to the machinist (whip), fresh sheet slides back to the bench (whip), CTA on the bench.
@@ -197,7 +197,7 @@ export function build(tl, hook) {
     const tick = ez(t, T.confirms, 0.6);
     return <AbsoluteFill style={{ background: "#ECE7DD" }}><div style={{ position: "absolute", inset: 0, transform: dT(d, 0.6) }}>
       <div style={{ position: "absolute", left: -40, right: -40, top: 1180, height: 760, background: "linear-gradient(180deg, #9C7B55, #7E6143)" }} />
-      <div style={{ position: "absolute", left: 80, top: 600, width: 300, height: 120, borderRadius: 60, background: "#2B2E33", display: "flex", alignItems: "center", justifyContent: "center", ...land(t, T.machinist - 0.3) }}><span style={inter(44, "#fff", 600)}>Ellis Vale</span></div>
+      <div style={{ position: "absolute", left: 80, top: 600, width: 300, height: 120, borderRadius: 60, background: "#2B2E33", display: "flex", alignItems: "center", justifyContent: "center", ...land(t, T.machinist - 0.3) }}><span style={inter(44, "#fff", 600)}>Hal Vale</span></div>
       <MCard x={120} y={900} w={460} rot={-3} />
       <div style={{ position: "absolute", left: 470, top: 880, ...land(t, T.confirms) }}><Tick p={tick} size={90} /></div>
       <MCard x={lerp(560, -900, away)} y={lerp(1300, 1260, clamp(copyOut))} w={460} rot={4 - 2 * clamp(copyOut)} o={clamp(copyOut * 2)} copy />
