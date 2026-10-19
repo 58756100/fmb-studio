@@ -1,0 +1,70 @@
+S0-12 A 52.23s 9 shots 7 heads 22 sfx music
+S0-12 B 52.00s 9 shots 7 heads 22 sfx music
+S0-12 C 51.53s 9 shots 7 heads 22 sfx music
+S0-12-A master (AAC) I=-14.20 LUFS TP=-1.80 dBTP LRA=2.9 | cues 44 (22 reel, 22 auto)
+S0-12-B master (AAC) I=-14.10 LUFS TP=-2.00 dBTP LRA=3.0 | cues 43 (22 reel, 21 auto)
+S0-12-C master (AAC) I=-14.10 LUFS TP=-1.90 dBTP LRA=3.0 | cues 42 (22 reel, 20 auto)
+done out/video/S0-12-A.mp4 1567 frames 2128s
+S0-12-B: opener 0-167 + A from 175, total 1560
+done out/video/S0-12-B-part.mp4 1560 frames 194s
+S0-12-C: opener 0-153 + A from 175, total 1546
+done out/video/S0-12-C-part.mp4 1546 frames 157s
+== S0-12-A
+  file: out/masters/S0-12-A.mp4
+  video: h264 1080x1920 30/1 frames=1567
+  audio: aac 48000 ch=2
+  v_dur: 52.233333
+  a_dur: 52.233
+  expected: 52.233333333333334
+  vo_end: 51.008
+  tail: 1.225
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.2
+  true_peak: -1.8
+  subtitle_streams: none
+  cta: "See how build pages work" at 45.96s, last shot starts 40.23s (over final frame)
+out/masters/S0-12-A.mp4: 104 windows, lowest 0.438 at 20.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== S0-12-B
+  file: out/masters/S0-12-B.mp4
+  video: h264 1080x1920 30/1 frames=1560
+  audio: aac 48000 ch=2
+  v_dur: 52.0
+  a_dur: 52.0
+  expected: 52
+  vo_end: 50.781
+  tail: 1.219
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -2.0
+  subtitle_streams: none
+  cta: "See how build pages work" at 45.73s, last shot starts 40.01s (over final frame)
+out/masters/S0-12-B.mp4: 104 windows, lowest 0.431 at 36.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== S0-12-C
+  file: out/masters/S0-12-C.mp4
+  video: h264 1080x1920 30/1 frames=1546
+  audio: aac 48000 ch=2
+  v_dur: 51.533333
+  a_dur: 51.533
+  expected: 51.53333333333333
+  vo_end: 50.315
+  tail: 1.218
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "See how build pages work" at 45.26s, last shot starts 39.54s (over final frame)
+out/masters/S0-12-C.mp4: 103 windows, lowest 0.422 at 35.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+../storyboard/S0-12-final-sheet.jpg (2244, 1420)
+== gate
+S0-12-A: 52.23s (VO 51.01 + tail 1.23), I -14.2 LUFS, TP -1.8 dBTP, lowest energy 0.438 at 20.0s, lag 0 OK
+S0-12-B: 52.00s (VO 50.78 + tail 1.22), I -14.1 LUFS, TP -2.0 dBTP, lowest energy 0.431 at 36.0s, lag 0 OK
+S0-12-C: 51.53s (VO 50.31 + tail 1.22), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.422 at 35.5s, lag 0 OK
