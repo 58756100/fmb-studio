@@ -141,7 +141,10 @@ export function build(tl, hook) {
   // ---------- shot 3: the grid again; marker names written under each number
   const gridLabel = (t) => <AbsoluteFill>
     {floor(t)}
-    {CARS.map((c, i) => { const p = slot(i); return <Box key={i} t={t} x={p.x} y={p.y} w={BW} n={i + 1} label={ez(t, T.builders - 0.3 + i * 0.07, 0.3)} z={i} />; })}
+    <div style={{ position: "absolute", inset: 0, transform: `scale(${1.08 - 0.08 * EASE.io(seg(t, GRID, ROW))}) rotate(${Math.sin(t * 1.3) * 0.6}deg)`, transformOrigin: "540px 1100px" }}>
+    {CARS.map((c, i) => { const p = slot(i), lt = T.builders - 0.3 + i * 0.07, b = spr(t - lt, 260, 12), hop = t > lt ? Math.sin(Math.min(1, (t - lt) / 0.4) * Math.PI) * 26 : Math.sin(t * 3 + i) * 4;
+      return <Box key={i} t={t} x={p.x} y={p.y - hop} w={BW} n={i + 1} label={ez(t, lt, 0.3)} s={1 + 0.03 * Math.sin(Math.PI * clamp(b))} z={i} />; })}
+    </div>
   </AbsoluteFill>;
   // ---------- shot 4: tracking along the row; the ask card drops into each box; ends centred on box 7
   const RW = 340, RS = 400, RY = 980;

@@ -31,7 +31,8 @@ const FONTS = {
   "Source Sans 3": ["source-sans-3-latin-600-normal.woff2", "600"],
   "IBM Plex Mono": ["ibm-plex-mono-latin-500-normal.woff2", "500"],
   Nunito: ["nunito-latin-wght-normal.woff2", "200 1000"],
-  Caveat: ["caveat-latin-wght-normal.woff2", "400 700"], // fonts-b2/ (OFL) // fonts-b2/ (OFL), copied to public/fonts by vo-get.sh
+  Caveat: ["caveat-latin-wght-normal.woff2", "400 700"],
+  Fraunces: ["fraunces-latin-600-normal.woff2", "600"], // fonts-b2/ (OFL) // fonts-b2/ (OFL) // fonts-b2/ (OFL), copied to public/fonts by vo-get.sh
 };
 let loaded = {};
 const load = (ids) => {

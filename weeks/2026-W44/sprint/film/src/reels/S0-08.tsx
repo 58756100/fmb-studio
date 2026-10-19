@@ -153,12 +153,15 @@ export function build(tl, hook) {
   const thread = (t) => {
     const inP = EASE.out(seg(t, SNAP + 0.1, SNAP + 1.3));
     const off = EASE.in(seg(t, T.kept - 0.2, PETE + 0.1));
-    const lx = lerp(-900, 60, inP) + (t - SNAP) * 22 + off * 1300; // leader card left: keeps travelling right (the roll is being pulled)
+    // the colour roll threads in across the frame (frames visible, always travelling right); its leader card rides above it
+    const sx = lerp(centreX0(3) - 1500, centreX0(3) - 160, inP) + (t - SNAP) * 70 + off * 2600;
+    const lx = lerp(-900, 110, inP) + (t - SNAP) * 22 + off * 1500;
     const d = drift(t, "th", 3, 0.3);
     return <AbsoluteFill><Studio t={t}>
       <div style={{ position: "absolute", inset: 0, transform: dT(d, 0.5) }}>
-        <Strip t={t} x0={lx - 4 * PITCH - 200 - 40} frames={ROLL.slice(0, 4)} />
-        <div style={{ position: "absolute", left: lx, top: SY + 150 + Math.sin(t * 2.4) * 14, transform: `rotate(${Math.sin(t * 1.7) * 1.2}deg)`, width: 860, height: 340, borderRadius: 40, background: "#fff", zIndex: 12, display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 44px",
+        <Strip t={t} x0={sx} frames={ROLL.slice(0, 4)} y={SY + 260} />
+        <div style={{ position: "absolute", left: lx + 380, top: 760, width: 8, height: 280, background: "#121212", zIndex: 11, opacity: inP }} />
+        <div style={{ position: "absolute", left: lx, top: 430 + Math.sin(t * 2.4) * 10, transform: `rotate(${Math.sin(t * 1.7) * 1.2}deg)`, width: 860, height: 330, borderRadius: 40, background: "#fff", zIndex: 12, display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 44px",
           boxShadow: "0 0 0 1px rgba(0,0,0,.06), 0 30px 50px -26px rgba(0,0,0,.35)" }}>
           <div style={font("Inter", 42, GREY, 500)}>Pete's WRX · build page</div>
           <div style={{ marginTop: 14, display: "inline-flex", alignItems: "center", gap: 14 }}>
