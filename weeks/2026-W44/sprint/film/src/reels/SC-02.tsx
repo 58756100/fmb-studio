@@ -21,7 +21,7 @@ import { land, Wordmark, Who, Thumb, Sweep, Ripple } from "./b2kit";
 
 export const HOOK_WORDS = 12;
 export const TAIL = 1.3;
-export const LIFE = 1.3;
+export const LIFE = 1.75;
 export const BG = "#1C1D20";
 export const TEXT = { ...HTEXT, size: 108, color: "#F5F5F7" };
 export const IMAGES = ["A35", "F01", "F05", "E02", "K4-04", "G02", "D04"];

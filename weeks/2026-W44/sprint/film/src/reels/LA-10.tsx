@@ -19,7 +19,7 @@ import { land } from "./b2kit";
 
 export const HOOK_WORDS = 6;
 export const TAIL = 1.4;
-export const LIFE = 1.2;
+export const LIFE = 1.75;
 const ASPH = "#2A2B2D", CREAM = "#F2ECDD", YEL = "#FFD21F", INKD = "#1A1A1A";
 export const BG = ASPH;
 export const TEXT = { font: "Inter", weight: 800, size: 96, min: 66, ls: "0.03em", opsz: 32, upper: true, color: CREAM, accent: YEL, line2: null, align: "left", x0: 80, maxW: 920, top: 268, lead: 1.0 };

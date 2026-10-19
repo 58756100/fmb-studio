@@ -2,5 +2,8 @@ B-L2 A 33.17s 6 shots 17 heads 21 sfx music
 B-L2 B 32.50s 6 shots 17 heads 21 sfx music
 B-L2 C 32.60s 6 shots 17 heads 21 sfx music
 B-L2-A master (AAC) I=-14.00 LUFS TP=-1.80 dBTP LRA=2.2 | cues 45 (21 reel, 24 auto)
-B-L2-B master (AAC) I=-14.20 LUFS TP=-1.90 dBTP LRA=2.2 | cues 44 (21 reel, 23 auto)
-B-L2-C master (AAC) I=-14.20 LUFS TP=-1.80 dBTP LRA=2.5 | cues 44 (21 reel, 23 auto)
+Terminated
+== gate
+B-L2-A: 32.17s (VO 31.16 + tail 1.00), I -14.1 LUFS, TP -2.0 dBTP, lowest energy 0.486 at 12.0s, lag 0 OK
+B-L2-B: 31.53s (VO 30.50 + tail 1.03), I -14.1 LUFS, TP -1.4 dBTP, lowest energy 0.512 at 31.0s, lag 0 OK
+B-L2-C: 31.60s (VO 30.58 + tail 1.02), I -14.1 LUFS, TP -1.8 dBTP, lowest energy 0.514 at 31.0s, lag 0 OK

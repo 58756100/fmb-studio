@@ -19,7 +19,7 @@ import { land, Sweep } from "./b2kit";
 
 export const HOOK_WORDS = 6;
 export const TAIL = 1.3;
-export const LIFE = 1.2;
+export const LIFE = 1.75;
 const SLATE = "#2F3946", SLATE2 = "#46526283", PAPER = "#F4EEDF", BUTTER = "#F7DA7E", INKD = "#28303B", ACC = "#F08A3C", CREAM = "#F6F0E2";
 export const BG = SLATE;
 const NUN = "Nunito", MONO = "'IBM Plex Mono'";
@@ -113,7 +113,8 @@ export function build(tl, hook) {
     const bx = lerp(780, 835, split) + 0 * oc, by = lerp(1250, 1250, split);
     return <AbsoluteFill style={{ background: SLATE }}>
       <div style={{ position: "absolute", inset: 0, background: "radial-gradient(110% 70% at 50% 40%, #4A5768 0%, #2F3946 60%, #252D38 100%)" }} />
-      <div style={{ position: "absolute", inset: 0, transform: `translate(${cam.x}px, ${cam.y}px) scale(${cam.s})`, transformOrigin: "75% 70%" }}>
+      <div style={{ position: "absolute", top: -300, width: 460, height: 2600, left: ((t * 210) % 2000) - 700, background: "linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.10), rgba(255,255,255,0))", transform: "rotate(18deg)" }} />
+      <div style={{ position: "absolute", inset: 0, transform: `translate(${cam.x}px, ${cam.y}px) scale(${cam.s * (1 + 0.03 * Math.sin(t * 0.7))})`, transformOrigin: "75% 70%" }}>
         {/* the bench */}
         <div style={{ position: "absolute", left: -40, right: -40, top: 1470, height: 120, background: "linear-gradient(180deg, #8A7660, #6C5A47)", boxShadow: "0 -6px 0 #A08A70, 0 30px 40px rgba(0,0,0,.35)" }} />
         {/* split cards */}

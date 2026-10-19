@@ -22,7 +22,7 @@ import { land, Wordmark, Who } from "./b2kit";
 
 export const HOOK_WORDS = 12;
 export const TAIL = 1.3;
-export const LIFE = 1.3;
+export const LIFE = 1.75;
 export const BG = "#F5F5F7";
 export const TEXT = { ...HTEXT, size: 108 };
 export const IMAGES = ["D14", "E05", "E07", "F04", "C19", "A10"];

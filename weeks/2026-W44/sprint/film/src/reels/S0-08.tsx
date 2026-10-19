@@ -151,14 +151,14 @@ export function build(tl, hook) {
   };
   // ---------- shot 4: the new colour roll threads in from the left; its leader is the link; it runs off right
   const thread = (t) => {
-    const inP = EASE.out(seg(t, SNAP + 0.1, SNAP + 1.1));
+    const inP = EASE.out(seg(t, SNAP + 0.1, SNAP + 1.3));
     const off = EASE.in(seg(t, T.kept - 0.2, PETE + 0.1));
-    const lx = lerp(-900, 120, inP) + off * 1300; // leader card left
+    const lx = lerp(-900, 60, inP) + (t - SNAP) * 22 + off * 1300; // leader card left: keeps travelling right (the roll is being pulled)
     const d = drift(t, "th", 3, 0.3);
     return <AbsoluteFill><Studio t={t}>
       <div style={{ position: "absolute", inset: 0, transform: dT(d, 0.5) }}>
         <Strip t={t} x0={lx - 4 * PITCH - 200 - 40} frames={ROLL.slice(0, 4)} />
-        <div style={{ position: "absolute", left: lx, top: SY + 150, width: 860, height: 340, borderRadius: 40, background: "#fff", zIndex: 12, display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 44px",
+        <div style={{ position: "absolute", left: lx, top: SY + 150 + Math.sin(t * 2.4) * 14, transform: `rotate(${Math.sin(t * 1.7) * 1.2}deg)`, width: 860, height: 340, borderRadius: 40, background: "#fff", zIndex: 12, display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 44px",
           boxShadow: "0 0 0 1px rgba(0,0,0,.06), 0 30px 50px -26px rgba(0,0,0,.35)" }}>
           <div style={font("Inter", 42, GREY, 500)}>Pete's WRX · build page</div>
           <div style={{ marginTop: 14, display: "inline-flex", alignItems: "center", gap: 14 }}>

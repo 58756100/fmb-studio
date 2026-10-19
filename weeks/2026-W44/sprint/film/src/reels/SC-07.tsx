@@ -20,7 +20,7 @@ import { land, Wordmark, Who } from "./b2kit";
 
 export const HOOK_WORDS = 10;
 export const TAIL = 1.3;
-export const LIFE = 1.3;
+export const LIFE = 1.75;
 export const BG = "#1F2023";
 export const TEXT = { ...HTEXT, size: 108, color: "#F5F5F7" };
 export const IMAGES = ["F04", "E07", "K4-01", "C07", "A10", "A31", "A28"];

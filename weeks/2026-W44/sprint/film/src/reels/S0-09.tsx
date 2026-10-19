@@ -112,7 +112,7 @@ export function build(tl, hook) {
     // hook C: grey before/after split, knocked off by the title slam
     const knock = hook === "C" ? ez(t, t0 + 0.1, 0.5, EASE.in) : 1;
     return <AbsoluteFill style={{ background: BG }}>
-      <div style={{ position: "absolute", inset: 0, background: "radial-gradient(70% 45% at 50% 48%, #1D2127 0%, #07080A 75%)" }} />
+      <div style={{ position: "absolute", inset: 0, background: hook === "B" && t < 1.3 ? `radial-gradient(${60 + 30 * Math.sin(t * 5)}% 45% at ${30 + 50 * seg(t, 0, 1.2)}% 60%, #333A44 0%, #07080A 75%)` : "radial-gradient(70% 45% at 50% 48%, #1D2127 0%, #07080A 75%)" }} />
       {hook === "C" && knock < 1 && [0, 1].map((i) => <div key={i} style={{ position: "absolute", left: 60 + i * 490, top: 640, width: 470, height: 700, borderRadius: 24, overflow: "hidden",
         transform: `translate(${(i ? 1 : -1) * knock * 700}px, ${knock * 300}px) rotate(${(i ? 1 : -1) * knock * 25}deg)`, filter: `grayscale(1) brightness(.75) ${knock > 0.05 ? "url(#mbx4)" : ""}` }}>
         <img src={src(i ? "G12" : "A10")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: i ? "50% 50%" : "30% 50%" }} />
@@ -126,7 +126,7 @@ export function build(tl, hook) {
       {/* hook B: the single bolt falls and bounces before the title builds around it */}
       {hook === "B" && t < 1.3 && (() => { const f = clamp(t / 0.55), y = t < 0.55 ? lerp(GAPPT.y - 760, GAPPT.y, f * f) : GAPPT.y - Math.abs(Math.sin((t - 0.55) * 9)) * 60 * Math.exp(-(t - 0.55) * 6);
         const x = lerp(560, GAPPT.x, EASE.out(f));
-        return <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>{ALL.map((p, i) => <circle key={i} cx={p.x} cy={p.y} r={p.r0 * 0.8} fill="none" stroke="#fff" strokeWidth={2} opacity={(0.06 + 0.08 * Math.max(0, Math.sin(t * 7 - p.x / 90 - p.y / 140))) * seg(t, 0.15, 0.5) * (1 - seg(t, 1.05, 1.3))} />)}<g transform={`translate(${x},${y})`}><HexHead r={lerp(46, 26, f) - 12.5 * seg(t, 0.9, 1.25)} rot={t * 200} /></g></svg>; })()}
+        return <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>{ALL.map((p, i) => <circle key={i} cx={p.x} cy={p.y} r={p.r0 * 0.8} fill="none" stroke="#fff" strokeWidth={2} opacity={(0.12 + 0.4 * Math.max(0, Math.sin(t * 9 - p.x / 70 - p.y / 110))) * seg(t, 0.0, 0.25) * (1 - seg(t, 1.05, 1.3))} />)}<g transform={`translate(${x},${y})`}><HexHead r={lerp(46, 26, f) - 12.5 * seg(t, 0.9, 1.25)} rot={t * 200} /></g></svg>; })()}
     </AbsoluteFill>;
   };
   // the bolt that falls out of the title and lands on the fender (overlay above the cut)

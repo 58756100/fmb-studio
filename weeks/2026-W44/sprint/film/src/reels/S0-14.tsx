@@ -107,7 +107,7 @@ export function build(tl, hook) {
     <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(237,230,220,.82) 0%, rgba(237,230,220,.55) 40%, rgba(220,208,190,.75) 100%)" }} />
   </>;
   const gridHook = (t) => {
-    const pull = hook === "C" ? EASE.camera(seg(t, 0.2, 2.0)) : 1;
+    const pull = hook === "C" ? EASE.io(seg(t, 0, 2.0)) : 1;
     const s7 = slot(6), k = lerp(3.0, 1, pull), ox = s7.x + BW / 2, oy = s7.y + 120;
     const tapeRun = hook === "B" ? ez(t, hw[5].s - 0.3, 0.8) : 1;
     return <AbsoluteFill>
@@ -126,8 +126,8 @@ export function build(tl, hook) {
     const top = PK.w * 0.26;
     return <AbsoluteFill>
       {floor(t)}
-      <div style={{ position: "absolute", inset: 0, transform: dT(d, 0.5) }}>
-        <Cut id="E07" cx={800} cy={1160} w={600} shadow={0} style={{ transform: `rotate(${Math.sin(t * 0.9) * 0.6}deg)` }} />
+      <div style={{ position: "absolute", inset: 0, transform: `${dT(d, 0.5)} scale(${1 + 0.07 * EASE.io(seg(t, CUT, GRID))})`, transformOrigin: "400px 1250px" }}>
+        <Cut id="E07" cx={800} cy={1160} w={600} shadow={0} style={{ transform: `rotate(${Math.sin(t * 1.3) * 1.6}deg) translateY(${Math.sin(t * 2.1) * 8}px)` }} />
         {/* wheel drops into the open box; clipped by the box's front edge */}
         <div style={{ position: "absolute", left: PK.x, top: 0, width: PK.w, height: PK.y + top, overflow: "hidden", zIndex: 6, opacity: close > 0.05 ? 1 : 0 }}>
           <div style={{ position: "absolute", left: PK.w / 2 - 190, top: lerp(PK.y - 900, PK.y - 120, clamp(drop)) + (1 - close) * 120, width: 380, height: 380, transform: `rotate(${(1 - clamp(drop)) * 40}deg) rotateX(${50 * clamp(drop)}deg)` }}>

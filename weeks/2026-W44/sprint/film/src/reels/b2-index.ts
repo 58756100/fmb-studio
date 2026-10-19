@@ -15,4 +15,5 @@ import * as SC07 from "./SC-07";
 import * as LA06 from "./LA-06";
 import * as SC02 from "./SC-02";
 import * as LA10 from "./LA-10";
-export const B2 = { "SC-04": SC04, "LA-03": LA03, "S0-12": S012, "S0-04": S004, "SC-10": SC10, "LB-07": LB07, "SC-01": SC01, "S0-07": S007, "SC-08": SC08, "SC-06": SC06, "SC-07": SC07, "LA-06": LA06, "SC-02": SC02, "LA-10": LA10 };
+import * as SC09 from "./SC-09";
+export const B2 = { "SC-04": SC04, "LA-03": LA03, "S0-12": S012, "S0-04": S004, "SC-10": SC10, "LB-07": LB07, "SC-01": SC01, "S0-07": S007, "SC-08": SC08, "SC-06": SC06, "SC-07": SC07, "LA-06": LA06, "SC-02": SC02, "LA-10": LA10, "SC-09": SC09 };

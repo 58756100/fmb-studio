@@ -21,7 +21,7 @@ import { land, Wordmark } from "./b2kit";
 
 export const HOOK_WORDS = 9;
 export const TAIL = 1.4;
-export const LIFE = 1.3;
+export const LIFE = 1.75;
 export const BG = "#0F1013";
 export const TEXT = { ...HTEXT, size: 108 };
 export const IMAGES = ["A25", "A26", "A27", "F10", "F03", "E01", "E09", "D06"];

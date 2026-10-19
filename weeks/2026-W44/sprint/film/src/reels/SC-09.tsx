@@ -20,7 +20,7 @@ import { land, Wordmark, Who, Thumb, Sweep } from "./b2kit";
 
 export const HOOK_WORDS = 5;
 export const TAIL = 1.3;
-export const LIFE = 1.3;
+export const LIFE = 1.75;
 export const BG = "#F5F5F7";
 export const TEXT = { ...HTEXT, size: 108 };
 export const IMAGES = ["F05", "E04", "E03", "A11", "C13", "C05", "C02", "C10", "C18", "D01"];
@@ -62,10 +62,10 @@ export function build(tl, hook) {
   const heads = [
     hk,
     { ...fx(B("Whose car / has she seen?", T.whose), [T.whose, at("car"), at("seen"), at("seen") + 0.15, at("on?")]), key: [1], hold: 0.5 },
-    { ...fx(B("Four years, / one car.", T.four2), [T.four2, at("years", 2), at("one", 2), at("car.", 2)]), key: [2], hold: 1.2 },
+    { ...fx(B("Four years, / one car.", T.four2), [T.four2, at("years", 2), at("one"), at("car.", 2)]), key: [2], hold: 1.2 },
     { ...ctaHead(tl, "Send this to your / parts counter", T.cta), key: [5] },
   ];
-  heads[3].words = [{ w: "Send", t: T.cta, line: 0 }, { w: "this", t: at("this", 3), line: 0 }, { w: "to", t: at("to"), line: 0 }, { w: "your", t: at("to") + 0.1, line: 0 }, { w: "parts", t: at("parts", 2), line: 1 }, { w: "counter", t: at("counter"), line: 1 }];
+  heads[3].words = [{ w: "Send", t: T.cta, line: 0 }, { w: "this", t: at("this", 4), line: 0 }, { w: "to", t: at("to"), line: 0 }, { w: "your", t: at("to") + 0.1, line: 0 }, { w: "parts", t: at("parts", 2), line: 1 }, { w: "counter", t: at("counter"), line: 1 }];
   heads[heads.length - 1].hold = 9;
   heads[heads.length - 1].dot = tl.last + 0.15;
 
