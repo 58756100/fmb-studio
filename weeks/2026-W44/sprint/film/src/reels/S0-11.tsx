@@ -1,5 +1,5 @@
 // @ts-nocheck
-// S0-11 (lane 0, parts suppliers): "The Return Desk". Ben (K4-04) runs returns for Ridgeback Suspension. A coilover comes
+// S0-11 (lane 0, parts suppliers): "The Return Desk". Ben (K4-04) runs returns for Kellam Suspension. A coilover comes
 // back filthy with a two-word note from Rick: "It failed." No miles, no photos, nothing about the truck; from the part
 // alone he can't tell a bad unit from hard miles, which usually means a refund and Rick gone for good. Except Rick's
 // shop (Hartley Garage) wrote one more line on the slip: the truck's build page. Installed 2022, 30,000 miles, a curb
@@ -144,7 +144,7 @@ export function build(tl, hook) {
     const lift = ez(t, T.build - 0.15, 0.75, EASE.camera); // handwritten line -> page card
     const d = drift(t, "sl", 3, 0.3);
     const rows = [
-      { t: T.inst - 0.1, thumb: "coil", a: "Coilovers · Ridgeback", b: "Apr 2022 · Hartley Garage" },
+      { t: T.inst - 0.1, thumb: "coil", a: "Coilovers · Kellam", b: "Apr 2022 · Hartley Garage" },
       { t: T.thirty - 0.1, thumb: "grime", a: "30,000 miles", b: "since install" },
       { t: T.curb - 0.15, thumb: "wheel", a: "Curb strike · May 2026", b: "logged by Rick", red: true },
       { t: T.noal - 0.1, thumb: "empty", a: "Alignment", b: "nothing logged", empty: true },
@@ -159,7 +159,7 @@ export function build(tl, hook) {
         {/* the return slip with its extra handwritten line */}
         <div style={{ position: "absolute", left: 90, top: 640, width: 900, height: 820, background: PAPER, borderRadius: 10, boxShadow: "0 18px 30px -16px rgba(0,0,0,.35)", transform: `rotate(-1.5deg) scale(${1 - 0.06 * lift})`, opacity: 1 - 0.85 * lift }}>
           <div style={{ padding: "40px 48px" }}>
-            <div style={font("Inter", 44, GREY, 500)}>Return slip · Ridgeback Suspension</div>
+            <div style={font("Inter", 44, GREY, 500)}>Return slip · Kellam Suspension</div>
             <div style={{ ...font("Inter", 56, INK, 650), marginTop: 18 }}>R. Doyle · '72 F-100</div>
             <div style={{ ...HAND, fontSize: 60, marginTop: 30 }}>It failed.</div>
             <div style={{ ...font("Inter", 42, GREY, 500), marginTop: 50 }}>Installed by Hartley Garage</div>

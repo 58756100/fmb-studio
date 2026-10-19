@@ -141,6 +141,7 @@ export function build(tl, hook) {
     <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 40, background: "linear-gradient(90deg, #8E161B, #C2252B)" }} />
     <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: 40, background: "linear-gradient(270deg, #8E161B, #C2252B)" }} />
     <div style={{ position: "absolute", left: 0, right: 0, top: 0, height: 230, background: "linear-gradient(180deg, rgba(0,0,0,.6), rgba(0,0,0,0))" }} />
+    <div style={{ position: "absolute", top: -300, width: 420, height: H + 600, left: -600 + ((t * 260) % 2400), transform: "rotate(16deg)", background: "linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.07), rgba(255,255,255,0))" }} />
     {children}
   </AbsoluteFill>;
   const drawer1 = (t) => {
@@ -175,9 +176,10 @@ export function build(tl, hook) {
   const hose = (t) => {
     const sq = ez(t, T.clamp - 0.2, 0.5) * (1 - ez(t, T.split + 0.6, 0.4)) * Math.abs(Math.sin(t * 4));
     const drip = (k) => ((t - DROP) * 1.2 + k * 0.33) % 1;
+    const zm = 1 + 0.14 * EASE.io(seg(t, DROP, BACK));
     return <AbsoluteFill style={{ background: "#14161A" }}>
-      <div style={{ position: "absolute", inset: 0, background: "radial-gradient(60% 40% at 50% 50%, #3A3F48, #101216 80%)" }} />
-      <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
+      <div style={{ position: "absolute", inset: 0, background: `radial-gradient(60% 40% at ${50 + 10 * Math.sin(t * 0.9)}% 50%, #4A505B, #101216 80%)` }} />
+      <svg width={W} height={H} style={{ position: "absolute", inset: 0, transform: `scale(${zm}) rotate(${Math.sin(t * 0.7) * 1.5}deg)`, transformOrigin: "600px 1000px" }}>
         <defs><linearGradient id="rub" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#4A4D53" /><stop offset="0.35" stopColor="#202226" /><stop offset="1" stopColor="#0C0D0F" /></linearGradient>
           <linearGradient id="clp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#F4F5F7" /><stop offset="1" stopColor="#8A8F96" /></linearGradient></defs>
         <path d={`M -100 ${780 + sq * 4} C 300 ${760 + sq * 6} 500 ${1060} 1180 1100`} stroke="url(#rub)" strokeWidth={170} fill="none" strokeLinecap="round" />

@@ -28,9 +28,9 @@ const BC = "Barlow Condensed";
 // the five squares (top-down bench, paper area x 60-1020, y 600-1560)
 const SQ = [
   { n: 5, id: "C14", x: 80, y: 620, w: 450, h: 300, pw: 360, part: "Control arms", brand: "Redbank" },
-  { n: 4, id: "C05", x: 550, y: 620, w: 450, h: 300, pw: 400, part: "Exhaust", brand: "Fairline" },
+  { n: 4, id: "C05", x: 550, y: 620, w: 450, h: 300, pw: 400, part: "Exhaust", brand: "Ashmore" },
   { n: 3, id: "C19", x: 80, y: 940, w: 450, h: 300, pw: 360, part: "Fuel pump", brand: "Pellan" },
-  { n: 2, id: "C12", x: 550, y: 940, w: 450, h: 300, pw: 330, part: "Radiator", brand: "Northcote" },
+  { n: 2, id: "C12", x: 550, y: 940, w: 450, h: 300, pw: 330, part: "Radiator", brand: "Aldine" },
   { n: 1, id: "C15", x: 80, y: 1260, w: 920, h: 300, pw: 380, part: "Engine rebuild", brand: "by Gene" },
 ];
 const Paper = ({ children, dim = 0 }) => <div style={{ position: "absolute", left: 40, top: 580, width: 1000, height: 1000, background: "#FAF8F3", borderRadius: 6,
