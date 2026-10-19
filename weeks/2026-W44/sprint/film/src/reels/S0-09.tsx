@@ -118,7 +118,7 @@ export function build(tl, hook) {
         <img src={src(i ? "G12" : "A10")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: i ? "50% 50%" : "30% 50%" }} />
         <div style={{ position: "absolute", left: 24, bottom: 20, ...font("Inter", 44, "#fff", 600) }}>{i ? "After" : "Before"}</div>
       </div>)}
-      <div style={{ position: "absolute", inset: 0, transform: `translateY(${-lift * 1300}px)` }}>
+      <div style={{ position: "absolute", inset: 0, transform: `translateY(${-lift * 1300}px)`, opacity: hook === "B" ? 1 - clamp(lift * 3.5) : 1 }}>
         <Title t={t} t0={t0} mode={mode} gapFilled={hook === "B" && t > 1.25 && t < DROP ? 1 : 0} />
         {/* the gap in the S shows faintly where the bolt is missing */}
         <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}><circle cx={GAPPT.x} cy={GAPPT.y} r={12} fill="none" stroke="rgba(255,255,255,.18)" strokeWidth={2} strokeDasharray="4 5" opacity={ez(t, t0 + 1.2, 0.4)} /></svg>

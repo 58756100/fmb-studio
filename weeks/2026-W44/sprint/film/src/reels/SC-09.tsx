@@ -5,8 +5,8 @@
 // years of her shelf on one car, and she'd never seen it. "So, who's your best customer?" "Arlo. Don't tell Dutch."
 // Device: Ortiz's label maker. Every answer is typed and printed; strips curl off the counter. At the turn she labels
 // what she reads on Arlo's page and lays each strip on his car where the part sits.
-// Car: the E30 side view A11 (the script's AE86 is one slot away in LA-10 the same day, so Arlo's car changed; the VO
-// never names it). Parts: clutch C13, exhaust C05, coilovers C02, steering wheel C10, gauge pod C18 (the box on the
+// Car: the coupe side view A26 (the script's AE86 is one slot away in LA-10 and an E30 one slot later in S0-13 the same
+// day, so Arlo's car changed; the VO never names it). Parts: clutch C13, exhaust C05, coilovers C02, steering wheel C10, gauge pod C18 (the box on the
 // counter). Ortiz E04, Arlo E03, counter F05. Fictional: Ortiz Speed Parts, Ortiz, Dutch, Arlo.
 // Transitions: push-in on the counter, rack focus to Arlo at the far end, portal out of the flat phone (the page header
 // photo becomes the car laid along the counter), pull back, back to the counter for the callback, CTA landing.
@@ -23,7 +23,7 @@ export const TAIL = 1.3;
 export const LIFE = 1.75;
 export const BG = "#F5F5F7";
 export const TEXT = { ...HTEXT, size: 108 };
-export const IMAGES = ["F05", "E04", "E03", "A11", "C13", "C05", "C02", "C10", "C18", "D01"];
+export const IMAGES = ["F05", "E04", "E03", "A26", "C13", "C05", "C02", "C10", "C18", "D01"];
 const HOOKS = { A: "Ortiz / Speed Parts", B: "Loudest isn't / best.", C: "Who calls / the most?" };
 const TAPE = { fontFamily: "'IBM Plex Mono'", fontWeight: 600, fontSize: 50, color: "#111", letterSpacing: "0.06em", whiteSpace: "nowrap" };
 
@@ -36,7 +36,7 @@ const Strip = ({ text, x, y, rot = 0, curl = 0, o = 1, s = 1, z = 30, reveal = 1
 );
 // the label maker (drawn): grey body, small display, keys
 const Maker = ({ x, y, text = "", t, rot = -6 }) => (
-  <div style={{ position: "absolute", left: x, top: y, width: 360, height: 520, transform: `rotate(${rot}deg)`, zIndex: 25, borderRadius: 50, background: "linear-gradient(160deg, #7C8087, #4B4F55)", boxShadow: "0 30px 40px -20px rgba(0,0,0,.6), inset 0 0 0 4px rgba(255,255,255,.12)" }}>
+  <div style={{ position: "absolute", left: x, top: y, width: 360, height: 520, transform: `rotate(${rot}deg) scale(0.82)`, transformOrigin: "0 100%", zIndex: 25, borderRadius: 50, background: "linear-gradient(160deg, #7C8087, #4B4F55)", boxShadow: "0 30px 40px -20px rgba(0,0,0,.6), inset 0 0 0 4px rgba(255,255,255,.12)" }}>
     <div style={{ position: "absolute", left: 30, top: 30, width: 300, height: 90, borderRadius: 14, background: "#9DB39A", boxShadow: "inset 0 0 0 4px #3A3D42", display: "flex", alignItems: "center", padding: "0 16px", boxSizing: "border-box" }}>
       <span style={{ ...TAPE, fontSize: 44, color: "#1E2A1C" }}>{text}<span style={{ opacity: Math.floor(t * 3) % 2 ? 0 : 1 }}>_</span></span></div>
     <div style={{ position: "absolute", left: 30, top: 140, width: 300, display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 8 }}>
@@ -95,34 +95,34 @@ export function build(tl, hook) {
       <Maker x={60} y={1260} text={typed(t)} t={t} />
       {phase === "first" && <>{strip("DUTCH", T.dutch, 0)}{strip("BRAKE FLUID", T.fluid, 1)}{strip("", T.leaves, 2)}</>}
       {phase === "first" && t > T.sorry + 0.3 && <div style={{ position: "absolute", left: 470, top: lerp(1700, 1430, ez(t, T.mine ?? T.you, 0.5)), width: 330, height: 180, borderRadius: 30, background: "#111", transform: "rotate(-4deg)", boxShadow: "0 20px 30px -10px rgba(0,0,0,.5)", padding: 10, boxSizing: "border-box", zIndex: 28 }}>
-        <div style={{ width: "100%", height: "100%", borderRadius: 22, overflow: "hidden", background: "#E9E9EE", position: "relative" }}><Cut id="A11" cx={155} cy={80} w={250} shadow={0} /></div></div>}
+        <div style={{ width: "100%", height: "100%", borderRadius: 22, overflow: "hidden", background: "#E9E9EE", position: "relative" }}><Cut id="A26" cx={155} cy={80} w={250} shadow={0} /></div></div>}
     </AbsoluteFill>;
   };
   // ---------------------------------------------------------------- Arlo's page: the car along the counter, entries, labels land
-  const CAR = { x: 60, y: 720, w: 960 }; const CH = CAR.w / (1598 / 627);
+  const CAR = { x: 160, y: 720, w: 760 }; const CH = CAR.w / (1605 / 620);
   const page = (t, phase) => {
     const d = drift(t, "pg" + phase, 3, 0.25);
-    const back = phase === "back" ? ez(t, T.four2 - 0.3, 0.8, EASE.camera) : 0;
-    const rows = [["C13", "Clutch kit", "Jul 2022 · from Ortiz Speed Parts", T.clutch], ["C05", "Exhaust", "2023 · from Ortiz Speed Parts", T.exhaust], ["C02", "Coilovers", "2024 · from Ortiz Speed Parts", T.coilovers], ["C10", "Steering wheel", "2025", T.steering]];
-    const labs = [["CLUTCH · 2022", 0.45, 0.62, T.clutch + 0.3], ["EXHAUST · 2023", 0.78, 0.82, T.exhaust + 0.3], ["COILOVERS · 2024", 0.18, 0.8, T.coilovers + 0.3]];
+    const back = phase === "back" ? ez(t, T.four2 - 0.3, 0.8, EASE.camera) : 0; const R0 = 100 + CH + 50;
+    const rows = [["C13", "Clutch kit", "Jul 2022 · Ortiz", T.clutch], ["C05", "Exhaust", "2023 · Ortiz", T.exhaust], ["C02", "Coilovers", "2024 · Ortiz", T.coilovers], ["C10", "Steering wheel", "2025", T.steering]];
+    const labs = [["CLUTCH · 2022", 0.5, 0.58, T.clutch + 0.3], ["EXHAUST · 2023", 0.85, 0.18, T.exhaust + 0.3], ["COILOVERS · 2024", 0.2, 1.0, T.coilovers + 0.3]];
     return <AbsoluteFill><Studio t={t}>
-      <div style={{ position: "absolute", inset: 0, transform: `${dT(d, 0.5)} scale(${1 - 0.12 * back})`, transformOrigin: "50% 40%" }}>
-        <div style={{ position: "absolute", left: 60, top: 560, width: 960, height: 1050, ...CARD, overflow: "hidden" }}>
+      <div style={{ position: "absolute", inset: 0, transform: `${dT(d, 0.5)}` }}>
+        <div style={{ position: "absolute", left: 60, top: 560, width: 960, height: 1000, ...CARD, overflow: "hidden" }}>
           <Sweep t={t} o={0.25} />
-          <div style={{ position: "absolute", left: 32, top: 26, display: "flex", alignItems: "center", gap: 14 }}><Wordmark size={42} /><span style={inter(44, INK, 650)}>Arlo · '88 E30</span></div>
+          <div style={{ position: "absolute", left: 32, top: 26, display: "flex", alignItems: "center", gap: 14 }}><Wordmark size={42} /><span style={inter(44, INK, 650)}>Arlo · '86 coupe</span></div>
           <div style={{ position: "absolute", left: 0, top: 100, width: 960, height: CH + 40, background: "radial-gradient(120% 90% at 50% 70%, #fff, #EDEDF1)" }}>
-            <Cut id="A11" cx={480} cy={20 + CH / 2} w={CAR.w - 60} shadow={0.3} /></div>
-          {rows.map(([img, k, v, tt], i) => <div key={i} style={{ position: "absolute", left: 30, top: 120 + CH + 60 + i * 140, width: 900, height: 124, borderRadius: 22, background: i === 3 && t > T.steering ? rgba("#FFD60A", 0.18) : "#F2F2F7", display: "flex", alignItems: "center", gap: 20, padding: "0 20px", boxSizing: "border-box", ...land(t, Math.min(tt, T.clutch) - 0.6 + i * 0.12) }}>
-            <div style={{ width: 120, height: 96, position: "relative", flex: "none" }}><Cut id={img} cx={60} cy={48} w={110} shadow={0} /></div>
-            <div><div style={inter(46, INK, 650)}>{k}</div><div style={inter(40, i < 3 ? RED : GREY, 550)}>{v}</div></div></div>)}
+            <Cut id="A26" cx={480} cy={20 + CH / 2} w={CAR.w} shadow={0.3} /></div>
+          {rows.map(([img, k, v, tt], i) => <div key={i} style={{ position: "absolute", left: 30, top: R0 + i * 116, width: 900, height: 106, borderRadius: 22, background: i === 3 && t > T.steering ? rgba("#FFD60A", 0.18) : "#F2F2F7", display: "flex", alignItems: "center", gap: 20, padding: "0 20px", boxSizing: "border-box", ...land(t, Math.min(tt, T.clutch) - 0.6 + i * 0.12) }}>
+            <div style={{ width: 110, height: 86, position: "relative", flex: "none" }}><Cut id={img} cx={55} cy={43} w={100} shadow={0} /></div>
+            <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}><span style={inter(46, INK, 650)}>{k}</span><span style={inter(42, i < 3 ? RED : GREY, 550)}>{v}</span></div></div>)}
           {/* the empty gauge slot */}
-          <div style={{ position: "absolute", left: 30, top: 120 + CH + 60 + 4 * 140, width: 900, height: 100, borderRadius: 22, border: "4px dashed #C7C7CC", display: "flex", alignItems: "center", padding: "0 24px", boxSizing: "border-box", ...land(t, T.gauges - 0.2) }}>
+          <div style={{ position: "absolute", left: 30, top: R0 + 4 * 116, width: 900, height: 96, borderRadius: 22, border: "4px dashed #C7C7CC", display: "flex", alignItems: "center", padding: "0 24px", boxSizing: "border-box", ...land(t, T.gauges - 0.2) }}>
             <span style={inter(44, GREY, 600)}>Gauges · this weekend</span></div>
         </div>
         {labs.map(([txt, u, v, tt], i) => { if (t < tt - 0.3) return null; const p = spr(t - (tt - 0.3), 200, 15);
-          return <Strip key={i} text={txt} x={lerp(40, 60 + 30 + u * (CAR.w - 60) - 120, clamp(p))} y={lerp(1700, 560 + 100 + 20 + v * CH - 40, clamp(p))} rot={lerp(-20, -4 + i * 3, clamp(p))} s={0.85} z={40} />; })}
+          return <Strip key={i} text={txt} x={lerp(40, Math.min(560, CAR.x + u * CAR.w - 150), clamp(p))} y={lerp(1700, 560 + 100 + 20 + v * CH - 40, clamp(p))} rot={lerp(-20, -4 + i * 3, clamp(p))} s={0.85} z={40} />; })}
       </div>
-      {back > 0.01 && <><Cut id="E04" cx={lerp(-200, 150, back)} cy={1640} w={420} shadow={0} /><Cut id="E03" cx={lerp(1300, 930, back)} cy={1660} w={460} shadow={0} /></>}
+      {back > 0.01 && <><Cut id="E04" cx={lerp(-200, 150, back)} cy={1700} w={380} shadow={0} /><Cut id="E03" cx={lerp(1300, 930, back)} cy={1720} w={420} shadow={0} /></>}
     </Studio></AbsoluteFill>;
   };
 
