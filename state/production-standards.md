@@ -45,3 +45,6 @@ Never stack two CTAs. The CTA sits over the final story frame.
 
 ## Names (Wayne, 2026-10-18)
 - Never use placeholder names like "Shop A", "Garage B", "Brand B" or "Supplier C", on screen or in the voiceover. Make up believable names: garages and shops like "Benny's Garage", "Ridgeline Auto", "Pell Street Motors"; parts brands and suppliers like "Halden Brakes", "Arden Turbo", "Northline Auto Parts". The names are fictional, so check they aren't a real, well-known company, and don't reuse a name another reel has already made its hero. The used names are listed in `state/visual-bank.md`.
+
+## Volume (Wayne, 2026-10-19)
+- Sprint cut to 6 posts a day on Instagram and TikTok (08:00, 11:00, 14:00, 17:00, 20:00, 22:00 ET), to save usage. 18 bodies dropped from the sprint; they stay written for later weeks.
