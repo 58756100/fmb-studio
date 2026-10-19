@@ -1,0 +1,70 @@
+LA-03 A 33.90s 3 shots 6 heads 19 sfx music
+LA-03 B 34.30s 3 shots 6 heads 19 sfx music
+LA-03 C 34.47s 3 shots 6 heads 19 sfx music
+LA-03-A master (AAC) I=-14.10 LUFS TP=-1.90 dBTP LRA=2.3 | cues 32 (19 reel, 13 auto)
+LA-03-B master (AAC) I=-14.10 LUFS TP=-1.80 dBTP LRA=2.5 | cues 31 (19 reel, 12 auto)
+LA-03-C master (AAC) I=-14.10 LUFS TP=-1.90 dBTP LRA=2.5 | cues 30 (19 reel, 11 auto)
+done out/video/LA-03-A.mp4 1017 frames 2125s
+LA-03-B: opener 0-363 + A from 352, total 1029
+done out/video/LA-03-B-part.mp4 1029 frames 768s
+LA-03-C: opener 0-368 + A from 352, total 1034
+done out/video/LA-03-C-part.mp4 1034 frames 684s
+== LA-03-A
+  file: out/masters/LA-03-A.mp4
+  video: h264 1080x1920 30/1 frames=1017
+  audio: aac 48000 ch=2
+  v_dur: 33.9
+  a_dur: 33.9
+  expected: 33.9
+  vo_end: 32.59
+  tail: 1.31
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "Give spring a head start" at 27.95s, last shot starts 20.41s (over final frame)
+out/masters/LA-03-A.mp4: 67 windows, lowest 0.568 at 5.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== LA-03-B
+  file: out/masters/LA-03-B.mp4
+  video: h264 1080x1920 30/1 frames=1029
+  audio: aac 48000 ch=2
+  v_dur: 34.3
+  a_dur: 34.3
+  expected: 34.3
+  vo_end: 32.99
+  tail: 1.31
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.8
+  subtitle_streams: none
+  cta: "Give spring a head start" at 28.35s, last shot starts 20.81s (over final frame)
+out/masters/LA-03-B.mp4: 68 windows, lowest 0.513 at 6.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== LA-03-C
+  file: out/masters/LA-03-C.mp4
+  video: h264 1080x1920 30/1 frames=1034
+  audio: aac 48000 ch=2
+  v_dur: 34.466667
+  a_dur: 34.466
+  expected: 34.46666666666667
+  vo_end: 33.15
+  tail: 1.317
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "Give spring a head start" at 28.51s, last shot starts 20.97s (over final frame)
+out/masters/LA-03-C.mp4: 68 windows, lowest 0.512 at 6.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+../storyboard/LA-03-final-sheet.jpg (2244, 1420)
+== gate
+LA-03-A: 33.90s (VO 32.59 + tail 1.31), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.568 at 5.5s, lag 0 OK
+LA-03-B: 34.30s (VO 32.99 + tail 1.31), I -14.1 LUFS, TP -1.8 dBTP, lowest energy 0.513 at 6.0s, lag 0 OK
+LA-03-C: 34.47s (VO 33.15 + tail 1.32), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.512 at 6.0s, lag 0 OK
