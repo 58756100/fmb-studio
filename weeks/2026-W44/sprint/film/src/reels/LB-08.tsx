@@ -159,7 +159,7 @@ export function build(tl, hook) {
     { at: T.her - 0.12, render: log, enter: { kind: "portal", d: 0.6, rect: { x: 640, y: 940, w: 180, h: 180 }, r: 90 } },
     { at: T.sends - 0.12, render: (t) => drawing(t, "maker"), enter: { kind: "match" } },
     { at: T.she3 - 0.12, render: log, enter: { kind: "match" } },
-    { at: T.cta - 0.12, render: (t) => plate(t, "end"), enter: { kind: "rise", d: 0.5 } },
+    { at: T.cta - 0.42, render: (t) => plate(t, "end"), enter: { kind: "rise", d: 0.5 } },
   ];
   const ctaT = heads[heads.length - 1].words[0].t;
   const sfx = [

@@ -186,7 +186,7 @@ export function build(tl, hook) {
     { at: T.so - 0.05, render: (t) => caseShot(t, "page"), enter: { kind: "match" } },
     { at: T.its - 0.1, render: (t) => caseShot(t, "wide"), enter: { kind: "match" } },
     { at: T.oh - 0.12, render: drive, enter: { kind: "whip", d: 0.42, dir: -1 } },
-    { at: T.cta - 0.12, render: (t) => caseShot(t, "cta"), enter: { kind: "rise", d: 0.55 } },
+    { at: T.cta - 0.45, render: (t) => caseShot(t, "cta"), enter: { kind: "rise", d: 0.55 } },
   ];
   const ctaT = heads[heads.length - 1].words[0].t;
   const sfx = [

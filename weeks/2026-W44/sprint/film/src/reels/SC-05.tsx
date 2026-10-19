@@ -142,7 +142,7 @@ export function build(tl, hook) {
   const shots = [
     { at: 0, render: (t) => ceiling(t, "first") },
     { at: T.page - 0.1, render: card, enter: { kind: "portal", d: 0.65, rect: { x: 300, y: 640, w: 480, h: 300 }, r: 20 } },
-    { at: T.cta - 0.12, render: (t) => ceiling(t, "end"), enter: { kind: "pull", d: 0.6, rect: { x: 140, y: 1300, w: 640, h: 90 } } },
+    { at: T.cta - 0.47, render: (t) => ceiling(t, "end"), enter: { kind: "pull", d: 0.6, rect: { x: 140, y: 1300, w: 640, h: 90 } } },
   ];
   const ctaT = heads[heads.length - 1].words[0].t;
   const sfx = [

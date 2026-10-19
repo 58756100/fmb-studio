@@ -157,7 +157,7 @@ export function build(tl, hook) {
     { at: T.ashby + 0.35, render: hank, enter: { kind: "punch" } },
     { at: T.never - 0.12, render: (t) => tube(t, "touch"), enter: { kind: "match" } },
     { at: T.no - 0.1, render: photo, enter: { kind: "rise", d: 0.5 } },
-    { at: T.cta - 0.12, render: (t) => field(t, "end"), enter: { kind: "pull", d: 0.6, rect: { x: 120, y: 760, w: 360, h: 280 } } },
+    { at: T.cta - 0.47, render: (t) => field(t, "end"), enter: { kind: "pull", d: 0.6, rect: { x: 120, y: 760, w: 360, h: 280 } } },
   ];
   const ctaT = heads[heads.length - 1].words[0].t;
   const sfx = [

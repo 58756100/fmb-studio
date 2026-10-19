@@ -156,7 +156,7 @@ export function build(tl, hook) {
     { at: T.both - 0.12, render: (t) => pair(t, "open"), enter: { kind: "portal", d: 0.6, rect: { x: 192, y: 856, w: 170, h: 110 }, r: 14 } },
     { at: T.a - 0.1, render: page, enter: { kind: "portal", d: 0.6, rect: { x: 590, y: 740, w: 400, h: 280 }, r: 18 } },
     { at: T.we - 0.1, render: desk, enter: { kind: "rise", d: 0.55 } },
-    { at: T.cta - 0.12, render: (t) => pair(t, "end"), enter: { kind: "pull", d: 0.6, rect: { x: 120, y: 640, w: 760, h: 240 } } },
+    { at: T.cta - 0.47, render: (t) => pair(t, "end"), enter: { kind: "pull", d: 0.6, rect: { x: 120, y: 640, w: 760, h: 240 } } },
   ];
   const ctaT = heads[heads.length - 1].words[0].t;
   const sfx = [
