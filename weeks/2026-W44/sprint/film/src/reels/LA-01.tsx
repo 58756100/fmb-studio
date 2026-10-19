@@ -9,7 +9,7 @@
 // Device: a model-kit sprue frame. The radiator is snapped out and fitted; the hoses are still on the sprue. The crop of
 // the "convincing" photo opens to show the loose hose ends; a hose becomes the timeline line, which stops at a paper tab.
 // Car: K1-18 orange collector coupe (no maker named; unbadged cutout), radiator C12. Drawn: sprue, hoses, clamps, tabs,
-// note, budget slip, page. Fictional: Eli, Copper Finch Cooling, Mara at Dock Lantern Garage.
+// note, budget slip, page. Fictional: Eli, Copper Finch Cooling, Juno at Dock Lantern Garage.
 // Transitions: badge flips into the handover note (flip), the photo expands to fill the frame (portal), the crop opens
 // (camera pull inside one shot), hose curve becomes the timeline (match), last photo folds into the page card (match),
 // CTA over the car and its page with the unresolved hose.
@@ -165,7 +165,7 @@ export function build(tl, hook) {
     const settle = end ? 1 : EASE.camera(seg(t, T.evidence + 0.2, T.cta - 0.2));
     const url = end ? spr(t - (T.dot - 0.6), 190, 16) : 0;
     const ctaP = end ? EASE.camera(seg(t, T.cta - 0.3, T.cta + 0.8)) : 0;
-    const rows = [[a1, "Radiator", "Copper Finch Cooling"], [a2, "Installed by", "Mara · Dock Lantern Garage"], [a3, "Cooling test", "Unknown"]];
+    const rows = [[a1, "Radiator", "Copper Finch Cooling"], [a2, "Installed by", "Juno · Dock Lantern Garage"], [a3, "Cooling test", "Unknown"]];
     return <Paper t={t}><div style={{ position: "absolute", inset: 0, transform: `${dT(d, 0.6)} scale(${1 - 0.04 * ctaP})`, transformOrigin: "540px 1100px" }}>
       <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1920, opacity: 1 - settle, transform: `translateY(${settle * 200}px)` }}>
         <Sprue x={40} y={940} w={1000} h={600} />
