@@ -23,7 +23,7 @@ export const TAIL = 1.6;
 export const LIFE = 1.75;
 const GREEN = "#14402F", GREEN2 = "#1E5A43", CREAM = "#F4EDDC", CORAL = "#FF5A4E", INKG = "#0E2A20", MUTEG = "#5D7A6C";
 export const BG = CREAM;
-export const TEXT = { font: "Source Sans 3", weight: 600, size: 112, min: 76, ls: "-0.02em", opsz: 32, color: GREEN, accent: CORAL, line2: null, align: "left", x0: 80, maxW: 920, top: 266, lead: 1.0 };
+export const TEXT = { font: "'Source Sans 3'", weight: 600, size: 112, min: 76, ls: "-0.02em", opsz: 32, color: GREEN, accent: CORAL, line2: null, align: "left", x0: 80, maxW: 920, top: 266, lead: 1.0 };
 export const IMAGES = ["A11", "A07", "A37", "A01", "A29", "G05", "G03"];
 const HOOKS = { A: "Great shop. / Tiny reach.", B: "'Behind the / green door.'", C: "Word of mouth / stops here." };
 const SANS = (size, color = INKG, w = 600) => ({ fontFamily: "Inter", fontSize: Math.max(42, size), fontWeight: w, color, lineHeight: 1.15, whiteSpace: "nowrap", letterSpacing: "-0.01em" });
@@ -42,7 +42,7 @@ const Door = ({ x, y, w = 420, open = 0, t = 0, sign = 0 }) => (
     </div>
     <div style={{ position: "absolute", left: w / 2 - 30, top: -150, width: 60, height: 80, borderRadius: "10px 10px 20px 20px", background: "#2B2B28", boxShadow: `0 0 ${40 + 10 * Math.sin(t * 3)}px rgba(255,190,90,.75)` }}>
       <div style={{ position: "absolute", inset: 10, borderRadius: 8, background: "radial-gradient(#FFE2A6, #F2A93B)" }} /></div>
-    {sign > 0.01 && <div style={{ position: "absolute", left: -10, top: -260, width: w + 20, textAlign: "center", padding: "10px 0", background: GREEN, borderRadius: 8, opacity: clamp(sign * 2), transform: `translateY(${(1 - clamp(sign)) * -20}px)` }}><span style={{ fontFamily: "Source Sans 3", fontWeight: 600, fontSize: 52, color: CREAM, letterSpacing: "0.02em" }}>Dock Lantern Garage</span></div>}
+    {sign > 0.01 && <div style={{ position: "absolute", left: -10, top: -260, width: w + 20, textAlign: "center", padding: "10px 0", background: GREEN, borderRadius: 8, opacity: clamp(sign * 2), transform: `translateY(${(1 - clamp(sign)) * -20}px)` }}><span style={{ fontFamily: "'Source Sans 3'", fontWeight: 600, fontSize: 52, color: CREAM, letterSpacing: "0.02em" }}>Dock Lantern Garage</span></div>}
   </div>
 );
 // a small paper house
@@ -111,7 +111,7 @@ export function build(tl, hook) {
         <svg width={pw} height={900} style={{ position: "absolute", inset: 0, opacity: unfold }}><path d="M 0 260 L 480 240 M 0 700 L 480 720 M 260 0 L 240 900" stroke={CREAM} strokeWidth={16} opacity={0.6} /></svg>
       </div>
       <div style={{ position: "absolute", left: pw - 6, top: 0, width: 12, height: 900, background: "linear-gradient(90deg, rgba(0,0,0,.35), rgba(255,255,255,.15))", opacity: 1 - unfold * 0.6 }} />
-      {sign > 0.01 && <div style={{ position: "absolute", left: 50, top: 330, padding: "8px 18px", background: CREAM, borderRadius: 8, opacity: clamp(sign * 2), transform: `translateY(${(1 - clamp(sign)) * 16}px)`, boxShadow: "0 8px 14px -8px rgba(0,0,0,.5)" }}><span style={{ fontFamily: "Source Sans 3", fontWeight: 600, fontSize: 46, color: GREEN }}>Dock Lantern Garage</span></div>}
+      {sign > 0.01 && <div style={{ position: "absolute", left: 50, top: 330, padding: "8px 18px", background: CREAM, borderRadius: 8, opacity: clamp(sign * 2), transform: `translateY(${(1 - clamp(sign)) * 16}px)`, boxShadow: "0 8px 14px -8px rgba(0,0,0,.5)" }}><span style={{ fontFamily: "'Source Sans 3'", fontWeight: 600, fontSize: 42, color: GREEN }}>Dock Lantern Garage</span></div>}
       {slip}
     </div>;
   };
@@ -151,7 +151,7 @@ export function build(tl, hook) {
         {flip < 0.5 ? <Slip x={lerp(1200, 280, land1)} y={lerp(500, 680, land1)} rot={lerp(10, -3, land1)} s={1} q={q} />
           : <Page t={t} x={110} y={600} k={1} rise={0} />}
       </div>
-      {flip < 0.5 && q > 0.3 && <div style={{ position: "absolute", left: 820, top: 610, width: 110, height: 110, borderRadius: 55, background: CORAL, display: "grid", placeItems: "center", transform: `scale(${clamp((q - 0.3) * 2)})` }}><span style={{ fontFamily: "Source Sans 3", fontWeight: 600, fontSize: 80, color: "#fff" }}>?</span></div>}
+      {flip < 0.5 && q > 0.3 && <div style={{ position: "absolute", left: 820, top: 610, width: 110, height: 110, borderRadius: 55, background: CORAL, display: "grid", placeItems: "center", transform: `scale(${clamp((q - 0.3) * 2)})` }}><span style={{ fontFamily: "'Source Sans 3'", fontWeight: 600, fontSize: 80, color: "#fff" }}>?</span></div>}
     </div></Cream>;
   };
   // the customer's build page (phone-sized card): car, dated work photos, credits, public link
@@ -184,14 +184,14 @@ export function build(tl, hook) {
     return <Cream t={t}><div style={{ position: "absolute", inset: 0, transform: `${dT(d, 0.6)} scale(${1 - 0.04 * ctaP})`, transformOrigin: "540px 1100px" }}>
       {shrink > 0.01 && <MapBase t={t} unfold={shrink} lines={1} sign={1} />}
       {shrink < 0.99 && <div style={{ opacity: 1 - seg(shrink, 0, 0.5) }}><Page t={t} x={lerp(110, 400, shrink)} y={lerp(600, 760, shrink)} k={lerp(1, 0.7, shrink)} photos={photos} credit={credit} link={link} /></div>}
-      {shrink > 0.3 && <div style={{ position: "absolute", left: 500, top: 740, width: 520, background: "#fff", borderRadius: 34, overflow: "hidden", boxShadow: "0 30px 50px -26px rgba(14,42,32,.55)", opacity: seg(shrink, 0.3, 0.8), transform: `translateY(${(1 - seg(shrink, 0.3, 1)) * 40}px)` }}>
-        <div style={{ height: 210, background: "linear-gradient(180deg, #E7EFE9, #FBF8F0)", position: "relative" }}><Cut id="A11" cx={260} cy={118} w={470} shadow={0.35} /></div>
-        <div style={{ padding: "14px 28px 26px" }}>
+      {shrink > 0.3 && <div style={{ position: "absolute", left: 532, top: 740, width: 488, background: "#fff", borderRadius: 34, overflow: "hidden", boxShadow: "0 30px 50px -26px rgba(14,42,32,.55)", opacity: seg(shrink, 0.3, 0.8), transform: `translateY(${(1 - seg(shrink, 0.3, 1)) * 40}px)` }}>
+        <div style={{ height: 210, background: "linear-gradient(180deg, #E7EFE9, #FBF8F0)", position: "relative" }}><Cut id="A11" cx={244} cy={118} w={450} shadow={0.35} /></div>
+        <div style={{ padding: "14px 24px 26px" }}>
           <div style={{ fontFamily: "Inter", fontWeight: 800, fontSize: 42, color: INKG }}>Fuel<span style={{ color: CORAL }}>My</span>Build</div>
           <div style={{ ...SANS(46, INKG, 700), marginTop: 6 }}>Nina's coupe</div>
-          <div style={{ ...SANS(42, MUTEG, 600), marginTop: 10 }}>Rafa</div><div style={SANS(44, GREEN, 700)}>Dock Lantern Garage</div>
+          <div style={{ ...SANS(42, MUTEG, 600), marginTop: 10 }}>Rafa</div><div style={SANS(42, GREEN, 700)}>Dock Lantern Garage</div>
           <div style={{ marginTop: 14, padding: "10px 18px", borderRadius: 26, background: GREEN, display: "inline-flex" }}><span style={SANS(42, CREAM, 600)}>fuelmybuild.com/nina</span></div>
-        </div><Sweep t={t} w={520} o={0.3} /></div>}
+        </div><Sweep t={t} w={488} o={0.3} /></div>}
       {shrink > 0.3 && <svg width={1080} height={1920} style={{ position: "absolute", inset: 0, pointerEvents: "none" }}><path d="M 380 1080 C 430 1180 460 1240 520 1250" stroke={CORAL} strokeWidth={6} strokeDasharray="12 10" fill="none" opacity={seg(shrink, 0.3, 1)} strokeDashoffset={-t * 30} /></svg>}
       {end && <div style={{ position: "absolute", left: 330, top: 1060, width: 60, height: 110, borderRadius: 4, background: "radial-gradient(70% 60% at 50% 60%, rgba(255,200,120,.95), rgba(255,160,80,.2))", opacity: 0.6 + 0.3 * Math.sin(t * 2) }} />}
     </div></Cream>;
