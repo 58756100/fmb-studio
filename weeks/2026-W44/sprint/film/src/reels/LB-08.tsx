@@ -39,7 +39,7 @@ const Plate = ({ x, y, w = 520, rot = 0, notch = 1, glint = 0, ink = false }) =>
   </svg>
 );
 const DateNote = ({ x, y, fold = 0, blur = 0, rot = -6 }) => (
-  <div style={{ position: "absolute", left: x, top: y, width: 380, padding: "20px 26px", background: "#FFFDF4", boxShadow: "0 14px 24px -12px rgba(0,0,0,.4)", transformOrigin: "50% 100%", transform: `rotate(${rot}deg) perspective(900px) rotateX(${fold * 80}deg)`, filter: blur > 0.3 ? `blur(${blur}px)` : undefined, zIndex: 20 }}>
+  <div style={{ position: "absolute", left: x, top: y, width: 380, padding: "20px 26px", background: "#FFFDF4", boxShadow: "0 14px 24px -12px rgba(0,0,0,.4)", transformOrigin: "50% 100%", transform: `rotate(${rot}deg) perspective(900px) rotateX(${fold * 80}deg)`, opacity: Math.max(0, 1 - Math.max(0, fold - 0.45) * 2.6), filter: blur > 0.3 ? `blur(${blur}px)` : undefined, zIndex: 20 }}>
     <div style={inter(40, GREY, 500)}>Purchased</div><div style={{ fontFamily: "Caveat", fontSize: 76, fontWeight: 700, color: INK }}>2019</div></div>
 );
 
@@ -64,7 +64,7 @@ export function build(tl, hook) {
     { ...fx(B("Early / plate.", T.early), [T.early, at("plate")]), key: [1], hold: 0.5 },
     { ...ctaHead(tl, "Send to / 'all the same'", T.cta), key: [] },
   ];
-  heads[heads.length - 1].words = [{ w: "Send", t: T.cta, line: 0 }, { w: "to", t: at("to", 2), line: 0 }, { w: "'all", t: at("all"), line: 1 }, { w: "the", t: at("the", 7) ?? at("all") + 0.15, line: 1 }, { w: "same'", t: at("same”"), line: 1 }];
+  heads[heads.length - 1].words = [{ w: "Send", t: T.cta, line: 0 }, { w: "to", t: at("to", 2), line: 0 }, { w: "'all", t: at("all"), line: 1 }, { w: "the", t: tl.after("the", at("all")), line: 1 }, { w: "same'", t: at("same”"), line: 1 }];
   heads[heads.length - 1].key = [4];
   heads[heads.length - 1].hold = 9;
   heads[heads.length - 1].dot = tl.last + 0.15;
@@ -163,7 +163,7 @@ export function build(tl, hook) {
   ];
   const ctaT = heads[heads.length - 1].words[0].t;
   const sfx = [
-    [0.1, "metal-turn"], [0.8, "lens-settle"], [T.fitted - 0.1, "pop-soft"], [T.maker, "paper-thud"], [T.so - 0.1, "card-fold"], [T.identifier, "draw"],
+    [0.1, "slide-soft"], [0.8, "lens-settle"], [T.fitted - 0.1, "pop-soft"], [T.maker, "paper-thud"], [T.so - 0.1, "card-fold"], [T.identifier, "draw"],
     [T.her - 0.4, "portal"], [T.log - 0.2, "card-settle"], [T.link, "tap"], [T.notch - 0.4, "draw"], [T.early - 0.1, "paper-thud"], [T.adds - 0.1, "check"], [ctaT, "cta-pop"],
   ];
   const music = { bpm: 98, root: 52, mode: "minor", style: "investigate", cut: T.log - 0.3, ret: T.sends - 0.12 };
