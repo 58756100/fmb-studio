@@ -33,6 +33,28 @@ Notes: S0 (brand film) has no script in the repo, so it is not banked. lab/criti
 | C3-COL | C v3, collectors | Marisol and Dev bet dinner on the year her Evo's intake went on (she says 2021, he says 2017); her build page says Jun 14, 2019; nobody wins, they split the check | year ruler as distance: one continuous lateral camera (no cuts), the argument is red-tinted tape between two flags; the 2019 tick splits and the log card rises out of the tape, then folds back | cream year ruler 2016-2024 with plucking ticks, rippling red pennant flags on pins, black check presenter, "?" on the tape, grey leader line, frameless frosted log card, "2 years" measure lines | Evo VI car-14 + intake part-04 (Velden Air, fictional) | house look; cream tape #F2EBDD, red tint only on the gap |
 | C3-GAR | C v3, garages | Okafor slaps the counter bell: "You never told me." Gus walks the week and Thursday is blank; the build log shows the weep logged Tuesday by Gus; Okafor is still right that he should have called | airport split-flap word board (events, not a clock); the THU row stalls blank, twitches, then flips to SORRY; 1-frame punch-ins with a lens settle; counter monitor swivels from its back | split-flap board, brass counter bell with ring-out arcs, red "Head gasket · $1,850" chip that wipes to grey, engine block on red stand, flat counter monitor with a desktop build-log entry | R34 car-11 + engine block (head-gasket weep) | house look + black flap board |
 | C3-SUP | C v3, parts suppliers | Calder's support (Noor) gets "Rattle. Fix?"; six days of one-line answers and a return threat; Theo says "Just read my build", which shows car, fitter and date and points at the rear hanger | time as weight: manila tags pile onto an exhaust hanging from a cotton string and the pipe sags per answer; the first tag flips into the log card; a new tag path-rides onto the hanger in the photo | off-white cotton string, manila hang tags with ink questions and pencil answers, dual-tip exhaust, dashed car outline filled by the WRX, ticket chip counting days (value-swap), red "Return?" chip | WRX STI car-04 + exhaust part-05 (Calder, Northline Auto fictional) | house look; manila tags, cotton string |
+| SC-04 | C sprint (garages) | shift change: Reggie hands Inez a half-done intercooler job via the build page, not by phone at dinner | shop rag passed hand to hand as the scene wipe | WRX front cutout, intercooler, install photo, torque wrench, phone, mug | WRX (A28) + intercooler C11 | house white, red accent |
+| LA-03 | A sprint (collectors) | spring: empty oil bottle by the car, but it was the other car's; last photo shows draining, no refill entry | stop-motion paper collage; slate to butter palette; calendar page peel | two collector car cutouts, transporter, drawn oil bottle, key | K1-23 / K1-21 | slate, butter, Nunito |
+| S0-12 | C sprint (suppliers) | Priya (Laurel Wheel Co.) nearly doubles bronze 18s; two of four build pages show rub at full lock | wall of wheel-center caps that light per customer; order form ending | bronze/black wheels, alignment photo, order form | Camaro A19, Mustang A16 + C07 | house, warm glow |
+| S0-04 | C sprint (collectors) | Ruth logs a 12-year-old repaint before Gil visits; receipts and photos become dated entries | socket case whose lid is the page | socket set, F-100 front/side, receipts, driveway | F-100 (A22/A23) | house, steel |
+| SC-10 | C sprint (everyone) | Wendell's getaway Mustang steams 1,100 mi from home; Two Forks Garage reads the fan wiring off its build page | record held under the hood underside; relay and tray | road, bay, radiator, engine bay, phone | Mustang A16/A17 | house, dusk road |
+| LB-07 | B sprint (suppliers) | "same again": Dana's slip is from 2022 for wheels no longer on the car; Birch Mile Wheels reads the later entry | purchase slip slid under the wheel, old wheel composited | S2000 side, black/bronze wheels, shop counter | S2000 A32 + C08 | house |
+| SC-01 | C sprint (collectors) | Lyle's "All original" dash card is untrue; he logs the '98 rebuild and swapped wheels before the judge | windshield dash card; reflection becomes the page | 911 front/side/rear (not named on screen), detailing studio, clipboard | A25/A26/A27 | house, reflections |
+| S0-07 | C sprint (garages) | Fifth Street Lube: Grant doubts Luis; the tuned white car at the end of the row is Luis's own | windshield oil-change sticker as portal | lot of cars, ECU, wiring bench, dyno | Civic A37 + C17 | house |
+| SC-08 | C sprint (suppliers) | Zeke's margin note on Corliss's fuel pump sheet goes in the bin; logged on the build page instead | carbon-copy install sheet, pencil, bin | parts box, fuel pump, warehouse aisle, parts rep | E30 A10 + C19 | house, paper |
+| SC-06 | C sprint (garages) | Brightwater Collision: Loretta logs Ozzie's paint match note while the Miata cures | glass UI on the paint-booth window | paint booth, Miata side, clipboard, panel | Miata A08 | booth glow |
+| SC-07 | C sprint (suppliers) | Halvard Wheel Co.: are customers still running them three years on? Build pages answer | rolling-ladder rungs as timeline | warehouse, rep, owner, wheels | E30, S2000, WRX + C07 | house |
+| LA-06 | A sprint (garages) | "the dealer's cheaper": one quote line hides seized fastener and bracket work | accordion estimate unfolding | engine, hoist, leak, parts box | Camaro A20 | warm grey, orange, black |
+| SC-02 | C sprint (collectors, trucks) | Cassie's 23 changed parts: build page sent ahead, Marco reads who fitted what | X-ray truck revealing parts | truck side, bay, counter, coilover install | Bronco A35 (named in VO; no K1/K2) | house, x-ray blue |
+| LA-10 | A sprint (everyone) | track day: "calmer" before or after the wheel change? Sessions logged | contact sheets per session | liftback side with bronze wheels, alignment | AE86 A40 + C07 | asphalt, cream, yellow |
+| SC-09 | C sprint (suppliers) | Ortiz's "best customer" Dutch buys fluid; Arlo's build page shows her parts actually fitted | label maker printing labels | counter, shop owner, young enthusiast, five parts | 911 side A26 | house |
+| S0-13 | C sprint (suppliers) | Hank (Ashby) meets his own 20-year-old header at a show via Renata's build page | header lit in golden light | header, concours lawn, E30 | E30 A10 + C06 | golden hour |
+| SC-05 | C sprint (garages) | Otis under a car: bent steel hanger; build page shows why, and his own creeper in the photo | creeper POV ceiling | underside photo, drawn bracket, hatch card | G08 only | dark underside |
+| S0-10 | C sprint (garages) | Lorraine's Garage post omits Danny; both names go on the build page | photo print turned back to front | seat, cage photo, S2000 | S2000 A31 + C09 | house |
+| LA-08 | A sprint (suppliers) | "will this fit?": same year, one car has added cooling hardware where the bracket sits | two identical cars with hood flaps | engine bay, radiator, intercooler | two Civic A37 | mint, ink, lemon |
+| SC-03 | C sprint (collectors) | Wes can't date his last valve adjustment; Bell Creek logs the next one | drawn parallax road, spinning road signs, build-page sign | S2000 side, engine bay | S2000 A32 | drawn road |
+| LA-07 | A sprint (suppliers) | Alder Loop: 12 products, but no photo shows the bracket fitted under the trunk liner | 12-item catalog grid collapsing | 12 parts, drawn bracket, trunk liner | WRX rear A30 | white, blue, brown |
+| LB-08 | B sprint (suppliers) | Nessa's shifter: revised plate, old stock still sold, purchase date can't tell; install photo shows the notch | selector plate with identifying notch | parts boxes, drawn plate, blueprint reference, sticky note | AE86 side A40 | house, blueprint blue |
 
 ## Overused, avoid next
 - Phone-frame build page reached by push-through (about 17 videos). Use a different framing of the product.
@@ -81,3 +103,23 @@ Placeholders ("Shop A", "Brand B", "Definitely B") were removed from the 9 sprin
 | Pell Street | garage | C3-GAR | garage row on the board |
 | Calder, Northline Auto | exhaust brand, fitter | C3-SUP | part brand and fitting shop |
 | Korvane, Kessler Motorsport | turbo brand, shop | W42 P1, G1, X1, X2, P1-v2 | earlier reels |
+
+| Reggie, Inez | garage staff | SC-04 | handover |
+| Laurel Wheel Co., Priya | wheel supplier | S0-12 | supplier |
+| Ruth, Gil, Pine Hollow Body | collector, friend, body shop | S0-04 | |
+| Wendell, Leland, Two Forks Garage | owner, mechanic, garage | SC-10 | |
+| Dana, Ivo, Birch Mile Wheels | customer, counter, supplier | LB-07 | |
+| Lyle | collector | SC-01 | |
+| Grant, Luis, Fifth Street Lube | customer, owner, garage | S0-07 | |
+| Zeke, Corliss, Desmond | tech, pump brand, rep | SC-08 | |
+| Loretta, Ozzie, Brightwater Collision, Larkin | body shop, painter, paint brand | SC-06 | |
+| Thad, Kofi, Halvard Wheel Co. | owner, rep, supplier | SC-07 | |
+| Cassie, Marco, Trailhead | owner, tech, lift installer | SC-02 | |
+| Tess | driver | LA-10 | |
+| Ortiz, Dutch, Arlo | counter, customers | SC-09 | |
+| Hank, Ashby, Renata | header maker, shop, owner | S0-13 | |
+| Otis | tech | SC-05 | |
+| Danny, Lorraine's Garage | installer, shop | S0-10 | |
+| Wes, Bell Creek | collector, shop | SC-03 | |
+| Alder Loop | parts brand | LA-07 | |
+| Nessa, Kelm Shift, Hale Arc Auto | owner, shifter maker, garage | LB-08 | |
