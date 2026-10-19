@@ -55,6 +55,19 @@ Notes: S0 (brand film) has no script in the repo, so it is not banked. lab/criti
 | SC-03 | C sprint (collectors) | Wes can't date his last valve adjustment; Bell Creek logs the next one | drawn parallax road, spinning road signs, build-page sign | S2000 side, engine bay | S2000 A32 | drawn road |
 | LA-07 | A sprint (suppliers) | Alder Loop: 12 products, but no photo shows the bracket fitted under the trunk liner | 12-item catalog grid collapsing | 12 parts, drawn bracket, trunk liner | WRX rear A30 | white, blue, brown |
 | LB-08 | B sprint (suppliers) | Nessa's shifter: revised plate, old stock still sold, purchase date can't tell; install photo shows the notch | selector plate with identifying notch | parts boxes, drawn plate, blueprint reference, sticky note | AE86 side A40 | house, blueprint blue |
+| LB-03 | B sprint (collectors) | Bea reads "M2" in Owen's sheet as another car; it's the second mirror repair | spreadsheet cell stretches, dog-ears, hinges into the photo | laptop sheet, drawn mirror, fingertip | green coupe K1-15 | house |
+| LB-02 | B sprint (collectors) | Tessa's "fixed" seat clicks; old entry says temporary packing; tech finds rail movement | live sound line under a seat-rail macro; packing strip peels | seat C09, drawn rail, glove, job sheet | K1-10 graded charcoal | house |
+| LA-09 | A sprint (suppliers) | Owen's rebuilt carburetor: dated rebuild photos on the source car's page; buyer asks what's happened since | counter paper curls into nested photo trays; casting mark lines up | drawn carb, prints, timeline gap | 240Z A05 | cream, brass, navy, Fraunces |
+| LB-05 | B sprint (garages) | Jori stops assembly: machine-shop card missing; setup photo has it; machinist confirms | work glove occludes then reveals the card | block C15, drawn piston, card, tray | C15 | house |
+| LA-01 | A sprint (collectors) | Eli's "cooling done": fitted radiator, no test on record | model-kit sprue; crop opens on loose hoses | radiator C12, drawn hoses, tabs | orange K1-18 | charcoal, orange, paper, Barlow |
+| LA-04 | A sprint (garages) | Dock Lantern Garage, "behind the green door"; a customer's page carries the work out of town | green door; folded neighbourhood map unfolds | drawn door, map, slip; G05/G03 photos | E30 A11 | green, cream, coral, Source Sans |
+| LB-01 | B sprint (collectors) | Ellis saw the roof open, not close; seal entry makes the request specific; keeps inspection | drawn folding roof, dashed return arc | player, chair, button, seal, calendar | silver K1-04 | house |
+| LA-02 | A sprint (collectors) | Nora's wheels: install date isn't design date; casting mark + catalog | judging table becomes a lightbox; paper pointer | drawn wire wheels, catalog (fictional) | silver GT K1-24 | ivory, bottle green, oxblood |
+| LA-05 | A sprint (garages) | comeback puddle after a roof seal; record shows what was replaced, inspection of drains next | puddle as a lens; hand-drawn amber circles | drawn footwell, rain, contact sheet | white coupe A02 | rain blue, graphite, amber |
+| LB-09 | B sprint (suppliers) | Lina's used oil cooler: logo isn't proof; dealer from the entry examines it | polishing cloth wipes the logo plate | drawn cooler, invoice, loupe | white coupe A39 | house |
+| LB-06 | B sprint (garages) | unlabelled winter set; rim repair mark in Hollis's photo identifies it | wheel-bag zip becomes the photo boundary | C08 wheel, drawn bag, sheet | A38 tinted cream | house |
+| LB-04 | B sprint (garages) | wrong water pump; request + arrival photos on the build show the mismatch | ghost flange profile on the block face | drawn pumps, lift, printout | E30 A11 on lift | house |
+| LB-10 | B sprint (everyone) | cleanout: "empty" box holds the original alternator bracket + note | sleeve tips over the recycling tote | drawn bracket, note, tote; G12 | A26 graded burgundy | house |
 
 ## Overused, avoid next
 - Phone-frame build page reached by push-through (about 17 videos). Use a different framing of the product.
@@ -123,3 +136,17 @@ Placeholders ("Shop A", "Brand B", "Definitely B") were removed from the 9 sprin
 | Wes, Bell Creek | collector, shop | SC-03 | |
 | Alder Loop | parts brand | LA-07 | |
 | Nessa, Kelm Shift, Hale Arc Auto | owner, shifter maker, garage | LB-08 | |
+
+| Bea, Owen (LB-03), Len, Reed Hollow Auto, Fenwick Glass | collectors, fitter, shop, glass brand | LB-03 | |
+| Tessa, Linden Bench Auto | owner, shop | LB-02 | |
+| Owen, Bracken Bench Rebuilds, Mossline Seals | rebuilder, seal brand | LA-09 | |
+| Jori, Hal Vale, Cedar Slot Engines, Vale Bench Machine | tech, machinist, shops | LB-05 | |
+| Eli, Juno, Copper Finch Cooling | collector, installer, brand | LA-01 | |
+| Nina, Rafa | customer, fabricator (Dock Lantern Garage) | LA-04 | |
+| Ellis, Mina, Alder Bay Auto | buyer, fitter, garage | LB-01 | |
+| Nora, Harrow Field Classics, Aldwick Wire Wheel Co. | collector, show, wheel brand | LA-02 | |
+| Theo, Paper Birch Garage, Lowmark Seals | tech, shop, seal brand | LA-05 | |
+| Lina, Bramble Core, Larch Point Parts | buyer, cooler brand, dealer | LB-09 | |
+| Sera, Hollis, Stillwater Lane Tire, Merrit Forge | fitter, customer, shop, wheel brand | LB-06 | |
+| Mara, Ash Row Garage, Dovren Cooling | shop owner, shop, pump brand | LB-04 | |
+| Omar, West Fen Auto, Aven Coil | owner, shop, alternator brand | LB-10 | |
