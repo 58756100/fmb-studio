@@ -1,5 +1,3 @@
-No TikTok items for 2026-10-19 (nothing drafted or approved today). Next up, tomorrow:
-
 **TikTok drafts for 2026-10-20**, post each at its time and paste its caption.
 
 **Wave 1 · Draft 1: post 15:00 ET (22:00 Nairobi)**

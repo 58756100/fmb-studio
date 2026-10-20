@@ -950,13 +950,15 @@
   "time_et": "15:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "approved",
+  "status": "drafted",
   "render": "renders:2026-W42/G1-C.mp4",
   "week": "2026-W42",
   "caption": "Your lead tech quits Friday. Monday, his turbo install is back on the lift with a boost leak.\n\n#mechaniclife #autoshop #supra #tuner #shopowner",
   "pinned_comment": "Shop owners: when your best tech leaves, how much of the shop leaves with him?",
   "approved_at": "2026-10-13T09:46:53Z",
-  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+  "publish_id": "v_inbox_file~v2.7698717893332994069",
+  "drafted_at": "2026-10-20T11:58:30Z"
  },
  {
   "concept": "G3",
