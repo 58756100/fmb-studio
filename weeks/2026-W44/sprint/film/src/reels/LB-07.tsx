@@ -87,7 +87,7 @@ export function build(tl, hook) {
     const out = phase === "hook" ? ez(t, T.tells - 0.3, 0.4, EASE.in) : 0;
     return <AbsoluteFill><Studio t={t}>
       <div style={{ position: "absolute", left: -200, right: -200, top: 1330, height: 600, background: "linear-gradient(180deg, #ECECEF, #E2E2E6)" }} />
-      <div style={{ position: "absolute", inset: 0, transform: dT(d, 0.6) }}>
+      <div style={{ position: "absolute", inset: 0, transform: `${dT(d, 0.6)} scale(${1 + 0.04 * t})`, transformOrigin: "540px 1150px" }}>
         <Slip t={t} x={lerp(-700, 240, clamp(slipIn))} y={1250} w={620} rot={-3} blank={cta} z={4} o={1 - out} />
         <Coupe x={CX} y={CY} w={CW} z={6} />
       </div>
@@ -117,7 +117,7 @@ export function build(tl, hook) {
         <Coupe x={70} y={40} w={760} old={old} spin={-roll * 360 * (old ? 1 : 0)} shadow={0.3} /></div>
       <div style={{ position: "absolute", left: 30, top: 380, display: "flex", alignItems: "center", gap: 18 }}>{label}</div>
     </div>;
-    return <AbsoluteFill><Studio t={t}><div style={{ position: "absolute", inset: 0, transform: dT(d, 0.6) }}>
+    return <AbsoluteFill><Studio t={t}><Sweep t={t} w={1080} o={0.45} speed={300} /><div style={{ position: "absolute", inset: 0, transform: `${dT(d, 0.6)} scale(${1 + 0.02 * Math.max(0, t - T.but)})` }}>
       <Print y={560} old={1} q={p1} rot={-1.5} dim={roll} label={<><span style={{ ...inter(44, "#fff", 650), background: GREY, padding: "4px 16px", borderRadius: 12 }}>2022</span><span style={inter(44, GREY, 500)}>Black 17s</span></>} />
       {t > T.shed - 0.2 && <Print y={1070} old={0} q={p2} rot={1.2} dim={0} label={<><span style={{ ...inter(44, RED, 650), background: rgba(RED, 0.1), padding: "4px 16px", borderRadius: 12 }}>later · when?</span><span style={inter(44, INK, 600)}>The set on her car</span></>} />}
     </div></Studio></AbsoluteFill>;
@@ -185,7 +185,8 @@ export function build(tl, hook) {
     const fresh = spr(t - (T.cta + 0.4), 150, 18);
     return <AbsoluteFill><Studio t={t}>
       <div style={{ position: "absolute", left: -200, right: -200, top: 1180, height: 800, background: "linear-gradient(180deg, #ECECEF, #E2E2E6)" }} />
-      <div style={{ position: "absolute", inset: 0, transform: dT(d, 0.6) }}>
+      <Sweep t={t} w={1080} o={0.5} speed={320} />
+      <div style={{ position: "absolute", inset: 0, transform: `${dT(d, 0.6)} scale(${1 + 0.014 * Math.max(0, t - T.now)})`, transformOrigin: "540px 1000px" }}>
         <Coupe x={40} y={820} w={1000} />
         {/* the drawer: opens under the frame, the old slip drops in, it closes */}
         {t > T.old - 0.3 && t < T.drawer + 0.6 && <>

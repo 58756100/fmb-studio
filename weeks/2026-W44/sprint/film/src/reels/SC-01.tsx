@@ -115,7 +115,8 @@ export function build(tl, hook) {
     const dim = ez(t, T.i - 0.2, 0.8, EASE.io);
     const card = spr(t - (T.hope - 0.3), 170, 17);
     return <AbsoluteFill style={{ background: "linear-gradient(180deg, #2A2520, #15120F)" }}>
-      <div style={{ position: "absolute", inset: 0, transform: dT(d, 0.6), filter: `brightness(${1 - 0.35 * dim})` }}>
+      <div style={{ position: "absolute", top: 0, bottom: 0, width: 420, left: ((t * 220) % 1900) - 600, background: "linear-gradient(100deg, rgba(255,235,200,0), rgba(255,235,200,.28), rgba(255,235,200,0))", zIndex: 30, pointerEvents: "none" }} />
+      <div style={{ position: "absolute", inset: 0, transform: `${dT(d, 0.6)} scale(${1 + 0.03 * Math.max(0, t - T.but)})`, transformOrigin: "540px 1100px", filter: `brightness(${1 - 0.35 * dim})` }}>
         <div style={{ position: "absolute", left: 0, right: 0, top: 1100, height: 820, background: "linear-gradient(180deg, #7A5A3A, #4E3722)" }} />
         <Cut id="D06" cx={720} cy={1060} w={560} rot={6} shadow={0.4} />
         {/* blank score sheet lines on the clipboard */}
@@ -142,7 +143,7 @@ export function build(tl, hook) {
     const ctaP = phase === "end" ? EASE.camera(seg(t, T.cta - 0.3, T.cta + 0.7)) : 0;
     const card = newCard ? <div style={{ opacity: phase === "night" ? seg(t, T.happened + 0.1, T.happened + 0.4) : 1 }}><TentCard t={t} lines={phase === "night" ? NEW.slice(0, 1).concat([["", 78, RED], ["", 44, GREY]]) : NEW} write={phase === "night" ? [[T.happened + 0.3, T.did + 0.2], [99, 99], [99, 99]] : null} y={1120} w={640} /></div>
       : <TentCard t={t} lines={OLD} />;
-    return <AbsoluteFill style={{ transform: `scale(${1 - 0.04 * ctaP})` }}>
+    return <AbsoluteFill style={{ transform: `scale(${(1 - 0.04 * ctaP) * (phase === "end" ? 1 + 0.004 * Math.max(0, t - T.newc) : 1)})` }}>
       <Windshield t={t} dim={dim} refl={refl} card={card}>
         <div style={{ position: "absolute", left: 120, top: 360, width: 840, opacity: 0.88 * refl, filter: `blur(${(1 - refl) * 14}px)`, transform: `skewY(-2deg) scale(${0.96 + 0.04 * refl})`, zIndex: 8 }}>
           <div style={{ padding: "30px 36px", borderRadius: 34, background: "rgba(255,255,255,.12)", boxShadow: "inset 0 0 0 2px rgba(255,255,255,.18)", backdropFilter: "blur(2px)" }}>

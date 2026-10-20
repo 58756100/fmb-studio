@@ -12,6 +12,9 @@ for h in ${HOOKS//,/ }; do python3 audio/score.py $ID $h out/audio | tail -1; do
 node render-b2.mjs $ID A 2>&1 | grep -E "^done|Error" || true
 for h in ${HOOKS//,/ }; do
   [ $h = A ] && continue
+  if [ "$(python3 -c "import json;print(len(json.load(open('out/cues/$ID-$h.json'))['shots']))")" = 1 ]; then
+    echo "$ID-$h: single shot, full render"; node render-b2.mjs $ID $h 2>&1 | grep -E "^done|Error" || true; continue
+  fi
   read FB FA NB < <(python3 - $ID $h <<'PY'
 import json, sys
 I, h = sys.argv[1:]
