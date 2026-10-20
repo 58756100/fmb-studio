@@ -114,7 +114,8 @@ export function build(tl, hook) {
     const slide = ez(t, T.so - 0.2, 0.7, EASE.camera);
     const rows = [["C12", "Radiator + fan", "Tidewell Cooling", T.surrounding], ["C11", "Coolant reservoir", "Tidewell Cooling", T.brands]];
     return <AbsoluteFill><Grid t={t} />
-      <div style={{ position: "absolute", left: 60, top: 560, width: 960, height: 1000, ...PAPER, transform: `${dT(d, 0.5)} translateX(${-0 * slide}px)`, overflow: "hidden" }}>
+      <div style={{ position: "absolute", left: 60, top: 560, width: 960, height: 1000, ...PAPER, transform: `${dT(d, 0.5)} translateX(${-0 * slide}px) scale(${1 + 0.025 * Math.max(0, t - T.a)})`, overflow: "hidden" }}>
+        <div style={{ position: "absolute", top: 0, bottom: 0, width: 260, left: ((t * 200) % 1500) - 400, background: "linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,.4), rgba(255,255,255,0))", zIndex: 30, pointerEvents: "none" }} />
         <div style={{ height: 90, background: INKD, display: "flex", alignItems: "center", gap: 14, padding: "0 30px" }}>
           <span style={{ fontFamily: "Inter", fontWeight: 800, fontSize: 46, color: MINT }}>Fuel<span style={{ color: LEMON }}>My</span>Build</span><span style={SANS(42, "#9FC0B2", 600)}>· Jae's 2009 coupe</span></div>
         {rows.map(([img, k, v, tt], i) => <div key={i} style={{ position: "absolute", left: 30, top: 120 + i * 150, width: 900, height: 130, display: "flex", alignItems: "center", gap: 22, borderBottom: `2px solid ${rgba(INKD, 0.1)}`, ...land(t, tt) }}>
