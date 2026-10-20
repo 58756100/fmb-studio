@@ -1,0 +1,70 @@
+LA-06 A 39.63s 4 shots 6 heads 15 sfx music
+LA-06 B 38.93s 4 shots 6 heads 15 sfx music
+LA-06 C 39.40s 4 shots 6 heads 15 sfx music
+LA-06-A master (AAC) I=-14.00 LUFS TP=-1.90 dBTP LRA=2.7 | cues 28 (15 reel, 13 auto)
+LA-06-B master (AAC) I=-14.10 LUFS TP=-1.90 dBTP LRA=2.8 | cues 27 (15 reel, 12 auto)
+LA-06-C master (AAC) I=-14.00 LUFS TP=-3.10 dBTP LRA=2.0 | cues 28 (15 reel, 13 auto)
+done out/video/LA-06-A.mp4 1189 frames 434s
+LA-06-B: opener 0-216 + A from 239, total 1168
+done out/video/LA-06-B-part.mp4 1168 frames 75s
+LA-06-C: opener 0-230 + A from 239, total 1182
+done out/video/LA-06-C-part.mp4 1182 frames 82s
+== LA-06-A
+  file: out/masters/LA-06-A.mp4
+  video: h264 1080x1920 30/1 frames=1189
+  audio: aac 48000 ch=2
+  v_dur: 39.633333
+  a_dur: 39.633
+  expected: 39.63333333333333
+  vo_end: 38.23
+  tail: 1.403
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.0
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "Show what goes into it" at 33.99s, last shot starts 26.53s (over final frame)
+out/masters/LA-06-A.mp4: 79 windows, lowest 0.447 at 20.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== LA-06-B
+  file: out/masters/LA-06-B.mp4
+  video: h264 1080x1920 30/1 frames=1168
+  audio: aac 48000 ch=2
+  v_dur: 38.933333
+  a_dur: 38.933
+  expected: 38.93333333333333
+  vo_end: 37.51
+  tail: 1.423
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "Show what goes into it" at 33.27s, last shot starts 25.81s (over final frame)
+out/masters/LA-06-B.mp4: 77 windows, lowest 0.516 at 19.5s, static(<0.35) 0, longest freeze 0.03s at 38.90s
+  static: 
+== LA-06-C
+  file: out/masters/LA-06-C.mp4
+  video: h264 1080x1920 30/1 frames=1182
+  audio: aac 48000 ch=2
+  v_dur: 39.4
+  a_dur: 39.4
+  expected: 39.4
+  vo_end: 37.99
+  tail: 1.41
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.0
+  true_peak: -3.1
+  subtitle_streams: none
+  cta: "Show what goes into it" at 33.75s, last shot starts 26.29s (over final frame)
+out/masters/LA-06-C.mp4: 78 windows, lowest 0.482 at 20.0s, static(<0.35) 0, longest freeze 0.03s at 39.37s
+  static: 
+../storyboard/LA-06-final-sheet.jpg (2244, 1420)
+== gate
+LA-06-A: 39.63s (VO 38.23 + tail 1.40), I -14.0 LUFS, TP -1.9 dBTP, lowest energy 0.447 at 20.5s, lag 0 OK
+LA-06-B: 38.93s (VO 37.51 + tail 1.42), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.516 at 19.5s, lag 0 OK
+LA-06-C: 39.40s (VO 37.99 + tail 1.41), I -14.0 LUFS, TP -3.1 dBTP, lowest energy 0.482 at 20.0s, lag 0 OK

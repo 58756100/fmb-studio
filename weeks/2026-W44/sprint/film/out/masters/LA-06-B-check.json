@@ -1,0 +1,17 @@
+{
+ "file": "out/masters/LA-06-B.mp4",
+ "video": "h264 1080x1920 30/1 frames=1168",
+ "audio": "aac 48000 ch=2",
+ "v_dur": 38.933333,
+ "a_dur": 38.933,
+ "expected": 38.93333333333333,
+ "vo_end": 37.51,
+ "tail": 1.423,
+ "v_start": 0.0,
+ "a_start": 0.0,
+ "xcorr_lag_samples": 0,
+ "lufs_I": -14.1,
+ "true_peak": -1.9,
+ "subtitle_streams": "none",
+ "cta": "\"Show what goes into it\" at 33.27s, last shot starts 25.81s (over final frame)"
+}
