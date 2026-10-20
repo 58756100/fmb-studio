@@ -1,0 +1,17 @@
+{
+ "file": "out/masters/SC-05-B.mp4",
+ "video": "h264 1080x1920 30/1 frames=1140",
+ "audio": "aac 48000 ch=2",
+ "v_dur": 38.0,
+ "a_dur": 38.0,
+ "expected": 38,
+ "vo_end": 36.689,
+ "tail": 1.311,
+ "v_start": 0.0,
+ "a_start": 0.0,
+ "xcorr_lag_samples": 0,
+ "lufs_I": -14.1,
+ "true_peak": -1.8,
+ "subtitle_streams": "none",
+ "cta": "\"For the tech who cuts first\" at 34.36s, last shot starts 33.89s (over final frame)"
+}

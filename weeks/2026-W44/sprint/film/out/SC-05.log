@@ -1,0 +1,70 @@
+SC-05 A 38.30s 3 shots 7 heads 15 sfx music
+SC-05 B 38.00s 3 shots 7 heads 15 sfx music
+SC-05 C 39.40s 3 shots 7 heads 15 sfx music
+SC-05-A master (AAC) I=-14.10 LUFS TP=-1.70 dBTP LRA=3.4 | cues 31 (15 reel, 16 auto)
+SC-05-B master (AAC) I=-14.10 LUFS TP=-1.80 dBTP LRA=3.3 | cues 31 (15 reel, 16 auto)
+SC-05-C master (AAC) I=-14.10 LUFS TP=-1.90 dBTP LRA=3.3 | cues 31 (15 reel, 16 auto)
+done out/video/SC-05-A.mp4 1149 frames 1495s
+SC-05-B: opener 0-428 + A from 439, total 1140
+done out/video/SC-05-B-part.mp4 1140 frames 568s
+SC-05-C: opener 0-470 + A from 439, total 1182
+done out/video/SC-05-C-part.mp4 1182 frames 608s
+== SC-05-A
+  file: out/masters/SC-05-A.mp4
+  video: h264 1080x1920 30/1 frames=1149
+  audio: aac 48000 ch=2
+  v_dur: 38.3
+  a_dur: 38.3
+  expected: 38.3
+  vo_end: 36.997
+  tail: 1.303
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.7
+  subtitle_streams: none
+  cta: "For the tech who cuts first" at 34.67s, last shot starts 34.20s (over final frame)
+out/masters/SC-05-A.mp4: 76 windows, lowest 0.520 at 3.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== SC-05-B
+  file: out/masters/SC-05-B.mp4
+  video: h264 1080x1920 30/1 frames=1140
+  audio: aac 48000 ch=2
+  v_dur: 38.0
+  a_dur: 38.0
+  expected: 38
+  vo_end: 36.689
+  tail: 1.311
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.8
+  subtitle_streams: none
+  cta: "For the tech who cuts first" at 34.36s, last shot starts 33.89s (over final frame)
+out/masters/SC-05-B.mp4: 76 windows, lowest 0.544 at 7.0s, static(<0.35) 0, longest freeze 0.03s at 37.97s
+  static: 
+== SC-05-C
+  file: out/masters/SC-05-C.mp4
+  video: h264 1080x1920 30/1 frames=1182
+  audio: aac 48000 ch=2
+  v_dur: 39.4
+  a_dur: 39.4
+  expected: 39.4
+  vo_end: 38.087
+  tail: 1.313
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "For the tech who cuts first" at 35.76s, last shot starts 35.29s (over final frame)
+out/masters/SC-05-C.mp4: 78 windows, lowest 0.526 at 20.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+../storyboard/SC-05-final-sheet.jpg (2244, 1420)
+== gate
+SC-05-A: 38.30s (VO 37.00 + tail 1.30), I -14.1 LUFS, TP -1.7 dBTP, lowest energy 0.520 at 3.5s, lag 0 OK
+SC-05-B: 38.00s (VO 36.69 + tail 1.31), I -14.1 LUFS, TP -1.8 dBTP, lowest energy 0.544 at 7.0s, lag 0 OK
+SC-05-C: 39.40s (VO 38.09 + tail 1.31), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.526 at 20.0s, lag 0 OK
