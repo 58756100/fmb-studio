@@ -1,0 +1,70 @@
+SC-07 A 44.53s 1 shots 7 heads 16 sfx music
+SC-07 B 44.77s 1 shots 7 heads 16 sfx music
+SC-07 C 45.43s 1 shots 7 heads 16 sfx music
+SC-07-A master (AAC) I=-14.10 LUFS TP=-1.20 dBTP LRA=3.3 | cues 30 (16 reel, 14 auto)
+SC-07-B master (AAC) I=-14.10 LUFS TP=-1.70 dBTP LRA=3.3 | cues 30 (16 reel, 14 auto)
+SC-07-C master (AAC) I=-14.10 LUFS TP=-1.90 dBTP LRA=3.3 | cues 30 (16 reel, 14 auto)
+done out/video/SC-07-A.mp4 1336 frames 936s
+SC-07-B: single shot, full render
+done out/video/SC-07-B.mp4 1343 frames 897s
+SC-07-C: single shot, full render
+done out/video/SC-07-C.mp4 1363 frames 941s
+== SC-07-A
+  file: out/masters/SC-07-A.mp4
+  video: h264 1080x1920 30/1 frames=1336
+  audio: aac 48000 ch=2
+  v_dur: 44.533333
+  a_dur: 44.533
+  expected: 44.53333333333333
+  vo_end: 43.202
+  tail: 1.331
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.2
+  subtitle_streams: none
+  cta: "DM PARTS" at 39.05s, last shot starts 0.00s (over final frame)
+out/masters/SC-07-A.mp4: 89 windows, lowest 1.000 at 32.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== SC-07-B
+  file: out/masters/SC-07-B.mp4
+  video: h264 1080x1920 30/1 frames=1343
+  audio: aac 48000 ch=2
+  v_dur: 44.766667
+  a_dur: 44.766
+  expected: 44.766666666666666
+  vo_end: 43.437
+  tail: 1.33
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.7
+  subtitle_streams: none
+  cta: "DM PARTS" at 39.28s, last shot starts 0.00s (over final frame)
+out/masters/SC-07-B.mp4: 89 windows, lowest 0.997 at 32.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== SC-07-C
+  file: out/masters/SC-07-C.mp4
+  video: h264 1080x1920 30/1 frames=1363
+  audio: aac 48000 ch=2
+  v_dur: 45.433333
+  a_dur: 45.433
+  expected: 45.43333333333333
+  vo_end: 44.117
+  tail: 1.316
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "DM PARTS" at 39.96s, last shot starts 0.00s (over final frame)
+out/masters/SC-07-C.mp4: 90 windows, lowest 1.075 at 32.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+../storyboard/SC-07-final-sheet.jpg (2244, 1420)
+== gate
+SC-07-A: 44.53s (VO 43.20 + tail 1.33), I -14.1 LUFS, TP -1.2 dBTP, lowest energy 1.000 at 32.0s, lag 0 OK
+SC-07-B: 44.77s (VO 43.44 + tail 1.33), I -14.1 LUFS, TP -1.7 dBTP, lowest energy 0.997 at 32.0s, lag 0 OK
+SC-07-C: 45.43s (VO 44.12 + tail 1.32), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 1.075 at 32.0s, lag 0 OK
