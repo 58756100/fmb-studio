@@ -1,0 +1,70 @@
+S0-10 A 34.03s 3 shots 3 heads 14 sfx music
+S0-10 B 36.07s 3 shots 3 heads 14 sfx music
+S0-10 C 34.13s 3 shots 3 heads 14 sfx music
+S0-10-A master (AAC) I=-14.10 LUFS TP=-1.90 dBTP LRA=2.9 | cues 22 (14 reel, 8 auto)
+S0-10-B master (AAC) I=-14.10 LUFS TP=-1.80 dBTP LRA=3.0 | cues 22 (14 reel, 8 auto)
+S0-10-C master (AAC) I=-14.20 LUFS TP=-1.90 dBTP LRA=2.8 | cues 22 (14 reel, 8 auto)
+done out/video/S0-10-A.mp4 1021 frames 1813s
+S0-10-B: opener 0-613 + A from 554, total 1082
+done out/video/S0-10-B-part.mp4 1082 frames 1070s
+S0-10-C: opener 0-556 + A from 554, total 1024
+done out/video/S0-10-C-part.mp4 1024 frames 987s
+== S0-10-A
+  file: out/masters/S0-10-A.mp4
+  video: h264 1080x1920 30/1 frames=1021
+  audio: aac 48000 ch=2
+  v_dur: 34.033333
+  a_dur: 34.033
+  expected: 34.03333333333333
+  vo_end: 32.73
+  tail: 1.303
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "Start your shop's build pages" at 27.77s, last shot starts 27.65s (over final frame)
+out/masters/S0-10-A.mp4: 68 windows, lowest 0.661 at 5.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== S0-10-B
+  file: out/masters/S0-10-B.mp4
+  video: h264 1080x1920 30/1 frames=1082
+  audio: aac 48000 ch=2
+  v_dur: 36.066667
+  a_dur: 36.066
+  expected: 36.06666666666667
+  vo_end: 34.74
+  tail: 1.327
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.8
+  subtitle_streams: none
+  cta: "Start your shop's build pages" at 29.78s, last shot starts 29.66s (over final frame)
+out/masters/S0-10-B.mp4: 72 windows, lowest 0.667 at 5.5s, static(<0.35) 0, longest freeze 0.03s at 36.03s
+  static: 
+== S0-10-C
+  file: out/masters/S0-10-C.mp4
+  video: h264 1080x1920 30/1 frames=1024
+  audio: aac 48000 ch=2
+  v_dur: 34.133333
+  a_dur: 34.133
+  expected: 34.13333333333333
+  vo_end: 32.82
+  tail: 1.313
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.2
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "Start your shop's build pages" at 27.86s, last shot starts 27.74s (over final frame)
+out/masters/S0-10-C.mp4: 68 windows, lowest 0.669 at 5.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+../storyboard/S0-10-final-sheet.jpg (2244, 1420)
+== gate
+S0-10-A: 34.03s (VO 32.73 + tail 1.30), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.661 at 5.5s, lag 0 OK
+S0-10-B: 36.07s (VO 34.74 + tail 1.33), I -14.1 LUFS, TP -1.8 dBTP, lowest energy 0.667 at 5.5s, lag 0 OK
+S0-10-C: 34.13s (VO 32.82 + tail 1.31), I -14.2 LUFS, TP -1.9 dBTP, lowest energy 0.669 at 5.5s, lag 0 OK
