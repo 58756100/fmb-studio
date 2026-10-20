@@ -1,0 +1,70 @@
+SC-02 A 40.67s 8 shots 8 heads 18 sfx music
+SC-02 B 41.23s 8 shots 8 heads 18 sfx music
+SC-02 C 40.60s 8 shots 8 heads 18 sfx music
+SC-02-A master (AAC) I=-14.20 LUFS TP=-1.90 dBTP LRA=2.4 | cues 38 (18 reel, 20 auto)
+SC-02-B master (AAC) I=-14.10 LUFS TP=-1.90 dBTP LRA=2.3 | cues 38 (18 reel, 20 auto)
+SC-02-C master (AAC) I=-14.10 LUFS TP=-1.80 dBTP LRA=2.6 | cues 38 (18 reel, 20 auto)
+done out/video/SC-02-A.mp4 1220 frames 636s
+SC-02-B: opener 0-504 + A from 488, total 1237
+done out/video/SC-02-B-part.mp4 1237 frames 251s
+SC-02-C: opener 0-485 + A from 488, total 1218
+done out/video/SC-02-C-part.mp4 1218 frames 248s
+== SC-02-A
+  file: out/masters/SC-02-A.mp4
+  video: h264 1080x1920 30/1 frames=1220
+  audio: aac 48000 ch=2
+  v_dur: 40.666667
+  a_dur: 40.666
+  expected: 40.666666666666664
+  vo_end: 39.35
+  tail: 1.317
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.2
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "Start your truck's build page" at 35.75s, last shot starts 35.63s (over final frame)
+out/masters/SC-02-A.mp4: 81 windows, lowest 0.694 at 18.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== SC-02-B
+  file: out/masters/SC-02-B.mp4
+  video: h264 1080x1920 30/1 frames=1237
+  audio: aac 48000 ch=2
+  v_dur: 41.233333
+  a_dur: 41.233
+  expected: 41.233333333333334
+  vo_end: 39.91
+  tail: 1.323
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.9
+  subtitle_streams: none
+  cta: "Start your truck's build page" at 36.31s, last shot starts 36.19s (over final frame)
+out/masters/SC-02-B.mp4: 82 windows, lowest 0.686 at 18.5s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+== SC-02-C
+  file: out/masters/SC-02-C.mp4
+  video: h264 1080x1920 30/1 frames=1218
+  audio: aac 48000 ch=2
+  v_dur: 40.6
+  a_dur: 40.6
+  expected: 40.6
+  vo_end: 39.27
+  tail: 1.33
+  v_start: 0.0
+  a_start: 0.0
+  xcorr_lag_samples: 0
+  lufs_I: -14.1
+  true_peak: -1.8
+  subtitle_streams: none
+  cta: "Start your truck's build page" at 35.67s, last shot starts 35.55s (over final frame)
+out/masters/SC-02-C.mp4: 81 windows, lowest 0.706 at 18.0s, static(<0.35) 0, longest freeze 0.00s at 0.03s
+  static: 
+../storyboard/SC-02-final-sheet.jpg (2244, 1420)
+== gate
+SC-02-A: 40.67s (VO 39.35 + tail 1.32), I -14.2 LUFS, TP -1.9 dBTP, lowest energy 0.694 at 18.0s, lag 0 OK
+SC-02-B: 41.23s (VO 39.91 + tail 1.32), I -14.1 LUFS, TP -1.9 dBTP, lowest energy 0.686 at 18.5s, lag 0 OK
+SC-02-C: 40.60s (VO 39.27 + tail 1.33), I -14.1 LUFS, TP -1.8 dBTP, lowest energy 0.706 at 18.0s, lag 0 OK

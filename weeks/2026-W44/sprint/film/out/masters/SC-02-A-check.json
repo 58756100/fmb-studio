@@ -1,0 +1,17 @@
+{
+ "file": "out/masters/SC-02-A.mp4",
+ "video": "h264 1080x1920 30/1 frames=1220",
+ "audio": "aac 48000 ch=2",
+ "v_dur": 40.666667,
+ "a_dur": 40.666,
+ "expected": 40.666666666666664,
+ "vo_end": 39.35,
+ "tail": 1.317,
+ "v_start": 0.0,
+ "a_start": 0.0,
+ "xcorr_lag_samples": 0,
+ "lufs_I": -14.2,
+ "true_peak": -1.9,
+ "subtitle_streams": "none",
+ "cta": "\"Start your truck's build page\" at 35.75s, last shot starts 35.63s (over final frame)"
+}
