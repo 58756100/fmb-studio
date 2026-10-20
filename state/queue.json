@@ -630,14 +630,16 @@
   "time_et": "17:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "posting",
+  "status": "posted",
   "render": "renders:2026-W42/C2-B.mp4",
   "week": "2026-W42",
   "caption": "He asked for service records. The seller's typing dots stalled for 2 seconds. Then one link.\n\n#datsun240z #fairlady #classiccars #carcollector #jdmclassic",
   "pinned_comment": "Be honest: at 'a guy in Reno, he retired,' were you already looking at the other Z?",
   "approved_at": "2026-10-13T09:46:53Z",
   "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
-  "note": "rescheduled after token outage"
+  "note": "rescheduled after token outage",
+  "media_id": "18095753786148739",
+  "posted_at": "2026-10-20T21:01:10Z"
  },
  {
   "concept": "C2",
@@ -945,13 +947,15 @@
   "time_et": "15:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "posting",
+  "status": "posted",
   "render": "renders:2026-W42/G1-C.mp4",
   "week": "2026-W42",
   "caption": "Your lead tech quits Friday. Monday, his turbo install is back on the lift with a boost leak.\n\n#mechaniclife #autoshop #supra #tuner #shopowner",
   "pinned_comment": "Shop owners: when your best tech leaves, how much of the shop leaves with him?",
   "approved_at": "2026-10-13T09:46:53Z",
-  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+  "media_id": "18131369527702156",
+  "posted_at": "2026-10-20T21:01:10Z"
  },
  {
   "concept": "G1",
