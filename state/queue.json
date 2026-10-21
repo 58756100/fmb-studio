@@ -1018,13 +1018,15 @@
     "time_et": "15:00",
     "platform": "instagram",
     "placement": "feed",
-    "status": "posting",
+    "status": "posted",
     "render": "renders:2026-W42/C3-C.mp4",
     "week": "2026-W42",
     "caption": "41,000 miles on a 1972 240Z. A weld too new. Tape on the dash: 'ask Ray about the motor.'\n\n#datsun240z #classiccars #carhistory #carcollector #mystery",
     "pinned_comment": "Which clue would have scared you off the car, the miles, the weld, or the tape?",
     "approved_at": "2026-10-13T09:46:53Z",
-    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+    "media_id": "17986709946087998",
+    "posted_at": "2026-10-21T20:57:13Z"
   },
   {
     "concept": "C3",
