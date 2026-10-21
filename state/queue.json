@@ -664,14 +664,17 @@
     "time_et": "11:00",
     "platform": "instagram",
     "placement": "feed",
-    "status": "posting",
+    "status": "posted",
     "render": "renders:2026-W42/X1-A.mp4",
     "week": "2026-W42",
     "caption": "Three people built this Supra. When the wastegate cracked, none of them had the whole answer.\n\n#supra #carbuild #jdm #turbo #carcommunity",
     "pinned_comment": "Who knows more about your car right now: you, your shop, or the brands in it?",
     "approved_at": "2026-10-13T09:46:53Z",
     "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
-    "note": "rescheduled after token outage"
+    "note": "rescheduled after token outage",
+    "media_id": "17938195743381293",
+    "container_id": "17963798658231959",
+    "posted_at": "2026-10-21T14:58:57Z"
   },
   {
     "concept": "X1",
