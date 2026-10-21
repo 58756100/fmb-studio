@@ -714,14 +714,16 @@
     "time_et": "17:00",
     "platform": "instagram",
     "placement": "feed",
-    "status": "posting",
+    "status": "posted",
     "render": "renders:2026-W42/G2-C.mp4",
     "week": "2026-W42",
     "caption": "Two shops. Identical feeds. Same DM reply. Jen asked one question and only one shop could answer it.\n\n#autoshop #e30 #bmwe30 #engineswap #shopowner",
     "pinned_comment": "Shops: if a customer asked you 'show me one you've done' right now, what would you send?",
     "approved_at": "2026-10-13T09:46:53Z",
     "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
-    "note": "rescheduled after token outage"
+    "note": "rescheduled after token outage",
+    "media_id": "17976671592137255",
+    "posted_at": "2026-10-21T20:59:57Z"
   },
   {
     "concept": "G2",
