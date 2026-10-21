@@ -981,14 +981,16 @@
     "time_et": "21:30",
     "platform": "instagram",
     "placement": "feed",
-    "status": "posting",
+    "status": "posted",
     "render": "renders:2026-W42/G3-A.mp4",
     "week": "2026-W42",
     "caption": "9 texts. 1 hour. Same question. Rita's Tacoma brake job didn't move until she tried this.\n\n#shoplife #mechaniclife #autoshop #shopowner #customerservice",
     "pinned_comment": "Shop owners, what's your record for 'any update?' texts in one day?",
     "approved_at": "2026-10-13T09:46:53Z",
     "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
-    "ig_container_id": "17963702241231959"
+    "ig_container_id": "17963702241231959",
+    "media_id": "17998850972822315",
+    "posted_at": "2026-10-21T01:56:52Z"
   },
   {
     "concept": "G3",
