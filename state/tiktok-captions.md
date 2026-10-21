@@ -1,10 +1,10 @@
-**TikTok drafts for 2026-10-20**, post each at its time and paste its caption.
+**TikTok drafts for 2026-10-21**, post each at its time and paste its caption.
 
 **Wave 1 · Draft 1: post 15:00 ET (22:00 Nairobi)**
-Video: G1-C, "The notes left with him": Leo, a second-year tech at Kessler Motorsport, the Monday after lead tech Dave quit.
-Opens with: "If you run a shop, this is the Monday you're scared of."
+Video: C3-C, "Owner number four": Nadia, owner number four of an orange 1972 240Z.
+Opens with: "Nadia bought the car. Nobody sold her its story."
 ```
-Your lead tech quits Friday. Monday, his turbo install is back on the lift with a boost leak.
+41,000 miles on a 1972 240Z. A weld too new. Tape on the dash: 'ask Ray about the motor.'
 
-#mechaniclife #autoshop #supra #tuner #shopowner
+#datsun240z #classiccars #carhistory #carcollector #mystery
 ```
