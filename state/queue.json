@@ -747,15 +747,14 @@
     "time_et": "11:00",
     "platform": "instagram",
     "placement": "feed",
-    "status": "posting",
+    "status": "approved",
     "render": "renders:2026-W42/P3-A.mp4",
     "week": "2026-W42",
     "caption": "5 stars at 0 miles. The real review showed up at 30,000 miles, and almost nobody saw it.\n\n#coilovers #carparts #aftermarket #hondacivic #carbuild",
     "pinned_comment": "Brands: what's the highest-mileage proof you have of your part? Is it anywhere a buyer can find it?",
     "approved_at": "2026-10-13T09:46:53Z",
     "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
-    "note": "rescheduled after token outage",
-    "posting_at": "2026-10-22T14:58:00Z"
+    "note": "2026-10-22 10:58 ET run: ig-prepare upload failed (rupload 400 ProcessingFailedError, container 17963942925231959 abandoned, never published); retry next run"
   },
   {
     "concept": "P3",
