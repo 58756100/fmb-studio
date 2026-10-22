@@ -794,14 +794,17 @@
     "time_et": "17:00",
     "platform": "instagram",
     "placement": "feed",
-    "status": "posting",
+    "status": "posted",
     "render": "renders:2026-W42/P1-C.mp4",
     "week": "2026-W42",
     "caption": "We tried to follow one turbo after it shipped. Tracking died in 4 days. The build log didn't.\n\n#turbo #carbuild #aftermarketparts #supra #carparts",
     "pinned_comment": "Brands: what happens to your best seller after \"Delivered\"? Drop the part, we'll look for it in build logs.",
     "approved_at": "2026-10-13T09:46:53Z",
     "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
-    "note": "rescheduled after token outage"
+    "note": "rescheduled after token outage",
+    "media_id": "18066307445623199",
+    "container_id": "17963983992231959",
+    "posted_at": "2026-10-22T21:01:04Z"
   },
   {
     "concept": "P1",
@@ -1088,13 +1091,16 @@
     "time_et": "15:00",
     "platform": "instagram",
     "placement": "feed",
-    "status": "posting",
+    "status": "posted",
     "render": "renders:2026-W42/G3-B.mp4",
     "week": "2026-W42",
     "caption": "9 texts. 1 hour. Same question. Rita's Tacoma brake job didn't move until she tried this.\n\n#shoplife #mechaniclife #autoshop #shopowner #customerservice",
     "pinned_comment": "Shop owners, what's your record for 'any update?' texts in one day?",
     "approved_at": "2026-10-13T09:46:53Z",
-    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+    "media_id": "17933642091409158",
+    "container_id": "17963983875231959",
+    "posted_at": "2026-10-22T21:01:04Z"
   },
   {
     "concept": "G3",
