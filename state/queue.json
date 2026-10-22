@@ -794,7 +794,7 @@
     "time_et": "17:00",
     "platform": "instagram",
     "placement": "feed",
-    "status": "approved",
+    "status": "posting",
     "render": "renders:2026-W42/P1-C.mp4",
     "week": "2026-W42",
     "caption": "We tried to follow one turbo after it shipped. Tracking died in 4 days. The build log didn't.\n\n#turbo #carbuild #aftermarketparts #supra #carparts",
@@ -1088,7 +1088,7 @@
     "time_et": "15:00",
     "platform": "instagram",
     "placement": "feed",
-    "status": "approved",
+    "status": "posting",
     "render": "renders:2026-W42/G3-B.mp4",
     "week": "2026-W42",
     "caption": "9 texts. 1 hour. Same question. Rita's Tacoma brake job didn't move until she tried this.\n\n#shoplife #mechaniclife #autoshop #shopowner #customerservice",
@@ -1968,8 +1968,8 @@
     "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
     "render": "renders:2026-W44/sprint/masters/S0-09-A.mp4",
     "title": "47 Bolts",
-    "video_desc": "A mock movie trailer for a shop job: Tomás finishes an E30 intake swap and finds one bolt left over.",
-    "caption": "Tomás put 47 bolts back into this E30. There's a 48th on the fender.\n\n#mechaniclife #autoshop #bmwe30 #e30 #shoplife"
+    "video_desc": "A mock movie trailer for a shop job: Tom\u00e1s finishes an E30 intake swap and finds one bolt left over.",
+    "caption": "Tom\u00e1s put 47 bolts back into this E30. There's a 48th on the fender.\n\n#mechaniclife #autoshop #bmwe30 #e30 #shoplife"
   },
   {
     "concept": "S0-09",
@@ -1991,8 +1991,8 @@
     "tiktok_wave": 1,
     "render": "renders:2026-W44/sprint/masters/S0-09-A.mp4",
     "title": "47 Bolts",
-    "video_desc": "A mock movie trailer for a shop job: Tomás finishes an E30 intake swap and finds one bolt left over.",
-    "caption": "Tomás put 47 bolts back into this E30. There's a 48th on the fender.\n\n#mechaniclife #autoshop #bmwe30 #e30 #shoplife"
+    "video_desc": "A mock movie trailer for a shop job: Tom\u00e1s finishes an E30 intake swap and finds one bolt left over.",
+    "caption": "Tom\u00e1s put 47 bolts back into this E30. There's a 48th on the fender.\n\n#mechaniclife #autoshop #bmwe30 #e30 #shoplife"
   },
   {
     "concept": "S0-14",
@@ -4267,8 +4267,8 @@
     "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
     "render": "renders:2026-W44/sprint/masters/S0-09-B.mp4",
     "title": "47 Bolts",
-    "video_desc": "A mock movie trailer for a shop job: Tomás finishes an E30 intake swap and finds one bolt left over.",
-    "caption": "One bolt. No home. Tomás put 47 back into this E30 and there's a 48th.\n\n#mechaniclife #autoshop #bmwe30 #e30 #shoplife"
+    "video_desc": "A mock movie trailer for a shop job: Tom\u00e1s finishes an E30 intake swap and finds one bolt left over.",
+    "caption": "One bolt. No home. Tom\u00e1s put 47 back into this E30 and there's a 48th.\n\n#mechaniclife #autoshop #bmwe30 #e30 #shoplife"
   },
   {
     "concept": "S0-09",
@@ -4290,8 +4290,8 @@
     "tiktok_wave": 1,
     "render": "renders:2026-W44/sprint/masters/S0-09-B.mp4",
     "title": "47 Bolts",
-    "video_desc": "A mock movie trailer for a shop job: Tomás finishes an E30 intake swap and finds one bolt left over.",
-    "caption": "One bolt. No home. Tomás put 47 back into this E30 and there's a 48th.\n\n#mechaniclife #autoshop #bmwe30 #e30 #shoplife"
+    "video_desc": "A mock movie trailer for a shop job: Tom\u00e1s finishes an E30 intake swap and finds one bolt left over.",
+    "caption": "One bolt. No home. Tom\u00e1s put 47 back into this E30 and there's a 48th.\n\n#mechaniclife #autoshop #bmwe30 #e30 #shoplife"
   },
   {
     "concept": "S0-14",
@@ -6425,7 +6425,7 @@
     "voice_id": "Dg1lUQiSAGVHkoQMG3QX",
     "render": "renders:2026-W44/sprint/masters/S0-09-C.mp4",
     "title": "47 Bolts",
-    "video_desc": "A mock movie trailer for a shop job: Tomás finishes an E30 intake swap and finds one bolt left over.",
+    "video_desc": "A mock movie trailer for a shop job: Tom\u00e1s finishes an E30 intake swap and finds one bolt left over.",
     "caption": "Forget before-and-afters. Your shop's best work deserves a trailer: 47 bolts, one fender.\n\n#mechaniclife #autoshop #bmwe30 #e30 #shoplife"
   },
   {
@@ -6448,7 +6448,7 @@
     "tiktok_wave": 1,
     "render": "renders:2026-W44/sprint/masters/S0-09-C.mp4",
     "title": "47 Bolts",
-    "video_desc": "A mock movie trailer for a shop job: Tomás finishes an E30 intake swap and finds one bolt left over.",
+    "video_desc": "A mock movie trailer for a shop job: Tom\u00e1s finishes an E30 intake swap and finds one bolt left over.",
     "caption": "Forget before-and-afters. Your shop's best work deserves a trailer: 47 bolts, one fender.\n\n#mechaniclife #autoshop #bmwe30 #e30 #shoplife"
   },
   {
