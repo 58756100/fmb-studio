@@ -1054,13 +1054,16 @@
     "time_et": "21:30",
     "platform": "instagram",
     "placement": "feed",
-    "status": "posting",
+    "status": "posted",
     "render": "renders:2026-W42/P2-B.mp4",
     "week": "2026-W42",
     "caption": "A wheel brand paid $2,400 for one post. It lasted 24 hours. 19 free builds were the real ad.\n\n#carparts #aftermarket #wheels #carbuild #marketing",
     "pinned_comment": "Which line would you rather pay for: the spike or the one that stacks?",
     "approved_at": "2026-10-13T09:46:53Z",
-    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+    "media_id": "18123641020921950",
+    "posted_at": "2026-10-22T01:57:27Z",
+    "note": "posted by 21:55 ET run, ~27 min after 21:30 slot"
   },
   {
     "concept": "P2",
