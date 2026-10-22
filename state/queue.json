@@ -1103,13 +1103,15 @@
     "time_et": "15:00",
     "platform": "tiktok",
     "placement": "post",
-    "status": "approved",
+    "status": "drafted",
     "render": "renders:2026-W42/G3-B.mp4",
     "week": "2026-W42",
     "caption": "9 texts. 1 hour. Same question. Rita's Tacoma brake job didn't move until she tried this.\n\n#shoplife #mechaniclife #autoshop #shopowner #customerservice",
     "pinned_comment": "Shop owners, what's your record for 'any update?' texts in one day?",
     "approved_at": "2026-10-13T09:46:53Z",
-    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+    "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+    "publish_id": "v_inbox_file~v2.7699460213087340562",
+    "drafted_at": "2026-10-22T11:59:00Z"
   },
   {
     "concept": "X1",
