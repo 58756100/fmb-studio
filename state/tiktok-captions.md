@@ -1,10 +1,10 @@
-**TikTok drafts for 2026-10-22**, post each at its time and paste its caption.
+**TikTok drafts for 2026-10-23**, post each at its time and paste its caption.
 
 **Wave 1 · Draft 1: post 15:00 ET (22:00 Nairobi)**
-Video: G3-B, "Any update on my car?": Rita, owner of a two-bay shop, under a grey Tacoma with the brakes half done.
-Opens with: "Nine texts. One hour. Same question."
+Video: P2-C, "One post, 24 hours": Jonah, who runs Vesk Wheels, a small bronze-wheel brand.
+Opens with: "Sponsored · Vesk Wheels"
 ```
-9 texts. 1 hour. Same question. Rita's Tacoma brake job didn't move until she tried this.
+A wheel brand paid $2,400 for one post. It lasted 24 hours. 19 free builds were the real ad.
 
-#shoplife #mechaniclife #autoshop #shopowner #customerservice
+#carparts #aftermarket #wheels #carbuild #marketing
 ```

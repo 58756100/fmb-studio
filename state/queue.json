@@ -1175,13 +1175,15 @@
   "time_et": "15:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "approved",
+  "status": "drafted",
   "render": "renders:2026-W42/P2-C.mp4",
   "week": "2026-W42",
   "caption": "A wheel brand paid $2,400 for one post. It lasted 24 hours. 19 free builds were the real ad.\n\n#carparts #aftermarket #wheels #carbuild #marketing",
   "pinned_comment": "Which line would you rather pay for: the spike or the one that stacks?",
   "approved_at": "2026-10-13T09:46:53Z",
-  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+  "publish_id": "v_inbox_file~v2.7699830738372462613",
+  "drafted_at": "2026-10-23T11:57:00Z"
  },
  {
   "concept": "P3",
