@@ -1,10 +1,10 @@
-**TikTok drafts for 2026-10-23**, post each at its time and paste its caption.
+**TikTok drafts for 2026-10-24**, post each at its time and paste its caption.
 
 **Wave 1 · Draft 1: post 15:00 ET (22:00 Nairobi)**
-Video: P2-C, "One post, 24 hours": Jonah, who runs Vesk Wheels, a small bronze-wheel brand.
-Opens with: "Sponsored · Vesk Wheels"
+Video: X1-C, "One car, three people": one white '99 Supra and the three people who built it: Marcus (owner), Sal (tech at Kessler Motorsport), Korvane Turbo (the brand).
+Opens with: "1 · The owner"
 ```
-A wheel brand paid $2,400 for one post. It lasted 24 hours. 19 free builds were the real ad.
+Three people built this Supra. When the wastegate cracked, none of them had the whole answer.
 
-#carparts #aftermarket #wheels #carbuild #marketing
+#supra #carbuild #jdm #turbo #carcommunity
 ```
