@@ -895,14 +895,14 @@
   "time_et": "11:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "posting",
+  "status": "approved",
   "render": "renders:2026-W42/X2-B.mp4",
   "week": "2026-W42",
   "caption": "Shops close. Parts get discontinued. Cars get sold. One thing about your build doesn't have to go.\n\n#carbuild #supra #jdm #carculture #projectcar",
   "pinned_comment": "If someone bought your car in 2049, what would they never find out about it?",
   "approved_at": "2026-10-13T09:46:53Z",
   "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
-  "note": "rescheduled after token outage; 2026-10-24 ig-prepare failed: OAuthException 190/460 token invalidated (password change)"
+  "note": "2026-10-24 13:57 ET run: ig-prepare failed, token invalidated (OAuth 190/460); not posted"
  },
  {
   "concept": "X2",
