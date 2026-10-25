@@ -1278,13 +1278,15 @@
   "time_et": "15:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "approved",
+  "status": "drafted",
   "render": "renders:2026-W42/P3-C.mp4",
   "week": "2026-W42",
   "caption": "5 stars at 0 miles. The real review showed up at 30,000 miles, and almost nobody saw it.\n\n#coilovers #carparts #aftermarket #hondacivic #carbuild",
   "pinned_comment": "Brands: what's the highest-mileage proof you have of your part? Is it anywhere a buyer can find it?",
   "approved_at": "2026-10-13T09:46:53Z",
-  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")"
+  "approved_by": "Wayne (chat, \"approve W42, all remaining except S0\")",
+  "publish_id": "v_inbox_file~v2.7700572810741254162",
+  "drafted_at": "2026-10-25T11:57:00Z"
  },
  {
   "concept": "C1",
