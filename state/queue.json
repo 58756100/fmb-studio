@@ -2238,7 +2238,7 @@
     "time_et": "22:00",
     "platform": "tiktok",
     "placement": "post",
-    "status": "drafting",
+    "status": "approved",
     "approved_by": "Wayne (chat 2026-10-18, self-approve the sprint)",
     "approved_at": "2026-10-18T21:36:08Z",
     "week": "2026-W44",
@@ -2254,7 +2254,7 @@
     "video_desc": "Marisol and Dev bet dinner on which year her Evo's intake went on, four years apart and both sure.",
     "caption": "Loser buys dinner: what year did the intake go on? She said 2021. He said 2017.\n\n#mitsubishi #evo #lancerevolution #jdm #carbuild",
     "opening_line": "Loser buys dinner.",
-    "note": "2026-10-26 13:56 ET: tt-draft failed 400 spam_risk_too_many_pending_share (5 pending drafts); still approved, retry once drafts are posted"
+    "note": "2026-10-26 16:57 ET tt-draft failed: spam_risk_too_many_pending_share (5 pending drafts); retry after Wayne clears inbox"
   },
   {
     "concept": "S0-12",
