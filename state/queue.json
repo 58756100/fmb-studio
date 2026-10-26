@@ -1979,7 +1979,7 @@
   "time_et": "08:00",
   "platform": "instagram",
   "placement": "feed",
-  "status": "posting",
+  "status": "approved",
   "approved_by": "Wayne (chat 2026-10-18, self-approve the sprint)",
   "approved_at": "2026-10-18T21:36:08Z",
   "week": "2026-W44",
@@ -2001,7 +2001,7 @@
   "time_et": "08:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "approved",
+  "status": "drafted",
   "approved_by": "Wayne (chat 2026-10-18, self-approve the sprint)",
   "approved_at": "2026-10-18T21:36:08Z",
   "week": "2026-W44",
@@ -2015,7 +2015,9 @@
   "render": "renders:2026-W44/sprint/masters/S0-09-A.mp4",
   "title": "47 Bolts",
   "video_desc": "A mock movie trailer for a shop job: Tomás finishes an E30 intake swap and finds one bolt left over.",
-  "caption": "Tomás put 47 bolts back into this E30. There's a 48th on the fender.\n\n#mechaniclife #autoshop #bmwe30 #e30 #shoplife"
+  "caption": "Tomás put 47 bolts back into this E30. There's a 48th on the fender.\n\n#mechaniclife #autoshop #bmwe30 #e30 #shoplife",
+  "publish_id": "v_inbox_file~v2.7700944317216606216",
+  "drafted_at": "2026-10-26T11:58:00Z"
  },
  {
   "concept": "S0-14",
@@ -2046,7 +2048,7 @@
   "time_et": "11:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "approved",
+  "status": "drafted",
   "approved_by": "Wayne (chat 2026-10-18, self-approve the sprint)",
   "approved_at": "2026-10-18T21:36:08Z",
   "week": "2026-W44",
@@ -2060,7 +2062,9 @@
   "render": "renders:2026-W44/sprint/masters/S0-14-A.mp4",
   "title": "Nine Boxes",
   "video_desc": "Omar launches a steering wheel by shipping nine boxes to nine builders and asking each to log the install.",
-  "caption": "Omar shipped nine boxes and announced nothing. Launch day looked like this.\n\n#carparts #aftermarket #steeringwheel #productlaunch #carbuild"
+  "caption": "Omar shipped nine boxes and announced nothing. Launch day looked like this.\n\n#carparts #aftermarket #steeringwheel #productlaunch #carbuild",
+  "publish_id": "v_inbox_file~v2.7700944337567680520",
+  "drafted_at": "2026-10-26T11:58:00Z"
  },
  {
   "concept": "S0-08",
@@ -2091,7 +2095,7 @@
   "time_et": "14:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "approved",
+  "status": "drafted",
   "approved_by": "Wayne (chat 2026-10-18, self-approve the sprint)",
   "approved_at": "2026-10-18T21:36:08Z",
   "week": "2026-W44",
@@ -2105,7 +2109,9 @@
   "render": "renders:2026-W44/sprint/masters/S0-08-A.mp4",
   "title": "Film Strip",
   "video_desc": "Dolores shows Pete a film strip of his WRX's coilover job, step by step, so he doesn't have to call.",
-  "caption": "Pete used to call every day at four. This time the whole coilover job came to him.\n\n#subaru #wrx #coilovers #autoshop #shoplife"
+  "caption": "Pete used to call every day at four. This time the whole coilover job came to him.\n\n#subaru #wrx #coilovers #autoshop #shoplife",
+  "publish_id": "v_inbox_file~v2.7700944448985270292",
+  "drafted_at": "2026-10-26T11:58:00Z"
  },
  {
   "concept": "SC-04",
@@ -2136,7 +2142,7 @@
   "time_et": "17:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "approved",
+  "status": "drafted",
   "approved_by": "Wayne (chat 2026-10-18, self-approve the sprint)",
   "approved_at": "2026-10-18T21:36:08Z",
   "week": "2026-W44",
@@ -2150,7 +2156,9 @@
   "render": "renders:2026-W44/sprint/masters/SC-04-A.mp4",
   "title": "Shift Change",
   "video_desc": "Reggie hands a half-finished WRX intercooler job to Inez at shift change, with one odd bolt flagged on the build page.",
-  "caption": "4:58, intercooler half in, and Inez takes over at five. Last time my phone didn't stop all through dinner.\n\n#subaru #wrx #intercooler #mechaniclife #autoshop"
+  "caption": "4:58, intercooler half in, and Inez takes over at five. Last time my phone didn't stop all through dinner.\n\n#subaru #wrx #intercooler #mechaniclife #autoshop",
+  "publish_id": "v_inbox_file~v2.7700944477514696710",
+  "drafted_at": "2026-10-26T11:58:00Z"
  },
  {
   "concept": "LA-03",
@@ -2181,7 +2189,7 @@
   "time_et": "20:00",
   "platform": "tiktok",
   "placement": "post",
-  "status": "approved",
+  "status": "drafted",
   "approved_by": "Wayne (chat 2026-10-18, self-approve the sprint)",
   "approved_at": "2026-10-18T21:36:08Z",
   "week": "2026-W44",
@@ -2195,7 +2203,9 @@
   "render": "renders:2026-W44/sprint/masters/LA-03-A.mp4",
   "title": "Spring You Has Questions",
   "video_desc": "A collector finds an empty oil bottle after winter, and the build log shows it belonged to a different car.",
-  "caption": "Spring you would like a word with fall you.\n\n#FuelMyBuild #CarCollectors #WinterStorage #ProjectCar #ClassicCars"
+  "caption": "Spring you would like a word with fall you.\n\n#FuelMyBuild #CarCollectors #WinterStorage #ProjectCar #ClassicCars",
+  "publish_id": "v_inbox_file~v2.7700942710995388424",
+  "drafted_at": "2026-10-26T11:58:00Z"
  },
  {
   "concept": "C3-COL",
