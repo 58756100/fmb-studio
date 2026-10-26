@@ -2169,7 +2169,7 @@
     "time_et": "20:00",
     "platform": "instagram",
     "placement": "feed",
-    "status": "posting",
+    "status": "approved",
     "approved_by": "Wayne (chat 2026-10-18, self-approve the sprint)",
     "approved_at": "2026-10-18T21:36:08Z",
     "week": "2026-W44",
@@ -2182,7 +2182,8 @@
     "render": "renders:2026-W44/sprint/masters/LA-03-A.mp4",
     "title": "Spring You Has Questions",
     "video_desc": "A collector finds an empty oil bottle after winter, and the build log shows it belonged to a different car.",
-    "caption": "Spring you would like a word with fall you.\n\n#FuelMyBuild #CarCollectors #WinterStorage #ProjectCar #ClassicCars"
+    "caption": "Spring you would like a word with fall you.\n\n#FuelMyBuild #CarCollectors #WinterStorage #ProjectCar #ClassicCars",
+    "note": "2026-10-26 19:56 ET ig-prepare failed: IG token invalidated (OAuthException 190/460, password changed); no container created. Needs new IG_ACCESS_TOKEN"
   },
   {
     "concept": "LA-03",
