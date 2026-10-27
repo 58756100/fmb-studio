@@ -1,55 +1,55 @@
-**TikTok drafts for 2026-10-26**, post each at its time and paste its caption.
+**TikTok drafts for 2026-10-27**, post each at its time and paste its caption.
 
 **Wave 1 · Draft 1: post 08:00 ET (15:00 Nairobi)**
-Video: S0-09-A, "47 Bolts": A mock movie trailer for a shop job: Tomás finishes an E30 intake swap and finds one bolt left over.
-Opens with: "One man, one torque wrench, and a bolt nobody wrote down."
+Video: A-L3-A, "What Turbo Is That?": A guessed turbo brand gets repeated on a '99 Supra until the parts registry names the real one.
+Opens with: "Someone guessed your turbo."
 ```
-Tomás put 47 bolts back into this E30. There's a 48th on the fender.
+"What turbo is that?" deserves more than a confident guess.
 
-#mechaniclife #autoshop #bmwe30 #e30 #shoplife
+#PerformanceParts #TurboBuild #AftermarketParts #FuelMyBuild #Supra
 ```
 
 **Wave 1 · Draft 2: post 11:00 ET (18:00 Nairobi)**
-Video: S0-14-A, "Nine Boxes": Omar launches a steering wheel by shipping nine boxes to nine builders and asking each to log the install.
-Opens with: "Don't launch your part. Launch nine installs."
+Video: S0-03-A, "Curb Questions": A host asks people at a car meet when they last changed their clutch; most guess, and one guy has an exact date.
+Opens with: "When did you last change your clutch? Be honest."
 ```
-Omar shipped nine boxes and announced nothing. Launch day looked like this.
+We asked a car meet when they last did their clutch. One person had a date.
 
-#carparts #aftermarket #steeringwheel #productlaunch #carbuild
+#carmeet #hondacivic #clutch #carculture #jdm
 ```
 
 **Wave 1 · Draft 3: post 14:00 ET (21:00 Nairobi)**
-Video: S0-08-A, "Film Strip": Dolores shows Pete a film strip of his WRX's coilover job, step by step, so he doesn't have to call.
-Opens with: "Okay, Pete. Watch this."
+Video: S0-11-A, "The Return Desk": Ben opens a returned coilover with a one-line note at a parts brand's returns desk, and the truck's build page explains it.
+Opens with: "This coilover came back filthy, with a one-line note."
 ```
-Pete used to call every day at four. This time the whole coilover job came to him.
+This coilover came back with one note: 'It failed.' The truck's build page said otherwise.
 
-#subaru #wrx #coilovers #autoshop #shoplife
-```
-
-**Wave 2 · Draft 4: post 17:00 ET (00:00 Tue Nairobi)**
-Video: SC-04-A, "Shift Change": Reggie hands a half-finished WRX intercooler job to Inez at shift change, with one odd bolt flagged on the build page.
-Opens with: "I'm off in two minutes, and Inez is taking over this half-finished WRX."
-```
-4:58, intercooler half in, and Inez takes over at five. Last time my phone didn't stop all through dinner.
-
-#subaru #wrx #intercooler #mechaniclife #autoshop
+#carparts #coilovers #fordf100 #aftermarket #suspension
 ```
 
-**Wave 2 · Draft 5: post 20:00 ET (03:00 Tue Nairobi)**
-Video: LA-03-A, "Spring You Has Questions": A collector finds an empty oil bottle after winter, and the build log shows it belonged to a different car.
-Opens with: "Collectors, spring you has a question."
+**Wave 2 · Draft 4: post 17:00 ET (00:00 Wed Nairobi)**
+Video: B-L2-A, "Same Car, Different Proof": Two garages show an identical polished Miata, but only one record names who built the engine swap.
+Opens with: "Same car. Different proof."
 ```
-Spring you would like a word with fall you.
+Two finished-car photos. One record names the garage, the contributor and the work.
 
-#FuelMyBuild #CarCollectors #WinterStorage #ProjectCar #ClassicCars
+#AutoShop #Miata #EngineSwap #MechanicLife #CarBuild
 ```
 
-**Wave 2 · Draft 6: post 22:00 ET (05:00 Tue Nairobi)**
-Video: C3-COL-A, "Loser Buys Dinner": Marisol and Dev bet dinner on which year her Evo's intake went on, four years apart and both sure.
-Opens with: "Loser buys dinner."
+**Wave 2 · Draft 5: post 20:00 ET (03:00 Wed Nairobi)**
+Video: LB-07-A, "Same Again, Please": Dana asks a wheel retailer to reorder her old tires, and her build entry shows the set she runs now.
+Opens with: "Dana nearly reordered her old, old tires."
 ```
-Loser buys dinner: what year did the intake go on? She said 2021. He said 2017.
+Dana remembered the purchase. She'd forgotten it wasn't the set on her car anymore.
 
-#mitsubishi #evo #lancerevolution #jdm #carbuild
+#WheelShop #TireShop #CarBuild #FuelMyBuild #AutoParts
+```
+
+**Wave 2 · Draft 6: post 22:00 ET (05:00 Wed Nairobi)**
+Video: A-L1-A, "Prove the Upgrade": A finished-car photo of a 240Z can't prove the brake kit underneath, so a dated build record does.
+Opens with: "Prove the work."
+```
+A finished-car photo shows the result. A dated build record shows the work behind it.
+
+#CollectorCars #CarBuild #BuildDocumentation #FuelMyBuild #240Z
 ```
