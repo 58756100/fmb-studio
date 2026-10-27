@@ -2183,7 +2183,7 @@
     "title": "Spring You Has Questions",
     "video_desc": "A collector finds an empty oil bottle after winter, and the build log shows it belonged to a different car.",
     "caption": "Spring you would like a word with fall you.\n\n#FuelMyBuild #CarCollectors #WinterStorage #ProjectCar #ClassicCars",
-    "note": "2026-10-26 19:56 ET ig-prepare failed: IG token invalidated (OAuthException 190/460, password changed); no container created. Needs new IG_ACCESS_TOKEN"
+    "note": "2026-10-26 21:56 ET ig-prepare not attempted: IG token still invalidated (OAuthException 190/460). Needs new IG_ACCESS_TOKEN"
   },
   {
     "concept": "LA-03",
@@ -2230,7 +2230,8 @@
     "render": "renders:2026-W44/sprint/masters/C3-COL-A.mp4",
     "title": "Loser Buys Dinner",
     "video_desc": "Marisol and Dev bet dinner on which year her Evo's intake went on, four years apart and both sure.",
-    "caption": "Loser buys dinner: what year did the intake go on? She said 2021. He said 2017.\n\n#mitsubishi #evo #lancerevolution #jdm #carbuild"
+    "caption": "Loser buys dinner: what year did the intake go on? She said 2021. He said 2017.\n\n#mitsubishi #evo #lancerevolution #jdm #carbuild",
+    "note": "2026-10-26 21:56 ET ig-prepare not attempted: IG token still invalidated (OAuthException 190/460). Needs new IG_ACCESS_TOKEN"
   },
   {
     "concept": "C3-COL",
@@ -2255,7 +2256,7 @@
     "video_desc": "Marisol and Dev bet dinner on which year her Evo's intake went on, four years apart and both sure.",
     "caption": "Loser buys dinner: what year did the intake go on? She said 2021. He said 2017.\n\n#mitsubishi #evo #lancerevolution #jdm #carbuild",
     "opening_line": "Loser buys dinner.",
-    "note": "2026-10-26 16:57 ET tt-draft failed: spam_risk_too_many_pending_share (5 pending drafts); retry after Wayne clears inbox"
+    "note": "2026-10-26 21:56 ET tt-draft failed again: spam_risk_too_many_pending_share (5 pending drafts); retry after Wayne clears inbox"
   },
   {
     "concept": "S0-12",
